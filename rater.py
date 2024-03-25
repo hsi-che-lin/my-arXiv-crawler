@@ -33,9 +33,11 @@ class Rater:
                  "surgery", "survival", "diagnosi(s|ng)", "MRI", "CT",
                  "whole slide", "X-ray", "cancer", "disease", "skin lesions",
                  "sign language", "clinical", "facial", "face", "cardiac",
-                 "tumor"],
+                 "tumor", "endoscopic"],
                 ["5G", "6G", "industrial", "IoT", "recommendation"],
-                ["remote sensing", "UAV", "forecasting", "satellite"],
+                ["remote sensing", "UAV", "forecast(ing)?", "satellite"],
+                ["edge (environments?|embedded systems?|computing|applications?)",
+                 "edge[ -]cloud"],
                 ["HDR", "image restoration", "haze", "dehazing"],
                 ["quantum"],
             ],
@@ -48,19 +50,21 @@ class Rater:
                 ["(autonomous|automated) driving", "trajectory", "LiDAR"],
                 ["robotics", "robot", "navigation"],
                 ["federated learning"],
+                ["reinforcement"],
                 ["knowledge Edit(ing)?", "unlearning"],
                 ["architecture search", "NAS"],
-                ["GNNs?", "graph neural networks?"],
+                ["GNNs?", "graph"],
                 ["explainable", "interpretable"],
                 ["attacks?"],
             ],
             1: [
-                [r"\S*[ -]?efficient", "PEFT"],
+                [r"\S*[ -]?efficient", "efficiency", "PEFT"],
                 ["vision[ -]language"],
                 ["bias"]
             ],
             0.5: [
-                ["AAAI", "ACM", "CVPR", "ECCV", "EMNLP", "ICASSP", "ICCV", "ICLR", "Interspeech", "NeurIPS", "NIPS", "WACV"]
+                ["AAAI", "CVPR", "ECCV", "EMNLP", "ICASSP", "ICCV", "ICLR",
+                 "Interspeech", "NeurIPS", "NIPS", "WACV"]
             ]
         }
     

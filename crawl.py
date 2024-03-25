@@ -87,6 +87,7 @@ if (__name__ == "__main__"):
         date = transformDate(tag.string.strip())
         
         if (date not in metadata.keys()):
+            print(f"crawling papers on {date}")
             href = "https://arxiv.org" + tag["href"]
             results, stat = crawlPapers(href, rater)
             metadata[date] = stat
