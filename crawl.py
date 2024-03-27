@@ -1,103 +1,118 @@
+import argparse
 import requests
 import json
+from datetime import datetime, timedelta
 from bs4 import BeautifulSoup
 
 from rater import rater
 
-def refineURL(url):
+
+def getDates():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--start", type = str, default = None, required = False,
+                        help = "start date, format: yyyy-mm-dd")
+    parser.add_argument("--end", type = str, default = None, required = False,
+                        help = "end date, format: yyyy-mm-dd or \"today\"")
+    arg = parser.parse_args()
+    dates = []
+    fmt = lambda x: x.strftime("%Y-%m-%d")
+    oneDay = timedelta(days = 1)
+
+    if (arg.start != None):
+        yStart, mStart, dStart = arg.start.split("-")
+        start = datetime(int(yStart), int(mStart), int(dStart))
+
+        if (arg.end == "today"):
+            end = datetime.today()
+        elif (arg.end != None):
+            yEnd, mEnd, dEnd = arg.end.split("-")
+            end = datetime(int(yEnd), int(mEnd), int(dEnd))
+        else:
+            end = start + oneDay
+    else:
+        start = datetime.today() - oneDay
+        end = datetime.today()
+
+    while (fmt(start) != fmt(end)):
+        dates.append((fmt(start), fmt(start + oneDay)))
+        start = start + oneDay
+
+    return dates
+
+
+def search(fromDate, toDate, searched):
+    url = "https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=&terms-0-field=title&classification-computer_science=y&classification-eess=y&classification-physics_archives=all&classification-include_cross_list=include&date-year=&date-filter_by=date_range&date-from_date={fromDate}&date-to_date={toDate}&date-date_type=submitted_date_first&abstracts=show&size=200&order=-announced_date_first&start={searched}"
+    url = url.format(fromDate = fromDate, toDate = toDate, searched = searched)
+
     with requests.get(url) as resp:
         soup = BeautifulSoup(resp.text, "html.parser")
     
-    text = soup.find("h3").string
-    totalEntries = text.split(" ")[-2]
-    newURL = url.replace("show=25", f"show={totalEntries}")
+    total = soup.find("h1", class_ = "title is-clearfix")
+    total = int(total.text.strip().split(" ")[-2])
+    papers = soup.findAll("li", class_ = "arxiv-result")
 
-    return newURL
+    return total, papers
 
 
-def crawlPapers(url, rater):
-    url = refineURL(url)
+def parse(tag, rater):
+    idTag = tag.findChild("p", class_ = "list-title is-inline-block").findChild("a")
+    paperId = idTag.text.strip().replace("arXiv:", "")
+    abstractUrl = idTag["href"]
+    title = tag.findChild("p", class_ = "title is-5 mathjax").text.strip()
+    subjectTags = tag.findChildren("span", class_ = "tag is-small is-link tooltip is-tooltip-top")
+    subjects = [t.text.strip() for t in subjectTags]
+    abstract = tag.findChild("span", class_ = "abstract-full has-text-grey-dark mathjax")
+    abstract = " ".join(abstract.text.strip().split()).replace(" \u25b3 Less", "")
+    comment = tag.findChild("span", class_ = "has-text-grey-dark mathjax")
+    comment = None if (comment == None) else " ".join(comment.text.strip().split())
+    rating, keywords = rater(title, subjects, abstract, comment)
 
-    with requests.get(url) as resp:
-        soup = BeautifulSoup(resp.text, "html.parser")
-    
-    paperIDs = soup.find_all("a", title = "Abstract")
-    paperInfos = soup.find_all("dd")
-    results = []
-    stat = {}
-
-    for (paperID, paperInfo) in zip(paperIDs, paperInfos):
-        paperID = paperID.string.replace("arXiv:", "")
-        title = paperInfo.findChild("div", class_ = "list-title mathjax").text.replace("Title:", "").strip()
-        rating, keywords = rater(paperInfo)
-        stat[rating] = stat.get(rating, 0) + 1
-        results.append({
-            "paper id": paperID,
-            "abstract url": "https://arxiv.org/abs/" + paperID,
-            "title": title,
-            "rating": rating,
-            "keywords": keywords
-        })
-    
-    results = sorted(results, key = lambda x: (-x["rating"], x["paper id"]))
-    tmp = [("total", len(paperIDs))] + [(k, v) for (k, v) in sorted(stat.items(), key = lambda x: -x[0])]
-    stat = {
-        k: v for (k, v) in tmp
+    result = {
+        "paper id": paperId,
+        "abstract url": abstractUrl,
+        "title": title,
+        "rating": rating,
+        "keywords": keywords,
+        "abstract": abstract,
+        "subjects": subjects,
+        "comment": comment
     }
 
-    return results, stat
-
-
-def transformDate(date):
-    months = {
-        "Jan": "01",
-        "Feb": "02",
-        "Mar": "03",
-        "Apr": "04",
-        "May": "05",
-        "Jun": "06",
-        "Jul": "07",
-        "Aug": "08",
-        "Sep": "09",
-        "Oct": "10",
-        "Nov": "11",
-        "Dec": "12",
-    }
-    
-    parts = date.split(" ")
-    newDate = parts[3] + months[parts[2]] + f"{parts[1]:0>2}"
-
-    return newDate
+    return result
 
 
 if (__name__ == "__main__"):
-    url = "https://arxiv.org/list/cs/pastweek?skip=0&show=25"
+    dates = getDates()
 
-    with requests.get(url) as resp:
-        soup = BeautifulSoup(resp.text, "html.parser")
-        html = soup.prettify()
-    
     with open("metadata.json", "r") as f:
         metadata = json.load(f)
 
-    tags = soup.find_all("li", limit = 5)
+    for (fromDate, toDate) in dates:
+        print(f"crawling papers from {fromDate} to {toDate}")
+        results = []
+        stat = {}
+        total = 1
+        searched = 0
 
-    for tag in tags:
-        tag = tag.findChild("a")
-        date = transformDate(tag.string.strip())
-        
-        if (date not in metadata.keys()):
-            print(f"crawling papers on {date}")
-            href = "https://arxiv.org" + tag["href"]
-            results, stat = crawlPapers(href, rater)
-            metadata[date] = stat
+        while (searched < total):
+            total, papers = search(fromDate, toDate, searched)
+            searched += len(papers)
 
-            with open(f"results/{date}.json", "w") as f:
-                json.dump(results, f, indent = 4)
+            for paper in papers:
+                result = parse(paper, rater)
+                results.append(result)
+                stat[result["rating"]] = stat.get(result["rating"], 0) + 1
+
+        results = sorted(results, key = lambda x: (-x["rating"], x["paper id"]))
+        tmp = [("total", total)] + [(k, v) for (k, v) in sorted(stat.items(), key = lambda x: -x[0])]
+        metadata[fromDate] = dict(tmp)
+
+        with open(f"results/{fromDate}.json", "w") as f:
+            json.dump(results, f, indent = 4)
 
     metadata = {
-        k: v for (k, v) in sorted(metadata.items(), key = lambda x: -int(x[0]))
+        k: v for (k, v) in sorted(metadata.items(), key = lambda x: -int(x[0].replace("-", "")))
     }
-
+    
     with open("metadata.json", "w") as f:
         json.dump(metadata, f, indent = 4)

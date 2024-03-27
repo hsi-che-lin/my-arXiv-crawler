@@ -35,10 +35,13 @@ class Rater:
                  "sign language", "clinical", "facial", "face", "cardiac",
                  "tumor", "endoscopic"],
                 ["5G", "6G", "industrial", "IoT", "recommendation"],
-                ["remote sensing", "UAV", "forecast(ing)?", "satellite"],
+                ["remote sensing", "UAV", "forecast(ing)?", "satellite",
+                 "hyperspectral (data|imag(es|ing))"],
                 ["edge (environments?|embedded systems?|computing|applications?)",
                  "edge[ -]cloud"],
                 ["HDR", "image restoration", "haze", "dehazing"],
+                ["kernel learning"],
+                ["Chinese", "Bengali", "Russian"],
                 ["quantum"],
             ],
             -1: [
@@ -51,32 +54,37 @@ class Rater:
                 ["robotics", "robot", "navigation"],
                 ["federated learning"],
                 ["reinforcement"],
-                ["knowledge Edit(ing)?", "unlearning"],
+                ["(knowledge|model) Edit(ing)?", "unlearning"],
                 ["architecture search", "NAS"],
                 ["GNNs?", "graph"],
                 ["explainable", "interpretable"],
                 ["attacks?"],
             ],
             1: [
-                [r"\S*[ -]?efficient", "efficiency", "PEFT"],
+                ["(parrameters?|meory|time|training)[ -]?(efficient|efficiency)", "PEFT"],
                 ["vision[ -]language"],
-                ["bias"]
-            ],
-            0.5: [
-                ["AAAI", "CVPR", "ECCV", "EMNLP", "ICASSP", "ICCV", "ICLR",
-                 "Interspeech", "NeurIPS", "NIPS", "WACV"]
+                ["(social|cultral) bias(es)?"]
             ]
         }
+
+        """
+        the rating of conference will only be count once
+        """
+        self.ConferenceOfInterest = {
+            0.5: [
+                "AAAI", "CVPR", "ECCV", "EMNLP", "ICASSP", "ICCV", "ICLR",
+                "Interspeech", "NeurIPS", "NIPS", "WACV"
+            ]
+        }
+
     
-    
-    def subject(self, info):
+    def matchOnce(self, ratingDict, content):
         keywords = []
         finalRating = 0
-        strInfo = " ".join(str(info).split())
         
-        for rating in sorted(self.SubjectOfInterest.keys()):
-            for keyword in self.SubjectOfInterest[rating]:
-                if keyword in strInfo:
+        for rating in sorted(ratingDict.keys()):
+            for keyword in ratingDict[rating]:
+                if keyword in content:
                     finalRating = rating
                     keywords.append(keyword)
         
@@ -85,18 +93,17 @@ class Rater:
         return finalRating, keywords
     
 
-    def phrase(self, info):
+    def matchAll(self, ratingDict, content):
         keywords = []
         finalRating = 0
-        strInfo = " ".join(str(info).split())
 
-        for (rating, phrasesGroup) in sorted(self.PhraseOfInterest.items(), reverse = True):
+        for (rating, phrasesGroup) in sorted(ratingDict.items(), reverse = True):
             for phrases in phrasesGroup:
                 matches = []
 
                 for phrase in phrases:
                     phrase = r"\b" + phrase + r"\b"
-                    m = re.search(phrase, strInfo, flags = re.IGNORECASE)
+                    m = re.search(phrase, content, flags = re.IGNORECASE)
                     if (m != None): matches.append(m.group(0))
 
                 if (len(matches) > 0):
@@ -106,19 +113,18 @@ class Rater:
         return finalRating, keywords
 
 
-    def __call__(self, info):
-        sbjRating, sbjKeywords = self.subject(info)
-        phrRating, phrKeywords = self.phrase(info)
+    def __call__(self, title, subjects, abstract, comment):
+        cntRating, cntKeywords = self.matchAll(self.PhraseOfInterest, title + " " + abstract)
+        sbjRating, sbjKeywords = self.matchOnce(self.SubjectOfInterest, subjects)
 
-        keywords = sbjKeywords + phrKeywords
-        rating = sbjRating + phrRating + (-0.5 if (len(keywords) == 0) else 0)
+        if (comment != None):
+            cmtRating, cmtKeywords = self.matchOnce(self.ConferenceOfInterest, comment)
+        else:
+            cmtRating, cmtKeywords = 0, []
+
+        keywords = cntKeywords + sbjKeywords + cmtKeywords
+        rating = cntRating + sbjRating + cmtRating + (-0.5 if (len(keywords) == 0) else 0)
         
         return rating, keywords
 
 rater = Rater()
-
-if (__name__ == "__main__"):
-    info = \
-"""
-"""
-    print(rater(info))
