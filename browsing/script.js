@@ -9,6 +9,7 @@ const paperComments = document.getElementById('paper-comments');
 const currentIndexSpan = document.getElementById('current-index');
 const totalPapersSpan = document.getElementById('total-papers');
 const prevButton = document.getElementById('prev-paper');
+const jumpButton = document.getElementById('jump-paper');
 const nextButton = document.getElementById('next-paper');
 
 let papers = [];
@@ -51,6 +52,12 @@ prevButton.addEventListener('click', () => {
     displayPaper(currentPaperIndex);
     updateNavigation();
   }
+});
+
+jumpButton.addEventListener('click', () => {
+    currentPaperIndex = parseInt(prompt("Enter an index:")) - 1;
+    displayPaper(currentPaperIndex);
+    updateNavigation();
 });
 
 nextButton.addEventListener('click', () => {
