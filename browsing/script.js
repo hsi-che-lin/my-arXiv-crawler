@@ -31,7 +31,7 @@ function displayPaper(index) {
   if (!paper) return;
 
   paperTitle.textContent = paper['title'];
-  paperTitle.href = paper['abstract url'];
+  paperTitle.href = `${paper['abstract url']}.pdf`.replace("abs", "pdf");
   ratingValue.textContent = `${paper['rating']}`;
   paperKeywords.textContent = `${paper['keywords'].join(', ')}`;
   paperAbstract.textContent = `${paper['abstract']}`;
@@ -67,3 +67,29 @@ nextButton.addEventListener('click', () => {
     updateNavigation();
   }
 });
+
+// for keyboard shortcut
+document.addEventListener("keydown", handleKeyDown);
+function handleKeyDown(event) {
+  const key = event.key;
+
+  if (key === "ArrowLeft" || key === "h") {
+    if (currentPaperIndex > 0) {
+        currentPaperIndex--;
+        displayPaper(currentPaperIndex);
+        updateNavigation();
+    }
+  } else if (key === "ArrowRight" || key === "l") {
+    if (currentPaperIndex < papers.length - 1) {
+        currentPaperIndex++;
+        displayPaper(currentPaperIndex);
+        updateNavigation();
+    }
+  } else if (key === "/") {
+    currentPaperIndex = parseInt(prompt("Enter an index:")) - 1;
+    displayPaper(currentPaperIndex);
+    updateNavigation();
+  } else if (key == "Enter") {
+    window.open(`${papers[currentPaperIndex]['abstract url']}.pdf`.replace("abs", "pdf"), '_blank', 'location=yes,scrollbars=yes,status=yes')
+  }
+}
