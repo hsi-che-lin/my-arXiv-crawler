@@ -9,9 +9,9 @@ from rater import rater
 
 def getDates():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--start", type = str, default = None, required = False,
+    parser.add_argument("--start", "-s", type = str, default = None, required = False,
                         help = "start date, format: yyyy-mm-dd")
-    parser.add_argument("--end", type = str, default = None, required = False,
+    parser.add_argument("--end", "-e", type = str, default = None, required = False,
                         help = "end date, format: yyyy-mm-dd or \"today\"")
     arg = parser.parse_args()
     dates = []

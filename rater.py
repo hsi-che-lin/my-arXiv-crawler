@@ -33,36 +33,43 @@ class Rater:
                  "surgery", "survival", "diagnosi(s|ng)", "MRI", "CT",
                  "whole slide", "X-ray", "cancer", "disease", "skin lesions",
                  "sign language", "clinical", "facial", "face", "cardiac",
-                 "tumor", "endoscopic"],
-                ["5G", "6G", "industrial", "IoT", "recommendation"],
+                 "tumor", "endoscopic", "psychological", "pathological",
+                 "red blood cells", "organ"],
+                ["5G", "6G", "industrial", "IoT", "recommendation", "patent",
+                 "thermal"],
                 ["remote sensing", "UAV", "forecast(ing)?", "satellite",
-                 "hyperspectral (data|imag(es|ing))"],
+                 "hyperspectral (data|imag(es|ing))", "bird's-eye view", "BEV",
+                 "drone", "agricultural", "mineral", "drill core"],
                 ["edge (environments?|embedded systems?|computing|applications?)",
                  "edge[ -]cloud"],
-                ["HDR", "image restoration", "haze", "dehazing"],
-                ["kernel learning"],
-                ["Chinese", "Bengali", "Russian"],
+                ["HDR", "image restoration", "haze", "dehazing",
+                 "neural( image)? codecs?", "quality assessment",
+                 "((image|video|low-light)( quality| color)? enhancement)"],
+                ["grammar", "grammatical"],
                 ["quantum"],
+                ["tabluars?"]
             ],
             -1: [
                 ["3D", "Gaussian splatting", "voxel", "point cloud", "6-?DoF",
-                 "RGB-?D", "NeRF", "radiance fields", "avatar"],
-                ["generative", "generation", "diffusion", "GAN",
-                 "synthesi(s|ze|zer|zing)", "(image|video) edit(ing)?",
-                 "text[ -]to[ -](image|video|vision)", "super[ -]?resolution"],
-                ["(autonomous|automated) driving", "trajectory", "LiDAR"],
+                 "RGB-?D", "NeRF", "radiance fields", "avatar", "event cameras?"],
+                ["diffusion", "GAN", "synthesi(s|ze|zer|zing)",
+                 "(image|video) edit(ing)?", "text[ -]to[ -](image|video|vision)",
+                 "super[ -]?resolution"],
+                ["(autonomous|automated) driving", "trajectory", "LiDAR", "radar",
+                 "vehicle"],
                 ["robotics", "robot", "navigation"],
                 ["federated learning"],
                 ["reinforcement"],
                 ["(knowledge|model) Edit(ing)?", "unlearning"],
                 ["architecture search", "NAS"],
                 ["GNNs?", "graph"],
-                ["explainable", "interpretable"],
+                ["kernel learning", "SVM", "support vector machine"],
+                ["anomaly detection"],
                 ["attacks?"],
             ],
             1: [
-                ["(parrameters?|meory|time|training)[ -]?(efficient|efficiency)", "PEFT"],
-                ["vision[ -]language"],
+                ["(parameters?|meory|time|training)[ -]?(efficient|efficiency)", "PEFT"],
+                ["vision[ -]language", "VLM"],
                 ["(social|cultral) bias(es)?"]
             ]
         }
@@ -123,7 +130,7 @@ class Rater:
             cmtRating, cmtKeywords = 0, []
 
         keywords = cntKeywords + sbjKeywords + cmtKeywords
-        rating = cntRating + sbjRating + cmtRating + (-0.5 if (len(keywords) == 0) else 0)
+        rating = cntRating + sbjRating + cmtRating + (-10 if (len(keywords) == 0) else 0)
         
         return rating, keywords
 
