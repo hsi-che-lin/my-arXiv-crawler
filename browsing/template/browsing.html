@@ -4,12 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Paper Browser</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-  <div id="file-input">
-    <input type="file" id="file" accept=".json">
-  </div>
+  <label for="paper-file">Select a file:</label>
+  <select name="paper-file" id="paper-file">
+    {% for (i, pf) in paperFiles %}
+      <option value="{{ pf }}" {% if (i == 0) %} selected {% endif %}>{{ pf }}</option>
+    {% endfor %}
+  </select>
   <div id="paper-container">
     <p id="paper-title"></p>
     <p>(<a id="paper-pdf">pdf</a>) (<a id="paper-abs">abs</a>)</p>
@@ -25,6 +28,6 @@
     <button id="jump-paper">Jump</button>
     <button id="next-paper">>>></button>
   </div>
-  <script src="script.js"></script>
+  <script src="{{ url_for('static', filename='./script.js') }}"></script>
 </body>
 </html>

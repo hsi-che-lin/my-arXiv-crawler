@@ -30,7 +30,7 @@ class Rater:
         self.PhraseOfInterest = {
             -2: [
                 [r"bio\S*", "medical", "health", "healthcare", "surgical",
-                 "surgery", "survival", "diagnosi(s|ng)", "MRI", "CT",
+                 "surgery", "survival", "diagnosi(s|ng)", "f?MRI", "CT",
                  "whole slide", "X-ray", "cancer", "disease", "skin lesions",
                  "sign language", "clinical", "facial", "face", "cardiac",
                  "tumor", "endoscopic", "psychological", "pathological",
@@ -50,16 +50,17 @@ class Rater:
                 ["tabluars?"]
             ],
             -1: [
-                ["3D", "Gaussian splatting", "voxel", "point cloud", "6-?DoF",
-                 "RGB-?D", "NeRF", "radiance fields", "avatar", "event cameras?"],
-                ["diffusion", "GAN", "synthesi(s|ze|zer|zing)",
+                ["3D", "Gaussian splatting", "voxel", "point cloud", "6-?DoFs?",
+                 "6D", "RGB-?D", "depth", "NeRF", "radiance fields", "avatar"
+                 "event cameras?"],
+                ["diffusion", "GAN", "synthesi(s|ze|zer|zing)", "inpaint(ing)?",
                  "(image|video) edit(ing)?", "text[ -]to[ -](image|video|vision)",
-                 "super[ -]?resolution"],
+                 "super[ -]?resolution", "image retouching"],
                 ["(autonomous|automated) driving", "trajectory", "LiDAR", "radar",
-                 "vehicle"],
+                 "vehicle", "infrared", "flight", "simultaneous localization and mapping",
+                 "SLAM"],
                 ["robotics", "robot", "navigation"],
                 ["federated learning"],
-                ["reinforcement"],
                 ["(knowledge|model) Edit(ing)?", "unlearning"],
                 ["architecture search", "NAS"],
                 ["GNNs?", "graph"],
@@ -68,8 +69,10 @@ class Rater:
                 ["attacks?"],
             ],
             1: [
-                ["(parameters?|meory|time|training)[ -]?(efficient|efficiency)", "PEFT"],
+                ["(parameters?|meory|time|training)[ -]?(efficient|efficiency)",
+                 "PEFT", "efficient fine-?tun(e|ing)"],
                 ["vision[ -]language", "VLM"],
+                ["audio[ -]visual"],
                 ["(social|cultral) bias(es)?"]
             ]
         }

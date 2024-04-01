@@ -45,7 +45,8 @@
         "keywords": [
             [
                 "Parameter-efficient",
-                "PEFT"
+                "PEFT",
+                "efficient fine-tuning"
             ],
             [
                 "cs.CL"
@@ -56,6 +57,25 @@
             "cs.CL"
         ],
         "comment": "Accepted by NAACL-2024"
+    },
+    {
+        "paper id": "2403.16276",
+        "abstract url": "https://arxiv.org/abs/2403.16276",
+        "title": "AVicuna: Audio-Visual LLM with Interleaver and Context-Boundary Alignment for Temporal Referential Dialogue",
+        "rating": 2,
+        "keywords": [
+            [
+                "Audio-Visual"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "In everyday communication, humans frequently use speech and gestures to refer to specific areas or objects, a process known as Referential Dialogue (RD). While prior studies have investigated RD through Large Language Models (LLMs) or Large Multimodal Models (LMMs) in static contexts, the exploration of Temporal Referential Dialogue (TRD) within audio-visual media remains limited. Two primary challenges hinder progress in this field: (1) the absence of comprehensive, untrimmed audio-visual video datasets with precise temporal annotations, and (2) the need for methods to integrate complex temporal auditory and visual cues effectively. To address these challenges, we introduce a novel framework to generate PU-VALOR, an extensive audio-visual dataset comprising over 114,000 untrimmed videos with accurate temporal demarcations. We also present AVicuna, featuring an Audio-Visual Tokens Interleaver (AVTI) that ensures the temporal alignment of audio-visual information. Additionally, we develop the A5-222K dataset, encompassing more than 200,000 audio-text pairings, to facilitate the audio and text alignments. Our experiments demonstrate that AVicuna can effectively handle TRD in audio-visual videos and achieve state-of-the-art performance on various audio-visual video understanding tasks, particularly in untrimmed videos. We further investigate the optimal audio-interleaving rate for interleaved audio-visual inputs, which maximizes performance on the Audio-Visual Event Dense Localization task.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
     },
     {
         "paper id": "2403.16124",
@@ -153,25 +173,6 @@
         "comment": "Accepted to CVPR 2024"
     },
     {
-        "paper id": "2403.16387",
-        "abstract url": "https://arxiv.org/abs/2403.16387",
-        "title": "Text-IF: Leveraging Semantic Text Guidance for Degradation-Aware and Interactive Image Fusion",
-        "rating": 1.5,
-        "keywords": [
-            [
-                "cs.CV"
-            ],
-            [
-                "CVPR"
-            ]
-        ],
-        "abstract": "Image fusion aims to combine information from different source images to create a comprehensively representative image. Existing fusion methods are typically helpless in dealing with degradations in low-quality source images and non-interactive to multiple subjective and objective needs. To solve them, we introduce a novel approach that leverages semantic text guidance image fusion model for degradation-aware and interactive image fusion task, termed as Text-IF. It innovatively extends the classical image fusion to the text guided image fusion along with the ability to harmoniously address the degradation and interaction issues during fusion. Through the text semantic encoder and semantic interaction fusion decoder, Text-IF is accessible to the all-in-one infrared and visible image degradation-aware processing and the interactive flexible fusion outcomes. In this way, Text-IF achieves not only multi-modal image fusion, but also multi-modal information fusion. Extensive experiments prove that our proposed text guided image fusion strategy has obvious advantages over SOTA methods in the image fusion performance and degradation treatment. The code is available at https://github.com/XunpengYi/Text-IF.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Accepted by CVPR 2024"
-    },
-    {
         "paper id": "2403.16020",
         "abstract url": "https://arxiv.org/abs/2403.16020",
         "title": "PaPr: Training-Free One-Step Patch Pruning with Lightweight ConvNets for Faster Inference",
@@ -218,6 +219,28 @@
             "cs.CL"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2403.16078",
+        "abstract url": "https://arxiv.org/abs/2403.16078",
+        "title": "Target Speech Extraction with Pre-trained AV-HuBERT and Mask-And-Recover Strategy",
+        "rating": 1,
+        "keywords": [
+            [
+                "Audio-visual"
+            ],
+            [
+                "robotics"
+            ],
+            [
+                "cs.SD"
+            ]
+        ],
+        "abstract": "Audio-visual target speech extraction (AV-TSE) is one of the enabling technologies in robotics and many audio-visual applications. One of the challenges of AV-TSE is how to effectively utilize audio-visual synchronization information in the process. AV-HuBERT can be a useful pre-trained model for lip-reading, which has not been adopted by AV-TSE. In this paper, we would like to explore the way to integrate a pre-trained AV-HuBERT into our AV-TSE system. We have good reasons to expect an improved performance. To benefit from the inter and intra-modality correlations, we also propose a novel Mask-And-Recover (MAR) strategy for self-supervised learning. The experimental results on the VoxCeleb2 dataset show that our proposed model outperforms the baselines both in terms of subjective and objective metrics, suggesting that the pre-trained AV-HuBERT model provides more informative visual cues for target speech extraction. Furthermore, through a comparative study, we confirm that the proposed Mask-And-Recover strategy is significantly effective.",
+        "subjects": [
+            "cs.SD"
+        ],
+        "comment": "Accepted by IJCNN 2024"
     },
     {
         "paper id": "2403.16099",
@@ -312,22 +335,6 @@
         "abstract": "We investigate the behavior of methods that use linear projections to remove information about a concept from a language representation, and we consider the question of what happens to a dataset transformed by such a method. A theoretical analysis and experiments on real-world and synthetic data show that these methods inject strong statistical dependencies into the transformed datasets. After applying such a method, the representation space is highly structured: in the transformed space, an instance tends to be located near instances of the opposite label. As a consequence, the original labeling can in some cases be reconstructed by applying an anti-clustering method.",
         "subjects": [
             "cs.CL"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2403.16161",
-        "abstract url": "https://arxiv.org/abs/2403.16161",
-        "title": "Towards Online Real-Time Memory-based Video Inpainting Transformers",
-        "rating": 1,
-        "keywords": [
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Video inpainting tasks have seen significant improvements in recent years with the rise of deep neural networks and, in particular, vision transformers. Although these models show promising reconstruction quality and temporal consistency, they are still unsuitable for live videos, one of the last steps to make them completely convincing and usable. The main limitations are that these state-of-the-art models inpaint using the whole video (offline processing) and show an insufficient frame rate. In our approach, we propose a framework to adapt existing inpainting transformers to these constraints by memorizing and refining redundant computations while maintaining a decent inpainting quality. Using this framework with some of the most recent inpainting models, we show great online results with a consistent throughput above 20 frames per second. The code and pretrained models will be made available upon acceptance.",
-        "subjects": [
-            "cs.CV"
         ],
         "comment": null
     },
@@ -434,22 +441,6 @@
         "comment": null
     },
     {
-        "paper id": "2403.16227",
-        "abstract url": "https://arxiv.org/abs/2403.16227",
-        "title": "Dual-modal Prior Semantic Guided Infrared and Visible Image Fusion for Intelligent Transportation System",
-        "rating": 1,
-        "keywords": [
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Infrared and visible image fusion (IVF) plays an important role in intelligent transportation system (ITS). The early works predominantly focus on boosting the visual appeal of the fused result, and only several recent approaches have tried to combine the high-level vision task with IVF. However, they prioritize the design of cascaded structure to seek unified suitable features and fit different tasks. Thus, they tend to typically bias toward to reconstructing raw pixels without considering the significance of semantic features. Therefore, we propose a novel prior semantic guided image fusion method based on the dual-modality strategy, improving the performance of IVF in ITS. Specifically, to explore the independent significant semantic of each modality, we first design two parallel semantic segmentation branches with a refined feature adaptive-modulation (RFaM) mechanism. RFaM can perceive the features that are semantically distinct enough in each semantic segmentation branch. Then, two pilot experiments based on the two branches are conducted to capture the significant prior semantic of two images, which then is applied to guide the fusion task in the integration of semantic segmentation branches and fusion branches. In addition, to aggregate both high-level semantics and impressive visual effects, we further investigate the frequency response of the prior semantics, and propose a multi-level representation-adaptive fusion (MRaF) module to explicitly integrate the low-frequent prior semantic with the high-frequent details. Extensive experiments on two public datasets demonstrate the superiority of our method over the state-of-the-art image fusion approaches, in terms of either the visual appeal or the high-level semantics.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2403.16242",
         "abstract url": "https://arxiv.org/abs/2403.16242",
         "title": "Adversarially Masked Video Consistency for Unsupervised Domain Adaptation",
@@ -466,22 +457,6 @@
         "comment": null
     },
     {
-        "paper id": "2403.16248",
-        "abstract url": "https://arxiv.org/abs/2403.16248",
-        "title": "Large Language Models Offer an Alternative to the Traditional Approach of Topic Modelling",
-        "rating": 1,
-        "keywords": [
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Topic modelling, as a well-established unsupervised technique, has found extensive use in automatically detecting significant topics within a corpus of documents. However, classic topic modelling approaches (e.g., LDA) have certain drawbacks, such as the lack of semantic understanding and the presence of overlapping topics. In this work, we investigate the untapped potential of large language models (LLMs) as an alternative for uncovering the underlying topics within extensive text corpora. To this end, we introduce a framework that prompts LLMs to generate topics from a given set of documents and establish evaluation protocols to assess the clustering efficacy of LLMs. Our findings indicate that LLMs with appropriate prompts can stand out as a viable alternative, capable of generating relevant topic titles and adhering to human guidelines to refine and merge topics. Through in-depth experiments and evaluation, we summarise the advantages and constraints of employing LLMs in topic extraction.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": "Accepted at LREC-COLING 2024"
-    },
-    {
         "paper id": "2403.16271",
         "abstract url": "https://arxiv.org/abs/2403.16271",
         "title": "Object Detectors in the Open Environment: Challenges, Solutions, and Outlook",
@@ -496,22 +471,6 @@
             "cs.CV"
         ],
         "comment": "32 pages, 17 figures"
-    },
-    {
-        "paper id": "2403.16276",
-        "abstract url": "https://arxiv.org/abs/2403.16276",
-        "title": "AVicuna: Audio-Visual LLM with Interleaver and Context-Boundary Alignment for Temporal Referential Dialogue",
-        "rating": 1,
-        "keywords": [
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "In everyday communication, humans frequently use speech and gestures to refer to specific areas or objects, a process known as Referential Dialogue (RD). While prior studies have investigated RD through Large Language Models (LLMs) or Large Multimodal Models (LMMs) in static contexts, the exploration of Temporal Referential Dialogue (TRD) within audio-visual media remains limited. Two primary challenges hinder progress in this field: (1) the absence of comprehensive, untrimmed audio-visual video datasets with precise temporal annotations, and (2) the need for methods to integrate complex temporal auditory and visual cues effectively. To address these challenges, we introduce a novel framework to generate PU-VALOR, an extensive audio-visual dataset comprising over 114,000 untrimmed videos with accurate temporal demarcations. We also present AVicuna, featuring an Audio-Visual Tokens Interleaver (AVTI) that ensures the temporal alignment of audio-visual information. Additionally, we develop the A5-222K dataset, encompassing more than 200,000 audio-text pairings, to facilitate the audio and text alignments. Our experiments demonstrate that AVicuna can effectively handle TRD in audio-visual videos and achieve state-of-the-art performance on various audio-visual video understanding tasks, particularly in untrimmed videos. We further investigate the optimal audio-interleaving rate for interleaved audio-visual inputs, which maximizes performance on the Audio-Visual Event Dense Localization task.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
     },
     {
         "paper id": "2403.16295",
@@ -962,6 +921,22 @@
         "comment": "ICLR Workshop 2024 (PML4LRS)"
     },
     {
+        "paper id": "2403.16293",
+        "abstract url": "https://arxiv.org/abs/2403.16293",
+        "title": "Interpretable Modeling of Deep Reinforcement Learning Driven Scheduling",
+        "rating": 0.5,
+        "keywords": [
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "In the field of high-performance computing (HPC), there has been recent exploration into the use of deep reinforcement learning for cluster scheduling (DRL scheduling), which has demonstrated promising outcomes. However, a significant challenge arises from the lack of interpretability in deep neural networks (DNN), rendering them as black-box models to system managers. This lack of model interpretability hinders the practical deployment of DRL scheduling. In this work, we present a framework called IRL (Interpretable Reinforcement Learning) to address the issue of interpretability of DRL scheduling. The core idea is to interpret DNN (i.e., the DRL policy) as a decision tree by utilizing imitation learning. Unlike DNN, decision tree models are non-parametric and easily comprehensible to humans. To extract an effective and efficient decision tree, IRL incorporates the Dataset Aggregation (DAgger) algorithm and introduces the notion of critical state to prune the derived decision tree. Through trace-based experiments, we demonstrate that IRL is capable of converting a black-box DNN policy into an interpretable rulebased decision tree while maintaining comparable scheduling performance. Additionally, IRL can contribute to the setting of rewards in DRL scheduling.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2403.16372",
         "abstract url": "https://arxiv.org/abs/2403.16372",
         "title": "SignSGD with Federated Voting",
@@ -984,7 +959,8 @@
         "rating": 0.5,
         "keywords": [
             [
-                "3D"
+                "3D",
+                "Depth"
             ],
             [
                 "cs.CV"
@@ -1059,6 +1035,28 @@
             "cs.CV"
         ],
         "comment": "Accepted to CVPR 2024"
+    },
+    {
+        "paper id": "2403.16387",
+        "abstract url": "https://arxiv.org/abs/2403.16387",
+        "title": "Text-IF: Leveraging Semantic Text Guidance for Degradation-Aware and Interactive Image Fusion",
+        "rating": 0.5,
+        "keywords": [
+            [
+                "infrared"
+            ],
+            [
+                "cs.CV"
+            ],
+            [
+                "CVPR"
+            ]
+        ],
+        "abstract": "Image fusion aims to combine information from different source images to create a comprehensively representative image. Existing fusion methods are typically helpless in dealing with degradations in low-quality source images and non-interactive to multiple subjective and objective needs. To solve them, we introduce a novel approach that leverages semantic text guidance image fusion model for degradation-aware and interactive image fusion task, termed as Text-IF. It innovatively extends the classical image fusion to the text guided image fusion along with the ability to harmoniously address the degradation and interaction issues during fusion. Through the text semantic encoder and semantic interaction fusion decoder, Text-IF is accessible to the all-in-one infrared and visible image degradation-aware processing and the interactive flexible fusion outcomes. In this way, Text-IF achieves not only multi-modal image fusion, but also multi-modal information fusion. Extensive experiments prove that our proposed text guided image fusion strategy has obvious advantages over SOTA methods in the image fusion performance and degradation treatment. The code is available at https://github.com/XunpengYi/Text-IF.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Accepted by CVPR 2024"
     },
     {
         "paper id": "2403.16393",
@@ -1137,7 +1135,8 @@
         "rating": 0,
         "keywords": [
             [
-                "Diffusion"
+                "Diffusion",
+                "Inpainting"
             ],
             [
                 "cs.CV"
@@ -1210,25 +1209,6 @@
         "comment": null
     },
     {
-        "paper id": "2403.16078",
-        "abstract url": "https://arxiv.org/abs/2403.16078",
-        "title": "Target Speech Extraction with Pre-trained AV-HuBERT and Mask-And-Recover Strategy",
-        "rating": 0,
-        "keywords": [
-            [
-                "robotics"
-            ],
-            [
-                "cs.SD"
-            ]
-        ],
-        "abstract": "Audio-visual target speech extraction (AV-TSE) is one of the enabling technologies in robotics and many audio-visual applications. One of the challenges of AV-TSE is how to effectively utilize audio-visual synchronization information in the process. AV-HuBERT can be a useful pre-trained model for lip-reading, which has not been adopted by AV-TSE. In this paper, we would like to explore the way to integrate a pre-trained AV-HuBERT into our AV-TSE system. We have good reasons to expect an improved performance. To benefit from the inter and intra-modality correlations, we also propose a novel Mask-And-Recover (MAR) strategy for self-supervised learning. The experimental results on the VoxCeleb2 dataset show that our proposed model outperforms the baselines both in terms of subjective and objective metrics, suggesting that the pre-trained AV-HuBERT model provides more informative visual cues for target speech extraction. Furthermore, through a comparative study, we confirm that the proposed Mask-And-Recover strategy is significantly effective.",
-        "subjects": [
-            "cs.SD"
-        ],
-        "comment": "Accepted by IJCNN 2024"
-    },
-    {
         "paper id": "2403.16111",
         "abstract url": "https://arxiv.org/abs/2403.16111",
         "title": "EVA: Zero-shot Accurate Attributes and Multi-Object Video Editing",
@@ -1247,6 +1227,63 @@
             "cs.CV"
         ],
         "comment": "Project page: https://knightyxp.github.io/EVA"
+    },
+    {
+        "paper id": "2403.16161",
+        "abstract url": "https://arxiv.org/abs/2403.16161",
+        "title": "Towards Online Real-Time Memory-based Video Inpainting Transformers",
+        "rating": 0,
+        "keywords": [
+            [
+                "Inpainting"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Video inpainting tasks have seen significant improvements in recent years with the rise of deep neural networks and, in particular, vision transformers. Although these models show promising reconstruction quality and temporal consistency, they are still unsuitable for live videos, one of the last steps to make them completely convincing and usable. The main limitations are that these state-of-the-art models inpaint using the whole video (offline processing) and show an insufficient frame rate. In our approach, we propose a framework to adapt existing inpainting transformers to these constraints by memorizing and refining redundant computations while maintaining a decent inpainting quality. Using this framework with some of the most recent inpainting models, we show great online results with a consistent throughput above 20 frames per second. The code and pretrained models will be made available upon acceptance.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2403.16227",
+        "abstract url": "https://arxiv.org/abs/2403.16227",
+        "title": "Dual-modal Prior Semantic Guided Infrared and Visible Image Fusion for Intelligent Transportation System",
+        "rating": 0,
+        "keywords": [
+            [
+                "Infrared"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Infrared and visible image fusion (IVF) plays an important role in intelligent transportation system (ITS). The early works predominantly focus on boosting the visual appeal of the fused result, and only several recent approaches have tried to combine the high-level vision task with IVF. However, they prioritize the design of cascaded structure to seek unified suitable features and fit different tasks. Thus, they tend to typically bias toward to reconstructing raw pixels without considering the significance of semantic features. Therefore, we propose a novel prior semantic guided image fusion method based on the dual-modality strategy, improving the performance of IVF in ITS. Specifically, to explore the independent significant semantic of each modality, we first design two parallel semantic segmentation branches with a refined feature adaptive-modulation (RFaM) mechanism. RFaM can perceive the features that are semantically distinct enough in each semantic segmentation branch. Then, two pilot experiments based on the two branches are conducted to capture the significant prior semantic of two images, which then is applied to guide the fusion task in the integration of semantic segmentation branches and fusion branches. In addition, to aggregate both high-level semantics and impressive visual effects, we further investigate the frequency response of the prior semantics, and propose a multi-level representation-adaptive fusion (MRaF) module to explicitly integrate the low-frequent prior semantic with the high-frequent details. Extensive experiments on two public datasets demonstrate the superiority of our method over the state-of-the-art image fusion approaches, in terms of either the visual appeal or the high-level semantics.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2403.16248",
+        "abstract url": "https://arxiv.org/abs/2403.16248",
+        "title": "Large Language Models Offer an Alternative to the Traditional Approach of Topic Modelling",
+        "rating": 0,
+        "keywords": [
+            [
+                "depth"
+            ],
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Topic modelling, as a well-established unsupervised technique, has found extensive use in automatically detecting significant topics within a corpus of documents. However, classic topic modelling approaches (e.g., LDA) have certain drawbacks, such as the lack of semantic understanding and the presence of overlapping topics. In this work, we investigate the untapped potential of large language models (LLMs) as an alternative for uncovering the underlying topics within extensive text corpora. To this end, we introduce a framework that prompts LLMs to generate topics from a given set of documents and establish evaluation protocols to assess the clustering efficacy of LLMs. Our findings indicate that LLMs with appropriate prompts can stand out as a viable alternative, capable of generating relevant topic titles and adhering to human guidelines to refine and merge topics. Through in-depth experiments and evaluation, we summarise the advantages and constraints of employing LLMs in topic extraction.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": "Accepted at LREC-COLING 2024"
     },
     {
         "paper id": "2403.16275",
@@ -1558,25 +1595,6 @@
         "comment": "Accepted in 32nd IEEE International Requirements Engineering 2024 conference, Iceland"
     },
     {
-        "paper id": "2403.16293",
-        "abstract url": "https://arxiv.org/abs/2403.16293",
-        "title": "Interpretable Modeling of Deep Reinforcement Learning Driven Scheduling",
-        "rating": -0.5,
-        "keywords": [
-            [
-                "Reinforcement"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "In the field of high-performance computing (HPC), there has been recent exploration into the use of deep reinforcement learning for cluster scheduling (DRL scheduling), which has demonstrated promising outcomes. However, a significant challenge arises from the lack of interpretability in deep neural networks (DNN), rendering them as black-box models to system managers. This lack of model interpretability hinders the practical deployment of DRL scheduling. In this work, we present a framework called IRL (Interpretable Reinforcement Learning) to address the issue of interpretability of DRL scheduling. The core idea is to interpret DNN (i.e., the DRL policy) as a decision tree by utilizing imitation learning. Unlike DNN, decision tree models are non-parametric and easily comprehensible to humans. To extract an effective and efficient decision tree, IRL incorporates the Dataset Aggregation (DAgger) algorithm and introduces the notion of critical state to prune the derived decision tree. Through trace-based experiments, we demonstrate that IRL is capable of converting a black-box DNN policy into an interpretable rulebased decision tree while maintaining comparable scheduling performance. Additionally, IRL can contribute to the setting of rewards in DRL scheduling.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2403.16334",
         "abstract url": "https://arxiv.org/abs/2403.16334",
         "title": "Graphs Generalization under Distribution Shifts",
@@ -1590,6 +1608,25 @@
             ]
         ],
         "abstract": "Traditional machine learning methods heavily rely on the independent and identically distribution assumption, which imposes limitations when the test distribution deviates from the training distribution. To address this crucial issue, out-of-distribution (OOD) generalization, which aims to achieve satisfactory generalization performance when faced with unknown distribution shifts, has made a significant process. However, the OOD method for graph-structured data currently lacks clarity and remains relatively unexplored due to two primary challenges. Firstly, distribution shifts on graphs often occur simultaneously on node attributes and graph topology. Secondly, capturing invariant information amidst diverse distribution shifts proves to be a formidable challenge. To overcome these obstacles, in this paper, we introduce a novel framework, namely Graph Learning Invariant Domain genERation (GLIDER). The goal is to (1) diversify variations across domains by modeling the potential seen or unseen variations of attribute distribution and topological structure and (2) minimize the discrepancy of the variation in a representation space where the target is to predict semantic labels. Extensive experiment results indicate that our model outperforms baseline methods on node-level OOD generalization across domains in distribution shift on node features and topological structures simultaneously.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2403.16369",
+        "abstract url": "https://arxiv.org/abs/2403.16369",
+        "title": "Learning Action-based Representations Using Invariance",
+        "rating": -0.5,
+        "keywords": [
+            [
+                "3D"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Robust reinforcement learning agents using high-dimensional observations must be able to identify relevant state features amidst many exogeneous distractors. A representation that captures controllability identifies these state elements by determining what affects agent control. While methods such as inverse dynamics and mutual information capture controllability for a limited number of timesteps, capturing long-horizon elements remains a challenging problem. Myopic controllability can capture the moment right before an agent crashes into a wall, but not the control-relevance of the wall while the agent is still some distance away. To address this we introduce action-bisimulation encoding, a method inspired by the bisimulation invariance pseudometric, that extends single-step controllability with a recursive invariance constraint. By doing this, action-bisimulation learns a multi-step controllability metric that smoothly discounts distant state features that are relevant for control. We demonstrate that action-bisimulation pretraining on reward-free, uniformly random data improves sample efficiency in several environments, including a photorealistic 3D simulation domain, Habitat. Additionally, we provide theoretical analysis and qualitative results demonstrating the information captured by action-bisimulation.",
         "subjects": [
             "cs.LG"
         ],
@@ -1613,6 +1650,23 @@
             "cs.LG"
         ],
         "comment": "Accepted to The 2024 International Joint Conference on Neural Networks (IJCNN)"
+    },
+    {
+        "paper id": "2403.16015",
+        "abstract url": "https://arxiv.org/abs/2403.16015",
+        "title": "MQE: Unleashing the Power of Interaction with Multi-agent Quadruped Environment",
+        "rating": -1,
+        "keywords": [
+            [
+                "robotics",
+                "robot"
+            ]
+        ],
+        "abstract": "The advent of deep reinforcement learning (DRL) has significantly advanced the field of robotics, particularly in the control and coordination of quadruped robots. However, the complexity of real-world tasks often necessitates the deployment of multi-robot systems capable of sophisticated interaction and collaboration. To address this need, we introduce the Multi-agent Quadruped Environment (MQE), a novel platform designed to facilitate the development and evaluation of multi-agent reinforcement learning (MARL) algorithms in realistic and dynamic scenarios. MQE emphasizes complex interactions between robots and objects, hierarchical policy structures, and challenging evaluation scenarios that reflect real-world applications. We present a series of collaborative and competitive tasks within MQE, ranging from simple coordination to complex adversarial interactions, and benchmark state-of-the-art MARL algorithms. Our findings indicate that hierarchical reinforcement learning can simplify task learning, but also highlight the need for advanced algorithms capable of handling the intricate dynamics of multi-agent interactions. MQE serves as a stepping stone towards bridging the gap between simulation and practical deployment, offering a rich environment for future research in multi-agent systems and robot learning. For open-sourced code and more details of MQE, please refer to https://ziyanx02.github.io/multiagent-quadruped-environment/ .",
+        "subjects": [
+            "cs.RO"
+        ],
+        "comment": "Open-source code is available at https://github.com/ziyanx02/multiagent-quadruped-environment"
     },
     {
         "paper id": "2403.16055",
@@ -1747,32 +1801,6 @@
             "cs.CV"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2403.16095",
-        "abstract url": "https://arxiv.org/abs/2403.16095",
-        "title": "CG-SLAM: Efficient Dense RGB-D SLAM in a Consistent Uncertainty-aware 3D Gaussian Field",
-        "rating": -1,
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting",
-                "RGB-D",
-                "NeRF",
-                "radiance fields"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Recently neural radiance fields (NeRF) have been widely exploited as 3D representations for dense simultaneous localization and mapping (SLAM). Despite their notable successes in surface modeling and novel view synthesis, existing NeRF-based methods are hindered by their computationally intensive and time-consuming volume rendering pipeline. This paper presents an efficient dense RGB-D SLAM system, i.e., CG-SLAM, based on a novel uncertainty-aware 3D Gaussian field with high consistency and geometric stability. Through an in-depth analysis of Gaussian Splatting, we propose several techniques to construct a consistent and stable 3D Gaussian field suitable for tracking and mapping. Additionally, a novel depth uncertainty model is proposed to ensure the selection of valuable Gaussian primitives during optimization, thereby improving tracking efficiency and accuracy. Experiments on various datasets demonstrate that CG-SLAM achieves superior tracking and mapping performance with a notable tracking speed of up to 15 Hz. We will make our source code publicly available. Project page: https://zju3dv.github.io/cg-slam.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Project Page: https://zju3dv.github.io/cg-slam"
     },
     {
         "paper id": "2403.16116",
@@ -1935,8 +1963,7 @@
         "rating": -1,
         "keywords": [
             [
-                "3D",
-                "avatar"
+                "3D"
             ],
             [
                 "diffusion"
@@ -1973,6 +2000,22 @@
             "eess.IV"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2403.16225",
+        "abstract url": "https://arxiv.org/abs/2403.16225",
+        "title": "Bi-Level Control of Weaving Sections in Mixed Traffic Environments with Connected and Automated Vehicles",
+        "rating": -1,
+        "keywords": [
+            [
+                "trajectory"
+            ]
+        ],
+        "abstract": "Connected and automated vehicles (CAVs) can be beneficial for improving the operation of highway bottlenecks such as weaving sections. This paper proposes a bi-level control approach based on an upper-level deep reinforcement learning controller and a lower-level model predictive controller to coordinate the lane-changings of a mixed fleet of CAVs and human-driven vehicles (HVs) in weaving sections. The upper level represents a roadside controller that collects vehicular information from the entire weaving section and determines the control weights used in the lower-level controller. The lower level is implemented within each CAV, which takes the control weights from the upper-level controller and generates the acceleration and steering angle for individual CAVs based on the local situation. The lower-level controller further incorporates an HV trajectory predictor, which is capable of handling the dynamic topology of vehicles in weaving scenarios with intensive mandatory lane changes. The case study inspired by a real weaving section in Basel, Switzerland, shows that our method consistently outperforms state-of-the-art benchmarks.",
+        "subjects": [
+            "eess.SY"
+        ],
+        "comment": "12 pages, 8 figures"
     },
     {
         "paper id": "2403.16237",
@@ -2106,54 +2149,6 @@
         "comment": null
     },
     {
-        "paper id": "2403.16288",
-        "abstract url": "https://arxiv.org/abs/2403.16288",
-        "title": "Study of Workload Interference with Intelligent Routing on Dragonfly",
-        "rating": -1,
-        "keywords": [
-            [
-                "reinforcement"
-            ]
-        ],
-        "abstract": "Dragonfly interconnect is a crucial network technology for supercomputers. To support exascale systems, network resources are shared such that links and routers are not dedicated to any node pair. While link utilization is increased, workload performance is often offset by network contention. Recently, intelligent routing built on reinforcement learning demonstrates higher network throughput with lower packet latency. However, its effectiveness in reducing workload interference is unknown. In this work, we present extensive network simulations to study multi-workload contention under different routing mechanisms, intelligent routing and adaptive routing, on a large-scale Dragonfly system. We develop an enhanced network simulation toolkit, along with a suite of workloads with distinctive communication patterns. We also present two metrics to characterize application communication intensity. Our analysis focuses on examining how different workloads interfere with each other under different routing mechanisms by inspecting both application-level and network-level metrics. Several key insights are made from the analysis.",
-        "subjects": [
-            "cs.NI"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2403.16298",
-        "abstract url": "https://arxiv.org/abs/2403.16298",
-        "title": "MRSch: Multi-Resource Scheduling for HPC",
-        "rating": -1,
-        "keywords": [
-            [
-                "reinforcement"
-            ]
-        ],
-        "abstract": "Emerging workloads in high-performance computing (HPC) are embracing significant changes, such as having diverse resource requirements instead of being CPU-centric. This advancement forces cluster schedulers to consider multiple schedulable resources during decision-making. Existing scheduling studies rely on heuristic or optimization methods, which are limited by an inability to adapt to new scenarios for ensuring long-term scheduling performance. We present an intelligent scheduling agent named MRSch for multi-resource scheduling in HPC that leverages direct future prediction (DFP), an advanced multi-objective reinforcement learning algorithm. While DFP demonstrated outstanding performance in a gaming competition, it has not been previously explored in the context of HPC scheduling. Several key techniques are developed in this study to tackle the challenges involved in multi-resource scheduling. These techniques enable MRSch to learn an appropriate scheduling policy automatically and dynamically adapt its policy in response to workload changes via dynamic resource prioritizing. We compare MRSch with existing scheduling methods through extensive tracebase simulations. Our results demonstrate that MRSch improves scheduling performance by up to 48% compared to the existing scheduling methods.",
-        "subjects": [
-            "cs.DC"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2403.16301",
-        "abstract url": "https://arxiv.org/abs/2403.16301",
-        "title": "Q-adaptive: A Multi-Agent Reinforcement Learning Based Routing on Dragonfly Network",
-        "rating": -1,
-        "keywords": [
-            [
-                "Reinforcement"
-            ]
-        ],
-        "abstract": "on adaptive routing to balance network traffic for optimum performance. Ideally, adaptive routing attempts to forward packets between minimal and non-minimal paths with the least congestion. In practice, current adaptive routing algorithms estimate routing path congestion based on local information such as output queue occupancy. Using local information to estimate global path congestion is inevitably inaccurate because a router has no precise knowledge of link states a few hops away. This inaccuracy could lead to interconnect congestion. In this study, we present Q-adaptive routing, a multi-agent reinforcement learning routing scheme for Dragonfly systems. Q-adaptive routing enables routers to learn to route autonomously by leveraging advanced reinforcement learning technology. The proposed Q-adaptive routing is highly scalable thanks to its fully distributed nature without using any shared information between routers. Furthermore, a new two-level Q-table is designed for Q-adaptive to make it computational lightly and saves 50% of router memory usage compared with the previous Q-routing. We implement the proposed Q-adaptive routing in SST/Merlin simulator. Our evaluation results show that Q-adaptive routing achieves up to 10.5% system throughput improvement and 5.2x average packet latency reduction compared with adaptive routing algorithms. Remarkably, Q-adaptive can even outperform the optimal VALn non-minimal routing under the ADV+1 adversarial traffic pattern with up to 3% system throughput improvement and 75% average packet latency reduction.",
-        "subjects": [
-            "cs.NI"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2403.16312",
         "abstract url": "https://arxiv.org/abs/2403.16312",
         "title": "On Reporting Durable Patterns in Temporal Proximity Graphs",
@@ -2234,22 +2229,6 @@
         "comment": "10 pages"
     },
     {
-        "paper id": "2403.16391",
-        "abstract url": "https://arxiv.org/abs/2403.16391",
-        "title": "Physics-informed RL for Maximal Safety Probability Estimation",
-        "rating": -1,
-        "keywords": [
-            [
-                "reinforcement"
-            ]
-        ],
-        "abstract": "Accurate risk quantification and reachability analysis are crucial for safe control and learning, but sampling from rare events, risky states, or long-term trajectories can be prohibitively costly. Motivated by this, we study how to estimate the long-term safety probability of maximally safe actions without sufficient coverage of samples from risky states and long-term trajectories. The use of maximal safety probability in control and learning is expected to avoid conservative behaviors due to over-approximation of risk. Here, we first show that long-term safety probability, which is multiplicative in time, can be converted into additive costs and be solved using standard reinforcement learning methods. We then derive this probability as solutions of partial differential equations (PDEs) and propose Physics-Informed Reinforcement Learning (PIRL) algorithm. The proposed method can learn using sparse rewards because the physics constraints help propagate risk information through neighbors. This suggests that, for the purpose of extracting more information for efficient learning, physics constraints can serve as an alternative to reward shaping. The proposed method can also estimate long-term risk using short-term samples and deduce the risk of unsampled states. This feature is in stark contrast with the unconstrained deep RL that demands sufficient data coverage. These merits of the proposed method are demonstrated in numerical simulation.",
-        "subjects": [
-            "eess.SY"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2403.16410",
         "abstract url": "https://arxiv.org/abs/2403.16410",
         "title": "Spike-NeRF: Neural Radiance Field Based On Spike Camera",
@@ -2257,6 +2236,7 @@
         "keywords": [
             [
                 "3D",
+                "depth",
                 "NeRF"
             ],
             [
@@ -2431,28 +2411,6 @@
         "comment": null
     },
     {
-        "paper id": "2403.16369",
-        "abstract url": "https://arxiv.org/abs/2403.16369",
-        "title": "Learning Action-based Representations Using Invariance",
-        "rating": -1.5,
-        "keywords": [
-            [
-                "3D"
-            ],
-            [
-                "reinforcement"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Robust reinforcement learning agents using high-dimensional observations must be able to identify relevant state features amidst many exogeneous distractors. A representation that captures controllability identifies these state elements by determining what affects agent control. While methods such as inverse dynamics and mutual information capture controllability for a limited number of timesteps, capturing long-horizon elements remains a challenging problem. Myopic controllability can capture the moment right before an agent crashes into a wall, but not the control-relevance of the wall while the agent is still some distance away. To address this we introduce action-bisimulation encoding, a method inspired by the bisimulation invariance pseudometric, that extends single-step controllability with a recursive invariance constraint. By doing this, action-bisimulation learns a multi-step controllability metric that smoothly discounts distant state features that are relevant for control. We demonstrate that action-bisimulation pretraining on reward-free, uniformly random data improves sample efficiency in several environments, including a photorealistic 3D simulation domain, Habitat. Additionally, we provide theoretical analysis and qualitative results demonstrating the information captured by action-bisimulation.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2403.16374",
         "abstract url": "https://arxiv.org/abs/2403.16374",
         "title": "ProIn: Learning to Predict Trajectory Based on Progressive Interactions for Autonomous Driving",
@@ -2493,26 +2451,6 @@
             "cs.AI"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2403.16015",
-        "abstract url": "https://arxiv.org/abs/2403.16015",
-        "title": "MQE: Unleashing the Power of Interaction with Multi-agent Quadruped Environment",
-        "rating": -2,
-        "keywords": [
-            [
-                "robotics",
-                "robot"
-            ],
-            [
-                "reinforcement"
-            ]
-        ],
-        "abstract": "The advent of deep reinforcement learning (DRL) has significantly advanced the field of robotics, particularly in the control and coordination of quadruped robots. However, the complexity of real-world tasks often necessitates the deployment of multi-robot systems capable of sophisticated interaction and collaboration. To address this need, we introduce the Multi-agent Quadruped Environment (MQE), a novel platform designed to facilitate the development and evaluation of multi-agent reinforcement learning (MARL) algorithms in realistic and dynamic scenarios. MQE emphasizes complex interactions between robots and objects, hierarchical policy structures, and challenging evaluation scenarios that reflect real-world applications. We present a series of collaborative and competitive tasks within MQE, ranging from simple coordination to complex adversarial interactions, and benchmark state-of-the-art MARL algorithms. Our findings indicate that hierarchical reinforcement learning can simplify task learning, but also highlight the need for advanced algorithms capable of handling the intricate dynamics of multi-agent interactions. MQE serves as a stepping stone towards bridging the gap between simulation and practical deployment, offering a rich environment for future research in multi-agent systems and robot learning. For open-sourced code and more details of MQE, please refer to https://ziyanx02.github.io/multiagent-quadruped-environment/ .",
-        "subjects": [
-            "cs.RO"
-        ],
-        "comment": "Open-source code is available at https://github.com/ziyanx02/multiagent-quadruped-environment"
     },
     {
         "paper id": "2403.16023",
@@ -2651,6 +2589,37 @@
         "comment": null
     },
     {
+        "paper id": "2403.16095",
+        "abstract url": "https://arxiv.org/abs/2403.16095",
+        "title": "CG-SLAM: Efficient Dense RGB-D SLAM in a Consistent Uncertainty-aware 3D Gaussian Field",
+        "rating": -2,
+        "keywords": [
+            [
+                "3D",
+                "Gaussian Splatting",
+                "RGB-D",
+                "depth",
+                "NeRF",
+                "radiance fields"
+            ],
+            [
+                "synthesis"
+            ],
+            [
+                "simultaneous localization and mapping",
+                "SLAM"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Recently neural radiance fields (NeRF) have been widely exploited as 3D representations for dense simultaneous localization and mapping (SLAM). Despite their notable successes in surface modeling and novel view synthesis, existing NeRF-based methods are hindered by their computationally intensive and time-consuming volume rendering pipeline. This paper presents an efficient dense RGB-D SLAM system, i.e., CG-SLAM, based on a novel uncertainty-aware 3D Gaussian field with high consistency and geometric stability. Through an in-depth analysis of Gaussian Splatting, we propose several techniques to construct a consistent and stable 3D Gaussian field suitable for tracking and mapping. Additionally, a novel depth uncertainty model is proposed to ensure the selection of valuable Gaussian primitives during optimization, thereby improving tracking efficiency and accuracy. Experiments on various datasets demonstrate that CG-SLAM achieves superior tracking and mapping performance with a notable tracking speed of up to 15 Hz. We will make our source code publicly available. Project page: https://zju3dv.github.io/cg-slam.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Project Page: https://zju3dv.github.io/cg-slam"
+    },
+    {
         "paper id": "2403.16135",
         "abstract url": "https://arxiv.org/abs/2403.16135",
         "title": "Complementary Recommendation in E-commerce: Definition, Approaches, and Future Directions",
@@ -2748,25 +2717,6 @@
         "comment": "6 pages, 5 Figure, IWBF conference"
     },
     {
-        "paper id": "2403.16225",
-        "abstract url": "https://arxiv.org/abs/2403.16225",
-        "title": "Bi-Level Control of Weaving Sections in Mixed Traffic Environments with Connected and Automated Vehicles",
-        "rating": -2,
-        "keywords": [
-            [
-                "trajectory"
-            ],
-            [
-                "reinforcement"
-            ]
-        ],
-        "abstract": "Connected and automated vehicles (CAVs) can be beneficial for improving the operation of highway bottlenecks such as weaving sections. This paper proposes a bi-level control approach based on an upper-level deep reinforcement learning controller and a lower-level model predictive controller to coordinate the lane-changings of a mixed fleet of CAVs and human-driven vehicles (HVs) in weaving sections. The upper level represents a roadside controller that collects vehicular information from the entire weaving section and determines the control weights used in the lower-level controller. The lower level is implemented within each CAV, which takes the control weights from the upper-level controller and generates the acceleration and steering angle for individual CAVs based on the local situation. The lower-level controller further incorporates an HV trajectory predictor, which is capable of handling the dynamic topology of vehicles in weaving scenarios with intensive mandatory lane changes. The case study inspired by a real weaving section in Basel, Switzerland, shows that our method consistently outperforms state-of-the-art benchmarks.",
-        "subjects": [
-            "eess.SY"
-        ],
-        "comment": "12 pages, 8 figures"
-    },
-    {
         "paper id": "2403.16230",
         "abstract url": "https://arxiv.org/abs/2403.16230",
         "title": "On machine learning analysis of atomic force microscopy images for image classification, sample surface recognition",
@@ -2790,6 +2740,7 @@
         "rating": -2,
         "keywords": [
             [
+                "6D",
                 "RGBD"
             ],
             [
@@ -3202,7 +3153,8 @@
         "rating": -3,
         "keywords": [
             [
-                "3D"
+                "3D",
+                "depth"
             ],
             [
                 "diffusion",
@@ -3301,29 +3253,6 @@
         "comment": "submitted to IEEE journal for possible publication"
     },
     {
-        "paper id": "2403.16400",
-        "abstract url": "https://arxiv.org/abs/2403.16400",
-        "title": "ASDF: Assembly State Detection Utilizing Late Fusion by Integrating 6D Pose Estimation",
-        "rating": -3,
-        "keywords": [
-            [
-                "medical",
-                "surgery"
-            ],
-            [
-                "industrial"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "In medical and industrial domains, providing guidance for assembly processes is critical to ensure efficiency and safety. Errors in assembly can lead to significant consequences such as extended surgery times, and prolonged manufacturing or maintenance times in industry. Assembly scenarios can benefit from in-situ AR visualization to provide guidance, reduce assembly times and minimize errors. To enable in-situ visualization 6D pose estimation can be leveraged. Existing 6D pose estimation techniques primarily focus on individual objects and static captures. However, assembly scenarios have various dynamics including occlusion during assembly and dynamics in the assembly objects appearance. Existing work, combining object detection/6D pose estimation and assembly state detection focuses either on pure deep learning-based approaches, or limit the assembly state detection to building blocks. To address the challenges of 6D pose estimation in combination with assembly state detection, our approach ASDF builds upon the strengths of YOLOv8, a real-time capable object detection framework. We extend this framework, refine the object pose and fuse pose knowledge with network-detected pose information. Utilizing our late fusion in our Pose2State module results in refined 6D pose estimation and assembly state detection. By combining both pose and state information, our Pose2State module predicts the final assembly state with precision. Our evaluation on our ASDF dataset shows that our Pose2State module leads to an improved assembly state detection and that the improvement of the assembly state further leads to a more robust 6D pose estimation. Moreover, on the GBOT dataset, we outperform the pure deep learning-based network, and even outperform the hybrid and pure tracking-based approaches.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2403.16206",
         "abstract url": "https://arxiv.org/abs/2403.16206",
         "title": "Rumor Detection with a novel graph neural network approach",
@@ -3347,34 +3276,6 @@
             "cs.AI"
         ],
         "comment": "10 pages, 5 figures"
-    },
-    {
-        "paper id": "2403.16384",
-        "abstract url": "https://arxiv.org/abs/2403.16384",
-        "title": "Residual Dense Swin Transformer for Continuous Depth-Independent Ultrasound Imaging",
-        "rating": -3.5,
-        "keywords": [
-            [
-                "super-resolution"
-            ],
-            [
-                "organ"
-            ],
-            [
-                "image enhancement"
-            ],
-            [
-                "eess.IV"
-            ],
-            [
-                "ICASSP"
-            ]
-        ],
-        "abstract": "Ultrasound imaging is crucial for evaluating organ morphology and function, yet depth adjustment can degrade image quality and field-of-view, presenting a depth-dependent dilemma. Traditional interpolation-based zoom-in techniques often sacrifice detail and introduce artifacts. Motivated by the potential of arbitrary-scale super-resolution to naturally address these inherent challenges, we present the Residual Dense Swin Transformer Network (RDSTN), designed to capture the non-local characteristics and long-range dependencies intrinsic to ultrasound images. It comprises a linear embedding module for feature enhancement, an encoder with shifted-window attention for modeling non-locality, and an MLP decoder for continuous detail reconstruction. This strategy streamlines balancing image quality and field-of-view, which offers superior textures over traditional methods. Experimentally, RDSTN outperforms existing approaches while requiring fewer parameters. In conclusion, RDSTN shows promising potential for ultrasound image enhancement by overcoming the limitations of conventional interpolation-based methods and achieving depth-independent imaging.",
-        "subjects": [
-            "eess.IV"
-        ],
-        "comment": "Accepted by ICASSP2024, https://ieeexplore.ieee.org/document/10447712"
     },
     {
         "paper id": "2403.16198",
@@ -3403,6 +3304,63 @@
             "cs.CV"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2403.16400",
+        "abstract url": "https://arxiv.org/abs/2403.16400",
+        "title": "ASDF: Assembly State Detection Utilizing Late Fusion by Integrating 6D Pose Estimation",
+        "rating": -4,
+        "keywords": [
+            [
+                "6D"
+            ],
+            [
+                "medical",
+                "surgery"
+            ],
+            [
+                "industrial"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "In medical and industrial domains, providing guidance for assembly processes is critical to ensure efficiency and safety. Errors in assembly can lead to significant consequences such as extended surgery times, and prolonged manufacturing or maintenance times in industry. Assembly scenarios can benefit from in-situ AR visualization to provide guidance, reduce assembly times and minimize errors. To enable in-situ visualization 6D pose estimation can be leveraged. Existing 6D pose estimation techniques primarily focus on individual objects and static captures. However, assembly scenarios have various dynamics including occlusion during assembly and dynamics in the assembly objects appearance. Existing work, combining object detection/6D pose estimation and assembly state detection focuses either on pure deep learning-based approaches, or limit the assembly state detection to building blocks. To address the challenges of 6D pose estimation in combination with assembly state detection, our approach ASDF builds upon the strengths of YOLOv8, a real-time capable object detection framework. We extend this framework, refine the object pose and fuse pose knowledge with network-detected pose information. Utilizing our late fusion in our Pose2State module results in refined 6D pose estimation and assembly state detection. By combining both pose and state information, our Pose2State module predicts the final assembly state with precision. Our evaluation on our ASDF dataset shows that our Pose2State module leads to an improved assembly state detection and that the improvement of the assembly state further leads to a more robust 6D pose estimation. Moreover, on the GBOT dataset, we outperform the pure deep learning-based network, and even outperform the hybrid and pure tracking-based approaches.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2403.16384",
+        "abstract url": "https://arxiv.org/abs/2403.16384",
+        "title": "Residual Dense Swin Transformer for Continuous Depth-Independent Ultrasound Imaging",
+        "rating": -4.5,
+        "keywords": [
+            [
+                "Depth"
+            ],
+            [
+                "super-resolution"
+            ],
+            [
+                "organ"
+            ],
+            [
+                "image enhancement"
+            ],
+            [
+                "eess.IV"
+            ],
+            [
+                "ICASSP"
+            ]
+        ],
+        "abstract": "Ultrasound imaging is crucial for evaluating organ morphology and function, yet depth adjustment can degrade image quality and field-of-view, presenting a depth-dependent dilemma. Traditional interpolation-based zoom-in techniques often sacrifice detail and introduce artifacts. Motivated by the potential of arbitrary-scale super-resolution to naturally address these inherent challenges, we present the Residual Dense Swin Transformer Network (RDSTN), designed to capture the non-local characteristics and long-range dependencies intrinsic to ultrasound images. It comprises a linear embedding module for feature enhancement, an encoder with shifted-window attention for modeling non-locality, and an MLP decoder for continuous detail reconstruction. This strategy streamlines balancing image quality and field-of-view, which offers superior textures over traditional methods. Experimentally, RDSTN outperforms existing approaches while requiring fewer parameters. In conclusion, RDSTN shows promising potential for ultrasound image enhancement by overcoming the limitations of conventional interpolation-based methods and achieving depth-independent imaging.",
+        "subjects": [
+            "eess.IV"
+        ],
+        "comment": "Accepted by ICASSP2024, https://ieeexplore.ieee.org/document/10447712"
     },
     {
         "paper id": "2403.17982",
@@ -3871,6 +3829,18 @@
         "comment": null
     },
     {
+        "paper id": "2403.16288",
+        "abstract url": "https://arxiv.org/abs/2403.16288",
+        "title": "Study of Workload Interference with Intelligent Routing on Dragonfly",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "Dragonfly interconnect is a crucial network technology for supercomputers. To support exascale systems, network resources are shared such that links and routers are not dedicated to any node pair. While link utilization is increased, workload performance is often offset by network contention. Recently, intelligent routing built on reinforcement learning demonstrates higher network throughput with lower packet latency. However, its effectiveness in reducing workload interference is unknown. In this work, we present extensive network simulations to study multi-workload contention under different routing mechanisms, intelligent routing and adaptive routing, on a large-scale Dragonfly system. We develop an enhanced network simulation toolkit, along with a suite of workloads with distinctive communication patterns. We also present two metrics to characterize application communication intensity. Our analysis focuses on examining how different workloads interfere with each other under different routing mechanisms by inspecting both application-level and network-level metrics. Several key insights are made from the analysis.",
+        "subjects": [
+            "cs.NI"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2403.16290",
         "abstract url": "https://arxiv.org/abs/2403.16290",
         "title": "An Information Theoretic Treatment of Animal Movement Tracks",
@@ -3881,6 +3851,30 @@
             "q-bio.PE"
         ],
         "comment": "20 pages, 2 tables, 1 figure"
+    },
+    {
+        "paper id": "2403.16298",
+        "abstract url": "https://arxiv.org/abs/2403.16298",
+        "title": "MRSch: Multi-Resource Scheduling for HPC",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "Emerging workloads in high-performance computing (HPC) are embracing significant changes, such as having diverse resource requirements instead of being CPU-centric. This advancement forces cluster schedulers to consider multiple schedulable resources during decision-making. Existing scheduling studies rely on heuristic or optimization methods, which are limited by an inability to adapt to new scenarios for ensuring long-term scheduling performance. We present an intelligent scheduling agent named MRSch for multi-resource scheduling in HPC that leverages direct future prediction (DFP), an advanced multi-objective reinforcement learning algorithm. While DFP demonstrated outstanding performance in a gaming competition, it has not been previously explored in the context of HPC scheduling. Several key techniques are developed in this study to tackle the challenges involved in multi-resource scheduling. These techniques enable MRSch to learn an appropriate scheduling policy automatically and dynamically adapt its policy in response to workload changes via dynamic resource prioritizing. We compare MRSch with existing scheduling methods through extensive tracebase simulations. Our results demonstrate that MRSch improves scheduling performance by up to 48% compared to the existing scheduling methods.",
+        "subjects": [
+            "cs.DC"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2403.16301",
+        "abstract url": "https://arxiv.org/abs/2403.16301",
+        "title": "Q-adaptive: A Multi-Agent Reinforcement Learning Based Routing on Dragonfly Network",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "on adaptive routing to balance network traffic for optimum performance. Ideally, adaptive routing attempts to forward packets between minimal and non-minimal paths with the least congestion. In practice, current adaptive routing algorithms estimate routing path congestion based on local information such as output queue occupancy. Using local information to estimate global path congestion is inevitably inaccurate because a router has no precise knowledge of link states a few hops away. This inaccuracy could lead to interconnect congestion. In this study, we present Q-adaptive routing, a multi-agent reinforcement learning routing scheme for Dragonfly systems. Q-adaptive routing enables routers to learn to route autonomously by leveraging advanced reinforcement learning technology. The proposed Q-adaptive routing is highly scalable thanks to its fully distributed nature without using any shared information between routers. Furthermore, a new two-level Q-table is designed for Q-adaptive to make it computational lightly and saves 50% of router memory usage compared with the previous Q-routing. We implement the proposed Q-adaptive routing in SST/Merlin simulator. Our evaluation results show that Q-adaptive routing achieves up to 10.5% system throughput improvement and 5.2x average packet latency reduction compared with adaptive routing algorithms. Remarkably, Q-adaptive can even outperform the optimal VALn non-minimal routing under the ADV+1 adversarial traffic pattern with up to 3% system throughput improvement and 75% average packet latency reduction.",
+        "subjects": [
+            "cs.NI"
+        ],
+        "comment": null
     },
     {
         "paper id": "2403.16304",
@@ -4085,6 +4079,18 @@
             "math.CT"
         ],
         "comment": "18 pp. Project results from the American Mathematical Society's Math Research Community on Applied Category Theory 2022"
+    },
+    {
+        "paper id": "2403.16391",
+        "abstract url": "https://arxiv.org/abs/2403.16391",
+        "title": "Physics-informed RL for Maximal Safety Probability Estimation",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "Accurate risk quantification and reachability analysis are crucial for safe control and learning, but sampling from rare events, risky states, or long-term trajectories can be prohibitively costly. Motivated by this, we study how to estimate the long-term safety probability of maximally safe actions without sufficient coverage of samples from risky states and long-term trajectories. The use of maximal safety probability in control and learning is expected to avoid conservative behaviors due to over-approximation of risk. Here, we first show that long-term safety probability, which is multiplicative in time, can be converted into additive costs and be solved using standard reinforcement learning methods. We then derive this probability as solutions of partial differential equations (PDEs) and propose Physics-Informed Reinforcement Learning (PIRL) algorithm. The proposed method can learn using sparse rewards because the physics constraints help propagate risk information through neighbors. This suggests that, for the purpose of extracting more information for efficient learning, physics constraints can serve as an alternative to reward shaping. The proposed method can also estimate long-term risk using short-term samples and deduce the risk of unsampled states. This feature is in stark contrast with the unconstrained deep RL that demands sufficient data coverage. These merits of the proposed method are demonstrated in numerical simulation.",
+        "subjects": [
+            "eess.SY"
+        ],
+        "comment": null
     },
     {
         "paper id": "2403.16402",

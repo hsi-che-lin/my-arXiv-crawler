@@ -48,8 +48,12 @@ def search(fromDate, toDate, searched):
         soup = BeautifulSoup(resp.text, "html.parser")
     
     total = soup.find("h1", class_ = "title is-clearfix")
-    total = int(total.text.strip().split(" ")[-2])
-    papers = soup.findAll("li", class_ = "arxiv-result")
+    if (total.text.strip() == "Sorry, your query returned no results"):
+        total = 0
+        papers = []
+    else:
+        total = int(total.text.strip().split(" ")[-2])
+        papers = soup.findAll("li", class_ = "arxiv-result")
 
     return total, papers
 
@@ -102,6 +106,10 @@ if (__name__ == "__main__"):
                 result = parse(paper, rater)
                 results.append(result)
                 stat[result["rating"]] = stat.get(result["rating"], 0) + 1
+
+        if (total == 0):
+            print(f"There are no papers from {fromDate} to {toDate} now. (skipped)")
+            continue
 
         results = sorted(results, key = lambda x: (-x["rating"], x["paper id"]))
         tmp = [("total", total)] + [(k, v) for (k, v) in sorted(stat.items(), key = lambda x: -x[0])]
