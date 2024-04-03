@@ -71,8 +71,8 @@ class Rater:
             1: [
                 ["(parameters?|meory|time|training)[ -]?(efficient|efficiency)",
                  "PEFT", "efficient fine-?tun(e|ing)"],
-                ["vision[ -]language", "VLM"],
-                ["audio[ -]visual"],
+                ["(vision|visual)[ -]language", "VLM"],
+                ["audio[ -](vision|visual)"],
                 ["(social|cultral) bias(es)?"]
             ]
         }
