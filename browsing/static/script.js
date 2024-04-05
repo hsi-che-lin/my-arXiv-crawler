@@ -38,19 +38,20 @@ function updateNavigation() {
     nextButton.disabled = currentPaperIndex === papers.length - 1;
 }
 
-function selectFile() {
-    fetch("/", {
+async function selectFile() {
+    // TODO: rewrite with await
+    const response = await fetch("/", {
         method: "POST",
         headers: {"Content-Type": "application/json; charset=utf-8"},
-        body: JSON.stringify({task: "selectFile", fileName: paperFile.value})
-    })
-        .then(response => response.json())
-        .then(data => {papers = data;})
-        .then(() => {
-            currentPaperIndex = 0;
-            displayPaper(currentPaperIndex);
-            updateNavigation();
+        body: JSON.stringify({
+            task: "selectFile",
+            fileName: paperFile.value
         })
+    });
+    papers = await response.json();
+    currentPaperIndex = 0;
+    displayPaper(currentPaperIndex);
+    updateNavigation();
 }
 
 function prevPaper() {
@@ -92,8 +93,21 @@ jumpButton.addEventListener('click', jumpPaper);
 
 
 // for keyboard shortcut
-document.addEventListener("keydown", handleKeyDown);
-function handleKeyDown(event) {
+async function preWriteNotes() {
+    const response = await fetch("/", {
+        method: "POST",
+        headers: {"Content-Type": "application/json; charset=utf-8"},
+        body: JSON.stringify({
+            task: "pre-writeNotes",
+            url: papers[currentPaperIndex]['abstract url']
+        })
+    });
+    const prevNotes = (await response.json())["prevNotes"]
+
+    return prevNotes
+}
+
+async function handleKeyDown(event) {
     const key = event.key;
 
     if (key === "ArrowLeft" || key === "h") {
@@ -107,18 +121,20 @@ function handleKeyDown(event) {
     } else if (key == "p") {
         window.open(`${papers[currentPaperIndex]['abstract url']}.pdf#view=FitH`.replace("abs", "pdf"), '_blank', 'location=yes,scrollbars=yes,status=yes')
     } else if (key == "n") {
-        const data = {
+        const prevNotes = await preWriteNotes();
+        const body = {
             task: "writeNotes",
             date: paperFile.value.replace(".json", ""),
             title: papers[currentPaperIndex]['title'],
-            note: prompt("Enter note here:"),
+            note: prompt("Enter note here:", prevNotes),
             url: papers[currentPaperIndex]['abstract url'],
             keywords: papers[currentPaperIndex]['keywords']
-        };
+        }
+
         fetch("/", {
             method: "POST",
             headers: {"Content-Type": "application/json; charset=utf-8"},
-            body: JSON.stringify(data)
+            body: JSON.stringify(body)
         })
     } else if (key == "t") {
         navigator.clipboard.writeText(papers[currentPaperIndex]['title'])
@@ -130,3 +146,5 @@ function handleKeyDown(event) {
         alert("Keyboard shortcuts:\nprevious paper    : left, h\nnext paper           : right, l\nJump to index     : /\nFocus select file   : s\nOpen pdf             : p\nWrite note           : n\nCopy title             : t\nCopy abstract url : a");
     }
 }
+
+document.addEventListener("keydown", handleKeyDown);
