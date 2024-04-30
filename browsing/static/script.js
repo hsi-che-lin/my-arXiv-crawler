@@ -17,6 +17,17 @@ const nextButton = document.getElementById('next-paper');
 let papers = [];
 let currentPaperIndex = 0;
 
+function logging(info) {
+    fetch("/", {
+        method: "POST",
+        headers: {"Content-Type": "application/json; charset=utf-8"},
+        body: JSON.stringify({
+            task: "log",
+            info: info
+        })
+    })
+}
+
 function displayPaper(index) {
     const paper = papers[index];
     if (!paper) return;
@@ -29,6 +40,12 @@ function displayPaper(index) {
     paperAbstract.textContent = `${paper['abstract']}`;
     paperSubjects.textContent = `${paper['subjects'].join(', ')}`;
     paperComments.textContent = `${paper['comment']}`;
+
+    logging({
+        action: "change paper",
+        fileName: paperFile.value,
+        index: index
+    })
 }
 
 function updateNavigation() {
@@ -39,7 +56,6 @@ function updateNavigation() {
 }
 
 async function selectFile() {
-    // TODO: rewrite with await
     const response = await fetch("/", {
         method: "POST",
         headers: {"Content-Type": "application/json; charset=utf-8"},
@@ -48,8 +64,9 @@ async function selectFile() {
             fileName: paperFile.value
         })
     });
-    papers = await response.json();
-    currentPaperIndex = 0;
+    response_json = await response.json();
+    papers = response_json["papers"];
+    currentPaperIndex = response_json["index"];
     displayPaper(currentPaperIndex);
     updateNavigation();
 }

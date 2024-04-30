@@ -1,11 +1,28 @@
 import os
 import json
 from flask import Flask, request, render_template
+from datetime import datetime
 
 app = Flask(__name__, template_folder = "template", static_folder = "static")
 
 def absPath(path):
     return os.path.join(os.path.dirname(os.path.abspath(__file__)), path)
+
+def selectFile(fileName):
+    index = 0
+
+    with open(absPath(f"../results/{fileName}"), "r") as f:
+        papers = json.load(f)
+
+    if (os.path.isfile(absPath("../ignore/log.txt"))):
+        with open(absPath("../ignore/log.txt"), "r") as f:
+            for l in f.readlines():
+                info = json.loads(l.split("|")[1])
+                if (fileName == info["fileName"]):
+                    index = info["index"]
+    
+    return papers, index
+
 
 def getPrevNotes(data):
     if (not os.path.isfile(absPath("../notes.csv"))): return ""
@@ -47,6 +64,13 @@ def writeNote(data):
             f.write(f"{prefix}{data['date']}|{data['title']}|{data['note']}|{data['url']}|{data['keywords']}\n")
 
 
+def writeLog(info):
+    os.makedirs(absPath("../ignore"), exist_ok = True)
+    with open(absPath("../ignore/log.txt"), "a") as f:
+        time = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
+        f.write(f"{time}|{json.dumps(info)}\n")
+
+
 @app.route("/", methods = ["GET", "POST"])
 def index():
     if (request.method == "GET"):
@@ -56,13 +80,19 @@ def index():
         data = request.json
 
         if (data["task"] == "selectFile"):
-            with open(absPath(f"../results/{data['fileName']}"), "r") as f:
-                returnData = json.load(f)
+            papers, index = selectFile(data["fileName"])
+            returnData = {
+                "papers": papers,
+                "index": index
+            }
         elif (data["task"] == "pre-writeNotes"):
             prevNotes = getPrevNotes(data)
             returnData = {"prevNotes": prevNotes}
         elif (data["task"] == "writeNotes"):
             writeNote(data)
+            returnData = {}
+        elif (data["task"] == "log"):
+            writeLog(data["info"])
             returnData = {}
         
         return returnData
