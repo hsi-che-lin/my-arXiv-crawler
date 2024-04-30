@@ -261,7 +261,8 @@
         "rating": 1,
         "keywords": [
             [
-                "Vision-Language"
+                "Vision-Language",
+                "VLMs"
             ],
             [
                 "Text-to-Image"
@@ -436,22 +437,6 @@
         "abstract": "In this paper, we propose a novel parameter and computation efficient tuning method for Multi-modal Large Language Models (MLLMs), termed Efficient Attention Skipping (EAS). Concretely, we first reveal that multi-head attentions (MHAs), the main computational overhead of MLLMs, are often redundant to downstream tasks. Based on this observation, EAS evaluates the attention redundancy and skips the less important MHAs to speed up inference. Besides, we also propose a novel propagation-of-information adapter (PIA) to serve the attention skipping of EAS and keep parameter efficiency, which can be further re-parameterized into feed-forward networks (FFNs) for zero-extra latency. To validate EAS, we apply it to a recently proposed MLLM called LaVIN and a classic VL pre-trained model called METER, and conduct extensive experiments on a set of benchmarks. The experiments show that EAS not only retains high performance and parameter efficiency, but also greatly speeds up inference speed. For instance, LaVIN-EAS can obtain 89.98\\% accuracy on ScineceQA while speeding up inference by 2.2 times to LaVIN",
         "subjects": [
             "cs.MM"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2403.15245",
-        "abstract url": "https://arxiv.org/abs/2403.15245",
-        "title": "Reasoning-Enhanced Object-Centric Learning for Videos",
-        "rating": 1,
-        "keywords": [
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Object-centric learning aims to break down complex visual scenes into more manageable object representations, enhancing the understanding and reasoning abilities of machine learning systems toward the physical world. Recently, slot-based video models have demonstrated remarkable proficiency in segmenting and tracking objects, but they overlook the importance of the effective reasoning module. In the real world, reasoning and predictive abilities play a crucial role in human perception and object tracking; in particular, these abilities are closely related to human intuitive physics. Inspired by this, we designed a novel reasoning module called the Slot-based Time-Space Transformer with Memory buffer (STATM) to enhance the model's perception ability in complex scenes. The memory buffer primarily serves as storage for slot information from upstream modules, the Slot-based Time-Space Transformer makes predictions through slot-based spatiotemporal attention computations and fusion. Our experiment results on various datasets show that STATM can significantly enhance object-centric learning capabilities of slot-based video models.",
-        "subjects": [
-            "cs.CV"
         ],
         "comment": null
     },
@@ -913,6 +898,22 @@
         "comment": null
     },
     {
+        "paper id": "2404.07962",
+        "abstract url": "https://arxiv.org/abs/2404.07962",
+        "title": "Live and Learn: Continual Action Clustering with Incremental Views",
+        "rating": 1,
+        "keywords": [
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Multi-view action clustering leverages the complementary information from different camera views to enhance the clustering performance. Although existing approaches have achieved significant progress, they assume all camera views are available in advance, which is impractical when the camera view is incremental over time. Besides, learning the invariant information among multiple camera views is still a challenging issue, especially in continual learning scenario. Aiming at these problems, we propose a novel continual action clustering (CAC) method, which is capable of learning action categories in a continual learning manner. To be specific, we first devise a category memory library, which captures and stores the learned categories from historical views. Then, as a new camera view arrives, we only need to maintain a consensus partition matrix, which can be updated by leveraging the incoming new camera view rather than keeping all of them. Finally, a three-step alternate optimization is proposed, in which the category memory library and consensus partition matrix are optimized. The empirical experimental results on 6 realistic multi-view action collections demonstrate the excellent clustering performance and time/space efficiency of the CAC compared with 15 state-of-the-art baselines.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2403.14958",
         "abstract url": "https://arxiv.org/abs/2403.14958",
         "title": "Adapprox: Adaptive Approximation in Adam Optimization via Randomized Low-Rank Matrices",
@@ -993,22 +994,6 @@
         "comment": null
     },
     {
-        "paper id": "2403.15025",
-        "abstract url": "https://arxiv.org/abs/2403.15025",
-        "title": "Robust Conformal Prediction under Distribution Shift via Physics-Informed Structural Causal Model",
-        "rating": 0.5,
-        "keywords": [
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Uncertainty is critical to reliable decision-making with machine learning. Conformal prediction (CP) handles uncertainty by predicting a set on a test input, hoping the set to cover the true label with at least $(1-\u03b1)$ confidence. This coverage can be guaranteed on test data even if the marginal distributions $P_X$ differ between calibration and test datasets. However, as it is common in practice, when the conditional distribution $P_{Y|X}$ is different on calibration and test data, the coverage is not guaranteed and it is essential to measure and minimize the coverage loss under distributional shift at \\textit{all} possible confidence levels. To address these issues, we upper bound the coverage difference at all levels using the cumulative density functions of calibration and test conformal scores and Wasserstein distance. Inspired by the invariance of physics across data distributions, we propose a physics-informed structural causal model (PI-SCM) to reduce the upper bound. We validated that PI-SCM can improve coverage robustness along confidence level and test domain on a traffic speed prediction task and an epidemic spread task with multiple real-world datasets.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2403.15045",
         "abstract url": "https://arxiv.org/abs/2403.15045",
         "title": "DP-Dueling: Learning from Preference Feedback without Compromising User Privacy",
@@ -1019,22 +1004,6 @@
             ]
         ],
         "abstract": "We consider the well-studied dueling bandit problem, where a learner aims to identify near-optimal actions using pairwise comparisons, under the constraint of differential privacy. We consider a general class of utility-based preference matrices for large (potentially unbounded) decision spaces and give the first differentially private dueling bandit algorithm for active learning with user preferences. Our proposed algorithms are computationally efficient with near-optimal performance, both in terms of the private and non-private regret bound. More precisely, we show that when the decision space is of finite size $K$, our proposed algorithm yields order optimal $O\\Big(\\sum_{i = 2}^K\\log\\frac{KT}{\u0394_i} + \\frac{K}\u03b5\\Big)$ regret bound for pure $\u03b5$-DP, where $\u0394_i$ denotes the suboptimality gap of the $i$-th arm. We also present a matching lower bound analysis which proves the optimality of our algorithms. Finally, we extend our results to any general decision space in $d$-dimensions with potentially infinite arms and design an $\u03b5$-DP algorithm with regret $\\tilde{O} \\left( \\frac{d^6}{\u03ba\u03b5} + \\frac{ d\\sqrt{T }}\u03ba \\right)$, providing privacy for free when $T \\gg d$.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2403.15073",
-        "abstract url": "https://arxiv.org/abs/2403.15073",
-        "title": "On the Inclusion of Charge and Spin States in Cartesian Tensor Neural Network Potentials",
-        "rating": 0.5,
-        "keywords": [
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "In this letter, we present an extension to TensorNet, a state-of-the-art equivariant Cartesian tensor neural network potential, allowing it to handle charged molecules and spin states without architectural changes or increased costs. By incorporating these attributes, we address input degeneracy issues, enhancing the model's predictive accuracy across diverse chemical systems. This advancement significantly broadens TensorNet's applicability, maintaining its efficiency and accuracy.",
         "subjects": [
             "cs.LG"
         ],
@@ -1152,7 +1121,7 @@
                 "cs.LG"
             ]
         ],
-        "abstract": "PDE-based Group Convolutional Neural Networks (PDE-G-CNNs) utilize solvers of geometrically meaningful evolution PDEs as substitutes for the conventional components in G-CNNs. PDE-G-CNNs offer several key benefits all at once: fewer parameters, inherent equivariance, better performance, data efficiency, and geometric interpretability. In this article we focus on Euclidean equivariant PDE-G-CNNs where the feature maps are two dimensional throughout. We call this variant of the framework a PDE-CNN. We list several practically desirable axioms and derive from these which PDEs should be used in a PDE-CNN. Here our approach to geometric learning via PDEs is inspired by the axioms of classical linear and morphological scale-space theory, which we generalize by introducing semifield-valued signals. Furthermore, we experimentally confirm for small networks that PDE-CNNs offer fewer parameters, better performance, and data efficiency in comparison to CNNs. We also investigate what effect the use of different semifields has on the performance of the models.",
+        "abstract": "PDE-based Group Convolutional Neural Networks (PDE-G-CNNs) utilize solvers of geometrically meaningful evolution PDEs as substitutes for the conventional components in G-CNNs. PDE-G-CNNs offer several key benefits all at once: fewer parameters, inherent equivariance, better performance, data efficiency, and geometric interpretability. In this article we focus on Euclidean equivariant PDE-G-CNNs where the feature maps are two dimensional throughout. We call this variant of the framework a PDE-CNN. From a machine learning perspective, we list several practically desirable axioms and derive from these which PDEs should be used in a PDE-CNN. Here our approach to geometric learning via PDEs is inspired by the axioms of classical linear and morphological scale-space theory, which we generalize by introducing semifield-valued signals. Furthermore, we experimentally confirm for small networks that PDE-CNNs offer fewer parameters, increased performance, and better data efficiency when compared to CNNs. We also investigate what effect the use of different semifields has on the performance of the models.",
         "subjects": [
             "cs.LG"
         ],
@@ -1554,7 +1523,7 @@
                 "cs.LG"
             ]
         ],
-        "abstract": "Class incremental learning (CIL) trains a network on sequential tasks with separated categories but suffers from catastrophic forgetting, where models quickly lose previously learned knowledge when acquiring new tasks. The generalized CIL (GCIL) aims to address the CIL problem in a more real-world scenario, where incoming data have mixed data categories and unknown sample size distribution, leading to intensified forgetting. Existing attempts for the GCIL either have poor performance, or invade data privacy by saving historical exemplars. To address this, in this paper, we propose an exemplar-free generalized analytic class incremental learning (G-ACIL). The G-ACIL adopts analytic learning (a gradient-free training technique), and delivers an analytical solution (i.e., closed-form) to the GCIL scenario. This solution is derived via decomposing the incoming data into exposed and unexposed classes, allowing an equivalence between the incremental learning and its joint training, i.e., the weight-invariant property. Such an equivalence is theoretically validated through matrix analysis tools, and hence contributes interpretability in GCIL. It is also empirically evidenced by experiments on various datasets and settings of GCIL. The results show that the G-ACIL exhibits leading performance with high robustness compared with existing competitive GCIL methods. Codes will be ready at https://github.com/ZHUANGHP/Analytic-continual-learning.",
+        "abstract": "Class incremental learning (CIL) trains a network on sequential tasks with separated categories but suffers from catastrophic forgetting, where models quickly lose previously learned knowledge when acquiring new tasks. The generalized CIL (GCIL) aims to address the CIL problem in a more real-world scenario, where incoming data have mixed data categories and unknown sample size distribution, leading to intensified forgetting. Existing attempts for the GCIL either have poor performance, or invade data privacy by saving historical exemplars. To address this, in this paper, we propose an exemplar-free generalized analytic class incremental learning (G-ACIL). The G-ACIL adopts analytic learning (a gradient-free training technique), and delivers an analytical solution (i.e., closed-form) to the GCIL scenario. This solution is derived via decomposing the incoming data into exposed and unexposed classes, allowing an equivalence between the incremental learning and its joint training, i.e., the weight-invariant property. Such an equivalence is theoretically validated through matrix analysis tools, and hence contributes interpretability in GCIL. It is also empirically evidenced by experiments on various datasets and settings of GCIL. The results show that the G-ACIL exhibits leading performance with high robustness compared with existing competitive GCIL methods. Codes will be ready at \\url{https://github.com/ZHUANGHP/Analytic-continual-learning}.",
         "subjects": [
             "cs.LG"
         ],
@@ -2881,6 +2850,25 @@
         "comment": null
     },
     {
+        "paper id": "2403.15245",
+        "abstract url": "https://arxiv.org/abs/2403.15245",
+        "title": "Reasoning-Enhanced Object-Centric Learning for Videos",
+        "rating": -1,
+        "keywords": [
+            [
+                "physics"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Object-centric learning aims to break down complex visual scenes into more manageable object representations, enhancing the understanding and reasoning abilities of machine learning systems toward the physical world. Recently, slot-based video models have demonstrated remarkable proficiency in segmenting and tracking objects, but they overlook the importance of the effective reasoning module. In the real world, reasoning and predictive abilities play a crucial role in human perception and object tracking; in particular, these abilities are closely related to human intuitive physics. Inspired by this, we designed a novel reasoning module called the Slot-based Time-Space Transformer with Memory buffer (STATM) to enhance the model's perception ability in complex scenes. The memory buffer primarily serves as storage for slot information from upstream modules, the Slot-based Time-Space Transformer makes predictions through slot-based spatiotemporal attention computations and fusion. Our experiment results on various datasets show that STATM can significantly enhance object-centric learning capabilities of slot-based video models.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2403.15248",
         "abstract url": "https://arxiv.org/abs/2403.15248",
         "title": "Self-Supervised Backbone Framework for Diverse Agricultural Vision Tasks",
@@ -2921,6 +2909,22 @@
             "cs.CV"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2403.15285",
+        "abstract url": "https://arxiv.org/abs/2403.15285",
+        "title": "Blockchain-based Pseudonym Management for Vehicle Twin Migrations in Vehicular Edge Metaverse",
+        "rating": -1,
+        "keywords": [
+            [
+                "Vehicle"
+            ]
+        ],
+        "abstract": "Driven by the great advances in metaverse and edge computing technologies, vehicular edge metaverses are expected to disrupt the current paradigm of intelligent transportation systems. As highly computerized avatars of Vehicular Metaverse Users (VMUs), the Vehicle Twins (VTs) deployed in edge servers can provide valuable metaverse services to improve driving safety and on-board satisfaction for their VMUs throughout journeys. To maintain uninterrupted metaverse experiences, VTs must be migrated among edge servers following the movements of vehicles. This can raise concerns about privacy breaches during the dynamic communications among vehicular edge metaverses. To address these concerns and safeguard location privacy, pseudonyms as temporary identifiers can be leveraged by both VMUs and VTs to realize anonymous communications in the physical space and virtual spaces. However, existing pseudonym management methods fall short in meeting the extensive pseudonym demands in vehicular edge metaverses, thus dramatically diminishing the performance of privacy preservation. To this end, we present a cross-metaverse empowered dual pseudonym management framework. We utilize cross-chain technology to enhance management efficiency and data security for pseudonyms. Furthermore, we propose a metric to assess the privacy level and employ a Multi-Agent Deep Reinforcement Learning (MADRL) approach to obtain an optimal pseudonym generating strategy. Numerical results demonstrate that our proposed schemes are high-efficiency and cost-effective, showcasing their promising applications in vehicular edge metaverses.",
+        "subjects": [
+            "cs.NI"
+        ],
+        "comment": "14 pages, 9 figures"
     },
     {
         "paper id": "2403.15306",
@@ -3424,7 +3428,7 @@
         "keywords": [
             [
                 "Vision Language",
-                "VLM"
+                "VLMs"
             ],
             [
                 "trajectory"
@@ -3684,6 +3688,25 @@
         "comment": "14 pages, 3 figures"
     },
     {
+        "paper id": "2403.15025",
+        "abstract url": "https://arxiv.org/abs/2403.15025",
+        "title": "Robust Conformal Prediction under Distribution Shift via Physics-Informed Structural Causal Model",
+        "rating": -1.5,
+        "keywords": [
+            [
+                "Physics"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Uncertainty is critical to reliable decision-making with machine learning. Conformal prediction (CP) handles uncertainty by predicting a set on a test input, hoping the set to cover the true label with at least $(1-\u03b1)$ confidence. This coverage can be guaranteed on test data even if the marginal distributions $P_X$ differ between calibration and test datasets. However, as it is common in practice, when the conditional distribution $P_{Y|X}$ is different on calibration and test data, the coverage is not guaranteed and it is essential to measure and minimize the coverage loss under distributional shift at \\textit{all} possible confidence levels. To address these issues, we upper bound the coverage difference at all levels using the cumulative density functions of calibration and test conformal scores and Wasserstein distance. Inspired by the invariance of physics across data distributions, we propose a physics-informed structural causal model (PI-SCM) to reduce the upper bound. We validated that PI-SCM can improve coverage robustness along confidence level and test domain on a traffic speed prediction task and an epidemic spread task with multiple real-world datasets.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2403.15027",
         "abstract url": "https://arxiv.org/abs/2403.15027",
         "title": "Grey-informed neural network for time-series forecasting",
@@ -3697,6 +3720,25 @@
             ]
         ],
         "abstract": "Neural network models have shown outstanding performance and successful resolutions to complex problems in various fields. However, the majority of these models are viewed as black-box, requiring a significant amount of data for development. Consequently, in situations with limited data, constructing appropriate models becomes challenging due to the lack of transparency and scarcity of data. To tackle these challenges, this study suggests the implementation of a grey-informed neural network (GINN). The GINN ensures that the output of the neural network follows the differential equation model of the grey system, improving interpretability. Moreover, incorporating prior knowledge from grey system theory enables traditional neural networks to effectively handle small data samples. Our proposed model has been observed to uncover underlying patterns in the real world and produce reliable forecasts based on empirical data.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2403.15073",
+        "abstract url": "https://arxiv.org/abs/2403.15073",
+        "title": "On the Inclusion of Charge and Spin States in Cartesian Tensor Neural Network Potentials",
+        "rating": -1.5,
+        "keywords": [
+            [
+                "chemical"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "In this letter, we present an extension to TensorNet, a state-of-the-art equivariant Cartesian tensor neural network potential, allowing it to handle charged molecules and spin states without architectural changes or increased costs. By incorporating these attributes, we address input degeneracy issues, enhancing the model's predictive accuracy across diverse chemical systems. This advancement significantly broadens TensorNet's applicability, maintaining its efficiency and accuracy.",
         "subjects": [
             "cs.LG"
         ],
@@ -3956,21 +3998,20 @@
         "comment": null
     },
     {
-        "paper id": "2403.15076",
-        "abstract url": "https://arxiv.org/abs/2403.15076",
-        "title": "Comprehensive Lipidomic Automation Workflow using Large Language Models",
+        "paper id": "2403.15100",
+        "abstract url": "https://arxiv.org/abs/2403.15100",
+        "title": "Subequivariant Reinforcement Learning Framework for Coordinated Motion Control",
         "rating": -2,
         "keywords": [
             [
-                "bioinformatics",
-                "disease"
+                "physics"
             ]
         ],
-        "abstract": "Lipidomics generates large data that makes manual annotation and interpretation challenging. Lipid chemical and structural diversity with structural isomers further complicates annotation. Although, several commercial and open-source software for targeted lipid identification exists, it lacks automated method generation workflows and integration with statistical and bioinformatics tools. We have developed the Comprehensive Lipidomic Automated Workflow (CLAW) platform with integrated workflow for parsing, detailed statistical analysis and lipid annotations based on custom multiple reaction monitoring (MRM) precursor and product ion pair transitions. CLAW contains several modules including identification of carbon-carbon double bond position(s) in unsaturated lipids when combined with ozone electrospray ionization (OzESI)-MRM methodology. To demonstrate the utility of the automated workflow in CLAW, large-scale lipidomics data was collected with traditional and OzESI-MRM profiling on biological and non-biological samples. Specifically, a total of 1497 transitions organized into 10 MRM-based mass spectrometry methods were used to profile lipid droplets isolated from different brain regions of 18-24 month-old Alzheimer's disease mice and age-matched wild-type controls. Additionally, triacyclglycerols (TGs) profiles with carbon-carbon double bond specificity were generated from canola oil samples using OzESI-MRM profiling. We also developed an integrated language user interface with large language models using artificially intelligent (AI) agents that permits users to interact with the CLAW platform using a chatbot terminal to perform statistical and bioinformatic analyses. We envision CLAW pipeline to be used in high-throughput lipid structural identification tasks aiding users to generate automated lipidomics workflows ranging from data acquisition to AI agent-based bioinformatic analysis.",
+        "abstract": "Effective coordination is crucial for motion control with reinforcement learning, especially as the complexity of agents and their motions increases. However, many existing methods struggle to account for the intricate dependencies between joints. We introduce CoordiGraph, a novel architecture that leverages subequivariant principles from physics to enhance coordination of motion control with reinforcement learning. This method embeds the principles of equivariance as inherent patterns in the learning process under gravity influence, which aids in modeling the nuanced relationships between joints vital for motion control. Through extensive experimentation with sophisticated agents in diverse environments, we highlight the merits of our approach. Compared to current leading methods, CoordiGraph notably enhances generalization and sample efficiency.",
         "subjects": [
-            "q-bio.QM"
+            "cs.RO"
         ],
-        "comment": "53 pages, 4 main figures, 23 Supporting figures, 10 Supporting Tables"
+        "comment": "7 pages, 7 figures, 2024 IEEE International Conference on Robotics and Automation"
     },
     {
         "paper id": "2403.15103",
@@ -3995,6 +4036,22 @@
             "eess.IV"
         ],
         "comment": "10 pages, 5 figures, 1 table"
+    },
+    {
+        "paper id": "2403.15129",
+        "abstract url": "https://arxiv.org/abs/2403.15129",
+        "title": "Digital twin model of colon electromechanics for manometry prediction of laser tissue soldering",
+        "rating": -2,
+        "keywords": [
+            [
+                "physics"
+            ]
+        ],
+        "abstract": "The present study introduces an advanced multi-physics and multi-scale modeling approach to investigate in silico colon motility. We introduce a generalized electromechanical framework, integrating cellular electrophysiology and smooth muscle contractility, thus advancing a first-of-its-kind computational model of laser tissue soldering after incision resection. The proposed theoretical framework comprises three main elements: a microstructural material model describing intestine wall geometry and composition of reinforcing fibers, with four fiber families, two active-conductive and two passive; an electrophysiological model describing the propagation of slow waves, based on a fully-coupled nonlinear phenomenological approach; and a thermodynamical consistent mechanical model describing the hyperelastic energetic contributions ruling tissue equilibrium under diverse loading conditions. The active strain approach was adopted to describe tissue electromechanics by exploiting the multiplicative decomposition of the deformation gradient for each active fiber family and solving the governing equations via a staggered finite element scheme. The computational framework was fine-tuned according to state-of-the-art experimental evidence, and extensive numerical analyses allowed us to compare manometric traces computed via numerical simulations with those obtained clinically in human patients. The model proved capable of reproducing both qualitatively and quantitatively high or low-amplitude propagation contractions. Colon motility after laser tissue soldering demonstrates that material properties and couplings of the deposited tissue are critical to reproducing a physiological muscular contraction, thus restoring a proper peristaltic activity.",
+        "subjects": [
+            "physics.med-ph"
+        ],
+        "comment": null
     },
     {
         "paper id": "2403.15131",
@@ -4424,23 +4481,6 @@
         "comment": "IEEE International Conference on Communications 2024"
     },
     {
-        "paper id": "2403.15665",
-        "abstract url": "https://arxiv.org/abs/2403.15665",
-        "title": "Improved Methods of Task Assignment and Resource Allocation with Preemption in Edge Computing Systems",
-        "rating": -2,
-        "keywords": [
-            [
-                "Edge Computing",
-                "edge cloud"
-            ]
-        ],
-        "abstract": "Edge computing has become a very popular service that enables mobile devices to run complex tasks with the help of network-based computing resources. However, edge clouds are often resource-constrained, which makes resource allocation a challenging issue. In addition, edge cloud servers must make allocation decisions with only limited information available, since the arrival of future client tasks might be impossible to predict, and the states and behavior of neighboring servers might be obscured. We focus on a distributed resource allocation method in which servers operate independently and do not communicate with each other, but interact with clients (tasks) to make allocation decisions. We follow a two-round bidding approach to assign tasks to edge cloud servers, and servers are allowed to preempt previous tasks to allocate more useful ones. We evaluate the performance of our system using realistic simulations and real-world trace data from a high-performance computing cluster. Results show that our heuristic improves system-wide performance by $20-25\\%$ over previous work when accounting for the time taken by each approach. In this way, an ideal trade-off between performance and speed is achieved.",
-        "subjects": [
-            "cs.DC"
-        ],
-        "comment": "13 pages,added IEEE disclaimer"
-    },
-    {
         "paper id": "2403.15691",
         "abstract url": "https://arxiv.org/abs/2403.15691",
         "title": "Temporal-Spatial Object Relations Modeling for Vision-and-Language Navigation",
@@ -4821,25 +4861,6 @@
         "comment": null
     },
     {
-        "paper id": "2403.15285",
-        "abstract url": "https://arxiv.org/abs/2403.15285",
-        "title": "Blockchain-based Pseudonym Management for Vehicle Twin Migrations in Vehicular Edge Metaverse",
-        "rating": -3,
-        "keywords": [
-            [
-                "Vehicle"
-            ],
-            [
-                "edge computing"
-            ]
-        ],
-        "abstract": "Driven by the great advances in metaverse and edge computing technologies, vehicular edge metaverses are expected to disrupt the current paradigm of intelligent transportation systems. As highly computerized avatars of Vehicular Metaverse Users (VMUs), the Vehicle Twins (VTs) deployed in edge servers can provide valuable metaverse services to improve driving safety and on-board satisfaction for their VMUs throughout journeys. To maintain uninterrupted metaverse experiences, VTs must be migrated among edge servers following the movements of vehicles. This can raise concerns about privacy breaches during the dynamic communications among vehicular edge metaverses. To address these concerns and safeguard location privacy, pseudonyms as temporary identifiers can be leveraged by both VMUs and VTs to realize anonymous communications in the physical space and virtual spaces. However, existing pseudonym management methods fall short in meeting the extensive pseudonym demands in vehicular edge metaverses, thus dramatically diminishing the performance of privacy preservation. To this end, we present a cross-metaverse empowered dual pseudonym management framework. We utilize cross-chain technology to enhance management efficiency and data security for pseudonyms. Furthermore, we propose a metric to assess the privacy level and employ a Multi-Agent Deep Reinforcement Learning (MADRL) approach to obtain an optimal pseudonym generating strategy. Numerical results demonstrate that our proposed schemes are high-efficiency and cost-effective, showcasing their promising applications in vehicular edge metaverses.",
-        "subjects": [
-            "cs.NI"
-        ],
-        "comment": "14 pages, 9 figures"
-    },
-    {
         "paper id": "2403.15333",
         "abstract url": "https://arxiv.org/abs/2403.15333",
         "title": "Gesture-Controlled Aerial Robot Formation for Human-Swarm Interaction in Safety Monitoring Applications",
@@ -4927,28 +4948,24 @@
         "comment": null
     },
     {
-        "paper id": "2403.15673",
-        "abstract url": "https://arxiv.org/abs/2403.15673",
-        "title": "AI for Biomedicine in the Era of Large Language Models",
-        "rating": -3,
+        "paper id": "2403.15076",
+        "abstract url": "https://arxiv.org/abs/2403.15076",
+        "title": "Comprehensive Lipidomic Automation Workflow using Large Language Models",
+        "rating": -4,
         "keywords": [
             [
-                "Biomedicine",
-                "health",
+                "bioinformatics",
                 "disease"
             ],
             [
-                "quantum"
-            ],
-            [
-                "cs.CL"
+                "chemical"
             ]
         ],
-        "abstract": "The capabilities of AI for biomedicine span a wide spectrum, from the atomic level, where it solves partial differential equations for quantum systems, to the molecular level, predicting chemical or protein structures, and further extending to societal predictions like infectious disease outbreaks. Recent advancements in large language models, exemplified by models like ChatGPT, have showcased significant prowess in natural language tasks, such as translating languages, constructing chatbots, and answering questions. When we consider biomedical data, we observe a resemblance to natural language in terms of sequences: biomedical literature and health records presented as text, biological sequences or sequencing data arranged in sequences, or sensor data like brain signals as time series. The question arises: Can we harness the potential of recent large language models to drive biomedical knowledge discoveries? In this survey, we will explore the application of large language models to three crucial categories of biomedical data: 1) textual data, 2) biological sequences, and 3) brain signals. Furthermore, we will delve into large language model challenges in biomedical research, including ensuring trustworthiness, achieving personalization, and adapting to multi-modal data representation",
+        "abstract": "Lipidomics generates large data that makes manual annotation and interpretation challenging. Lipid chemical and structural diversity with structural isomers further complicates annotation. Although, several commercial and open-source software for targeted lipid identification exists, it lacks automated method generation workflows and integration with statistical and bioinformatics tools. We have developed the Comprehensive Lipidomic Automated Workflow (CLAW) platform with integrated workflow for parsing, detailed statistical analysis and lipid annotations based on custom multiple reaction monitoring (MRM) precursor and product ion pair transitions. CLAW contains several modules including identification of carbon-carbon double bond position(s) in unsaturated lipids when combined with ozone electrospray ionization (OzESI)-MRM methodology. To demonstrate the utility of the automated workflow in CLAW, large-scale lipidomics data was collected with traditional and OzESI-MRM profiling on biological and non-biological samples. Specifically, a total of 1497 transitions organized into 10 MRM-based mass spectrometry methods were used to profile lipid droplets isolated from different brain regions of 18-24 month-old Alzheimer's disease mice and age-matched wild-type controls. Additionally, triacyclglycerols (TGs) profiles with carbon-carbon double bond specificity were generated from canola oil samples using OzESI-MRM profiling. We also developed an integrated language user interface with large language models using artificially intelligent (AI) agents that permits users to interact with the CLAW platform using a chatbot terminal to perform statistical and bioinformatic analyses. We envision CLAW pipeline to be used in high-throughput lipid structural identification tasks aiding users to generate automated lipidomics workflows ranging from data acquisition to AI agent-based bioinformatic analysis.",
         "subjects": [
-            "cs.CL"
+            "q-bio.QM"
         ],
-        "comment": "8 pages, 3 figures"
+        "comment": "53 pages, 4 main figures, 23 Supporting figures, 10 Supporting Tables"
     },
     {
         "paper id": "2403.15183",
@@ -4995,6 +5012,25 @@
         "comment": null
     },
     {
+        "paper id": "2404.07219",
+        "abstract url": "https://arxiv.org/abs/2404.07219",
+        "title": "Leave No One Behind: Online Self-Supervised Self-Distillation for Sequential Recommendation",
+        "rating": -4,
+        "keywords": [
+            [
+                "face"
+            ],
+            [
+                "Recommendation"
+            ]
+        ],
+        "abstract": "Sequential recommendation methods play a pivotal role in modern recommendation systems. A key challenge lies in accurately modeling user preferences in the face of data sparsity. To tackle this challenge, recent methods leverage contrastive learning (CL) to derive self-supervision signals by maximizing the mutual information of two augmented views of the original user behavior sequence. Despite their effectiveness, CL-based methods encounter a limitation in fully exploiting self-supervision signals for users with limited behavior data, as users with extensive behaviors naturally offer more information. To address this problem, we introduce a novel learning paradigm, named Online Self-Supervised Self-distillation for Sequential Recommendation ($S^4$Rec), effectively bridging the gap between self-supervised learning and self-distillation methods. Specifically, we employ online clustering to proficiently group users by their distinct latent intents. Additionally, an adversarial learning strategy is utilized to ensure that the clustering procedure is not affected by the behavior length factor. Subsequently, we employ self-distillation to facilitate the transfer of knowledge from users with extensive behaviors (teachers) to users with limited behaviors (students). Experiments conducted on four real-world datasets validate the effectiveness of the proposed method.",
+        "subjects": [
+            "cs.IR"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2403.15091",
         "abstract url": "https://arxiv.org/abs/2403.15091",
         "title": "Improved Long Short-Term Memory-based Wastewater Treatment Simulators for Deep Reinforcement Learning",
@@ -5018,6 +5054,33 @@
             "cs.LG"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2403.15673",
+        "abstract url": "https://arxiv.org/abs/2403.15673",
+        "title": "AI for Biomedicine in the Era of Large Language Models",
+        "rating": -5,
+        "keywords": [
+            [
+                "Biomedicine",
+                "health",
+                "disease"
+            ],
+            [
+                "chemical"
+            ],
+            [
+                "quantum"
+            ],
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "The capabilities of AI for biomedicine span a wide spectrum, from the atomic level, where it solves partial differential equations for quantum systems, to the molecular level, predicting chemical or protein structures, and further extending to societal predictions like infectious disease outbreaks. Recent advancements in large language models, exemplified by models like ChatGPT, have showcased significant prowess in natural language tasks, such as translating languages, constructing chatbots, and answering questions. When we consider biomedical data, we observe a resemblance to natural language in terms of sequences: biomedical literature and health records presented as text, biological sequences or sequencing data arranged in sequences, or sensor data like brain signals as time series. The question arises: Can we harness the potential of recent large language models to drive biomedical knowledge discoveries? In this survey, we will explore the application of large language models to three crucial categories of biomedical data: 1) textual data, 2) biological sequences, and 3) brain signals. Furthermore, we will delve into large language model challenges in biomedical research, including ensuring trustworthiness, achieving personalization, and adapting to multi-modal data representation",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": "8 pages, 3 figures"
     },
     {
         "paper id": "2403.14965",
@@ -5176,18 +5239,6 @@
         "comment": "10 pages, published and presented at ICISSP 2024"
     },
     {
-        "paper id": "2403.15100",
-        "abstract url": "https://arxiv.org/abs/2403.15100",
-        "title": "Subequivariant Reinforcement Learning Framework for Coordinated Motion Control",
-        "rating": -10,
-        "keywords": [],
-        "abstract": "Effective coordination is crucial for motion control with reinforcement learning, especially as the complexity of agents and their motions increases. However, many existing methods struggle to account for the intricate dependencies between joints. We introduce CoordiGraph, a novel architecture that leverages subequivariant principles from physics to enhance coordination of motion control with reinforcement learning. This method embeds the principles of equivariance as inherent patterns in the learning process under gravity influence, which aids in modeling the nuanced relationships between joints vital for motion control. Through extensive experimentation with sophisticated agents in diverse environments, we highlight the merits of our approach. Compared to current leading methods, CoordiGraph notably enhances generalization and sample efficiency.",
-        "subjects": [
-            "cs.RO"
-        ],
-        "comment": "7 pages, 7 figures, 2024 IEEE International Conference on Robotics and Automation"
-    },
-    {
         "paper id": "2403.15116",
         "abstract url": "https://arxiv.org/abs/2403.15116",
         "title": "Collision Avoidance Safety Filter for an Autonomous E-Scooter using Ultrasonic Sensors",
@@ -5232,18 +5283,6 @@
         "abstract": "In increasingly autonomous and highly distributed multi-agent systems, centralized coordination becomes impractical and raises the need for governance and enforcement mechanisms from an agent-centric perspective. In our conceptual view, sanctioning norm enforcement is part of this agent-centric approach and they aim at promoting norm compliance while preserving agents' autonomy. The few works dealing with sanctioning norm enforcement and sanctions from the agent-centric perspective present limitations regarding the representation of sanctions and the comprehensiveness of their norm enforcement process. To address these drawbacks, we propose the NPL(s), an extension of the NPL normative programming language enriched with the representation of norms and sanctions as first-class abstractions. We also propose a BDI normative agent architecture embedding an engine for processing the NPL(s) language and a set of capabilities for approaching more comprehensively the sanctioning norm enforcement process. We apply our contributions in a case study for improving the robustness of agents' decision-making in a production automation system.",
         "subjects": [
             "cs.MA"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2403.15129",
-        "abstract url": "https://arxiv.org/abs/2403.15129",
-        "title": "Digital twin model of colon electromechanics for manometry prediction of laser tissue soldering",
-        "rating": -10,
-        "keywords": [],
-        "abstract": "The present study introduces an advanced multi-physics and multi-scale modeling approach to investigate in silico colon motility. We introduce a generalized electromechanical framework, integrating cellular electrophysiology and smooth muscle contractility, thus advancing a first-of-its-kind computational model of laser tissue soldering after incision resection. The proposed theoretical framework comprises three main elements: a microstructural material model describing intestine wall geometry and composition of reinforcing fibers, with four fiber families, two active-conductive and two passive; an electrophysiological model describing the propagation of slow waves, based on a fully-coupled nonlinear phenomenological approach; and a thermodynamical consistent mechanical model describing the hyperelastic energetic contributions ruling tissue equilibrium under diverse loading conditions. The active strain approach was adopted to describe tissue electromechanics by exploiting the multiplicative decomposition of the deformation gradient for each active fiber family and solving the governing equations via a staggered finite element scheme. The computational framework was fine-tuned according to state-of-the-art experimental evidence, and extensive numerical analyses allowed us to compare manometric traces computed via numerical simulations with those obtained clinically in human patients. The model proved capable of reproducing both qualitatively and quantitatively high or low-amplitude propagation contractions. Colon motility after laser tissue soldering demonstrates that material properties and couplings of the deposited tissue are critical to reproducing a physiological muscular contraction, thus restoring a proper peristaltic activity.",
-        "subjects": [
-            "physics.med-ph"
         ],
         "comment": null
     },
@@ -5358,10 +5397,10 @@
     {
         "paper id": "2403.15191",
         "abstract url": "https://arxiv.org/abs/2403.15191",
-        "title": "ECHO: Efficient Off-Chain Payments and Cross-Chain Swaps for Cryptocurrencies",
+        "title": "VORTEX: High-Speed and Low-Latency Off-Chain Payments and Cross-Chain Swaps for Cryptocurrencies",
         "rating": -10,
         "keywords": [],
-        "abstract": "In this paper, we present ECHO, a TEE-based layer-2 solution that tackles two crucial challenges in the realm of cryptocurrencies: off-chain payments and cross-chain swaps. It offers three notable features: - Channel-free off-chain payments: it allows a payer to make direct payments to anyone without requiring any on-chain relationship or intermediary channels. - Real-time yet decentralized cross-chain swaps: it is the first known solution that enables real-time cross-chain swaps without relying on a central server. This novel feature is made possible through a ground-breaking fair exchange protocol. - TEE crash-tolerance: it offers two solutions to handle TEE crashes, one of which involves an innovative application of time-lock puzzles in this context. We evaluate ECHO on a network consists of 1000 nodes and the evaluation results show that ECHO can achieve 7000 TPS",
+        "abstract": "In this paper, we present VERTEX, a TEE-based layer-2 solution that tackles two crucial challenges in the realm of cryptocurrencies: off-chain payments and cross-chain swaps. It offers three notable features: - Channel-free off-chain payments: it allows a payer to make direct payments to anyone without requiring any on-chain relationship or intermediary channels. - Real-time yet decentralized cross-chain swaps: it is the first known solution that enables real-time cross-chain swaps without relying on a central server. This novel feature is made possible through a ground-breaking fair exchange protocol. - TEE crash-tolerance: it offers two solutions to handle TEE crashes, one of which involves an innovative application of time-lock puzzles in this context. We evaluate ECHO on a network consists of 1000 nodes and the evaluation results show that ECHO can achieve 7000 TPS",
         "subjects": [
             "cs.CR"
         ],
@@ -5860,6 +5899,18 @@
         "comment": "5 pages, IEEE vehicular technology conference, Spring 2023"
     },
     {
+        "paper id": "2403.15665",
+        "abstract url": "https://arxiv.org/abs/2403.15665",
+        "title": "Improved Methods of Task Assignment and Resource Allocation with Preemption in Edge Computing Systems",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "Edge computing has become a very popular service that enables mobile devices to run complex tasks with the help of network-based computing resources. However, edge clouds are often resource-constrained, which makes resource allocation a challenging issue. In addition, edge cloud servers must make allocation decisions with only limited information available, since the arrival of future client tasks might be impossible to predict, and the states and behavior of neighboring servers might be obscured. We focus on a distributed resource allocation method in which servers operate independently and do not communicate with each other, but interact with clients (tasks) to make allocation decisions. We follow a two-round bidding approach to assign tasks to edge cloud servers, and servers are allowed to preempt previous tasks to allocate more useful ones. We evaluate the performance of our system using realistic simulations and real-world trace data from a high-performance computing cluster. Results show that our heuristic improves system-wide performance by $20-25\\%$ over previous work when accounting for the time taken by each approach. In this way, an ideal trade-off between performance and speed is achieved.",
+        "subjects": [
+            "cs.DC"
+        ],
+        "comment": "13 pages,added IEEE disclaimer"
+    },
+    {
         "paper id": "2403.15667",
         "abstract url": "https://arxiv.org/abs/2403.15667",
         "title": "QueryExplorer: An Interactive Query Generation Assistant for Search and Exploration",
@@ -6050,5 +6101,41 @@
             "physics.soc-ph"
         ],
         "comment": "11 pages, 7 figures, 3 tables"
+    },
+    {
+        "paper id": "2404.04272",
+        "abstract url": "https://arxiv.org/abs/2404.04272",
+        "title": "Selecting Query-bag as Pseudo Relevance Feedback for Information-seeking Conversations",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "Information-seeking dialogue systems are widely used in e-commerce systems, with answers that must be tailored to fit the specific settings of the online system. Given the user query, the information-seeking dialogue systems first retrieve a subset of response candidates, then further select the best response from the candidate set through re-ranking. Current methods mainly retrieve response candidates based solely on the current query, however, incorporating similar questions could introduce more diverse content, potentially refining the representation and improving the matching process. Hence, in this paper, we proposed a Query-bag based Pseudo Relevance Feedback framework (QB-PRF), which constructs a query-bag with related queries to serve as pseudo signals to guide information-seeking conversations. Concretely, we first propose a Query-bag Selection module (QBS), which utilizes contrastive learning to train the selection of synonymous queries in an unsupervised manner by leveraging the representations learned from pre-trained VAE. Secondly, we come up with a Query-bag Fusion module (QBF) that fuses synonymous queries to enhance the semantic representation of the original query through multidimensional attention computation. We verify the effectiveness of the QB-PRF framework on two competitive pretrained backbone models, including BERT and GPT-2. Experimental results on two benchmark datasets show that our framework achieves superior performance over strong baselines.",
+        "subjects": [
+            "cs.IR"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2404.07220",
+        "abstract url": "https://arxiv.org/abs/2404.07220",
+        "title": "Blended RAG: Improving RAG (Retriever-Augmented Generation) Accuracy with Semantic Search and Hybrid Query-Based Retrievers",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "Retrieval-Augmented Generation (RAG) is a prevalent approach to infuse a private knowledge base of documents with Large Language Models (LLM) to build Generative Q\\&A (Question-Answering) systems. However, RAG accuracy becomes increasingly challenging as the corpus of documents scales up, with Retrievers playing an outsized role in the overall RAG accuracy by extracting the most relevant document from the corpus to provide context to the LLM. In this paper, we propose the 'Blended RAG' method of leveraging semantic search techniques, such as Dense Vector indexes and Sparse Encoder indexes, blended with hybrid query strategies. Our study achieves better retrieval results and sets new benchmarks for IR (Information Retrieval) datasets like NQ and TREC-COVID datasets. We further extend such a 'Blended Retriever' to the RAG system to demonstrate far superior results on Generative Q\\&A datasets like SQUAD, even surpassing fine-tuning performance.",
+        "subjects": [
+            "cs.IR"
+        ],
+        "comment": "Pre-print version of paper submitted to conference"
+    },
+    {
+        "paper id": "2404.07221",
+        "abstract url": "https://arxiv.org/abs/2404.07221",
+        "title": "Improving Retrieval for RAG based Question Answering Models on Financial Documents",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "The effectiveness of Large Language Models (LLMs) in generating accurate responses relies heavily on the quality of input provided, particularly when employing Retrieval Augmented Generation (RAG) techniques. RAG enhances LLMs by sourcing the most relevant text chunk(s) to base queries upon. Despite the significant advancements in LLMs' response quality in recent years, users may still encounter inaccuracies or irrelevant answers; these issues often stem from suboptimal text chunk retrieval by RAG rather than the inherent capabilities of LLMs. To augment the efficacy of LLMs, it is crucial to refine the RAG process. This paper explores the existing constraints of RAG pipelines and introduces methodologies for enhancing text retrieval. It delves into strategies such as sophisticated chunking techniques, query expansion, the incorporation of metadata annotations, the application of re-ranking algorithms, and the fine-tuning of embedding algorithms. Implementing these approaches can substantially improve the retrieval quality, thereby elevating the overall performance and reliability of LLMs in processing and responding to queries.",
+        "subjects": [
+            "cs.IR"
+        ],
+        "comment": null
     }
 ]

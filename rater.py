@@ -32,33 +32,31 @@ class Rater:
                 [r"bio\S*", "medical", "health", "healthcare", "surgical",
                  "surgery", "survival", "diagnosi(s|ng)", "f?MRI", "CT",
                  "whole slide", "X-ray", "cancer", "disease", "skin lesions",
-                 "sign language", "clinical", "facial", "face", "cardiac",
-                 "tumor", "endoscopic", "psychological", "pathological",
-                 "red blood cells", "organ"],
+                 "sign language", "clinical", "facial", "cardiac", "tumor",
+                 "endoscopic", "psychological", "pathological",
+                 "red blood cells", "organ", "DNA"],
                 ["5G", "6G", "industrial", "IoT", "recommendation", "patent",
-                 "thermal"],
+                 "thermal", "alloys?", "chemical", "watermark(ing)?"],
                 ["remote sensing", "UAV", "forecast(ing)?", "satellite",
                  "hyperspectral (data|imag(es|ing))", "bird's-eye view", "BEV",
                  "drone", "agricultural", "mineral", "drill core"],
-                ["edge (environments?|embedded systems?|computing|applications?)",
-                 "edge[ -]cloud"],
                 ["HDR", "image restoration", "haze", "dehazing",
                  "neural( image)? codecs?", "quality assessment",
                  "((image|video|low-light)( quality| color)? enhancement)"],
                 ["grammar", "grammatical"],
-                ["quantum"],
-                ["tabluars?"]
+                ["quantum", "physics?"],
+                ["tabluars?"],
+                ["crimes?"]
             ],
             -1: [
-                ["3D", "Gaussian splatting", "voxel", "point cloud", "6-?DoFs?",
+                ["3D", "Gaussian splatting", "voxel", "point cloud", "(6|multi)-?DoFs?",
                  "6D", "RGB-?D", "depth", "NeRF", "radiance fields", "avatar"
                  "event cameras?"],
                 ["diffusion", "GAN", "synthesi(s|ze|zer|zing)", "inpaint(ing)?",
                  "(image|video) edit(ing)?", "text[ -]to[ -](image|video|vision)",
-                 "super[ -]?resolution", "image retouching"],
+                 "super[ -]?resolution", "image retouching", "derain(ing)?"],
                 ["(autonomous|automated) driving", "trajectory", "LiDAR", "radar",
-                 "vehicle", "infrared", "flight", "simultaneous localization and mapping",
-                 "SLAM"],
+                 "vehicle", "infrared", "flight", "SLAM"],
                 ["robotics", "robot", "navigation"],
                 ["federated learning"],
                 ["(knowledge|model) Edit(ing)?", "unlearning"],
@@ -71,7 +69,7 @@ class Rater:
             1: [
                 ["(parameters?|meory|time|training)[ -]?(efficient|efficiency)",
                  "PEFT", "efficient fine-?tun(e|ing)"],
-                ["(vision|visual)[ -]language", "VLM"],
+                ["(vision|visual)[ -]language", "VLMs?"],
                 ["audio[ -](vision|visual)"],
                 ["(social|cultral) bias(es)?"]
             ]
@@ -84,7 +82,8 @@ class Rater:
             0.5: [
                 "AAAI", "CVPR", "ECCV", "EMNLP", "ICASSP", "ICCV", "ICLR",
                 "Interspeech", "NeurIPS", "NIPS", "WACV"
-            ]
+            ],
+            -0.5: ["workshop"]
         }
 
     
