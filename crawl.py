@@ -1,6 +1,7 @@
 import argparse
 import requests
 import json
+import os
 from datetime import datetime, timedelta
 from bs4 import BeautifulSoup
 
@@ -9,6 +10,8 @@ from rater import rater
 
 def getDates():
     parser = argparse.ArgumentParser()
+    parser.add_argument("--lazy", "-l", action = "store_true", required = False,
+                        help = "start from the previous result to today")
     parser.add_argument("--start", "-s", type = str, default = None, required = False,
                         help = "start date, format: yyyy-mm-dd")
     parser.add_argument("--end", "-e", type = str, default = None, required = False,
@@ -17,8 +20,15 @@ def getDates():
     dates = []
     fmt = lambda x: x.strftime("%Y-%m-%d")
     oneDay = timedelta(days = 1)
+    start = datetime.today() - oneDay
+    end = datetime.today()
 
-    if (arg.start != None):
+    if (arg.lazzy and os.path.isdir("results")):
+        start = sorted(os.listdir("results"))[-1].replace(".json", "")
+        yStart, mStart, dStart = start.split("-")
+        start = datetime(int(yStart), int(mStart), int(dStart)) + oneDay
+
+    elif (arg.start != None):
         yStart, mStart, dStart = arg.start.split("-")
         start = datetime(int(yStart), int(mStart), int(dStart))
 
@@ -29,9 +39,6 @@ def getDates():
             end = datetime(int(yEnd), int(mEnd), int(dEnd))
         else:
             end = start + oneDay
-    else:
-        start = datetime.today() - oneDay
-        end = datetime.today()
 
     while (fmt(start) != fmt(end)):
         dates.append((fmt(start), fmt(start + oneDay)))
