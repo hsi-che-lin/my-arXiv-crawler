@@ -139,6 +139,25 @@
         "comment": "19 pages, 7 figures"
     },
     {
+        "paper id": "2405.00740",
+        "abstract url": "https://arxiv.org/abs/2405.00740",
+        "title": "Modeling Caption Diversity in Contrastive Vision-Language Pretraining",
+        "rating": 2,
+        "keywords": [
+            [
+                "Vision-Language"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "There are a thousand ways to caption an image. Contrastive Language Pretraining (CLIP) on the other hand, works by mapping an image and its caption to a single vector -- limiting how well CLIP-like models can represent the diverse ways to describe an image. In this work, we introduce Llip, Latent Language Image Pretraining, which models the diversity of captions that could match an image. Llip's vision encoder outputs a set of visual features that are mixed into a final representation by conditioning on information derived from the text. We show that Llip outperforms non-contextualized baselines like CLIP and SigLIP on a variety of tasks even with large-scale encoders. Llip improves zero-shot classification by an average of 2.9% zero-shot classification benchmarks with a ViT-G/14 encoder. Specifically, Llip attains a zero-shot top-1 accuracy of 83.5% on ImageNet outperforming a similarly sized CLIP by 1.4%. We also demonstrate improvement on zero-shot retrieval on MS-COCO by 6.0%. We provide a comprehensive analysis of the components introduced by the method and demonstrate that Llip leads to richer visual representations.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "14 pages, 8 figures, 7 tables"
+    },
+    {
         "paper id": "2404.18448",
         "abstract url": "https://arxiv.org/abs/2404.18448",
         "title": "MFP: Making Full Use of Probability Maps for Interactive Image Segmentation",
@@ -941,14 +960,14 @@
     {
         "paper id": "2404.19048",
         "abstract url": "https://arxiv.org/abs/2404.19048",
-        "title": "A Framework for Real-time Safeguarding the Text Generation of Large Language",
+        "title": "A Framework for Real-time Safeguarding the Text Generation of Large Language Model",
         "rating": 1,
         "keywords": [
             [
                 "cs.CL"
             ]
         ],
-        "abstract": "Large Language Models (LLMs) have significantly advanced natural language processing (NLP) tasks but also pose ethical and societal risks due to their propensity to generate harmful content. To address this, various approaches have been developed to safeguard LLMs from producing unsafe content. However, existing methods have limitations, including the need for training specific control models and proactive intervention during text generation, that lead to quality degradation and increased computational overhead. To mitigate those limitations, we propose LLMSafeGuard, a lightweight framework to safeguard LLM text generation in real-time. LLMSafeGuard integrates an external validator into the beam search algorithm during decoding, rejecting candidates that violate safety constraints while allowing valid ones to proceed. We introduce a similarity based validation approach, simplifying constraint introduction and eliminating the need for control model training. Additionally, LLMSafeGuard employs a context-wise timing selection strategy, intervening LLMs only when necessary. We evaluate LLMSafe-Guard on two tasks, detoxification and copyright safeguarding, and demonstrate its superior performance over SOTA baselines. For instance, LLMSafeGuard reduces the average toxic score of. LLM output by 29.7% compared to the best baseline meanwhile preserving similar linguistic quality as natural output in detoxification task. Similarly, in the copyright task, LLMSafeGuard decreases the Longest Common Subsequence (LCS) by 56.2% compared to baselines. Moreover, our context-wise timing selection strategy reduces inference time by at least 24% meanwhile maintaining comparable effectiveness as validating each time step. LLMSafeGuard also offers tunable parameters to balance its effectiveness and efficiency.",
+        "abstract": "Large Language Models (LLMs) have significantly advanced natural language processing (NLP) tasks but also pose ethical and societal risks due to their propensity to generate harmful content. To address this, various approaches have been developed to safeguard LLMs from producing unsafe content. However, existing methods have limitations, including the need for training specific control models and proactive intervention during text generation, that lead to quality degradation and increased computational overhead. To mitigate those limitations, we propose LLMSafeGuard, a lightweight framework to safeguard LLM text generation in real-time. LLMSafeGuard integrates an external validator into the beam search algorithm during decoding, rejecting candidates that violate safety constraints while allowing valid ones to proceed. We introduce a similarity based validation approach, simplifying constraint introduction and eliminating the need for control model training. Additionally, LLMSafeGuard employs a context-wise timing selection strategy, intervening LLMs only when necessary. We evaluate LLMSafeGuard on two tasks, detoxification and copyright safeguarding, and demonstrate its superior performance over SOTA baselines. For instance, LLMSafeGuard reduces the average toxic score of. LLM output by 29.7% compared to the best baseline meanwhile preserving similar linguistic quality as natural output in detoxification task. Similarly, in the copyright task, LLMSafeGuard decreases the Longest Common Subsequence (LCS) by 56.2% compared to baselines. Moreover, our context-wise timing selection strategy reduces inference time by at least 24% meanwhile maintaining comparable effectiveness as validating each time step. LLMSafeGuard also offers tunable parameters to balance its effectiveness and efficiency.",
         "subjects": [
             "cs.CL"
         ],
@@ -1810,6 +1829,22 @@
             ]
         ],
         "abstract": "Recent empirical and theoretical work has shown that the dynamics of the large eigenvalues of the training loss Hessian have some remarkably robust features across models and datasets in the full batch regime. There is often an early period of progressive sharpening where the large eigenvalues increase, followed by stabilization at a predictable value known as the edge of stability. Previous work showed that in the stochastic setting, the eigenvalues increase more slowly - a phenomenon we call conservative sharpening. We provide a theoretical analysis of a simple high-dimensional model which shows the origin of this slowdown. We also show that there is an alternative stochastic edge of stability which arises at small batch size that is sensitive to the trace of the Neural Tangent Kernel rather than the large Hessian eigenvalues. We conduct an experimental study which highlights the qualitative differences from the full batch phenomenology, and suggests that controlling the stochastic edge of stability can help optimization.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2405.00739",
+        "abstract url": "https://arxiv.org/abs/2405.00739",
+        "title": "Why does Knowledge Distillation Work? Rethink its Attention and Fidelity Mechanism",
+        "rating": 0.5,
+        "keywords": [
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Does Knowledge Distillation (KD) really work? Conventional wisdom viewed it as a knowledge transfer procedure where a perfect mimicry of the student to its teacher is desired. However, paradoxical studies indicate that closely replicating the teacher's behavior does not consistently improve student generalization, posing questions on its possible causes. Confronted with this gap, we hypothesize that diverse attentions in teachers contribute to better student generalization at the expense of reduced fidelity in ensemble KD setups. By increasing data augmentation strengths, our key findings reveal a decrease in the Intersection over Union (IoU) of attentions between teacher models, leading to reduced student overfitting and decreased fidelity. We propose this low-fidelity phenomenon as an underlying characteristic rather than a pathology when training KD. This suggests that stronger data augmentation fosters a broader perspective provided by the divergent teacher ensemble and lower student-teacher mutual information, benefiting generalization performance. These insights clarify the mechanism on low-fidelity phenomenon in KD. Thus, we offer new perspectives on optimizing student model performance, by emphasizing increased diversity in teacher attentions and reduced mimicry behavior between teachers and student.",
         "subjects": [
             "cs.LG"
         ],
@@ -3074,7 +3109,7 @@
                 "cs.CV"
             ]
         ],
-        "abstract": "Remote Sensing Image Change Captioning (RSICC) aims to identify surface changes in multi-temporal remote sensing images and describe them in natural language. Current methods typically rely on an encoder-decoder architecture and focus on designing a sophisticated neck to process bi-temporal features extracted by the backbone. Recently, State Space Models (SSMs), especially Mamba, have demonstrated outstanding performance in many fields, owing to their efficient feature-selective modelling capability. However, their potential in the RSICC task remains unexplored. In this paper, we introduce Mamba into RSICC and propose a novel approach called RSCaMa (Remote Sensing Change Captioning Mamba). Specifically, we utilize Siamese backbones to extract bi-temporal features, which are then processed through multiple CaMa layers consisting of Spatial Difference-guided SSM (SD-SSM) and Temporal Traveling SSM (TT-SSM). SD-SSM uses differential features to enhance change perception, while TT-SSM promotes bitemporal interactions in a token-wise cross-scanning manner. Experimental results validate the effectiveness of CaMa layers and demonstrate the superior performance of RSCaMa, as well as the potential of Mamba in the RSICC task. Additionally, we systematically compare the effects of three language decoders, including Mamba, GPT-style decoder with causal attention mechanism, and Transformer decoder with cross-attention mechanism. This provides valuable insights for future RSICC research. The code will be available at https://github.com/Chen-Yang-Liu/RSCaMa",
+        "abstract": "Remote Sensing Image Change Captioning (RSICC) aims to describe surface changes between multi-temporal remote sensing images in language, including the changed object categories, locations, and dynamics of changing objects (e.g., added or disappeared). This poses challenges to spatial and temporal modeling of bi-temporal features. Despite previous methods progressing in the spatial change perception, there are still weaknesses in joint spatial-temporal modeling. To address this, in this paper, we propose a novel RSCaMa model, which achieves efficient joint spatial-temporal modeling through multiple CaMa layers, enabling iterative refinement of bi-temporal features. To achieve efficient spatial modeling, we introduce the recently popular Mamba (a state space model) with a global receptive field and linear complexity into the RSICC task and propose the Spatial Difference-aware SSM (SD-SSM), overcoming limitations of previous CNN- and Transformer-based methods in the receptive field and computational complexity. SD-SSM enhances the model's ability to capture spatial changes sharply. In terms of efficient temporal modeling, considering the potential correlation between the temporal scanning characteristics of Mamba and the temporality of the RSICC, we propose the Temporal-Traversing SSM (TT-SSM), which scans bi-temporal features in a temporal cross-wise manner, enhancing the model's temporal understanding and information interaction. Experiments validate the effectiveness of the efficient joint spatial-temporal modeling and demonstrate the outstanding performance of RSCaMa and the potential of the Mamba in the RSICC task. Additionally, we systematically compare three different language decoders, including Mamba, GPT-style decoder, and Transformer decoder, providing valuable insights for future RSICC research. The code will be available at \\emph{\\url{https://github.com/Chen-Yang-Liu/RSCaMa}}",
         "subjects": [
             "cs.CV"
         ],
@@ -3526,6 +3561,22 @@
             "cs.HC"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2405.00738",
+        "abstract url": "https://arxiv.org/abs/2405.00738",
+        "title": "HLSTransform: Energy-Efficient Llama 2 Inference on FPGAs Via High Level Synthesis",
+        "rating": -1,
+        "keywords": [
+            [
+                "Synthesis"
+            ]
+        ],
+        "abstract": "Graphics Processing Units (GPUs) have become the leading hardware accelerator for deep learning applications and are used widely in training and inference of transformers; transformers have achieved state-of-the-art performance in many areas of machine learning and are especially used in most modern Large Language Models (LLMs). However, GPUs require large amounts of energy, which poses environmental concerns, demands high operational costs, and causes GPUs to be unsuitable for edge computing. We develop an accelerator for transformers, namely, Llama 2, an open-source state-of-the-art LLM, using high level synthesis (HLS) on Field Programmable Gate Arrays (FPGAs). HLS allows us to rapidly prototype FPGA designs without writing code at the register-transfer level (RTL). We name our method HLSTransform, and the FPGA designs we synthesize with HLS achieve up to a 12.75x reduction and 8.25x reduction in energy used per token on the Xilinx Virtex UltraScale+ VU9P FPGA compared to an Intel Xeon Broadwell E5-2686 v4 CPU and NVIDIA RTX 3090 GPU respectively, while increasing inference speeds by up to 2.46x compared to CPU and maintaining 0.53x the speed of an RTX 3090 GPU despite the GPU's 4 times higher base clock rate. With the lack of existing open-source FPGA accelerators for transformers, we open-source our code and document our steps for synthesis. We hope this work will serve as a step in democratizing the use of FPGAs in transformer inference and inspire research into energy-efficient inference methods as a whole. The code can be found on https://github.com/HLSTransform/submission.",
+        "subjects": [
+            "cs.AR"
+        ],
+        "comment": "7 pages, 2 figures"
     },
     {
         "paper id": "2404.18504",
@@ -4598,6 +4649,23 @@
         "comment": null
     },
     {
+        "paper id": "2405.00734",
+        "abstract url": "https://arxiv.org/abs/2405.00734",
+        "title": "EEG-MACS: Manifold Attention and Confidence Stratification for EEG-based Cross-Center Brain Disease Diagnosis under Unreliable Annotations",
+        "rating": -2,
+        "keywords": [
+            [
+                "Diagnosis",
+                "Disease"
+            ]
+        ],
+        "abstract": "Cross-center data heterogeneity and annotation unreliability significantly challenge the intelligent diagnosis of diseases using brain signals. A notable example is the EEG-based diagnosis of neurodegenerative diseases, which features subtler abnormal neural dynamics typically observed in small-group settings. To advance this area, in this work, we introduce a transferable framework employing Manifold Attention and Confidence Stratification (MACS) to diagnose neurodegenerative disorders based on EEG signals sourced from four centers with unreliable annotations. The MACS framework's effectiveness stems from these features: 1) The Augmentor generates various EEG-represented brain variants to enrich the data space; 2) The Switcher enhances the feature space for trusted samples and reduces overfitting on incorrectly labeled samples; 3) The Encoder uses the Riemannian manifold and Euclidean metrics to capture spatiotemporal variations and dynamic synchronization in EEG; 4) The Projector, equipped with dual heads, monitors consistency across multiple brain variants and ensures diagnostic accuracy; 5) The Stratifier adaptively stratifies learned samples by confidence levels throughout the training process; 6) Forward and backpropagation in MACS are constrained by confidence stratification to stabilize the learning system amid unreliable annotations. Our subject-independent experiments, conducted on both neurocognitive and movement disorders using cross-center corpora, have demonstrated superior performance compared to existing related algorithms. This work not only improves EEG-based diagnostics for cross-center and small-setting brain diseases but also offers insights into extending MACS techniques to other data analyses, tackling data heterogeneity and annotation unreliability in multimedia and multimodal content understanding.",
+        "subjects": [
+            "eess.SP"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2404.18519",
         "abstract url": "https://arxiv.org/abs/2404.18519",
         "title": "On the Impact of Data Heterogeneity in Federated Learning Environments with Application to Healthcare Networks",
@@ -4926,7 +4994,7 @@
     {
         "paper id": "2404.19232",
         "abstract url": "https://arxiv.org/abs/2404.19232",
-        "title": "GRAMMAR: Grounded and Modular Evaluation of Domain-Specific Retrieval-Augmented Language Models",
+        "title": "GRAMMAR: Grounded and Modular Methodology for Assessment of Domain-Specific Retrieval-Augmented Language Model",
         "rating": -3,
         "keywords": [
             [
@@ -4944,6 +5012,28 @@
             "cs.CL"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2405.00741",
+        "abstract url": "https://arxiv.org/abs/2405.00741",
+        "title": "Diagnosis of Parkinson's Disease Using EEG Signals and Machine Learning Techniques: A Comprehensive Study",
+        "rating": -3,
+        "keywords": [
+            [
+                "SVM",
+                "Support Vector Machine"
+            ],
+            [
+                "healthcare",
+                "Diagnosis",
+                "Disease"
+            ]
+        ],
+        "abstract": "Parkinson's disease is a widespread neurodegenerative condition necessitating early diagnosis for effective intervention. This paper introduces an innovative method for diagnosing Parkinson's disease through the analysis of human EEG signals, employing a Support Vector Machine (SVM) classification model. this research presents novel contributions to enhance diagnostic accuracy and reliability. Our approach incorporates a comprehensive review of EEG signal analysis techniques and machine learning methods. Drawing from recent studies, we have engineered an advanced SVM-based model optimized for Parkinson's disease diagnosis. Utilizing cutting-edge feature engineering, extensive hyperparameter tuning, and kernel selection, our method achieves not only heightened diagnostic accuracy but also emphasizes model interpretability, catering to both clinicians and researchers. Moreover, ethical concerns in healthcare machine learning, such as data privacy and biases, are conscientiously addressed. We assess our method's performance through experiments on a diverse dataset comprising EEG recordings from Parkinson's disease patients and healthy controls, demonstrating significantly improved diagnostic accuracy compared to conventional techniques. In conclusion, this paper introduces an innovative SVM-based approach for diagnosing Parkinson's disease from human EEG signals. Building upon the IEEE framework and previous research, its novelty lies in the capacity to enhance diagnostic accuracy while upholding interpretability and ethical considerations for practical healthcare applications. These advances promise to revolutionize early Parkinson's disease detection and management, ultimately contributing to enhanced patient outcomes and quality of life.",
+        "subjects": [
+            "eess.SP"
+        ],
+        "comment": "9 pages, 2 tables, 10th International Conference on Artificial Intelligence and Robotics-QICAR2024 Qazvin Islamic Azad University, Feb. 29, 2024"
     },
     {
         "paper id": "2404.18528",
@@ -5285,6 +5375,28 @@
         "abstract": "The idea of using deep-learning-based molecular generation to accelerate discovery of drug candidates has attracted extraordinary attention, and many deep generative models have been developed for automated drug design, termed molecular generation. In general, molecular generation encompasses two main strategies: de novo design, which generates novel molecular structures from scratch, and lead optimization, which refines existing molecules into drug candidates. Among them, lead optimization plays an important role in real-world drug design. For example, it can enable the development of me-better drugs that are chemically distinct yet more effective than the original drugs. It can also facilitate fragment-based drug design, transforming virtual-screened small ligands with low affinity into first-in-class medicines. Despite its importance, automated lead optimization remains underexplored compared to the well-established de novo generative models, due to its reliance on complex biological and chemical knowledge. To bridge this gap, we conduct a systematic review of traditional computational methods for lead optimization, organizing these strategies into four principal sub-tasks with defined inputs and outputs. This review delves into the basic concepts, goals, conventional CADD techniques, and recent advancements in AIDD. Additionally, we introduce a unified perspective based on constrained subgraph generation to harmonize the methodologies of de novo design and lead optimization. Through this lens, de novo design can incorporate strategies from lead optimization to address the challenge of generating hard-to-synthesize molecules; inversely, lead optimization can benefit from the innovations in de novo design by approaching it as a task of generating molecules conditioned on certain substructures.",
         "subjects": [
             "q-bio.BM"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2405.00733",
+        "abstract url": "https://arxiv.org/abs/2405.00733",
+        "title": "Joint ADS-B in 5G for Hierarchical Aerial Networks: Performance Analysis and Optimization",
+        "rating": -5,
+        "keywords": [
+            [
+                "flight"
+            ],
+            [
+                "5G"
+            ],
+            [
+                "UAV"
+            ]
+        ],
+        "abstract": "Unmanned aerial vehicles (UAVs) are widely applied in multiple fields, which emphasizes the challenge of obtaining UAV flight information to ensure the airspace safety. UAVs equipped with automatic dependent surveillance-broadcast (ADS-B) devices are capable of sending flight information to nearby aircrafts and ground stations (GSs). However, the saturation of limited frequency bands of ADS-B leads to interferences among UAVs and impairs the monitoring performance of GS to civil planes. To address this issue, the integration of the 5th generation mobile communication technology (5G) with ADS-B is proposed for UAV operations in this paper. Specifically, a hierarchical structure is proposed, in which the high-altitude central UAV is equipped with ADS-B and the low-altitude central UAV utilizes 5G modules to transmit flight information. Meanwhile, based on the mobile edge computing technique, the flight information of sub-UAVs is offloaded to the central UAV for further processing, and then transmitted to GS. We present the deterministic model and stochastic geometry based model to build the air-to-ground channel and air-to-air channel, respectively. The effectiveness of the proposed monitoring system is verified via simulations and experiments. This research contributes to improving the airspace safety and advancing the air traffic flow management.",
+        "subjects": [
+            "eess.SP"
         ],
         "comment": null
     },
@@ -5845,7 +5957,7 @@
         "subjects": [
             "math.CO"
         ],
-        "comment": "19 pages, 14 figures"
+        "comment": "22 pages, 14 figures"
     },
     {
         "paper id": "2404.18807",
@@ -6290,5 +6402,17 @@
             "cs.CR"
         ],
         "comment": "10 pages, 6 figures"
+    },
+    {
+        "paper id": "2405.00736",
+        "abstract url": "https://arxiv.org/abs/2405.00736",
+        "title": "Joint Signal Detection and Automatic Modulation Classification via Deep Learning",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "Signal detection and modulation classification are two crucial tasks in various wireless communication systems. Different from prior works that investigate them independently, this paper studies the joint signal detection and automatic modulation classification (AMC) by considering a realistic and complex scenario, in which multiple signals with different modulation schemes coexist at different carrier frequencies. We first generate a coexisting RADIOML dataset (CRML23) to facilitate the joint design. Different from the publicly available AMC dataset ignoring the signal detection step and containing only one signal, our synthetic dataset covers the more realistic multiple-signal coexisting scenario. Then, we present a joint framework for detection and classification (JDM) for such a multiple-signal coexisting environment, which consists of two modules for signal detection and AMC, respectively. In particular, these two modules are interconnected using a designated data structure called \"proposal\". Finally, we conduct extensive simulations over the newly developed dataset, which demonstrate the effectiveness of our designs. Our code and dataset are now available as open-source (https://github.com/Singingkettle/ChangShuoRadioData).",
+        "subjects": [
+            "eess.SP"
+        ],
+        "comment": null
     }
 ]

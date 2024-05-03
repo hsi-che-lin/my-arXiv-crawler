@@ -23,10 +23,10 @@ def getDates():
     start = datetime.today() - oneDay
     end = datetime.today()
 
-    if (arg.lazzy and os.path.isdir("results")):
+    if (arg.lazy and os.path.isdir("results")):
         start = sorted(os.listdir("results"))[-1].replace(".json", "")
         yStart, mStart, dStart = start.split("-")
-        start = datetime(int(yStart), int(mStart), int(dStart)) + oneDay
+        start = datetime(int(yStart), int(mStart), int(dStart))
 
     elif (arg.start != None):
         yStart, mStart, dStart = arg.start.split("-")

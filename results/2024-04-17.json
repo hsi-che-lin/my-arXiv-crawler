@@ -32,7 +32,7 @@
                 "cs.CV"
             ]
         ],
-        "abstract": "Pre-trained vision-language models (VLMs) have shown remarkable generalization capabilities via prompting, which leverages VLMs as knowledge bases to extract information beneficial for downstream tasks. However, existing methods primarily employ uni-modal prompting, which only engages a uni-modal branch, failing to simultaneously adjust vision-language (V-L) features. Additionally, the one-pass forward pipeline in VLM encoding struggles to align V-L features that have a huge gap. Confronting these challenges, we propose a novel method, Progressive Multi-modal conditional Prompt Tuning (ProMPT). ProMPT exploits a recurrent structure, optimizing and aligning V-L features by iteratively utilizing image and current encoding information. It comprises an initialization and a multi-modal iterative evolution (MIE) module. Initialization is responsible for encoding image and text using a VLM, followed by a feature filter that selects text features similar to image. MIE then facilitates multi-modal prompting through class-conditional vision prompting, instance-conditional text prompting, and feature filtering. In each MIE iteration, vision prompts are obtained from the filtered text features via a vision generator, promoting image features to focus more on target object during vision prompting. The encoded image features are fed into a text generator to produce text prompts that are more robust to class shift. Thus, V-L features are progressively aligned, enabling advance from coarse to exact classifications. Extensive experiments are conducted in three settings to evaluate the efficacy of ProMPT. The results indicate that ProMPT outperforms existing methods on average across all settings, demonstrating its superior generalization.",
+        "abstract": "Pre-trained vision-language models (VLMs) have shown remarkable generalization capabilities via prompting, which leverages VLMs as knowledge bases to extract information beneficial for downstream tasks. However, existing methods primarily employ uni-modal prompting, which only engages a uni-modal branch, failing to simultaneously adjust vision-language (V-L) features. Additionally, the one-pass forward pipeline in VLM encoding struggles to align V-L features that have a huge gap. Confronting these challenges, we propose a novel method, Progressive Multi-modal conditional Prompt Tuning (ProMPT). ProMPT exploits a recurrent structure, optimizing and aligning V-L features by iteratively utilizing image and current encoding information. It comprises an initialization and a multi-modal iterative evolution (MIE) module. Initialization is responsible for encoding images and text using a VLM, followed by a feature filter that selects text features similar to image. MIE then facilitates multi-modal prompting through class-conditional vision prompting, instance-conditional text prompting, and feature filtering. In each MIE iteration, vision prompts are obtained from filtered text features via a vision generator, promoting image features to focus more on target object during vision prompting. The encoded image features are fed into a text generator to produce text prompts that are more robust to class shifts. Thus, V-L features are progressively aligned, enabling advance from coarse to exact prediction. Extensive experiments are conducted in three settings to evaluate the efficacy of ProMPT. The results indicate that ProMPT outperforms existing methods on average across all settings, demonstrating its superior generalization and robustness. Code is available at https://github.com/qiuxiaoyu9954/ProMPT.",
         "subjects": [
             "cs.CV"
         ],
@@ -162,6 +162,22 @@
         "abstract": "Efficiently modeling historical information is a critical component in addressing user queries within a conversational question-answering (QA) context, as historical context plays a vital role in clarifying the user's questions. However, irrelevant history induces noise in the reasoning process, especially for those questions with a considerable historical context. In our novel model-agnostic approach, referred to as CoTaH (Consistency-Trained augmented History), we augment the historical information with synthetic questions and subsequently employ consistency training to train a model that utilizes both real and augmented historical data to implicitly make the reasoning robust to irrelevant history. To the best of our knowledge, this is the first instance of research using question generation as a form of data augmentation to model conversational QA settings. By citing a common modeling error prevalent in previous research, we introduce a new baseline model and compare our model's performance against it, demonstrating an improvement in results, particularly when dealing with questions that include a substantial amount of historical context. The source code can be found on our GitHub page.",
         "subjects": [
             "cs.CL"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2404.11118",
+        "abstract url": "https://arxiv.org/abs/2404.11118",
+        "title": "MHLR: Moving Haar Learning Rate Scheduler for Large-scale Face Recognition Training with One GPU",
+        "rating": 1,
+        "keywords": [
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Face recognition (FR) has seen significant advancements due to the utilization of large-scale datasets. Training deep FR models on large-scale datasets with multiple GPUs is now a common practice. In fact, computing power has evolved into a foundational and indispensable resource in the area of deep learning. It is nearly impossible to train a deep FR model without holding adequate hardware resources. Recognizing this challenge, some FR approaches have started exploring ways to reduce the time complexity of the fully-connected layer in FR models. Unlike other approaches, this paper introduces a simple yet highly effective approach, Moving Haar Learning Rate (MHLR) scheduler, for scheduling the learning rate promptly and accurately in the training process. MHLR supports large-scale FR training with only one GPU, which is able to accelerate the model to 1/4 of its original training time without sacrificing more than 1% accuracy. More specifically, MHLR only needs $30$ hours to train the model ResNet100 on the dataset WebFace12M containing more than 12M face images with 0.6M identities. Extensive experiments validate the efficiency and effectiveness of MHLR.",
+        "subjects": [
+            "cs.CV"
         ],
         "comment": null
     },
@@ -1111,22 +1127,6 @@
         "comment": "Under review"
     },
     {
-        "paper id": "2404.11408",
-        "abstract url": "https://arxiv.org/abs/2404.11408",
-        "title": "DUPE: Detection Undermining via Prompt Engineering for Deepfake Text",
-        "rating": 0.5,
-        "keywords": [
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "As large language models (LLMs) become increasingly commonplace, concern about distinguishing between human and AI text increases as well. The growing power of these models is of particular concern to teachers, who may worry that students will use LLMs to write school assignments. Facing a technology with which they are unfamiliar, teachers may turn to publicly-available AI text detectors. Yet the accuracy of many of these detectors has not been thoroughly verified, posing potential harm to students who are falsely accused of academic dishonesty. In this paper, we evaluate three different AI text detectors-Kirchenbauer et al. watermarks, ZeroGPT, and GPTZero-against human and AI-generated essays. We find that watermarking results in a high false positive rate, and that ZeroGPT has both high false positive and false negative rates. Further, we are able to significantly increase the false negative rate of all detectors by using ChatGPT 3.5 to paraphrase the original AI-generated texts, thereby effectively bypassing the detectors.",
-        "subjects": [
-            "cs.AI"
-        ],
-        "comment": "10 pages, 2 figures"
-    },
-    {
         "paper id": "2404.11431",
         "abstract url": "https://arxiv.org/abs/2404.11431",
         "title": "Instantiations and Computational Aspects of Non-Flat Assumption-based Argumentation",
@@ -1205,6 +1205,22 @@
             "cs.AI"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2404.11515",
+        "abstract url": "https://arxiv.org/abs/2404.11515",
+        "title": "Embedding Privacy in Computational Social Science and Artificial Intelligence Research",
+        "rating": 0.5,
+        "keywords": [
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "Privacy is a human right. It ensures that individuals are free to engage in discussions, participate in groups, and form relationships online or offline without fear of their data being inappropriately harvested, analyzed, or otherwise used to harm them. Preserving privacy has emerged as a critical factor in research, particularly in the computational social science (CSS), artificial intelligence (AI) and data science domains, given their reliance on individuals' data for novel insights. The increasing use of advanced computational models stands to exacerbate privacy concerns because, if inappropriately used, they can quickly infringe privacy rights and lead to adverse effects for individuals - especially vulnerable groups - and society. We have already witnessed a host of privacy issues emerge with the advent of large language models (LLMs), such as ChatGPT, which further demonstrate the importance of embedding privacy from the start. This article contributes to the field by discussing the role of privacy and the primary issues that researchers working in CSS, AI, data science and related domains are likely to face. It then presents several key considerations for researchers to ensure participant privacy is best preserved in their research design, data collection and use, analysis, and dissemination of research results.",
+        "subjects": [
+            "cs.AI"
+        ],
+        "comment": "2024"
     },
     {
         "paper id": "2404.11578",
@@ -1701,6 +1717,26 @@
         "comment": null
     },
     {
+        "paper id": "2404.11151",
+        "abstract url": "https://arxiv.org/abs/2404.11151",
+        "title": "REACTO: Reconstructing Articulated Objects from a Single Video",
+        "rating": 0,
+        "keywords": [
+            [
+                "3D",
+                "radiance fields"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "In this paper, we address the challenge of reconstructing general articulated 3D objects from a single video. Existing works employing dynamic neural radiance fields have advanced the modeling of articulated objects like humans and animals from videos, but face challenges with piece-wise rigid general articulated objects due to limitations in their deformation models. To tackle this, we propose Quasi-Rigid Blend Skinning, a novel deformation model that enhances the rigidity of each part while maintaining flexible deformation of the joints. Our primary insight combines three distinct approaches: 1) an enhanced bone rigging system for improved component modeling, 2) the use of quasi-sparse skinning weights to boost part rigidity and reconstruction fidelity, and 3) the application of geodesic point assignment for precise motion and seamless deformation. Our method outperforms previous works in producing higher-fidelity 3D reconstructions of general articulated objects, as demonstrated on both real and synthetic datasets. Project page: https://chaoyuesong.github.io/REACTO.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2404.11206",
         "abstract url": "https://arxiv.org/abs/2404.11206",
         "title": "Prompt-tuning for Clickbait Detection via Text Summarization",
@@ -1832,6 +1868,25 @@
             ]
         ],
         "abstract": "Handwritten text recognition has been developed rapidly in the recent years, following the rise of deep learning and its applications. Though deep learning methods provide notable boost in performance concerning text recognition, non-trivial deviation in performance can be detected even when small pre-processing or architectural/optimization elements are changed. This work follows a ``best practice'' rationale; highlight simple yet effective empirical practices that can further help training and provide well-performing handwritten text recognition systems. Specifically, we considered three basic aspects of a deep HTR system and we proposed simple yet effective solutions: 1) retain the aspect ratio of the images in the preprocessing step, 2) use max-pooling for converting the 3D feature map of CNN output into a sequence of features and 3) assist the training procedure via an additional CTC loss which acts as a shortcut on the max-pooled sequential features. Using these proposed simple modifications, one can attain close to state-of-the-art results, while considering a basic convolutional-recurrent (CNN+LSTM) architecture, for both IAM and RIMES datasets. Code is available at https://github.com/georgeretsi/HTR-best-practices/.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2404.11375",
+        "abstract url": "https://arxiv.org/abs/2404.11375",
+        "title": "Text-controlled Motion Mamba: Text-Instructed Temporal Grounding of Human Motion",
+        "rating": 0,
+        "keywords": [
+            [
+                "graph"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Human motion understanding is a fundamental task with diverse practical applications, facilitated by the availability of large-scale motion capture datasets. Recent studies focus on text-motion tasks, such as text-based motion generation, editing and question answering. In this study, we introduce the novel task of text-based human motion grounding (THMG), aimed at precisely localizing temporal segments corresponding to given textual descriptions within untrimmed motion sequences. Capturing global temporal information is crucial for the THMG task. However, transformer-based models that rely on global temporal self-attention face challenges when handling long untrimmed sequences due to the quadratic computational cost. We address these challenges by proposing Text-controlled Motion Mamba (TM-Mamba), a unified model that integrates temporal global context, language query control, and spatial graph topology with only linear memory cost. The core of the model is a text-controlled selection mechanism which dynamically incorporates global temporal information based on text query. The model is further enhanced to be topology-aware through the integration of relational embeddings. For evaluation, we introduce BABEL-Grounding, the first text-motion dataset that provides detailed textual descriptions of human actions along with their corresponding temporal segments. Extensive evaluations demonstrate the effectiveness of TM-Mamba on BABEL-Grounding.",
         "subjects": [
             "cs.CV"
         ],
@@ -2108,6 +2163,27 @@
         "comment": null
     },
     {
+        "paper id": "2404.11895",
+        "abstract url": "https://arxiv.org/abs/2404.11895",
+        "title": "FreeDiff: Progressive Frequency Truncation for Image Editing with Diffusion Models",
+        "rating": 0,
+        "keywords": [
+            [
+                "Diffusion",
+                "Image Editing",
+                "text-to-image"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Precise image editing with text-to-image models has attracted increasing interest due to their remarkable generative capabilities and user-friendly nature. However, such attempts face the pivotal challenge of misalignment between the intended precise editing target regions and the broader area impacted by the guidance in practice. Despite excellent methods leveraging attention mechanisms that have been developed to refine the editing guidance, these approaches necessitate modifications through complex network architecture and are limited to specific editing tasks. In this work, we re-examine the diffusion process and misalignment problem from a frequency perspective, revealing that, due to the power law of natural images and the decaying noise schedule, the denoising network primarily recovers low-frequency image components during the earlier timesteps and thus brings excessive low-frequency signals for editing. Leveraging this insight, we introduce a novel fine-tuning free approach that employs progressive $\\textbf{Fre}$qu$\\textbf{e}$ncy truncation to refine the guidance of $\\textbf{Diff}$usion models for universal editing tasks ($\\textbf{FreeDiff}$). Our method achieves comparable results with state-of-the-art methods across a variety of editing tasks and on a diverse set of images, highlighting its potential as a versatile tool in image editing applications.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2404.11075",
         "abstract url": "https://arxiv.org/abs/2404.11075",
         "title": "EEG_GLT-Net: Optimising EEG Graphs for Real-time Motor Imagery Signals Classification",
@@ -2334,6 +2410,25 @@
         "comment": null
     },
     {
+        "paper id": "2404.11699",
+        "abstract url": "https://arxiv.org/abs/2404.11699",
+        "title": "Retrieval-Augmented Embodied Agents",
+        "rating": -0.5,
+        "keywords": [
+            [
+                "robotics"
+            ],
+            [
+                "CVPR"
+            ]
+        ],
+        "abstract": "Embodied agents operating in complex and uncertain environments face considerable challenges. While some advanced agents handle complex manipulation tasks with proficiency, their success often hinges on extensive training data to develop their capabilities. In contrast, humans typically rely on recalling past experiences and analogous situations to solve new problems. Aiming to emulate this human approach in robotics, we introduce the Retrieval-Augmented Embodied Agent (RAEA). This innovative system equips robots with a form of shared memory, significantly enhancing their performance. Our approach integrates a policy retriever, allowing robots to access relevant strategies from an external policy memory bank based on multi-modal inputs. Additionally, a policy generator is employed to assimilate these strategies into the learning process, enabling robots to formulate effective responses to tasks. Extensive testing of RAEA in both simulated and real-world scenarios demonstrates its superior performance over traditional methods, representing a major leap forward in robotic technology.",
+        "subjects": [
+            "cs.RO"
+        ],
+        "comment": "CVPR2024"
+    },
+    {
         "paper id": "2404.11735",
         "abstract url": "https://arxiv.org/abs/2404.11735",
         "title": "Learning with 3D rotations, a hitchhiker's guide to SO(3)",
@@ -2532,6 +2627,28 @@
         "comment": null
     },
     {
+        "paper id": "2404.11884",
+        "abstract url": "https://arxiv.org/abs/2404.11884",
+        "title": "Seeing Motion at Nighttime with an Event Camera",
+        "rating": -0.5,
+        "keywords": [
+            [
+                "low-light enhancement"
+            ],
+            [
+                "cs.CV"
+            ],
+            [
+                "CVPR"
+            ]
+        ],
+        "abstract": "We focus on a very challenging task: imaging at nighttime dynamic scenes. Most previous methods rely on the low-light enhancement of a conventional RGB camera. However, they would inevitably face a dilemma between the long exposure time of nighttime and the motion blur of dynamic scenes. Event cameras react to dynamic changes with higher temporal resolution (microsecond) and higher dynamic range (120dB), offering an alternative solution. In this work, we present a novel nighttime dynamic imaging method with an event camera. Specifically, we discover that the event at nighttime exhibits temporal trailing characteristics and spatial non-stationary distribution. Consequently, we propose a nighttime event reconstruction network (NER-Net) which mainly includes a learnable event timestamps calibration module (LETC) to align the temporal trailing events and a non-uniform illumination aware module (NIAM) to stabilize the spatiotemporal distribution of events. Moreover, we construct a paired real low-light event dataset (RLED) through a co-axial imaging system, including 64,200 spatially and temporally aligned image GTs and low-light events. Extensive experiments demonstrate that the proposed method outperforms state-of-the-art methods in terms of visual quality and generalization ability on real-world nighttime datasets. The project are available at: https://github.com/Liu-haoyue/NER-Net.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Accepted by CVPR 2024"
+    },
+    {
         "paper id": "2404.11888",
         "abstract url": "https://arxiv.org/abs/2404.11888",
         "title": "The Dog Walking Theory: Rethinking Convergence in Federated Learning",
@@ -2639,25 +2756,6 @@
             "cs.CV"
         ],
         "comment": "arXiv admin note: substantial text overlap with arXiv:2303.03202"
-    },
-    {
-        "paper id": "2404.11118",
-        "abstract url": "https://arxiv.org/abs/2404.11118",
-        "title": "MHLR: Moving Haar Learning Rate Scheduler for Large-scale Face Recognition Training with One GPU",
-        "rating": -1,
-        "keywords": [
-            [
-                "Face"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Face recognition (FR) has seen significant advancements due to the utilization of large-scale datasets. Training deep FR models on large-scale datasets with multiple GPUs is now a common practice. In fact, computing power has evolved into a foundational and indispensable resource in the area of deep learning. It is nearly impossible to train a deep FR model without holding adequate hardware resources. Recognizing this challenge, some FR approaches have started exploring ways to reduce the time complexity of the fully-connected layer in FR models. Unlike other approaches, this paper introduces a simple yet highly effective approach, Moving Haar Learning Rate (MHLR) scheduler, for scheduling the learning rate promptly and accurately in the training process. MHLR supports large-scale FR training with only one GPU, which is able to accelerate the model to 1/4 of its original training time without sacrificing more than 1% accuracy. More specifically, MHLR only needs $30$ hours to train the model ResNet100 on the dataset WebFace12M containing more than 12M face images with 0.6M identities. Extensive experiments validate the efficiency and effectiveness of MHLR.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
     },
     {
         "paper id": "2404.11121",
@@ -3202,8 +3300,7 @@
         "rating": -1,
         "keywords": [
             [
-                "Sign Language",
-                "face"
+                "Sign Language"
             ],
             [
                 "cs.CL"
@@ -3741,6 +3838,38 @@
         "comment": "37 pages, 10 figures; manuscript under peer-review for publication in the jounral 'Computers and Electronics in Agriculture'"
     },
     {
+        "paper id": "2404.16063",
+        "abstract url": "https://arxiv.org/abs/2404.16063",
+        "title": "Chronological Outlooks of Globe Illustrated with Web-Based Visualization",
+        "rating": -1,
+        "keywords": [
+            [
+                "depth"
+            ]
+        ],
+        "abstract": "Developing visualizations with comprehensive annotations is crucial for research and educational purposes. We've been experimenting with various visualization tools like Plotly, Plotly.js, and D3.js to analyze global trends, focusing on areas such as Global Terrorism, the Global Air Quality Index (AQI), and Global Population dynamics. These visualizations help us gain insights into complex research topics, facilitating better understanding and analysis. We've created a single web homepage that links to three distinct visualization web pages, each exploring specific topics in depth. These webpages have been deployed on free cloud hosting servers such as Vercel and Render.",
+        "subjects": [
+            "cs.HC"
+        ],
+        "comment": "4 pages, 10 figures"
+    },
+    {
+        "paper id": "2404.16862",
+        "abstract url": "https://arxiv.org/abs/2404.16862",
+        "title": "Edge Importance in Complex Networks",
+        "rating": -1,
+        "keywords": [
+            [
+                "graph"
+            ]
+        ],
+        "abstract": "Complex networks are made up of vertices and edges. The latter connect the vertices. There are several ways to measure the importance of the vertices, e.g., by counting the number of edges that start or end at each vertex, or by using the subgraph centrality of the vertices. It is more difficult to assess the importance of the edges. One approach is to consider the line graph associated with the given network and determine the importance of the vertices of the line graph, but this is fairly complicated except for small networks. This paper compares two approaches to estimate the importance of edges of medium-sized to large networks. One approach computes partial derivatives of the total communicability of the weights of the edges, where a partial derivative of large magnitude indicates that the corresponding edge may be important. Our second approach computes the Perron sensitivity of the edges. A high sensitivity signals that the edge may be important. The performance of these methods and some computational aspects are discussed. Applications of interest include to determine whether a network can be replaced by a network with fewer edges with about the same communicability.",
+        "subjects": [
+            "physics.soc-ph"
+        ],
+        "comment": "25 pages, 9 tables, 1 figure"
+    },
+    {
         "paper id": "2404.11117",
         "abstract url": "https://arxiv.org/abs/2404.11117",
         "title": "Variational quantization for state space models",
@@ -3843,6 +3972,25 @@
         "comment": null
     },
     {
+        "paper id": "2404.11408",
+        "abstract url": "https://arxiv.org/abs/2404.11408",
+        "title": "DUPE: Detection Undermining via Prompt Engineering for Deepfake Text",
+        "rating": -1.5,
+        "keywords": [
+            [
+                "watermarking"
+            ],
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "As large language models (LLMs) become increasingly commonplace, concern about distinguishing between human and AI text increases as well. The growing power of these models is of particular concern to teachers, who may worry that students will use LLMs to write school assignments. Facing a technology with which they are unfamiliar, teachers may turn to publicly-available AI text detectors. Yet the accuracy of many of these detectors has not been thoroughly verified, posing potential harm to students who are falsely accused of academic dishonesty. In this paper, we evaluate three different AI text detectors-Kirchenbauer et al. watermarks, ZeroGPT, and GPTZero-against human and AI-generated essays. We find that watermarking results in a high false positive rate, and that ZeroGPT has both high false positive and false negative rates. Further, we are able to significantly increase the false negative rate of all detectors by using ChatGPT 3.5 to paraphrase the original AI-generated texts, thereby effectively bypassing the detectors.",
+        "subjects": [
+            "cs.AI"
+        ],
+        "comment": "10 pages, 2 figures"
+    },
+    {
         "paper id": "2404.11422",
         "abstract url": "https://arxiv.org/abs/2404.11422",
         "title": "Short-term wind speed forecasting model based on an attention-gated recurrent neural network and error correction strategy",
@@ -3881,25 +4029,6 @@
         "comment": null
     },
     {
-        "paper id": "2404.11515",
-        "abstract url": "https://arxiv.org/abs/2404.11515",
-        "title": "Embedding Privacy in Computational Social Science and Artificial Intelligence Research",
-        "rating": -1.5,
-        "keywords": [
-            [
-                "face"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "Privacy is a human right. It ensures that individuals are free to engage in discussions, participate in groups, and form relationships online or offline without fear of their data being inappropriately harvested, analyzed, or otherwise used to harm them. Preserving privacy has emerged as a critical factor in research, particularly in the computational social science (CSS), artificial intelligence (AI) and data science domains, given their reliance on individuals' data for novel insights. The increasing use of advanced computational models stands to exacerbate privacy concerns because, if inappropriately used, they can quickly infringe privacy rights and lead to adverse effects for individuals - especially vulnerable groups - and society. We have already witnessed a host of privacy issues emerge with the advent of large language models (LLMs), such as ChatGPT, which further demonstrate the importance of embedding privacy from the start. This article contributes to the field by discussing the role of privacy and the primary issues that researchers working in CSS, AI, data science and related domains are likely to face. It then presents several key considerations for researchers to ensure participant privacy is best preserved in their research design, data collection and use, analysis, and dissemination of research results.",
-        "subjects": [
-            "cs.AI"
-        ],
-        "comment": "2024"
-    },
-    {
         "paper id": "2404.11534",
         "abstract url": "https://arxiv.org/abs/2404.11534",
         "title": "Decomposing and Editing Predictions by Modeling Model Computation",
@@ -3916,29 +4045,6 @@
             ]
         ],
         "abstract": "How does the internal computation of a machine learning model transform inputs into predictions? In this paper, we introduce a task called component modeling that aims to address this question. The goal of component modeling is to decompose an ML model's prediction in terms of its components -- simple functions (e.g., convolution filters, attention heads) that are the \"building blocks\" of model computation. We focus on a special case of this task, component attribution, where the goal is to estimate the counterfactual impact of individual components on a given prediction. We then present COAR, a scalable algorithm for estimating component attributions; we demonstrate its effectiveness across models, datasets, and modalities. Finally, we show that component attributions estimated with COAR directly enable model editing across five tasks, namely: fixing model errors, ``forgetting'' specific classes, boosting subpopulation robustness, localizing backdoor attacks, and improving robustness to typographic attacks. We provide code for COAR at https://github.com/MadryLab/modelcomponents .",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2404.11568",
-        "abstract url": "https://arxiv.org/abs/2404.11568",
-        "title": "On the Scalability of GNNs for Molecular Graphs",
-        "rating": -1.5,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "GNNs",
-                "Graph"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Scaling deep learning models has been at the heart of recent revolutions in language modelling and image generation. Practitioners have observed a strong relationship between model size, dataset size, and performance. However, structure-based architectures such as Graph Neural Networks (GNNs) are yet to show the benefits of scale mainly due to the lower efficiency of sparse operations, large data requirements, and lack of clarity about the effectiveness of various architectures. We address this drawback of GNNs by studying their scaling behavior. Specifically, we analyze message-passing networks, graph Transformers, and hybrid architectures on the largest public collection of 2D molecular graphs. For the first time, we observe that GNNs benefit tremendously from the increasing scale of depth, width, number of molecules, number of labels, and the diversity in the pretraining datasets, resulting in a 30.25% improvement when scaling to 1 billion parameters and 28.98% improvement when increasing size of dataset to eightfold. We further demonstrate strong finetuning scaling behavior on 38 tasks, outclassing previous large models. We hope that our work paves the way for an era where foundational GNNs drive pharmaceutical drug discovery.",
         "subjects": [
             "cs.LG"
         ],
@@ -4131,29 +4237,6 @@
         "comment": "Submitted to IET GTD"
     },
     {
-        "paper id": "2404.11151",
-        "abstract url": "https://arxiv.org/abs/2404.11151",
-        "title": "REACTO: Reconstructing Articulated Objects from a Single Video",
-        "rating": -2,
-        "keywords": [
-            [
-                "3D",
-                "radiance fields"
-            ],
-            [
-                "face"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "In this paper, we address the challenge of reconstructing general articulated 3D objects from a single video. Existing works employing dynamic neural radiance fields have advanced the modeling of articulated objects like humans and animals from videos, but face challenges with piece-wise rigid general articulated objects due to limitations in their deformation models. To tackle this, we propose Quasi-Rigid Blend Skinning, a novel deformation model that enhances the rigidity of each part while maintaining flexible deformation of the joints. Our primary insight combines three distinct approaches: 1) an enhanced bone rigging system for improved component modeling, 2) the use of quasi-sparse skinning weights to boost part rigidity and reconstruction fidelity, and 3) the application of geodesic point assignment for precise motion and seamless deformation. Our method outperforms previous works in producing higher-fidelity 3D reconstructions of general articulated objects, as demonstrated on both real and synthetic datasets. Project page: https://chaoyuesong.github.io/REACTO.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2404.11180",
         "abstract url": "https://arxiv.org/abs/2404.11180",
         "title": "Causal Deconfounding via Confounder Disentanglement for Dual-Target Cross-Domain Recommendation",
@@ -4186,6 +4269,28 @@
         "comment": "arXiv admin note: text overlap with arXiv:2007.11926"
     },
     {
+        "paper id": "2404.11236",
+        "abstract url": "https://arxiv.org/abs/2404.11236",
+        "title": "ONOT: a High-Quality ICAO-compliant Synthetic Mugshot Dataset",
+        "rating": -2,
+        "keywords": [
+            [
+                "Attack"
+            ],
+            [
+                "Quality Assessment"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Nowadays, state-of-the-art AI-based generative models represent a viable solution to overcome privacy issues and biases in the collection of datasets containing personal information, such as faces. Following this intuition, in this paper we introduce ONOT, a synthetic dataset specifically focused on the generation of high-quality faces in adherence to the requirements of the ISO/IEC 39794-5 standards that, following the guidelines of the International Civil Aviation Organization (ICAO), defines the interchange formats of face images in electronic Machine-Readable Travel Documents (eMRTD). The strictly controlled and varied mugshot images included in ONOT are useful in research fields related to the analysis of face images in eMRTD, such as Morphing Attack Detection and Face Quality Assessment. The dataset is publicly released, in combination with the generation procedure details in order to improve the reproducibility and enable future extensions.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Paper accepted in IEEE FG 2024"
+    },
+    {
         "paper id": "2404.11243",
         "abstract url": "https://arxiv.org/abs/2404.11243",
         "title": "Optical Image-to-Image Translation Using Denoising Diffusion Models: Heterogeneous Change Detection as a Use Case",
@@ -4204,22 +4309,6 @@
         "abstract": "We introduce an innovative deep learning-based method that uses a denoising diffusion-based model to translate low-resolution images to high-resolution ones from different optical sensors while preserving the contents and avoiding undesired artifacts. The proposed method is trained and tested on a large and diverse data set of paired Sentinel-II and Planet Dove images. We show that it can solve serious image generation issues observed when the popular classifier-free guided Denoising Diffusion Implicit Model (DDIM) framework is used in the task of Image-to-Image Translation of multi-sensor optical remote sensing images and that it can generate large images with highly consistent patches, both in colors and in features. Moreover, we demonstrate how our method improves heterogeneous change detection results in two urban areas: Beirut, Lebanon, and Austin, USA. Our contributions are: i) a new training and testing algorithm based on denoising diffusion models for optical image translation; ii) a comprehensive image quality evaluation and ablation study; iii) a comparison with the classifier-free guided DDIM framework; and iv) change detection experiments on heterogeneous data.",
         "subjects": [
             "cs.CV"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2404.11252",
-        "abstract url": "https://arxiv.org/abs/2404.11252",
-        "title": "\"That's our game!\" : Reflections on co-designing a robotic game with neurodiverse children",
-        "rating": -2,
-        "keywords": [
-            [
-                "face"
-            ]
-        ],
-        "abstract": "Many neurodivergent (ND) children are integrated into mainstream schools alongside their neurotypical (NT) peers. However, they often face social exclusion, which may have lifelong effects. Inclusive play activities can be a strong driver of inclusion. Unfortunately, games designed for the specific needs of neurodiverse groups, those that include neurodivergent and neurotypical individuals, are scarce. Given the potential of robots as engaging devices, we led a 6-month co-design process to build an inclusive and entertaining robotic game for neurodiverse classrooms. We first interviewed neurodivergent adults and educators to identify the barriers and facilitators for including neurodivergent children in mainstream classrooms. Then, we conducted five co-design sessions, engaging four neurodiverse classrooms with 81 children (19 neurodivergent). We present a reflection on our co-design process and the resulting robotic game through the lens of Self-Determination Theory, discussing how our methodology supported the intrinsic motivations of neurodivergent children.",
-        "subjects": [
-            "cs.HC"
         ],
         "comment": null
     },
@@ -4371,28 +4460,6 @@
         "comment": "20 pages, 1 figure, 2 tables in the appendix"
     },
     {
-        "paper id": "2404.11375",
-        "abstract url": "https://arxiv.org/abs/2404.11375",
-        "title": "Text-controlled Motion Mamba: Text-Instructed Temporal Grounding of Human Motion",
-        "rating": -2,
-        "keywords": [
-            [
-                "graph"
-            ],
-            [
-                "face"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Human motion understanding is a fundamental task with diverse practical applications, facilitated by the availability of large-scale motion capture datasets. Recent studies focus on text-motion tasks, such as text-based motion generation, editing and question answering. In this study, we introduce the novel task of text-based human motion grounding (THMG), aimed at precisely localizing temporal segments corresponding to given textual descriptions within untrimmed motion sequences. Capturing global temporal information is crucial for the THMG task. However, transformer-based models that rely on global temporal self-attention face challenges when handling long untrimmed sequences due to the quadratic computational cost. We address these challenges by proposing Text-controlled Motion Mamba (TM-Mamba), a unified model that integrates temporal global context, language query control, and spatial graph topology with only linear memory cost. The core of the model is a text-controlled selection mechanism which dynamically incorporates global temporal information based on text query. The model is further enhanced to be topology-aware through the integration of relational embeddings. For evaluation, we introduce BABEL-Grounding, the first text-motion dataset that provides detailed textual descriptions of human actions along with their corresponding temporal segments. Extensive evaluations demonstrate the effectiveness of TM-Mamba on BABEL-Grounding.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2404.11394",
         "abstract url": "https://arxiv.org/abs/2404.11394",
         "title": "What-if Analysis Framework for Digital Twins in 6G Wireless Network Management",
@@ -4441,22 +4508,6 @@
         "comment": "12 pages, 10 figures, accepted by SIGIR2024"
     },
     {
-        "paper id": "2404.11473",
-        "abstract url": "https://arxiv.org/abs/2404.11473",
-        "title": "Assessing The Effectiveness Of Current Cybersecurity Regulations And Policies In The US",
-        "rating": -2,
-        "keywords": [
-            [
-                "face"
-            ]
-        ],
-        "abstract": "This article assesses the effectiveness of current cybersecurity regulations and policies in the United States amidst the escalating frequency and sophistication of cyber threats. The focus is on the comprehensive framework established by the U.S. government, with a spotlight on the National Institute of Standards and Technology (NIST) Cybersecurity Framework and key regulations such as HIPAA, GLBA, FISMA, CISA, CCPA, and the DOD Cybersecurity Maturity Model Certification. The study evaluates the impact of these regulations on different sectors and analyzes trends in cybercrime data from 2000 to 2022. The findings highlight the challenges, successes, and the need for continuous adaptation in the face of evolving cyber threats",
-        "subjects": [
-            "cs.CR"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2404.11477",
         "abstract url": "https://arxiv.org/abs/2404.11477",
         "title": "Discovering Nuclear Models from Symbolic Machine Learning",
@@ -4482,8 +4533,7 @@
                 "robotics"
             ],
             [
-                "medical",
-                "face"
+                "medical"
             ],
             [
                 "eess.IV"
@@ -4740,30 +4790,6 @@
         "comment": "7 pages, 6 figures"
     },
     {
-        "paper id": "2404.11895",
-        "abstract url": "https://arxiv.org/abs/2404.11895",
-        "title": "FreeDiff: Progressive Frequency Truncation for Image Editing with Diffusion Models",
-        "rating": -2,
-        "keywords": [
-            [
-                "Diffusion",
-                "Image Editing",
-                "text-to-image"
-            ],
-            [
-                "face"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Precise image editing with text-to-image models has attracted increasing interest due to their remarkable generative capabilities and user-friendly nature. However, such attempts face the pivotal challenge of misalignment between the intended precise editing target regions and the broader area impacted by the guidance in practice. Despite excellent methods leveraging attention mechanisms that have been developed to refine the editing guidance, these approaches necessitate modifications through complex network architecture and are limited to specific editing tasks. In this work, we re-examine the diffusion process and misalignment problem from a frequency perspective, revealing that, due to the power law of natural images and the decaying noise schedule, the denoising network primarily recovers low-frequency image components during the earlier timesteps and thus brings excessive low-frequency signals for editing. Leveraging this insight, we introduce a novel fine-tuning free approach that employs progressive $\\textbf{Fre}$qu$\\textbf{e}$ncy truncation to refine the guidance of $\\textbf{Diff}$usion models for universal editing tasks ($\\textbf{FreeDiff}$). Our method achieves comparable results with state-of-the-art methods across a variety of editing tasks and on a diverse set of images, highlighting its potential as a versatile tool in image editing applications.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2404.12144",
         "abstract url": "https://arxiv.org/abs/2404.12144",
         "title": "Mushroom Segmentation and 3D Pose Estimation from Point Clouds using Fully Convolutional Geometric Features and Implicit Pose Encoding",
@@ -4783,6 +4809,22 @@
         "abstract": "Modern agricultural applications rely more and more on deep learning solutions. However, training well-performing deep networks requires a large amount of annotated data that may not be available and in the case of 3D annotation may not even be feasible for human annotators. In this work, we develop a deep learning approach to segment mushrooms and estimate their pose on 3D data, in the form of point clouds acquired by depth sensors. To circumvent the annotation problem, we create a synthetic dataset of mushroom scenes, where we are fully aware of 3D information, such as the pose of each mushroom. The proposed network has a fully convolutional backbone, that parses sparse 3D data, and predicts pose information that implicitly defines both instance segmentation and pose estimation task. We have validated the effectiveness of the proposed implicit-based approach for a synthetic test set, as well as provided qualitative results for a small set of real acquired point clouds with depth sensors. Code is publicly available at https://github.com/georgeretsi/mushroom-pose.",
         "subjects": [
             "cs.CV"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2404.16863",
+        "abstract url": "https://arxiv.org/abs/2404.16863",
+        "title": "Efficient Strategies on Supply Chain Network Optimization for Industrial Carbon Emission Reduction",
+        "rating": -2,
+        "keywords": [
+            [
+                "Industrial"
+            ]
+        ],
+        "abstract": "This study investigates the efficient strategies for supply chain network optimization, specifically aimed at reducing industrial carbon emissions. Amidst escalating concerns about global climate change, industry sectors are motivated to counteract the negative environmental implications of their supply chain networks. This paper introduces a novel framework for optimizing these networks via strategic approaches which lead to a definitive decrease in carbon emissions. We introduce Adaptive Carbon Emissions Indexing (ACEI), utilizing real-time carbon emissions data to drive instantaneous adjustments in supply chain operations. This adaptability predicates on evolving environmental regulations, fluctuating market trends and emerging technological advancements. The empirical validations demonstrate our strategy's effectiveness in various industrial sectors, indicating a significant reduction in carbon emissions and an increase in operational efficiency. This method also evidences resilience in the face of sudden disruptions and crises, reflecting its robustness.",
+        "subjects": [
+            "physics.soc-ph"
         ],
         "comment": null
     },
@@ -4860,28 +4902,6 @@
         "comment": null
     },
     {
-        "paper id": "2404.11699",
-        "abstract url": "https://arxiv.org/abs/2404.11699",
-        "title": "Retrieval-Augmented Embodied Agents",
-        "rating": -2.5,
-        "keywords": [
-            [
-                "robotics"
-            ],
-            [
-                "face"
-            ],
-            [
-                "CVPR"
-            ]
-        ],
-        "abstract": "Embodied agents operating in complex and uncertain environments face considerable challenges. While some advanced agents handle complex manipulation tasks with proficiency, their success often hinges on extensive training data to develop their capabilities. In contrast, humans typically rely on recalling past experiences and analogous situations to solve new problems. Aiming to emulate this human approach in robotics, we introduce the Retrieval-Augmented Embodied Agent (RAEA). This innovative system equips robots with a form of shared memory, significantly enhancing their performance. Our approach integrates a policy retriever, allowing robots to access relevant strategies from an external policy memory bank based on multi-modal inputs. Additionally, a policy generator is employed to assimilate these strategies into the learning process, enabling robots to formulate effective responses to tasks. Extensive testing of RAEA in both simulated and real-world scenarios demonstrates its superior performance over traditional methods, representing a major leap forward in robotic technology.",
-        "subjects": [
-            "cs.RO"
-        ],
-        "comment": "CVPR2024"
-    },
-    {
         "paper id": "2404.11760",
         "abstract url": "https://arxiv.org/abs/2404.11760",
         "title": "Predictive Model Development to Identify Failed Healing in Patients after Non-Union Fracture Surgery",
@@ -4926,31 +4946,6 @@
             "cs.LG"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2404.11884",
-        "abstract url": "https://arxiv.org/abs/2404.11884",
-        "title": "Seeing Motion at Nighttime with an Event Camera",
-        "rating": -2.5,
-        "keywords": [
-            [
-                "face"
-            ],
-            [
-                "low-light enhancement"
-            ],
-            [
-                "cs.CV"
-            ],
-            [
-                "CVPR"
-            ]
-        ],
-        "abstract": "We focus on a very challenging task: imaging at nighttime dynamic scenes. Most previous methods rely on the low-light enhancement of a conventional RGB camera. However, they would inevitably face a dilemma between the long exposure time of nighttime and the motion blur of dynamic scenes. Event cameras react to dynamic changes with higher temporal resolution (microsecond) and higher dynamic range (120dB), offering an alternative solution. In this work, we present a novel nighttime dynamic imaging method with an event camera. Specifically, we discover that the event at nighttime exhibits temporal trailing characteristics and spatial non-stationary distribution. Consequently, we propose a nighttime event reconstruction network (NER-Net) which mainly includes a learnable event timestamps calibration module (LETC) to align the temporal trailing events and a non-uniform illumination aware module (NIAM) to stabilize the spatiotemporal distribution of events. Moreover, we construct a paired real low-light event dataset (RLED) through a co-axial imaging system, including 64,200 spatially and temporally aligned image GTs and low-light events. Extensive experiments demonstrate that the proposed method outperforms state-of-the-art methods in terms of visual quality and generalization ability on real-world nighttime datasets. The project are available at: https://github.com/Liu-haoyue/NER-Net.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Accepted by CVPR 2024"
     },
     {
         "paper id": "2404.11070",
@@ -5320,9 +5315,28 @@
         "comment": null
     },
     {
+        "paper id": "2404.16865",
+        "abstract url": "https://arxiv.org/abs/2404.16865",
+        "title": "Improving Privacy-Preserving Techniques for Smart Grid using Lattice-based Cryptography",
+        "rating": -3,
+        "keywords": [
+            [
+                "attacks"
+            ],
+            [
+                "quantum"
+            ]
+        ],
+        "abstract": "Advancements in communication and information tech birthed the Smart Grid, optimizing energy and data transmission. Yet, user privacy is at risk due to frequent data collection. Existing privacy schemes face vulnerability with quantum machines. To tackle this, the LPM2DA scheme is introduced, utilizing lattice-based encryption and signatures for secure data aggregation. It ensures privacy, integrity, and authentication, enabling statistical analysis while preserving user privacy. Traditional aggregation schemes suffer from weak network models and centralization issues. Enter SPDBlock, a blockchain-based solution ensuring privacy, integrity, and resistance to attacks. It detects and prosecutes malicious entities while efficiently handling multi-dimensional data transmission. Through distributed decryption and secret sharing, only valid data can be decrypted with minimal involvement from smart meters. Performance tests reveal SPDBlock's superiority in communication and computational efficiency over traditional schemes.",
+        "subjects": [
+            "cs.CR"
+        ],
+        "comment": "103 pages, 8 figures"
+    },
+    {
         "paper id": "2404.11114",
         "abstract url": "https://arxiv.org/abs/2404.11114",
-        "title": "Reuse out-of-year data to enhance land cover mappingvia feature disentanglement and contrastive learning",
+        "title": "Reuse out-of-year data to enhance land cover mapping via feature disentanglement and contrastive learning",
         "rating": -3.5,
         "keywords": [
             [
@@ -5338,6 +5352,32 @@
             ]
         ],
         "abstract": "Timely up-to-date land use/land cover (LULC) maps play a pivotal role in supporting agricultural territory management, environmental monitoring and facilitating well-informed and sustainable decision-making. Typically, when creating a land cover (LC) map, precise ground truth data is collected through time-consuming and expensive field campaigns. This data is then utilized in conjunction with satellite image time series (SITS) through advanced machine learning algorithms to get the final map. Unfortunately, each time this process is repeated (e.g., annually over a region to estimate agricultural production or potential biodiversity loss), new ground truth data must be collected, leading to the complete disregard of previously gathered reference data despite the substantial financial and time investment they have required. How to make value of historical data, from the same or similar study sites, to enhance the current LULC mapping process constitutes a significant challenge that could enable the financial and human-resource efforts invested in previous data campaigns to be valued again. Aiming to tackle this important challenge, we here propose a deep learning framework based on recent advances in domain adaptation and generalization to combine remote sensing and reference data coming from two different domains (e.g. historical data and fresh ones) to ameliorate the current LC mapping process. Our approach, namely REFeD (data Reuse with Effective Feature Disentanglement for land cover mapping), leverages a disentanglement strategy, based on contrastive learning, where invariant and specific per-domain features are derived to recover the intrinsic information related to the downstream LC mapping task and alleviate possible distribution shifts between domains. Additionally, REFeD is equipped with an effective supervision scheme where feature disentanglement is further enforced via multiple levels of supervision at different granularities. The experimental assessment over two study areas covering extremely diverse and contrasted landscapes, namely Koumbia (located in the West-Africa region, in Burkina Faso) and Centre Val de Loire (located in centre Europe, France), underlines the quality of our framework and the obtained findings demonstrate that out-of-year information coming from the same (or similar) study site, at different periods of time, can constitute a valuable additional source of information to enhance the LC mapping process.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2404.11568",
+        "abstract url": "https://arxiv.org/abs/2404.11568",
+        "title": "On the Scalability of GNNs for Molecular Graphs",
+        "rating": -3.5,
+        "keywords": [
+            [
+                "depth"
+            ],
+            [
+                "GNNs",
+                "Graph"
+            ],
+            [
+                "chemical"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Scaling deep learning models has been at the heart of recent revolutions in language modelling and image generation. Practitioners have observed a strong relationship between model size, dataset size, and performance. However, structure-based architectures such as Graph Neural Networks (GNNs) are yet to show the benefits of scale mainly due to the lower efficiency of sparse operations, large data requirements, and lack of clarity about the effectiveness of various architectures. We address this drawback of GNNs by studying their scaling behavior. Specifically, we analyze message-passing networks, graph Transformers, and hybrid architectures on the largest public collection of 2D molecular graphs. For the first time, we observe that GNNs benefit tremendously from the increasing scale of depth, width, number of molecules, number of labels, and the diversity in the pretraining datasets. We further demonstrate strong finetuning scaling behavior on 38 highly competitive downstream tasks, outclassing previous large models. This gives rise to MolGPS, a new graph foundation model that allows to navigate the chemical space, outperforming the previous state-of-the-arts on 26 out the 38 downstream tasks. We hope that our work paves the way for an era where foundational GNNs drive pharmaceutical drug discovery.",
         "subjects": [
             "cs.LG"
         ],
@@ -5412,31 +5452,6 @@
             "cs.RO"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2404.11236",
-        "abstract url": "https://arxiv.org/abs/2404.11236",
-        "title": "ONOT: a High-Quality ICAO-compliant Synthetic Mugshot Dataset",
-        "rating": -4,
-        "keywords": [
-            [
-                "Attack"
-            ],
-            [
-                "face"
-            ],
-            [
-                "Quality Assessment"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Nowadays, state-of-the-art AI-based generative models represent a viable solution to overcome privacy issues and biases in the collection of datasets containing personal information, such as faces. Following this intuition, in this paper we introduce ONOT, a synthetic dataset specifically focused on the generation of high-quality faces in adherence to the requirements of the ISO/IEC 39794-5 standards that, following the guidelines of the International Civil Aviation Organization (ICAO), defines the interchange formats of face images in electronic Machine-Readable Travel Documents (eMRTD). The strictly controlled and varied mugshot images included in ONOT are useful in research fields related to the analysis of face images in eMRTD, such as Morphing Attack Detection and Face Quality Assessment. The dataset is publicly released, in combination with the generation procedure details in order to improve the reproducibility and enable future extensions.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Paper accepted in IEEE FG 2024"
     },
     {
         "paper id": "2404.11277",
@@ -5677,7 +5692,7 @@
         "subjects": [
             "math.NA"
         ],
-        "comment": "39 pages, 13 figures"
+        "comment": "38 pages, 13 figures"
     },
     {
         "paper id": "2404.11136",
@@ -5820,6 +5835,18 @@
         "abstract": "A class of metaheuristic techniques called estimation-of-distribution algorithms (EDAs) are employed in optimization as more sophisticated substitutes for traditional strategies like evolutionary algorithms. EDAs generally drive the search for the optimum by creating explicit probabilistic models of potential candidate solutions through repeated sampling and selection from the underlying search space. Most theoretical research on EDAs has focused on pseudo-Boolean optimization. Jedidia et al. (GECCO 2023) proposed the first EDAs for optimizing problems involving multi-valued decision variables. By building a framework, they have analyzed the runtime of a multi-valued UMDA on the r-valued LeadingOnes function. Using their framework, here we focus on the multi-valued compact genetic algorithm (r-cGA) and provide a first runtime analysis of a generalized OneMax function. To prove our results, we investigate the effect of genetic drift and progress of the probabilistic model towards the optimum. After finding the right algorithm parameters, we prove that the r-cGA solves this r-valued OneMax problem efficiently. We show that with high probability, the runtime bound is O(r2 n log2 r log3 n). At the end of experiments, we state one conjecture related to the expected runtime of another variant of multi-valued OneMax function.",
         "subjects": [
             "cs.NE"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2404.11252",
+        "abstract url": "https://arxiv.org/abs/2404.11252",
+        "title": "\"That's our game!\" : Reflections on co-designing a robotic game with neurodiverse children",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "Many neurodivergent (ND) children are integrated into mainstream schools alongside their neurotypical (NT) peers. However, they often face social exclusion, which may have lifelong effects. Inclusive play activities can be a strong driver of inclusion. Unfortunately, games designed for the specific needs of neurodiverse groups, those that include neurodivergent and neurotypical individuals, are scarce. Given the potential of robots as engaging devices, we led a 6-month co-design process to build an inclusive and entertaining robotic game for neurodiverse classrooms. We first interviewed neurodivergent adults and educators to identify the barriers and facilitators for including neurodivergent children in mainstream classrooms. Then, we conducted five co-design sessions, engaging four neurodiverse classrooms with 81 children (19 neurodivergent). We present a reflection on our co-design process and the resulting robotic game through the lens of Self-Determination Theory, discussing how our methodology supported the intrinsic motivations of neurodivergent children.",
+        "subjects": [
+            "cs.HC"
         ],
         "comment": null
     },
@@ -6132,6 +6159,18 @@
         "abstract": "Package managers such as NPM, Maven, and PyPI play a pivotal role in open-source software (OSS) ecosystems, streamlining the distribution and management of various freely available packages. The fine-grained details within software packages can unveil potential risks within existing OSS ecosystems, offering valuable insights for detecting malicious packages. In this study, we undertake a large-scale empirical analysis focusing on fine-grained information (FGI): the metadata, static, and dynamic functions. Specifically, we investigate the FGI usage across a diverse set of 50,000+ legitimate and 1,000+ malicious packages. Based on this diverse data collection, we conducted a comparative analysis between legitimate and malicious packages. Our findings reveal that (1) malicious packages have less metadata content and utilize fewer static and dynamic functions than legitimate ones; (2) malicious packages demonstrate a higher tendency to invoke HTTP/URL functions as opposed to other application services, such as FTP or SMTP; (3) FGI serves as a distinguishable indicator between legitimate and malicious packages; and (4) one dimension in FGI has sufficient distinguishable capability to detect malicious packages, and combining all dimensions in FGI cannot significantly improve overall performance.",
         "subjects": [
             "cs.SE"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2404.11473",
+        "abstract url": "https://arxiv.org/abs/2404.11473",
+        "title": "Assessing The Effectiveness Of Current Cybersecurity Regulations And Policies In The US",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "This article assesses the effectiveness of current cybersecurity regulations and policies in the United States amidst the escalating frequency and sophistication of cyber threats. The focus is on the comprehensive framework established by the U.S. government, with a spotlight on the National Institute of Standards and Technology (NIST) Cybersecurity Framework and key regulations such as HIPAA, GLBA, FISMA, CISA, CCPA, and the DOD Cybersecurity Maturity Model Certification. The study evaluates the impact of these regulations on different sectors and analyzes trends in cybercrime data from 2000 to 2022. The findings highlight the challenges, successes, and the need for continuous adaptation in the face of evolving cyber threats",
+        "subjects": [
+            "cs.CR"
         ],
         "comment": null
     },
@@ -6542,5 +6581,41 @@
             "physics.plasm-ph"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2404.15360",
+        "abstract url": "https://arxiv.org/abs/2404.15360",
+        "title": "Towards Robust and Interpretable EMG-based Hand Gesture Recognition using Deep Metric Meta Learning",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "Current electromyography (EMG) pattern recognition (PR) models have been shown to generalize poorly in unconstrained environments, setting back their adoption in applications such as hand gesture control. This problem is often due to limited training data, exacerbated by the use of supervised classification frameworks that are known to be suboptimal in such settings. In this work, we propose a shift to deep metric-based meta-learning in EMG PR to supervise the creation of meaningful and interpretable representations. We use a Siamese Deep Convolutional Neural Network (SDCNN) and contrastive triplet loss to learn an EMG feature embedding space that captures the distribution of the different classes. A nearest-centroid approach is subsequently employed for inference, relying on how closely a test sample aligns with the established data distributions. We derive a robust class proximity-based confidence estimator that leads to a better rejection of incorrect decisions, i.e. false positives, especially when operating beyond the training data domain. We show our approach's efficacy by testing the trained SDCNN's predictions and confidence estimations on unseen data, both in and out of the training domain. The evaluation metrics include the accuracy-rejection curve and the Kullback-Leibler divergence between the confidence distributions of accurate and inaccurate predictions. Outperforming comparable models on both metrics, our results demonstrate that the proposed meta-learning approach improves the classifier's precision in active decisions (after rejection), thus leading to better generalization and applicability.",
+        "subjects": [
+            "eess.SP"
+        ],
+        "comment": "11 pages, 9 figures, submitted to IEEE Transactions on Neural Networks and Learning Systems"
+    },
+    {
+        "paper id": "2404.16062",
+        "abstract url": "https://arxiv.org/abs/2404.16062",
+        "title": "QuickerCheck: Implementing and Evaluating a Parallel Run-Time for QuickCheck",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "This paper introduces a new parallel run-time for QuickCheck, a Haskell library and EDSL for specifying and randomly testing properties of programs. The new run-time can run multiple tests for a single property in parallel, using the available cores. Moreover, if a counterexample is found, the run-time can also shrink the test case in parallel, implementing a parallel search for a locally minimal counterexample. Our experimental results show a 3--9$\\times$ speed-up for testing QuickCheck properties on a variety of heavy-weight benchmark problems. We also evaluate two different shrinking strategies; deterministic shrinking, which guarantees to produce the same minimal test case as standard sequential shrinking, and greedy shrinking, which does not have this guarantee but still produces a locally minimal test case, and is faster in practice.",
+        "subjects": [
+            "cs.PL"
+        ],
+        "comment": "12 pages, IFL 2023"
+    },
+    {
+        "paper id": "2404.17588",
+        "abstract url": "https://arxiv.org/abs/2404.17588",
+        "title": "Exploring Vulnerabilities in Remote VR User Studies",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "This position paper explores the possibilities and challenges of using Virtual Reality (VR) in remote user studies. Highlighting the immersive nature of VR, the paper identifies key vulnerabilities, including varying technical proficiency, privacy concerns, ethical considerations, and data security risks. To address these issues, proposed mitigation strategies encompass comprehensive onboarding, prioritized informed consent, implementing privacy-by-design principles, and adherence to ethical guidelines. Secure data handling, including encryption and disposal protocols, is advocated. In conclusion, while remote VR studies present unique opportunities, carefully considering and implementing mitigation strategies is essential to uphold reliability, ethical integrity, and security, ensuring responsible and effective use of VR in user research. Ongoing efforts are crucial for adapting to the evolving landscape of VR technology in user studies.",
+        "subjects": [
+            "cs.HC"
+        ],
+        "comment": "Workshop Paper for CHI'24 Shaping The Future: Developing Principles for Policy Recommendations for Responsible Innovation in Virtual Worlds"
     }
 ]
