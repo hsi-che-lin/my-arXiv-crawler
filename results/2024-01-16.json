@@ -57,6 +57,25 @@
         "comment": "2024 IEEE International Conference on Artificial Intelligence and eXtended and Virtual Reality (AIXVR)"
     },
     {
+        "paper id": "2401.08206",
+        "abstract url": "https://arxiv.org/abs/2401.08206",
+        "title": "Generative Multi-Modal Knowledge Retrieval with Large Language Models",
+        "rating": 1.5,
+        "keywords": [
+            [
+                "training efficiency"
+            ],
+            [
+                "AAAI"
+            ]
+        ],
+        "abstract": "Knowledge retrieval with multi-modal queries plays a crucial role in supporting knowledge-intensive multi-modal applications. However, existing methods face challenges in terms of their effectiveness and training efficiency, especially when it comes to training and integrating multiple retrievers to handle multi-modal queries. In this paper, we propose an innovative end-to-end generative framework for multi-modal knowledge retrieval. Our framework takes advantage of the fact that large language models (LLMs) can effectively serve as virtual knowledge bases, even when trained with limited data. We retrieve knowledge via a two-step process: 1) generating knowledge clues related to the queries, and 2) obtaining the relevant document by searching databases using the knowledge clue. In particular, we first introduce an object-aware prefix-tuning technique to guide multi-grained visual learning. Then, we align multi-grained visual features into the textual feature space of the LLM, employing the LLM to capture cross-modal interactions. Subsequently, we construct instruction data with a unified format for model training. Finally, we propose the knowledge-guided generation strategy to impose prior constraints in the decoding steps, thereby promoting the generation of distinctive knowledge clues. Through experiments conducted on three benchmarks, we demonstrate significant improvements ranging from 3.0% to 14.6% across all evaluation metrics when compared to strong baselines.",
+        "subjects": [
+            "cs.IR"
+        ],
+        "comment": "Accepted to AAAI 2024"
+    },
+    {
         "paper id": "2401.08268",
         "abstract url": "https://arxiv.org/abs/2401.08268",
         "title": "An Explainable Proxy Model for Multiabel Audio Segmentation",
@@ -266,6 +285,25 @@
         "comment": "ICLR 2024"
     },
     {
+        "paper id": "2401.09486",
+        "abstract url": "https://arxiv.org/abs/2401.09486",
+        "title": "LoMA: Lossless Compressed Memory Attention",
+        "rating": 1.5,
+        "keywords": [
+            [
+                "GPU memory"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Large Language Models (LLMs) face limitations due to the high demand on GPU memory and computational resources when handling long contexts. While sparsify the Key-Value (KV) cache of transformer model is a typical strategy to alleviate resource usage, it unavoidably results in the loss of information. We introduce Lossless Compressed Memory Attention (LoMA), a novel approach that enables lossless compression of the KV cache, thereby reducing the memory and computational demands during autoregressive generation. LoMA incorporates a specialized training or fine-tuning precedure alongside an autoregressive generation algorithm optimized for the compressed context. Our method compresses the KV cache after every $tc$ generated tokens with a compression ratio of $c$ and a target compressed length $t$, and this process occurs within a single inference pass without dependency on auxiliary models. We engineered an efficient training scheme involving specific inputs, attention masks, and position identifiers to instill this compression capability. Experimental validation has demonstrated that LoMA significantly reducing computational consumption and memory usage through achieving lossless KV cache compression.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2401.08154",
         "abstract url": "https://arxiv.org/abs/2401.08154",
         "title": "TLIC: Learned Image Compression with ROI-Weighted Distortion and Bit Allocation",
@@ -280,6 +318,22 @@
             "cs.CV"
         ],
         "comment": "2nd Place in the Image Compression Track, CLIC 2024, DCC 2024"
+    },
+    {
+        "paper id": "2401.08156",
+        "abstract url": "https://arxiv.org/abs/2401.08156",
+        "title": "GMLake: Efficient and Transparent GPU Memory Defragmentation for Large-scale DNN Training with Virtual Memory Stitching",
+        "rating": 1,
+        "keywords": [
+            [
+                "GPU Memory"
+            ]
+        ],
+        "abstract": "Large-scale deep neural networks (DNNs), such as large language models (LLMs), have revolutionized the artificial intelligence (AI) field and become increasingly popular. However, training or fine-tuning such models requires substantial computational power and resources, where the memory capacity of a single acceleration device like a GPU is one of the most important bottlenecks. Owing to the prohibitively large overhead (e.g., $10 \\times$) of GPUs' native memory allocator, DNN frameworks like PyTorch and TensorFlow adopt a caching allocator that maintains a memory pool with a splitting mechanism for fast memory (de)allocation. Unfortunately, the caching allocator's efficiency degrades quickly for popular memory reduction techniques such as recomputation, offloading, distributed training, and low-rank adaptation. The primary reason is that those memory reduction techniques introduce frequent and irregular memory (de)allocation requests, leading to severe fragmentation problems for the splitting-based caching allocator. To mitigate this fragmentation problem, we propose a novel memory allocation framework based on low-level GPU virtual memory management called GPU memory lake (GMLake). GMLake employs a novel virtual memory stitching (VMS) mechanism, which can fuse or combine non-contiguous memory blocks with a virtual memory address mapping. GMLake can reduce an average of 9.2 GB (up to 25 GB) GPU memory usage and 15% (up to 33% ) fragmentation among eight LLM models on GPU A100 with 80 GB memory. GMLake is completely transparent to the DNN models and memory reduction techniques and ensures the seamless execution of resource-intensive deep-learning tasks. We have open-sourced GMLake at https://github.com/intelligent-machine-learning/glake/tree/main/GMLake.",
+        "subjects": [
+            "cs.DC"
+        ],
+        "comment": "Accepted by ASPLOS24"
     },
     {
         "paper id": "2401.08181",
@@ -426,6 +480,41 @@
         "comment": "Under review, 14 pages, 10 figures"
     },
     {
+        "paper id": "2401.08326",
+        "abstract url": "https://arxiv.org/abs/2401.08326",
+        "title": "RoTBench: A Multi-Level Benchmark for Evaluating the Robustness of Large Language Models in Tool Learning",
+        "rating": 1,
+        "keywords": [
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Tool learning has generated widespread interest as a vital means of interaction between Large Language Models (LLMs) and the physical world. Current research predominantly emphasizes LLMs' capacity to utilize tools in well-structured environments while overlooking their stability when confronted with the inevitable noise of the real world. To bridge this gap, we introduce RoTBench, a multi-level benchmark for evaluating the robustness of LLMs in tool learning. Specifically, we establish five external environments, each featuring varying levels of noise (i.e., Clean, Slight, Medium, Heavy, and Union), providing an in-depth analysis of the model's resilience across three critical phases: tool selection, parameter identification, and content filling. Experiments involving six widely-used models underscore the urgent necessity for enhancing the robustness of LLMs in tool learning. For instance, the performance of GPT-4 even drops significantly from 80.00 to 58.10 when there is no substantial change in manual accuracy. More surprisingly, the noise correction capability inherent in the GPT family paradoxically impedes its adaptability in the face of mild noise. In light of these findings, we propose RoTTuning, a strategy that enriches the diversity of training environments to bolster the robustness of LLMs in tool learning. The code and data are available at https://github.com/Junjie-Ye/RoTBench.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2401.08330",
+        "abstract url": "https://arxiv.org/abs/2401.08330",
+        "title": "Boosting Gradient Ascent for Continuous DR-submodular Maximization",
+        "rating": 1.0,
+        "keywords": [
+            [
+                "cs.LG"
+            ],
+            [
+                "ICML"
+            ]
+        ],
+        "abstract": "Projected Gradient Ascent (PGA) is the most commonly used optimization scheme in machine learning and operations research areas. Nevertheless, numerous studies and examples have shown that the PGA methods may fail to achieve the tight approximation ratio for continuous DR-submodular maximization problems. To address this challenge, we present a boosting technique in this paper, which can efficiently improve the approximation guarantee of the standard PGA to \\emph{optimal} with only small modifications on the objective function. The fundamental idea of our boosting technique is to exploit non-oblivious search to derive a novel auxiliary function $F$, whose stationary points are excellent approximations to the global maximum of the original DR-submodular objective $f$. Specifically, when $f$ is monotone and $\u03b3$-weakly DR-submodular, we propose an auxiliary function $F$ whose stationary points can provide a better $(1-e^{-\u03b3})$-approximation than the $(\u03b3^2/(1+\u03b3^2))$-approximation guaranteed by the stationary points of $f$ itself. Similarly, for the non-monotone case, we devise another auxiliary function $F$ whose stationary points can achieve an optimal $\\frac{1-\\min_{\\boldsymbol{x}\\in\\mathcal{C}}\\|\\boldsymbol{x}\\|_{\\infty}}{4}$-approximation guarantee where $\\mathcal{C}$ is a convex constraint set. In contrast, the stationary points of the original non-monotone DR-submodular function can be arbitrarily bad~\\citep{chen2023continuous}. Furthermore, we demonstrate the scalability of our boosting technique on four problems. In all of these four problems, our resulting variants of boosting PGA algorithm beat the previous standard PGA in several aspects such as approximation ratio and efficiency. Finally, we corroborate our theoretical findings with numerical experiments, which demonstrate the effectiveness of our boosting PGA methods.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": "74 pages, 6 figures and 9 tables. An extended version of Stochastic Continuous Submodular Maximization: Boosting via Non-oblivious Function (ICML 2022)"
+    },
+    {
         "paper id": "2401.08332",
         "abstract url": "https://arxiv.org/abs/2401.08332",
         "title": "Generative Denoise Distillation: Simple Stochastic Noises Induce Efficient Knowledge Transfer for Dense Prediction",
@@ -543,14 +632,14 @@
     {
         "paper id": "2401.08392",
         "abstract url": "https://arxiv.org/abs/2401.08392",
-        "title": "DoraemonGPT: Toward Understanding Dynamic Scenes with Large Language Models",
+        "title": "DoraemonGPT: Toward Understanding Dynamic Scenes with Large Language Models (Exemplified as A Video Agent)",
         "rating": 1,
         "keywords": [
             [
                 "cs.CV"
             ]
         ],
-        "abstract": "Recent LLM-driven visual agents mainly focus on solving image-based tasks, which limits their ability to understand dynamic scenes, making it far from real-life applications like guiding students in laboratory experiments and identifying their mistakes. Considering the video modality better reflects the ever-changing nature of real-world scenarios, we devise DoraemonGPT, a comprehensive and conceptually elegant system driven by LLMs to handle dynamic video tasks. Given a video with a question/task, DoraemonGPT begins by converting the input video into a symbolic memory that stores task-related attributes. This structured representation allows for spatial-temporal querying and reasoning by well-designed sub-task tools, resulting in concise intermediate results. Recognizing that LLMs have limited internal knowledge when it comes to specialized domains (e.g., analyzing the scientific principles underlying experiments), we incorporate plug-and-play tools to assess external knowledge and address tasks across different domains. Moreover, a novel LLM-driven planner based on Monte Carlo Tree Search is introduced to explore the large planning space for scheduling various tools. The planner iteratively finds feasible solutions by backpropagating the result's reward, and multiple solutions can be summarized into an improved final answer. We extensively evaluate DoraemonGPT's effectiveness on three benchmarks and challenging in-the-wild scenarios. Code will be released at: https://github.com/z-x-yang/DoraemonGPT.",
+        "abstract": "Recent LLM-driven visual agents mainly focus on solving image-based tasks, which limits their ability to understand dynamic scenes, making it far from real-life applications like guiding students in laboratory experiments and identifying their mistakes. Hence, this paper explores DoraemonGPT, a comprehensive and conceptually elegant system driven by LLMs to understand dynamic scenes. Considering the video modality better reflects the ever-changing nature of real-world scenarios, we exemplify DoraemonGPT as a video agent. Given a video with a question/task, DoraemonGPT begins by converting the input video into a symbolic memory that stores task-related attributes. This structured representation allows for spatial-temporal querying and reasoning by well-designed sub-task tools, resulting in concise intermediate results. Recognizing that LLMs have limited internal knowledge when it comes to specialized domains (e.g., analyzing the scientific principles underlying experiments), we incorporate plug-and-play tools to assess external knowledge and address tasks across different domains. Moreover, a novel LLM-driven planner based on Monte Carlo Tree Search is introduced to explore the large planning space for scheduling various tools. The planner iteratively finds feasible solutions by backpropagating the result's reward, and multiple solutions can be summarized into an improved final answer. We extensively evaluate DoraemonGPT's effectiveness on three benchmarks and several in-the-wild scenarios. The code will be released at https://github.com/z-x-yang/DoraemonGPT.",
         "subjects": [
             "cs.CV"
         ],
@@ -974,6 +1063,7 @@
                 "cs.AI"
             ],
             [
+                "Workshop",
                 "AAAI"
             ]
         ],
@@ -1057,6 +1147,7 @@
                 "cs.LG"
             ],
             [
+                "Workshop",
                 "AAAI"
             ]
         ],
@@ -1246,6 +1337,7 @@
                 "cs.CL"
             ],
             [
+                "Workshop",
                 "AAAI"
             ]
         ],
@@ -1286,22 +1378,6 @@
             "cs.LG"
         ],
         "comment": "To be published at the 2024 IEEE International Symposium on Circuits and Systems (ISCAS), Singapore"
-    },
-    {
-        "paper id": "2401.08330",
-        "abstract url": "https://arxiv.org/abs/2401.08330",
-        "title": "Boosting Gradient Ascent for Continuous DR-submodular Maximization",
-        "rating": 0.5,
-        "keywords": [
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Projected Gradient Ascent (PGA) is the most commonly used optimization scheme in machine learning and operations research areas. Nevertheless, numerous studies and examples have shown that the PGA methods may fail to achieve the tight approximation ratio for continuous DR-submodular maximization problems. To address this challenge, we present a boosting technique in this paper, which can efficiently improve the approximation guarantee of the standard PGA to \\emph{optimal} with only small modifications on the objective function. The fundamental idea of our boosting technique is to exploit non-oblivious search to derive a novel auxiliary function $F$, whose stationary points are excellent approximations to the global maximum of the original DR-submodular objective $f$. Specifically, when $f$ is monotone and $\u03b3$-weakly DR-submodular, we propose an auxiliary function $F$ whose stationary points can provide a better $(1-e^{-\u03b3})$-approximation than the $(\u03b3^2/(1+\u03b3^2))$-approximation guaranteed by the stationary points of $f$ itself. Similarly, for the non-monotone case, we devise another auxiliary function $F$ whose stationary points can achieve an optimal $\\frac{1-\\min_{\\boldsymbol{x}\\in\\mathcal{C}}\\|\\boldsymbol{x}\\|_{\\infty}}{4}$-approximation guarantee where $\\mathcal{C}$ is a convex constraint set. In contrast, the stationary points of the original non-monotone DR-submodular function can be arbitrarily bad~\\citep{chen2023continuous}. Furthermore, we demonstrate the scalability of our boosting technique on four problems. In all of these four problems, our resulting variants of boosting PGA algorithm beat the previous standard PGA in several aspects such as approximation ratio and efficiency. Finally, we corroborate our theoretical findings with numerical experiments, which demonstrate the effectiveness of our boosting PGA methods.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": "74 pages, 6 figures and 9 tables. An extended version of Stochastic Continuous Submodular Maximization: Boosting via Non-oblivious Function (ICML 2022)"
     },
     {
         "paper id": "2401.08348",
@@ -1377,7 +1453,7 @@
                 "cs.LG"
             ]
         ],
-        "abstract": "This paper investigates the distinctions between gradient methods applied to non-differentiable functions (NGDMs) and classical gradient descents (GDs) designed for differentiable functions. First, we demonstrate significant differences in the convergence properties of NGDMs compared to GDs, challenging the applicability of the extensive neural network convergence literature based on $L-smoothness$ to non-smooth neural networks. Next, we demonstrate the paradoxical nature of NGDM solutions for $L_{1}$-regularized problems, showing that increasing the regularization penalty leads to an increase in the $L_{1}$ norm of optimal solutions in NGDMs. Consequently, we show that widely adopted $L_{1}$ penalization-based techniques for network pruning do not yield expected results. Finally, we explore the Edge of Stability phenomenon, indicating its inapplicability even to Lipschitz continuous convex differentiable functions, leaving its relevance to non-convex non-differentiable neural networks inconclusive. Our analysis exposes misguided interpretations of NGDMs in widely referenced papers and texts due to an overreliance on strong smoothness assumptions, emphasizing the necessity for a nuanced understanding of foundational assumptions in the analysis of these systems.",
+        "abstract": "This paper investigates the distinctions between gradient methods applied to non-differentiable functions (NGDMs) and classical gradient descents (GDs) designed for differentiable functions. First, we demonstrate significant differences in the convergence properties of NGDMs compared to GDs, challenging the applicability of the extensive neural network convergence literature based on $L-smoothness$ to non-smooth neural networks. Next, we demonstrate the paradoxical nature of NGDM solutions for $L_{1}$-regularized problems, showing that increasing the regularization penalty leads to an increase in the $L_{1}$ norm of optimal solutions in NGDMs. Consequently, we show that widely adopted $L_{1}$ penalization-based techniques for network pruning do not yield expected results. Additionally, we dispel the common belief that optimization algorithms like Adam and RMSProp perform similarly in non-differentiable contexts. Finally, we explore the Edge of Stability phenomenon, indicating its inapplicability even to Lipschitz continuous convex differentiable functions, leaving its relevance to non-convex non-differentiable neural networks inconclusive. Our analysis exposes misguided interpretations of NGDMs in widely referenced papers and texts due to an overreliance on strong smoothness assumptions, emphasizing the necessity for a nuanced understanding of foundational assumptions in the analysis of these systems.",
         "subjects": [
             "cs.LG"
         ],
@@ -1566,7 +1642,8 @@
         "rating": 0.5,
         "keywords": [
             [
-                "3D"
+                "3D",
+                "Skeleton"
             ],
             [
                 "cs.CV"
@@ -1614,7 +1691,7 @@
                 "cs.SI"
             ]
         ],
-        "abstract": "We explore the social and contextual factors that influence the outcome of person-to-person music recommendations and discovery. Specifically, we use data from Spotify to investigate how a link sent from one user to another results in the receiver engaging with the music of the shared artist. We consider several factors that may influence this process, such as the strength of the sender-receiver relationship, the user's role in the Spotify social network, their music social cohesion, and how similar the new artist is to the receiver's taste. We find that the receiver of a link is more likely to engage with a new artist when (1) they have similar music taste to the sender and the shared track is a good fit for their taste, (2) they have a stronger and more intimate tie with the sender, and (3) the shared artist is popular with the receiver's connections. Finally, we use these findings to build a Random Forest classifier to predict whether a shared music track will result in the receiver's engagement with the shared artist. This model elucidates which type of social and contextual features are most predictive, although peak performance is achieved when a diverse set of features are included. These findings provide new insights into the multifaceted mechanisms underpinning the interplay between music discovery and social processes.",
+        "abstract": "We explore the social and contextual factors that influence the outcome of person-to-person music recommendations and discovery. Specifically, we use data from Spotify to investigate how a link sent from one user to another results in the receiver engaging with the music of the shared artist. We consider several factors that may influence this process, such as the strength of the sender-receiver relationship, the user's role in the Spotify social network, their music social cohesion, and how similar the new artist is to the receiver's taste. We find that the receiver of a link is more likely to engage with a new artist when (1) they have similar music taste to the sender and the shared track is a good fit for their taste, (2) they have a stronger and more intimate tie with the sender, and (3) the shared artist is popular amongst the receiver's connections. Finally, we use these findings to build a Random Forest classifier to predict whether a shared music track will result in the receiver's engagement with the shared artist. This model elucidates which type of social and contextual features are most predictive, although peak performance is achieved when a diverse set of features are included. These findings provide new insights into the multifaceted mechanisms underpinning the interplay between music discovery and social processes.",
         "subjects": [
             "cs.SI"
         ],
@@ -1635,22 +1712,6 @@
             "cs.LG"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2401.08851",
-        "abstract url": "https://arxiv.org/abs/2401.08851",
-        "title": "Using i-vectors for subject-independent cross-session EEG transfer learning",
-        "rating": 0.5,
-        "keywords": [
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Cognitive load classification is the task of automatically determining an individual's utilization of working memory resources during performance of a task based on physiologic measures such as electroencephalography (EEG). In this paper, we follow a cross-disciplinary approach, where tools and methodologies from speech processing are used to tackle this problem. The corpus we use was released publicly in 2021 as part of the first passive brain-computer interface competition on cross-session workload estimation. We present our approach which used i-vector-based neural network classifiers to accomplish inter-subject cross-session EEG transfer learning, achieving 18% relative improvement over equivalent subject-dependent models. We also report experiments showing how our subject-independent models perform competitively on held-out subjects and improve with additional subject data, suggesting that subject-dependent training is not required for effective cognitive load determination.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": "11 pages"
     },
     {
         "paper id": "2401.08863",
@@ -1701,6 +1762,22 @@
         "comment": "9 pages, 9 figures"
     },
     {
+        "paper id": "2401.08878",
+        "abstract url": "https://arxiv.org/abs/2401.08878",
+        "title": "A Survey on Hypergraph Mining: Patterns, Tools, and Generators",
+        "rating": 0.5,
+        "keywords": [
+            [
+                "cs.SI"
+            ]
+        ],
+        "abstract": "Hypergraphs are a natural and powerful choice for modeling group interactions in the real world, which are often referred to as higher-order networks. For example, when modeling collaboration networks, where collaborations can involve not just two but three or more people, employing hypergraphs allows us to explore beyond pairwise (dyadic) patterns and capture groupwise (polyadic) patterns. The mathematical complexity of hypergraphs offers both opportunities and challenges for learning and mining on hypergraphs, and hypergraph mining, which seeks to enhance our understanding of underlying systems through hypergraph modeling, gained increasing attention in research. Researchers have discovered various structural patterns in real-world hypergraphs, leading to the development of mining tools. Moreover, they have designed generators with the aim of reproducing and thereby shedding light on these patterns. In this survey, we provide a comprehensive overview of the current landscape of hypergraph mining, covering patterns, tools, and generators. We provide comprehensive taxonomies for them, and we also provide in-depth discussions to provide insights into future research on hypergraph mining.",
+        "subjects": [
+            "cs.SI"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2401.08879",
         "abstract url": "https://arxiv.org/abs/2401.08879",
         "title": "Contribution Functions for Quantitative Bipolar Argumentation Graphs: A Principle-based Analysis",
@@ -1745,6 +1822,38 @@
         "abstract": "The input data pipeline is an essential component of each machine learning (ML) training job. It is responsible for reading massive amounts of training data, processing batches of samples using complex transformations, and loading them onto training nodes at low latency and high throughput. Performant input data systems are becoming increasingly critical, driven by skyrocketing data volumes and training throughput demands. Unfortunately, current input data systems cannot fully leverage key performance optimizations, resulting in hugely inefficient infrastructures that require significant resources -- or worse -- underutilize expensive accelerators. To address these demands, we present cedar, a programming model and framework that allows users to easily build, optimize, and execute input data pipelines. cedar presents an easy-to-use programming interface, allowing users to define input data pipelines using composable operators that support arbitrary ML frameworks and libraries. Meanwhile, cedar transparently applies a complex and extensible set of optimization techniques (e.g., offloading, caching, prefetching, fusion, and reordering). It then orchestrates processing across a customizable set of local and distributed compute resources in order to maximize processing performance and efficiency, all without user input. On average across six diverse input data pipelines, cedar achieves a 2.49x, 1.87x, 2.18x, and 2.74x higher performance compared to tf.data, tf.data service, Ray Data, and PyTorch's DataLoader, respectively.",
         "subjects": [
             "cs.LG"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2401.08897",
+        "abstract url": "https://arxiv.org/abs/2401.08897",
+        "title": "CFASL: Composite Factor-Aligned Symmetry Learning for Disentanglement in Variational AutoEncoder",
+        "rating": 0.5,
+        "keywords": [
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Symmetries of input and latent vectors have provided valuable insights for disentanglement learning in VAEs.However, only a few works were proposed as an unsupervised method, and even these works require known factor information in training data. We propose a novel method, Composite Factor-Aligned Symmetry Learning (CFASL), which is integrated into VAEs for learning symmetry-based disentanglement in unsupervised learning without any knowledge of the dataset factor information.CFASL incorporates three novel features for learning symmetry-based disentanglement: 1) Injecting inductive bias to align latent vector dimensions to factor-aligned symmetries within an explicit learnable symmetry codebook 2) Learning a composite symmetry to express unknown factors change between two random samples by learning factor-aligned symmetries within the codebook 3) Inducing group equivariant encoder and decoder in training VAEs with the two conditions. In addition, we propose an extended evaluation metric for multi-factor changes in comparison to disentanglement evaluation in VAEs. In quantitative and in-depth qualitative analysis, CFASL demonstrates a significant improvement of disentanglement in single-factor change, and multi-factor change conditions compared to state-of-the-art methods.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": "21 pages, 14 figures"
+    },
+    {
+        "paper id": "2401.08899",
+        "abstract url": "https://arxiv.org/abs/2401.08899",
+        "title": "Landscape of Generative AI in Global News: Topics, Sentiments, and Spatiotemporal Analysis",
+        "rating": 0.5,
+        "keywords": [
+            [
+                "cs.CY"
+            ]
+        ],
+        "abstract": "Generative AI has exhibited considerable potential to transform various industries and public life. The role of news media coverage of generative AI is pivotal in shaping public perceptions and judgments about this significant technological innovation. This paper provides in-depth analysis and rich insights into the temporal and spatial distribution of topics, sentiment, and substantive themes within global news coverage focusing on the latest emerging technology --generative AI. We collected a comprehensive dataset of news articles (January 2018 to November 2023, N = 24,827). For topic modeling, we employed the BERTopic technique and combined it with qualitative coding to identify semantic themes. Subsequently, sentiment analysis was conducted using the RoBERTa-base model. Analysis of temporal patterns in the data reveals notable variability in coverage across key topics--business, corporate technological development, regulation and security, and education--with spikes in articles coinciding with major AI developments and policy discussions. Sentiment analysis shows a predominantly neutral to positive media stance, with the business-related articles exhibiting more positive sentiment, while regulation and security articles receive a reserved, neutral to negative sentiment. Our study offers a valuable framework to investigate global news discourse and evaluate news attitudes and themes related to emerging technologies.",
+        "subjects": [
+            "cs.CY"
         ],
         "comment": null
     },
@@ -1956,7 +2065,8 @@
             [
                 "Medical",
                 "diagnosis",
-                "pathological"
+                "pathological",
+                "radiology"
             ],
             [
                 "eess.IV"
@@ -2094,25 +2204,6 @@
         "comment": "Published at ICLR 2024"
     },
     {
-        "paper id": "2401.08573",
-        "abstract url": "https://arxiv.org/abs/2401.08573",
-        "title": "Benchmarking the Robustness of Image Watermarks",
-        "rating": 0,
-        "keywords": [
-            [
-                "attacks"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "This paper investigates the weaknesses of image watermarking techniques. We present WAVES (Watermark Analysis Via Enhanced Stress-testing), a novel benchmark for assessing watermark robustness, overcoming the limitations of current evaluation methods.WAVES integrates detection and identification tasks, and establishes a standardized evaluation protocol comprised of a diverse range of stress tests. The attacks in WAVES range from traditional image distortions to advanced and novel variations of diffusive, and adversarial attacks. Our evaluation examines two pivotal dimensions: the degree of image quality degradation and the efficacy of watermark detection after attacks. We develop a series of Performance vs. Quality 2D plots, varying over several prominent image similarity metrics, which are then aggregated in a heuristically novel manner to paint an overall picture of watermark robustness and attack potency. Our comprehensive evaluation reveals previously undetected vulnerabilities of several modern watermarking algorithms. We envision WAVES as a toolkit for the future development of robust watermarking systems. The project is available at https://wavesbench.github.io/",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2401.08720",
         "abstract url": "https://arxiv.org/abs/2401.08720",
         "title": "Unsupervised Pre-Training for 3D Leaf Instance Segmentation",
@@ -2211,26 +2302,23 @@
         "comment": null
     },
     {
-        "paper id": "2401.08117",
-        "abstract url": "https://arxiv.org/abs/2401.08117",
-        "title": "E2HQV: High-Quality Video Generation from Event Camera via Theory-Inspired Model-Aided Deep Learning",
-        "rating": -0.5,
+        "paper id": "2401.08903",
+        "abstract url": "https://arxiv.org/abs/2401.08903",
+        "title": "Rethinking Impersonation and Dodging Attacks on Face Recognition Systems",
+        "rating": 0,
         "keywords": [
             [
-                "bio-inspired"
+                "Attacks"
             ],
             [
                 "cs.CV"
-            ],
-            [
-                "AAAI"
             ]
         ],
-        "abstract": "The bio-inspired event cameras or dynamic vision sensors are capable of asynchronously capturing per-pixel brightness changes (called event-streams) in high temporal resolution and high dynamic range. However, the non-structural spatial-temporal event-streams make it challenging for providing intuitive visualization with rich semantic information for human vision. It calls for events-to-video (E2V) solutions which take event-streams as input and generate high quality video frames for intuitive visualization. However, current solutions are predominantly data-driven without considering the prior knowledge of the underlying statistics relating event-streams and video frames. It highly relies on the non-linearity and generalization capability of the deep neural networks, thus, is struggling on reconstructing detailed textures when the scenes are complex. In this work, we propose \\textbf{E2HQV}, a novel E2V paradigm designed to produce high-quality video frames from events. This approach leverages a model-aided deep learning framework, underpinned by a theory-inspired E2V model, which is meticulously derived from the fundamental imaging principles of event cameras. To deal with the issue of state-reset in the recurrent components of E2HQV, we also design a temporal shift embedding module to further improve the quality of the video frames. Comprehensive evaluations on the real world event camera datasets validate our approach, with E2HQV, notably outperforming state-of-the-art approaches, e.g., surpassing the second best by over 40\\% for some evaluation metrics.",
+        "abstract": "Face Recognition (FR) systems can be easily deceived by adversarial examples that manipulate benign face images through imperceptible perturbations. Adversarial attacks on FR encompass two types: impersonation (targeted) attacks and dodging (untargeted) attacks. Previous methods often achieve a successful impersonation attack on FR; However, it does not necessarily guarantee a successful dodging attack on FR in the black-box setting. In this paper, our key insight is that the generation of adversarial examples should perform both impersonation and dodging attacks simultaneously. To this end, we propose a novel attack method termed as Adversarial Pruning (Adv-Pruning), to fine-tune existing adversarial examples to enhance their dodging capabilities while preserving their impersonation capabilities. Adv-Pruning consists of Priming, Pruning, and Restoration stages. Concretely, we propose Adversarial Priority Quantification to measure the region-wise priority of original adversarial perturbations, identifying and releasing those with minimal impact on absolute model output variances. Then, Biased Gradient Adaptation is presented to adapt the adversarial examples to traverse the decision boundaries of both the attacker and victim by adding perturbations favoring dodging attacks on the vacated regions, preserving the prioritized features of the original perturbations while boosting dodging performance. As a result, we can maintain the impersonation capabilities of original adversarial examples while effectively enhancing dodging capabilities. Comprehensive experiments demonstrate the superiority of our method compared with state-of-the-art adversarial attacks.",
         "subjects": [
             "cs.CV"
         ],
-        "comment": "Accepted in AAAI2024"
+        "comment": null
     },
     {
         "paper id": "2401.08147",
@@ -2269,28 +2357,6 @@
             "cs.SI"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2401.08206",
-        "abstract url": "https://arxiv.org/abs/2401.08206",
-        "title": "Generative Multi-Modal Knowledge Retrieval with Large Language Models",
-        "rating": -0.5,
-        "keywords": [
-            [
-                "training efficiency"
-            ],
-            [
-                "face"
-            ],
-            [
-                "AAAI"
-            ]
-        ],
-        "abstract": "Knowledge retrieval with multi-modal queries plays a crucial role in supporting knowledge-intensive multi-modal applications. However, existing methods face challenges in terms of their effectiveness and training efficiency, especially when it comes to training and integrating multiple retrievers to handle multi-modal queries. In this paper, we propose an innovative end-to-end generative framework for multi-modal knowledge retrieval. Our framework takes advantage of the fact that large language models (LLMs) can effectively serve as virtual knowledge bases, even when trained with limited data. We retrieve knowledge via a two-step process: 1) generating knowledge clues related to the queries, and 2) obtaining the relevant document by searching databases using the knowledge clue. In particular, we first introduce an object-aware prefix-tuning technique to guide multi-grained visual learning. Then, we align multi-grained visual features into the textual feature space of the LLM, employing the LLM to capture cross-modal interactions. Subsequently, we construct instruction data with a unified format for model training. Finally, we propose the knowledge-guided generation strategy to impose prior constraints in the decoding steps, thereby promoting the generation of distinctive knowledge clues. Through experiments conducted on three benchmarks, we demonstrate significant improvements ranging from 3.0% to 14.6% across all evaluation metrics when compared to strong baselines.",
-        "subjects": [
-            "cs.IR"
-        ],
-        "comment": "Accepted to AAAI 2024"
     },
     {
         "paper id": "2401.08351",
@@ -2353,26 +2419,47 @@
         "comment": null
     },
     {
-        "paper id": "2401.08495",
-        "abstract url": "https://arxiv.org/abs/2401.08495",
-        "title": "The Effect of Group Status on the Variability of Group Representations in LLM-generated Text",
+        "paper id": "2401.08476",
+        "abstract url": "https://arxiv.org/abs/2401.08476",
+        "title": "Incentivizing Secure Software Development: The Role of Liability (Waiver) and Audit",
         "rating": -0.5,
         "keywords": [
             [
-                "psychological"
-            ],
-            [
-                "cs.CL"
-            ],
-            [
-                "NeurIPS"
+                "Workshop"
             ]
         ],
-        "abstract": "Large Language Models (LLMs) have become pervasive in everyday life, yet their inner workings remain opaque. While scholarly efforts have demonstrated LLMs' propensity to reproduce biases in their training data, they have primarily focused on the association of social groups with stereotypic attributes. In this paper, we extend this line of inquiry to investigate a bias akin to the social-psychological phenomenon where socially dominant groups are perceived to be less homogeneous than socially subordinate groups as it is reproduced by LLMs. We had ChatGPT, a state-of-the-art LLM, generate a diversity of texts about intersectional group identities and compared text homogeneity. We consistently find that LLMs portray African, Asian, and Hispanic Americans as more homogeneous than White Americans. They also portray women as more homogeneous than men, but these differences are small. Finally, we find that the effect of gender differs across racial/ethnic groups such that the effect of gender is consistent within African and Hispanic Americans but not within Asian and White Americans. We speculate possible sources of this bias in LLMs and posit that the bias has the potential to amplify biases in future LLM training and to reinforce stereotypes.",
+        "abstract": "Misaligned incentives in secure software development have long been the focus of research in the economics of security. Product liability, a powerful legal framework in other industries, has been largely ineffective for software products until recent times. However, the rapid regulatory responses to recent global cyberattacks by both the United States and the European Union, together with the (relative) success of the General Data Protection Regulation in defining both duty and standard of care for software vendors, may just enable regulators to use liability to re-align incentives for the benefit of the digital society. Specifically, the recently proposed United States National Cybersecurity Strategy shifts responsibility for cyber incidents back to software vendors. In doing so, the strategy also puts forward the concept of the liability waiver: if a software company voluntarily undergoes and passes an IT security audit, its liability is waived. In this paper, we analyze this audit scenario from the aspect of the software vendor. We propose a mechanism where a software vendor should first undergo a repeated auditing process in each stage of which the vendor decides whether to quit early or stay with additional security investment. We show that the optimal strategy for an opt-in vendor is to never quit; and exert cumulative investments in either \"one-and-done\" or \"incremental\" manner. We relate the audit mechanism to a liability waiver insurance policy and revealed its effect on reshaping the vendor's risk perception. We also discuss influence of audit quality on the vendor's incentives and pinpoint that a desirable audit rule should be highly accurate and less strict.",
         "subjects": [
-            "cs.CL"
+            "cs.CR"
         ],
-        "comment": "Presented at the Socially Responsible Language Modelling Research (SoLaR) Workshop at NeurIPS 2023"
+        "comment": "21 pages, 6 figures, submitted to the 23rd Workshop on the Economics of Information Security"
+    },
+    {
+        "paper id": "2401.08503",
+        "abstract url": "https://arxiv.org/abs/2401.08503",
+        "title": "Real3D-Portrait: One-shot Realistic 3D Talking Portrait Synthesis",
+        "rating": -0.5,
+        "keywords": [
+            [
+                "3D",
+                "avatar"
+            ],
+            [
+                "Synthesis",
+                "super-resolution"
+            ],
+            [
+                "cs.CV"
+            ],
+            [
+                "ICLR"
+            ]
+        ],
+        "abstract": "One-shot 3D talking portrait generation aims to reconstruct a 3D avatar from an unseen image, and then animate it with a reference video or audio to generate a talking portrait video. The existing methods fail to simultaneously achieve the goals of accurate 3D avatar reconstruction and stable talking face animation. Besides, while the existing works mainly focus on synthesizing the head part, it is also vital to generate natural torso and background segments to obtain a realistic talking portrait video. To address these limitations, we present Real3D-Potrait, a framework that (1) improves the one-shot 3D reconstruction power with a large image-to-plane model that distills 3D prior knowledge from a 3D face generative model; (2) facilitates accurate motion-conditioned animation with an efficient motion adapter; (3) synthesizes realistic video with natural torso movement and switchable background using a head-torso-background super-resolution model; and (4) supports one-shot audio-driven talking face generation with a generalizable audio-to-motion model. Extensive experiments show that Real3D-Portrait generalizes well to unseen identities and generates more realistic talking portrait videos compared to previous methods. Video samples and source code are available at https://real3dportrait.github.io .",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "ICLR 2024 (Spotlight). Project page: https://real3dportrait.github.io"
     },
     {
         "paper id": "2401.08525",
@@ -2438,25 +2525,6 @@
         "comment": "This work is intended to be inclusive, fostering collaboration rather than competition in this social activity. For this reason, we invite researchers to contribute with comments and suggestions that will be included (and acknowledged) in any future versions of this work"
     },
     {
-        "paper id": "2401.08878",
-        "abstract url": "https://arxiv.org/abs/2401.08878",
-        "title": "A Survey on Hypergraph Mining: Patterns, Tools, and Generators",
-        "rating": -0.5,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "cs.SI"
-            ]
-        ],
-        "abstract": "Hypergraphs are a natural and powerful choice for modeling group interactions in the real world, which are often referred to as higher-order networks. For example, when modeling collaboration networks, where collaborations can involve not just two but three or more people, employing hypergraphs allows us to explore beyond pairwise (dyadic) patterns and capture groupwise (polyadic) patterns. The mathematical complexity of hypergraphs offers both opportunities and challenges for learning and mining on hypergraphs, and hypergraph mining, which seeks to enhance our understanding of underlying systems through hypergraph modeling, gained increasing attention in research. Researchers have discovered various structural patterns in real-world hypergraphs, leading to the development of mining tools. Moreover, they have designed generators with the aim of reproducing and thereby shedding light on these patterns. In this survey, we provide a comprehensive overview of the current landscape of hypergraph mining, covering patterns, tools, and generators. We provide comprehensive taxonomies for them, and we also provide in-depth discussions to provide insights into future research on hypergraph mining.",
-        "subjects": [
-            "cs.SI"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2401.08889",
         "abstract url": "https://arxiv.org/abs/2401.08889",
         "title": "On the Effect of Data-Augmentation on Local Embedding Properties in the Contrastive Learning of Music Audio Representations",
@@ -2477,44 +2545,6 @@
             "cs.SD"
         ],
         "comment": "Accepted to the International Conference on Acoustics, Speech and Signal Processing (ICASSP) 2024"
-    },
-    {
-        "paper id": "2401.08897",
-        "abstract url": "https://arxiv.org/abs/2401.08897",
-        "title": "CFASL: Composite Factor-Aligned Symmetry Learning for Disentanglement in Variational AutoEncoder",
-        "rating": -0.5,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Symmetries of input and latent vectors have provided valuable insights for disentanglement learning in VAEs.However, only a few works were proposed as an unsupervised method, and even these works require known factor information in training data. We propose a novel method, Composite Factor-Aligned Symmetry Learning (CFASL), which is integrated into VAEs for learning symmetry-based disentanglement in unsupervised learning without any knowledge of the dataset factor information.CFASL incorporates three novel features for learning symmetry-based disentanglement: 1) Injecting inductive bias to align latent vector dimensions to factor-aligned symmetries within an explicit learnable symmetry codebook 2) Learning a composite symmetry to express unknown factors change between two random samples by learning factor-aligned symmetries within the codebook 3) Inducing group equivariant encoder and decoder in training VAEs with the two conditions. In addition, we propose an extended evaluation metric for multi-factor changes in comparison to disentanglement evaluation in VAEs. In quantitative and in-depth qualitative analysis, CFASL demonstrates a significant improvement of disentanglement in single-factor change, and multi-factor change conditions compared to state-of-the-art methods.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": "21 pages, 14 figures"
-    },
-    {
-        "paper id": "2401.08899",
-        "abstract url": "https://arxiv.org/abs/2401.08899",
-        "title": "Landscape of Generative AI in Global News: Topics, Sentiments, and Spatiotemporal Analysis",
-        "rating": -0.5,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "cs.CY"
-            ]
-        ],
-        "abstract": "Generative AI has exhibited considerable potential to transform various industries and public life. The role of news media coverage of generative AI is pivotal in shaping public perceptions and judgments about this significant technological innovation. This paper provides in-depth analysis and rich insights into the temporal and spatial distribution of topics, sentiment, and substantive themes within global news coverage focusing on the latest emerging technology --generative AI. We collected a comprehensive dataset of news articles (January 2018 to November 2023, N = 24,827). For topic modeling, we employed the BERTopic technique and combined it with qualitative coding to identify semantic themes. Subsequently, sentiment analysis was conducted using the RoBERTa-base model. Analysis of temporal patterns in the data reveals notable variability in coverage across key topics--business, corporate technological development, regulation and security, and education--with spikes in articles coinciding with major AI developments and policy discussions. Sentiment analysis shows a predominantly neutral to positive media stance, with the business-related articles exhibiting more positive sentiment, while regulation and security articles receive a reserved, neutral to negative sentiment. Our study offers a valuable framework to investigate global news discourse and evaluate news attitudes and themes related to emerging technologies.",
-        "subjects": [
-            "cs.CY"
-        ],
-        "comment": null
     },
     {
         "paper id": "2401.08902",
@@ -2624,6 +2654,30 @@
         "comment": null
     },
     {
+        "paper id": "2401.08140",
+        "abstract url": "https://arxiv.org/abs/2401.08140",
+        "title": "ProvNeRF: Modeling per Point Provenance in NeRFs as a Stochastic Process",
+        "rating": -1,
+        "keywords": [
+            [
+                "3D",
+                "NeRF",
+                "radiance fields"
+            ],
+            [
+                "synthesis"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Neural radiance fields (NeRFs) have gained popularity across various applications. However, they face challenges in the sparse view setting, lacking sufficient constraints from volume rendering. Reconstructing and understanding a 3D scene from sparse and unconstrained cameras is a long-standing problem in classical computer vision with diverse applications. While recent works have explored NeRFs in sparse, unconstrained view scenarios, their focus has been primarily on enhancing reconstruction and novel view synthesis. Our approach takes a broader perspective by posing the question: \"from where has each point been seen?\" -- which gates how well we can understand and reconstruct it. In other words, we aim to determine the origin or provenance of each 3D point and its associated information under sparse, unconstrained views. We introduce ProvNeRF, a model that enriches a traditional NeRF representation by incorporating per-point provenance, modeling likely source locations for each point. We achieve this by extending implicit maximum likelihood estimation (IMLE) for stochastic processes. Notably, our method is compatible with any pre-trained NeRF model and the associated training camera poses. We demonstrate that modeling per-point provenance offers several advantages, including uncertainty estimation, criteria-based view selection, and improved novel view synthesis, compared to state-of-the-art methods. Please visit our project page at https://provnerf.github.io",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2401.08161",
         "abstract url": "https://arxiv.org/abs/2401.08161",
         "title": "Graph Structure of an Inversive Pseudorandom Number Generator over Ring $\\mathbb{Z}_{p^{e}}$",
@@ -2724,22 +2778,6 @@
         "comment": null
     },
     {
-        "paper id": "2401.08261",
-        "abstract url": "https://arxiv.org/abs/2401.08261",
-        "title": "Probabilistically Robust Watermarking of Neural Networks",
-        "rating": -1,
-        "keywords": [
-            [
-                "attacks"
-            ]
-        ],
-        "abstract": "As deep learning (DL) models are widely and effectively used in Machine Learning as a Service (MLaaS) platforms, there is a rapidly growing interest in DL watermarking techniques that can be used to confirm the ownership of a particular model. Unfortunately, these methods usually produce watermarks susceptible to model stealing attacks. In our research, we introduce a novel trigger set-based watermarking approach that demonstrates resilience against functionality stealing attacks, particularly those involving extraction and distillation. Our approach does not require additional model training and can be applied to any model architecture. The key idea of our method is to compute the trigger set, which is transferable between the source model and the set of proxy models with a high probability. In our experimental study, we show that if the probability of the set being transferable is reasonably high, it can be effectively used for ownership verification of the stolen model. We evaluate our method on multiple benchmarks and show that our approach outperforms current state-of-the-art watermarking techniques in all considered experimental setups.",
-        "subjects": [
-            "cs.CR"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2401.08272",
         "abstract url": "https://arxiv.org/abs/2401.08272",
         "title": "Siamese Content-based Search Engine for a More Transparent Skin and Breast Cancer Diagnosis through Histological Imaging",
@@ -2758,6 +2796,29 @@
             "cs.CV"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2401.08275",
+        "abstract url": "https://arxiv.org/abs/2401.08275",
+        "title": "Modeling Spoof Noise by De-spoofing Diffusion and its Application in Face Anti-spoofing",
+        "rating": -1,
+        "keywords": [
+            [
+                "Diffusion",
+                "GAN"
+            ],
+            [
+                "attacks"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Face anti-spoofing is crucial for ensuring the security and reliability of face recognition systems. Several existing face anti-spoofing methods utilize GAN-like networks to detect presentation attacks by estimating the noise pattern of a spoof image and recovering the corresponding genuine image. But GAN's limited face appearance space results in the denoised faces cannot cover the full data distribution of genuine faces, thereby undermining the generalization performance of such methods. In this work, we present a pioneering attempt to employ diffusion models to denoise a spoof image and restore the genuine image. The difference between these two images is considered as the spoof noise, which can serve as a discriminative cue for face anti-spoofing. We evaluate our proposed method on several intra-testing and inter-testing protocols, where the experimental results showcase the effectiveness of our method in achieving competitive performance in terms of both accuracy and generalization.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Accepted by IJCB2023"
     },
     {
         "paper id": "2401.08282",
@@ -2828,6 +2889,26 @@
         "comment": "45 pages"
     },
     {
+        "paper id": "2401.08396",
+        "abstract url": "https://arxiv.org/abs/2401.08396",
+        "title": "Hidden Flaws Behind Expert-Level Accuracy of GPT-4 Vision in Medicine",
+        "rating": -1,
+        "keywords": [
+            [
+                "medical",
+                "clinical"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Recent studies indicate that Generative Pre-trained Transformer 4 with Vision (GPT-4V) outperforms human physicians in medical challenge tasks. However, these evaluations primarily focused on the accuracy of multi-choice questions alone. Our study extends the current scope by conducting a comprehensive analysis of GPT-4V's rationales of image comprehension, recall of medical knowledge, and step-by-step multimodal reasoning when solving New England Journal of Medicine (NEJM) Image Challenges - an imaging quiz designed to test the knowledge and diagnostic capabilities of medical professionals. Evaluation results confirmed that GPT-4V performs comparatively to human physicians regarding multi-choice accuracy (81.6% vs. 77.8%). GPT-4V also performs well in cases where physicians incorrectly answer, with over 78% accuracy. However, we discovered that GPT-4V frequently presents flawed rationales in cases where it makes the correct final choices (35.5%), most prominent in image comprehension (27.2%). Regardless of GPT-4V's high accuracy in multi-choice questions, our findings emphasize the necessity for further in-depth evaluations of its rationales before integrating such multimodal AI models into clinical workflows.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Under review"
+    },
+    {
         "paper id": "2401.08420",
         "abstract url": "https://arxiv.org/abs/2401.08420",
         "title": "Ask the experts: sourcing high-quality datasets for nutritional counselling through Human-AI collaboration",
@@ -2877,6 +2958,25 @@
             "cs.RO"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2401.08495",
+        "abstract url": "https://arxiv.org/abs/2401.08495",
+        "title": "Large Language Models Portray Socially Subordinate Groups as More Homogeneous, Consistent with a Bias Observed in Humans",
+        "rating": -1,
+        "keywords": [
+            [
+                "psychological"
+            ],
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Large language models (LLMs) are becoming pervasive in everyday life, yet their propensity to reproduce biases inherited from training data remains a pressing concern. Prior investigations into bias in LLMs have focused on the association of social groups with stereotypical attributes. However, this is only one form of human bias such systems may reproduce. We investigate a new form of bias in LLMs that resembles a social psychological phenomenon where socially subordinate groups are perceived as more homogeneous than socially dominant groups. We had ChatGPT, a state-of-the-art LLM, generate texts about intersectional group identities and compared those texts on measures of homogeneity. We consistently found that ChatGPT portrayed African, Asian, and Hispanic Americans as more homogeneous than White Americans, indicating that the model described racial minority groups with a narrower range of human experience. ChatGPT also portrayed women as more homogeneous than men, but these differences were small. Finally, we found that the effect of gender differed across racial/ethnic groups such that the effect of gender was consistent within African and Hispanic Americans but not within Asian and White Americans. We argue that the tendency of LLMs to describe groups as less diverse risks perpetuating stereotypes and discriminatory behavior.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": "Forthcoming at ACM Conference on Fairness, Accountability, and Transparency (FAccT) 2024"
     },
     {
         "paper id": "2401.08497",
@@ -3250,7 +3350,7 @@
                 "Attacks"
             ]
         ],
-        "abstract": "Physical side-channel attacks can compromise the security of integrated circuits. Most of the physical side-channel attacks (e.g., power or electromagnetic) exploit the dynamic behavior of a chip, typically manifesting as changes in current consumption or voltage fluctuations where algorithmic countermeasures, such as masking, can effectively mitigate the attacks. However, as demonstrated recently, these mitigation techniques are not entirely effective against backscattered side-channel attacks such as impedance analysis. In the case of an impedance attack, an adversary exploits the data-dependent impedance variations of chip power delivery network (PDN) to extract secret information. In this work, we introduce RandOhm, which exploits moving target defense (MTD) strategy based on partial reconfiguration of mainstream FPGAs, to defend against impedance side-channel attacks. We demonstrate that the information leakage through the PDN impedance could be reduced via run-time reconfiguration of the secret-sensitive parts of the circuitry. Hence, by constantly randomizing the placement and routing of the circuit, one can decorrelate the data-dependent computation from the impedance value. To validate our claims, we present a systematic approach equipped with two different partial reconfiguration strategies on implementations of the AES cipher realized on 28-nm FPGAs. We investigate the overhead of our mitigation in terms of delay and performance and provide security analysis by performing non-profiled and profiled impedance analysis attacks against these implementations to demonstrate the resiliency of our approach.",
+        "abstract": "Physical side-channel attacks can compromise the security of integrated circuits. Most physical side-channel attacks (e.g., power or electromagnetic) exploit the dynamic behavior of a chip, typically manifesting as changes in current consumption or voltage fluctuations where algorithmic countermeasures, such as masking, can effectively mitigate them. However, as demonstrated recently, these mitigation techniques are not entirely effective against backscattered side-channel attacks such as impedance analysis. In the case of an impedance attack, an adversary exploits the data-dependent impedance variations of the chip power delivery network (PDN) to extract secret information. In this work, we introduce RandOhm, which exploits a moving target defense (MTD) strategy based on the partial reconfiguration (PR) feature of mainstream FPGAs and programmable SoCs to defend against impedance side-channel attacks. We demonstrate that the information leakage through the PDN impedance could be significantly reduced via runtime reconfiguration of the secret-sensitive parts of the circuitry. Hence, by constantly randomizing the placement and routing of the circuit, one can decorrelate the data-dependent computation from the impedance value. Moreover, in contrast to existing PR-based countermeasures, RandOhm deploys open-source bitstream manipulation tools on programmable SoCs to speed up the randomization and provide real-time protection. To validate our claims, we apply RandOhm to AES ciphers realized on 28-nm FPGAs. We analyze the resiliency of our approach by performing non-profiled and profiled impedance analysis attacks and investigate the overhead of our mitigation in terms of delay and performance.",
         "subjects": [
             "cs.CR"
         ],
@@ -3423,6 +3523,23 @@
         "comment": "10 pages, 8 figures"
     },
     {
+        "paper id": "2401.10934",
+        "abstract url": "https://arxiv.org/abs/2401.10934",
+        "title": "A New Creative Generation Pipeline for Click-Through Rate with Stable Diffusion Model",
+        "rating": -1,
+        "keywords": [
+            [
+                "Diffusion",
+                "inpainting"
+            ]
+        ],
+        "abstract": "In online advertising scenario, sellers often create multiple creatives to provide comprehensive demonstrations, making it essential to present the most appealing design to maximize the Click-Through Rate (CTR). However, sellers generally struggle to consider users preferences for creative design, leading to the relatively lower aesthetics and quantities compared to Artificial Intelligence (AI)-based approaches. Traditional AI-based approaches still face the same problem of not considering user information while having limited aesthetic knowledge from designers. In fact that fusing the user information, the generated creatives can be more attractive because different users may have different preferences. To optimize the results, the generated creatives in traditional methods are then ranked by another module named creative ranking model. The ranking model can predict the CTR score for each creative considering user features. However, the two above stages are regarded as two different tasks and are optimized separately. In this paper, we proposed a new automated Creative Generation pipeline for Click-Through Rate (CG4CTR) with the goal of improving CTR during the creative generation stage. Our contributions have 4 parts: 1) The inpainting mode in stable diffusion is firstly applied to creative generation task in online advertising scene. A self-cyclic generation pipeline is proposed to ensure the convergence of training. 2) Prompt model is designed to generate individualized creatives for different user groups, which can further improve the diversity and quality. 3) Reward model comprehensively considers the multimodal features of image and text to improve the effectiveness of creative ranking task, and it is also critical in self-cyclic pipeline. 4) The significant benefits obtained in online and offline experiments verify the significance of our proposed method.",
+        "subjects": [
+            "cs.IR"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2401.12988",
         "abstract url": "https://arxiv.org/abs/2401.12988",
         "title": "Few-Shot Learning for Chronic Disease Management: Leveraging Large Language Models and Multi-Prompt Engineering with Medical Knowledge Injection",
@@ -3461,6 +3578,31 @@
             "cs.CL"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2401.08117",
+        "abstract url": "https://arxiv.org/abs/2401.08117",
+        "title": "E2HQV: High-Quality Video Generation from Event Camera via Theory-Inspired Model-Aided Deep Learning",
+        "rating": -1.5,
+        "keywords": [
+            [
+                "Event Camera"
+            ],
+            [
+                "bio-inspired"
+            ],
+            [
+                "cs.CV"
+            ],
+            [
+                "AAAI"
+            ]
+        ],
+        "abstract": "The bio-inspired event cameras or dynamic vision sensors are capable of asynchronously capturing per-pixel brightness changes (called event-streams) in high temporal resolution and high dynamic range. However, the non-structural spatial-temporal event-streams make it challenging for providing intuitive visualization with rich semantic information for human vision. It calls for events-to-video (E2V) solutions which take event-streams as input and generate high quality video frames for intuitive visualization. However, current solutions are predominantly data-driven without considering the prior knowledge of the underlying statistics relating event-streams and video frames. It highly relies on the non-linearity and generalization capability of the deep neural networks, thus, is struggling on reconstructing detailed textures when the scenes are complex. In this work, we propose \\textbf{E2HQV}, a novel E2V paradigm designed to produce high-quality video frames from events. This approach leverages a model-aided deep learning framework, underpinned by a theory-inspired E2V model, which is meticulously derived from the fundamental imaging principles of event cameras. To deal with the issue of state-reset in the recurrent components of E2HQV, we also design a temporal shift embedding module to further improve the quality of the video frames. Comprehensive evaluations on the real world event camera datasets validate our approach, with E2HQV, notably outperforming state-of-the-art approaches, e.g., surpassing the second best by over 40\\% for some evaluation metrics.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Accepted in AAAI2024"
     },
     {
         "paper id": "2401.08135",
@@ -3603,7 +3745,7 @@
         "subjects": [
             "cs.LG"
         ],
-        "comment": null
+        "comment": "ACM Conference on Fairness, Accountability, and Transparency (FAccT 2024)"
     },
     {
         "paper id": "2401.08789",
@@ -3642,6 +3784,25 @@
             "cs.SI"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2401.08851",
+        "abstract url": "https://arxiv.org/abs/2401.08851",
+        "title": "Using i-vectors for subject-independent cross-session EEG transfer learning",
+        "rating": -1.5,
+        "keywords": [
+            [
+                "EEG"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Cognitive load classification is the task of automatically determining an individual's utilization of working memory resources during performance of a task based on physiologic measures such as electroencephalography (EEG). In this paper, we follow a cross-disciplinary approach, where tools and methodologies from speech processing are used to tackle this problem. The corpus we use was released publicly in 2021 as part of the first passive brain-computer interface competition on cross-session workload estimation. We present our approach which used i-vector-based neural network classifiers to accomplish inter-subject cross-session EEG transfer learning, achieving 18% relative improvement over equivalent subject-dependent models. We also report experiments showing how our subject-independent models perform competitively on held-out subjects and improve with additional subject data, suggesting that subject-dependent training is not required for effective cognitive load determination.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": "11 pages"
     },
     {
         "paper id": "2401.08865",
@@ -3745,25 +3906,6 @@
         "comment": null
     },
     {
-        "paper id": "2401.09486",
-        "abstract url": "https://arxiv.org/abs/2401.09486",
-        "title": "LoMA: Lossless Compressed Memory Attention",
-        "rating": -1.5,
-        "keywords": [
-            [
-                "face"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Large Language Models (LLMs) face limitations due to the high demand on GPU memory and computational resources when handling long contexts. While sparsify the Key-Value (KV) cache of transformer model is a typical strategy to alleviate resource usage, it unavoidably results in the loss of information. We introduce Lossless Compressed Memory Attention (LoMA), a novel approach that enables lossless compression of the KV cache, thereby reducing the memory and computational demands during autoregressive generation. LoMA incorporates a specialized training or fine-tuning precedure alongside an autoregressive generation algorithm optimized for the compressed context. Our method compresses the KV cache after every $tc$ generated tokens with a compression ratio of $c$ and a target compressed length $t$, and this process occurs within a single inference pass without dependency on auxiliary models. We engineered an efficient training scheme involving specific inputs, attention masks, and position identifiers to instill this compression capability. Experimental validation has demonstrated that LoMA significantly reducing computational consumption and memory usage through achieving lossless KV cache compression.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2401.09490",
         "abstract url": "https://arxiv.org/abs/2401.09490",
         "title": "Gene-associated Disease Discovery Powered by Large Language Models",
@@ -3776,6 +3918,7 @@
                 "clinical"
             ],
             [
+                "Workshop",
                 "AAAI"
             ]
         ],
@@ -3852,6 +3995,22 @@
         "abstract": "Context: Quantum software systems represent a new realm in software engineering, utilizing quantum bits (Qubits) and quantum gates (Qgates) to solve the complex problems more efficiently than classical counterparts . Agile software development approaches are considered to address many inherent challenges in quantum software development, but their effective integration remains unexplored Objective: This study investigates key causes of challenges that could hinders the adoption of traditional agile approaches in quantum software projects and develop an Agile Quantum Software Project Success Prediction Model (AQSSPM). Methodology: Firstly, w e identified 19 causes of challenging factors discussed in our previous study, which are potentially impacting agile quantum project success. Secondly, a survey was conducted to collect expert opinions on these causes and applied Genetic Algorithm (GA) with Na i ve Bayes Classifier (NBC) and Logistic Regression (LR) to develop the AQSSPM Results: Utilizing GA with NBC, project success probability improved from 53.17% to 99.68%, with cost reductions from 0.463% to 0.403%. Similarly, GA with LR increased success rates from 55.52% to 98.99%, and costs decreased from 0.496% to 0.409% after 100 iterati ons. Both methods result showed a strong positive correlation (rs=0.955) in causes ranking, with no significant difference between them (t=1.195, p=0.240>0.05). Conclusion: The AQSSPM highlights critical focus areas for efficiently and successfully implementing agile quantum projects considering the cost factor of a particular project",
         "subjects": [
             "cs.SE"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2401.08164",
+        "abstract url": "https://arxiv.org/abs/2401.08164",
+        "title": "EEG-based Cognitive Load Estimation of Acoustic Parameters for Data Sonification",
+        "rating": -2,
+        "keywords": [
+            [
+                "EEG"
+            ]
+        ],
+        "abstract": "Sonification is a data visualization technique which expresses data attributes via psychoacoustic parameters, which are non-speech audio signals used to convey information. This paper investigates the binary estimation of cognitive load induced by psychoacoustic parameters conveying the focus level of an astronomical image via Electroencephalogram (EEG) embeddings. Employing machine learning and deep learning methodologies, we demonstrate that EEG signals are reliable for (a) binary estimation of cognitive load, (b) isolating easy vs difficult visual-to-auditory perceptual mappings, and (c) capturing perceptual similarities among psychoacoustic parameters. Our key findings reveal that (1) EEG embeddings can reliably measure cognitive load, achieving a peak F1-score of 0.98; (2) Extreme focus levels are easier to detect via auditory mappings than intermediate ones, and (3) psychoacoustic parameters inducing comparable cognitive load levels tend to generate similar EEG encodings.",
+        "subjects": [
+            "cs.HC"
         ],
         "comment": null
     },
@@ -4119,28 +4278,6 @@
         "comment": null
     },
     {
-        "paper id": "2401.08326",
-        "abstract url": "https://arxiv.org/abs/2401.08326",
-        "title": "RoTBench: A Multi-Level Benchmark for Evaluating the Robustness of Large Language Models in Tool Learning",
-        "rating": -2,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "face"
-            ],
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Tool learning has generated widespread interest as a vital means of interaction between Large Language Models (LLMs) and the physical world. Current research predominantly emphasizes LLMs' capacity to utilize tools in well-structured environments while overlooking their stability when confronted with the inevitable noise of the real world. To bridge this gap, we introduce RoTBench, a multi-level benchmark for evaluating the robustness of LLMs in tool learning. Specifically, we establish five external environments, each featuring varying levels of noise (i.e., Clean, Slight, Medium, Heavy, and Union), providing an in-depth analysis of the model's resilience across three critical phases: tool selection, parameter identification, and content filling. Experiments involving six widely-used models underscore the urgent necessity for enhancing the robustness of LLMs in tool learning. For instance, the performance of GPT-4 even drops significantly from 80.00 to 58.10 when there is no substantial change in manual accuracy. More surprisingly, the noise correction capability inherent in the GPT family paradoxically impedes its adaptability in the face of mild noise. In light of these findings, we propose RoTTuning, a strategy that enriches the diversity of training environments to bolster the robustness of LLMs in tool learning. The code and data are available at https://github.com/Junjie-Ye/RoTBench.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2401.08333",
         "abstract url": "https://arxiv.org/abs/2401.08333",
         "title": "dabih -- encrypted data storage and sharing platform",
@@ -4173,7 +4310,7 @@
                 "Quantum"
             ]
         ],
-        "abstract": "We introduce an object called a subspace graph that formalizes the technique of multidimensional quantum walks. Composing subspace graphs allows one to seamlessly combine quantum and classical reasoning, keeping a classical structure in mind, while abstracting quantum parts into subgraphs with simple boundaries as need. As an example, we show how to combine a switching network with arbitrary quantum subroutines, to compute a composed function. As another application, we give a time-efficient implementation of quantum Divide & Conquer when the sub-problems are combined via a symmetric Boolean formula. We use this to quadratically speed up Savitch's algorithm for directed $st$-connectivity.",
+        "abstract": "We introduce an object called a \\emph{subspace graph} that formalizes the technique of multidimensional quantum walks. Composing subspace graphs allows one to seamlessly combine quantum and classical reasoning, keeping a classical structure in mind, while abstracting quantum parts into subgraphs with simple boundaries as needed. As an example, we show how to combine a \\emph{switching network} with arbitrary quantum subroutines, to compute a composed function. As another application, we give a time-efficient implementation of quantum Divide \\& Conquer when the sub-problems are combined via a Boolean formula. We use this to quadratically speed up Savitch's algorithm for directed $st$-connectivity.",
         "subjects": [
             "quant-ph"
         ],
@@ -4199,27 +4336,20 @@
         "comment": null
     },
     {
-        "paper id": "2401.08396",
-        "abstract url": "https://arxiv.org/abs/2401.08396",
-        "title": "Hidden Flaws Behind Expert-Level Accuracy of GPT-4 Vision in Medicine",
+        "paper id": "2401.08398",
+        "abstract url": "https://arxiv.org/abs/2401.08398",
+        "title": "High-Quality Mesh Blendshape Generation from Face Videos via Neural Inverse Rendering",
         "rating": -2,
         "keywords": [
             [
-                "depth"
-            ],
-            [
-                "medical",
-                "clinical"
-            ],
-            [
-                "cs.CV"
+                "industrial"
             ]
         ],
-        "abstract": "Recent studies indicate that Generative Pre-trained Transformer 4 with Vision (GPT-4V) outperforms human physicians in medical challenge tasks. However, these evaluations primarily focused on the accuracy of multi-choice questions alone. Our study extends the current scope by conducting a comprehensive analysis of GPT-4V's rationales of image comprehension, recall of medical knowledge, and step-by-step multimodal reasoning when solving New England Journal of Medicine (NEJM) Image Challenges - an imaging quiz designed to test the knowledge and diagnostic capabilities of medical professionals. Evaluation results confirmed that GPT-4V performs comparatively to human physicians regarding multi-choice accuracy (81.6% vs. 77.8%). GPT-4V also performs well in cases where physicians incorrectly answer, with over 78% accuracy. However, we discovered that GPT-4V frequently presents flawed rationales in cases where it makes the correct final choices (35.5%), most prominent in image comprehension (27.2%). Regardless of GPT-4V's high accuracy in multi-choice questions, our findings emphasize the necessity for further in-depth evaluations of its rationales before integrating such multimodal AI models into clinical workflows.",
+        "abstract": "Readily editable mesh blendshapes have been widely used in animation pipelines, while recent advancements in neural geometry and appearance representations have enabled high-quality inverse rendering. Building upon these observations, we introduce a novel technique that reconstructs mesh-based blendshape rigs from single or sparse multi-view videos, leveraging state-of-the-art neural inverse rendering. We begin by constructing a deformation representation that parameterizes vertex displacements into differential coordinates with tetrahedral connections, allowing for high-quality vertex deformation on high-resolution meshes. By constructing a set of semantic regulations in this representation, we achieve joint optimization of blendshapes and expression coefficients. Furthermore, to enable a user-friendly multi-view setup with unsynchronized cameras, we propose a neural regressor to model time-varying motion parameters. This approach implicitly considers the time difference across multiple cameras, enhancing the accuracy of motion modeling. Experiments demonstrate that, with the flexible input of single or sparse multi-view videos, we reconstruct personalized high-fidelity blendshapes. These blendshapes are both geometrically and semantically accurate, and they are compatible with industrial animation pipelines. Code and data will be released.",
         "subjects": [
-            "cs.CV"
+            "cs.GR"
         ],
-        "comment": "Under review"
+        "comment": null
     },
     {
         "paper id": "2401.08404",
@@ -4344,22 +4474,6 @@
         "comment": "6 pages, 5 figures. Accepted for presentation at the 2024 IEEE Wireless Communications and Networking Conference (IEEE WCNC 2024), to be held in Dubai, United Arab Emirates"
     },
     {
-        "paper id": "2401.08484",
-        "abstract url": "https://arxiv.org/abs/2401.08484",
-        "title": "Real-Time Dynamic Layout Optimization for Floating Offshore Wind Farm Control",
-        "rating": -2,
-        "keywords": [
-            [
-                "face"
-            ]
-        ],
-        "abstract": "Downstream wind turbines operating behind upstream turbines face significant performance challenges due to reduced wind speeds and increased turbulence. This leads to decreased wind energy production and higher dynamic loads on downwind turbines. Consequently, real-time monitoring and control have become crucial for improving wind farm performance. One promising solution involves optimizing wind farm layouts in real-time, taking advantage of the added flexibility offered by floating offshore wind turbines (FOWTs). This study explores a dynamic layout optimization strategy to minimize wake effects in wind farms while meeting power requirements. Two scenarios are considered: power maximization and power set-point tracking. The methodology involves a centralized wind farm controller optimizing the layout, followed by wind turbine controllers to meet the prescribed targets. Each FOWT employs model predictive control to adjust aerodynamic thrust force. The control strategy integrates a dynamic wind farm model that considers floating platform motion and wake transport in changing wind conditions. In a case study with a 1x3 wind farm layout of 5 MW FOWTs, the results show a 25% increase in stable energy production compared to a static layout in one hour for the first scenario. In the second scenario, desired power production was swiftly and consistently achieved.",
-        "subjects": [
-            "eess.SY"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2401.08550",
         "abstract url": "https://arxiv.org/abs/2401.08550",
         "title": "Expanding Hardware-Efficiently Manipulable Hilbert Space via Hamiltonian Embedding",
@@ -4420,6 +4534,28 @@
         "comment": "With the appendix included"
     },
     {
+        "paper id": "2401.08573",
+        "abstract url": "https://arxiv.org/abs/2401.08573",
+        "title": "Benchmarking the Robustness of Image Watermarks",
+        "rating": -2,
+        "keywords": [
+            [
+                "attacks"
+            ],
+            [
+                "watermarking"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "This paper investigates the weaknesses of image watermarking techniques. We present WAVES (Watermark Analysis Via Enhanced Stress-testing), a novel benchmark for assessing watermark robustness, overcoming the limitations of current evaluation methods.WAVES integrates detection and identification tasks, and establishes a standardized evaluation protocol comprised of a diverse range of stress tests. The attacks in WAVES range from traditional image distortions to advanced and novel variations of diffusive, and adversarial attacks. Our evaluation examines two pivotal dimensions: the degree of image quality degradation and the efficacy of watermark detection after attacks. We develop a series of Performance vs. Quality 2D plots, varying over several prominent image similarity metrics, which are then aggregated in a heuristically novel manner to paint an overall picture of watermark robustness and attack potency. Our comprehensive evaluation reveals previously undetected vulnerabilities of several modern watermarking algorithms. We envision WAVES as a toolkit for the future development of robust watermarking systems. The project is available at https://wavesbench.github.io/",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2401.08577",
         "abstract url": "https://arxiv.org/abs/2401.08577",
         "title": "MultiPLY: A Multisensory Object-Centric Embodied Large Language Model in 3D World",
@@ -4474,22 +4610,6 @@
         "comment": "28 pages, 8 figures, 2 tables"
     },
     {
-        "paper id": "2401.08806",
-        "abstract url": "https://arxiv.org/abs/2401.08806",
-        "title": "Energy-adaptive Buffering for Efficient, Responsive, and Persistent Batteryless Systems",
-        "rating": -2,
-        "keywords": [
-            [
-                "face"
-            ]
-        ],
-        "abstract": "Batteryless energy harvesting systems enable a wide array of new sensing, computation, and communication platforms untethered by power delivery or battery maintenance demands. Energy harvesters charge a buffer capacitor from an unreliable environmental source until enough energy is stored to guarantee a burst of operation despite changes in power input. Current platforms use a fixed-size buffer chosen at design time to meet constraints on charge time or application longevity, but static energy buffers are a poor fit for the highly volatile power sources found in real-world deployments: fixed buffers waste energy both as heat when they reach capacity during a power surplus and as leakage when they fail to charge the system during a power deficit. To maximize batteryless system performance in the face of highly dynamic input power, we propose REACT: a responsive buffering circuit which varies total capacitance according to net input power. REACT uses a variable capacitor bank to expand capacitance to capture incoming energy during a power surplus and reconfigures internal capacitors to reclaim additional energy from each capacitor as power input falls. Compared to fixed-capacity systems, REACT captures more energy, maximizes usable energy, and efficiently decouples system voltage from stored charge -- enabling low-power and high-performance designs previously limited by ambient power. Our evaluation on real-world platforms shows that REACT eliminates the tradeoff between responsiveness, efficiency, and longevity, increasing the energy available for useful work by an average 25.6% over static buffers optimized for reactivity and capacity, improving event responsiveness by an average 7.7x without sacrificing capacity, and enabling programmer directed longevity guarantees.",
-        "subjects": [
-            "cs.AR"
-        ],
-        "comment": "13 pages, 12 figures"
-    },
-    {
         "paper id": "2401.08807",
         "abstract url": "https://arxiv.org/abs/2401.08807",
         "title": "SpecGen: Automated Generation of Formal Program Specifications via Large Language Models",
@@ -4534,28 +4654,6 @@
         "abstract": "This paper presents an iterative planning framework for multi-agent systems with hybrid state spaces. The framework uses transition systems to mathematically represent planning tasks and employs multiple solvers to iteratively improve the plan until computation resources are exhausted. When integrating different solvers for iterative planning, we establish theoretical guarantees on the mathematical framework to ensure recursive feasibility. The proposed framework enables continual improvement of solution optimality, efficiently using allocated computation resources. The proposed method is validated by applying it to an energy-aware UGV-UAV cooperative task site assignment. The results demonstrate the continual solution improvement while preserving real-time implementation ability compared to algorithms proposed in the literature.",
         "subjects": [
             "eess.SY"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2401.08903",
-        "abstract url": "https://arxiv.org/abs/2401.08903",
-        "title": "PPR: Enhancing Dodging Attacks while Maintaining Impersonation Attacks on Face Recognition Systems",
-        "rating": -2,
-        "keywords": [
-            [
-                "Attacks"
-            ],
-            [
-                "Face"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Adversarial Attacks on Face Recognition (FR) encompass two types: impersonation attacks and evasion attacks. We observe that achieving a successful impersonation attack on FR does not necessarily ensure a successful dodging attack on FR in the black-box setting. Introducing a novel attack method named Pre-training Pruning Restoration Attack (PPR), we aim to enhance the performance of dodging attacks whilst avoiding the degradation of impersonation attacks. Our method employs adversarial example pruning, enabling a portion of adversarial perturbations to be set to zero, while tending to maintain the attack performance. By utilizing adversarial example pruning, we can prune the pre-trained adversarial examples and selectively free up certain adversarial perturbations. Thereafter, we embed adversarial perturbations in the pruned area, which enhances the dodging performance of the adversarial face examples. The effectiveness of our proposed attack method is demonstrated through our experimental results, showcasing its superior performance.",
-        "subjects": [
-            "cs.CV"
         ],
         "comment": null
     },
@@ -4615,38 +4713,6 @@
         "comment": null
     },
     {
-        "paper id": "2401.08935",
-        "abstract url": "https://arxiv.org/abs/2401.08935",
-        "title": "Privacy Protected Contactless Cardio-respiratory Monitoring using Defocused Cameras during Sleep",
-        "rating": -2,
-        "keywords": [
-            [
-                "face"
-            ]
-        ],
-        "abstract": "The monitoring of vital signs such as heart rate (HR) and respiratory rate (RR) during sleep is important for the assessment of sleep quality and detection of sleep disorders. Camera-based HR and RR monitoring gained popularity in sleep monitoring in recent years. However, they are all facing with serious privacy issues when using a video camera in the sleeping scenario. In this paper, we propose to use the defocused camera to measure vital signs from optically blurred images, which can fundamentally eliminate the privacy invasion as face is difficult to be identified in obtained blurry images. A spatial-redundant framework involving living-skin detection is used to extract HR and RR from the defocused camera in NIR, and a motion metric is designed to exclude outliers caused by body motions. In the benchmark, the overall Mean Absolute Error (MAE) for HR measurement is 4.4 bpm, for RR measurement is 5.9 bpm. Both have quality drops as compared to the measurement using a focused camera, but the degradation in HR is much less, i.e. HR measurement has strong correlation with the reference ($R \\geq 0.90$). Preliminary experiments suggest that it is feasible to use a defocused camera for cardio-respiratory monitoring while protecting the privacy. Further improvement is needed for robust RR measurement, such as by PPG-modulation based RR extraction.",
-        "subjects": [
-            "eess.SP"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2401.08947",
-        "abstract url": "https://arxiv.org/abs/2401.08947",
-        "title": "AntiPhishStack: LSTM-based Stacked Generalization Model for Optimized Phishing URL Detection",
-        "rating": -2,
-        "keywords": [
-            [
-                "face"
-            ]
-        ],
-        "abstract": "The escalating reliance on revolutionary online web services has introduced heightened security risks, with persistent challenges posed by phishing despite extensive security measures. Traditional phishing systems, reliant on machine learning and manual features, struggle with evolving tactics. Recent advances in deep learning offer promising avenues for tackling novel phishing challenges and malicious URLs. This paper introduces a two-phase stack generalized model named AntiPhishStack, designed to detect phishing sites. The model leverages the learning of URLs and character-level TF-IDF features symmetrically, enhancing its ability to combat emerging phishing threats. In Phase I, features are trained on a base machine learning classifier, employing K-fold cross-validation for robust mean prediction. Phase II employs a two-layered stacked-based LSTM network with five adaptive optimizers for dynamic compilation, ensuring premier prediction on these features. Additionally, the symmetrical predictions from both phases are optimized and integrated to train a meta-XGBoost classifier, contributing to a final robust prediction. The significance of this work lies in advancing phishing detection with AntiPhishStack, operating without prior phishing-specific feature knowledge. Experimental validation on two benchmark datasets, comprising benign and phishing or malicious URLs, demonstrates the model's exceptional performance, achieving a notable 96.04% accuracy compared to existing studies. This research adds value to the ongoing discourse on symmetry and asymmetry in information security and provides a forward-thinking solution for enhancing network security in the face of evolving cyber threats.",
-        "subjects": [
-            "cs.CR"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2401.08956",
         "abstract url": "https://arxiv.org/abs/2401.08956",
         "title": "A Unified NOMA Framework in Beam-Hopping Satellite Communication Systems",
@@ -4677,31 +4743,6 @@
             "cs.HC"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2401.09495",
-        "abstract url": "https://arxiv.org/abs/2401.09495",
-        "title": "IPR-NeRF: Ownership Verification meets Neural Radiance Field",
-        "rating": -2,
-        "keywords": [
-            [
-                "NeRF"
-            ],
-            [
-                "diffusion"
-            ],
-            [
-                "attacks"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Neural Radiance Field (NeRF) models have gained significant attention in the computer vision community in the recent past with state-of-the-art visual quality and produced impressive demonstrations. Since then, technopreneurs have sought to leverage NeRF models into a profitable business. Therefore, NeRF models make it worth the risk of plagiarizers illegally copying, re-distributing, or misusing those models. This paper proposes a comprehensive intellectual property (IP) protection framework for the NeRF model in both black-box and white-box settings, namely IPR-NeRF. In the black-box setting, a diffusion-based solution is introduced to embed and extract the watermark via a two-stage optimization process. In the white-box setting, a designated digital signature is embedded into the weights of the NeRF model by adopting the sign loss objective. Our extensive experiments demonstrate that not only does our approach maintain the fidelity (\\ie, the rendering quality) of IPR-NeRF models, but it is also robust against both ambiguity and removal attacks compared to prior arts.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Error on result tabulation of state of the art method which might cause misleading to readers"
     },
     {
         "paper id": "2401.10931",
@@ -4759,35 +4800,6 @@
             "cs.LG"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2401.08503",
-        "abstract url": "https://arxiv.org/abs/2401.08503",
-        "title": "Real3D-Portrait: One-shot Realistic 3D Talking Portrait Synthesis",
-        "rating": -2.5,
-        "keywords": [
-            [
-                "3D"
-            ],
-            [
-                "Synthesis",
-                "super-resolution"
-            ],
-            [
-                "face"
-            ],
-            [
-                "cs.CV"
-            ],
-            [
-                "ICLR"
-            ]
-        ],
-        "abstract": "One-shot 3D talking portrait generation aims to reconstruct a 3D avatar from an unseen image, and then animate it with a reference video or audio to generate a talking portrait video. The existing methods fail to simultaneously achieve the goals of accurate 3D avatar reconstruction and stable talking face animation. Besides, while the existing works mainly focus on synthesizing the head part, it is also vital to generate natural torso and background segments to obtain a realistic talking portrait video. To address these limitations, we present Real3D-Potrait, a framework that (1) improves the one-shot 3D reconstruction power with a large image-to-plane model that distills 3D prior knowledge from a 3D face generative model; (2) facilitates accurate motion-conditioned animation with an efficient motion adapter; (3) synthesizes realistic video with natural torso movement and switchable background using a head-torso-background super-resolution model; and (4) supports one-shot audio-driven talking face generation with a generalizable audio-to-motion model. Extensive experiments show that Real3D-Portrait generalizes well to unseen identities and generates more realistic talking portrait videos compared to previous methods. Video samples and source code are available at https://real3dportrait.github.io .",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "ICLR 2024 (Spotlight). Project page: https://real3dportrait.github.io"
     },
     {
         "paper id": "2401.08517",
@@ -4874,33 +4886,6 @@
         "comment": "In the 12th International Conference on Control, Automation and Information Sciences (ICCAIS 2023), Hanoi, Vietnam"
     },
     {
-        "paper id": "2401.08140",
-        "abstract url": "https://arxiv.org/abs/2401.08140",
-        "title": "ProvNeRF: Modeling per Point Provenance in NeRFs as a Stochastic Process",
-        "rating": -3,
-        "keywords": [
-            [
-                "3D",
-                "NeRF",
-                "radiance fields"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "face"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Neural radiance fields (NeRFs) have gained popularity across various applications. However, they face challenges in the sparse view setting, lacking sufficient constraints from volume rendering. Reconstructing and understanding a 3D scene from sparse and unconstrained cameras is a long-standing problem in classical computer vision with diverse applications. While recent works have explored NeRFs in sparse, unconstrained view scenarios, their focus has been primarily on enhancing reconstruction and novel view synthesis. Our approach takes a broader perspective by posing the question: \"from where has each point been seen?\" -- which gates how well we can understand and reconstruct it. In other words, we aim to determine the origin or provenance of each 3D point and its associated information under sparse, unconstrained views. We introduce ProvNeRF, a model that enriches a traditional NeRF representation by incorporating per-point provenance, modeling likely source locations for each point. We achieve this by extending implicit maximum likelihood estimation (IMLE) for stochastic processes. Notably, our method is compatible with any pre-trained NeRF model and the associated training camera poses. We demonstrate that modeling per-point provenance offers several advantages, including uncertainty estimation, criteria-based view selection, and improved novel view synthesis, compared to state-of-the-art methods. Please visit our project page at https://provnerf.github.io",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2401.08149",
         "abstract url": "https://arxiv.org/abs/2401.08149",
         "title": "Channel Estimation for Holographic Communications in Hybrid Near-Far Field",
@@ -4920,30 +4905,23 @@
         "comment": "6 pages, 5 figures"
     },
     {
-        "paper id": "2401.08275",
-        "abstract url": "https://arxiv.org/abs/2401.08275",
-        "title": "Modeling Spoof Noise by De-spoofing Diffusion and its Application in Face Anti-spoofing",
+        "paper id": "2401.08261",
+        "abstract url": "https://arxiv.org/abs/2401.08261",
+        "title": "Probabilistically Robust Watermarking of Neural Networks",
         "rating": -3,
         "keywords": [
-            [
-                "Diffusion",
-                "GAN"
-            ],
             [
                 "attacks"
             ],
             [
-                "Face"
-            ],
-            [
-                "cs.CV"
+                "Watermarking"
             ]
         ],
-        "abstract": "Face anti-spoofing is crucial for ensuring the security and reliability of face recognition systems. Several existing face anti-spoofing methods utilize GAN-like networks to detect presentation attacks by estimating the noise pattern of a spoof image and recovering the corresponding genuine image. But GAN's limited face appearance space results in the denoised faces cannot cover the full data distribution of genuine faces, thereby undermining the generalization performance of such methods. In this work, we present a pioneering attempt to employ diffusion models to denoise a spoof image and restore the genuine image. The difference between these two images is considered as the spoof noise, which can serve as a discriminative cue for face anti-spoofing. We evaluate our proposed method on several intra-testing and inter-testing protocols, where the experimental results showcase the effectiveness of our method in achieving competitive performance in terms of both accuracy and generalization.",
+        "abstract": "As deep learning (DL) models are widely and effectively used in Machine Learning as a Service (MLaaS) platforms, there is a rapidly growing interest in DL watermarking techniques that can be used to confirm the ownership of a particular model. Unfortunately, these methods usually produce watermarks susceptible to model stealing attacks. In our research, we introduce a novel trigger set-based watermarking approach that demonstrates resilience against functionality stealing attacks, particularly those involving extraction and distillation. Our approach does not require additional model training and can be applied to any model architecture. The key idea of our method is to compute the trigger set, which is transferable between the source model and the set of proxy models with a high probability. In our experimental study, we show that if the probability of the set being transferable is reasonably high, it can be effectively used for ownership verification of the stolen model. We evaluate our method on multiple benchmarks and show that our approach outperforms current state-of-the-art watermarking techniques in all considered experimental setups.",
         "subjects": [
-            "cs.CV"
+            "cs.CR"
         ],
-        "comment": "Accepted by IJCB2023"
+        "comment": null
     },
     {
         "paper id": "2401.08399",
@@ -4967,6 +4945,28 @@
         "abstract": "Humans commonly work with multiple objects in daily life and can intuitively transfer manipulation skills to novel objects by understanding object functional regularities. However, existing technical approaches for analyzing and synthesizing hand-object manipulation are mostly limited to handling a single hand and object due to the lack of data support. To address this, we construct TACO, an extensive bimanual hand-object-interaction dataset spanning a large variety of tool-action-object compositions for daily human activities. TACO contains 2.5K motion sequences paired with third-person and egocentric views, precise hand-object 3D meshes, and action labels. To rapidly expand the data scale, we present a fully automatic data acquisition pipeline combining multi-view sensing with an optical motion capture system. With the vast research fields provided by TACO, we benchmark three generalizable hand-object-interaction tasks: compositional action recognition, generalizable hand-object motion forecasting, and cooperative grasp synthesis. Extensive experiments reveal new insights, challenges, and opportunities for advancing the studies of generalizable hand-object motion analysis and synthesis. Our data and code are available at https://taco2024.github.io.",
         "subjects": [
             "cs.CV"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2401.08406",
+        "abstract url": "https://arxiv.org/abs/2401.08406",
+        "title": "RAG vs Fine-tuning: Pipelines, Tradeoffs, and a Case Study on Agriculture",
+        "rating": -3,
+        "keywords": [
+            [
+                "industrial"
+            ],
+            [
+                "agricultural"
+            ],
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "There are two common ways in which developers are incorporating proprietary and domain-specific data when building applications of Large Language Models (LLMs): Retrieval-Augmented Generation (RAG) and Fine-Tuning. RAG augments the prompt with the external data, while fine-Tuning incorporates the additional knowledge into the model itself. However, the pros and cons of both approaches are not well understood. In this paper, we propose a pipeline for fine-tuning and RAG, and present the tradeoffs of both for multiple popular LLMs, including Llama2-13B, GPT-3.5, and GPT-4. Our pipeline consists of multiple stages, including extracting information from PDFs, generating questions and answers, using them for fine-tuning, and leveraging GPT-4 for evaluating the results. We propose metrics to assess the performance of different stages of the RAG and fine-Tuning pipeline. We conduct an in-depth study on an agricultural dataset. Agriculture as an industry has not seen much penetration of AI, and we study a potentially disruptive application - what if we could provide location-specific insights to a farmer? Our results show the effectiveness of our dataset generation pipeline in capturing geographic-specific knowledge, and the quantitative and qualitative benefits of RAG and fine-tuning. We see an accuracy increase of over 6 p.p. when fine-tuning the model and this is cumulative with RAG, which increases accuracy by 5 p.p. further. In one particular experiment, we also demonstrate that the fine-tuned model leverages information from across geographies to answer specific questions, increasing answer similarity from 47% to 72%. Overall, the results point to how systems built using LLMs can be adapted to respond and incorporate knowledge across a dimension that is critical for a specific industry, paving the way for further applications of LLMs in other industrial domains.",
+        "subjects": [
+            "cs.CL"
         ],
         "comment": null
     },
@@ -5018,7 +5018,8 @@
         "rating": -3,
         "keywords": [
             [
-                "depth"
+                "depth",
+                "skeleton"
             ],
             [
                 "healthcare"
@@ -5108,26 +5109,6 @@
         "abstract": "Neural networks have been employed for a wide range of processing applications like image processing, motor control, object detection and many others. Living neural networks offer advantages of lower power consumption, faster processing, and biological realism. Optogenetics offers high spatial and temporal control over biological neurons and presents potential in training live neural networks. This work proposes a simulated living neural network trained indirectly by backpropagating STDP based algorithms using precision activation by optogenetics achieving accuracy comparable to traditional neural network training algorithms.",
         "subjects": [
             "cs.ET"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2401.10934",
-        "abstract url": "https://arxiv.org/abs/2401.10934",
-        "title": "A New Creative Generation Pipeline for Click-Through Rate with Stable Diffusion Model",
-        "rating": -3,
-        "keywords": [
-            [
-                "Diffusion",
-                "inpainting"
-            ],
-            [
-                "face"
-            ]
-        ],
-        "abstract": "In online advertising scenario, sellers often create multiple creatives to provide comprehensive demonstrations, making it essential to present the most appealing design to maximize the Click-Through Rate (CTR). However, sellers generally struggle to consider users preferences for creative design, leading to the relatively lower aesthetics and quantities compared to Artificial Intelligence (AI)-based approaches. Traditional AI-based approaches still face the same problem of not considering user information while having limited aesthetic knowledge from designers. In fact that fusing the user information, the generated creatives can be more attractive because different users may have different preferences. To optimize the results, the generated creatives in traditional methods are then ranked by another module named creative ranking model. The ranking model can predict the CTR score for each creative considering user features. However, the two above stages are regarded as two different tasks and are optimized separately. In this paper, we proposed a new automated Creative Generation pipeline for Click-Through Rate (CG4CTR) with the goal of improving CTR during the creative generation stage. Our contributions have 4 parts: 1) The inpainting mode in stable diffusion is firstly applied to creative generation task in online advertising scene. A self-cyclic generation pipeline is proposed to ensure the convergence of training. 2) Prompt model is designed to generate individualized creatives for different user groups, which can further improve the diversity and quality. 3) Reward model comprehensively considers the multimodal features of image and text to improve the effectiveness of creative ranking task, and it is also critical in self-cyclic pipeline. 4) The significant benefits obtained in online and offline experiments verify the significance of our proposed method.",
-        "subjects": [
-            "cs.IR"
         ],
         "comment": null
     },
@@ -5273,50 +5254,6 @@
         "comment": null
     },
     {
-        "paper id": "2401.08398",
-        "abstract url": "https://arxiv.org/abs/2401.08398",
-        "title": "High-Quality Mesh Blendshape Generation from Face Videos via Neural Inverse Rendering",
-        "rating": -4,
-        "keywords": [
-            [
-                "Face"
-            ],
-            [
-                "industrial"
-            ]
-        ],
-        "abstract": "Readily editable mesh blendshapes have been widely used in animation pipelines, while recent advancements in neural geometry and appearance representations have enabled high-quality inverse rendering. Building upon these observations, we introduce a novel technique that reconstructs mesh-based blendshape rigs from single or sparse multi-view videos, leveraging state-of-the-art neural inverse rendering. We begin by constructing a deformation representation that parameterizes vertex displacements into differential coordinates with tetrahedral connections, allowing for high-quality vertex deformation on high-resolution meshes. By constructing a set of semantic regulations in this representation, we achieve joint optimization of blendshapes and expression coefficients. Furthermore, to enable a user-friendly multi-view setup with unsynchronized cameras, we propose a neural regressor to model time-varying motion parameters. This approach implicitly considers the time difference across multiple cameras, enhancing the accuracy of motion modeling. Experiments demonstrate that, with the flexible input of single or sparse multi-view videos, we reconstruct personalized high-fidelity blendshapes. These blendshapes are both geometrically and semantically accurate, and they are compatible with industrial animation pipelines. Code and data will be released.",
-        "subjects": [
-            "cs.GR"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2401.08406",
-        "abstract url": "https://arxiv.org/abs/2401.08406",
-        "title": "RAG vs Fine-tuning: Pipelines, Tradeoffs, and a Case Study on Agriculture",
-        "rating": -4,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "industrial"
-            ],
-            [
-                "agricultural"
-            ],
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "There are two common ways in which developers are incorporating proprietary and domain-specific data when building applications of Large Language Models (LLMs): Retrieval-Augmented Generation (RAG) and Fine-Tuning. RAG augments the prompt with the external data, while fine-Tuning incorporates the additional knowledge into the model itself. However, the pros and cons of both approaches are not well understood. In this paper, we propose a pipeline for fine-tuning and RAG, and present the tradeoffs of both for multiple popular LLMs, including Llama2-13B, GPT-3.5, and GPT-4. Our pipeline consists of multiple stages, including extracting information from PDFs, generating questions and answers, using them for fine-tuning, and leveraging GPT-4 for evaluating the results. We propose metrics to assess the performance of different stages of the RAG and fine-Tuning pipeline. We conduct an in-depth study on an agricultural dataset. Agriculture as an industry has not seen much penetration of AI, and we study a potentially disruptive application - what if we could provide location-specific insights to a farmer? Our results show the effectiveness of our dataset generation pipeline in capturing geographic-specific knowledge, and the quantitative and qualitative benefits of RAG and fine-tuning. We see an accuracy increase of over 6 p.p. when fine-tuning the model and this is cumulative with RAG, which increases accuracy by 5 p.p. further. In one particular experiment, we also demonstrate that the fine-tuned model leverages information from across geographies to answer specific questions, increasing answer similarity from 47% to 72%. Overall, the results point to how systems built using LLMs can be adapted to respond and incorporate knowledge across a dimension that is critical for a specific industry, paving the way for further applications of LLMs in other industrial domains.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2401.08458",
         "abstract url": "https://arxiv.org/abs/2401.08458",
         "title": "Security and Privacy Issues and Solutions in Federated Learning for Digital Healthcare",
@@ -5362,6 +5299,34 @@
             "cs.RO"
         ],
         "comment": "Under review"
+    },
+    {
+        "paper id": "2401.09495",
+        "abstract url": "https://arxiv.org/abs/2401.09495",
+        "title": "IPR-NeRF: Ownership Verification meets Neural Radiance Field",
+        "rating": -4,
+        "keywords": [
+            [
+                "NeRF"
+            ],
+            [
+                "diffusion"
+            ],
+            [
+                "attacks"
+            ],
+            [
+                "watermark"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Neural Radiance Field (NeRF) models have gained significant attention in the computer vision community in the recent past with state-of-the-art visual quality and produced impressive demonstrations. Since then, technopreneurs have sought to leverage NeRF models into a profitable business. Therefore, NeRF models make it worth the risk of plagiarizers illegally copying, re-distributing, or misusing those models. This paper proposes a comprehensive intellectual property (IP) protection framework for the NeRF model in both black-box and white-box settings, namely IPR-NeRF. In the black-box setting, a diffusion-based solution is introduced to embed and extract the watermark via a two-stage optimization process. In the white-box setting, a designated digital signature is embedded into the weights of the NeRF model by adopting the sign loss objective. Our extensive experiments demonstrate that not only does our approach maintain the fidelity (\\ie, the rendering quality) of IPR-NeRF models, but it is also robust against both ambiguity and removal attacks compared to prior arts.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Error on result tabulation of state of the art method which might cause misleading to readers"
     },
     {
         "paper id": "2401.08120",
@@ -5444,30 +5409,6 @@
         "abstract": "This paper introduces new model parameterizations for learning dynamical systems from data via the Koopman operator, and studies their properties. Whereas most existing works on Koopman learning do not take into account the stability or stabilizability of the model -- two fundamental pieces of prior knowledge about a given system to be identified -- in this paper, we propose new classes of Koopman models that have built-in guarantees of these properties. These models are guaranteed to be stable or stabilizable via a novel {\\em direct parameterization approach} that leads to {\\em unconstrained} optimization problems with respect to their parameter sets. To explore the representational flexibility of these model sets, we establish novel theoretical connections between the stability of discrete-time Koopman embedding and contraction-based forms of nonlinear stability and stabilizability. The proposed approach is illustrated in applications to stable nonlinear system identification and imitation learning via stabilizable models. Simulation results empirically show that the learning approaches based on the proposed models outperform prior methods lacking stability guarantees.",
         "subjects": [
             "eess.SY"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2401.08156",
-        "abstract url": "https://arxiv.org/abs/2401.08156",
-        "title": "GMLake: Efficient and Transparent GPU Memory Defragmentation for Large-scale DNN Training with Virtual Memory Stitching",
-        "rating": -10,
-        "keywords": [],
-        "abstract": "Large-scale deep neural networks (DNNs), such as large language models (LLMs), have revolutionized the artificial intelligence (AI) field and become increasingly popular. However, training or fine-tuning such models requires substantial computational power and resources, where the memory capacity of a single acceleration device like a GPU is one of the most important bottlenecks. Owing to the prohibitively large overhead (e.g., $10 \\times$) of GPUs' native memory allocator, DNN frameworks like PyTorch and TensorFlow adopt a caching allocator that maintains a memory pool with a splitting mechanism for fast memory (de)allocation. Unfortunately, the caching allocator's efficiency degrades quickly for popular memory reduction techniques such as recomputation, offloading, distributed training, and low-rank adaptation. The primary reason is that those memory reduction techniques introduce frequent and irregular memory (de)allocation requests, leading to severe fragmentation problems for the splitting-based caching allocator. To mitigate this fragmentation problem, we propose a novel memory allocation framework based on low-level GPU virtual memory management called GPU memory lake (GMLake). GMLake employs a novel virtual memory stitching (VMS) mechanism, which can fuse or combine non-contiguous memory blocks with a virtual memory address mapping. GMLake can reduce an average of 9.2 GB (up to 25 GB) GPU memory usage and 15% (up to 33% ) fragmentation among eight LLM models on GPU A100 with 80 GB memory. GMLake is completely transparent to the DNN models and memory reduction techniques and ensures the seamless execution of resource-intensive deep-learning tasks. We have open-sourced GMLake at https://github.com/intelligent-machine-learning/glake/tree/main/GMLake.",
-        "subjects": [
-            "cs.DC"
-        ],
-        "comment": "Accepted by ASPLOS24"
-    },
-    {
-        "paper id": "2401.08164",
-        "abstract url": "https://arxiv.org/abs/2401.08164",
-        "title": "EEG-based Cognitive Load Estimation of Acoustic Parameters for Data Sonification",
-        "rating": -10,
-        "keywords": [],
-        "abstract": "Sonification is a data visualization technique which expresses data attributes via psychoacoustic parameters, which are non-speech audio signals used to convey information. This paper investigates the binary estimation of cognitive load induced by psychoacoustic parameters conveying the focus level of an astronomical image via Electroencephalogram (EEG) embeddings. Employing machine learning and deep learning methodologies, we demonstrate that EEG signals are reliable for (a) binary estimation of cognitive load, (b) isolating easy vs difficult visual-to-auditory perceptual mappings, and (c) capturing perceptual similarities among psychoacoustic parameters. Our key findings reveal that (1) EEG embeddings can reliably measure cognitive load, achieving a peak F1-score of 0.98; (2) Extreme focus levels are easier to detect via auditory mappings than intermediate ones, and (3) psychoacoustic parameters inducing comparable cognitive load levels tend to generate similar EEG encodings.",
-        "subjects": [
-            "cs.HC"
         ],
         "comment": null
     },
@@ -5745,7 +5686,7 @@
         "subjects": [
             "cs.CC"
         ],
-        "comment": "20 pages"
+        "comment": "22 pages, revision of v1, presentation improved at several places and some minor errors corrected"
     },
     {
         "paper id": "2401.08376",
@@ -5928,16 +5869,16 @@
         "comment": "24 pages"
     },
     {
-        "paper id": "2401.08476",
-        "abstract url": "https://arxiv.org/abs/2401.08476",
-        "title": "Incentivizing Secure Software Development: The Role of Liability (Waiver) and Audit",
+        "paper id": "2401.08484",
+        "abstract url": "https://arxiv.org/abs/2401.08484",
+        "title": "Real-Time Dynamic Layout Optimization for Floating Offshore Wind Farm Control",
         "rating": -10,
         "keywords": [],
-        "abstract": "Misaligned incentives in secure software development have long been the focus of research in the economics of security. Product liability, a powerful legal framework in other industries, has been largely ineffective for software products until recent times. However, the rapid regulatory responses to recent global cyberattacks by both the United States and the European Union, together with the (relative) success of the General Data Protection Regulation in defining both duty and standard of care for software vendors, may just enable regulators to use liability to re-align incentives for the benefit of the digital society. Specifically, the recently proposed United States National Cybersecurity Strategy shifts responsibility for cyber incidents back to software vendors. In doing so, the strategy also puts forward the concept of the liability waiver: if a software company voluntarily undergoes and passes an IT security audit, its liability is waived. In this paper, we analyze this audit scenario from the aspect of the software vendor. We propose a mechanism where a software vendor should first undergo a repeated auditing process in each stage of which the vendor decides whether to quit early or stay with additional security investment. We show that the optimal strategy for an opt-in vendor is to never quit; and exert cumulative investments in either \"one-and-done\" or \"incremental\" manner. We relate the audit mechanism to a liability waiver insurance policy and revealed its effect on reshaping the vendor's risk perception. We also discuss influence of audit quality on the vendor's incentives and pinpoint that a desirable audit rule should be highly accurate and less strict.",
+        "abstract": "Downstream wind turbines operating behind upstream turbines face significant performance challenges due to reduced wind speeds and increased turbulence. This leads to decreased wind energy production and higher dynamic loads on downwind turbines. Consequently, real-time monitoring and control have become crucial for improving wind farm performance. One promising solution involves optimizing wind farm layouts in real-time, taking advantage of the added flexibility offered by floating offshore wind turbines (FOWTs). This study explores a dynamic layout optimization strategy to minimize wake effects in wind farms while meeting power requirements. Two scenarios are considered: power maximization and power set-point tracking. The methodology involves a centralized wind farm controller optimizing the layout, followed by wind turbine controllers to meet the prescribed targets. Each FOWT employs model predictive control to adjust aerodynamic thrust force. The control strategy integrates a dynamic wind farm model that considers floating platform motion and wake transport in changing wind conditions. In a case study with a 1x3 wind farm layout of 5 MW FOWTs, the results show a 25% increase in stable energy production compared to a static layout in one hour for the first scenario. In the second scenario, desired power production was swiftly and consistently achieved.",
         "subjects": [
-            "cs.CR"
+            "eess.SY"
         ],
-        "comment": "21 pages, 6 figures, submitted to the 23rd Workshop on the Economics of Information Security"
+        "comment": null
     },
     {
         "paper id": "2401.08506",
@@ -6036,6 +5977,18 @@
         "comment": "21 pages, 1 figure"
     },
     {
+        "paper id": "2401.08806",
+        "abstract url": "https://arxiv.org/abs/2401.08806",
+        "title": "Energy-adaptive Buffering for Efficient, Responsive, and Persistent Batteryless Systems",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "Batteryless energy harvesting systems enable a wide array of new sensing, computation, and communication platforms untethered by power delivery or battery maintenance demands. Energy harvesters charge a buffer capacitor from an unreliable environmental source until enough energy is stored to guarantee a burst of operation despite changes in power input. Current platforms use a fixed-size buffer chosen at design time to meet constraints on charge time or application longevity, but static energy buffers are a poor fit for the highly volatile power sources found in real-world deployments: fixed buffers waste energy both as heat when they reach capacity during a power surplus and as leakage when they fail to charge the system during a power deficit. To maximize batteryless system performance in the face of highly dynamic input power, we propose REACT: a responsive buffering circuit which varies total capacitance according to net input power. REACT uses a variable capacitor bank to expand capacitance to capture incoming energy during a power surplus and reconfigures internal capacitors to reclaim additional energy from each capacitor as power input falls. Compared to fixed-capacity systems, REACT captures more energy, maximizes usable energy, and efficiently decouples system voltage from stored charge -- enabling low-power and high-performance designs previously limited by ambient power. Our evaluation on real-world platforms shows that REACT eliminates the tradeoff between responsiveness, efficiency, and longevity, increasing the energy available for useful work by an average 25.6% over static buffers optimized for reactivity and capacity, improving event responsiveness by an average 7.7x without sacrificing capacity, and enabling programmer directed longevity guarantees.",
+        "subjects": [
+            "cs.AR"
+        ],
+        "comment": "13 pages, 12 figures"
+    },
+    {
         "paper id": "2401.08822",
         "abstract url": "https://arxiv.org/abs/2401.08822",
         "title": "An Empirical Study of Counterfactual Visualization to Support Visual Causal Inference",
@@ -6089,7 +6042,7 @@
         "title": "Evaluating the Utility of Conformal Prediction Sets for AI-Advised Image Labeling",
         "rating": -10,
         "keywords": [],
-        "abstract": "As deep neural networks are more commonly deployed in high-stakes domains, their black-box nature makes uncertainty quantification challenging. We investigate the effects of presenting conformal prediction sets--a distribution-free class of methods for generating prediction sets with specified coverage--to express uncertainty in AI-advised decision-making. Through a large online experiment, we compare the utility of conformal prediction sets to displays of Top-1 and Top-k predictions for AI-advised image labeling. In a pre-registered analysis, we find that the utility of prediction sets for accuracy varies with the difficulty of the task: while they result in accuracy on par with or less than Top-1 and Top-k displays for easy images, prediction sets excel at assisting humans in labeling out-of-distribution (OOD) images, especially when the set size is small. Our results empirically pinpoint practical challenges of conformal prediction sets and provide implications on how to incorporate them for real-world decision-making.",
+        "abstract": "As deep neural networks are more commonly deployed in high-stakes domains, their black-box nature makes uncertainty quantification challenging. We investigate the presentation of conformal prediction sets--a distribution-free class of methods for generating prediction sets with specified coverage--to express uncertainty in AI-advised decision-making. Through a large online experiment, we compare the utility of conformal prediction sets to displays of Top-1 and Top-k predictions for AI-advised image labeling. In a pre-registered analysis, we find that the utility of prediction sets for accuracy varies with the difficulty of the task: while they result in accuracy on par with or less than Top-1 and Top-k displays for easy images, prediction sets offer some advantage in assisting humans in labeling out-of-distribution (OOD) images in the setting that we studied, especially when the set size is small. Our results empirically pinpoint practical challenges of conformal prediction sets and provide implications on how to incorporate them for real-world decision-making.",
         "subjects": [
             "cs.HC"
         ],
@@ -6152,6 +6105,30 @@
         "abstract": "Recent years have witnessed an increasing number of artificial intelligence (AI) applications in transportation. As a new and emerging technology, AI's potential to advance transportation goals and the full extent of its impacts on the transportation sector is not yet well understood. As the transportation community explores these topics, it is critical to understand how transportation professionals, the driving force behind AI Transportation applications, perceive AI's potential efficiency and equity impacts. Toward this goal, we surveyed transportation professionals in the United States and collected a total of 354 responses. Based on the survey responses, we conducted both descriptive analysis and latent class cluster analysis (LCCA). The former provides an overview of prevalent attitudes among transportation professionals, while the latter allows the identification of distinct segments based on their latent attitudes toward AI. We find widespread optimism regarding AI's potential to improve many aspects of transportation (e.g., efficiency, cost reduction, and traveler experience); however, responses are mixed regarding AI's potential to advance equity. Moreover, many respondents are concerned that AI ethics are not well understood in the transportation community and that AI use in transportation could exaggerate existing inequalities. Through LCCA, we have identified four latent segments: AI Neutral, AI Optimist, AI Pessimist, and AI Skeptic. The latent class membership is significantly associated with respondents' age, education level, and AI knowledge level. Overall, the study results shed light on the extent to which the transportation community as a whole is ready to leverage AI systems to transform current practices and inform targeted education to improve the understanding of AI among transportation professionals.",
         "subjects": [
             "stat.AP"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2401.08935",
+        "abstract url": "https://arxiv.org/abs/2401.08935",
+        "title": "Privacy Protected Contactless Cardio-respiratory Monitoring using Defocused Cameras during Sleep",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "The monitoring of vital signs such as heart rate (HR) and respiratory rate (RR) during sleep is important for the assessment of sleep quality and detection of sleep disorders. Camera-based HR and RR monitoring gained popularity in sleep monitoring in recent years. However, they are all facing with serious privacy issues when using a video camera in the sleeping scenario. In this paper, we propose to use the defocused camera to measure vital signs from optically blurred images, which can fundamentally eliminate the privacy invasion as face is difficult to be identified in obtained blurry images. A spatial-redundant framework involving living-skin detection is used to extract HR and RR from the defocused camera in NIR, and a motion metric is designed to exclude outliers caused by body motions. In the benchmark, the overall Mean Absolute Error (MAE) for HR measurement is 4.4 bpm, for RR measurement is 5.9 bpm. Both have quality drops as compared to the measurement using a focused camera, but the degradation in HR is much less, i.e. HR measurement has strong correlation with the reference ($R \\geq 0.90$). Preliminary experiments suggest that it is feasible to use a defocused camera for cardio-respiratory monitoring while protecting the privacy. Further improvement is needed for robust RR measurement, such as by PPG-modulation based RR extraction.",
+        "subjects": [
+            "eess.SP"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2401.08947",
+        "abstract url": "https://arxiv.org/abs/2401.08947",
+        "title": "AntiPhishStack: LSTM-based Stacked Generalization Model for Optimized Phishing URL Detection",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "The escalating reliance on revolutionary online web services has introduced heightened security risks, with persistent challenges posed by phishing despite extensive security measures. Traditional phishing systems, reliant on machine learning and manual features, struggle with evolving tactics. Recent advances in deep learning offer promising avenues for tackling novel phishing challenges and malicious URLs. This paper introduces a two-phase stack generalized model named AntiPhishStack, designed to detect phishing sites. The model leverages the learning of URLs and character-level TF-IDF features symmetrically, enhancing its ability to combat emerging phishing threats. In Phase I, features are trained on a base machine learning classifier, employing K-fold cross-validation for robust mean prediction. Phase II employs a two-layered stacked-based LSTM network with five adaptive optimizers for dynamic compilation, ensuring premier prediction on these features. Additionally, the symmetrical predictions from both phases are optimized and integrated to train a meta-XGBoost classifier, contributing to a final robust prediction. The significance of this work lies in advancing phishing detection with AntiPhishStack, operating without prior phishing-specific feature knowledge. Experimental validation on two benchmark datasets, comprising benign and phishing or malicious URLs, demonstrates the model's exceptional performance, achieving a notable 96.04% accuracy compared to existing studies. This research adds value to the ongoing discourse on symmetry and asymmetry in information security and provides a forward-thinking solution for enhancing network security in the face of evolving cyber threats.",
+        "subjects": [
+            "cs.CR"
         ],
         "comment": null
     },

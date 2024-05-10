@@ -33,11 +33,11 @@
                 "cs.CL"
             ]
         ],
-        "abstract": "Among the widely used parameter-efficient finetuning (PEFT) methods, LoRA and its variants have gained considerable popularity because of avoiding additional inference costs. However, there still often exists an accuracy gap between these methods and full fine-tuning (FT). In this work, we first introduce a novel weight decomposition analysis to investigate the inherent differences between FT and LoRA. Aiming to resemble the learning capacity of FT from the findings, we propose Weight-Decomposed LowRank Adaptation (DoRA). DoRA decomposes the pre-trained weight into two components, magnitude and direction, for fine-tuning, specifically employing LoRA for directional updates to efficiently minimize the number of trainable parameters. By employing DoRA, we enhance both the learning capacity and training stability of LoRA while avoiding any additional inference overhead. DoRA consistently outperforms LoRA on fine-tuning LLaMA, LLaVA, and VL-BART on various downstream tasks, such as commonsense reasoning, visual instruction tuning, and image/video-text understanding.",
+        "abstract": "Among the widely used parameter-efficient finetuning (PEFT) methods, LoRA and its variants have gained considerable popularity because of avoiding additional inference costs. However, there still often exists an accuracy gap between these methods and full fine-tuning (FT). In this work, we first introduce a novel weight decomposition analysis to investigate the inherent differences between FT and LoRA. Aiming to resemble the learning capacity of FT from the findings, we propose Weight-Decomposed LowRank Adaptation (DoRA). DoRA decomposes the pre-trained weight into two components, magnitude and direction, for fine-tuning, specifically employing LoRA for directional updates to efficiently minimize the number of trainable parameters. By employing DoRA, we enhance both the learning capacity and training stability of LoRA while avoiding any additional inference overhead. DoRA consistently outperforms LoRA on fine-tuning LLaMA, LLaVA, and VL-BART on various downstream tasks, such as commonsense reasoning, visual instruction tuning, and image/video-text understanding. Code available at https://github.com/NVlabs/DoRA.",
         "subjects": [
             "cs.CL"
         ],
-        "comment": "Code available at https://github.com/nbasyl/DoRA"
+        "comment": "Code available at https://github.com/NVlabs/DoRA"
     },
     {
         "paper id": "2402.09608",
@@ -83,6 +83,25 @@
         "comment": null
     },
     {
+        "paper id": "2402.09164",
+        "abstract url": "https://arxiv.org/abs/2402.09164",
+        "title": "Less is More: Fewer Interpretable Region via Submodular Subset Selection",
+        "rating": 1.5,
+        "keywords": [
+            [
+                "cs.CV"
+            ],
+            [
+                "ICLR"
+            ]
+        ],
+        "abstract": "Image attribution algorithms aim to identify important regions that are highly relevant to model decisions. Although existing attribution solutions can effectively assign importance to target elements, they still face the following challenges: 1) existing attribution methods generate inaccurate small regions thus misleading the direction of correct attribution, and 2) the model cannot produce good attribution results for samples with wrong predictions. To address the above challenges, this paper re-models the above image attribution problem as a submodular subset selection problem, aiming to enhance model interpretability using fewer regions. To address the lack of attention to local regions, we construct a novel submodular function to discover more accurate small interpretation regions. To enhance the attribution effect for all samples, we also impose four different constraints on the selection of sub-regions, i.e., confidence, effectiveness, consistency, and collaboration scores, to assess the importance of various subsets. Moreover, our theoretical analysis substantiates that the proposed function is in fact submodular. Extensive experiments show that the proposed method outperforms SOTA methods on two face datasets (Celeb-A and VGG-Face2) and one fine-grained dataset (CUB-200-2011). For correctly predicted samples, the proposed method improves the Deletion and Insertion scores with an average of 4.9% and 2.5% gain relative to HSIC-Attribution. For incorrectly predicted samples, our method achieves gains of 81.0% and 18.4% compared to the HSIC-Attribution algorithm in the average highest confidence and Insertion score respectively. The code is released at https://github.com/RuoyuChen10/SMDL-Attribution.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Accepted to ICLR 2024 (Oral)"
+    },
+    {
         "paper id": "2402.09245",
         "abstract url": "https://arxiv.org/abs/2402.09245",
         "title": "Overview of the L3DAS23 Challenge on Audio-Visual Extended Reality",
@@ -117,6 +136,7 @@
                 "cs.CV"
             ],
             [
+                "Workshop",
                 "ICLR"
             ]
         ],
@@ -136,6 +156,7 @@
                 "cs.CL"
             ],
             [
+                "Workshop",
                 "AAAI"
             ]
         ],
@@ -199,6 +220,25 @@
             "cs.CL"
         ],
         "comment": "8 pages, 4 figures, 5 tables, 7 pages of appendix with 9 additional tables"
+    },
+    {
+        "paper id": "2402.08998",
+        "abstract url": "https://arxiv.org/abs/2402.08998",
+        "title": "Nearly Minimax Optimal Regret for Learning Linear Mixture Stochastic Shortest Path",
+        "rating": 1.0,
+        "keywords": [
+            [
+                "cs.LG"
+            ],
+            [
+                "ICML"
+            ]
+        ],
+        "abstract": "We study the Stochastic Shortest Path (SSP) problem with a linear mixture transition kernel, where an agent repeatedly interacts with a stochastic environment and seeks to reach certain goal state while minimizing the cumulative cost. Existing works often assume a strictly positive lower bound of the cost function or an upper bound of the expected length for the optimal policy. In this paper, we propose a new algorithm to eliminate these restrictive assumptions. Our algorithm is based on extended value iteration with a fine-grained variance-aware confidence set, where the variance is estimated recursively from high-order moments. Our algorithm achieves an $\\tilde{\\mathcal O}(dB_*\\sqrt{K})$ regret bound, where $d$ is the dimension of the feature mapping in the linear transition kernel, $B_*$ is the upper bound of the total cumulative cost for the optimal policy, and $K$ is the number of episodes. Our regret upper bound matches the $\u03a9(dB_*\\sqrt{K})$ lower bound of linear mixture SSPs in Min et al. (2022), which suggests that our algorithm is nearly minimax optimal.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": "28 pages, 1 figure, In ICML 2023"
     },
     {
         "paper id": "2402.09001",
@@ -428,36 +468,36 @@
         "comment": "26 pages, 5 tables, 6 figures"
     },
     {
-        "paper id": "2402.09211",
-        "abstract url": "https://arxiv.org/abs/2402.09211",
-        "title": "DivaTrack: Diverse Bodies and Motions from Acceleration-Enhanced Three-Point Trackers",
-        "rating": 1,
-        "keywords": [
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Full-body avatar presence is crucial for immersive social and environmental interactions in digital reality. However, current devices only provide three six degrees of freedom (DOF) poses from the headset and two controllers (i.e. three-point trackers). Because it is a highly under-constrained problem, inferring full-body pose from these inputs is challenging, especially when supporting the full range of body proportions and use cases represented by the general population. In this paper, we propose a deep learning framework, DivaTrack, which outperforms existing methods when applied to diverse body sizes and activities. We augment the sparse three-point inputs with linear accelerations from Inertial Measurement Units (IMU) to improve foot contact prediction. We then condition the otherwise ambiguous lower-body pose with the predictions of foot contact and upper-body pose in a two-stage model. We further stabilize the inferred full-body pose in a wide range of configurations by learning to blend predictions that are computed in two reference frames, each of which is designed for different types of motions. We demonstrate the effectiveness of our design on a large dataset that captures 22 subjects performing challenging locomotion for three-point tracking, including lunges, hula-hooping, and sitting. As shown in a live demo using the Meta VR headset and Xsens IMUs, our method runs in real-time while accurately tracking a user's motion when they perform a diverse set of movements.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "accepted to Eurographics 2024"
-    },
-    {
         "paper id": "2402.09216",
         "abstract url": "https://arxiv.org/abs/2402.09216",
-        "title": "Scaling the Authoring of AutoTutors with Large Language Models",
+        "title": "AutoTutor meets Large Language Models: A Language Model Tutor with Rich Pedagogy and Guardrails",
         "rating": 1,
         "keywords": [
             [
                 "cs.CL"
             ]
         ],
-        "abstract": "Large Language Models (LLMs) have found several use cases in education, ranging from automatic question generation to essay evaluation. In this paper, we explore the potential of using Large Language Models (LLMs) to author Intelligent Tutoring Systems. A common pitfall of LLMs is their straying from desired pedagogical strategies such as leaking the answer to the student, and in general, providing no guarantees. We posit that while LLMs with certain guardrails can take the place of subject experts, the overall pedagogical design still needs to be handcrafted for the best learning results. Based on this principle, we create a sample end-to-end tutoring system named MWPTutor, which uses LLMs to fill in the state space of a pre-defined finite state transducer. This approach retains the structure and the pedagogy of traditional tutoring systems that has been developed over the years by learning scientists but brings in additional flexibility of LLM-based approaches. Through a human evaluation study on two datasets based on math word problems, we show that our hybrid approach achieves a better overall tutoring score than an instructed, but otherwise free-form, GPT-4. MWPTutor is completely modular and opens up the scope for the community to improve its performance by improving individual modules or using different teaching strategies that it can follow",
+        "abstract": "Large Language Models (LLMs) have found several use cases in education, ranging from automatic question generation to essay evaluation. In this paper, we explore the potential of using Large Language Models (LLMs) to author Intelligent Tutoring Systems. A common pitfall of LLMs is their straying from desired pedagogical strategies such as leaking the answer to the student, and in general, providing no guarantees. We posit that while LLMs with certain guardrails can take the place of subject experts, the overall pedagogical design still needs to be handcrafted for the best learning results. Based on this principle, we create a sample end-to-end tutoring system named MWPTutor, which uses LLMs to fill in the state space of a pre-defined finite state transducer. This approach retains the structure and the pedagogy of traditional tutoring systems that has been developed over the years by learning scientists but brings in additional flexibility of LLM-based approaches. Through a human evaluation study on two datasets based on math word problems, we show that our hybrid approach achieves a better overall tutoring score than an instructed, but otherwise free-form, GPT-4. MWPTutor is completely modular and opens up the scope for the community to improve its performance by improving individual modules or using different teaching strategies that it can follow.",
         "subjects": [
             "cs.CL"
         ],
-        "comment": "15 pages"
+        "comment": "To be presented at Learning@Scale 2024"
+    },
+    {
+        "paper id": "2402.09225",
+        "abstract url": "https://arxiv.org/abs/2402.09225",
+        "title": "Is my Data in your AI Model? Membership Inference Test with Application to Face Images",
+        "rating": 1,
+        "keywords": [
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "This paper introduces the Membership Inference Test (MINT), a novel approach that aims to empirically assess if specific data was used during the training of Artificial Intelligence (AI) models. Specifically, we propose two novel MINT architectures designed to learn the distinct activation patterns that emerge when an audited model is exposed to data used during its training process. The first architecture is based on a Multilayer Perceptron (MLP) network and the second one is based on Convolutional Neural Networks (CNNs). The proposed MINT architectures are evaluated on a challenging face recognition task, considering three state-of-the-art face recognition models. Experiments are carried out using six publicly available databases, comprising over 22 million face images in total. Also, different experimental scenarios are considered depending on the context available of the AI model to test. Promising results, up to 90% accuracy, are achieved using our proposed MINT approach, suggesting that it is possible to recognize if an AI model has been trained with specific data.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "10 pages"
     },
     {
         "paper id": "2402.09241",
@@ -533,6 +573,7 @@
                 "cs.LG"
             ],
             [
+                "Workshop",
                 "AAAI"
             ]
         ],
@@ -621,6 +662,22 @@
             "cs.CL"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2402.09369",
+        "abstract url": "https://arxiv.org/abs/2402.09369",
+        "title": "Massively Multi-Cultural Knowledge Acquisition & LM Benchmarking",
+        "rating": 1,
+        "keywords": [
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Pretrained large language models have revolutionized many applications but still face challenges related to cultural bias and a lack of cultural commonsense knowledge crucial for guiding cross-culture communication and interactions. Recognizing the shortcomings of existing methods in capturing the diverse and rich cultures across the world, this paper introduces a novel approach for massively multicultural knowledge acquisition. Specifically, our method strategically navigates from densely informative Wikipedia documents on cultural topics to an extensive network of linked pages. Leveraging this valuable source of data collection, we construct the CultureAtlas dataset, which covers a wide range of sub-country level geographical regions and ethnolinguistic groups, with data cleaning and preprocessing to ensure textual assertion sentence self-containment, as well as fine-grained cultural profile information extraction. Our dataset not only facilitates the evaluation of language model performance in culturally diverse contexts but also serves as a foundational tool for the development of culturally sensitive and aware language models. Our work marks an important step towards deeper understanding and bridging the gaps of cultural disparities in AI, to promote a more inclusive and balanced representation of global cultures in the digital domain.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": "preprint"
     },
     {
         "paper id": "2402.09378",
@@ -893,22 +950,6 @@
         "comment": null
     },
     {
-        "paper id": "2402.08998",
-        "abstract url": "https://arxiv.org/abs/2402.08998",
-        "title": "Nearly Minimax Optimal Regret for Learning Linear Mixture Stochastic Shortest Path",
-        "rating": 0.5,
-        "keywords": [
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "We study the Stochastic Shortest Path (SSP) problem with a linear mixture transition kernel, where an agent repeatedly interacts with a stochastic environment and seeks to reach certain goal state while minimizing the cumulative cost. Existing works often assume a strictly positive lower bound of the cost function or an upper bound of the expected length for the optimal policy. In this paper, we propose a new algorithm to eliminate these restrictive assumptions. Our algorithm is based on extended value iteration with a fine-grained variance-aware confidence set, where the variance is estimated recursively from high-order moments. Our algorithm achieves an $\\tilde{\\mathcal O}(dB_*\\sqrt{K})$ regret bound, where $d$ is the dimension of the feature mapping in the linear transition kernel, $B_*$ is the upper bound of the total cumulative cost for the optimal policy, and $K$ is the number of episodes. Our regret upper bound matches the $\u03a9(dB_*\\sqrt{K})$ lower bound of linear mixture SSPs in Min et al. (2022), which suggests that our algorithm is nearly minimax optimal.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": "28 pages, 1 figure, In ICML 2023"
-    },
-    {
         "paper id": "2402.09043",
         "abstract url": "https://arxiv.org/abs/2402.09043",
         "title": "Under manipulations, are some AI models harder to audit?",
@@ -1046,7 +1087,7 @@
                 "cs.AI"
             ]
         ],
-        "abstract": "Probabilistic circuits compute multilinear polynomials that represent probability distributions. They are tractable models that support efficient marginal inference. However, various polynomial semantics have been considered in the literature (e.g., network polynomials, likelihood polynomials, generating functions, Fourier transforms, and characteristic polynomials). The relationships between these polynomial encodings of distributions is largely unknown. In this paper, we prove that for binary distributions, each of these probabilistic circuit models is equivalent in the sense that any circuit for one of them can be transformed into a circuit for any of the others with only a polynomial increase in size. They are therefore all tractable for marginal inference on the same class of distributions. Finally, we explore the natural extension of one such polynomial semantics, called probabilistic generating circuits, to categorical random variables, and establish that marginal inference becomes #P-hard.",
+        "abstract": "Probabilistic circuits compute multilinear polynomials that represent multivariate probability distributions. They are tractable models that support efficient marginal inference. However, various polynomial semantics have been considered in the literature (e.g., network polynomials, likelihood polynomials, generating functions, and Fourier transforms). The relationships between circuit representations of these polynomial encodings of distributions is largely unknown. In this paper, we prove that for distributions over binary variables, each of these probabilistic circuit models is equivalent in the sense that any circuit for one of them can be transformed into a circuit for any of the others with only a polynomial increase in size. They are therefore all tractable for marginal inference on the same class of distributions. Finally, we explore the natural extension of one such polynomial semantics, called probabilistic generating circuits, to categorical random variables, and establish that inference becomes #P-hard.",
         "subjects": [
             "cs.AI"
         ],
@@ -1261,6 +1302,22 @@
         "comment": null
     },
     {
+        "paper id": "2402.09219",
+        "abstract url": "https://arxiv.org/abs/2402.09219",
+        "title": "A case study of university student networks and the COVID-19 pandemic using a social network analysis approach in halls of residence",
+        "rating": 0.5,
+        "keywords": [
+            [
+                "cs.CY"
+            ]
+        ],
+        "abstract": "The COVID-19 pandemic has meant that young university students have had to adapt their learning and have a reduced relational context. Adversity contexts build models of human behaviour based on relationships. However, there is a lack of studies that analyse the behaviour of university students based on their social structure in the context of a pandemic. This information could be useful in making decisions on how to plan collective responses to adversities. The Social Network Analysis (SNA) method has been chosen to address this structural perspective. The aim of our research is to describe the structural behaviour of students in university residences during the COVID-19 pandemic with a more in-depth analysis of student leaders. A descriptive cross-sectional study was carried out at one Spanish Public University, Le\u00f3n, from 23th October 2020 to 20th November 2020. The participation was of 93 students, from four halls of residence. The data were collected from a database created specifically at the university to \"track\" contacts in the COVID-19 pandemic, SiVeUle. We applied the SNA for the analysis of the data. The leadership on the university residence was measured using centrality measures. The top leaders were analyzed using the Egonetwork and an assessment of the key players. Students with higher social reputations experience higher levels of pandemic contagion in relation to COVID-19 infection. The results were statistically significant between the centrality in the network and the results of the COVID-19 infection. The most leading students showed a high degree of Betweenness, and three students had the key player structure in the network. Networking behaviour of university students in halls of residence could be related to contagion in the COVID-19 pandemic.",
+        "subjects": [
+            "cs.CY"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2402.09221",
         "abstract url": "https://arxiv.org/abs/2402.09221",
         "title": "Spectral Filters, Dark Signals, and Attention Sinks",
@@ -1428,6 +1485,22 @@
         "comment": "44 Pages"
     },
     {
+        "paper id": "2402.09334",
+        "abstract url": "https://arxiv.org/abs/2402.09334",
+        "title": "AuditLLM: A Tool for Auditing Large Language Models Using Multiprobe Approach",
+        "rating": 0.5,
+        "keywords": [
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "As Large Language Models (LLMs) gain wider adoption in various contexts, it becomes crucial to ensure they are reasonably safe, consistent, and reliable for an application at hand. This may require probing or auditing them. Probing LLMs with varied iterations of a single question could reveal potential inconsistencies in their knowledge or functionality. However, a tool for performing such audits with simple workflow and low technical threshold is lacking. In this demo, we introduce \"AuditLLM,\" a novel tool designed to evaluate the performance of various LLMs in a methodical way. AuditLLM's core functionality lies in its ability to test a given LLM by auditing it using multiple probes generated from a single question, thereby identifying any inconsistencies in the model's understanding or operation. A reasonably robust, reliable, and consistent LLM should output semantically similar responses for a question asked differently or by different people. Based on this assumption, AuditLLM produces easily interpretable results regarding the LLM's consistencies from a single question that the user enters. A certain level of inconsistency has been shown to be an indicator of potential bias, hallucinations, and other issues. One could then use the output of AuditLLM to further investigate issues with the aforementioned LLM. To facilitate demonstration and practical uses, AuditLLM offers two key modes: (1) Live mode which allows instant auditing of LLMs by analyzing responses to real-time queries; (2) Batch mode which facilitates comprehensive LLM auditing by processing multiple queries at once for in-depth analysis. This tool is beneficial for both researchers and general users, as it enhances our understanding of LLMs' capabilities in generating responses, using a standardized auditing platform.",
+        "subjects": [
+            "cs.AI"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2402.09345",
         "abstract url": "https://arxiv.org/abs/2402.09345",
         "title": "Mitigating Reward Hacking via Information-Theoretic Reward Modeling",
@@ -1506,22 +1579,6 @@
             "cs.AI"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2402.09391",
-        "abstract url": "https://arxiv.org/abs/2402.09391",
-        "title": "LlaSMol: Advancing Large Language Models for Chemistry with a Large-Scale, Comprehensive, High-Quality Instruction Tuning Dataset",
-        "rating": 0.5,
-        "keywords": [
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "Chemistry plays a crucial role in many domains, such as drug discovery and material science. While large language models (LLMs) such as GPT-4 exhibit remarkable capabilities on natural language processing tasks, existing research indicates that their performance on chemistry tasks is discouragingly low. In this paper, however, we demonstrate that our developed LLMs can achieve very strong results on a comprehensive set of chemistry tasks, outperforming the most advanced GPT-4 and Claude 3 Opus by a substantial margin. To accomplish this, we propose SMolInstruct, a large-scale, comprehensive, and high-quality dataset for instruction tuning. It contains 14 selected chemistry tasks and over three million samples, laying a solid foundation for training and evaluating LLMs for chemistry. Using SMolInstruct, we fine-tune a set of open-source LLMs, among which, we find that Mistral serves as the best base model for chemistry tasks. Our analysis further demonstrates the critical role of the proposed dataset in driving the performance improvements.",
-        "subjects": [
-            "cs.AI"
-        ],
-        "comment": "Added further analysis experiments. Work in progress"
     },
     {
         "paper id": "2402.09401",
@@ -1892,6 +1949,25 @@
         "comment": null
     },
     {
+        "paper id": "2402.09211",
+        "abstract url": "https://arxiv.org/abs/2402.09211",
+        "title": "DivaTrack: Diverse Bodies and Motions from Acceleration-Enhanced Three-Point Trackers",
+        "rating": 0,
+        "keywords": [
+            [
+                "avatar"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Full-body avatar presence is crucial for immersive social and environmental interactions in digital reality. However, current devices only provide three six degrees of freedom (DOF) poses from the headset and two controllers (i.e. three-point trackers). Because it is a highly under-constrained problem, inferring full-body pose from these inputs is challenging, especially when supporting the full range of body proportions and use cases represented by the general population. In this paper, we propose a deep learning framework, DivaTrack, which outperforms existing methods when applied to diverse body sizes and activities. We augment the sparse three-point inputs with linear accelerations from Inertial Measurement Units (IMU) to improve foot contact prediction. We then condition the otherwise ambiguous lower-body pose with the predictions of foot contact and upper-body pose in a two-stage model. We further stabilize the inferred full-body pose in a wide range of configurations by learning to blend predictions that are computed in two reference frames, each of which is designed for different types of motions. We demonstrate the effectiveness of our design on a large dataset that captures 22 subjects performing challenging locomotion for three-point tracking, including lunges, hula-hooping, and sitting. As shown in a live demo using the Meta VR headset and Xsens IMUs, our method runs in real-time while accurately tracking a user's motion when they perform a diverse set of movements.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "accepted to Eurographics 2024"
+    },
+    {
         "paper id": "2402.09257",
         "abstract url": "https://arxiv.org/abs/2402.09257",
         "title": "TDViT: Temporal Dilated Video Transformer for Dense Video Tasks",
@@ -2030,6 +2106,25 @@
         "comment": null
     },
     {
+        "paper id": "2402.09530",
+        "abstract url": "https://arxiv.org/abs/2402.09530",
+        "title": "Reducing Texture Bias of Deep Neural Networks via Edge Enhancing Diffusion",
+        "rating": 0,
+        "keywords": [
+            [
+                "Diffusion"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Convolutional neural networks (CNNs) for image processing tend to focus on localized texture patterns, commonly referred to as texture bias. While most of the previous works in the literature focus on the task of image classification, we go beyond this and study the texture bias of CNNs in semantic segmentation. In this work, we propose to train CNNs on pre-processed images with less texture to reduce the texture bias. Therein, the challenge is to suppress image texture while preserving shape information. To this end, we utilize edge enhancing diffusion (EED), an anisotropic image diffusion method initially introduced for image compression, to create texture reduced duplicates of existing datasets. Extensive numerical studies are performed with both CNNs and vision transformer models trained on original data and EED-processed data from the Cityscapes dataset and the CARLA driving simulator. We observe strong texture-dependence of CNNs and moderate texture-dependence of transformers. Training CNNs on EED-processed images enables the models to become completely ignorant with respect to texture, demonstrating resilience with respect to texture re-introduction to any degree. Additionally we analyze the performance reduction in depth on a level of connected components in the semantic segmentation and study the influence of EED pre-processing on domain generalization as well as adversarial robustness.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2402.09666",
         "abstract url": "https://arxiv.org/abs/2402.09666",
         "title": "EntailE: Introducing Textual Entailment in Commonsense Knowledge Graph Completion",
@@ -2115,7 +2210,8 @@
         "rating": -0.5,
         "keywords": [
             [
-                "workshop"
+                "workshop",
+                "Workshop"
             ]
         ],
         "abstract": "In October 2023, arXiv made HTML formatted papers available to readers. This was the exciting outcome of over a year of accessibility research and development with the scientific community. Currently, only 2.4% of research outputs meet accessibility guidelines. Informed by scientists who rely on assistive technology, our analysis demonstrates that offering HTML is the most impactful step arXiv can take. Scientists need HTML now, and emphasize to not let perfect be the enemy of good enough. In this paper we share with you how arXiv is achieving HTML conversions from LaTeX now, and our plans for future improvements.",
@@ -2123,6 +2219,25 @@
             "cs.DL"
         ],
         "comment": "The 5th International Workshop on \"Digitization and E-Inclusion in Mathematics and Science 2024\" (DEIMS2024). https://workshop.sciaccess.net/deims2024/"
+    },
+    {
+        "paper id": "2402.08957",
+        "abstract url": "https://arxiv.org/abs/2402.08957",
+        "title": "MUSTARD: Mastering Uniform Synthesis of Theorem and Proof Data",
+        "rating": -0.5,
+        "keywords": [
+            [
+                "Synthesis"
+            ],
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "Recent large language models (LLMs) have witnessed significant advancement in various tasks, including mathematical reasoning and theorem proving. As these two tasks require strict and formal multi-step inference, they are appealing domains for exploring the reasoning ability of LLMs but still face important challenges. Previous studies such as Chain-of-Thought (CoT) have revealed the effectiveness of intermediate steps guidance. However, such step-wise annotation requires heavy labor, leading to insufficient training steps for current benchmarks. To fill this gap, this work introduces MUSTARD, a data generation framework that masters uniform synthesis of theorem and proof data of high quality and diversity. MUSTARD synthesizes data in three stages: (1) It samples a few mathematical concept seeds as the problem category. (2) Then, it prompts a generative language model with the sampled concepts to obtain both the problems and their step-wise formal solutions. (3) Lastly, the framework utilizes a proof assistant (e.g., Lean Prover) to filter the valid proofs. With the proposed MUSTARD, we present a theorem-and-proof benchmark MUSTARDSAUCE with 5,866 valid data points. Each data point contains an informal statement, an informal proof, and a translated formal proof that passes the prover validation. We perform extensive analysis and demonstrate that MUSTARD generates validated high-quality step-by-step data. We further apply the MUSTARDSAUCE for fine-tuning smaller language models. The fine-tuned Llama 2-7B achieves a 15.41% average relative performance gain in automated theorem proving, and 8.18% in math word problems. Codes and data are available at https://github.com/Eleanor-H/MUSTARD.",
+        "subjects": [
+            "cs.AI"
+        ],
+        "comment": null
     },
     {
         "paper id": "2402.08975",
@@ -2261,28 +2376,6 @@
         "comment": null
     },
     {
-        "paper id": "2402.09164",
-        "abstract url": "https://arxiv.org/abs/2402.09164",
-        "title": "Less is More: Fewer Interpretable Region via Submodular Subset Selection",
-        "rating": -0.5,
-        "keywords": [
-            [
-                "face"
-            ],
-            [
-                "cs.CV"
-            ],
-            [
-                "ICLR"
-            ]
-        ],
-        "abstract": "Image attribution algorithms aim to identify important regions that are highly relevant to model decisions. Although existing attribution solutions can effectively assign importance to target elements, they still face the following challenges: 1) existing attribution methods generate inaccurate small regions thus misleading the direction of correct attribution, and 2) the model cannot produce good attribution results for samples with wrong predictions. To address the above challenges, this paper re-models the above image attribution problem as a submodular subset selection problem, aiming to enhance model interpretability using fewer regions. To address the lack of attention to local regions, we construct a novel submodular function to discover more accurate small interpretation regions. To enhance the attribution effect for all samples, we also impose four different constraints on the selection of sub-regions, i.e., confidence, effectiveness, consistency, and collaboration scores, to assess the importance of various subsets. Moreover, our theoretical analysis substantiates that the proposed function is in fact submodular. Extensive experiments show that the proposed method outperforms SOTA methods on two face datasets (Celeb-A and VGG-Face2) and one fine-grained dataset (CUB-200-2011). For correctly predicted samples, the proposed method improves the Deletion and Insertion scores with an average of 4.9% and 2.5% gain relative to HSIC-Attribution. For incorrectly predicted samples, our method achieves gains of 81.0% and 18.4% compared to the HSIC-Attribution algorithm in the average highest confidence and Insertion score respectively. The code is released at https://github.com/RuoyuChen10/SMDL-Attribution.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Accepted to ICLR 2024 (Oral)"
-    },
-    {
         "paper id": "2402.09165",
         "abstract url": "https://arxiv.org/abs/2402.09165",
         "title": "Unifying Invariance and Spuriousity for Graph Out-of-Distribution via Probability of Necessity and Sufficiency",
@@ -2338,25 +2431,6 @@
             "cs.LG"
         ],
         "comment": "29 pages"
-    },
-    {
-        "paper id": "2402.09219",
-        "abstract url": "https://arxiv.org/abs/2402.09219",
-        "title": "A case study of university student networks and the COVID-19 pandemic using a social network analysis approach in halls of residence",
-        "rating": -0.5,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "cs.CY"
-            ]
-        ],
-        "abstract": "The COVID-19 pandemic has meant that young university students have had to adapt their learning and have a reduced relational context. Adversity contexts build models of human behaviour based on relationships. However, there is a lack of studies that analyse the behaviour of university students based on their social structure in the context of a pandemic. This information could be useful in making decisions on how to plan collective responses to adversities. The Social Network Analysis (SNA) method has been chosen to address this structural perspective. The aim of our research is to describe the structural behaviour of students in university residences during the COVID-19 pandemic with a more in-depth analysis of student leaders. A descriptive cross-sectional study was carried out at one Spanish Public University, Le\u00f3n, from 23th October 2020 to 20th November 2020. The participation was of 93 students, from four halls of residence. The data were collected from a database created specifically at the university to \"track\" contacts in the COVID-19 pandemic, SiVeUle. We applied the SNA for the analysis of the data. The leadership on the university residence was measured using centrality measures. The top leaders were analyzed using the Egonetwork and an assessment of the key players. Students with higher social reputations experience higher levels of pandemic contagion in relation to COVID-19 infection. The results were statistically significant between the centrality in the network and the results of the COVID-19 infection. The most leading students showed a high degree of Betweenness, and three students had the key player structure in the network. Networking behaviour of university students in halls of residence could be related to contagion in the COVID-19 pandemic.",
-        "subjects": [
-            "cs.CY"
-        ],
-        "comment": null
     },
     {
         "paper id": "2402.09230",
@@ -2452,25 +2526,6 @@
         "comment": null
     },
     {
-        "paper id": "2402.09334",
-        "abstract url": "https://arxiv.org/abs/2402.09334",
-        "title": "AuditLLM: A Tool for Auditing Large Language Models Using Multiprobe Approach",
-        "rating": -0.5,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "As Large Language Models (LLMs) gain wider adoption in various contexts, it becomes crucial to ensure they are reasonably safe, consistent, and reliable for an application at hand. This may require probing or auditing them. Probing LLMs with varied iterations of a single question could reveal potential inconsistencies in their knowledge or functionality. However, a tool for performing such audits with simple workflow and low technical threshold is lacking. In this demo, we introduce \"AuditLLM,\" a novel tool designed to evaluate the performance of various LLMs in a methodical way. AuditLLM's core functionality lies in its ability to test a given LLM by auditing it using multiple probes generated from a single question, thereby identifying any inconsistencies in the model's understanding or operation. A reasonably robust, reliable, and consistent LLM should output semantically similar responses for a question asked differently or by different people. Based on this assumption, AuditLLM produces easily interpretable results regarding the LLM's consistencies from a single question that the user enters. A certain level of inconsistency has been shown to be an indicator of potential bias, hallucinations, and other issues. One could then use the output of AuditLLM to further investigate issues with the aforementioned LLM. To facilitate demonstration and practical uses, AuditLLM offers two key modes: (1) Live mode which allows instant auditing of LLMs by analyzing responses to real-time queries; (2) Batch mode which facilitates comprehensive LLM auditing by processing multiple queries at once for in-depth analysis. This tool is beneficial for both researchers and general users, as it enhances our understanding of LLMs' capabilities in generating responses, using a standardized auditing platform.",
-        "subjects": [
-            "cs.AI"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2402.09390",
         "abstract url": "https://arxiv.org/abs/2402.09390",
         "title": "HGOT: Hierarchical Graph of Thoughts for Retrieval-Augmented In-Context Learning in Factuality Evaluation",
@@ -2507,6 +2562,22 @@
             "cs.LG"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2402.09528",
+        "abstract url": "https://arxiv.org/abs/2402.09528",
+        "title": "Help Me to Understand this Commit! -- A Vision for Contextualized Code Reviews",
+        "rating": -0.5,
+        "keywords": [
+            [
+                "Workshop"
+            ]
+        ],
+        "abstract": "Background: Modern Code Review (MCR) is a key component for delivering high-quality software and sharing knowledge among developers. Effective reviews require an in-depth understanding of the code and demand from the reviewers to contextualize the change from different perspectives. Aim: While there is a plethora of research on solutions that support developers to understand changed code, we have observed that many provide only narrow, specialized insights and very few aggregate information in a meaningful manner. Therefore, we aim to provide a vision of improving code understanding in MCR. Method: We classified 53 research papers suggesting proposals to improve MCR code understanding. We use this classification, the needs expressed by code reviewers from previous research, and the information we have not found in the literature for extrapolation. Results: We identified four major types of support systems and suggest an environment for contextualized code reviews. Furthermore, we illustrate with a set of scenarios how such an environment would improve the effectiveness of code reviews. Conclusions: Current research focuses mostly on providing narrow support for developers. We outline a vision for how MCR can be improved by using context and reducing the cognitive load on developers. We hope our vision can foster future advancements in development environments.",
+        "subjects": [
+            "cs.SE"
+        ],
+        "comment": "First IDE Workshop (IDE '24), April 20, 2024, Lisbon, Portugal"
     },
     {
         "paper id": "2402.09586",
@@ -2582,6 +2653,25 @@
         "abstract": "In regularization Self-Supervised Learning (SSL) methods for graphs, computational complexity increases with the number of nodes in graphs and embedding dimensions. To mitigate the scalability of non-contrastive graph SSL, we propose a novel approach to reduce the cost of computing the covariance matrix for the pre-training loss function with volume-maximization terms. Our work focuses on reducing the cost associated with the loss computation via graph node or dimension sampling. We provide theoretical insight into why dimension sampling would result in accurate loss computations and support it with mathematical derivation of the novel approach. We develop our experimental setup on the node-level graph prediction tasks, where SSL pre-training has shown to be difficult due to the large size of real world graphs. Our experiments demonstrate that the cost associated with the loss computation can be reduced via node or dimension sampling without lowering the downstream performance. Our results demonstrate that sampling mostly results in improved downstream performance. Ablation studies and experimental analysis are provided to untangle the role of the different factors in the experimental setup.",
         "subjects": [
             "cs.LG"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2402.09656",
+        "abstract url": "https://arxiv.org/abs/2402.09656",
+        "title": "The Butterfly Effect of Model Editing: Few Edits Can Trigger Large Language Models Collapse",
+        "rating": -0.5,
+        "keywords": [
+            [
+                "Model Editing"
+            ],
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "Although model editing has shown promise in revising knowledge in Large Language Models (LLMs), its impact on the inherent capabilities of LLMs is often overlooked. In this work, we reveal a critical phenomenon: even a single edit can trigger model collapse, manifesting as significant performance degradation in various benchmark tasks. However, benchmarking LLMs after each edit, while necessary to prevent such collapses, is impractically time-consuming and resource-intensive. To mitigate this, we propose using perplexity as a surrogate metric, validated by extensive experiments demonstrating its strong correlation with downstream tasks performance. We further conduct an in-depth study on sequential editing, a practical setting for real-world scenarios, across various editing methods and LLMs, focusing on hard cases from our previous single edit studies. The results indicate that nearly all examined editing methods result in model collapse after only few edits. To facilitate further research, we have utilized GPT-3.5 to develop a new dataset, HardEdit, based on those hard cases. This dataset aims to establish the foundation for pioneering research in reliable model editing and the mechanisms underlying editing-induced model collapse. We hope this work can draw the community's attention to the potential risks inherent in model editing practices.",
+        "subjects": [
+            "cs.AI"
         ],
         "comment": null
     },
@@ -2671,7 +2761,8 @@
                 "parameter efficiency"
             ],
             [
-                "biosignals"
+                "biosignals",
+                "EEG"
             ],
             [
                 "cs.LG"
@@ -2768,22 +2859,6 @@
         "comment": null
     },
     {
-        "paper id": "2402.09062",
-        "abstract url": "https://arxiv.org/abs/2402.09062",
-        "title": "Blind Deep-Learning-Based Image Watermarking Robust Against Geometric Transformations",
-        "rating": -1,
-        "keywords": [
-            [
-                "attacks"
-            ]
-        ],
-        "abstract": "Digital watermarking enables protection against copyright infringement of images. Although existing methods embed watermarks imperceptibly and demonstrate robustness against attacks, they typically lack resilience against geometric transformations. Therefore, this paper proposes a new watermarking method that is robust against geometric attacks. The proposed method is based on the existing HiDDeN architecture that uses deep learning for watermark encoding and decoding. We add new noise layers to this architecture, namely for a differentiable JPEG estimation, rotation, rescaling, translation, shearing and mirroring. We demonstrate that our method outperforms the state of the art when it comes to geometric robustness. In conclusion, the proposed method can be used to protect images when viewed on consumers' devices.",
-        "subjects": [
-            "cs.MM"
-        ],
-        "comment": "Accepted and presented at IEEE International Conference on Consumer Electronics (ICCE) 2024"
-    },
-    {
         "paper id": "2402.09076",
         "abstract url": "https://arxiv.org/abs/2402.09076",
         "title": "Preserving system activity while controlling epidemic spreading in adaptive temporal networks",
@@ -2830,6 +2905,22 @@
             "cs.CR"
         ],
         "comment": "13 pages, 6 figures"
+    },
+    {
+        "paper id": "2402.09094",
+        "abstract url": "https://arxiv.org/abs/2402.09094",
+        "title": "Unity is Strength: Enhancing Precision in Reentrancy Vulnerability Detection of Smart Contract Analysis Tools",
+        "rating": -1,
+        "keywords": [
+            [
+                "attack"
+            ]
+        ],
+        "abstract": "Reentrancy is one of the most notorious vulnerabilities in smart contracts, resulting in significant digital asset losses. However, many previous works indicate that current Reentrancy detection tools suffer from high false positive rates. Even worse, recent years have witnessed the emergence of new Reentrancy attack patterns fueled by intricate and diverse vulnerability exploit mechanisms. Unfortunately, current tools face a significant limitation in their capacity to adapt and detect these evolving Reentrancy patterns. Consequently, ensuring precise and highly extensible Reentrancy vulnerability detection remains critical challenges for existing tools. To address this issue, we propose a tool named ReEP, designed to reduce the false positives for Reentrancy vulnerability detection. Additionally, ReEP can integrate multiple tools, expanding its capacity for vulnerability detection. It evaluates results from existing tools to verify vulnerability likelihood and reduce false positives. ReEP also offers excellent extensibility, enabling the integration of different detection tools to enhance precision and cover different vulnerability attack patterns. We perform ReEP to eight existing state-of-the-art Reentrancy detection tools. The average precision of these eight tools increased from the original 0.5% to 73% without sacrificing recall. Furthermore, ReEP exhibits robust extensibility. By integrating multiple tools, the precision further improved to a maximum of 83.6%. These results demonstrate that ReEP effectively unites the strengths of existing works, enhances the precision of Reentrancy vulnerability detection tools.",
+        "subjects": [
+            "cs.CR"
+        ],
+        "comment": null
     },
     {
         "paper id": "2402.09122",
@@ -3005,25 +3096,6 @@
         "comment": null
     },
     {
-        "paper id": "2402.09225",
-        "abstract url": "https://arxiv.org/abs/2402.09225",
-        "title": "Is my Data in your AI Model? Membership Inference Test with Application to Face Images",
-        "rating": -1,
-        "keywords": [
-            [
-                "Face"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "This paper introduces the Membership Inference Test (MINT), a novel approach that aims to empirically assess if specific data was used during the training of Artificial Intelligence (AI) models. Specifically, we propose two novel MINT architectures designed to learn the distinct activation patterns that emerge when an audited model is exposed to data used during its training process. The first architecture is based on a Multilayer Perceptron (MLP) network and the second one is based on Convolutional Neural Networks (CNNs). The proposed MINT architectures are evaluated on a challenging face recognition task, considering three state-of-the-art face recognition models. Experiments are carried out using six publicly available databases, comprising over 22 million face images in total. Also, different experimental scenarios are considered depending on the context available of the AI model to test. Promising results, up to 90% accuracy, are achieved using our proposed MINT approach, suggesting that it is possible to recognize if an AI model has been trained with specific data.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "10 pages"
-    },
-    {
         "paper id": "2402.09231",
         "abstract url": "https://arxiv.org/abs/2402.09231",
         "title": "Investigating Premature Convergence in Co-optimization of Morphology and Control in Evolved Virtual Soft Robots",
@@ -3165,61 +3237,27 @@
         "comment": null
     },
     {
-        "paper id": "2402.09369",
-        "abstract url": "https://arxiv.org/abs/2402.09369",
-        "title": "Massively Multi-Cultural Knowledge Acquisition & LM Benchmarking",
+        "paper id": "2402.09368",
+        "abstract url": "https://arxiv.org/abs/2402.09368",
+        "title": "Magic-Me: Identity-Specific Video Customized Diffusion",
         "rating": -1,
         "keywords": [
             [
-                "face"
+                "3D"
             ],
             [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Pretrained large language models have revolutionized many applications but still face challenges related to cultural bias and a lack of cultural commonsense knowledge crucial for guiding cross-culture communication and interactions. Recognizing the shortcomings of existing methods in capturing the diverse and rich cultures across the world, this paper introduces a novel approach for massively multicultural knowledge acquisition. Specifically, our method strategically navigates from densely informative Wikipedia documents on cultural topics to an extensive network of linked pages. Leveraging this valuable source of data collection, we construct the CultureAtlas dataset, which covers a wide range of sub-country level geographical regions and ethnolinguistic groups, with data cleaning and preprocessing to ensure textual assertion sentence self-containment, as well as fine-grained cultural profile information extraction. Our dataset not only facilitates the evaluation of language model performance in culturally diverse contexts but also serves as a foundational tool for the development of culturally sensitive and aware language models. Our work marks an important step towards deeper understanding and bridging the gaps of cultural disparities in AI, to promote a more inclusive and balanced representation of global cultures in the digital domain.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": "preprint"
-    },
-    {
-        "paper id": "2402.09528",
-        "abstract url": "https://arxiv.org/abs/2402.09528",
-        "title": "Help Me to Understand this Commit! -- A Vision for Contextualized Code Reviews",
-        "rating": -1,
-        "keywords": [
-            [
-                "depth"
-            ]
-        ],
-        "abstract": "Background: Modern Code Review (MCR) is a key component for delivering high-quality software and sharing knowledge among developers. Effective reviews require an in-depth understanding of the code and demand from the reviewers to contextualize the change from different perspectives. Aim: While there is a plethora of research on solutions that support developers to understand changed code, we have observed that many provide only narrow, specialized insights and very few aggregate information in a meaningful manner. Therefore, we aim to provide a vision of improving code understanding in MCR. Method: We classified 53 research papers suggesting proposals to improve MCR code understanding. We use this classification, the needs expressed by code reviewers from previous research, and the information we have not found in the literature for extrapolation. Results: We identified four major types of support systems and suggest an environment for contextualized code reviews. Furthermore, we illustrate with a set of scenarios how such an environment would improve the effectiveness of code reviews. Conclusions: Current research focuses mostly on providing narrow support for developers. We outline a vision for how MCR can be improved by using context and reducing the cognitive load on developers. We hope our vision can foster future advancements in development environments.",
-        "subjects": [
-            "cs.SE"
-        ],
-        "comment": "First IDE Workshop (IDE '24), April 20, 2024, Lisbon, Portugal"
-    },
-    {
-        "paper id": "2402.09530",
-        "abstract url": "https://arxiv.org/abs/2402.09530",
-        "title": "Reducing Texture Bias of Deep Neural Networks via Edge Enhancing Diffusion",
-        "rating": -1,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "Diffusion"
+                "Diffusion",
+                "text-to-image"
             ],
             [
                 "cs.CV"
             ]
         ],
-        "abstract": "Convolutional neural networks (CNNs) for image processing tend to focus on localized texture patterns, commonly referred to as texture bias. While most of the previous works in the literature focus on the task of image classification, we go beyond this and study the texture bias of CNNs in semantic segmentation. In this work, we propose to train CNNs on pre-processed images with less texture to reduce the texture bias. Therein, the challenge is to suppress image texture while preserving shape information. To this end, we utilize edge enhancing diffusion (EED), an anisotropic image diffusion method initially introduced for image compression, to create texture reduced duplicates of existing datasets. Extensive numerical studies are performed with both CNNs and vision transformer models trained on original data and EED-processed data from the Cityscapes dataset and the CARLA driving simulator. We observe strong texture-dependence of CNNs and moderate texture-dependence of transformers. Training CNNs on EED-processed images enables the models to become completely ignorant with respect to texture, demonstrating resilience with respect to texture re-introduction to any degree. Additionally we analyze the performance reduction in depth on a level of connected components in the semantic segmentation and study the influence of EED pre-processing on domain generalization as well as adversarial robustness.",
+        "abstract": "Creating content with specified identities (ID) has attracted significant interest in the field of generative models. In the field of text-to-image generation (T2I), subject-driven creation has achieved great progress with the identity controlled via reference images. However, its extension to video generation is not well explored. In this work, we propose a simple yet effective subject identity controllable video generation framework, termed Video Custom Diffusion (VCD). With a specified identity defined by a few images, VCD reinforces the identity characteristics and injects frame-wise correlation at the initialization stage for stable video outputs. To achieve this, we propose three novel components that are essential for high-quality identity preservation and stable video generation: 1) a noise initialization method with 3D Gaussian Noise Prior for better inter-frame stability; 2) an ID module based on extended Textual Inversion trained with the cropped identity to disentangle the ID information from the background 3) Face VCD and Tiled VCD modules to reinforce faces and upscale the video to higher resolution while preserving the identity's features. We conducted extensive experiments to verify that VCD is able to generate stable videos with better ID over the baselines. Besides, with the transferability of the encoded identity in the ID module, VCD is also working well with personalized text-to-image models available publicly. The codes are available at https://github.com/Zhen-Dong/Magic-Me.",
         "subjects": [
             "cs.CV"
         ],
-        "comment": null
+        "comment": "Project Page at https://magic-me-webpage.github.io"
     },
     {
         "paper id": "2402.09545",
@@ -3300,8 +3338,7 @@
         "rating": -1,
         "keywords": [
             [
-                "medical",
-                "face"
+                "medical"
             ],
             [
                 "cs.CL"
@@ -3545,20 +3582,47 @@
         "comment": "8 pages, 4 figures, submitted to Scientific Reports"
     },
     {
-        "paper id": "2404.08644",
-        "abstract url": "https://arxiv.org/abs/2404.08644",
-        "title": "RIS Assisted Wireless Networks: Collaborative Regulation, Deployment Mode and Field Testing",
+        "paper id": "2404.16845",
+        "abstract url": "https://arxiv.org/abs/2404.16845",
+        "title": "HaLo-NeRF: Learning Geometry-Guided Semantics for Exploring Unconstrained Photo Collections",
         "rating": -1,
         "keywords": [
             [
-                "depth"
+                "3D",
+                "NeRF"
+            ],
+            [
+                "navigation"
+            ],
+            [
+                "cs.CV"
             ]
         ],
-        "abstract": "In recent years, RIS has made significant progress in engineering application research and industrialization and academic research. However, the engineering application research field of RIS still faces several challenges. This article analyzes and discusses the two deployment modes of RIs-assisted wireless networks: Network Controlled Mode and Standalone mode. It also presents three typical collaboration scenarios of RIS networks, including multi-RIS collaboration, multi-user access, and multi-cell coordination, which reflect the differences between the two deployment modes of RIS. The article proposes collaborative regulation mechanisms for RIS and analyzes their applications in the two network deployment modes in-depth. Furthermore, the article establishes simulation models of three scenarios and provides rich numerical simulation results. An actual field test environment was also built, where a specially designed and processed RIS prototype was used for preliminary field test and verification. Finally, this article puts forward future trends and challenges.",
+        "abstract": "Internet image collections containing photos captured by crowds of photographers show promise for enabling digital exploration of large-scale tourist landmarks. However, prior works focus primarily on geometric reconstruction and visualization, neglecting the key role of language in providing a semantic interface for navigation and fine-grained understanding. In constrained 3D domains, recent methods have leveraged vision-and-language models as a strong prior of 2D visual semantics. While these models display an excellent understanding of broad visual semantics, they struggle with unconstrained photo collections depicting such tourist landmarks, as they lack expert knowledge of the architectural domain. In this work, we present a localization system that connects neural representations of scenes depicting large-scale landmarks with text describing a semantic region within the scene, by harnessing the power of SOTA vision-and-language models with adaptations for understanding landmark scene semantics. To bolster such models with fine-grained knowledge, we leverage large-scale Internet data containing images of similar landmarks along with weakly-related textual information. Our approach is built upon the premise that images physically grounded in space can provide a powerful supervision signal for localizing new concepts, whose semantics may be unlocked from Internet textual metadata with large language models. We use correspondences between views of scenes to bootstrap spatial understanding of these semantics, providing guidance for 3D-compatible segmentation that ultimately lifts to a volumetric scene representation. Our results show that HaLo-NeRF can accurately localize a variety of semantic concepts related to architectural landmarks, surpassing the results of other 3D models as well as strong 2D segmentation baselines. Our project page is at https://tau-vailab.github.io/HaLo-NeRF/.",
         "subjects": [
-            "cs.NI"
+            "cs.CV"
         ],
-        "comment": "18 Pages. 13 Figures"
+        "comment": "Eurographics 2024. Project page: https://tau-vailab.github.io/HaLo-NeRF/"
+    },
+    {
+        "paper id": "2404.18933",
+        "abstract url": "https://arxiv.org/abs/2404.18933",
+        "title": "Learning Low-Rank Feature for Thorax Disease Classification",
+        "rating": -1,
+        "keywords": [
+            [
+                "medical",
+                "Disease"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Deep neural networks, including Convolutional Neural Networks (CNNs) and Visual Transformers (ViT), have achieved stunning success in medical image domain. We study thorax disease classification in this paper. Effective extraction of features for the disease areas is crucial for disease classification on radiographic images. While various neural architectures and training techniques, such as self-supervised learning with contrastive/restorative learning, have been employed for disease classification on radiographic images, there are no principled methods which can effectively reduce the adverse effect of noise and background, or non-disease areas, on the radiographic images for disease classification. To address this challenge, we propose a novel Low-Rank Feature Learning (LRFL) method in this paper, which is universally applicable to the training of all neural networks. The LRFL method is both empirically motivated by the low frequency property observed on all the medical datasets in this paper, and theoretically motivated by our sharp generalization bound for neural networks with low-rank features. In the empirical study, using a neural network such as a ViT or a CNN pre-trained on unlabeled chest X-rays by Masked Autoencoders (MAE), our novel LRFL method is applied on the pre-trained neural network and demonstrate better classification results in terms of both multiclass area under the receiver operating curve (mAUC) and classification accuracy.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
     },
     {
         "paper id": "2402.09028",
@@ -3730,7 +3794,8 @@
         "rating": -1.5,
         "keywords": [
             [
-                "healthcare"
+                "healthcare",
+                "Radiology"
             ],
             [
                 "cs.AI"
@@ -3760,6 +3825,25 @@
             "cs.LG"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2402.09391",
+        "abstract url": "https://arxiv.org/abs/2402.09391",
+        "title": "LlaSMol: Advancing Large Language Models for Chemistry with a Large-Scale, Comprehensive, High-Quality Instruction Tuning Dataset",
+        "rating": -1.5,
+        "keywords": [
+            [
+                "Chemistry"
+            ],
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "Chemistry plays a crucial role in many domains, such as drug discovery and material science. While large language models (LLMs) such as GPT-4 exhibit remarkable capabilities on natural language processing tasks, existing research indicates that their performance on chemistry tasks is discouragingly low. In this paper, however, we demonstrate that our developed LLMs can achieve very strong results on a comprehensive set of chemistry tasks, outperforming the most advanced GPT-4 and Claude 3 Opus by a substantial margin. To accomplish this, we propose SMolInstruct, a large-scale, comprehensive, and high-quality dataset for instruction tuning. It contains 14 selected chemistry tasks and over three million samples, laying a solid foundation for training and evaluating LLMs for chemistry. Using SMolInstruct, we fine-tune a set of open-source LLMs, among which, we find that Mistral serves as the best base model for chemistry tasks. Our analysis further demonstrates the critical role of the proposed dataset in driving the performance improvements.",
+        "subjects": [
+            "cs.AI"
+        ],
+        "comment": "Added further analysis experiments. Work in progress"
     },
     {
         "paper id": "2402.09558",
@@ -3798,6 +3882,25 @@
         "abstract": "In Chaos, a minor divergence between two initial conditions exhibits exponential amplification over time, leading to far-away outcomes, known as the butterfly effect. Thus, the distant future is full of uncertainty and hard to forecast. We introduce Group Reservoir Transformer to predict long-term events more accurately and robustly by overcoming two challenges in Chaos: (1) the extensive historical sequences and (2) the sensitivity to initial conditions. A reservoir is attached to a Transformer to efficiently handle arbitrarily long historical lengths, with an extension of a group of reservoirs to reduce the uncertainty due to the initialization variations. Our architecture consistently outperforms state-of-the-art DNN models in multivariate time series, including NLinear, Pyformer, Informer, Autoformer, and the baseline Transformer, with an error reduction of up to -89.43\\% in various fields such as ETTh, ETTm, and air quality, demonstrating that an ensemble of butterfly learning, the prediction can be improved to a more adequate and certain one, despite of the traveling time to the unknown future.",
         "subjects": [
             "cs.LG"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2402.09584",
+        "abstract url": "https://arxiv.org/abs/2402.09584",
+        "title": "Large Language Model-Based Interpretable Machine Learning Control in Building Energy Systems",
+        "rating": -1.5,
+        "keywords": [
+            [
+                "industrial"
+            ],
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "The potential of Machine Learning Control (MLC) in HVAC systems is hindered by its opaque nature and inference mechanisms, which is challenging for users and modelers to fully comprehend, ultimately leading to a lack of trust in MLC-based decision-making. To address this challenge, this paper investigates and explores Interpretable Machine Learning (IML), a branch of Machine Learning (ML) that enhances transparency and understanding of models and their inferences, to improve the credibility of MLC and its industrial application in HVAC systems. Specifically, we developed an innovative framework that combines the principles of Shapley values and the in-context learning feature of Large Language Models (LLMs). While the Shapley values are instrumental in dissecting the contributions of various features in ML models, LLM provides an in-depth understanding of rule-based parts in MLC; combining them, LLM further packages these insights into a coherent, human-understandable narrative. The paper presents a case study to demonstrate the feasibility of the developed IML framework for model predictive control-based precooling under demand response events in a virtual testbed. The results indicate that the developed framework generates and explains the control signals in accordance with the rule-based rationale.",
+        "subjects": [
+            "cs.AI"
         ],
         "comment": null
     },
@@ -3903,28 +4006,6 @@
         "comment": null
     },
     {
-        "paper id": "2402.09656",
-        "abstract url": "https://arxiv.org/abs/2402.09656",
-        "title": "The Butterfly Effect of Model Editing: Few Edits Can Trigger Large Language Models Collapse",
-        "rating": -1.5,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "Model Editing"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "Although model editing has shown promise in revising knowledge in Large Language Models (LLMs), its impact on the inherent capabilities of LLMs is often overlooked. In this work, we reveal a critical phenomenon: even a single edit can trigger model collapse, manifesting as significant performance degradation in various benchmark tasks. However, benchmarking LLMs after each edit, while necessary to prevent such collapses, is impractically time-consuming and resource-intensive. To mitigate this, we propose using perplexity as a surrogate metric, validated by extensive experiments demonstrating its strong correlation with downstream tasks performance. We further conduct an in-depth study on sequential editing, a practical setting for real-world scenarios, across various editing methods and LLMs, focusing on hard cases from our previous single edit studies. The results indicate that nearly all examined editing methods result in model collapse after only few edits. To facilitate further research, we have utilized GPT-3.5 to develop a new dataset, HardEdit, based on those hard cases. This dataset aims to establish the foundation for pioneering research in reliable model editing and the mechanisms underlying editing-induced model collapse. We hope this work can draw the community's attention to the potential risks inherent in model editing practices.",
-        "subjects": [
-            "cs.AI"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2402.09677",
         "abstract url": "https://arxiv.org/abs/2402.09677",
         "title": "Prompt-based Personalized Federated Learning for Medical Visual Question Answering",
@@ -3986,6 +4067,28 @@
             "cs.CY"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2403.12075",
+        "abstract url": "https://arxiv.org/abs/2403.12075",
+        "title": "Adversarial Nibbler: An Open Red-Teaming Method for Identifying Diverse Harms in Text-to-Image Generation",
+        "rating": -1.5,
+        "keywords": [
+            [
+                "Text-to-Image"
+            ],
+            [
+                "attacks"
+            ],
+            [
+                "cs.CY"
+            ]
+        ],
+        "abstract": "With the rise of text-to-image (T2I) generative AI models reaching wide audiences, it is critical to evaluate model robustness against non-obvious attacks to mitigate the generation of offensive images. By focusing on ``implicitly adversarial'' prompts (those that trigger T2I models to generate unsafe images for non-obvious reasons), we isolate a set of difficult safety issues that human creativity is well-suited to uncover. To this end, we built the Adversarial Nibbler Challenge, a red-teaming methodology for crowdsourcing a diverse set of implicitly adversarial prompts. We have assembled a suite of state-of-the-art T2I models, employed a simple user interface to identify and annotate harms, and engaged diverse populations to capture long-tail safety issues that may be overlooked in standard testing. The challenge is run in consecutive rounds to enable a sustained discovery and analysis of safety pitfalls in T2I models. In this paper, we present an in-depth account of our methodology, a systematic study of novel attack strategies and discussion of safety failures revealed by challenge participants. We also release a companion visualization tool for easy exploration and derivation of insights from the dataset. The first challenge round resulted in over 10k prompt-image pairs with machine annotations for safety. A subset of 1.5k samples contains rich human annotations of harm types and attack styles. We find that 14% of images that humans consider harmful are mislabeled as ``safe'' by machines. We have identified new attack strategies that highlight the complexity of ensuring T2I model robustness. Our findings emphasize the necessity of continual auditing and adaptation as new vulnerabilities emerge. We are confident that this work will enable proactive, iterative safety assessments and promote responsible development of T2I models.",
+        "subjects": [
+            "cs.CY"
+        ],
+        "comment": "15 pages, 6 figures"
     },
     {
         "paper id": "2402.08952",
@@ -4093,6 +4196,22 @@
         "abstract": "Prostate cancer is the most common noncutaneous cancer in the world. Recently, multi-modality transrectal ultrasound (TRUS) has increasingly become an effective tool for the guidance of prostate biopsies. With the aim of effectively identifying prostate cancer, we propose a framework for the classification of clinically significant prostate cancer (csPCa) from multi-modality TRUS videos. The framework utilizes two 3D ResNet-50 models to extract features from B-mode images and shear wave elastography images, respectively. An adaptive spatial fusion module is introduced to aggregate two modalities' features. An orthogonal regularized loss is further used to mitigate feature redundancy. The proposed framework is evaluated on an in-house dataset containing 512 TRUS videos, and achieves favorable performance in identifying csPCa with an area under curve (AUC) of 0.84. Furthermore, the visualized class activation mapping (CAM) images generated from the proposed framework may provide valuable guidance for the localization of csPCa, thus facilitating the TRUS-guided targeted biopsy. Our code is publicly available at https://github.com/2313595986/ProstateTRUS.",
         "subjects": [
             "eess.IV"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2402.08988",
+        "abstract url": "https://arxiv.org/abs/2402.08988",
+        "title": "An In-Depth Investigation of LEO Satellite Topology Design Parameters",
+        "rating": -2,
+        "keywords": [
+            [
+                "Satellite"
+            ]
+        ],
+        "abstract": "Low Earth Orbit (LEO) satellite networks are rapidly gaining traction today. Although several real-world deployments exist, our preliminary analysis of LEO topology performance with the soon-to-be operational Inter-Satellite Links (ISLs) reveals several interesting characteristics that are difficult to explain based on our current understanding of topologies. For example, a real-world satellite shell with a low density of satellites offers better latency performance than another shell with nearly double the number of satellites. In this work, we conduct an in-depth investigation of LEO satellite topology design parameters and their impact on network performance while using the ISLs. In particular, we focus on three design parameters: the number of orbits in a shell, the inclination of orbits, and the number of satellites per orbit. Through an extensive analysis of real-world and synthetic satellite configurations, we uncover several interesting properties of satellite topologies. Notably, there exist thresholds for the number of satellites per orbit and the number of orbits below which the latency performance degrades significantly. Moreover, network delay between a pair of traffic endpoints depends on the alignment of the satellite's orbit (Inclination) with the geographic locations of endpoints.",
+        "subjects": [
+            "cs.NI"
         ],
         "comment": null
     },
@@ -4490,8 +4609,7 @@
                 "attack"
             ],
             [
-                "medical",
-                "face"
+                "medical"
             ],
             [
                 "cs.CV"
@@ -4606,6 +4724,22 @@
         "comment": "Paper accepted for publication at SPIE Medical Imaging 2024"
     },
     {
+        "paper id": "2402.09370",
+        "abstract url": "https://arxiv.org/abs/2402.09370",
+        "title": "Pseudorandom Error-Correcting Codes",
+        "rating": -2,
+        "keywords": [
+            [
+                "watermarking"
+            ]
+        ],
+        "abstract": "We construct pseudorandom error-correcting codes (or simply pseudorandom codes), which are error-correcting codes with the property that any polynomial number of codewords are pseudorandom to any computationally-bounded adversary. Efficient decoding of corrupted codewords is possible with the help of a decoding key. We build pseudorandom codes that are robust to substitution and deletion errors, where pseudorandomness rests on standard cryptographic assumptions. Specifically, pseudorandomness is based on either $2^{O(\\sqrt{n})}$-hardness of LPN, or polynomial hardness of LPN and the planted XOR problem at low density. As our primary application of pseudorandom codes, we present an undetectable watermarking scheme for outputs of language models that is robust to cropping and a constant rate of random substitutions and deletions. The watermark is undetectable in the sense that any number of samples of watermarked text are computationally indistinguishable from text output by the original model. This is the first undetectable watermarking scheme that can tolerate a constant rate of errors. Our second application is to steganography, where a secret message is hidden in innocent-looking content. We present a constant-rate stateless steganography scheme with robustness to a constant rate of substitutions. Ours is the first stateless steganography scheme with provable steganographic security and any robustness to errors.",
+        "subjects": [
+            "cs.CR"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2402.09372",
         "abstract url": "https://arxiv.org/abs/2402.09372",
         "title": "Deep Rib Fracture Instance Segmentation and Classification from CT on the RibFrac Challenge",
@@ -4650,20 +4784,20 @@
         "comment": "11 pages, 10 figures. This work has been submitted to IEEE for possible publication. Copyright may be transferred without notice, after which this version may no longer be accessible"
     },
     {
-        "paper id": "2402.09493",
-        "abstract url": "https://arxiv.org/abs/2402.09493",
-        "title": "Dynamic modeling and predictive control of a microfluidic system",
+        "paper id": "2402.09499",
+        "abstract url": "https://arxiv.org/abs/2402.09499",
+        "title": "Enriched multi-agent middleware for building rule-based distributed security solutions for IoT environments",
         "rating": -2,
         "keywords": [
             [
-                "biotechnology"
+                "IoT"
             ]
         ],
-        "abstract": "Microfluidics, the study of fluids in microscopic channels, has led to important advances in fields as diverse as microelectronics, biotechnology and chemistry. Microfluidic research is primarily based on the use of microfluidic chips, low-cost devices that can be used to perform laboratory experiments using small amounts of fluid. These systems, however, require advanced control mechanisms in order to accurately achieve the flow rates and pressures required in the experiments. In this paper, we present the design of a model predictive controller intended to regulate the fluid flows in one of these systems. The results obtained, both through simulations and real experiments performed on the device, show that predictive control is an ideal technique to control these systems, especially taking into account all the existing constraints.",
+        "abstract": "The increasing number of connected devices and the complexity of Internet of Things (IoT) ecosystems are demanding new architectures for managing and securing these networked environments. Intrusion Detection Systems (IDS) are security solutions that help to detect and mitigate the threats that IoT systems face, but there is a need for new IDS strategies and architectures. This paper describes a development environment that allows the programming and debugging of distributed, rule-based multi-agent IDS solutions. The proposed solution consists in the integration of a rule engine into the agent, the use of a specialized, wrapping agent class with a graphical user interface for programming and debugging purposes, and a mechanism for the incremental composition of behaviors. A comparative study and an example IDS are used to test and show the suitability and validity of the approach. The JADE multi-agent middleware has been used for the practical implementations.",
         "subjects": [
-            "eess.SY"
+            "cs.MA"
         ],
-        "comment": "12 pages, 17 figures. This is an author-approved English translation of a paper accepted for publication (see Related DOI)"
+        "comment": null
     },
     {
         "paper id": "2402.09524",
@@ -4882,6 +5016,48 @@
         "comment": null
     },
     {
+        "paper id": "2402.09675",
+        "abstract url": "https://arxiv.org/abs/2402.09675",
+        "title": "Repurposing Coal Power Plants into Thermal Energy Storage for Supporting Zero-carbon Data Centers",
+        "rating": -2,
+        "keywords": [
+            [
+                "Thermal"
+            ]
+        ],
+        "abstract": "Coal power plants will need to be phased out and face stranded asset risks under the net-zero energy system transition. Repurposing coal power plants could recoup profits and reduce carbon emissions using the existing infrastructure and grid connections. This paper investigates a retrofitting strategy that turns coal power plants into thermal energy storage (TES) and zero-carbon data centers (DCs). The proposed capacity expansion model considers the co-locations of DCs, local renewablewith the system-generation, andlevel coal retir energy storage ement and retrofitting. We optimize the DC system configurations under the hourly-matching carbon policy and flexible operations. Results show that under hourly-matching carbon constraints, the retrofitted TES could complement the operations of lithium-ion batteries (LIBs) to reduce system costs. This could render DCs with optimal co-located renewable generations and energy storage more cost-effective than unconstrained DCs.",
+        "subjects": [
+            "eess.SY"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2402.09944",
+        "abstract url": "https://arxiv.org/abs/2402.09944",
+        "title": "Loopy-SLAM: Dense Neural SLAM with Loop Closures",
+        "rating": -2,
+        "keywords": [
+            [
+                "3D",
+                "RGBD"
+            ],
+            [
+                "SLAM"
+            ],
+            [
+                "graph"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Neural RGBD SLAM techniques have shown promise in dense Simultaneous Localization And Mapping (SLAM), yet face challenges such as error accumulation during camera tracking resulting in distorted maps. In response, we introduce Loopy-SLAM that globally optimizes poses and the dense 3D model. We use frame-to-model tracking using a data-driven point-based submap generation method and trigger loop closures online by performing global place recognition. Robust pose graph optimization is used to rigidly align the local submaps. As our representation is point based, map corrections can be performed efficiently without the need to store the entire history of input frames used for mapping as typically required by methods employing a grid based mapping structure. Evaluation on the synthetic Replica and real-world TUM-RGBD and ScanNet datasets demonstrate competitive or superior performance in tracking, mapping, and rendering accuracy when compared to existing dense neural RGBD SLAM methods. Project page: notchla.github.io/Loopy-SLAM.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2402.10236",
         "abstract url": "https://arxiv.org/abs/2402.10236",
         "title": "Discovering Sensorimotor Agency in Cellular Automata using Diversity Search",
@@ -4898,22 +5074,6 @@
         "comment": null
     },
     {
-        "paper id": "2402.10239",
-        "abstract url": "https://arxiv.org/abs/2402.10239",
-        "title": "A Language Model for Particle Tracking",
-        "rating": -2,
-        "keywords": [
-            [
-                "physics"
-            ]
-        ],
-        "abstract": "Particle tracking is crucial for almost all physics analysis programs at the Large Hadron Collider. Deep learning models are pervasively used in particle tracking related tasks. However, the current practice is to design and train one deep learning model for one task with supervised learning techniques. The trained models work well for tasks they are trained on but show no or little generalization capabilities. We propose to unify these models with a language model. In this paper, we present a tokenized detector representation that allows us to train a BERT model for particle tracking. The trained BERT model, namely TrackingBERT, offers latent detector module embedding that can be used for other tasks. This work represents the first step towards developing a foundational model for particle detector understanding.",
-        "subjects": [
-            "hep-ph"
-        ],
-        "comment": "7 pages, 3 figures, A Proceeding of the Connecting the Dots Workshop (CTD 2023)"
-    },
-    {
         "paper id": "2402.10385",
         "abstract url": "https://arxiv.org/abs/2402.10385",
         "title": "Middleware-based multi-agent development environment for building and testing distributed intelligent systems",
@@ -4928,25 +5088,6 @@
             "cs.MA"
         ],
         "comment": "arXiv admin note: substantial text overlap with arXiv:2402.09499"
-    },
-    {
-        "paper id": "2403.00775",
-        "abstract url": "https://arxiv.org/abs/2403.00775",
-        "title": "Detecting Anomalous Events in Object-centric Business Processes via Graph Neural Networks",
-        "rating": -2,
-        "keywords": [
-            [
-                "Graph"
-            ],
-            [
-                "anomaly detection"
-            ]
-        ],
-        "abstract": "Detecting anomalies is important for identifying inefficiencies, errors, or fraud in business processes. Traditional process mining approaches focus on analyzing 'flattened', sequential, event logs based on a single case notion. However, many real-world process executions exhibit a graph-like structure, where events can be associated with multiple cases. Flattening event logs requires selecting a single case identifier which creates a gap with the real event data and artificially introduces anomalies in the event logs. Object-centric process mining avoids these limitations by allowing events to be related to different cases. This study proposes a novel framework for anomaly detection in business processes that exploits graph neural networks and the enhanced information offered by object-centric process mining. We first reconstruct and represent the process dependencies of the object-centric event logs as attributed graphs and then employ a graph convolutional autoencoder architecture to detect anomalous events. Our results show that our approach provides promising performance in detecting anomalies at the activity type and attributes level, although it struggles to detect anomalies in the temporal order of events.",
-        "subjects": [
-            "q-fin.ST"
-        ],
-        "comment": "12 pages, 2 figures, to appear in the ICPM 2023 Workshops Proceedings"
     },
     {
         "paper id": "2403.00777",
@@ -4985,28 +5126,6 @@
             "cs.CV"
         ],
         "comment": "18 pages, 14 figures, preprint"
-    },
-    {
-        "paper id": "2402.08957",
-        "abstract url": "https://arxiv.org/abs/2402.08957",
-        "title": "MUSTARD: Mastering Uniform Synthesis of Theorem and Proof Data",
-        "rating": -2.5,
-        "keywords": [
-            [
-                "Synthesis"
-            ],
-            [
-                "face"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "Recent large language models (LLMs) have witnessed significant advancement in various tasks, including mathematical reasoning and theorem proving. As these two tasks require strict and formal multi-step inference, they are appealing domains for exploring the reasoning ability of LLMs but still face important challenges. Previous studies such as Chain-of-Thought (CoT) have revealed the effectiveness of intermediate steps guidance. However, such step-wise annotation requires heavy labor, leading to insufficient training steps for current benchmarks. To fill this gap, this work introduces MUSTARD, a data generation framework that masters uniform synthesis of theorem and proof data of high quality and diversity. MUSTARD synthesizes data in three stages: (1) It samples a few mathematical concept seeds as the problem category. (2) Then, it prompts a generative language model with the sampled concepts to obtain both the problems and their step-wise formal solutions. (3) Lastly, the framework utilizes a proof assistant (e.g., Lean Prover) to filter the valid proofs. With the proposed MUSTARD, we present a theorem-and-proof benchmark MUSTARDSAUCE with 5,866 valid data points. Each data point contains an informal statement, an informal proof, and a translated formal proof that passes the prover validation. We perform extensive analysis and demonstrate that MUSTARD generates validated high-quality step-by-step data. We further apply the MUSTARDSAUCE for fine-tuning smaller language models. The fine-tuned Llama 2-7B achieves a 15.41% average relative performance gain in automated theorem proving, and 8.18% in math word problems. Codes and data are available at https://github.com/Eleanor-H/MUSTARD.",
-        "subjects": [
-            "cs.AI"
-        ],
-        "comment": null
     },
     {
         "paper id": "2402.09264",
@@ -5088,6 +5207,7 @@
                 "industrial"
             ],
             [
+                "Workshop",
                 "AAAI"
             ]
         ],
@@ -5096,50 +5216,6 @@
             "cs.CR"
         ],
         "comment": "Accepted at PPAI-24: AAAI Workshop on Privacy-Preserving Artificial Intelligence"
-    },
-    {
-        "paper id": "2402.09565",
-        "abstract url": "https://arxiv.org/abs/2402.09565",
-        "title": "Graph-Skeleton: ~1% Nodes are Sufficient to Represent Billion-Scale Graph",
-        "rating": -2.5,
-        "keywords": [
-            [
-                "Graph"
-            ],
-            [
-                "industrial"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "Due to the ubiquity of graph data on the web, web graph mining has become a hot research spot. Nonetheless, the prevalence of large-scale web graphs in real applications poses significant challenges to storage, computational capacity and graph model design. Despite numerous studies to enhance the scalability of graph models, a noticeable gap remains between academic research and practical web graph mining applications. One major cause is that in most industrial scenarios, only a small part of nodes in a web graph are actually required to be analyzed, where we term these nodes as target nodes, while others as background nodes. In this paper, we argue that properly fetching and condensing the background nodes from massive web graph data might be a more economical shortcut to tackle the obstacles fundamentally. To this end, we make the first attempt to study the problem of massive background nodes compression for target nodes classification. Through extensive experiments, we reveal two critical roles played by the background nodes in target node classification: enhancing structural connectivity between target nodes, and feature correlation with target nodes. Followingthis, we propose a novel Graph-Skeleton1 model, which properly fetches the background nodes, and further condenses the semantic and topological information of background nodes within similar target-background local structures. Extensive experiments on various web graph datasets demonstrate the effectiveness and efficiency of the proposed method. In particular, for MAG240M dataset with 0.24 billion nodes, our generated skeleton graph achieves highly comparable performance while only containing 1.8% nodes of the original graph.",
-        "subjects": [
-            "cs.AI"
-        ],
-        "comment": "21 pages, 11 figures, In Proceedings of the ACM Web Conference 2024 (WWW'24)"
-    },
-    {
-        "paper id": "2402.09584",
-        "abstract url": "https://arxiv.org/abs/2402.09584",
-        "title": "Large Language Model-Based Interpretable Machine Learning Control in Building Energy Systems",
-        "rating": -2.5,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "industrial"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "The potential of Machine Learning Control (MLC) in HVAC systems is hindered by its opaque nature and inference mechanisms, which is challenging for users and modelers to fully comprehend, ultimately leading to a lack of trust in MLC-based decision-making. To address this challenge, this paper investigates and explores Interpretable Machine Learning (IML), a branch of Machine Learning (ML) that enhances transparency and understanding of models and their inferences, to improve the credibility of MLC and its industrial application in HVAC systems. Specifically, we developed an innovative framework that combines the principles of Shapley values and the in-context learning feature of Large Language Models (LLMs). While the Shapley values are instrumental in dissecting the contributions of various features in ML models, LLM provides an in-depth understanding of rule-based parts in MLC; combining them, LLM further packages these insights into a coherent, human-understandable narrative. The paper presents a case study to demonstrate the feasibility of the developed IML framework for model predictive control-based precooling under demand response events in a virtual testbed. The results indicate that the developed framework generates and explains the control signals in accordance with the rule-based rationale.",
-        "subjects": [
-            "cs.AI"
-        ],
-        "comment": null
     },
     {
         "paper id": "2402.09617",
@@ -5165,48 +5241,45 @@
         "comment": null
     },
     {
-        "paper id": "2403.12075",
-        "abstract url": "https://arxiv.org/abs/2403.12075",
-        "title": "Adversarial Nibbler: An Open Red-Teaming Method for Identifying Diverse Harms in Text-to-Image Generation",
+        "paper id": "2402.10239",
+        "abstract url": "https://arxiv.org/abs/2402.10239",
+        "title": "A Language Model for Particle Tracking",
         "rating": -2.5,
         "keywords": [
             [
-                "depth"
+                "physics"
             ],
             [
-                "Text-to-Image"
-            ],
-            [
-                "attacks"
-            ],
-            [
-                "cs.CY"
+                "Workshop"
             ]
         ],
-        "abstract": "With the rise of text-to-image (T2I) generative AI models reaching wide audiences, it is critical to evaluate model robustness against non-obvious attacks to mitigate the generation of offensive images. By focusing on ``implicitly adversarial'' prompts (those that trigger T2I models to generate unsafe images for non-obvious reasons), we isolate a set of difficult safety issues that human creativity is well-suited to uncover. To this end, we built the Adversarial Nibbler Challenge, a red-teaming methodology for crowdsourcing a diverse set of implicitly adversarial prompts. We have assembled a suite of state-of-the-art T2I models, employed a simple user interface to identify and annotate harms, and engaged diverse populations to capture long-tail safety issues that may be overlooked in standard testing. The challenge is run in consecutive rounds to enable a sustained discovery and analysis of safety pitfalls in T2I models. In this paper, we present an in-depth account of our methodology, a systematic study of novel attack strategies and discussion of safety failures revealed by challenge participants. We also release a companion visualization tool for easy exploration and derivation of insights from the dataset. The first challenge round resulted in over 10k prompt-image pairs with machine annotations for safety. A subset of 1.5k samples contains rich human annotations of harm types and attack styles. We find that 14% of images that humans consider harmful are mislabeled as ``safe'' by machines. We have identified new attack strategies that highlight the complexity of ensuring T2I model robustness. Our findings emphasize the necessity of continual auditing and adaptation as new vulnerabilities emerge. We are confident that this work will enable proactive, iterative safety assessments and promote responsible development of T2I models.",
+        "abstract": "Particle tracking is crucial for almost all physics analysis programs at the Large Hadron Collider. Deep learning models are pervasively used in particle tracking related tasks. However, the current practice is to design and train one deep learning model for one task with supervised learning techniques. The trained models work well for tasks they are trained on but show no or little generalization capabilities. We propose to unify these models with a language model. In this paper, we present a tokenized detector representation that allows us to train a BERT model for particle tracking. The trained BERT model, namely TrackingBERT, offers latent detector module embedding that can be used for other tasks. This work represents the first step towards developing a foundational model for particle detector understanding.",
         "subjects": [
-            "cs.CY"
+            "hep-ph"
         ],
-        "comment": "15 pages, 6 figures"
+        "comment": "7 pages, 3 figures, A Proceeding of the Connecting the Dots Workshop (CTD 2023)"
     },
     {
-        "paper id": "2402.08988",
-        "abstract url": "https://arxiv.org/abs/2402.08988",
-        "title": "An In-Depth Investigation of LEO Satellite Topology Design Parameters",
-        "rating": -3,
+        "paper id": "2403.00775",
+        "abstract url": "https://arxiv.org/abs/2403.00775",
+        "title": "Detecting Anomalous Events in Object-centric Business Processes via Graph Neural Networks",
+        "rating": -2.5,
         "keywords": [
             [
-                "Depth"
+                "Graph"
             ],
             [
-                "Satellite"
+                "anomaly detection"
+            ],
+            [
+                "Workshop"
             ]
         ],
-        "abstract": "Low Earth Orbit (LEO) satellite networks are rapidly gaining traction today. Although several real-world deployments exist, our preliminary analysis of LEO topology performance with the soon-to-be operational Inter-Satellite Links (ISLs) reveals several interesting characteristics that are difficult to explain based on our current understanding of topologies. For example, a real-world satellite shell with a low density of satellites offers better latency performance than another shell with nearly double the number of satellites. In this work, we conduct an in-depth investigation of LEO satellite topology design parameters and their impact on network performance while using the ISLs. In particular, we focus on three design parameters: the number of orbits in a shell, the inclination of orbits, and the number of satellites per orbit. Through an extensive analysis of real-world and synthetic satellite configurations, we uncover several interesting properties of satellite topologies. Notably, there exist thresholds for the number of satellites per orbit and the number of orbits below which the latency performance degrades significantly. Moreover, network delay between a pair of traffic endpoints depends on the alignment of the satellite's orbit (Inclination) with the geographic locations of endpoints.",
+        "abstract": "Detecting anomalies is important for identifying inefficiencies, errors, or fraud in business processes. Traditional process mining approaches focus on analyzing 'flattened', sequential, event logs based on a single case notion. However, many real-world process executions exhibit a graph-like structure, where events can be associated with multiple cases. Flattening event logs requires selecting a single case identifier which creates a gap with the real event data and artificially introduces anomalies in the event logs. Object-centric process mining avoids these limitations by allowing events to be related to different cases. This study proposes a novel framework for anomaly detection in business processes that exploits graph neural networks and the enhanced information offered by object-centric process mining. We first reconstruct and represent the process dependencies of the object-centric event logs as attributed graphs and then employ a graph convolutional autoencoder architecture to detect anomalous events. Our results show that our approach provides promising performance in detecting anomalies at the activity type and attributes level, although it struggles to detect anomalies in the temporal order of events.",
         "subjects": [
-            "cs.NI"
+            "q-fin.ST"
         ],
-        "comment": null
+        "comment": "12 pages, 2 figures, to appear in the ICPM 2023 Workshops Proceedings"
     },
     {
         "paper id": "2402.08989",
@@ -5266,6 +5339,25 @@
         "comment": null
     },
     {
+        "paper id": "2402.09062",
+        "abstract url": "https://arxiv.org/abs/2402.09062",
+        "title": "Blind Deep-Learning-Based Image Watermarking Robust Against Geometric Transformations",
+        "rating": -3,
+        "keywords": [
+            [
+                "attacks"
+            ],
+            [
+                "Watermarking"
+            ]
+        ],
+        "abstract": "Digital watermarking enables protection against copyright infringement of images. Although existing methods embed watermarks imperceptibly and demonstrate robustness against attacks, they typically lack resilience against geometric transformations. Therefore, this paper proposes a new watermarking method that is robust against geometric attacks. The proposed method is based on the existing HiDDeN architecture that uses deep learning for watermark encoding and decoding. We add new noise layers to this architecture, namely for a differentiable JPEG estimation, rotation, rescaling, translation, shearing and mirroring. We demonstrate that our method outperforms the state of the art when it comes to geometric robustness. In conclusion, the proposed method can be used to protect images when viewed on consumers' devices.",
+        "subjects": [
+            "cs.MM"
+        ],
+        "comment": "Accepted and presented at IEEE International Conference on Consumer Electronics (ICCE) 2024"
+    },
+    {
         "paper id": "2402.09066",
         "abstract url": "https://arxiv.org/abs/2402.09066",
         "title": "Solid Waste Detection in Remote Sensing Images: A Survey",
@@ -5301,25 +5393,6 @@
             ]
         ],
         "abstract": "The ever-evolving landscape of attacks, coupled with the growing complexity of ICT systems, makes crafting anomaly-based intrusion detectors (ID) and error detectors (ED) a difficult task: they must accurately detect attacks, and they should promptly perform detections. Although improving and comparing the detection capability is the focus of most research works, the timeliness of the detection is less considered and often insufficiently evaluated or discussed. In this paper, we argue the relevance of measuring the temporal latency of attacks and errors, and we propose an evaluation approach for detectors to ensure a pragmatic trade-off between correct and in-time detection. Briefly, the approach relates the false positive rate with the temporal latency of attacks and errors, and this ultimately leads to guidelines for configuring a detector. We apply our approach by evaluating different ED and ID solutions in two industrial cases: i) an embedded railway on-board system that optimizes public mobility, and ii) an edge device for the Industrial Internet of Things. Our results show that considering latency in addition to traditional metrics like the false positive rate, precision, and coverage gives an additional fundamental perspective on the actual performance of the detector and should be considered when assessing and configuring anomaly detectors.",
-        "subjects": [
-            "cs.CR"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2402.09094",
-        "abstract url": "https://arxiv.org/abs/2402.09094",
-        "title": "Unity is Strength: Enhancing Precision in Reentrancy Vulnerability Detection of Smart Contract Analysis Tools",
-        "rating": -3,
-        "keywords": [
-            [
-                "attack"
-            ],
-            [
-                "face"
-            ]
-        ],
-        "abstract": "Reentrancy is one of the most notorious vulnerabilities in smart contracts, resulting in significant digital asset losses. However, many previous works indicate that current Reentrancy detection tools suffer from high false positive rates. Even worse, recent years have witnessed the emergence of new Reentrancy attack patterns fueled by intricate and diverse vulnerability exploit mechanisms. Unfortunately, current tools face a significant limitation in their capacity to adapt and detect these evolving Reentrancy patterns. Consequently, ensuring precise and highly extensible Reentrancy vulnerability detection remains critical challenges for existing tools. To address this issue, we propose a tool named ReEP, designed to reduce the false positives for Reentrancy vulnerability detection. Additionally, ReEP can integrate multiple tools, expanding its capacity for vulnerability detection. It evaluates results from existing tools to verify vulnerability likelihood and reduce false positives. ReEP also offers excellent extensibility, enabling the integration of different detection tools to enhance precision and cover different vulnerability attack patterns. We perform ReEP to eight existing state-of-the-art Reentrancy detection tools. The average precision of these eight tools increased from the original 0.5% to 73% without sacrificing recall. Furthermore, ReEP exhibits robust extensibility. By integrating multiple tools, the precision further improved to a maximum of 83.6%. These results demonstrate that ReEP effectively unites the strengths of existing works, enhances the precision of Reentrancy vulnerability detection tools.",
         "subjects": [
             "cs.CR"
         ],
@@ -5451,32 +5524,6 @@
         "comment": "34 Pages, 8 figures"
     },
     {
-        "paper id": "2402.09368",
-        "abstract url": "https://arxiv.org/abs/2402.09368",
-        "title": "Magic-Me: Identity-Specific Video Customized Diffusion",
-        "rating": -3,
-        "keywords": [
-            [
-                "3D"
-            ],
-            [
-                "Diffusion",
-                "text-to-image"
-            ],
-            [
-                "Face"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Creating content with specified identities (ID) has attracted significant interest in the field of generative models. In the field of text-to-image generation (T2I), subject-driven creation has achieved great progress with the identity controlled via reference images. However, its extension to video generation is not well explored. In this work, we propose a simple yet effective subject identity controllable video generation framework, termed Video Custom Diffusion (VCD). With a specified identity defined by a few images, VCD reinforces the identity characteristics and injects frame-wise correlation at the initialization stage for stable video outputs. To achieve this, we propose three novel components that are essential for high-quality identity preservation and stable video generation: 1) a noise initialization method with 3D Gaussian Noise Prior for better inter-frame stability; 2) an ID module based on extended Textual Inversion trained with the cropped identity to disentangle the ID information from the background 3) Face VCD and Tiled VCD modules to reinforce faces and upscale the video to higher resolution while preserving the identity's features. We conducted extensive experiments to verify that VCD is able to generate stable videos with better ID over the baselines. Besides, with the transferability of the encoded identity in the ID module, VCD is also working well with personalized text-to-image models available publicly. The codes are available at https://github.com/Zhen-Dong/Magic-Me.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Project Page at https://magic-me-webpage.github.io"
-    },
-    {
         "paper id": "2402.09387",
         "abstract url": "https://arxiv.org/abs/2402.09387",
         "title": "Active Disruption Avoidance and Trajectory Design for Tokamak Ramp-downs with Neural Differential Equations and Reinforcement Learning",
@@ -5511,6 +5558,29 @@
         "abstract": "Context: Modern software development increasingly relies on software testing for an ever more frequent delivery of high quality software. This puts high demands on the quality of the central artifacts in software testing, test suites and test cases. Objective: We aim to develop a comprehensive model for capturing the dimensions of test case/suite quality, which are relevant for a variety of perspectives. Method: We have carried out a systematic literature review to identify and analyze existing secondary studies on quality aspects of software testing artifacts. Results: We identified 49 relevant secondary studies. Of these 49 studies, less than half did some form of quality appraisal of the included primary studies and only 3 took into account the quality of the primary study when synthesizing the results. We present an aggregation of the context dimensions and factors that can be used to characterize the environment in which the test case/suite quality is investigated. We also provide a comprehensive model of test case/suite quality with definitions for the quality attributes and measurements based on findings in the literature and ISO/IEC 25010:2011. Conclusion: The test artifact quality model presented in the paper can be used to support test artifact quality assessment and improvement initiatives in practice. Furtherm Information and Software Technology 139 (2021): 106620ore, the model can also be used as a framework for documenting context characteristics to make research results more accessible for research and practice.",
         "subjects": [
             "cs.SE"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2402.09546",
+        "abstract url": "https://arxiv.org/abs/2402.09546",
+        "title": "How Secure Are Large Language Models (LLMs) for Navigation in Urban Environments?",
+        "rating": -3,
+        "keywords": [
+            [
+                "autonomous driving"
+            ],
+            [
+                "robotics",
+                "Navigation"
+            ],
+            [
+                "Attack"
+            ]
+        ],
+        "abstract": "In the field of robotics and automation, navigation systems based on Large Language Models (LLMs) have recently shown impressive performance. However, the security aspects of these systems have received relatively less attention. This paper pioneers the exploration of vulnerabilities in LLM-based navigation models in urban outdoor environments, a critical area given the technology's widespread application in autonomous driving, logistics, and emergency services. Specifically, we introduce a novel Navigational Prompt Suffix (NPS) Attack that manipulates LLM-based navigation models by appending gradient-derived suffixes to the original navigational prompt, leading to incorrect actions. We conducted comprehensive experiments on an LLMs-based navigation model that employs various LLMs for reasoning. Our results, derived from the Touchdown and Map2Seq street-view datasets under both few-shot learning and fine-tuning configurations, demonstrate notable performance declines across three metrics in the face of both white-box and black-box attacks. These results highlight the generalizability and transferability of the NPS Attack, emphasizing the need for enhanced security in LLM-based navigation systems. As an initial countermeasure, we propose the Navigational Prompt Engineering (NPE) Defense strategy, concentrating on navigation-relevant keywords to reduce the impact of adversarial suffixes. While initial findings indicate that this strategy enhances navigational safety, there remains a critical need for the wider research community to develop stronger defense methods to effectively tackle the real-world challenges faced by these systems.",
+        "subjects": [
+            "cs.RO"
         ],
         "comment": null
     },
@@ -5659,6 +5729,31 @@
         "comment": null
     },
     {
+        "paper id": "2402.09565",
+        "abstract url": "https://arxiv.org/abs/2402.09565",
+        "title": "Graph-Skeleton: ~1% Nodes are Sufficient to Represent Billion-Scale Graph",
+        "rating": -3.5,
+        "keywords": [
+            [
+                "Skeleton"
+            ],
+            [
+                "Graph"
+            ],
+            [
+                "industrial"
+            ],
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "Due to the ubiquity of graph data on the web, web graph mining has become a hot research spot. Nonetheless, the prevalence of large-scale web graphs in real applications poses significant challenges to storage, computational capacity and graph model design. Despite numerous studies to enhance the scalability of graph models, a noticeable gap remains between academic research and practical web graph mining applications. One major cause is that in most industrial scenarios, only a small part of nodes in a web graph are actually required to be analyzed, where we term these nodes as target nodes, while others as background nodes. In this paper, we argue that properly fetching and condensing the background nodes from massive web graph data might be a more economical shortcut to tackle the obstacles fundamentally. To this end, we make the first attempt to study the problem of massive background nodes compression for target nodes classification. Through extensive experiments, we reveal two critical roles played by the background nodes in target node classification: enhancing structural connectivity between target nodes, and feature correlation with target nodes. Followingthis, we propose a novel Graph-Skeleton1 model, which properly fetches the background nodes, and further condenses the semantic and topological information of background nodes within similar target-background local structures. Extensive experiments on various web graph datasets demonstrate the effectiveness and efficiency of the proposed method. In particular, for MAG240M dataset with 0.24 billion nodes, our generated skeleton graph achieves highly comparable performance while only containing 1.8% nodes of the original graph.",
+        "subjects": [
+            "cs.AI"
+        ],
+        "comment": "21 pages, 11 figures, In Proceedings of the ACM Web Conference 2024 (WWW'24)"
+    },
+    {
         "paper id": "2402.09253",
         "abstract url": "https://arxiv.org/abs/2402.09253",
         "title": "Max-Min Fair Energy-Efficient Beam Design for Quantized ISAC LEO Satellite Systems: A Rate-Splitting Approach",
@@ -5697,42 +5792,23 @@
         "comment": null
     },
     {
-        "paper id": "2402.09499",
-        "abstract url": "https://arxiv.org/abs/2402.09499",
-        "title": "Enriched multi-agent middleware for building rule-based distributed security solutions for IoT environments",
+        "paper id": "2402.09493",
+        "abstract url": "https://arxiv.org/abs/2402.09493",
+        "title": "Dynamic modeling and predictive control of a microfluidic system",
         "rating": -4,
         "keywords": [
             [
-                "face"
+                "biotechnology"
             ],
             [
-                "IoT"
+                "chemistry"
             ]
         ],
-        "abstract": "The increasing number of connected devices and the complexity of Internet of Things (IoT) ecosystems are demanding new architectures for managing and securing these networked environments. Intrusion Detection Systems (IDS) are security solutions that help to detect and mitigate the threats that IoT systems face, but there is a need for new IDS strategies and architectures. This paper describes a development environment that allows the programming and debugging of distributed, rule-based multi-agent IDS solutions. The proposed solution consists in the integration of a rule engine into the agent, the use of a specialized, wrapping agent class with a graphical user interface for programming and debugging purposes, and a mechanism for the incremental composition of behaviors. A comparative study and an example IDS are used to test and show the suitability and validity of the approach. The JADE multi-agent middleware has been used for the practical implementations.",
-        "subjects": [
-            "cs.MA"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2402.09675",
-        "abstract url": "https://arxiv.org/abs/2402.09675",
-        "title": "Repurposing Coal Power Plants into Thermal Energy Storage for Supporting Zero-carbon Data Centers",
-        "rating": -4,
-        "keywords": [
-            [
-                "face"
-            ],
-            [
-                "Thermal"
-            ]
-        ],
-        "abstract": "Coal power plants will need to be phased out and face stranded asset risks under the net-zero energy system transition. Repurposing coal power plants could recoup profits and reduce carbon emissions using the existing infrastructure and grid connections. This paper investigates a retrofitting strategy that turns coal power plants into thermal energy storage (TES) and zero-carbon data centers (DCs). The proposed capacity expansion model considers the co-locations of DCs, local renewablewith the system-generation, andlevel coal retir energy storage ement and retrofitting. We optimize the DC system configurations under the hourly-matching carbon policy and flexible operations. Results show that under hourly-matching carbon constraints, the retrofitted TES could complement the operations of lithium-ion batteries (LIBs) to reduce system costs. This could render DCs with optimal co-located renewable generations and energy storage more cost-effective than unconstrained DCs.",
+        "abstract": "Microfluidics, the study of fluids in microscopic channels, has led to important advances in fields as diverse as microelectronics, biotechnology and chemistry. Microfluidic research is primarily based on the use of microfluidic chips, low-cost devices that can be used to perform laboratory experiments using small amounts of fluid. These systems, however, require advanced control mechanisms in order to accurately achieve the flow rates and pressures required in the experiments. In this paper, we present the design of a model predictive controller intended to regulate the fluid flows in one of these systems. The results obtained, both through simulations and real experiments performed on the device, show that predictive control is an ideal technique to control these systems, especially taking into account all the existing constraints.",
         "subjects": [
             "eess.SY"
         ],
-        "comment": null
+        "comment": "12 pages, 17 figures. This is an author-approved English translation of a paper accepted for publication (see Related DOI)"
     },
     {
         "paper id": "2402.09705",
@@ -5757,32 +5833,22 @@
         "comment": null
     },
     {
-        "paper id": "2402.09944",
-        "abstract url": "https://arxiv.org/abs/2402.09944",
-        "title": "Loopy-SLAM: Dense Neural SLAM with Loop Closures",
+        "paper id": "2404.15281",
+        "abstract url": "https://arxiv.org/abs/2404.15281",
+        "title": "The Nexus of Open Science and Innovation: Insights from Patent Citations",
         "rating": -4,
         "keywords": [
             [
-                "3D",
-                "RGBD"
+                "biology"
             ],
             [
-                "Simultaneous Localization And Mapping",
-                "SLAM"
-            ],
-            [
-                "graph"
-            ],
-            [
-                "face"
-            ],
-            [
-                "cs.CV"
+                "Patent",
+                "Chemistry"
             ]
         ],
-        "abstract": "Neural RGBD SLAM techniques have shown promise in dense Simultaneous Localization And Mapping (SLAM), yet face challenges such as error accumulation during camera tracking resulting in distorted maps. In response, we introduce Loopy-SLAM that globally optimizes poses and the dense 3D model. We use frame-to-model tracking using a data-driven point-based submap generation method and trigger loop closures online by performing global place recognition. Robust pose graph optimization is used to rigidly align the local submaps. As our representation is point based, map corrections can be performed efficiently without the need to store the entire history of input frames used for mapping as typically required by methods employing a grid based mapping structure. Evaluation on the synthetic Replica and real-world TUM-RGBD and ScanNet datasets demonstrate competitive or superior performance in tracking, mapping, and rendering accuracy when compared to existing dense neural RGBD SLAM methods. Project page: notchla.github.io/Loopy-SLAM.",
+        "abstract": "This paper aims to analyze the extent to which inventive activity relies on open science. In other words, it investigates whether inventors utilize Open Access (OA) publications more than subscription-based ones, especially given that some inventors may lack institutional access. To achieve this, we utilized the (Marx, 2023) database, which contains citations of patents to scientific publications (Non-Patent References-NPRs). We focused on publications closely related to invention, specifically those cited solely by inventors within the body of patent texts. Our dataset was supplemented by OpenAlex data. The final sample comprised 961,104 publications cited in patents, of which 861,720 had a DOI. Results indicate that across all disciplines, OA publications are 38% more prevalent in patent citations (NPRs) than in the overall OpenAlex database. In biology and medicine, inventors use 73% and 27% more OA publications, respectively, compared to closed-access ones. Chemistry and computer science are also disciplines where OA publications are more frequently utilized in patent contexts than subscription-based ones.",
         "subjects": [
-            "cs.CV"
+            "cs.DL"
         ],
         "comment": null
     },
@@ -5808,32 +5874,6 @@
         "abstract": "During nursing studies, it is crucial to develop emotional skills for both academic success and quality patient care. Utilizing technologies like thermography can be instrumental in nursing education to assess and enhance these skills. The study aims to evaluate the effectiveness of thermography in monitoring and improving the emotional skills of nursing students through a case study approach. The case study involved exposing a student to various emotional stimuli, including videos and music, and measuring facial temperature changes. These changes were recorded using a FLIR E6 camera across three phases: acclimatization, stimulus, and response. Environmental factors such as temperature and humidity were also recorded. Distinct thermal responses were observed for different emotions. For instance, during the acclimatization phase with video stimuli, forehead temperatures varied between positive emotions (joy: 34.5\\textdegree C to 34.5\\textdegree C) and negative emotions (anger: 36.1\\textdegree C to 35.1\\textdegree C). However, there was a uniform change in temperature during both stimulus (joy: 34.7\\textdegree C to 35.0\\textdegree C, anger: 35.0\\textdegree C to 35.0\\textdegree C) and response phases (joy: 35.0\\textdegree C to 35.0\\textdegree C, anger: 34.8\\textdegree C to 35.0\\textdegree C). Music stimuli also induced varying thermal patterns (joy: 34.2\\textdegree C to 33.9\\textdegree C to 33.4\\textdegree C, anger: 33.8\\textdegree C to 33.4\\textdegree C to 33.8\\textdegree C).Thermography revealed consistent thermal patterns in response to emotional stimuli, with the exception of the nose area, suggesting its suitability as a non-invasive, quantifiable, and accessible method for emotional skill training in nursing education.",
         "subjects": [
             "cs.CY"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2402.09546",
-        "abstract url": "https://arxiv.org/abs/2402.09546",
-        "title": "How Secure Are Large Language Models (LLMs) for Navigation in Urban Environments?",
-        "rating": -5,
-        "keywords": [
-            [
-                "autonomous driving"
-            ],
-            [
-                "robotics",
-                "Navigation"
-            ],
-            [
-                "Attack"
-            ],
-            [
-                "face"
-            ]
-        ],
-        "abstract": "In the field of robotics and automation, navigation systems based on Large Language Models (LLMs) have recently shown impressive performance. However, the security aspects of these systems have received relatively less attention. This paper pioneers the exploration of vulnerabilities in LLM-based navigation models in urban outdoor environments, a critical area given the technology's widespread application in autonomous driving, logistics, and emergency services. Specifically, we introduce a novel Navigational Prompt Suffix (NPS) Attack that manipulates LLM-based navigation models by appending gradient-derived suffixes to the original navigational prompt, leading to incorrect actions. We conducted comprehensive experiments on an LLMs-based navigation model that employs various LLMs for reasoning. Our results, derived from the Touchdown and Map2Seq street-view datasets under both few-shot learning and fine-tuning configurations, demonstrate notable performance declines across three metrics in the face of both white-box and black-box attacks. These results highlight the generalizability and transferability of the NPS Attack, emphasizing the need for enhanced security in LLM-based navigation systems. As an initial countermeasure, we propose the Navigational Prompt Engineering (NPE) Defense strategy, concentrating on navigation-relevant keywords to reduce the impact of adversarial suffixes. While initial findings indicate that this strategy enhances navigational safety, there remains a critical need for the wider research community to develop stronger defense methods to effectively tackle the real-world challenges faced by these systems.",
-        "subjects": [
-            "cs.RO"
         ],
         "comment": null
     },
@@ -6219,7 +6259,7 @@
         "subjects": [
             "cs.FL"
         ],
-        "comment": "23 pages, 2 figures, submitted to ICALP 2024"
+        "comment": "24 pages, 2 figures, full version of paper at ICALP 2024"
     },
     {
         "paper id": "2402.09187",
@@ -6364,18 +6404,6 @@
             "cs.IT"
         ],
         "comment": "Accepted for publication in the IEEE Transactions on Communications"
-    },
-    {
-        "paper id": "2402.09370",
-        "abstract url": "https://arxiv.org/abs/2402.09370",
-        "title": "Pseudorandom Error-Correcting Codes",
-        "rating": -10,
-        "keywords": [],
-        "abstract": "We construct pseudorandom error-correcting codes (or simply pseudorandom codes), which are error-correcting codes with the property that any polynomial number of codewords are pseudorandom to any computationally-bounded adversary. Efficient decoding of corrupted codewords is possible with the help of a decoding key. We build pseudorandom codes that are robust to substitution and deletion errors, where pseudorandomness rests on standard cryptographic assumptions. Specifically, pseudorandomness is based on either $2^{O(\\sqrt{n})}$-hardness of LPN, or polynomial hardness of LPN and the planted XOR problem at low density. As our primary application of pseudorandom codes, we present an undetectable watermarking scheme for outputs of language models that is robust to cropping and a constant rate of random substitutions and deletions. The watermark is undetectable in the sense that any number of samples of watermarked text are computationally indistinguishable from text output by the original model. This is the first undetectable watermarking scheme that can tolerate a constant rate of errors. Our second application is to steganography, where a secret message is hidden in innocent-looking content. We present a constant-rate stateless steganography scheme with robustness to a constant rate of substitutions. Ours is the first stateless steganography scheme with provable steganographic security and any robustness to errors.",
-        "subjects": [
-            "cs.CR"
-        ],
-        "comment": null
     },
     {
         "paper id": "2402.09377",
@@ -6844,5 +6872,17 @@
             "eess.SY"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2404.08644",
+        "abstract url": "https://arxiv.org/abs/2404.08644",
+        "title": "RIS Assisted Wireless Networks: Collaborative Regulation, Deployment Mode and Field Testing",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "In recent years, RIS has made significant progress in engineering application research and industrialization and academic research. However, the engineering application research field of RIS still faces several challenges. This article analyzes and discusses the two deployment modes of RIs-assisted wireless networks: Network Controlled Mode and Standalone mode. It also presents three typical collaboration scenarios of RIS networks, including multi-RIS collaboration, multi-user access, and multi-cell coordination, which reflect the differences between the two deployment modes of RIS. The article proposes collaborative regulation mechanisms for RIS and analyzes their applications in the two network deployment modes in-depth. Furthermore, the article establishes simulation models of three scenarios and provides rich numerical simulation results. An actual field test environment was also built, where a specially designed and processed RIS prototype was used for preliminary field test and verification. Finally, this article puts forward future trends and challenges.",
+        "subjects": [
+            "cs.NI"
+        ],
+        "comment": "18 Pages. 13 Figures"
     }
 ]

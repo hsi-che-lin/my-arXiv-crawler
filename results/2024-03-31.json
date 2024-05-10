@@ -123,7 +123,7 @@
                 "cs.CV"
             ]
         ],
-        "abstract": "Segment Anything Model (SAM) exhibits powerful yet versatile capabilities on (un) conditional image segmentation tasks recently. Although SAM can support various segmentation prompts, we note that, compared to point- and box-guided segmentation, it performs much worse on text-instructed tasks. We argue that deep text instruction tuning is key to mitigate such shortcoming caused by the shallow fusion scheme in its default light-weight mask decoder. In this paper, two \\emph{deep instruction tuning} (DIT) methods are proposed, one is end-to-end and the other is layer-wise. With these tuning methods, we can regard the image encoder of SAM as a stand-alone vision-language learner in contrast to building another deep fusion branch. Extensive experiments on three highly competitive benchmark datasets of referring image segmentation show that a simple end-to-end DIT improves SAM by a large margin, with layer-wise DIT further boosts the performance to state-of-the-art. Our code is anonymously released at: https://github.com/wysnzzzz/DIT.",
+        "abstract": "Recently, Segment Anything Model (SAM) has become a research hotspot in the fields of multimedia and computer vision, which exhibits powerful yet versatile capabilities on various (un) conditional image segmentation tasks. Although SAM can support different types of segmentation prompts, we note that, compared to point- and box-guided segmentations, it performs much worse on text-instructed tasks, e.g., referring image segmentation (RIS). In this paper, we argue that deep text instruction tuning is key to mitigate such shortcoming caused by the shallow fusion scheme in its default light-weight mask decoder. To address this issue, we propose two simple yet effective deep instruction tuning (DIT) methods for SAM, one is end-to-end and the other is layer-wise. With minimal modifications, DITs can directly transform the image encoder of SAM as a stand-alone vision-language learner in contrast to building another deep fusion branch, maximizing the benefit of its superior segmentation capability. Extensive experiments on three highly competitive benchmark datasets of RIS show that a simple end-to-end DIT can improve SAM by a large margin, while the layer-wise DIT can further boost the performance to state-of-the-art with much less data and training expenditures. Our code is released at: https://github.com/wysnzzzz/DIT.",
         "subjects": [
             "cs.CV"
         ],
@@ -171,6 +171,25 @@
         "comment": "ICLR 2024"
     },
     {
+        "paper id": "2404.00861",
+        "abstract url": "https://arxiv.org/abs/2404.00861",
+        "title": "Enhancing Real-World Active Speaker Detection with Multi-Modal Extraction Pre-Training",
+        "rating": 2,
+        "keywords": [
+            [
+                "Audio-visual"
+            ],
+            [
+                "eess.AS"
+            ]
+        ],
+        "abstract": "Audio-visual active speaker detection (AV-ASD) aims to identify which visible face is speaking in a scene with one or more persons. Most existing AV-ASD methods prioritize capturing speech-lip correspondence. However, there is a noticeable gap in addressing the challenges from real-world AV-ASD scenarios. Due to the presence of low-quality noisy videos in such cases, AV-ASD systems without a selective listening ability are short of effectively filtering out disruptive voice components from mixed audio inputs. In this paper, we propose a Multi-modal Speaker Extraction-to-Detection framework named `MuSED', which is pre-trained with audio-visual target speaker extraction to learn the denoising ability, then it is fine-tuned with the AV-ASD task. Meanwhile, to better capture the multi-modal information and deal with real-world problems such as missing modality, MuSED is modelled on the time domain directly and integrates the multi-modal plus-and-minus augmentation strategy. Our experiments demonstrate that MuSED substantially outperforms the state-of-the-art AV-ASD methods and achieves 95.6% mAP on the AVA-ActiveSpeaker dataset, 98.3% AP on the ASW dataset, and 97.9% F1 on the Columbia AV-ASD dataset, respectively. We will publicly release the code in due course.",
+        "subjects": [
+            "eess.AS"
+        ],
+        "comment": "10 pages"
+    },
+    {
         "paper id": "2404.00862",
         "abstract url": "https://arxiv.org/abs/2404.00862",
         "title": "Bailong: Bilingual Transfer Learning based on QLoRA and Zip-tie Embedding",
@@ -188,6 +207,44 @@
             "cs.CL"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2404.00563",
+        "abstract url": "https://arxiv.org/abs/2404.00563",
+        "title": "Exploiting Inter-sample and Inter-feature Relations in Dataset Distillation",
+        "rating": 1.5,
+        "keywords": [
+            [
+                "cs.CV"
+            ],
+            [
+                "CVPR"
+            ]
+        ],
+        "abstract": "Dataset distillation has emerged as a promising approach in deep learning, enabling efficient training with small synthetic datasets derived from larger real ones. Particularly, distribution matching-based distillation methods attract attention thanks to its effectiveness and low computational cost. However, these methods face two primary limitations: the dispersed feature distribution within the same class in synthetic datasets, reducing class discrimination, and an exclusive focus on mean feature consistency, lacking precision and comprehensiveness. To address these challenges, we introduce two novel constraints: a class centralization constraint and a covariance matching constraint. The class centralization constraint aims to enhance class discrimination by more closely clustering samples within classes. The covariance matching constraint seeks to achieve more accurate feature distribution matching between real and synthetic datasets through local feature covariance matrices, particularly beneficial when sample sizes are much smaller than the number of features. Experiments demonstrate notable improvements with these constraints, yielding performance boosts of up to 6.6% on CIFAR10, 2.9% on SVHN, 2.5% on CIFAR100, and 2.5% on TinyImageNet, compared to the state-of-the-art relevant methods. In addition, our method maintains robust performance in cross-architecture settings, with a maximum performance drop of 1.7% on four architectures. Code is available at https://github.com/VincenDen/IID.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Accepted to CVPR 2024"
+    },
+    {
+        "paper id": "2404.00597",
+        "abstract url": "https://arxiv.org/abs/2404.00597",
+        "title": "Parameter and Data-Efficient Spectral StyleDCGAN",
+        "rating": 1.5,
+        "keywords": [
+            [
+                "cs.CV"
+            ],
+            [
+                "ICLR"
+            ]
+        ],
+        "abstract": "We present a simple, highly parameter, and data-efficient adversarial network for unconditional face generation. Our method: Spectral Style-DCGAN or SSD utilizes only 6.574 million parameters and 4739 dog faces from the Animal Faces HQ (AFHQ) dataset as training samples while preserving fidelity at low resolutions up to 64x64. Code available at https://github.com/Aryan-Garg/StyleDCGAN.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Notable ICLR Tiny Paper 2024"
     },
     {
         "paper id": "2404.00626",
@@ -226,6 +283,50 @@
             "cs.CV"
         ],
         "comment": "Accepted by CVPR 2024"
+    },
+    {
+        "paper id": "2404.00680",
+        "abstract url": "https://arxiv.org/abs/2404.00680",
+        "title": "Learning to Rank Patches for Unbiased Image Redundancy Reduction",
+        "rating": 1.5,
+        "keywords": [
+            [
+                "cs.CV"
+            ],
+            [
+                "CVPR"
+            ]
+        ],
+        "abstract": "Images suffer from heavy spatial redundancy because pixels in neighboring regions are spatially correlated. Existing approaches strive to overcome this limitation by reducing less meaningful image regions. However, current leading methods rely on supervisory signals. They may compel models to preserve content that aligns with labeled categories and discard content belonging to unlabeled categories. This categorical inductive bias makes these methods less effective in real-world scenarios. To address this issue, we propose a self-supervised framework for image redundancy reduction called Learning to Rank Patches (LTRP). We observe that image reconstruction of masked image modeling models is sensitive to the removal of visible patches when the masking ratio is high (e.g., 90\\%). Building upon it, we implement LTRP via two steps: inferring the semantic density score of each patch by quantifying variation between reconstructions with and without this patch, and learning to rank the patches with the pseudo score. The entire process is self-supervised, thus getting out of the dilemma of categorical inductive bias. We design extensive experiments on different datasets and tasks. The results demonstrate that LTRP outperforms both supervised and other self-supervised methods due to the fair assessment of image content.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Accepted by CVPR 2024"
+    },
+    {
+        "paper id": "2404.00710",
+        "abstract url": "https://arxiv.org/abs/2404.00710",
+        "title": "Unknown Prompt, the only Lacuna: Unveiling CLIP's Potential for Open Domain Generalization",
+        "rating": 1.5,
+        "keywords": [
+            [
+                "vision-language"
+            ],
+            [
+                "diffusion"
+            ],
+            [
+                "cs.CV"
+            ],
+            [
+                "CVPR"
+            ]
+        ],
+        "abstract": "We delve into Open Domain Generalization (ODG), marked by domain and category shifts between training's labeled source and testing's unlabeled target domains. Existing solutions to ODG face limitations due to constrained generalizations of traditional CNN backbones and errors in detecting target open samples in the absence of prior knowledge. Addressing these pitfalls, we introduce ODG-CLIP, harnessing the semantic prowess of the vision-language model, CLIP. Our framework brings forth three primary innovations: Firstly, distinct from prevailing paradigms, we conceptualize ODG as a multi-class classification challenge encompassing both known and novel categories. Central to our approach is modeling a unique prompt tailored for detecting unknown class samples, and to train this, we employ a readily accessible stable diffusion model, elegantly generating proxy images for the open class. Secondly, aiming for domain-tailored classification (prompt) weights while ensuring a balance of precision and simplicity, we devise a novel visual stylecentric prompt learning mechanism. Finally, we infuse images with class-discriminative knowledge derived from the prompt space to augment the fidelity of CLIP's visual embeddings. We introduce a novel objective to safeguard the continuity of this infused semantic intel across domains, especially for the shared classes. Through rigorous testing on diverse datasets, covering closed and open-set DG contexts, ODG-CLIP demonstrates clear supremacy, consistently outpacing peers with performance boosts between 8%-16%. Code will be available at https://github.com/mainaksingha01/ODG-CLIP.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Accepted in CVPR 2024"
     },
     {
         "paper id": "2404.00741",
@@ -271,22 +372,6 @@
             "cs.CV"
         ],
         "comment": "Accepted by CVPR 2024"
-    },
-    {
-        "paper id": "2404.00565",
-        "abstract url": "https://arxiv.org/abs/2404.00565",
-        "title": "Leveraging Corpus Metadata to Detect Template-based Translation: An Exploratory Case Study of the Egyptian Arabic Wikipedia Edition",
-        "rating": 1,
-        "keywords": [
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Wikipedia articles (content pages) are commonly used corpora in Natural Language Processing (NLP) research, especially in low-resource languages other than English. Yet, a few research studies have studied the three Arabic Wikipedia editions, Arabic Wikipedia (AR), Egyptian Arabic Wikipedia (ARZ), and Moroccan Arabic Wikipedia (ARY), and documented issues in the Egyptian Arabic Wikipedia edition regarding the massive automatic creation of its articles using template-based translation from English to Arabic without human involvement, overwhelming the Egyptian Arabic Wikipedia with articles that do not only have low-quality content but also with articles that do not represent the Egyptian people, their culture, and their dialect. In this paper, we aim to mitigate the problem of template translation that occurred in the Egyptian Arabic Wikipedia by identifying these template-translated articles and their characteristics through exploratory analysis and building automatic detection systems. We first explore the content of the three Arabic Wikipedia editions in terms of density, quality, and human contributions and utilize the resulting insights to build multivariate machine learning classifiers leveraging articles' metadata to detect the template-translated articles automatically. We then publicly deploy and host the best-performing classifier, XGBoost, as an online application called EGYPTIAN WIKIPEDIA SCANNER and release the extracted, filtered, and labeled datasets to the research community to benefit from our datasets and the online, web-based detection system.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": "This paper has been accepted at LREC-COLING 2024: The 6th Workshop on Open-Source Arabic Corpora and Processing Tools (OSACT6)"
     },
     {
         "paper id": "2404.00570",
@@ -554,22 +639,6 @@
         "comment": "Accepted to CVPR 2024. Code is available at https://github.com/Osilly/TokenExpansion"
     },
     {
-        "paper id": "2404.00680",
-        "abstract url": "https://arxiv.org/abs/2404.00680",
-        "title": "Learning to Rank Patches for Unbiased Image Redundancy Reduction",
-        "rating": 1,
-        "keywords": [
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Images suffer from heavy spatial redundancy because pixels in neighboring regions are spatially correlated. Existing approaches strive to overcome this limitation by reducing less meaningful image regions. However, current leading methods rely on supervisory signals. They may compel models to preserve content that aligns with labeled categories and discard content belonging to unlabeled categories. This categorical inductive bias makes these methods less effective in real-world scenarios. To address this issue, we propose a self-supervised framework for image redundancy reduction called Learning to Rank Patches (LTRP). We observe that image reconstruction of masked image modeling models is sensitive to the removal of visible patches when the masking ratio is high (e.g., 90\\%). Building upon it, we implement LTRP via two steps: inferring the semantic density score of each patch by quantifying variation between reconstructions with and without this patch, and learning to rank the patches with the pseudo score. The entire process is self-supervised, thus getting out of the dilemma of categorical inductive bias. We design extensive experiments on different datasets and tasks. The results demonstrate that LTRP outperforms both supervised and other self-supervised methods due to the fair assessment of image content.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2404.00681",
         "abstract url": "https://arxiv.org/abs/2404.00681",
         "title": "CoUDA: Coherence Evaluation via Unified Data Augmentation",
@@ -746,7 +815,7 @@
         "subjects": [
             "cs.LG"
         ],
-        "comment": "Published in the Proceedings of the 12th International Conference on Learning Representations (ICLR 2024)"
+        "comment": "Published in the Proceedings of the 12th International Conference on Learning Representations (ICLR 2024). Code is available at https://github.com/mohmdelsayed/upgd"
     },
     {
         "paper id": "2404.00789",
@@ -844,22 +913,6 @@
         "abstract": "Human writers often bookend their writing with ending sentences that relate back to the beginning sentences in order to compose a satisfying narrative that \"closes the loop.\" Motivated by this observation, we propose RENarGen, a controllable story-generation paradigm that generates narratives by ensuring the first and last sentences are related and then infilling the middle sentences. Our contributions include an initial exploration of how various methods of bookending from Narratology affect language modeling for stories. Automatic and human evaluations indicate RENarGen produces better stories with more narrative closure than current autoregressive models.",
         "subjects": [
             "cs.CL"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2404.00842",
-        "abstract url": "https://arxiv.org/abs/2404.00842",
-        "title": "An N-Point Linear Solver for Line and Motion Estimation with Event Cameras",
-        "rating": 1,
-        "keywords": [
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Event cameras respond primarily to edges--formed by strong gradients--and are thus particularly well-suited for line-based motion estimation. Recent work has shown that events generated by a single line each satisfy a polynomial constraint which describes a manifold in the space-time volume. Multiple such constraints can be solved simultaneously to recover the partial linear velocity and line parameters. In this work, we show that, with a suitable line parametrization, this system of constraints is actually linear in the unknowns, which allows us to design a novel linear solver. Unlike existing solvers, our linear solver (i) is fast and numerically stable since it does not rely on expensive root finding, (ii) can solve both minimal and overdetermined systems with more than 5 events, and (iii) admits the characterization of all degenerate cases and multiple solutions. The found line parameters are singularity-free and have a fixed scale, which eliminates the need for auxiliary constraints typically encountered in previous work. To recover the full linear camera velocity we fuse observations from multiple lines with a novel velocity averaging scheme that relies on a geometrically-motivated residual, and thus solves the problem more efficiently than previous schemes which minimize an algebraic residual. Extensive experiments in synthetic and real-world settings demonstrate that our method surpasses the previous work in numerical stability, and operates over 600 times faster.",
-        "subjects": [
-            "cs.CV"
         ],
         "comment": null
     },
@@ -1091,6 +1144,25 @@
         "comment": null
     },
     {
+        "paper id": "2404.00565",
+        "abstract url": "https://arxiv.org/abs/2404.00565",
+        "title": "Leveraging Corpus Metadata to Detect Template-based Translation: An Exploratory Case Study of the Egyptian Arabic Wikipedia Edition",
+        "rating": 0.5,
+        "keywords": [
+            [
+                "cs.CL"
+            ],
+            [
+                "Workshop"
+            ]
+        ],
+        "abstract": "Wikipedia articles (content pages) are commonly used corpora in Natural Language Processing (NLP) research, especially in low-resource languages other than English. Yet, a few research studies have studied the three Arabic Wikipedia editions, Arabic Wikipedia (AR), Egyptian Arabic Wikipedia (ARZ), and Moroccan Arabic Wikipedia (ARY), and documented issues in the Egyptian Arabic Wikipedia edition regarding the massive automatic creation of its articles using template-based translation from English to Arabic without human involvement, overwhelming the Egyptian Arabic Wikipedia with articles that do not only have low-quality content but also with articles that do not represent the Egyptian people, their culture, and their dialect. In this paper, we aim to mitigate the problem of template translation that occurred in the Egyptian Arabic Wikipedia by identifying these template-translated articles and their characteristics through exploratory analysis and building automatic detection systems. We first explore the content of the three Arabic Wikipedia editions in terms of density, quality, and human contributions and utilize the resulting insights to build multivariate machine learning classifiers leveraging articles' metadata to detect the template-translated articles automatically. We then publicly deploy and host the best-performing classifier, XGBoost, as an online application called EGYPTIAN WIKIPEDIA SCANNER and release the extracted, filtered, and labeled datasets to the research community to benefit from our datasets and the online, web-based detection system.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": "This paper has been accepted at LREC-COLING 2024: The 6th Workshop on Open-Source Arabic Corpora and Processing Tools (OSACT6)"
+    },
+    {
         "paper id": "2404.00589",
         "abstract url": "https://arxiv.org/abs/2404.00589",
         "title": "Harnessing the Power of Large Language Model for Uncertainty Aware Graph Processing",
@@ -1194,6 +1266,22 @@
         "comment": "We found some flaws in our analysis and we are in the process of rectifying those"
     },
     {
+        "paper id": "2404.00688",
+        "abstract url": "https://arxiv.org/abs/2404.00688",
+        "title": "Meta Learning in Bandits within Shared Affine Subspaces",
+        "rating": 0.5,
+        "keywords": [
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "We study the problem of meta-learning several contextual stochastic bandits tasks by leveraging their concentration around a low-dimensional affine subspace, which we learn via online principal component analysis to reduce the expected regret over the encountered bandits. We propose and theoretically analyze two strategies that solve the problem: One based on the principle of optimism in the face of uncertainty and the other via Thompson sampling. Our framework is generic and includes previously proposed approaches as special cases. Besides, the empirical results show that our methods significantly reduce the regret on several bandit tasks.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": "Accepted in AISTATS 2024"
+    },
+    {
         "paper id": "2404.00728",
         "abstract url": "https://arxiv.org/abs/2404.00728",
         "title": "Investigating Youths' Everyday Understanding of Machine Learning Applications: a Knowledge-in-Pieces Perspective",
@@ -1224,6 +1312,28 @@
             "cs.LG"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2404.00777",
+        "abstract url": "https://arxiv.org/abs/2404.00777",
+        "title": "Privacy-preserving Optics for Enhancing Protection in Face De-identification",
+        "rating": 0.5,
+        "keywords": [
+            [
+                "attacks"
+            ],
+            [
+                "cs.CV"
+            ],
+            [
+                "CVPR"
+            ]
+        ],
+        "abstract": "The modern surge in camera usage alongside widespread computer vision technology applications poses significant privacy and security concerns. Current artificial intelligence (AI) technologies aid in recognizing relevant events and assisting in daily tasks in homes, offices, hospitals, etc. The need to access or process personal information for these purposes raises privacy concerns. While software-level solutions like face de-identification provide a good privacy/utility trade-off, they present vulnerabilities to sniffing attacks. In this paper, we propose a hardware-level face de-identification method to solve this vulnerability. Specifically, our approach first learns an optical encoder along with a regression model to obtain a face heatmap while hiding the face identity from the source image. We also propose an anonymization framework that generates a new face using the privacy-preserving image, face heatmap, and a reference face image from a public dataset as input. We validate our approach with extensive simulations and hardware experiments.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Accepted to CVPR 2024. Project Website and Code coming soon"
     },
     {
         "paper id": "2404.00790",
@@ -1344,6 +1454,29 @@
         "comment": "24 pages, 12 figures. Accepted to CVPR 2024"
     },
     {
+        "paper id": "2404.00922",
+        "abstract url": "https://arxiv.org/abs/2404.00922",
+        "title": "Towards Memorization-Free Diffusion Models",
+        "rating": 0.5,
+        "keywords": [
+            [
+                "Diffusion",
+                "synthesizing"
+            ],
+            [
+                "cs.CV"
+            ],
+            [
+                "CVPR"
+            ]
+        ],
+        "abstract": "Pretrained diffusion models and their outputs are widely accessible due to their exceptional capacity for synthesizing high-quality images and their open-source nature. The users, however, may face litigation risks owing to the models' tendency to memorize and regurgitate training data during inference. To address this, we introduce Anti-Memorization Guidance (AMG), a novel framework employing three targeted guidance strategies for the main causes of memorization: image and caption duplication, and highly specific user prompts. Consequently, AMG ensures memorization-free outputs while maintaining high image quality and text alignment, leveraging the synergy of its guidance methods, each indispensable in its own right. AMG also features an innovative automatic detection system for potential memorization during each step of inference process, allows selective application of guidance strategies, minimally interfering with the original sampling process to preserve output utility. We applied AMG to pretrained Denoising Diffusion Probabilistic Models (DDPM) and Stable Diffusion across various generation tasks. The results demonstrate that AMG is the first approach to successfully eradicates all instances of memorization with no or marginal impacts on image quality and text-alignment, as evidenced by FID and CLIP scores.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "CVPR2024"
+    },
+    {
         "paper id": "2404.01342",
         "abstract url": "https://arxiv.org/abs/2404.01342",
         "title": "DiffAgent: Fast and Accurate Text-to-Image API Selection with Large Language Model",
@@ -1419,6 +1552,25 @@
             "cs.CL"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2404.00645",
+        "abstract url": "https://arxiv.org/abs/2404.00645",
+        "title": "Attire-Based Anomaly Detection in Restricted Areas Using YOLOv8 for Enhanced CCTV Security",
+        "rating": 0,
+        "keywords": [
+            [
+                "Anomaly Detection"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "This research introduces an innovative security enhancement approach, employing advanced image analysis and soft computing. The focus is on an intelligent surveillance system that detects unauthorized individuals in restricted areas by analyzing attire. Traditional security measures face challenges in monitoring unauthorized access. Leveraging YOLOv8, an advanced object detection algorithm, our system identifies authorized personnel based on their attire in CCTV footage. The methodology involves training the YOLOv8 model on a comprehensive dataset of uniform patterns, ensuring precise recognition in specific regions. Soft computing techniques enhance adaptability to dynamic environments and varying lighting conditions. This research contributes to image analysis and soft computing, providing a sophisticated security solution. Emphasizing uniform-based anomaly detection, it establishes a foundation for robust security systems in restricted areas. The outcomes highlight the potential of YOLOv8-based surveillance in ensuring safety in sensitive locations.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "9 pages, 6 figures"
     },
     {
         "paper id": "2404.00661",
@@ -1498,6 +1650,25 @@
         "comment": null
     },
     {
+        "paper id": "2404.00752",
+        "abstract url": "https://arxiv.org/abs/2404.00752",
+        "title": "On the True Distribution Approximation of Minimum Bayes-Risk Decoding",
+        "rating": 0,
+        "keywords": [
+            [
+                "anomaly detection"
+            ],
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Minimum Bayes-risk (MBR) decoding has recently gained renewed attention in text generation. MBR decoding considers texts sampled from a model as pseudo-references and selects the text with the highest similarity to the others. Therefore, sampling is one of the key elements of MBR decoding, and previous studies reported that the performance varies by sampling methods. From a theoretical standpoint, this performance variation is likely tied to how closely the samples approximate the true distribution of references. However, this approximation has not been the subject of in-depth study. In this study, we propose using anomaly detection to measure the degree of approximation. We first closely examine the performance variation and then show that previous hypotheses about samples do not correlate well with the variation, but our introduced anomaly scores do. The results are the first to empirically support the link between the performance and the core assumption of MBR decoding.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": "NAACL 2024 (main conference)"
+    },
+    {
         "paper id": "2404.00828",
         "abstract url": "https://arxiv.org/abs/2404.00828",
         "title": "PID Control-Based Self-Healing to Improve the Robustness of Large Language Models",
@@ -1515,6 +1686,25 @@
             "cs.CL"
         ],
         "comment": "Transactions on Machine Learning Research"
+    },
+    {
+        "paper id": "2404.00842",
+        "abstract url": "https://arxiv.org/abs/2404.00842",
+        "title": "An N-Point Linear Solver for Line and Motion Estimation with Event Cameras",
+        "rating": 0,
+        "keywords": [
+            [
+                "Event Cameras"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Event cameras respond primarily to edges--formed by strong gradients--and are thus particularly well-suited for line-based motion estimation. Recent work has shown that events generated by a single line each satisfy a polynomial constraint which describes a manifold in the space-time volume. Multiple such constraints can be solved simultaneously to recover the partial linear velocity and line parameters. In this work, we show that, with a suitable line parametrization, this system of constraints is actually linear in the unknowns, which allows us to design a novel linear solver. Unlike existing solvers, our linear solver (i) is fast and numerically stable since it does not rely on expensive root finding, (ii) can solve both minimal and overdetermined systems with more than 5 events, and (iii) admits the characterization of all degenerate cases and multiple solutions. The found line parameters are singularity-free and have a fixed scale, which eliminates the need for auxiliary constraints typically encountered in previous work. To recover the full linear camera velocity we fuse observations from multiple lines with a novel velocity averaging scheme that relies on a geometrically-motivated residual, and thus solves the problem more efficiently than previous schemes which minimize an algebraic residual. Extensive experiments in synthetic and real-world settings demonstrate that our method surpasses the previous work in numerical stability, and operates over 600 times faster.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
     },
     {
         "paper id": "2404.00846",
@@ -1574,28 +1764,6 @@
             "cs.CV"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2404.00861",
-        "abstract url": "https://arxiv.org/abs/2404.00861",
-        "title": "Enhancing Real-World Active Speaker Detection with Multi-Modal Extraction Pre-Training",
-        "rating": 0,
-        "keywords": [
-            [
-                "Audio-visual"
-            ],
-            [
-                "face"
-            ],
-            [
-                "eess.AS"
-            ]
-        ],
-        "abstract": "Audio-visual active speaker detection (AV-ASD) aims to identify which visible face is speaking in a scene with one or more persons. Most existing AV-ASD methods prioritize capturing speech-lip correspondence. However, there is a noticeable gap in addressing the challenges from real-world AV-ASD scenarios. Due to the presence of low-quality noisy videos in such cases, AV-ASD systems without a selective listening ability are short of effectively filtering out disruptive voice components from mixed audio inputs. In this paper, we propose a Multi-modal Speaker Extraction-to-Detection framework named `MuSED', which is pre-trained with audio-visual target speaker extraction to learn the denoising ability, then it is fine-tuned with the AV-ASD task. Meanwhile, to better capture the multi-modal information and deal with real-world problems such as missing modality, MuSED is modelled on the time domain directly and integrates the multi-modal plus-and-minus augmentation strategy. Our experiments demonstrate that MuSED substantially outperforms the state-of-the-art AV-ASD methods and achieves 95.6% mAP on the AVA-ActiveSpeaker dataset, 98.3% AP on the ASW dataset, and 97.9% F1 on the Columbia AV-ASD dataset, respectively. We will publicly release the code in due course.",
-        "subjects": [
-            "eess.AS"
-        ],
-        "comment": "10 pages"
     },
     {
         "paper id": "2404.00875",
@@ -1702,28 +1870,6 @@
         "comment": "Accepted to CVPR 2024"
     },
     {
-        "paper id": "2404.00563",
-        "abstract url": "https://arxiv.org/abs/2404.00563",
-        "title": "Exploiting Inter-sample and Inter-feature Relations in Dataset Distillation",
-        "rating": -0.5,
-        "keywords": [
-            [
-                "face"
-            ],
-            [
-                "cs.CV"
-            ],
-            [
-                "CVPR"
-            ]
-        ],
-        "abstract": "Dataset distillation has emerged as a promising approach in deep learning, enabling efficient training with small synthetic datasets derived from larger real ones. Particularly, distribution matching-based distillation methods attract attention thanks to its effectiveness and low computational cost. However, these methods face two primary limitations: the dispersed feature distribution within the same class in synthetic datasets, reducing class discrimination, and an exclusive focus on mean feature consistency, lacking precision and comprehensiveness. To address these challenges, we introduce two novel constraints: a class centralization constraint and a covariance matching constraint. The class centralization constraint aims to enhance class discrimination by more closely clustering samples within classes. The covariance matching constraint seeks to achieve more accurate feature distribution matching between real and synthetic datasets through local feature covariance matrices, particularly beneficial when sample sizes are much smaller than the number of features. Experiments demonstrate notable improvements with these constraints, yielding performance boosts of up to 6.6% on CIFAR10, 2.9% on SVHN, 2.5% on CIFAR100, and 2.5% on TinyImageNet, compared to the state-of-the-art relevant methods. In addition, our method maintains robust performance in cross-architecture settings, with a maximum performance drop of 1.7% on four architectures. Code is available at https://github.com/VincenDen/IID.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Accepted to CVPR 2024"
-    },
-    {
         "paper id": "2404.00586",
         "abstract url": "https://arxiv.org/abs/2404.00586",
         "title": "RLGNet: Repeating-Local-Global History Network for Temporal Knowledge Graph Reasoning",
@@ -1741,56 +1887,6 @@
             "cs.AI"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2404.00597",
-        "abstract url": "https://arxiv.org/abs/2404.00597",
-        "title": "Parameter and Data-Efficient Spectral StyleDCGAN",
-        "rating": -0.5,
-        "keywords": [
-            [
-                "face"
-            ],
-            [
-                "cs.CV"
-            ],
-            [
-                "ICLR"
-            ]
-        ],
-        "abstract": "We present a simple, highly parameter, and data-efficient adversarial network for unconditional face generation. Our method: Spectral Style-DCGAN or SSD utilizes only 6.574 million parameters and 4739 dog faces from the Animal Faces HQ (AFHQ) dataset as training samples while preserving fidelity at low resolutions up to 64x64. Code available at https://github.com/Aryan-Garg/StyleDCGAN.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Notable ICLR Tiny Paper 2024"
-    },
-    {
-        "paper id": "2404.00710",
-        "abstract url": "https://arxiv.org/abs/2404.00710",
-        "title": "Unknown Prompt, the only Lacuna: Unveiling CLIP's Potential for Open Domain Generalization",
-        "rating": -0.5,
-        "keywords": [
-            [
-                "vision-language"
-            ],
-            [
-                "diffusion"
-            ],
-            [
-                "face"
-            ],
-            [
-                "cs.CV"
-            ],
-            [
-                "CVPR"
-            ]
-        ],
-        "abstract": "We delve into Open Domain Generalization (ODG), marked by domain and category shifts between training's labeled source and testing's unlabeled target domains. Existing solutions to ODG face limitations due to constrained generalizations of traditional CNN backbones and errors in detecting target open samples in the absence of prior knowledge. Addressing these pitfalls, we introduce ODG-CLIP, harnessing the semantic prowess of the vision-language model, CLIP. Our framework brings forth three primary innovations: Firstly, distinct from prevailing paradigms, we conceptualize ODG as a multi-class classification challenge encompassing both known and novel categories. Central to our approach is modeling a unique prompt tailored for detecting unknown class samples, and to train this, we employ a readily accessible stable diffusion model, elegantly generating proxy images for the open class. Secondly, aiming for domain-tailored classification (prompt) weights while ensuring a balance of precision and simplicity, we devise a novel visual stylecentric prompt learning mechanism. Finally, we infuse images with class-discriminative knowledge derived from the prompt space to augment the fidelity of CLIP's visual embeddings. We introduce a novel objective to safeguard the continuity of this infused semantic intel across domains, especially for the shared classes. Through rigorous testing on diverse datasets, covering closed and open-set DG contexts, ODG-CLIP demonstrates clear supremacy, consistently outpacing peers with performance boosts between 8%-16%. Code will be available at https://github.com/mainaksingha01/ODG-CLIP.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Accepted in CVPR 2024"
     },
     {
         "paper id": "2404.00742",
@@ -1998,7 +2094,8 @@
         "keywords": [
             [
                 "disease",
-                "clinical"
+                "clinical",
+                "Radiology"
             ],
             [
                 "cs.CV"
@@ -2103,6 +2200,29 @@
         "comment": null
     },
     {
+        "paper id": "2404.00676",
+        "abstract url": "https://arxiv.org/abs/2404.00676",
+        "title": "OmniLocalRF: Omnidirectional Local Radiance Fields from Dynamic Videos",
+        "rating": -1,
+        "keywords": [
+            [
+                "Radiance Fields"
+            ],
+            [
+                "synthesizing",
+                "inpainting"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Omnidirectional cameras are extensively used in various applications to provide a wide field of vision. However, they face a challenge in synthesizing novel views due to the inevitable presence of dynamic objects, including the photographer, in their wide field of view. In this paper, we introduce a new approach called Omnidirectional Local Radiance Fields (OmniLocalRF) that can render static-only scene views, removing and inpainting dynamic objects simultaneously. Our approach combines the principles of local radiance fields with the bidirectional optimization of omnidirectional rays. Our input is an omnidirectional video, and we evaluate the mutual observations of the entire angle between the previous and current frames. To reduce ghosting artifacts of dynamic objects and inpaint occlusions, we devise a multi-resolution motion mask prediction module. Unlike existing methods that primarily separate dynamic components through the temporal domain, our method uses multi-resolution neural feature planes for precise segmentation, which is more suitable for long 360-degree videos. Our experiments validate that OmniLocalRF outperforms existing methods in both qualitative and quantitative metrics, especially in scenarios with complex real-world scenes. In particular, our approach eliminates the need for manual interaction, such as drawing motion masks by hand and additional pose estimation, making it a highly effective and efficient solution.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2404.00694",
         "abstract url": "https://arxiv.org/abs/2404.00694",
         "title": "DMSSN: Distilled Mixed Spectral-Spatial Network for Hyperspectral Salient Object Detection",
@@ -2175,28 +2295,6 @@
             "eess.IV"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2404.00752",
-        "abstract url": "https://arxiv.org/abs/2404.00752",
-        "title": "On the True Distribution Approximation of Minimum Bayes-Risk Decoding",
-        "rating": -1,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "anomaly detection"
-            ],
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Minimum Bayes-risk (MBR) decoding has recently gained renewed attention in text generation. MBR decoding considers texts sampled from a model as pseudo-references and selects the text with the highest similarity to the others. Therefore, sampling is one of the key elements of MBR decoding, and previous studies reported that the performance varies by sampling methods. From a theoretical standpoint, this performance variation is likely tied to how closely the samples approximate the true distribution of references. However, this approximation has not been the subject of in-depth study. In this study, we propose using anomaly detection to measure the degree of approximation. We first closely examine the performance variation and then show that previous hypotheses about samples do not correlate well with the variation, but our introduced anomaly scores do. The results are the first to empirically support the link between the performance and the core assumption of MBR decoding.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": "NAACL 2024 (main conference)"
     },
     {
         "paper id": "2404.00762",
@@ -2369,29 +2467,14 @@
         "comment": "21 Pages, 7 Figures"
     },
     {
-        "paper id": "2404.00850",
-        "abstract url": "https://arxiv.org/abs/2404.00850",
-        "title": "Delay-Induced Watermarking for Detection of Replay Attacks in Linear Systems",
-        "rating": -1,
-        "keywords": [
-            [
-                "Attacks"
-            ]
-        ],
-        "abstract": "A state-feedback watermarking signal design for the detection of replay attacks in linear systems is proposed. The control input is augmented with a random time-delayed term of the system state estimate, in order to secure the system against attacks of replay type. We outline the basic analysis of the closed-loop response of the state-feedback watermarking in a LQG controlled system. Our theoretical results are applied on a temperature process control example. While the proposed secure control scheme requires very involved analysis, it, nevertheless, holds promise of being superior to conventional, feed-forward, watermarking schemes, in both its ability to detect attacks as well as the secured system performance.",
-        "subjects": [
-            "eess.SY"
-        ],
-        "comment": "6 pages, 3 figures, manuscript to appear in the 2024 American Control Conference"
-    },
-    {
         "paper id": "2404.00855",
         "abstract url": "https://arxiv.org/abs/2404.00855",
         "title": "TSOM: Small Object Motion Detection Neural Network Inspired by Avian Visual Circuit",
         "rating": -1,
         "keywords": [
             [
-                "biological"
+                "biological",
+                "Retina"
             ],
             [
                 "cs.CV"
@@ -2521,22 +2604,6 @@
         "comment": "14 pages"
     },
     {
-        "paper id": "2404.02173",
-        "abstract url": "https://arxiv.org/abs/2404.02173",
-        "title": "Exploring Urban Mobility Trends using Cellular Network Data",
-        "rating": -1,
-        "keywords": [
-            [
-                "depth"
-            ]
-        ],
-        "abstract": "The growth of urban areas intensifies the need for sustainable, efficient transportation infrastructure and mobility systems, driving initiatives to enhance infrastructure and public transport while reducing congestion and emissions. By utilizing real-world mobility data, a data-driven approach can provide crucial insights for planning and decision-making. This study explores the efficacy of leveraging telecoms data from cellular network signals for studying crowd movement patterns, focusing on Trondheim, Norway. It examines routing reports to understand the spatiotemporal dynamics of various transportation routes and modes. A data preprocessing and feature engineering framework was developed to process raw routing reports for historical analysis. This enabled the examination of geospatial trends and temporal patterns, including a comparative analysis of various transportation modes, along with public transit usage. Specific routes and areas were analyzed in-depth to compare their mobility patterns with the broader city context. The study highlights the potential of cellular network data as a resource for shaping urban transportation and mobility systems. By identifying deficiencies and potential improvements, city planners and stakeholders can foster more sustainable and effective transportation solutions.",
-        "subjects": [
-            "physics.soc-ph"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2404.00576",
         "abstract url": "https://arxiv.org/abs/2404.00576",
         "title": "Automated Bi-Fold Weighted Ensemble Algorithms and its Application to Brain Tumor Detection and Classification",
@@ -2586,25 +2653,6 @@
         "comment": "Accepted by CVPR 2024,GitHub code:https://github.com/JihuaPeng/KTPFormer"
     },
     {
-        "paper id": "2404.00688",
-        "abstract url": "https://arxiv.org/abs/2404.00688",
-        "title": "Meta Learning in Bandits within Shared Affine Subspaces",
-        "rating": -1.5,
-        "keywords": [
-            [
-                "face"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "We study the problem of meta-learning several contextual stochastic bandits tasks by leveraging their concentration around a low-dimensional affine subspace, which we learn via online principal component analysis to reduce the expected regret over the encountered bandits. We propose and theoretically analyze two strategies that solve the problem: One based on the principle of optimism in the face of uncertainty and the other via Thompson sampling. Our framework is generic and includes previously proposed approaches as special cases. Besides, the empirical results show that our methods significantly reduce the regret on several bandit tasks.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": "Accepted in AISTATS 2024"
-    },
-    {
         "paper id": "2404.00712",
         "abstract url": "https://arxiv.org/abs/2404.00712",
         "title": "Survey of Computerized Adaptive Testing: A Machine Learning Perspective",
@@ -2623,31 +2671,6 @@
             "cs.LG"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2404.00777",
-        "abstract url": "https://arxiv.org/abs/2404.00777",
-        "title": "Privacy-preserving Optics for Enhancing Protection in Face De-identification",
-        "rating": -1.5,
-        "keywords": [
-            [
-                "attacks"
-            ],
-            [
-                "Face"
-            ],
-            [
-                "cs.CV"
-            ],
-            [
-                "CVPR"
-            ]
-        ],
-        "abstract": "The modern surge in camera usage alongside widespread computer vision technology applications poses significant privacy and security concerns. Current artificial intelligence (AI) technologies aid in recognizing relevant events and assisting in daily tasks in homes, offices, hospitals, etc. The need to access or process personal information for these purposes raises privacy concerns. While software-level solutions like face de-identification provide a good privacy/utility trade-off, they present vulnerabilities to sniffing attacks. In this paper, we propose a hardware-level face de-identification method to solve this vulnerability. Specifically, our approach first learns an optical encoder along with a regression model to obtain a face heatmap while hiding the face identity from the source image. We also propose an anonymization framework that generates a new face using the privacy-preserving image, face heatmap, and a reference face image from a public dataset as input. We validate our approach with extensive simulations and hardware experiments.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Accepted to CVPR 2024. Project Website and Code coming soon"
     },
     {
         "paper id": "2404.00815",
@@ -2677,31 +2700,6 @@
             "cs.CV"
         ],
         "comment": "CVPR 2024. Project link: https://lidar-diffusion.github.io"
-    },
-    {
-        "paper id": "2404.00834",
-        "abstract url": "https://arxiv.org/abs/2404.00834",
-        "title": "Towards Robust Event-guided Low-Light Image Enhancement: A Large-Scale Real-World Event-Image Dataset and Novel Approach",
-        "rating": -1.5,
-        "keywords": [
-            [
-                "trajectory"
-            ],
-            [
-                "Image Enhancement"
-            ],
-            [
-                "cs.CV"
-            ],
-            [
-                "CVPR"
-            ]
-        ],
-        "abstract": "Event camera has recently received much attention for low-light image enhancement (LIE) thanks to their distinct advantages, such as high dynamic range. However, current research is prohibitively restricted by the lack of large-scale, real-world, and spatial-temporally aligned event-image datasets. To this end, we propose a real-world (indoor and outdoor) dataset comprising over 30K pairs of images and events under both low and normal illumination conditions. To achieve this, we utilize a robotic arm that traces a consistent non-linear trajectory to curate the dataset with spatial alignment precision under 0.03mm. We then introduce a matching alignment strategy, rendering 90% of our dataset with errors less than 0.01s. Based on the dataset, we propose a novel event-guided LIE approach, called EvLight, towards robust performance in real-world low-light scenes. Specifically, we first design the multi-scale holistic fusion branch to extract holistic structural and textural information from both events and images. To ensure robustness against variations in the regional illumination and noise, we then introduce a Signal-to-Noise-Ratio (SNR)-guided regional feature selection to selectively fuse features of images from regions with high SNR and enhance those with low SNR by extracting regional structure information from events. Extensive experiments on our dataset and the synthetic SDSD dataset demonstrate our EvLight significantly surpasses the frame-based methods. Code and datasets are available at https://vlislab22.github.io/eg-lowlight/.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Accepted to CVPR 2024"
     },
     {
         "paper id": "2404.00847",
@@ -2791,32 +2789,6 @@
             "cs.LG"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2404.00922",
-        "abstract url": "https://arxiv.org/abs/2404.00922",
-        "title": "Towards Memorization-Free Diffusion Models",
-        "rating": -1.5,
-        "keywords": [
-            [
-                "Diffusion",
-                "synthesizing"
-            ],
-            [
-                "face"
-            ],
-            [
-                "cs.CV"
-            ],
-            [
-                "CVPR"
-            ]
-        ],
-        "abstract": "Pretrained diffusion models and their outputs are widely accessible due to their exceptional capacity for synthesizing high-quality images and their open-source nature. The users, however, may face litigation risks owing to the models' tendency to memorize and regurgitate training data during inference. To address this, we introduce Anti-Memorization Guidance (AMG), a novel framework employing three targeted guidance strategies for the main causes of memorization: image and caption duplication, and highly specific user prompts. Consequently, AMG ensures memorization-free outputs while maintaining high image quality and text alignment, leveraging the synergy of its guidance methods, each indispensable in its own right. AMG also features an innovative automatic detection system for potential memorization during each step of inference process, allows selective application of guidance strategies, minimally interfering with the original sampling process to preserve output utility. We applied AMG to pretrained Denoising Diffusion Probabilistic Models (DDPM) and Stable Diffusion across various generation tasks. The results demonstrate that AMG is the first approach to successfully eradicates all instances of memorization with no or marginal impacts on image quality and text-alignment, as evidenced by FID and CLIP scores.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "CVPR2024"
     },
     {
         "paper id": "2404.15209",
@@ -2983,8 +2955,7 @@
         "rating": -2,
         "keywords": [
             [
-                "diagnosing",
-                "Face"
+                "diagnosing"
             ]
         ],
         "abstract": "Configurable software systems are prone to configuration errors, resulting in significant losses to companies. However, diagnosing these errors is challenging due to the vast and complex configuration space. These errors pose significant challenges for both experienced maintainers and new end-users, particularly those without access to the source code of the software systems. Given that logs are easily accessible to most end-users, we conduct a preliminary study to outline the challenges and opportunities of utilizing logs in localizing configuration errors. Based on the insights gained from the preliminary study, we propose an LLM-based two-stage strategy for end-users to localize the root-cause configuration properties based on logs. We further implement a tool, LogConfigLocalizer, aligned with the design of the aforementioned strategy, hoping to assist end-users in coping with configuration errors through log analysis. To the best of our knowledge, this is the first work to localize the root-cause configuration properties for end-users based on Large Language Models~(LLMs) and logs. We evaluate the proposed strategy on Hadoop by LogConfigLocalizer and prove its efficiency with an average accuracy as high as 99.91%. Additionally, we also demonstrate the effectiveness and necessity of different phases of the methodology by comparing it with two other variants and a baseline tool. Moreover, we validate the proposed methodology through a practical case study to demonstrate its effectiveness and feasibility.",
@@ -2994,26 +2965,20 @@
         "comment": "13 pages, accepted by ISSTA 2024 (The 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis)"
     },
     {
-        "paper id": "2404.00645",
-        "abstract url": "https://arxiv.org/abs/2404.00645",
-        "title": "Attire-Based Anomaly Detection in Restricted Areas Using YOLOv8 for Enhanced CCTV Security",
+        "paper id": "2404.00702",
+        "abstract url": "https://arxiv.org/abs/2404.00702",
+        "title": "Tired of Plugins? Large Language Models Can Be End-To-End Recommenders",
         "rating": -2,
         "keywords": [
             [
-                "Anomaly Detection"
-            ],
-            [
-                "face"
-            ],
-            [
-                "cs.CV"
+                "recommendation"
             ]
         ],
-        "abstract": "This research introduces an innovative security enhancement approach, employing advanced image analysis and soft computing. The focus is on an intelligent surveillance system that detects unauthorized individuals in restricted areas by analyzing attire. Traditional security measures face challenges in monitoring unauthorized access. Leveraging YOLOv8, an advanced object detection algorithm, our system identifies authorized personnel based on their attire in CCTV footage. The methodology involves training the YOLOv8 model on a comprehensive dataset of uniform patterns, ensuring precise recognition in specific regions. Soft computing techniques enhance adaptability to dynamic environments and varying lighting conditions. This research contributes to image analysis and soft computing, providing a sophisticated security solution. Emphasizing uniform-based anomaly detection, it establishes a foundation for robust security systems in restricted areas. The outcomes highlight the potential of YOLOv8-based surveillance in ensuring safety in sensitive locations.",
+        "abstract": "Recommender systems aim to predict user interest based on historical behavioral data. They are mainly designed in sequential pipelines, requiring lots of data to train different sub-systems, and are hard to scale to new domains. Recently, Large Language Models (LLMs) have demonstrated remarkable generalized capabilities, enabling a singular model to tackle diverse recommendation tasks across various scenarios. Nonetheless, existing LLM-based recommendation systems utilize LLM purely for a single task of the recommendation pipeline. Besides, these systems face challenges in presenting large-scale item sets to LLMs in natural language format, due to the constraint of input length. To address these challenges, we introduce an LLM-based end-to-end recommendation framework: UniLLMRec. Specifically, UniLLMRec integrates multi-stage tasks (e.g. recall, ranking, re-ranking) via chain-of-recommendations. To deal with large-scale items, we propose a novel strategy to structure all items into an item tree, which can be dynamically updated and effectively retrieved. UniLLMRec shows promising zero-shot results in comparison with conventional supervised models. Additionally, it boasts high efficiency, reducing the input token need by 86% compared to existing LLM-based models. Such efficiency not only accelerates task completion but also optimizes resource utilization. To facilitate model understanding and to ensure reproducibility, we have made our code publicly available.",
         "subjects": [
-            "cs.CV"
+            "cs.IR"
         ],
-        "comment": "9 pages, 6 figures"
+        "comment": null
     },
     {
         "paper id": "2404.00704",
@@ -3039,7 +3004,6 @@
         "keywords": [
             [
                 "3D",
-                "depth",
                 "NeRF",
                 "Radiance Fields"
             ],
@@ -3190,6 +3154,34 @@
         "comment": null
     },
     {
+        "paper id": "2404.00834",
+        "abstract url": "https://arxiv.org/abs/2404.00834",
+        "title": "Towards Robust Event-guided Low-Light Image Enhancement: A Large-Scale Real-World Event-Image Dataset and Novel Approach",
+        "rating": -2.5,
+        "keywords": [
+            [
+                "Event camera"
+            ],
+            [
+                "trajectory"
+            ],
+            [
+                "Image Enhancement"
+            ],
+            [
+                "cs.CV"
+            ],
+            [
+                "CVPR"
+            ]
+        ],
+        "abstract": "Event camera has recently received much attention for low-light image enhancement (LIE) thanks to their distinct advantages, such as high dynamic range. However, current research is prohibitively restricted by the lack of large-scale, real-world, and spatial-temporally aligned event-image datasets. To this end, we propose a real-world (indoor and outdoor) dataset comprising over 30K pairs of images and events under both low and normal illumination conditions. To achieve this, we utilize a robotic arm that traces a consistent non-linear trajectory to curate the dataset with spatial alignment precision under 0.03mm. We then introduce a matching alignment strategy, rendering 90% of our dataset with errors less than 0.01s. Based on the dataset, we propose a novel event-guided LIE approach, called EvLight, towards robust performance in real-world low-light scenes. Specifically, we first design the multi-scale holistic fusion branch to extract holistic structural and textural information from both events and images. To ensure robustness against variations in the regional illumination and noise, we then introduce a Signal-to-Noise-Ratio (SNR)-guided regional feature selection to selectively fuse features of images from regions with high SNR and enhance those with low SNR by extracting regional structure information from events. Extensive experiments on our dataset and the synthetic SDSD dataset demonstrate our EvLight significantly surpasses the frame-based methods. Code and datasets are available at https://vlislab22.github.io/eg-lowlight/.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Accepted to CVPR 2024"
+    },
+    {
         "paper id": "2404.00634",
         "abstract url": "https://arxiv.org/abs/2404.00634",
         "title": "Designing Human-AI Systems: Anthropomorphism and Framing Bias on Human-AI Collaboration",
@@ -3207,32 +3199,6 @@
             "cs.HC"
         ],
         "comment": "22 pages, 10 figures"
-    },
-    {
-        "paper id": "2404.00676",
-        "abstract url": "https://arxiv.org/abs/2404.00676",
-        "title": "OmniLocalRF: Omnidirectional Local Radiance Fields from Dynamic Videos",
-        "rating": -3,
-        "keywords": [
-            [
-                "Radiance Fields"
-            ],
-            [
-                "synthesizing",
-                "inpainting"
-            ],
-            [
-                "face"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Omnidirectional cameras are extensively used in various applications to provide a wide field of vision. However, they face a challenge in synthesizing novel views due to the inevitable presence of dynamic objects, including the photographer, in their wide field of view. In this paper, we introduce a new approach called Omnidirectional Local Radiance Fields (OmniLocalRF) that can render static-only scene views, removing and inpainting dynamic objects simultaneously. Our approach combines the principles of local radiance fields with the bidirectional optimization of omnidirectional rays. Our input is an omnidirectional video, and we evaluate the mutual observations of the entire angle between the previous and current frames. To reduce ghosting artifacts of dynamic objects and inpaint occlusions, we devise a multi-resolution motion mask prediction module. Unlike existing methods that primarily separate dynamic components through the temporal domain, our method uses multi-resolution neural feature planes for precise segmentation, which is more suitable for long 360-degree videos. Our experiments validate that OmniLocalRF outperforms existing methods in both qualitative and quantitative metrics, especially in scenarios with complex real-world scenes. In particular, our approach eliminates the need for manual interaction, such as drawing motion masks by hand and additional pose estimation, making it a highly effective and efficient solution.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
     },
     {
         "paper id": "2404.00679",
@@ -3305,6 +3271,25 @@
         "comment": "Published on IEEE Transactions on Industrial Informatics, Volume 20, Issue 4, April 2024"
     },
     {
+        "paper id": "2404.00850",
+        "abstract url": "https://arxiv.org/abs/2404.00850",
+        "title": "Delay-Induced Watermarking for Detection of Replay Attacks in Linear Systems",
+        "rating": -3,
+        "keywords": [
+            [
+                "Attacks"
+            ],
+            [
+                "Watermarking"
+            ]
+        ],
+        "abstract": "A state-feedback watermarking signal design for the detection of replay attacks in linear systems is proposed. The control input is augmented with a random time-delayed term of the system state estimate, in order to secure the system against attacks of replay type. We outline the basic analysis of the closed-loop response of the state-feedback watermarking in a LQG controlled system. Our theoretical results are applied on a temperature process control example. While the proposed secure control scheme requires very involved analysis, it, nevertheless, holds promise of being superior to conventional, feed-forward, watermarking schemes, in both its ability to detect attacks as well as the secured system performance.",
+        "subjects": [
+            "eess.SY"
+        ],
+        "comment": "6 pages, 3 figures, manuscript to appear in the 2024 American Control Conference"
+    },
+    {
         "paper id": "2404.00896",
         "abstract url": "https://arxiv.org/abs/2404.00896",
         "title": "A Novel Algorithm for Digital Lithological Mapping-Case Studies in Sri Lanka's Mineral Exploration",
@@ -3328,6 +3313,25 @@
         "comment": null
     },
     {
+        "paper id": "2405.02310",
+        "abstract url": "https://arxiv.org/abs/2405.02310",
+        "title": "Simulating the aftermath of Northern European Enclosure Dam (NEED) break and flooding of European coast",
+        "rating": -3,
+        "keywords": [
+            [
+                "graph"
+            ],
+            [
+                "grammar"
+            ]
+        ],
+        "abstract": "The Northern European Enclosure Dam (NEED) is a hypothetical project to prevent flooding in European countries following the rising ocean level due to melting arctic glaciers. This project involves the construction of two large dams between Scotland and Norway, as well as England and France. The anticipated cost of this project is 250 to 500 billion euros. In this paper, we present the simulation of the aftermath of flooding on the European coastline caused by a catastrophic break of this hypothetical dam. From our simulation results, we can observe that there is a traveling wave after the accident, with a velocity of around 10 kilometers per hour, raising the sea level permanently inside the dammed region. This observation implies a need to construct additional dams or barriers protecting the northern coastline of the Netherlands and the interior of the Baltic Sea. Our simulations have been obtained using the following building blocks. First, a graph transformation model was applied to generate an adaptive mesh approximating the topography of the Earth. We employ the composition graph grammar model for breaking triangular elements in the mesh without the generation of hanging nodes. Second, the wave equation is formulated in a spherical latitude-longitude system of coordinates and solved by a high-order time integration scheme using the generalized $\u03b1$ method.",
+        "subjects": [
+            "cs.CE"
+        ],
+        "comment": "24 pages, 32 figures, 1 table"
+    },
+    {
         "paper id": "2404.07227",
         "abstract url": "https://arxiv.org/abs/2404.07227",
         "title": "Is Complexity an Illusion?",
@@ -3343,11 +3347,11 @@
                 "cs.AI"
             ]
         ],
-        "abstract": "Simplicity is held by many to be the key to general intelligence. Simpler models tend to \"generalise\", identifying the cause or generator of data with greater sample efficiency. The implications of the correlation between simplicity and generalisation extend far beyond computer science, addressing questions of physics and even biology. Yet simplicity is a property of form, while generalisation is of function. In interactive settings, any correlation between the two depends on interpretation. In theory there could be no correlation and yet in practice, there is. Previous theoretical work showed generalisation to be a consequence of \"weak\" constraints implied by function, not form. Experiments demonstrated choosing weak constraints over simple forms yielded a 110-500% improvement in generalisation rate. Here we measure the complexity of weak constraints, and show that if one does not presuppose an abstraction layer, then all have equal complexity. However, in the context of a spatially and temporally extended abstraction layer, efficiency demands weak constraints take simple forms, and simplicity becomes correlated with generalisation. Simplicity has no causal influence on generalisation, but appears to due to confounding.",
+        "abstract": "Simplicity is held by many to be the key to general intelligence. Simpler models tend to \"generalise\", identifying the cause or generator of data with greater sample efficiency. The implications of the correlation between simplicity and generalisation extend far beyond computer science, addressing questions of physics and even biology. Yet simplicity is a property of form, while generalisation is of function. In interactive settings, any correlation between the two depends on interpretation. In theory there could be no correlation and yet in practice, there is. Previous theoretical work showed generalisation to be a consequence of \"weak\" constraints on implied by function, not form. Experiments demonstrated choosing weak constraints over simple forms yielded a 110-500% improvement in generalisation rate. Here we show that all constraints can take equally simple forms, regardless of weakness. However if forms are spatially extended, then function is represented using a finite subset of forms. If function is represented using a finite subset of forms, then we can force a correlation between simplicity and generalisation by making weak constraints take simple forms. If function determined by a goal directed process (e.g. natural selection), then efficiency demands weak constraints take simple forms. Complexity has no causal influence on generalisation, but appears to due to confounding.",
         "subjects": [
             "cs.AI"
         ],
-        "comment": "arXiv admin note: text overlap with arXiv:2302.00843"
+        "comment": "Definitions shared with arXiv:2302.00843"
     },
     {
         "paper id": "2404.00691",
@@ -3368,25 +3372,6 @@
         "abstract": "5G New Radio Time of Arrival (ToA) data has the potential to revolutionize indoor localization for micro aerial vehicles (MAVs). However, its performance under varying network setups, especially when combined with IMU data for real-time localization, has not been fully explored so far. In this study, we develop an error state Kalman filter (ESKF) and a pose graph optimization (PGO) approach to address this gap. We systematically evaluate the performance of the derived approaches for real-time MAV localization in realistic scenarios with 5G base stations in Line-Of-Sight (LOS), demonstrating the potential of 5G technologies in this domain. In order to experimentally test and compare our localization approaches, we augment the EuRoC MAV benchmark dataset for visual-inertial odometry with simulated yet highly realistic 5G ToA measurements. Our experimental results comprehensively assess the impact of varying network setups, including varying base station numbers and network configurations, on ToA-based MAV localization performance. The findings show promising results for seamless and robust localization using 5G ToA measurements, achieving an accuracy of 15 cm throughout the entire trajectory within a graph-based framework with five 5G base stations, and an accuracy of up to 34 cm in the case of ESKF-based localization. Additionally, we measure the run time of both algorithms and show that they are both fast enough for real-time implementation.",
         "subjects": [
             "cs.RO"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2404.00702",
-        "abstract url": "https://arxiv.org/abs/2404.00702",
-        "title": "Tired of Plugins? Large Language Models Can Be End-To-End Recommenders",
-        "rating": -4,
-        "keywords": [
-            [
-                "face"
-            ],
-            [
-                "recommendation"
-            ]
-        ],
-        "abstract": "Recommender systems aim to predict user interest based on historical behavioral data. They are mainly designed in sequential pipelines, requiring lots of data to train different sub-systems, and are hard to scale to new domains. Recently, Large Language Models (LLMs) have demonstrated remarkable generalized capabilities, enabling a singular model to tackle diverse recommendation tasks across various scenarios. Nonetheless, existing LLM-based recommendation systems utilize LLM purely for a single task of the recommendation pipeline. Besides, these systems face challenges in presenting large-scale item sets to LLMs in natural language format, due to the constraint of input length. To address these challenges, we introduce an LLM-based end-to-end recommendation framework: UniLLMRec. Specifically, UniLLMRec integrates multi-stage tasks (e.g. recall, ranking, re-ranking) via chain-of-recommendations. To deal with large-scale items, we propose a novel strategy to structure all items into an item tree, which can be dynamically updated and effectively retrieved. UniLLMRec shows promising zero-shot results in comparison with conventional supervised models. Additionally, it boasts high efficiency, reducing the input token need by 86% compared to existing LLM-based models. Such efficiency not only accelerates task completion but also optimizes resource utilization. To facilitate model understanding and to ensure reproducibility, we have made our code publicly available.",
-        "subjects": [
-            "cs.IR"
         ],
         "comment": null
     },
@@ -3449,7 +3434,7 @@
         "title": "CodeBenchGen: Creating Scalable Execution-based Code Generation Benchmarks",
         "rating": -10,
         "keywords": [],
-        "abstract": "To facilitate evaluation of code generation systems across diverse scenarios, we present CodeBenchGen, a framework to create scalable execution-based benchmarks that only requires light guidance from humans. Specifically, we leverage a large language model (LLM) to convert an arbitrary piece of code into an evaluation example, including test cases for execution-based evaluation. We illustrate the usefulness of our framework by creating a dataset, Exec-CSN, which includes 1,931 examples involving 293 libraries revised from code in 367 GitHub repositories taken from the CodeSearchNet dataset. To demonstrate the complexity and solvability of examples in Exec-CSN, we present a human study demonstrating that 81.3% of the examples can be solved by humans and 61% are rated as ``requires effort to solve''. We conduct code generation experiments on open-source and proprietary models and analyze the performance of both humans and models. We will release the code of both the framework and the dataset upon acceptance.",
+        "abstract": "To facilitate evaluation of code generation systems across diverse scenarios, we present CodeBenchGen, a framework to create scalable execution-based benchmarks that only requires light guidance from humans. Specifically, we leverage a large language model (LLM) to convert an arbitrary piece of code into an evaluation example, including test cases for execution-based evaluation. We illustrate the usefulness of our framework by creating a dataset, Exec-CSN, which includes 1,931 examples involving 293 libraries revised from code in 367 GitHub repositories taken from the CodeSearchNet dataset. To demonstrate the complexity and solvability of examples in Exec-CSN, we present a human study demonstrating that 81.3% of the examples can be solved by humans and 61% are rated as \"requires effort to solve\". We conduct code generation experiments on open-source and proprietary models and analyze the performance of both humans and models. We provide the code at https://github.com/Veronicium/CodeBenchGen.",
         "subjects": [
             "cs.SE"
         ],
@@ -3864,6 +3849,18 @@
         "comment": "Accepted at PAKDD 2021. arXiv admin note: text overlap with arXiv:2404.00746"
     },
     {
+        "paper id": "2404.02173",
+        "abstract url": "https://arxiv.org/abs/2404.02173",
+        "title": "Exploring Urban Mobility Trends using Cellular Network Data",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "The growth of urban areas intensifies the need for sustainable, efficient transportation infrastructure and mobility systems, driving initiatives to enhance infrastructure and public transport while reducing congestion and emissions. By utilizing real-world mobility data, a data-driven approach can provide crucial insights for planning and decision-making. This study explores the efficacy of leveraging telecoms data from cellular network signals for studying crowd movement patterns, focusing on Trondheim, Norway. It examines routing reports to understand the spatiotemporal dynamics of various transportation routes and modes. A data preprocessing and feature engineering framework was developed to process raw routing reports for historical analysis. This enabled the examination of geospatial trends and temporal patterns, including a comparative analysis of various transportation modes, along with public transit usage. Specific routes and areas were analyzed in-depth to compare their mobility patterns with the broader city context. The study highlights the potential of cellular network data as a resource for shaping urban transportation and mobility systems. By identifying deficiencies and potential improvements, city planners and stakeholders can foster more sustainable and effective transportation solutions.",
+        "subjects": [
+            "physics.soc-ph"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2404.02174",
         "abstract url": "https://arxiv.org/abs/2404.02174",
         "title": "Bounds of Block Rewards in Honest PinFi Systems",
@@ -3872,6 +3869,18 @@
         "abstract": "PinFi is a class of novel protocols for decentralized pricing of dissipative assets, whose value naturally declines over time. Central to the protocol's functionality and its market efficiency is the role of liquidity providers (LPs). This study addresses critical stability and sustainability challenges within the protocol, namely: the propensity of LPs to prefer selling in external markets over participation in the protocol; a similar inclination towards selling within the PinFi system rather than contributing as LPs; and a scenario where LPs are disinclined to sell within the protocol. Employing a game-theoretic approach, we explore PinFi's mechanisms and its broader ramifications. Our findings reveal that, under a variety of common conditions and with an assumption of participant integrity, PinFi is capable of fostering a dynamic equilibrium among LPs, sellers, and buyers. This balance is maintained through a carefully calibrated range of block rewards for LPs, ensuring the protocol's long-term stability and utility.",
         "subjects": [
             "cs.GT"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2405.01561",
+        "abstract url": "https://arxiv.org/abs/2405.01561",
+        "title": "Rapid Mobile App Development for Generative AI Agents on MIT App Inventor",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "The evolution of Artificial Intelligence (AI) stands as a pivotal force shaping our society, finding applications across diverse domains such as education, sustainability, and safety. Leveraging AI within mobile applications makes it easily accessible to the public, catalyzing its transformative potential. In this paper, we present a methodology for the rapid development of AI agent applications using the development platform provided by MIT App Inventor. To demonstrate its efficacy, we share the development journey of three distinct mobile applications: SynchroNet for fostering sustainable communities; ProductiviTeams for addressing procrastination; and iHELP for enhancing community safety. All three applications seamlessly integrate a spectrum of generative AI features, leveraging OpenAI APIs. Furthermore, we offer insights gleaned from overcoming challenges in integrating diverse tools and AI functionalities, aiming to inspire young developers to join our efforts in building practical AI agent applications.",
+        "subjects": [
+            "cs.SE"
         ],
         "comment": null
     }

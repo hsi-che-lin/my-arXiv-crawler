@@ -164,6 +164,7 @@
                 "cs.CV"
             ],
             [
+                "Workshop",
                 "ICLR"
             ]
         ],
@@ -172,6 +173,31 @@
             "cs.CV"
         ],
         "comment": "ICLR 2024 Machine Learning for Remote Sensing (ML4RS) Workshop"
+    },
+    {
+        "paper id": "2404.10830",
+        "abstract url": "https://arxiv.org/abs/2404.10830",
+        "title": "Fewer Truncations Improve Language Modeling",
+        "rating": 1.5,
+        "keywords": [
+            [
+                "training efficiency"
+            ],
+            [
+                "synthesis"
+            ],
+            [
+                "cs.CL"
+            ],
+            [
+                "ICML"
+            ]
+        ],
+        "abstract": "In large language model training, input documents are typically concatenated together and then split into sequences of equal length to avoid padding tokens. Despite its efficiency, the concatenation approach compromises data integrity -- it inevitably breaks many documents into incomplete pieces, leading to excessive truncations that hinder the model from learning to compose logically coherent and factually consistent content that is grounded on the complete context. To address the issue, we propose Best-fit Packing, a scalable and efficient method that packs documents into training sequences through length-aware combinatorial optimization. Our method completely eliminates unnecessary truncations while retaining the same training efficiency as concatenation. Empirical results from both text and code pre-training show that our method achieves superior performance (e.g., relatively +4.7% on reading comprehension; +16.8% in context following; and +9.2% on program synthesis), and reduces closed-domain hallucination effectively by up to 58.3%.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": "ICML 2024"
     },
     {
         "paper id": "2404.10841",
@@ -210,6 +236,25 @@
             "cs.CV"
         ],
         "comment": "CVPR 24"
+    },
+    {
+        "paper id": "2404.10933",
+        "abstract url": "https://arxiv.org/abs/2404.10933",
+        "title": "LLMem: Estimating GPU Memory Usage for Fine-Tuning Pre-Trained LLMs",
+        "rating": 1.5,
+        "keywords": [
+            [
+                "GPU Memory"
+            ],
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "Fine-tuning pre-trained large language models (LLMs) with limited hardware presents challenges due to GPU memory constraints. Various distributed fine-tuning methods have been proposed to alleviate memory constraints on GPU. However, determining the most effective method for achieving rapid fine-tuning while preventing GPU out-of-memory issues in a given environment remains unclear. To address this challenge, we introduce LLMem, a solution that estimates the GPU memory consumption when applying distributed fine-tuning methods across multiple GPUs and identifies the optimal method. We conduct GPU memory usage estimation prior to fine-tuning, leveraging the fundamental structure of transformer-based decoder models and the memory usage distribution of each method. Experimental results show that LLMem accurately estimates peak GPU memory usage on a single GPU, with error rates of up to 1.6%. Additionally, it shows an average error rate of 3.0% when applying distributed fine-tuning methods to LLMs with more than a billion parameters on multi-GPU setups.",
+        "subjects": [
+            "cs.AI"
+        ],
+        "comment": "9 pages, 9 figures, accepted to IJCAI 2024"
     },
     {
         "paper id": "2404.10966",
@@ -286,22 +331,6 @@
             "cs.CL"
         ],
         "comment": "Accepted at ICLR 2024"
-    },
-    {
-        "paper id": "2404.10305",
-        "abstract url": "https://arxiv.org/abs/2404.10305",
-        "title": "TC-OCR: TableCraft OCR for Efficient Detection & Recognition of Table Structure & Content",
-        "rating": 1,
-        "keywords": [
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "The automatic recognition of tabular data in document images presents a significant challenge due to the diverse range of table styles and complex structures. Tables offer valuable content representation, enhancing the predictive capabilities of various systems such as search engines and Knowledge Graphs. Addressing the two main problems, namely table detection (TD) and table structure recognition (TSR), has traditionally been approached independently. In this research, we propose an end-to-end pipeline that integrates deep learning models, including DETR, CascadeTabNet, and PP OCR v2, to achieve comprehensive image-based table recognition. This integrated approach effectively handles diverse table styles, complex structures, and image distortions, resulting in improved accuracy and efficiency compared to existing methods like Table Transformers. Our system achieves simultaneous table detection (TD), table structure recognition (TSR), and table content recognition (TCR), preserving table structures and accurately extracting tabular data from document images. The integration of multiple models addresses the intricacies of table recognition, making our approach a promising solution for image-based table understanding, data extraction, and information retrieval applications. Our proposed approach achieves an IOU of 0.96 and an OCR Accuracy of 78%, showcasing a remarkable improvement of approximately 25% in the OCR Accuracy compared to the previous Table Transformer approach.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "8 pages, 2 figures, Workshop of 1st MMIR Deep Multimodal Learning for Information Retrieval"
     },
     {
         "paper id": "2404.10306",
@@ -627,6 +656,28 @@
         "comment": "7 pages"
     },
     {
+        "paper id": "2404.10572",
+        "abstract url": "https://arxiv.org/abs/2404.10572",
+        "title": "Label merge-and-split: A graph-colouring approach for memory-efficient brain parcellation",
+        "rating": 1,
+        "keywords": [
+            [
+                "GPU memory"
+            ],
+            [
+                "graph"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Whole brain parcellation requires inferring hundreds of segmentation labels in large image volumes and thus presents significant practical challenges for deep learning approaches. We introduce label merge-and-split, a method that first greatly reduces the effective number of labels required for learning-based whole brain parcellation and then recovers original labels. Using a greedy graph colouring algorithm, our method automatically groups and merges multiple spatially separate labels prior to model training and inference. The merged labels may be semantically unrelated. A deep learning model is trained to predict merged labels. At inference time, original labels are restored using atlas-based influence regions. In our experiments, the proposed approach reduces the number of labels by up to 68% while achieving segmentation accuracy comparable to the baseline method without label merging and splitting. Moreover, model training and inference times as well as GPU memory requirements were reduced significantly. The proposed method can be applied to all semantic segmentation tasks with a large number of spatially separate classes within an atlas-based prior.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2404.10574",
         "abstract url": "https://arxiv.org/abs/2404.10574",
         "title": "Uncertainty-guided Open-Set Source-Free Unsupervised Domain Adaptation with Target-private Class Segregation",
@@ -839,28 +890,6 @@
             "cs.CV"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2404.10830",
-        "abstract url": "https://arxiv.org/abs/2404.10830",
-        "title": "Fewer Truncations Improve Language Modeling",
-        "rating": 1,
-        "keywords": [
-            [
-                "training efficiency"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "In large language model training, input documents are typically concatenated together and then split into sequences of equal length to avoid padding tokens. Despite its efficiency, the concatenation approach compromises data integrity -- it inevitably breaks many documents into incomplete pieces, leading to excessive truncations that hinder the model from learning to compose logically coherent and factually consistent content that is grounded on the complete context. To address the issue, we propose Best-fit Packing, a scalable and efficient method that packs documents into training sequences through length-aware combinatorial optimization. Our method completely eliminates unnecessary truncations while retaining the same training efficiency as concatenation. Empirical results from both text and code pre-training show that our method achieves superior performance (e.g., relatively +4.7% on reading comprehension; +16.8% in context following; and +9.2% on program synthesis), and reduces closed-domain hallucination effectively by up to 58.3%.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": "ICML 2024"
     },
     {
         "paper id": "2404.10836",
@@ -1221,6 +1250,41 @@
         "comment": null
     },
     {
+        "paper id": "2405.05145",
+        "abstract url": "https://arxiv.org/abs/2405.05145",
+        "title": "Conformal Semantic Image Segmentation: Post-hoc Quantification of Predictive Uncertainty",
+        "rating": 1,
+        "keywords": [
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "We propose a post-hoc, computationally lightweight method to quantify predictive uncertainty in semantic image segmentation. Our approach uses conformal prediction to generate statistically valid prediction sets that are guaranteed to include the ground-truth segmentation mask at a predefined confidence level. We introduce a novel visualization technique of conformalized predictions based on heatmaps, and provide metrics to assess their empirical validity. We demonstrate the effectiveness of our approach on well-known benchmark datasets and image segmentation prediction models, and conclude with practical insights.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2404.10305",
+        "abstract url": "https://arxiv.org/abs/2404.10305",
+        "title": "TC-OCR: TableCraft OCR for Efficient Detection & Recognition of Table Structure & Content",
+        "rating": 0.5,
+        "keywords": [
+            [
+                "cs.CV"
+            ],
+            [
+                "Workshop"
+            ]
+        ],
+        "abstract": "The automatic recognition of tabular data in document images presents a significant challenge due to the diverse range of table styles and complex structures. Tables offer valuable content representation, enhancing the predictive capabilities of various systems such as search engines and Knowledge Graphs. Addressing the two main problems, namely table detection (TD) and table structure recognition (TSR), has traditionally been approached independently. In this research, we propose an end-to-end pipeline that integrates deep learning models, including DETR, CascadeTabNet, and PP OCR v2, to achieve comprehensive image-based table recognition. This integrated approach effectively handles diverse table styles, complex structures, and image distortions, resulting in improved accuracy and efficiency compared to existing methods like Table Transformers. Our system achieves simultaneous table detection (TD), table structure recognition (TSR), and table content recognition (TCR), preserving table structures and accurately extracting tabular data from document images. The integration of multiple models addresses the intricacies of table recognition, making our approach a promising solution for image-based table understanding, data extraction, and information retrieval applications. Our proposed approach achieves an IOU of 0.96 and an OCR Accuracy of 78%, showcasing a remarkable improvement of approximately 25% in the OCR Accuracy compared to the previous Table Transformer approach.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "8 pages, 2 figures, Workshop of 1st MMIR Deep Multimodal Learning for Information Retrieval"
+    },
+    {
         "paper id": "2404.10317",
         "abstract url": "https://arxiv.org/abs/2404.10317",
         "title": "LLMs4OM: Matching Ontologies with Large Language Models",
@@ -1432,7 +1496,7 @@
         "subjects": [
             "cs.LG"
         ],
-        "comment": "16 pages, 4 figures, supporting code available at https://github.com/rpopov42/elbo_gaa"
+        "comment": "19 pages, 5 figures, supporting code available at https://github.com/rpopov42/elbo_gaa"
     },
     {
         "paper id": "2404.10551",
@@ -1465,6 +1529,22 @@
             "cs.LG"
         ],
         "comment": "20 pages"
+    },
+    {
+        "paper id": "2404.10579",
+        "abstract url": "https://arxiv.org/abs/2404.10579",
+        "title": "The application of Augmented Reality (AR) in Remote Work and Education",
+        "rating": 0.5,
+        "keywords": [
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "With the rapid advancement of technology, Augmented Reality (AR) technology, known for its ability to deeply integrate virtual information with the real world, is gradually transforming traditional work modes and teaching methods. Particularly in the realms of remote work and online education, AR technology demonstrates a broad spectrum of application prospects. This paper delves into the application potential and actual effects of AR technology in remote work and education. Through a systematic literature review, this study outlines the key features, advantages, and challenges of AR technology. Based on theoretical analysis, it discusses the scientific basis and technical support that AR technology provides for enhancing remote work efficiency and promoting innovation in educational teaching models. Additionally, by designing an empirical research plan and analyzing experimental data, this article reveals the specific performance and influencing factors of AR technology in practical applications. Finally, based on the results of the experiments, this research summarizes the application value of AR technology in remote work and education, looks forward to its future development trends, and proposes forward-looking research directions and strategic suggestions, offering empirical foundation and theoretical guidance for further promoting the in-depth application of AR technology in related fields.",
+        "subjects": [
+            "cs.AI"
+        ],
+        "comment": null
     },
     {
         "paper id": "2404.10645",
@@ -1746,22 +1826,6 @@
         "comment": null
     },
     {
-        "paper id": "2404.10890",
-        "abstract url": "https://arxiv.org/abs/2404.10890",
-        "title": "Exploring Augmentation and Cognitive Strategies for AI based Synthetic Personae",
-        "rating": 0.5,
-        "keywords": [
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "Large language models (LLMs) hold potential for innovative HCI research, including the creation of synthetic personae. However, their black-box nature and propensity for hallucinations pose challenges. To address these limitations, this position paper advocates for using LLMs as data augmentation systems rather than zero-shot generators. We further propose the development of robust cognitive and memory frameworks to guide LLM responses. Initial explorations suggest that data enrichment, episodic memory, and self-reflection techniques can improve the reliability of synthetic personae and open up new avenues for HCI research.",
-        "subjects": [
-            "cs.AI"
-        ],
-        "comment": "This paper was accepted for publication: Proceedings of ACM Conf on Human Factors in Computing Systems (CHI 24), Rafael Arias Gonzalez, Steve DiPaola. Exploring Augmentation and Cognitive Strategies for Synthetic Personae. ACM SigCHI, in Challenges and Opportunities of LLM-Based Synthetic Personae and Data in HCI Workshop, 2024"
-    },
-    {
         "paper id": "2404.10906",
         "abstract url": "https://arxiv.org/abs/2404.10906",
         "title": "Towards a Research Community in Interpretable Reinforcement Learning: the InterpPol Workshop",
@@ -1792,22 +1856,6 @@
             "cs.AI"
         ],
         "comment": "At CLeaR 2024"
-    },
-    {
-        "paper id": "2404.10933",
-        "abstract url": "https://arxiv.org/abs/2404.10933",
-        "title": "LLMem: Estimating GPU Memory Usage for Fine-Tuning Pre-Trained LLMs",
-        "rating": 0.5,
-        "keywords": [
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "Fine-tuning pre-trained large language models (LLMs) with limited hardware presents challenges due to GPU memory constraints. Various distributed fine-tuning methods have been proposed to alleviate memory constraints on GPU. However, determining the most effective method for achieving rapid fine-tuning while preventing GPU out-of-memory issues in a given environment remains unclear. To address this challenge, we introduce LLMem, a solution that estimates the GPU memory consumption when applying distributed fine-tuning methods across multiple GPUs and identifies the optimal method. We conduct GPU memory usage estimation prior to fine-tuning, leveraging the fundamental structure of transformer-based decoder models and the memory usage distribution of each method. Experimental results show that LLMem accurately estimates peak GPU memory usage on a single GPU, with error rates of up to 1.6%. Additionally, it shows an average error rate of 3.0% when applying distributed fine-tuning methods to LLMs with more than a billion parameters on multi-GPU setups.",
-        "subjects": [
-            "cs.AI"
-        ],
-        "comment": "9 pages, 9 figures, accepted to IJCAI 2024"
     },
     {
         "paper id": "2404.10934",
@@ -2267,25 +2315,6 @@
         "comment": "This submission includes the paper and supplementary material. 24 pages, 11 figures"
     },
     {
-        "paper id": "2404.10572",
-        "abstract url": "https://arxiv.org/abs/2404.10572",
-        "title": "Label merge-and-split: A graph-colouring approach for memory-efficient brain parcellation",
-        "rating": 0,
-        "keywords": [
-            [
-                "graph"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Whole brain parcellation requires inferring hundreds of segmentation labels in large image volumes and thus presents significant practical challenges for deep learning approaches. We introduce label merge-and-split, a method that first greatly reduces the effective number of labels required for learning-based whole brain parcellation and then recovers original labels. Using a greedy graph colouring algorithm, our method automatically groups and merges multiple spatially separate labels prior to model training and inference. The merged labels may be semantically unrelated. A deep learning model is trained to predict merged labels. At inference time, original labels are restored using atlas-based influence regions. In our experiments, the proposed approach reduces the number of labels by up to 68% while achieving segmentation accuracy comparable to the baseline method without label merging and splitting. Moreover, model training and inference times as well as GPU memory requirements were reduced significantly. The proposed method can be applied to all semantic segmentation tasks with a large number of spatially separate classes within an atlas-based prior.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2404.10578",
         "abstract url": "https://arxiv.org/abs/2404.10578",
         "title": "Vivo : une approche multimodale de la synthese concatenative par corpus dans le cadre d'une oeuvre audiovisuelle immersive",
@@ -2336,6 +2365,7 @@
                 "cs.LG"
             ],
             [
+                "Workshop",
                 "CVPR"
             ]
         ],
@@ -2439,6 +2469,25 @@
             "cs.CL"
         ],
         "comment": "9 pages"
+    },
+    {
+        "paper id": "2404.10890",
+        "abstract url": "https://arxiv.org/abs/2404.10890",
+        "title": "Exploring Augmentation and Cognitive Strategies for AI based Synthetic Personae",
+        "rating": 0.0,
+        "keywords": [
+            [
+                "cs.AI"
+            ],
+            [
+                "Workshop"
+            ]
+        ],
+        "abstract": "Large language models (LLMs) hold potential for innovative HCI research, including the creation of synthetic personae. However, their black-box nature and propensity for hallucinations pose challenges. To address these limitations, this position paper advocates for using LLMs as data augmentation systems rather than zero-shot generators. We further propose the development of robust cognitive and memory frameworks to guide LLM responses. Initial explorations suggest that data enrichment, episodic memory, and self-reflection techniques can improve the reliability of synthetic personae and open up new avenues for HCI research.",
+        "subjects": [
+            "cs.AI"
+        ],
+        "comment": "This paper was accepted for publication: Proceedings of ACM Conf on Human Factors in Computing Systems (CHI 24), Rafael Arias Gonzalez, Steve DiPaola. Exploring Augmentation and Cognitive Strategies for Synthetic Personae. ACM SigCHI, in Challenges and Opportunities of LLM-Based Synthetic Personae and Data in HCI Workshop, 2024"
     },
     {
         "paper id": "2404.10947",
@@ -2663,6 +2712,7 @@
                 "cs.CV"
             ],
             [
+                "Workshop",
                 "CVPR"
             ]
         ],
@@ -2763,25 +2813,6 @@
             "cs.DC"
         ],
         "comment": "Author accepted version of paper in the PERMAVOST workshop at the 33rd International Symposium on High-Performance Parallel and Distributed Computing (HPDC 24)"
-    },
-    {
-        "paper id": "2404.10579",
-        "abstract url": "https://arxiv.org/abs/2404.10579",
-        "title": "The application of Augmented Reality (AR) in Remote Work and Education",
-        "rating": -0.5,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "With the rapid advancement of technology, Augmented Reality (AR) technology, known for its ability to deeply integrate virtual information with the real world, is gradually transforming traditional work modes and teaching methods. Particularly in the realms of remote work and online education, AR technology demonstrates a broad spectrum of application prospects. This paper delves into the application potential and actual effects of AR technology in remote work and education. Through a systematic literature review, this study outlines the key features, advantages, and challenges of AR technology. Based on theoretical analysis, it discusses the scientific basis and technical support that AR technology provides for enhancing remote work efficiency and promoting innovation in educational teaching models. Additionally, by designing an empirical research plan and analyzing experimental data, this article reveals the specific performance and influencing factors of AR technology in practical applications. Finally, based on the results of the experiments, this research summarizes the application value of AR technology in remote work and education, looks forward to its future development trends, and proposes forward-looking research directions and strategic suggestions, offering empirical foundation and theoretical guidance for further promoting the in-depth application of AR technology in related fields.",
-        "subjects": [
-            "cs.AI"
-        ],
-        "comment": null
     },
     {
         "paper id": "2404.10603",
@@ -2969,6 +3000,7 @@
                 "cs.CV"
             ],
             [
+                "Workshop",
                 "ICLR"
             ]
         ],
@@ -3005,12 +3037,14 @@
         "keywords": [
             [
                 "Medical",
-                "diagnosis"
+                "diagnosis",
+                "radiology"
             ],
             [
                 "eess.IV"
             ],
             [
+                "Workshop",
                 "CVPR"
             ]
         ],
@@ -3670,27 +3704,6 @@
         "comment": null
     },
     {
-        "paper id": "2404.10640",
-        "abstract url": "https://arxiv.org/abs/2404.10640",
-        "title": "Adapting SAM for Surgical Instrument Tracking and Segmentation in Endoscopic Submucosal Dissection Videos",
-        "rating": -1,
-        "keywords": [
-            [
-                "Surgical",
-                "surgery",
-                "Endoscopic"
-            ],
-            [
-                "eess.IV"
-            ]
-        ],
-        "abstract": "The precise tracking and segmentation of surgical instruments have led to a remarkable enhancement in the efficiency of surgical procedures. However, the challenge lies in achieving accurate segmentation of surgical instruments while minimizing the need for manual annotation and reducing the time required for the segmentation process. To tackle this, we propose a novel framework for surgical instrument segmentation and tracking. Specifically, with a tiny subset of frames for segmentation, we ensure accurate segmentation across the entire surgical video. Our method adopts a two-stage approach to efficiently segment videos. Initially, we utilize the Segment-Anything (SAM) model, which has been fine-tuned using the Low-Rank Adaptation (LoRA) on the EndoVis17 Dataset. The fine-tuned SAM model is applied to segment the initial frames of the video accurately. Subsequently, we deploy the XMem++ tracking algorithm to follow the annotated frames, thereby facilitating the segmentation of the entire video sequence. This workflow enables us to precisely segment and track objects within the video. Through extensive evaluation of the in-distribution dataset (EndoVis17) and the out-of-distribution datasets (EndoVis18 \\& the endoscopic submucosal dissection surgery (ESD) dataset), our framework demonstrates exceptional accuracy and robustness, thus showcasing its potential to advance the automated robotic-assisted surgery.",
-        "subjects": [
-            "eess.IV"
-        ],
-        "comment": "To appear in IEEE ICRA 2024 C4SR+ Workshop"
-    },
-    {
         "paper id": "2404.10658",
         "abstract url": "https://arxiv.org/abs/2404.10658",
         "title": "Trajectory Planning using Reinforcement Learning for Interactive Overtaking Maneuvers in Autonomous Racing Scenarios",
@@ -4119,22 +4132,6 @@
         "comment": null
     },
     {
-        "paper id": "2404.10935",
-        "abstract url": "https://arxiv.org/abs/2404.10935",
-        "title": "Molecular relaxation by reverse diffusion with time step prediction",
-        "rating": -1,
-        "keywords": [
-            [
-                "diffusion"
-            ]
-        ],
-        "abstract": "Molecular relaxation, finding the equilibrium state of a non-equilibrium structure, is an essential component of computational chemistry to understand reactivity. Classical force field methods often rely on insufficient local energy minimization, while neural network force field models require large labeled datasets encompassing both equilibrium and non-equilibrium structures. As a remedy, we propose MoreRed, molecular relaxation by reverse diffusion, a conceptually novel and purely statistical approach where non-equilibrium structures are treated as noisy instances of their corresponding equilibrium states. To enable the denoising of arbitrarily noisy inputs via a generative diffusion model, we further introduce a novel diffusion time step predictor. Notably, MoreRed learns a simpler pseudo potential energy surface instead of the complex physical potential energy surface. It is trained on a significantly smaller, and thus computationally cheaper, dataset consisting of solely unlabeled equilibrium structures, avoiding the computation of non-equilibrium structures altogether. We compare MoreRed to classical force fields, equivariant neural network force fields trained on a large dataset of equilibrium and non-equilibrium data, as well as a semi-empirical tight-binding model. To assess this quantitatively, we evaluate the root-mean-square deviation between the found equilibrium structures and the reference equilibrium structures as well as their DFT energies.",
-        "subjects": [
-            "physics.chem-ph"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2404.10955",
         "abstract url": "https://arxiv.org/abs/2404.10955",
         "title": "The Traveling Tournament Problem: Improved Algorithms Based on Cycle Packing",
@@ -4149,6 +4146,22 @@
             "cs.DS"
         ],
         "comment": "A preliminary version of this article was presented at MFCS 2022; Sumitted in 2022"
+    },
+    {
+        "paper id": "2404.10961",
+        "abstract url": "https://arxiv.org/abs/2404.10961",
+        "title": "Chernoff Bounds and Reverse Hypercontractivity on HDX",
+        "rating": -1,
+        "keywords": [
+            [
+                "skeletons"
+            ]
+        ],
+        "abstract": "We prove optimal concentration of measure for lifted functions on high dimensional expanders (HDX). Let $X$ be a $k$-dimensional HDX. We show for any $i\\leq k$ and $f:X(i)\\to [0,1]$: \\[\\Pr_{s\\in X(k)}\\left[\\left|\\underset{t\\subseteq s}{\\mathbb{E}}[f(t)]-\u03bc\\right|\\geq\\varepsilon\\right]\\leq exp\\left(-\\varepsilon^2\\frac{k}{i}\\right).\\] Using this fact, we prove that high dimensional expanders are reverse hypercontractive, a powerful functional inequality from discrete analysis implying that for any sets $A,B \\subset X(k)$, the probability a $\u03c1$-correlated pair passes between them is at least \\[\\Pr_{s,s' \\sim T_\u03c1}[s \\in A, s' \\in B] \\geq \\Pr[A]^{O(1)} \\Pr[B]^{O(1)}.\\] Our results hold under weak spectral assumptions on $X$. Namely we prove exponential concentration of measure for any complex below the `Trickling-Down Threshold' (beyond which concentration may be arbitrarily poor), and optimal concentration for $\\sqrt{k}$-skeletons of such complexes. We also show optimal bounds for the top dimension of stronger HDX among other settings. We leverage our inequalities to prove several new agreement testing theorems on high dimensional expanders, including a new 99%-regime test for subsets, and a variant of the `Z-test' achieving inverse exponential soundness under the stronger assumption of $\\ell_\\infty$-expansion. The latter gives rise to the first optimal testers beyond the complete complex and products, a stepping stone toward the use of HDX in strong soundness PCPs. We also give applications within expansion, analysis, combinatorics, and coding theory, including a proof that two-sided HDX have optimal geometric overlap (giving the first explicit bounded-degree construction), near-optimal double samplers, new super-exponential degree lower bounds for certain HDX, distance-amplified list-decodable and locally testable codes, a Frankl-R\u00f6dl Theorem and more.",
+        "subjects": [
+            "cs.CC"
+        ],
+        "comment": null
     },
     {
         "paper id": "2404.10985",
@@ -4197,29 +4210,6 @@
             "cs.CV"
         ],
         "comment": "14 pages, 9 figures, Accepted IEEE TIV"
-    },
-    {
-        "paper id": "2404.11000",
-        "abstract url": "https://arxiv.org/abs/2404.11000",
-        "title": "OVAL-Prompt: Open-Vocabulary Affordance Localization for Robot Manipulation through LLM Affordance-Grounding",
-        "rating": -1,
-        "keywords": [
-            [
-                "Vision Language",
-                "VLM"
-            ],
-            [
-                "RGB-D"
-            ],
-            [
-                "Robot"
-            ]
-        ],
-        "abstract": "In order for robots to interact with objects effectively, they must understand the form and function of each object they encounter. Essentially, robots need to understand which actions each object affords, and where those affordances can be acted on. Robots are ultimately expected to operate in unstructured human environments, where the set of objects and affordances is not known to the robot before deployment (i.e. the open-vocabulary setting). In this work, we introduce OVAL-Prompt, a prompt-based approach for open-vocabulary affordance localization in RGB-D images. By leveraging a Vision Language Model (VLM) for open-vocabulary object part segmentation and a Large Language Model (LLM) to ground each part-segment-affordance, OVAL-Prompt demonstrates generalizability to novel object instances, categories, and affordances without domain-specific finetuning. Quantitative experiments demonstrate that without any finetuning, OVAL-Prompt achieves localization accuracy that is competitive with supervised baseline models. Moreover, qualitative experiments show that OVAL-Prompt enables affordance-based robot manipulation of open-vocabulary object instances and categories.",
-        "subjects": [
-            "cs.RO"
-        ],
-        "comment": "Accepted to Vision-Language Models for Navigation and Manipulation (VLMNM) Workshop (ICRA 2024)"
     },
     {
         "paper id": "2404.11008",
@@ -4520,6 +4510,30 @@
         "comment": "Accepted at the 1st International Conference on Robust Argumentation Machines (RATIO24); 18 pages and 13 pages supplementary materials"
     },
     {
+        "paper id": "2404.10640",
+        "abstract url": "https://arxiv.org/abs/2404.10640",
+        "title": "Adapting SAM for Surgical Instrument Tracking and Segmentation in Endoscopic Submucosal Dissection Videos",
+        "rating": -1.5,
+        "keywords": [
+            [
+                "Surgical",
+                "surgery",
+                "Endoscopic"
+            ],
+            [
+                "eess.IV"
+            ],
+            [
+                "Workshop"
+            ]
+        ],
+        "abstract": "The precise tracking and segmentation of surgical instruments have led to a remarkable enhancement in the efficiency of surgical procedures. However, the challenge lies in achieving accurate segmentation of surgical instruments while minimizing the need for manual annotation and reducing the time required for the segmentation process. To tackle this, we propose a novel framework for surgical instrument segmentation and tracking. Specifically, with a tiny subset of frames for segmentation, we ensure accurate segmentation across the entire surgical video. Our method adopts a two-stage approach to efficiently segment videos. Initially, we utilize the Segment-Anything (SAM) model, which has been fine-tuned using the Low-Rank Adaptation (LoRA) on the EndoVis17 Dataset. The fine-tuned SAM model is applied to segment the initial frames of the video accurately. Subsequently, we deploy the XMem++ tracking algorithm to follow the annotated frames, thereby facilitating the segmentation of the entire video sequence. This workflow enables us to precisely segment and track objects within the video. Through extensive evaluation of the in-distribution dataset (EndoVis17) and the out-of-distribution datasets (EndoVis18 \\& the endoscopic submucosal dissection surgery (ESD) dataset), our framework demonstrates exceptional accuracy and robustness, thus showcasing its potential to advance the automated robotic-assisted surgery.",
+        "subjects": [
+            "eess.IV"
+        ],
+        "comment": "To appear in IEEE ICRA 2024 C4SR+ Workshop"
+    },
+    {
         "paper id": "2404.10761",
         "abstract url": "https://arxiv.org/abs/2404.10761",
         "title": "TorchSurv: A Lightweight Package for Deep Survival Analysis",
@@ -4557,6 +4571,32 @@
             "cs.AI"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2404.11000",
+        "abstract url": "https://arxiv.org/abs/2404.11000",
+        "title": "OVAL-Prompt: Open-Vocabulary Affordance Localization for Robot Manipulation through LLM Affordance-Grounding",
+        "rating": -1.5,
+        "keywords": [
+            [
+                "Vision Language",
+                "VLM"
+            ],
+            [
+                "RGB-D"
+            ],
+            [
+                "Robot"
+            ],
+            [
+                "Workshop"
+            ]
+        ],
+        "abstract": "In order for robots to interact with objects effectively, they must understand the form and function of each object they encounter. Essentially, robots need to understand which actions each object affords, and where those affordances can be acted on. Robots are ultimately expected to operate in unstructured human environments, where the set of objects and affordances is not known to the robot before deployment (i.e. the open-vocabulary setting). In this work, we introduce OVAL-Prompt, a prompt-based approach for open-vocabulary affordance localization in RGB-D images. By leveraging a Vision Language Model (VLM) for open-vocabulary object part segmentation and a Large Language Model (LLM) to ground each part-segment-affordance, OVAL-Prompt demonstrates generalizability to novel object instances, categories, and affordances without domain-specific finetuning. Quantitative experiments demonstrate that without any finetuning, OVAL-Prompt achieves localization accuracy that is competitive with supervised baseline models. Moreover, qualitative experiments show that OVAL-Prompt enables affordance-based robot manipulation of open-vocabulary object instances and categories.",
+        "subjects": [
+            "cs.RO"
+        ],
+        "comment": "Accepted to Vision-Language Models for Navigation and Manipulation (VLMNM) Workshop (ICRA 2024)"
     },
     {
         "paper id": "2404.12408",
@@ -4664,22 +4704,6 @@
         "comment": null
     },
     {
-        "paper id": "2404.10389",
-        "abstract url": "https://arxiv.org/abs/2404.10389",
-        "title": "Paving the Way to Hybrid Quantum-Classical Scientific Workflows",
-        "rating": -2,
-        "keywords": [
-            [
-                "Quantum"
-            ]
-        ],
-        "abstract": "The increasing growth of data volume, and the consequent explosion in demand for computational power, are affecting scientific computing, as shown by the rise of extreme data scientific workflows. As the need for computing power increases, quantum computing has been proposed as a way to deliver it. It may provide significant theoretical speedups for many scientific applications (i.e., molecular dynamics, quantum chemistry, combinatorial optimization, and machine learning). Therefore, integrating quantum computers into the computing continuum constitutes a promising way to speed up scientific computation. However, the scientific computing community still lacks the necessary tools and expertise to fully harness the power of quantum computers in the execution of complex applications such as scientific workflows. In this work, we describe the main characteristics of quantum computing and its main benefits for scientific applications, then we formalize hybrid quantum-classic workflows, explore how to identify quantum components and map them onto resources. We demonstrate concepts on a real use case and define a software architecture for a hybrid workflow management system.",
-        "subjects": [
-            "cs.ET"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2404.10392",
         "abstract url": "https://arxiv.org/abs/2404.10392",
         "title": "Generating 6-D Trajectories for Omnidirectional Multirotor Aerial Vehicles in Cluttered Environments",
@@ -4754,7 +4778,7 @@
     {
         "paper id": "2404.10490",
         "abstract url": "https://arxiv.org/abs/2404.10490",
-        "title": "Teaching Chinese Sign Language with Feedback in Mixed Reality",
+        "title": "Enhancing Sign Language Teaching: A Mixed Reality Approach for Immersive Learning and Multi-Dimensional Feedback",
         "rating": -2,
         "keywords": [
             [
@@ -4772,6 +4796,22 @@
             "cs.CV"
         ],
         "comment": "8 pages, 6 figures"
+    },
+    {
+        "paper id": "2404.10494",
+        "abstract url": "https://arxiv.org/abs/2404.10494",
+        "title": "BDAN: Mitigating Temporal Difference Across Electrodes in Cross-Subject Motor Imagery Classification via Generative Bridging Domain",
+        "rating": -2,
+        "keywords": [
+            [
+                "EEG"
+            ]
+        ],
+        "abstract": "Because of \"the non-repeatability of the experiment settings and conditions\" and \"the variability of brain patterns among subjects\", the data distributions across sessions and electrodes are different in cross-subject motor imagery (MI) studies, eventually reducing the performance of the classification model. Systematically summarised based on the existing studies, a novel temporal-electrode data distribution problem is investigated under both intra-subject and inter-subject scenarios in this paper. Based on the presented issue, a novel bridging domain adaptation network (BDAN) is proposed, aiming to minimise the data distribution difference across sessions in the aspect of the electrode, thus improving and enhancing model performance. In the proposed BDAN, deep features of all the EEG data are extracted via a specially designed spatial feature extractor. With the obtained spatio-temporal features, a special generative bridging domain is established, bridging the data from all the subjects across sessions. The difference across sessions and electrodes is then minimized using the customized bridging loss functions, and the known knowledge is automatically transferred through the constructed bridging domain. To show the effectiveness of the proposed BDAN, comparison experiments and ablation studies are conducted on a public EEG dataset. The overall comparison results demonstrate the superior performance of the proposed BDAN compared with the other advanced deep learning and domain adaptation methods.",
+        "subjects": [
+            "cs.HC"
+        ],
+        "comment": null
     },
     {
         "paper id": "2404.10503",
@@ -4906,22 +4946,6 @@
             "eess.SP"
         ],
         "comment": "Paper presented at 18th EuCAP, 17-22 March 2024, Glasgow, Scotland"
-    },
-    {
-        "paper id": "2404.10598",
-        "abstract url": "https://arxiv.org/abs/2404.10598",
-        "title": "Resilient-By-Design Framework for MIMO-OFDM Communications under Smart Jamming",
-        "rating": -2,
-        "keywords": [
-            [
-                "6G"
-            ]
-        ],
-        "abstract": "Native jamming mitigation is essential for addressing security and resilience in future 6G wireless networks. In this paper a resilient-by-design framework for effective anti-jamming in MIMO-OFDM wireless communications is introduced. A novel approach that integrates information from wireless sensing services to develop anti-jamming strategies, which do not rely on any prior information or assumptions on the adversary's concrete setup, is explored. To this end, a method that replaces conventional approaches to noise covariance estimation in anti-jamming with a surrogate covariance model is proposed, which instead incorporates sensing information on the jamming signal's directions-of-arrival (DoAs) to provide an effective approximation of the true jamming strategy. The study further focuses on integrating this novel, sensing-assisted approach into the joint optimization of beamforming, user scheduling and power allocation for a multi-user MIMO-OFDM uplink setting. Despite the NP-hard nature of this optimization problem, it can be effectively solved using an iterative water-filling approach. In order to assess the effectiveness of the proposed sensing-assisted jamming mitigation, the corresponding worst-case jamming strategy is investigated, which aims to minimize the total user sum-rate. Experimental simulations eventually affirm the robustness of our approach against both worst-case and barrage jamming, demonstrating its potential to address a wide range of jamming scenarios. Since such an integration of sensing-assisted information is directly implemented on the physical layer, resilience is incorporated preemptively by-design.",
-        "subjects": [
-            "cs.IT"
-        ],
-        "comment": "accepted to IEEE International Conference on Communications, 2nd Workshop on Enabling Security, Trust, and Privacy in 6G Wireless Systems"
     },
     {
         "paper id": "2404.10649",
@@ -5063,8 +5087,7 @@
         "rating": -2,
         "keywords": [
             [
-                "3D",
-                "depth"
+                "3D"
             ],
             [
                 "medical",
@@ -5547,6 +5570,25 @@
         "comment": null
     },
     {
+        "paper id": "2404.10598",
+        "abstract url": "https://arxiv.org/abs/2404.10598",
+        "title": "Resilient-By-Design Framework for MIMO-OFDM Communications under Smart Jamming",
+        "rating": -2.5,
+        "keywords": [
+            [
+                "6G"
+            ],
+            [
+                "Workshop"
+            ]
+        ],
+        "abstract": "Native jamming mitigation is essential for addressing security and resilience in future 6G wireless networks. In this paper a resilient-by-design framework for effective anti-jamming in MIMO-OFDM wireless communications is introduced. A novel approach that integrates information from wireless sensing services to develop anti-jamming strategies, which do not rely on any prior information or assumptions on the adversary's concrete setup, is explored. To this end, a method that replaces conventional approaches to noise covariance estimation in anti-jamming with a surrogate covariance model is proposed, which instead incorporates sensing information on the jamming signal's directions-of-arrival (DoAs) to provide an effective approximation of the true jamming strategy. The study further focuses on integrating this novel, sensing-assisted approach into the joint optimization of beamforming, user scheduling and power allocation for a multi-user MIMO-OFDM uplink setting. Despite the NP-hard nature of this optimization problem, it can be effectively solved using an iterative water-filling approach. In order to assess the effectiveness of the proposed sensing-assisted jamming mitigation, the corresponding worst-case jamming strategy is investigated, which aims to minimize the total user sum-rate. Experimental simulations eventually affirm the robustness of our approach against both worst-case and barrage jamming, demonstrating its potential to address a wide range of jamming scenarios. Since such an integration of sensing-assisted information is directly implemented on the physical layer, resilience is incorporated preemptively by-design.",
+        "subjects": [
+            "cs.IT"
+        ],
+        "comment": "accepted to IEEE International Conference on Communications, 2nd Workshop on Enabling Security, Trust, and Privacy in 6G Wireless Systems"
+    },
+    {
         "paper id": "2404.10689",
         "abstract url": "https://arxiv.org/abs/2404.10689",
         "title": "Network architecture search of X-ray based scientific applications",
@@ -5754,26 +5796,6 @@
         "comment": "12 pages,11 figures"
     },
     {
-        "paper id": "2404.10446",
-        "abstract url": "https://arxiv.org/abs/2404.10446",
-        "title": "Watching Grass Grow: Long-term Visual Navigation and Mission Planning for Autonomous Biodiversity Monitoring",
-        "rating": -3,
-        "keywords": [
-            [
-                "robotics",
-                "Navigation"
-            ],
-            [
-                "Biodiversity"
-            ]
-        ],
-        "abstract": "We describe a challenging robotics deployment in a complex ecosystem to monitor a rich plant community. The study site is dominated by dynamic grassland vegetation and is thus visually ambiguous and liable to drastic appearance change over the course of a day and especially through the growing season. This dynamism and complexity in appearance seriously impact the stability of the robotics platform, as localisation is a foundational part of that control loop, and so routes must be carefully taught and retaught until autonomy is robust and repeatable. Our system is demonstrated over a 6-week period monitoring the response of grass species to experimental climate change manipulations. We also discuss the applicability of our pipeline to monitor biodiversity in other complex natural settings.",
-        "subjects": [
-            "cs.RO"
-        ],
-        "comment": "to be presented at the Workshop on Field Robotics - ICRA 2024"
-    },
-    {
         "paper id": "2404.10454",
         "abstract url": "https://arxiv.org/abs/2404.10454",
         "title": "A Computer Vision-Based Quality Assessment Technique for the automatic control of consumables for analytical laboratories",
@@ -5956,6 +5978,25 @@
         "comment": null
     },
     {
+        "paper id": "2404.10935",
+        "abstract url": "https://arxiv.org/abs/2404.10935",
+        "title": "Molecular relaxation by reverse diffusion with time step prediction",
+        "rating": -3,
+        "keywords": [
+            [
+                "diffusion"
+            ],
+            [
+                "chemistry"
+            ]
+        ],
+        "abstract": "Molecular relaxation, finding the equilibrium state of a non-equilibrium structure, is an essential component of computational chemistry to understand reactivity. Classical force field methods often rely on insufficient local energy minimization, while neural network force field models require large labeled datasets encompassing both equilibrium and non-equilibrium structures. As a remedy, we propose MoreRed, molecular relaxation by reverse diffusion, a conceptually novel and purely statistical approach where non-equilibrium structures are treated as noisy instances of their corresponding equilibrium states. To enable the denoising of arbitrarily noisy inputs via a generative diffusion model, we further introduce a novel diffusion time step predictor. Notably, MoreRed learns a simpler pseudo potential energy surface instead of the complex physical potential energy surface. It is trained on a significantly smaller, and thus computationally cheaper, dataset consisting of solely unlabeled equilibrium structures, avoiding the computation of non-equilibrium structures altogether. We compare MoreRed to classical force fields, equivariant neural network force fields trained on a large dataset of equilibrium and non-equilibrium data, as well as a semi-empirical tight-binding model. To assess this quantitatively, we evaluate the root-mean-square deviation between the found equilibrium structures and the reference equilibrium structures as well as their DFT energies.",
+        "subjects": [
+            "physics.chem-ph"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2404.10938",
         "abstract url": "https://arxiv.org/abs/2404.10938",
         "title": "Safety-critical Autonomous Inspection of Distillation Columns using Quadrupedal Robots Equipped with Roller Arms",
@@ -6049,6 +6090,29 @@
         "comment": "Submitted to International Conference on Pattern Recognition (ICPR) 2024"
     },
     {
+        "paper id": "2404.10446",
+        "abstract url": "https://arxiv.org/abs/2404.10446",
+        "title": "Watching Grass Grow: Long-term Visual Navigation and Mission Planning for Autonomous Biodiversity Monitoring",
+        "rating": -3.5,
+        "keywords": [
+            [
+                "robotics",
+                "Navigation"
+            ],
+            [
+                "Biodiversity"
+            ],
+            [
+                "Workshop"
+            ]
+        ],
+        "abstract": "We describe a challenging robotics deployment in a complex ecosystem to monitor a rich plant community. The study site is dominated by dynamic grassland vegetation and is thus visually ambiguous and liable to drastic appearance change over the course of a day and especially through the growing season. This dynamism and complexity in appearance seriously impact the stability of the robotics platform, as localisation is a foundational part of that control loop, and so routes must be carefully taught and retaught until autonomy is robust and repeatable. Our system is demonstrated over a 6-week period monitoring the response of grass species to experimental climate change manipulations. We also discuss the applicability of our pipeline to monitor biodiversity in other complex natural settings.",
+        "subjects": [
+            "cs.RO"
+        ],
+        "comment": "to be presented at the Workshop on Field Robotics - ICRA 2024"
+    },
+    {
         "paper id": "2404.10498",
         "abstract url": "https://arxiv.org/abs/2404.10498",
         "title": "LAECIPS: Large Vision Model Assisted Adaptive Edge-Cloud Collaboration for IoT-based Perception System",
@@ -6070,6 +6134,25 @@
         "abstract": "Recent large vision models (e.g., SAM) enjoy great potential to facilitate intelligent perception with high accuracy. Yet, the resource constraints in the IoT environment tend to limit such large vision models to be locally deployed, incurring considerable inference latency thereby making it difficult to support real-time applications, such as autonomous driving and robotics. Edge-cloud collaboration with large-small model co-inference offers a promising approach to achieving high inference accuracy and low latency. However, existing edge-cloud collaboration methods are tightly coupled with the model architecture and cannot adapt to the dynamic data drifts in heterogeneous IoT environments. To address the issues, we propose LAECIPS, a new edge-cloud collaboration framework. In LAECIPS, both the large vision model on the cloud and the lightweight model on the edge are plug-and-play. We design an edge-cloud collaboration strategy based on hard input mining, optimized for both high accuracy and low latency. We propose to update the edge model and its collaboration strategy with the cloud under the supervision of the large vision model, so as to adapt to the dynamic IoT data streams. Theoretical analysis of LAECIPS proves its feasibility. Experiments conducted in a robotic semantic segmentation system using real-world datasets show that LAECIPS outperforms its state-of-the-art competitors in accuracy, latency, and communication overhead while having better adaptability to dynamic environments.",
         "subjects": [
             "cs.AI"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2404.10389",
+        "abstract url": "https://arxiv.org/abs/2404.10389",
+        "title": "Paving the Way to Hybrid Quantum-Classical Scientific Workflows",
+        "rating": -4,
+        "keywords": [
+            [
+                "chemistry"
+            ],
+            [
+                "Quantum"
+            ]
+        ],
+        "abstract": "The increasing growth of data volume, and the consequent explosion in demand for computational power, are affecting scientific computing, as shown by the rise of extreme data scientific workflows. As the need for computing power increases, quantum computing has been proposed as a way to deliver it. It may provide significant theoretical speedups for many scientific applications (i.e., molecular dynamics, quantum chemistry, combinatorial optimization, and machine learning). Therefore, integrating quantum computers into the computing continuum constitutes a promising way to speed up scientific computation. However, the scientific computing community still lacks the necessary tools and expertise to fully harness the power of quantum computers in the execution of complex applications such as scientific workflows. In this work, we describe the main characteristics of quantum computing and its main benefits for scientific applications, then we formalize hybrid quantum-classic workflows, explore how to identify quantum components and map them onto resources. We demonstrate concepts on a real use case and define a software architecture for a hybrid workflow management system.",
+        "subjects": [
+            "cs.ET"
         ],
         "comment": null
     },
@@ -6434,18 +6517,6 @@
         "abstract": "We propose an effective method for primary decomposition of symmetric ideals. Let $K[X]=K[x_1,\\ldots,x_n]$ be the $n$-valuables polynomial ring over a field $K$ and $\\mathfrak{S}_n$ the symmetric group of order $n$. We consider the canonical action of $\\mathfrak{S}_n$ on $K[X]$ i.e. $\u03c3(f(x_1,\\ldots,x_n))=f(x_{\u03c3(1)},\\ldots,x_{\u03c3(n)})$ for $\u03c3\\in \\mathfrak{S}_n$. For an ideal $I$ of $K[X]$, $I$ is called {\\em symmetric} if $\u03c3(I)=I$ for any $\u03c3\\in \\mathfrak{S}_n$. For a minimal primary decomposition $I=Q_1\\cap \\cdots \\cap Q_r$ of a symmetric ideal $I$, $\u03c3(I)=\u03c3(Q_1)\\cap \\cdots \\cap \u03c3(Q_r)$ is a minimal primary decomposition of $I$ for any $\u03c3\\in \\mathfrak{S}_n$. We utilize this property to compute a full primary decomposition of $I$ efficiently from partial primary components. We investigate the effectiveness of our algorithm by implementing it in the computer algebra system Risa/Asir.",
         "subjects": [
             "math.AC"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2404.10494",
-        "abstract url": "https://arxiv.org/abs/2404.10494",
-        "title": "BDAN: Mitigating Temporal Difference Across Electrodes in Cross-Subject Motor Imagery Classification via Generative Bridging Domain",
-        "rating": -10,
-        "keywords": [],
-        "abstract": "Because of \"the non-repeatability of the experiment settings and conditions\" and \"the variability of brain patterns among subjects\", the data distributions across sessions and electrodes are different in cross-subject motor imagery (MI) studies, eventually reducing the performance of the classification model. Systematically summarised based on the existing studies, a novel temporal-electrode data distribution problem is investigated under both intra-subject and inter-subject scenarios in this paper. Based on the presented issue, a novel bridging domain adaptation network (BDAN) is proposed, aiming to minimise the data distribution difference across sessions in the aspect of the electrode, thus improving and enhancing model performance. In the proposed BDAN, deep features of all the EEG data are extracted via a specially designed spatial feature extractor. With the obtained spatio-temporal features, a special generative bridging domain is established, bridging the data from all the subjects across sessions. The difference across sessions and electrodes is then minimized using the customized bridging loss functions, and the known knowledge is automatically transferred through the constructed bridging domain. To show the effectiveness of the proposed BDAN, comparison experiments and ablation studies are conducted on a public EEG dataset. The overall comparison results demonstrate the superior performance of the proposed BDAN compared with the other advanced deep learning and domain adaptation methods.",
-        "subjects": [
-            "cs.HC"
         ],
         "comment": null
     },
@@ -6926,18 +6997,6 @@
         "abstract": "We study the complexity of approximating the permanent of a positive semidefinite matrix $A\\in \\mathbb{C}^{n\\times n}$. 1. We design a new approximation algorithm for $\\mathrm{per}(A)$ with approximation ratio $e^{(0.9999 + \u03b3)n}$, exponentially improving upon the current best bound of $e^{(1+\u03b3-o(1))n}$ [AGOS17,YP22]. Here, $\u03b3\\approx 0.577$ is Euler's constant. 2. We prove that it is NP-hard to approximate $\\mathrm{per}(A)$ within a factor $e^{(\u03b3-\u03b5)n}$ for any $\u03b5>0$. This is the first exponential hardness of approximation for this problem. Along the way, we prove optimal hardness of approximation results for the $\\|\\cdot\\|_{2\\to q}$ ``norm'' problem of a matrix for all $-1 < q < 2$.",
         "subjects": [
             "cs.DS"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2404.10961",
-        "abstract url": "https://arxiv.org/abs/2404.10961",
-        "title": "Chernoff Bounds and Reverse Hypercontractivity on HDX",
-        "rating": -10,
-        "keywords": [],
-        "abstract": "We prove optimal concentration of measure for lifted functions on high dimensional expanders (HDX). Let $X$ be a $k$-dimensional HDX. We show for any $i\\leq k$ and $f:X(i)\\to [0,1]$: \\[\\Pr_{s\\in X(k)}\\left[\\left|\\underset{t\\subseteq s}{\\mathbb{E}}[f(t)]-\u03bc\\right|\\geq\\varepsilon\\right]\\leq exp\\left(-\\varepsilon^2\\frac{k}{i}\\right).\\] Using this fact, we prove that high dimensional expanders are reverse hypercontractive, a powerful functional inequality from discrete analysis implying that for any sets $A,B \\subset X(k)$, the probability a $\u03c1$-correlated pair passes between them is at least \\[\\Pr_{s,s' \\sim T_\u03c1}[s \\in A, s' \\in B] \\geq \\Pr[A]^{O(1)} \\Pr[B]^{O(1)}.\\] Our results hold under weak spectral assumptions on $X$. Namely we prove exponential concentration of measure for any complex below the `Trickling-Down Threshold' (beyond which concentration may be arbitrarily poor), and optimal concentration for $\\sqrt{k}$-skeletons of such complexes. We also show optimal bounds for the top dimension of stronger HDX among other settings. We leverage our inequalities to prove several new agreement testing theorems on high dimensional expanders, including a new 99%-regime test for subsets, and a variant of the `Z-test' achieving inverse exponential soundness under the stronger assumption of $\\ell_\\infty$-expansion. The latter gives rise to the first optimal testers beyond the complete complex and products, a stepping stone toward the use of HDX in strong soundness PCPs. We also give applications within expansion, analysis, combinatorics, and coding theory, including a proof that two-sided HDX have optimal geometric overlap (giving the first explicit bounded-degree construction), near-optimal double samplers, new super-exponential degree lower bounds for certain HDX, distance-amplified list-decodable and locally testable codes, a Frankl-R\u00f6dl Theorem and more.",
-        "subjects": [
-            "cs.CC"
         ],
         "comment": null
     },

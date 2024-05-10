@@ -22,6 +22,25 @@
         "comment": "Accepted to ICASSP 2024"
     },
     {
+        "paper id": "2401.09417",
+        "abstract url": "https://arxiv.org/abs/2401.09417",
+        "title": "Vision Mamba: Efficient Visual Representation Learning with Bidirectional State Space Model",
+        "rating": 2,
+        "keywords": [
+            [
+                "GPU memory"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Recently the state space models (SSMs) with efficient hardware-aware designs, i.e., the Mamba deep learning model, have shown great potential for long sequence modeling. Meanwhile building efficient and generic vision backbones purely upon SSMs is an appealing direction. However, representing visual data is challenging for SSMs due to the position-sensitivity of visual data and the requirement of global context for visual understanding. In this paper, we show that the reliance on self-attention for visual representation learning is not necessary and propose a new generic vision backbone with bidirectional Mamba blocks (Vim), which marks the image sequences with position embeddings and compresses the visual representation with bidirectional state space models. On ImageNet classification, COCO object detection, and ADE20k semantic segmentation tasks, Vim achieves higher performance compared to well-established vision transformers like DeiT, while also demonstrating significantly improved computation & memory efficiency. For example, Vim is 2.8$\\times$ faster than DeiT and saves 86.8% GPU memory when performing batch inference to extract features on images with a resolution of 1248$\\times$1248. The results demonstrate that Vim is capable of overcoming the computation & memory constraints on performing Transformer-style understanding for high-resolution images and it has great potential to be the next-generation backbone for vision foundation models. Code is available at https://github.com/hustvl/Vim.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Work in progress. Code is available at https://github.com/hustvl/Vim"
+    },
+    {
         "paper id": "2401.09109",
         "abstract url": "https://arxiv.org/abs/2401.09109",
         "title": "Trapped in texture bias? A large scale comparison of deep instance segmentation",
@@ -308,6 +327,22 @@
         "comment": null
     },
     {
+        "paper id": "2401.09149",
+        "abstract url": "https://arxiv.org/abs/2401.09149",
+        "title": "InternEvo: Efficient Long-sequence Large Language Model Training via Hybrid Parallelism and Redundant Sharding",
+        "rating": 1,
+        "keywords": [
+            [
+                "GPU memory"
+            ]
+        ],
+        "abstract": "Large language models (LLMs) with long sequences begin to power more and more fundamentally new applications we use every day. Existing methods for long-sequence LLM training are neither efficient nor compatible with commonly-used training algorithms such as FlashAttention. We design InternEvo to address these issues. InternEvo decouples all of the sharding dimensions into a new hierarchical space, and systematically analyzes the memory and communication cost of LLM training. Then, it generates an effective hybrid parallelism strategy. We design a new selective overlap mechanism to mitigate the communication overhead introduced by the hybrid parallelism. We also implement memory management techniques to reduce GPU memory fragmentation. Evaluation results show that InternEvo generates parallelization strategies that match or outperform existing methods in model FLOPs utilization.",
+        "subjects": [
+            "cs.DC"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2401.09168",
         "abstract url": "https://arxiv.org/abs/2401.09168",
         "title": "Fine-tuning Strategies for Domain Specific Question Answering under Low Annotation Budget Constraints",
@@ -423,6 +458,22 @@
         "comment": "ICLR2024"
     },
     {
+        "paper id": "2401.09290",
+        "abstract url": "https://arxiv.org/abs/2401.09290",
+        "title": "G-Safe: Safe GPU Sharing in Multi-Tenant Environments",
+        "rating": 1,
+        "keywords": [
+            [
+                "GPU memory"
+            ]
+        ],
+        "abstract": "Modern GPU applications, such as machine learning (ML) frameworks, can only partially utilize beefy GPUs, leading to GPU underutilization in cloud environments. Sharing GPUs across multiple applications from different users can improve resource utilization and consequently cost, energy, and power efficiency. However, GPU sharing creates memory safety concerns because kernels must share a single GPU address space (GPU context). Previous GPU memory protection approaches have limited deployability because they require specialized hardware extensions or access to source code. This is often unavailable in GPU-accelerated libraries heavily utilized by ML frameworks. In this paper, we present G-Safe, a PTX-level bounds checking approach for GPUs that limits GPU kernels of each application to stay within the memory partition allocated to them. G-Safe relies on three mechanisms: (1) It divides the common GPU address space into separate partitions for different applications. (2) It intercepts and checks data transfers, fencing erroneous operations. (3) It instruments all GPU kernels at the PTX level (available in closed GPU libraries) fencing all kernel memory accesses outside application memory bounds. We implement G-Safe as an external, dynamically linked library that can be pre-loaded at application startup time. G-Safe's approach is transparent to applications and can support real-life, complex frameworks, such as Caffe and PyTorch, that issue billions of GPU kernels. Our evaluation shows that the overhead of G-Safe compared to native (unprotected) for such frameworks is between 4\\% - 12\\% and on average 9\\%.",
+        "subjects": [
+            "cs.DC"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2401.09296",
         "abstract url": "https://arxiv.org/abs/2401.09296",
         "title": "Tight Fusion of Events and Inertial Measurements for Direct Velocity Estimation",
@@ -487,20 +538,36 @@
         "comment": "37 pages, 5 figures, 4 tables"
     },
     {
-        "paper id": "2401.09417",
-        "abstract url": "https://arxiv.org/abs/2401.09417",
-        "title": "Vision Mamba: Efficient Visual Representation Learning with Bidirectional State Space Model",
+        "paper id": "2401.09343",
+        "abstract url": "https://arxiv.org/abs/2401.09343",
+        "title": "Efficient slot labelling",
         "rating": 1,
         "keywords": [
             [
-                "cs.CV"
+                "cs.CL"
             ]
         ],
-        "abstract": "Recently the state space models (SSMs) with efficient hardware-aware designs, i.e., the Mamba deep learning model, have shown great potential for long sequence modeling. Meanwhile building efficient and generic vision backbones purely upon SSMs is an appealing direction. However, representing visual data is challenging for SSMs due to the position-sensitivity of visual data and the requirement of global context for visual understanding. In this paper, we show that the reliance on self-attention for visual representation learning is not necessary and propose a new generic vision backbone with bidirectional Mamba blocks (Vim), which marks the image sequences with position embeddings and compresses the visual representation with bidirectional state space models. On ImageNet classification, COCO object detection, and ADE20k semantic segmentation tasks, Vim achieves higher performance compared to well-established vision transformers like DeiT, while also demonstrating significantly improved computation & memory efficiency. For example, Vim is 2.8$\\times$ faster than DeiT and saves 86.8% GPU memory when performing batch inference to extract features on images with a resolution of 1248$\\times$1248. The results demonstrate that Vim is capable of overcoming the computation & memory constraints on performing Transformer-style understanding for high-resolution images and it has great potential to be the next-generation backbone for vision foundation models. Code is available at https://github.com/hustvl/Vim.",
+        "abstract": "Slot labelling is an essential component of any dialogue system, aiming to find important arguments in every user turn. Common approaches involve large pre-trained language models (PLMs) like BERT or RoBERTa, but they face challenges such as high computational requirements and dependence on pre-training data. In this work, we propose a lightweight method which performs on par or better than the state-of-the-art PLM-based methods, while having almost 10x less trainable parameters. This makes it especially applicable for real-life industry scenarios.",
         "subjects": [
-            "cs.CV"
+            "cs.CL"
         ],
-        "comment": "Work in progress. Code is available at https://github.com/hustvl/Vim"
+        "comment": null
+    },
+    {
+        "paper id": "2401.09407",
+        "abstract url": "https://arxiv.org/abs/2401.09407",
+        "title": "Deciphering Textual Authenticity: A Generalized Strategy through the Lens of Large Language Semantics for Detecting Human vs. Machine-Generated Text",
+        "rating": 1,
+        "keywords": [
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "With the recent proliferation of Large Language Models (LLMs), there has been an increasing demand for tools to detect machine-generated text. The effective detection of machine-generated text face two pertinent problems: First, they are severely limited in generalizing against real-world scenarios, where machine-generated text is produced by a variety of generators, including but not limited to GPT-4 and Dolly, and spans diverse domains, ranging from academic manuscripts to social media posts. Second, existing detection methodologies treat texts produced by LLMs through a restrictive binary classification lens, neglecting the nuanced diversity of artifacts generated by different LLMs. In this work, we undertake a systematic study on the detection of machine-generated text in real-world scenarios. We first study the effectiveness of state-of-the-art approaches and find that they are severely limited against text produced by diverse generators and domains in the real world. Furthermore, t-SNE visualizations of the embeddings from a pretrained LLM's encoder show that they cannot reliably distinguish between human and machine-generated text. Based on our findings, we introduce a novel system, T5LLMCipher, for detecting machine-generated text using a pretrained T5 encoder combined with LLM embedding sub-clustering to address the text produced by diverse generators and domains in the real world. We evaluate our approach across 9 machine-generated text systems and 9 domains and find that our approach provides state-of-the-art generalization ability, with an average increase in F1 score on machine-generated text of 19.6\\% on unseen generators and domains compared to the top performing existing approaches and correctly attributes the generator of text with an accuracy of 93.6\\%.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": null
     },
     {
         "paper id": "2401.09518",
@@ -617,6 +684,22 @@
         "abstract": "Gender imbalance in Wikipedia content is a known challenge which the editor community is actively addressing. The aim of this paper is to provide the Wikipedia community with instruments to estimate the magnitude of the problem for different entity types (also known as classes) in Wikipedia. To this end, we apply class completeness estimation methods based on the gender attribute. Our results show not only which gender for different sub-classes of Person is more prevalent in Wikipedia, but also an idea of how complete the coverage is for difference genders and sub-classes of Person.",
         "subjects": [
             "cs.CY"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2401.09011",
+        "abstract url": "https://arxiv.org/abs/2401.09011",
+        "title": "Inductive Models for Artificial Intelligence Systems are Insufficient without Good Explanations",
+        "rating": 0.5,
+        "keywords": [
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "This paper discusses the limitations of machine learning (ML), particularly deep artificial neural networks (ANNs), which are effective at approximating complex functions but often lack transparency and explanatory power. It highlights the `problem of induction' : the philosophical issue that past observations may not necessarily predict future events, a challenge that ML models face when encountering new, unseen data. The paper argues for the importance of not just making predictions but also providing good explanations, a feature that current models often fail to deliver. It suggests that for AI to progress, we must seek models that offer insights and explanations, not just predictions.",
+        "subjects": [
+            "cs.LG"
         ],
         "comment": null
     },
@@ -973,6 +1056,7 @@
                 "cs.CV"
             ],
             [
+                "Workshop",
                 "WACV"
             ]
         ],
@@ -1190,6 +1274,25 @@
         "comment": null
     },
     {
+        "paper id": "2401.09006",
+        "abstract url": "https://arxiv.org/abs/2401.09006",
+        "title": "Generalized Face Liveness Detection via De-spoofing Face Generator",
+        "rating": 0,
+        "keywords": [
+            [
+                "attacks"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Previous Face Anti-spoofing (FAS) works face the challenge of generalizing in unseen domains. One of the major problems is that most existing FAS datasets are relatively small and lack data diversity. However, we find that there are numerous real faces that can be easily achieved under various conditions, which are neglected by previous FAS works. In this paper, we conduct an Anomalous cue Guided FAS (AG-FAS) method, which leverages real faces for improving model generalization via a De-spoofing Face Generator (DFG). Specifically, the DFG trained only on the real faces gains the knowledge of what a real face should be like and can generate a \"real\" version of the face corresponding to any given input face. The difference between the generated \"real\" face and the input face can provide an anomalous cue for the downstream FAS task. We then propose an Anomalous cue Guided FAS feature extraction Network (AG-Net) to further improve the FAS feature generalization via a cross-attention transformer. Extensive experiments on a total of nine public datasets show our method achieves state-of-the-art results under cross-domain evaluations with unseen scenarios and unknown presentation attacks.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "v1"
+    },
+    {
         "paper id": "2401.09018",
         "abstract url": "https://arxiv.org/abs/2401.09018",
         "title": "Residual Alignment: Uncovering the Mechanisms of Residual Networks",
@@ -1347,6 +1450,26 @@
             "cs.LG"
         ],
         "comment": "Accepted at the 12th International Conference on Learning Representations (ICLR 2024)"
+    },
+    {
+        "paper id": "2401.09252",
+        "abstract url": "https://arxiv.org/abs/2401.09252",
+        "title": "3D Scene Geometry Estimation from 360$^\\circ$ Imagery: A Survey",
+        "rating": 0,
+        "keywords": [
+            [
+                "3D",
+                "depth"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "This paper provides a comprehensive survey on pioneer and state-of-the-art 3D scene geometry estimation methodologies based on single, two, or multiple images captured under the omnidirectional optics. We first revisit the basic concepts of the spherical camera model, and review the most common acquisition technologies and representation formats suitable for omnidirectional (also called 360$^\\circ$, spherical or panoramic) images and videos. We then survey monocular layout and depth inference approaches, highlighting the recent advances in learning-based solutions suited for spherical data. The classical stereo matching is then revised on the spherical domain, where methodologies for detecting and describing sparse and dense features become crucial. The stereo matching concepts are then extrapolated for multiple view camera setups, categorizing them among light fields, multi-view stereo, and structure from motion (or visual simultaneous localization and mapping). We also compile and discuss commonly adopted datasets and figures of merit indicated for each purpose and list recent results for completeness. We conclude this paper by pointing out current and future trends.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Published in ACM Computing Surveys"
     },
     {
         "paper id": "2401.09294",
@@ -1507,6 +1630,28 @@
             "cs.CV"
         ],
         "comment": "12 pages, 6 figures"
+    },
+    {
+        "paper id": "2401.09629",
+        "abstract url": "https://arxiv.org/abs/2401.09629",
+        "title": "Multiple Locally Linear Kernel Machines",
+        "rating": 0.0,
+        "keywords": [
+            [
+                "Kernel Learning"
+            ],
+            [
+                "cs.LG"
+            ],
+            [
+                "ICML"
+            ]
+        ],
+        "abstract": "In this paper we propose a new non-linear classifier based on a combination of locally linear classifiers. A well known optimization formulation is given as we cast the problem in a $\\ell_1$ Multiple Kernel Learning (MKL) problem using many locally linear kernels. Since the number of such kernels is huge, we provide a scalable generic MKL training algorithm handling streaming kernels. With respect to the inference time, the resulting classifier fits the gap between high accuracy but slow non-linear classifiers (such as classical MKL) and fast but low accuracy linear classifiers.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": "This paper was written in 2014 and was originally submitted but rejected at ICML'15"
     },
     {
         "paper id": "2401.09673",
@@ -1797,23 +1942,23 @@
         "comment": "Published in IEEE SaTML 2024"
     },
     {
-        "paper id": "2401.09629",
-        "abstract url": "https://arxiv.org/abs/2401.09629",
-        "title": "Multiple Locally Linear Kernel Machines",
+        "paper id": "2401.09646",
+        "abstract url": "https://arxiv.org/abs/2401.09646",
+        "title": "ClimateGPT: Towards AI Synthesizing Interdisciplinary Research on Climate Change",
         "rating": -0.5,
         "keywords": [
             [
-                "Kernel Learning"
+                "Synthesizing"
             ],
             [
                 "cs.LG"
             ]
         ],
-        "abstract": "In this paper we propose a new non-linear classifier based on a combination of locally linear classifiers. A well known optimization formulation is given as we cast the problem in a $\\ell_1$ Multiple Kernel Learning (MKL) problem using many locally linear kernels. Since the number of such kernels is huge, we provide a scalable generic MKL training algorithm handling streaming kernels. With respect to the inference time, the resulting classifier fits the gap between high accuracy but slow non-linear classifiers (such as classical MKL) and fast but low accuracy linear classifiers.",
+        "abstract": "This paper introduces ClimateGPT, a model family of domain-specific large language models that synthesize interdisciplinary research on climate change. We trained two 7B models from scratch on a science-oriented dataset of 300B tokens. For the first model, the 4.2B domain-specific tokens were included during pre-training and the second was adapted to the climate domain after pre-training. Additionally, ClimateGPT-7B, 13B and 70B are continuously pre-trained from Llama~2 on a domain-specific dataset of 4.2B tokens. Each model is instruction fine-tuned on a high-quality and human-generated domain-specific dataset that has been created in close cooperation with climate scientists. To reduce the number of hallucinations, we optimize the model for retrieval augmentation and propose a hierarchical retrieval strategy. To increase the accessibility of our model to non-English speakers, we propose to make use of cascaded machine translation and show that this approach can perform comparably to natively multilingual models while being easier to scale to a large number of languages. Further, to address the intrinsic interdisciplinary aspect of climate change we consider different research perspectives. Therefore, the model can produce in-depth answers focusing on different perspectives in addition to an overall answer. We propose a suite of automatic climate-specific benchmarks to evaluate LLMs. On these benchmarks, ClimateGPT-7B performs on par with the ten times larger Llama-2-70B Chat model while not degrading results on general domain benchmarks. Our human evaluation confirms the trends we saw in our benchmarks. All models were trained and evaluated using renewable energy and are released publicly.",
         "subjects": [
             "cs.LG"
         ],
-        "comment": "This paper was written in 2014 and was originally submitted but rejected at ICML'15"
+        "comment": null
     },
     {
         "paper id": "2401.09656",
@@ -1988,6 +2133,28 @@
             "cs.IT"
         ],
         "comment": "This paper has been accepted by IEEE ICC 2024"
+    },
+    {
+        "paper id": "2401.09042",
+        "abstract url": "https://arxiv.org/abs/2401.09042",
+        "title": "LLMs for Relational Reasoning: How Far are We?",
+        "rating": -1.0,
+        "keywords": [
+            [
+                "synthesis"
+            ],
+            [
+                "cs.AI"
+            ],
+            [
+                "Workshop"
+            ]
+        ],
+        "abstract": "Large language models (LLMs) have revolutionized many areas (e.g. natural language processing, software engineering, etc.) by achieving state-of-the-art performance on extensive downstream tasks. Aiming to achieve robust and general artificial intelligence, there has been a surge of interest in investigating the reasoning ability of the LLMs. Whereas the textual and numerical reasoning benchmarks adopted by previous works are rather shallow and simple, it is hard to conclude that the LLMs possess strong reasoning ability by merely achieving positive results on these benchmarks. Recent efforts have demonstrated that the LLMs are poor at solving sequential decision-making problems that require common-sense planning by evaluating their performance on the reinforcement learning benchmarks. In this work, we conduct an in-depth assessment of several state-of-the-art LLMs' reasoning ability based on the inductive logic programming (ILP) benchmark, which is broadly recognized as a representative and challenging measurement for evaluating logic program induction/synthesis systems as it requires inducing strict cause-effect logic to achieve robust deduction on independent and identically distributed (IID) and out-of-distribution (OOD) test samples. Our evaluations illustrate that compared with the neural program induction systems which are much smaller in model size, the state-of-the-art LLMs are much poorer in terms of reasoning ability by achieving much lower performance and generalization using either natural language prompting or truth-value matrix prompting.",
+        "subjects": [
+            "cs.AI"
+        ],
+        "comment": "Accepted by The First International Workshop on Large Language Models for Code (ICSE 2024)"
     },
     {
         "paper id": "2401.09049",
@@ -2234,11 +2401,11 @@
                 "robot"
             ]
         ],
-        "abstract": "Motion planning for autonomous robots in human-populated environments poses numerous challenges due to uncertainties in the robot's dynamics, environment, and interaction with other agents. Sampling-based MPC approaches, such as Model Predictive Path Integral (MPPI) control, have shown promise in addressing these complex motion planning problems. However, the performance of MPPI heavily relies on the choice of the sampling distribution. Existing literature often uses the previously computed input sequence as the mean of a Gaussian distribution for sampling, leading to potential failures and local minima. In this paper, we propose novel derivations of the MPPI method to enhance its efficiency, robustness, and convergence. Our approach includes a mathematical formulation allowing for arbitrary sampling distributions, addressing numerical issues, and alleviating the problem of local minima. We present an efficient importance sampling scheme that combines classical and learning-based ancillary controllers simultaneously, resulting in more informative sampling and control fusion. We demonstrate our proposed scheme's superior efficiency and robustness through experiments by handling model uncertainties, rapid environmental changes and reducing susceptibility to local minima.",
+        "abstract": "Motion planning for autonomous robots in dynamic environments poses numerous challenges due to uncertainties in the robot's dynamics and interaction with other agents. Sampling-based MPC approaches, such as Model Predictive Path Integral (MPPI) control, have shown promise in addressing these complex motion planning problems. However, the performance of MPPI relies heavily on the choice of sampling distribution. Existing literature often uses the previously computed input sequence as the mean of a Gaussian distribution for sampling, leading to potential failures and local minima. In this paper, we propose a novel derivation of MPPI that allows for arbitrary sampling distributions to enhance efficiency, robustness, and convergence while alleviating the problem of local minima. We present an efficient importance sampling scheme that combines classical and learning-based ancillary controllers simultaneously, resulting in more informative sampling and control fusion. Several simulated and real-world demonstrate the validity of our approach.",
         "subjects": [
             "cs.RO"
         ],
-        "comment": "Under review for Robotics and Automation Letters"
+        "comment": "Accepted for Robotics and Automation Letters, April 2024"
     },
     {
         "paper id": "2401.09242",
@@ -2256,29 +2423,6 @@
             "cs.NI"
         ],
         "comment": "Submitted to Conference"
-    },
-    {
-        "paper id": "2401.09252",
-        "abstract url": "https://arxiv.org/abs/2401.09252",
-        "title": "3D Scene Geometry Estimation from 360$^\\circ$ Imagery: A Survey",
-        "rating": -1,
-        "keywords": [
-            [
-                "3D",
-                "depth"
-            ],
-            [
-                "simultaneous localization and mapping"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "This paper provides a comprehensive survey on pioneer and state-of-the-art 3D scene geometry estimation methodologies based on single, two, or multiple images captured under the omnidirectional optics. We first revisit the basic concepts of the spherical camera model, and review the most common acquisition technologies and representation formats suitable for omnidirectional (also called 360$^\\circ$, spherical or panoramic) images and videos. We then survey monocular layout and depth inference approaches, highlighting the recent advances in learning-based solutions suited for spherical data. The classical stereo matching is then revised on the spherical domain, where methodologies for detecting and describing sparse and dense features become crucial. The stereo matching concepts are then extrapolated for multiple view camera setups, categorizing them among light fields, multi-view stereo, and structure from motion (or visual simultaneous localization and mapping). We also compile and discuss commonly adopted datasets and figures of merit indicated for each purpose and list recent results for completeness. We conclude this paper by pointing out current and future trends.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Published in ACM Computing Surveys"
     },
     {
         "paper id": "2401.09258",
@@ -2355,41 +2499,6 @@
         "comment": null
     },
     {
-        "paper id": "2401.09339",
-        "abstract url": "https://arxiv.org/abs/2401.09339",
-        "title": "Central Limit Theorem for Two-Timescale Stochastic Approximation with Markovian Noise: Theory and Applications",
-        "rating": -1,
-        "keywords": [
-            [
-                "depth"
-            ]
-        ],
-        "abstract": "Two-timescale stochastic approximation (TTSA) is among the most general frameworks for iterative stochastic algorithms. This includes well-known stochastic optimization methods such as SGD variants and those designed for bilevel or minimax problems, as well as reinforcement learning like the family of gradient-based temporal difference (GTD) algorithms. In this paper, we conduct an in-depth asymptotic analysis of TTSA under controlled Markovian noise via central limit theorem (CLT), uncovering the coupled dynamics of TTSA influenced by the underlying Markov chain, which has not been addressed by previous CLT results of TTSA only with Martingale difference noise. Building upon our CLT, we expand its application horizon of efficient sampling strategies from vanilla SGD to a wider TTSA context in distributed learning, thus broadening the scope of Hu et al. (2022). In addition, we leverage our CLT result to deduce the statistical properties of GTD algorithms with nonlinear function approximation using Markovian samples and show their identical asymptotic performance, a perspective not evident from current finite-time bounds.",
-        "subjects": [
-            "stat.ML"
-        ],
-        "comment": "To appear in AISTATS 2024"
-    },
-    {
-        "paper id": "2401.09343",
-        "abstract url": "https://arxiv.org/abs/2401.09343",
-        "title": "Efficient slot labelling",
-        "rating": -1,
-        "keywords": [
-            [
-                "face"
-            ],
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Slot labelling is an essential component of any dialogue system, aiming to find important arguments in every user turn. Common approaches involve large pre-trained language models (PLMs) like BERT or RoBERTa, but they face challenges such as high computational requirements and dependence on pre-training data. In this work, we propose a lightweight method which performs on par or better than the state-of-the-art PLM-based methods, while having almost 10x less trainable parameters. This makes it especially applicable for real-life industry scenarios.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2401.09352",
         "abstract url": "https://arxiv.org/abs/2401.09352",
         "title": "Neural Contractive Dynamical Systems",
@@ -2424,45 +2533,6 @@
         "abstract": "Soft robotic shape estimation and proprioception are challenging because of soft robot's complex deformation behaviors and infinite degrees of freedom. A soft robot's continuously deforming body makes it difficult to integrate rigid sensors and to reliably estimate its shape. In this work, we present Proprioceptive Omnidirectional End-effector (POE), which has six embedded microphones across the tendon-driven soft robot's surface. We first introduce novel applications of previously proposed 3D reconstruction methods to acoustic signals from the microphones for soft robot shape proprioception. To improve the proprioception pipeline's training efficiency and model prediction consistency, we present POE-M. POE-M first predicts key point positions from the acoustic signal observations with the embedded microphone array. Then we utilize an energy-minimization method to reconstruct a physically admissible high-resolution mesh of POE given the estimated key points. We evaluate the mesh reconstruction module with simulated data and the full POE-M pipeline with real-world experiments. We demonstrate that POE-M's explicit guidance of the key points during the mesh reconstruction process provides robustness and stability to the pipeline with ablation studies. POE-M reduced the maximum Chamfer distance error by 23.10 % compared to the state-of-the-art end-to-end soft robot proprioception models and achieved 4.91 mm average Chamfer distance error during evaluation.",
         "subjects": [
             "cs.RO"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2401.09386",
-        "abstract url": "https://arxiv.org/abs/2401.09386",
-        "title": "Tri$^{2}$-plane: Volumetric Avatar Reconstruction with Feature Pyramid",
-        "rating": -1,
-        "keywords": [
-            [
-                "facial",
-                "face"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Recent years have witnessed considerable achievements in facial avatar reconstruction with neural volume rendering. Despite notable advancements, the reconstruction of complex and dynamic head movements from monocular videos still suffers from capturing and restoring fine-grained details. In this work, we propose a novel approach, named Tri$^2$-plane, for monocular photo-realistic volumetric head avatar reconstructions. Distinct from the existing works that rely on a single tri-plane deformation field for dynamic facial modeling, the proposed Tri$^2$-plane leverages the principle of feature pyramids and three top-to-down lateral connections tri-planes for details improvement. It samples and renders facial details at multiple scales, transitioning from the entire face to specific local regions and then to even more refined sub-regions. Moreover, we incorporate a camera-based geometry-aware sliding window method as an augmentation in training, which improves the robustness beyond the canonical space, with a particular improvement in cross-identity generation capabilities. Experimental outcomes indicate that the Tri$^2$-plane not only surpasses existing methodologies but also achieves superior performance across both quantitative metrics and qualitative assessments through experiments.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "11 pages, 7 figures"
-    },
-    {
-        "paper id": "2401.09407",
-        "abstract url": "https://arxiv.org/abs/2401.09407",
-        "title": "Deciphering Textual Authenticity: A Generalized Strategy through the Lens of Large Language Semantics for Detecting Human vs. Machine-Generated Text",
-        "rating": -1,
-        "keywords": [
-            [
-                "face"
-            ],
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "With the recent proliferation of Large Language Models (LLMs), there has been an increasing demand for tools to detect machine-generated text. The effective detection of machine-generated text face two pertinent problems: First, they are severely limited in generalizing against real-world scenarios, where machine-generated text is produced by a variety of generators, including but not limited to GPT-4 and Dolly, and spans diverse domains, ranging from academic manuscripts to social media posts. Second, existing detection methodologies treat texts produced by LLMs through a restrictive binary classification lens, neglecting the nuanced diversity of artifacts generated by different LLMs. In this work, we undertake a systematic study on the detection of machine-generated text in real-world scenarios. We first study the effectiveness of state-of-the-art approaches and find that they are severely limited against text produced by diverse generators and domains in the real world. Furthermore, t-SNE visualizations of the embeddings from a pretrained LLM's encoder show that they cannot reliably distinguish between human and machine-generated text. Based on our findings, we introduce a novel system, T5LLMCipher, for detecting machine-generated text using a pretrained T5 encoder combined with LLM embedding sub-clustering to address the text produced by diverse generators and domains in the real world. We evaluate our approach across 9 machine-generated text systems and 9 domains and find that our approach provides state-of-the-art generalization ability, with an average increase in F1 score on machine-generated text of 19.6\\% on unseen generators and domains compared to the top performing existing approaches and correctly attributes the generator of text with an accuracy of 93.6\\%.",
-        "subjects": [
-            "cs.CL"
         ],
         "comment": null
     },
@@ -2603,18 +2673,34 @@
     {
         "paper id": "2401.09643",
         "abstract url": "https://arxiv.org/abs/2401.09643",
-        "title": "Generalized Reference Signals Design for Integrated Communication and Sensing with High-Resolution Algorithms",
+        "title": "OFDM Reference Signal Pattern Design Criteria for Integrated Communication and Sensing",
         "rating": -1,
         "keywords": [
             [
-                "synthesizing"
+                "radar"
             ]
         ],
-        "abstract": "Delay and Doppler ambiguities of comb reference signal patterns are investigated through time delay and Doppler shift detection using high-resolution sensing algorithms. Necessary conditions of designing comb RS patterns and synthesizing different reference signal patterns in general are derived under the goal of eliminating side peaks and preserving the best achievable ambiguity performance of OFDM signals for target detection.",
+        "abstract": "Ambiguity performance, which indicates the maximum detectable region for target parameter estimation, is critical to radar sensor design. Driven by ambiguity performance requirements of bi-static sensing, we propose design criteria for orthogonal frequency division multiplexing (OFDM) reference signal (RS) patterns. The design not only reduces ambiguities in both time delay and Doppler shift domains under different types of sensing algorithms, but also reduces resource overhead for integrated comunication and sensing. With minimal modifications of post-FFT processing for current RS patterns, guard interval is extended beyond conventional cyclic prefix (CP), while maintaining inter-symbol-interference-(ISI)-free delay estimation. For standard-resolution sensing algorithms, a staggering offset of a linear slope that is relatively prime to the RS comb size is suggested. As for high-resolution sensing algorithms, necessary and sufficient conditions of comb RS staggering offsets, plus new patterns synthesized therefrom, are derived for the corresponding achievable ambiguity performance. Furthermore, we generalize the RS pattern design criterion for high-resolution sensing algorithms to irregular forms, which minimizes number of resource elements (REs) for associated algorithms to eliminate all side peaks. Starting from staggered comb pattern in current positioning RS, our generalized design eventually removes any regular form for ultimate flexibility. Overall, the proposed techniques are promising to extend the ISI- and ambiguity-free range of distance and speed estimates for radar sensing.",
         "subjects": [
             "eess.SP"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2401.09648",
+        "abstract url": "https://arxiv.org/abs/2401.09648",
+        "title": "Staggered Comb Reference Signal Design for Integrated Communication and Sensing",
+        "rating": -1,
+        "keywords": [
+            [
+                "radar"
+            ]
+        ],
+        "abstract": "Ambiguity performance is a critical criterion in radar sensor design, which indicates the ambiguities arising from multiple target estimation and detection. We considered a requirement-driven selection of OFDM reference signal (RS) patterns based on ambiguity performances for bi-static sensing in integrated communication and sensing with minimal modifications of current RSs. An RS pattern with a staggering offset of a linear slope that is relatively prime to the RS comb size is suggested for standard-resolution sensing algorithms to obtain the best ambiguity performances. Moreover, an extended guard interval design is proposed to increase the maximum time delay, that is inter-symbol interference (ISI) free using post-FFT sensing algorithms. The proposed techniques are promising to extend the distance and speed without ambiguities and ISI for sensing.",
+        "subjects": [
+            "eess.SP"
+        ],
+        "comment": "accepted by IEEE International Symposium on Personal, Indoor and Mobile Radio Communications. arXiv admin note: substantial text overlap with arXiv:2401.09643"
     },
     {
         "paper id": "2401.09658",
@@ -2745,7 +2831,8 @@
         "keywords": [
             [
                 "Medical",
-                "clinical"
+                "clinical",
+                "radiology"
             ],
             [
                 "cs.CL"
@@ -2775,47 +2862,6 @@
             "cs.AI"
         ],
         "comment": "This work is a result of the ongoing collaboration between Cognitive Neuroscience Lab, BITS Pilani K K Birla Goa Campus and Ecole Normale Superieure, Paris France. This work is jointly supervised by Prof. Boris Gutkin and Prof. Veeky Baths. arXiv admin note: substantial text overlap with arXiv:2109.06580"
-    },
-    {
-        "paper id": "2401.09011",
-        "abstract url": "https://arxiv.org/abs/2401.09011",
-        "title": "Inductive Models for Artificial Intelligence Systems are Insufficient without Good Explanations",
-        "rating": -1.5,
-        "keywords": [
-            [
-                "face"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "This paper discusses the limitations of machine learning (ML), particularly deep artificial neural networks (ANNs), which are effective at approximating complex functions but often lack transparency and explanatory power. It highlights the `problem of induction' : the philosophical issue that past observations may not necessarily predict future events, a challenge that ML models face when encountering new, unseen data. The paper argues for the importance of not just making predictions but also providing good explanations, a feature that current models often fail to deliver. It suggests that for AI to progress, we must seek models that offer insights and explanations, not just predictions.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2401.09042",
-        "abstract url": "https://arxiv.org/abs/2401.09042",
-        "title": "LLMs for Relational Reasoning: How Far are We?",
-        "rating": -1.5,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "Large language models (LLMs) have revolutionized many areas (e.g. natural language processing, software engineering, etc.) by achieving state-of-the-art performance on extensive downstream tasks. Aiming to achieve robust and general artificial intelligence, there has been a surge of interest in investigating the reasoning ability of the LLMs. Whereas the textual and numerical reasoning benchmarks adopted by previous works are rather shallow and simple, it is hard to conclude that the LLMs possess strong reasoning ability by merely achieving positive results on these benchmarks. Recent efforts have demonstrated that the LLMs are poor at solving sequential decision-making problems that require common-sense planning by evaluating their performance on the reinforcement learning benchmarks. In this work, we conduct an in-depth assessment of several state-of-the-art LLMs' reasoning ability based on the inductive logic programming (ILP) benchmark, which is broadly recognized as a representative and challenging measurement for evaluating logic program induction/synthesis systems as it requires inducing strict cause-effect logic to achieve robust deduction on independent and identically distributed (IID) and out-of-distribution (OOD) test samples. Our evaluations illustrate that compared with the neural program induction systems which are much smaller in model size, the state-of-the-art LLMs are much poorer in terms of reasoning ability by achieving much lower performance and generalization using either natural language prompting or truth-value matrix prompting.",
-        "subjects": [
-            "cs.AI"
-        ],
-        "comment": "Accepted by The First International Workshop on Large Language Models for Code (ICSE 2024)"
     },
     {
         "paper id": "2401.09068",
@@ -2911,6 +2957,7 @@
                 "Robot"
             ],
             [
+                "Workshop",
                 "NeurIPS"
             ]
         ],
@@ -2918,7 +2965,7 @@
         "subjects": [
             "cs.RO"
         ],
-        "comment": "NeurIPS 2023 Train Offline Test Online Workshop and Competition"
+        "comment": "NeurIPS 2023 Train Offline Test Online Workshop and Competition (Best Paper Oral Presentation Winning Competition Submission)"
     },
     {
         "paper id": "2401.09321",
@@ -2988,35 +3035,14 @@
         "rating": -1.5,
         "keywords": [
             [
-                "fMRI"
+                "fMRI",
+                "EEG"
             ],
             [
                 "cs.LG"
             ]
         ],
         "abstract": "In causal discovery, non-Gaussianity has been used to characterize the complete configuration of a Linear Non-Gaussian Acyclic Model (LiNGAM), encompassing both the causal ordering of variables and their respective connection strengths. However, LiNGAM can only deal with the finite-dimensional case. To expand this concept, we extend the notion of variables to encompass vectors and even functions, leading to the Functional Linear Non-Gaussian Acyclic Model (Func-LiNGAM). Our motivation stems from the desire to identify causal relationships in brain-effective connectivity tasks involving, for example, fMRI and EEG datasets. We demonstrate why the original LiNGAM fails to handle these inherently infinite-dimensional datasets and explain the availability of functional data analysis from both empirical and theoretical perspectives. {We establish theoretical guarantees of the identifiability of the causal relationship among non-Gaussian random vectors and even random functions in infinite-dimensional Hilbert spaces.} To address the issue of sparsity in discrete time points within intrinsic infinite-dimensional functional data, we propose optimizing the coordinates of the vectors using functional principal component analysis. Experimental results on synthetic data verify the ability of the proposed framework to identify causal relationships among multivariate functions using the observed samples. For real data, we focus on analyzing the brain connectivity patterns derived from fMRI data.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2401.09646",
-        "abstract url": "https://arxiv.org/abs/2401.09646",
-        "title": "ClimateGPT: Towards AI Synthesizing Interdisciplinary Research on Climate Change",
-        "rating": -1.5,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "Synthesizing"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "This paper introduces ClimateGPT, a model family of domain-specific large language models that synthesize interdisciplinary research on climate change. We trained two 7B models from scratch on a science-oriented dataset of 300B tokens. For the first model, the 4.2B domain-specific tokens were included during pre-training and the second was adapted to the climate domain after pre-training. Additionally, ClimateGPT-7B, 13B and 70B are continuously pre-trained from Llama~2 on a domain-specific dataset of 4.2B tokens. Each model is instruction fine-tuned on a high-quality and human-generated domain-specific dataset that has been created in close cooperation with climate scientists. To reduce the number of hallucinations, we optimize the model for retrieval augmentation and propose a hierarchical retrieval strategy. To increase the accessibility of our model to non-English speakers, we propose to make use of cascaded machine translation and show that this approach can perform comparably to natively multilingual models while being easier to scale to a large number of languages. Further, to address the intrinsic interdisciplinary aspect of climate change we consider different research perspectives. Therefore, the model can produce in-depth answers focusing on different perspectives in addition to an overall answer. We propose a suite of automatic climate-specific benchmarks to evaluate LLMs. On these benchmarks, ClimateGPT-7B performs on par with the ten times larger Llama-2-70B Chat model while not degrading results on general domain benchmarks. Our human evaluation confirms the trends we saw in our benchmarks. All models were trained and evaluated using renewable energy and are released publicly.",
         "subjects": [
             "cs.LG"
         ],
@@ -3117,38 +3143,16 @@
         "comment": null
     },
     {
-        "paper id": "2401.09006",
-        "abstract url": "https://arxiv.org/abs/2401.09006",
-        "title": "Generalized Face Liveness Detection via De-spoofing Face Generator",
+        "paper id": "2401.08994",
+        "abstract url": "https://arxiv.org/abs/2401.08994",
+        "title": "Understanding and Facilitating Mental Health Help-Seeking of Young Adults: A Socio-technical Ecosystem Framework",
         "rating": -2,
         "keywords": [
             [
-                "attacks"
-            ],
-            [
-                "Face"
-            ],
-            [
-                "cs.CV"
+                "Health"
             ]
         ],
-        "abstract": "Previous Face Anti-spoofing (FAS) works face the challenge of generalizing in unseen domains. One of the major problems is that most existing FAS datasets are relatively small and lack data diversity. However, we find that there are numerous real faces that can be easily achieved under various conditions, which are neglected by previous FAS works. In this paper, we conduct an Anomalous cue Guided FAS (AG-FAS) method, which leverages real faces for improving model generalization via a De-spoofing Face Generator (DFG). Specifically, the DFG trained only on the real faces gains the knowledge of what a real face should be like and can generate a \"real\" version of the face corresponding to any given input face. The difference between the generated \"real\" face and the input face can provide an anomalous cue for the downstream FAS task. We then propose an Anomalous cue Guided FAS feature extraction Network (AG-Net) to further improve the FAS feature generalization via a cross-attention transformer. Extensive experiments on a total of nine public datasets show our method achieves state-of-the-art results under cross-domain evaluations with unseen scenarios and unknown presentation attacks.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "v1"
-    },
-    {
-        "paper id": "2401.09014",
-        "abstract url": "https://arxiv.org/abs/2401.09014",
-        "title": "Data assimilation approach for addressing imperfections in people flow measurement techniques using particle filter",
-        "rating": -2,
-        "keywords": [
-            [
-                "face"
-            ]
-        ],
-        "abstract": "Understanding and predicting people flow in urban areas is useful for decision-making in urban planning and marketing strategies. Traditional methods for understanding people flow can be divided into measurement-based approaches and simulation-based approaches. Measurement-based approaches have the advantage of directly capturing actual people flow, but they face the challenge of data imperfection. On the other hand, simulations can obtain complete data on a computer, but they only consider some of the factors determining human behavior, leading to a divergence from actual people flow. Both measurement and simulation methods have unresolved issues, and combining the two can complementarily overcome them. This paper proposes a method that applies data assimilation, a fusion technique of measurement and simulation, to agent-based simulation. Data assimilation combines the advantages of both measurement and simulation, contributing to the creation of an environment that can reflect real people flow while acquiring richer data. The paper verifies the effectiveness of the proposed method in a virtual environment and demonstrates the potential of data assimilation to compensate for the three types of imperfection in people flow measurement techniques. These findings can serve as guidelines for supplementing sparse measurement data in physical environments.",
+        "abstract": "Prior research on young adults' mental health help-seeking mostly focuses on one particular resource such as a mobile app or digital platform, paying less attention to their lived experiences interacting with the ecosystem of resources. We conducted in-depth interviews with 18 participants about their help-seeking and non-help-seeking experiences. Guided by Social Ecological Theory, we proposed a Socio-technical Ecosystem Framework for mental health care, consisting of four levels of resources, including technological-, interpersonal-, community-, and societal level resources. Using this framework, we identified two types of support systems for help-seeking, single-resource support system and multi-resource support system. These resources support young adults' help-seeking via three mechanisms, \\textit{care-giving}, \\textit{care-mediating}, and \\textit{care-outreaching}, forming various pathways to care. We then pointed out the barriers to resource use at each level and the general challenges in finding a support system. Our findings contributed to a conceptual framework to categorize mental health care. It also serves as a practical framework to identify challenges in the pathways to care and discover design implications.",
         "subjects": [
             "cs.HC"
         ],
@@ -3180,7 +3184,7 @@
                 "quantum"
             ]
         ],
-        "abstract": "Inspired by the concept of fault tolerance quantum computation, this article proposes a framework dubbed Exact Homomorphic Encryption, EHE, enabling exact computations on encrypted data without the need for pre-decryption. The introduction of quantum gates is a critical step for constructing the message encryption and the computation encryption within the framework. Of significance is that both encryptions are respectively accomplished in a multivariate polynomial set generated by quantum gates. Two fundamental traits of quantum gates the invertibility and the noncommutativity, establish the success of EHE. The encrypted computation is exact because its encryption transformation is conducted with invertible gates. In the same vein, decryptions for both an encrypted message and encrypted computation are exact. The second trait of noncommutativity among applied quantum gates brings forth the security for the two encryptions. Toward the message encryption, a plaintext is encoded into a ciphertext via a polynomial set generated by a product of noncommuting gates randomly chosen. In the computation encryption, a desired operation is encoded into an encrypted polynomial set generated by another product of noncommuting gates. The encrypted computation is then the evaluation of the encrypted polynomial set on the ciphertext and is referred to as the cryptovaluation. EHE is not only attainable on quantum computers, but also straightforwardly realizable on traditional computing environments. Surpassing the standard security 2^128 of quantum resilience, both the encryptions further reach a security greater than the suggested threshold 2^1024 and are characterized as hyper quantum-resilient. Thanks to the two essential traits of quantum gates, this framework can be regarded as the initial tangible manifestation of the concept noncommutative cryptography.",
+        "abstract": "Inspired by the concept of fault tolerance quantum computation, this article proposes a framework dubbed Exact Homomorphic Encryption, EHE, enabling exact computations on encrypted data without the need for pre-decryption. The introduction of quantum gates is a critical step for constructing the message encryption and the computation encryption within the framework. Of significance is that both encryptions are respectively accomplished in a multivariate polynomial set generated by quantum gates. Two fundamental traits of quantum gates, the invertibility and the noncommutativity, establish the success of EHE. The encrypted computation is exact because its encryption transformation is conducted with invertible gates. In the same vein, decryptions for both an encrypted message and encrypted computation are exact. The second trait of noncommutativity among applied quantum gates brings forth the security for the two encryptions. Toward the message encryption, a plaintext is encoded into a ciphertext via a polynomial set generated by a product of noncommuting gates randomly chosen. In the computation encryption, a desired operation is encoded into an encrypted polynomial set generated by another product of noncommuting gates. The encrypted computation is then the evaluation of the encrypted polynomial set on the ciphertext and is referred to as the cryptovaluation. EHE is not only attainable on quantum computers, but also straightforwardly realizable on traditional computing environments. Surpassing the standard security 2^128 of quantum resilience, both the encryptions further reach a security greater than the suggested threshold 2^1024 and are characterized as hyper quantum-resilient. Thanks to the two essential traits of quantum gates, this framework can be regarded as the initial tangible manifestation of the concept noncommutative cryptography.",
         "subjects": [
             "quant-ph"
         ],
@@ -3356,22 +3360,6 @@
         "comment": null
     },
     {
-        "paper id": "2401.09199",
-        "abstract url": "https://arxiv.org/abs/2401.09199",
-        "title": "Data Trading and Monetization: Challenges and Open Research Directions",
-        "rating": -2,
-        "keywords": [
-            [
-                "face"
-            ]
-        ],
-        "abstract": "Traditional data monetization approaches face challenges related to data protection and logistics. In response, digital data marketplaces have emerged as intermediaries simplifying data transactions. Despite the growing establishment and acceptance of digital data marketplaces, significant challenges hinder efficient data trading. As a result, few companies can derive tangible value from their data, leading to missed opportunities in understanding customers, pricing decisions, and fraud prevention. In this paper, we explore both technical and organizational challenges affecting data monetization. Moreover, we identify areas in need of further research, aiming to expand the boundaries of current knowledge by emphasizing where research is currently limited or lacking.",
-        "subjects": [
-            "cs.DC"
-        ],
-        "comment": "Paper accepted by the International Conference on Future Networks and Distributed Systems (ICFNDS 2023)"
-    },
-    {
         "paper id": "2401.09216",
         "abstract url": "https://arxiv.org/abs/2401.09216",
         "title": "Algebraic solution of project scheduling problems with temporal constraints",
@@ -3495,8 +3483,7 @@
         "rating": -2,
         "keywords": [
             [
-                "medical",
-                "face"
+                "medical"
             ]
         ],
         "abstract": "Sharing a physical environment, such as that of a wall-display, facilitates gaining awareness of others' actions and intentions, thereby bringing benefits for collaboration. Previous studies have provided first insights on awareness in the context of tabletops or smaller vertical displays. This paper seeks to advance the current understanding on how users share awareness information in wall-display environments and focusses on mid-air pointing gestures as a foundational part of communication. We present a scenario dealing with the organization of medical supply chains in crisis situations, and report on the results of a user study with 24 users, split into 6 groups of 4, performing several tasks. We investigate pointing gestures and identify three subtypes used as awareness cues during face-to-face collaboration: narrative pointing, loose pointing, and sharp pointing. Our observations show that reliance on gesture subtypes varies across participants and groups, and that sometimes vague pointing is sufficient to support verbal negotiations.",
@@ -3580,6 +3567,28 @@
             "cs.CR"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2401.09386",
+        "abstract url": "https://arxiv.org/abs/2401.09386",
+        "title": "Tri$^{2}$-plane: Volumetric Avatar Reconstruction with Feature Pyramid",
+        "rating": -2,
+        "keywords": [
+            [
+                "Avatar"
+            ],
+            [
+                "facial"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Recent years have witnessed considerable achievements in facial avatar reconstruction with neural volume rendering. Despite notable advancements, the reconstruction of complex and dynamic head movements from monocular videos still suffers from capturing and restoring fine-grained details. In this work, we propose a novel approach, named Tri$^2$-plane, for monocular photo-realistic volumetric head avatar reconstructions. Distinct from the existing works that rely on a single tri-plane deformation field for dynamic facial modeling, the proposed Tri$^2$-plane leverages the principle of feature pyramids and three top-to-down lateral connections tri-planes for details improvement. It samples and renders facial details at multiple scales, transitioning from the entire face to specific local regions and then to even more refined sub-regions. Moreover, we incorporate a camera-based geometry-aware sliding window method as an augmentation in training, which improves the robustness beyond the canonical space, with a particular improvement in cross-identity generation capabilities. Experimental outcomes indicate that the Tri$^2$-plane not only surpasses existing methodologies but also achieves superior performance across both quantitative metrics and qualitative assessments through experiments.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "11 pages, 7 figures"
     },
     {
         "paper id": "2401.09387",
@@ -3757,6 +3766,25 @@
         "comment": null
     },
     {
+        "paper id": "2401.09637",
+        "abstract url": "https://arxiv.org/abs/2401.09637",
+        "title": "Impact of Large Language Model Assistance on Patients Reading Clinical Notes: A Mixed-Methods Study",
+        "rating": -2,
+        "keywords": [
+            [
+                "medical",
+                "health",
+                "cancer",
+                "Clinical"
+            ]
+        ],
+        "abstract": "Patients derive numerous benefits from reading their clinical notes, including an increased sense of control over their health and improved understanding of their care plan. However, complex medical concepts and jargon within clinical notes hinder patient comprehension and may lead to anxiety. We developed a patient-facing tool to make clinical notes more readable, leveraging large language models (LLMs) to simplify, extract information from, and add context to notes. We prompt engineered GPT-4 to perform these augmentation tasks on real clinical notes donated by breast cancer survivors and synthetic notes generated by a clinician, a total of 12 notes with 3868 words. In June 2023, 200 female-identifying US-based participants were randomly assigned three clinical notes with varying levels of augmentations using our tool. Participants answered questions about each note, evaluating their understanding of follow-up actions and self-reported confidence. We found that augmentations were associated with a significant increase in action understanding score (0.63 $\\pm$ 0.04 for select augmentations, compared to 0.54 $\\pm$ 0.02 for the control) with p=0.002. In-depth interviews of self-identifying breast cancer patients (N=7) were also conducted via video conferencing. Augmentations, especially definitions, elicited positive responses among the seven participants, with some concerns about relying on LLMs. Augmentations were evaluated for errors by clinicians, and we found misleading errors occur, with errors more common in real donated notes than synthetic notes, illustrating the importance of carefully written clinical notes. Augmentations improve some but not all readability metrics. This work demonstrates the potential of LLMs to improve patients' experience with clinical notes at a lower burden to clinicians. However, having a human in the loop is important to correct potential model errors.",
+        "subjects": [
+            "cs.HC"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2401.09638",
         "abstract url": "https://arxiv.org/abs/2401.09638",
         "title": "Automatic 3D Multi-modal Ultrasound Segmentation of Human Placenta using Fusion Strategies and Deep Learning",
@@ -3822,8 +3850,7 @@
                 "3D"
             ],
             [
-                "facial",
-                "Face"
+                "facial"
             ],
             [
                 "cs.CV"
@@ -3834,22 +3861,6 @@
             "cs.CV"
         ],
         "comment": "6 pages, 5 figures"
-    },
-    {
-        "paper id": "2401.09691",
-        "abstract url": "https://arxiv.org/abs/2401.09691",
-        "title": "Imitation Learning Inputting Image Feature to Each Layer of Neural Network",
-        "rating": -2,
-        "keywords": [
-            [
-                "face"
-            ]
-        ],
-        "abstract": "Imitation learning enables robots to learn and replicate human behavior from training data. Recent advances in machine learning enable end-to-end learning approaches that directly process high-dimensional observation data, such as images. However, these approaches face a critical challenge when processing data from multiple modalities, inadvertently ignoring data with a lower correlation to the desired output, especially when using short sampling periods. This paper presents a useful method to address this challenge, which amplifies the influence of data with a relatively low correlation to the output by inputting the data into each neural network layer. The proposed approach effectively incorporates diverse data sources into the learning process. Through experiments using a simple pick-and-place operation with raw images and joint information as input, significant improvements in success rates are demonstrated even when dealing with data from short sampling periods.",
-        "subjects": [
-            "cs.RO"
-        ],
-        "comment": "6 pages, 4 figures, Accepted at AMC2024"
     },
     {
         "paper id": "2401.10291",
@@ -3865,6 +3876,7 @@
             ],
             [
                 "diagnosis",
+                "EEG",
                 "clinical"
             ]
         ],
@@ -3889,22 +3901,6 @@
             "quant-ph"
         ],
         "comment": "12 pages, 10 figures. supplementary material 7 pages, 6 figures"
-    },
-    {
-        "paper id": "2401.12230",
-        "abstract url": "https://arxiv.org/abs/2401.12230",
-        "title": "Computing in the Era of Large Generative Models: From Cloud-Native to AI-Native",
-        "rating": -2,
-        "keywords": [
-            [
-                "face"
-            ]
-        ],
-        "abstract": "In this paper, we investigate the intersection of large generative AI models and cloud-native computing architectures. Recent large models such as ChatGPT, while revolutionary in their capabilities, face challenges like escalating costs and demand for high-end GPUs. Drawing analogies between large-model-as-a-service (LMaaS) and cloud database-as-a-service (DBaaS), we describe an AI-native computing paradigm that harnesses the power of both cloud-native technologies (e.g., multi-tenancy and serverless computing) and advanced machine learning runtime (e.g., batched LoRA inference). These joint efforts aim to optimize costs-of-goods-sold (COGS) and improve resource accessibility. The journey of merging these two domains is just at the beginning and we hope to stimulate future research and development in this area.",
-        "subjects": [
-            "cs.DC"
-        ],
-        "comment": null
     },
     {
         "paper id": "2401.09261",
@@ -3974,25 +3970,6 @@
         "comment": "12 pages 1figures"
     },
     {
-        "paper id": "2401.08994",
-        "abstract url": "https://arxiv.org/abs/2401.08994",
-        "title": "Understanding and Facilitating Mental Health Help-Seeking of Young Adults: A Socio-technical Ecosystem Framework",
-        "rating": -3,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "Health"
-            ]
-        ],
-        "abstract": "Prior research on young adults' mental health help-seeking mostly focuses on one particular resource such as a mobile app or digital platform, paying less attention to their lived experiences interacting with the ecosystem of resources. We conducted in-depth interviews with 18 participants about their help-seeking and non-help-seeking experiences. Guided by Social Ecological Theory, we proposed a Socio-technical Ecosystem Framework for mental health care, consisting of four levels of resources, including technological-, interpersonal-, community-, and societal level resources. Using this framework, we identified two types of support systems for help-seeking, single-resource support system and multi-resource support system. These resources support young adults' help-seeking via three mechanisms, \\textit{care-giving}, \\textit{care-mediating}, and \\textit{care-outreaching}, forming various pathways to care. We then pointed out the barriers to resource use at each level and the general challenges in finding a support system. Our findings contributed to a conceptual framework to categorize mental health care. It also serves as a practical framework to identify challenges in the pathways to care and discover design implications.",
-        "subjects": [
-            "cs.HC"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2401.09013",
         "abstract url": "https://arxiv.org/abs/2401.09013",
         "title": "An Improved Virtual Force Approach for UAV Deployment and Resource Allocation in Emergency Communications",
@@ -4011,6 +3988,25 @@
             "cs.NI"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2401.09127",
+        "abstract url": "https://arxiv.org/abs/2401.09127",
+        "title": "AI Empowered Channel Semantic Acquisition for 6G Integrated Sensing and Communication Networks",
+        "rating": -3,
+        "keywords": [
+            [
+                "radar"
+            ],
+            [
+                "6G"
+            ]
+        ],
+        "abstract": "Motivated by the need for increased spectral efficiency and the proliferation of intelligent applications, the sixth-generation (6G) mobile network is anticipated to integrate the dual-functions of communication and sensing (C&S). Although the millimeter wave (mmWave) communication and mmWave radar share similar multiple-input multiple-output (MIMO) architecture for integration, the full potential of dual-function synergy remains to be exploited. In this paper, we commence by overviewing state-of-the-art schemes from the aspects of waveform design and signal processing. Nevertheless, these approaches face the dilemma of mutual compromise between C&S performance. To this end, we reveal and exploit the synergy between C&S. In the proposed framework, we introduce a two-stage frame structure and resort artificial intelligence (AI) to achieve the synergistic gain by designing a joint C&S channel semantic extraction and reconstruction network (JCASCasterNet). With just a cost-effective and energy-efficient single sensing antenna, the proposed scheme achieves enhanced overall performance while requiring only limited pilot and feedback signaling overhead. In the end, we outline the challenges that lie ahead in the future development of integrated sensing and communication networks, along with promising directions for further research.",
+        "subjects": [
+            "cs.IT"
+        ],
+        "comment": "9 pages, 5 figures, accepted by the IEEE journal"
     },
     {
         "paper id": "2401.09132",
@@ -4052,6 +4048,25 @@
             "cs.CR"
         ],
         "comment": "Accepted at the 19th ACM ASIA Conference on Computer and Communications Security (ACM ASIACCS 2024)"
+    },
+    {
+        "paper id": "2401.09285",
+        "abstract url": "https://arxiv.org/abs/2401.09285",
+        "title": "Enhancing Rural Agricultural Value Chains through Electric Mobility Services in Ethiopia",
+        "rating": -3,
+        "keywords": [
+            [
+                "vehicle"
+            ],
+            [
+                "Agricultural"
+            ]
+        ],
+        "abstract": "Transportation is a constitutional part of most supply and value chains in modern economies. Smallholder farmers in rural Ethiopia face severe challenges along their supply and value chains. In particular, suitable, affordable, and available transport services are in high demand. To develop context-specific technical solutions, a problem-to-solution methodology based on the interaction with technology is developed. With this approach, we fill the gap between proven transportation assessment frameworks and general user-centered techniques. Central to our approach is an electric test vehicle that is implemented in rural supply and value chains for research, development, and testing. Based on our objective and the derived methodological requirements, a set of existing methods is selected. Local partners are integrated in an organizational framework that executes major parts of this research endeavour in Arsi Zone, Oromia Region, Ethiopia.",
+        "subjects": [
+            "cs.SE"
+        ],
+        "comment": null
     },
     {
         "paper id": "2401.09358",
@@ -4163,28 +4178,6 @@
         "abstract": "The progress in generative models, particularly Generative Adversarial Networks (GANs), opened new possibilities for image generation but raised concerns about potential malicious uses, especially in sensitive areas like medical imaging. This study introduces MITS-GAN, a novel approach to prevent tampering in medical images, with a specific focus on CT scans. The approach disrupts the output of the attacker's CT-GAN architecture by introducing imperceptible but yet precise perturbations. Specifically, the proposed approach involves the introduction of appropriate Gaussian noise to the input as a protective measure against various attacks. Our method aims to enhance tamper resistance, comparing favorably to existing techniques. Experimental results on a CT scan dataset demonstrate MITS-GAN's superior performance, emphasizing its ability to generate tamper-resistant images with negligible artifacts. As image tampering in medical domains poses life-threatening risks, our proactive approach contributes to the responsible and ethical use of generative models. This work provides a foundation for future research in countering cyber threats in medical imaging. Models and codes are publicly available at the following link \\url{https://iplab.dmi.unict.it/MITS-GAN-2024/}.",
         "subjects": [
             "eess.IV"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2401.09637",
-        "abstract url": "https://arxiv.org/abs/2401.09637",
-        "title": "Impact of Large Language Model Assistance on Patients Reading Clinical Notes: A Mixed-Methods Study",
-        "rating": -3,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "medical",
-                "health",
-                "cancer",
-                "Clinical"
-            ]
-        ],
-        "abstract": "Patients derive numerous benefits from reading their clinical notes, including an increased sense of control over their health and improved understanding of their care plan. However, complex medical concepts and jargon within clinical notes hinder patient comprehension and may lead to anxiety. We developed a patient-facing tool to make clinical notes more readable, leveraging large language models (LLMs) to simplify, extract information from, and add context to notes. We prompt engineered GPT-4 to perform these augmentation tasks on real clinical notes donated by breast cancer survivors and synthetic notes generated by a clinician, a total of 12 notes with 3868 words. In June 2023, 200 female-identifying US-based participants were randomly assigned three clinical notes with varying levels of augmentations using our tool. Participants answered questions about each note, evaluating their understanding of follow-up actions and self-reported confidence. We found that augmentations were associated with a significant increase in action understanding score (0.63 $\\pm$ 0.04 for select augmentations, compared to 0.54 $\\pm$ 0.02 for the control) with p=0.002. In-depth interviews of self-identifying breast cancer patients (N=7) were also conducted via video conferencing. Augmentations, especially definitions, elicited positive responses among the seven participants, with some concerns about relying on LLMs. Augmentations were evaluated for errors by clinicians, and we found misleading errors occur, with errors more common in real donated notes than synthetic notes, illustrating the importance of carefully written clinical notes. Augmentations improve some but not all readability metrics. This work demonstrates the potential of LLMs to improve patients' experience with clinical notes at a lower burden to clinicians. However, having a human in the loop is important to correct potential model errors.",
-        "subjects": [
-            "cs.HC"
         ],
         "comment": null
     },
@@ -4432,7 +4425,7 @@
     {
         "paper id": "2401.09332",
         "abstract url": "https://arxiv.org/abs/2401.09332",
-        "title": "Vision-driven Autonomous Flight of UAV Along River Using Deep Reinforcement Learning with Dynamic Expert Guidance",
+        "title": "Synergistic Reinforcement and Imitation Learning for Vision-driven Autonomous Flight of UAV Along River",
         "rating": -4,
         "keywords": [
             [
@@ -4445,11 +4438,11 @@
                 "UAV"
             ]
         ],
-        "abstract": "Vision-driven autonomous flight and obstacle avoidance of Unmanned Aerial Vehicles (UAVs) along complex riverine environments for tasks like rescue and surveillance requires a robust control policy, which is yet difficult to obtain due to the shortage of trainable river environment simulators and reward sparsity in such environments. To easily verify the navigation controller performance for the river following task before real-world deployment, we developed a trainable photo-realistic dynamics-free riverine simulation environment using Unity. Successful river following trajectories in the environment are manually collected and Behavior Clone (BC) is used to train an Imitation Learning (IL) agent to mimic expert behavior and generate expert guidance. Finally, a framework is proposed to train a Deep Reinforcement Learning (DRL) agent using BC expert guidance and improve the expert policy online by sampling good demonstrations produced by the DRL to increase convergence rate and policy performance. This framework is able to solve the along-river autonomous navigation task and outperform baseline RL and IL methods. The code and trainable environments are available.",
+        "abstract": "Vision-driven autonomous flight and obstacle avoidance of Unmanned Aerial Vehicles (UAVs) along complex riverine environments for tasks like rescue and surveillance requires a robust control policy, which is yet difficult to obtain due to the shortage of trainable riverine environment simulators. To easily verify the vision-based navigation controller performance for the river following task before real-world deployment, we developed a trainable photo-realistic dynamics-free riverine simulation environment using Unity. In this paper, we address the shortcomings that vanilla Reinforcement Learning (RL) algorithm encounters in learning a navigation policy within this partially observable, non-Markovian environment. We propose a synergistic approach that integrates RL and Imitation Learning (IL). Initially, an IL expert is trained on manually collected demonstrations, which then guides the RL policy training process. Concurrently, experiences generated by the RL agent are utilized to re-train the IL expert, enhancing its ability to generalize to unseen data. By leveraging the strengths of both RL and IL, this framework achieves a faster convergence rate and higher performance compared to pure RL, pure IL, and RL combined with static IL algorithms. The results validate the efficacy of the proposed method in terms of both task completion and efficiency. The code and trainable environments are available.",
         "subjects": [
             "cs.RO"
         ],
-        "comment": "Submitted to ICRA2024"
+        "comment": "Submitted to IROS2024"
     },
     {
         "paper id": "2401.09590",
@@ -4472,6 +4465,38 @@
             "eess.SP"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2401.09631",
+        "abstract url": "https://arxiv.org/abs/2401.09631",
+        "title": "Physics-Informed Calibration of Aeromagnetic Compensation in Magnetic Navigation Systems using Liquid Time-Constant Networks",
+        "rating": -4.0,
+        "keywords": [
+            [
+                "flight"
+            ],
+            [
+                "Navigation"
+            ],
+            [
+                "attacks"
+            ],
+            [
+                "Physics"
+            ],
+            [
+                "cs.LG"
+            ],
+            [
+                "workshop",
+                "NeurIPS"
+            ]
+        ],
+        "abstract": "Magnetic navigation (MagNav) is a rising alternative to the Global Positioning System (GPS) and has proven useful for aircraft navigation. Traditional aircraft navigation systems, while effective, face limitations in precision and reliability in certain environments and against attacks. Airborne MagNav leverages the Earth's magnetic field to provide accurate positional information. However, external magnetic fields induced by aircraft electronics and Earth's large-scale magnetic fields disrupt the weaker signal of interest. We introduce a physics-informed approach using Tolles-Lawson coefficients for compensation and Liquid Time-Constant Networks (LTCs) to remove complex, noisy signals derived from the aircraft's magnetic sources. Using real flight data with magnetometer measurements and aircraft measurements, we observe up to a 64% reduction in aeromagnetic compensation error (RMSE nT), outperforming conventional models. This significant improvement underscores the potential of a physics-informed, machine learning approach for extracting clean, reliable, and accurate magnetic signals for MagNav positional estimation.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": "Accepted at the NeurIPS 2023 Machine Learning and the Physical Sciences workshop, 7 pages, 4 figures, see code here: https://github.com/fnerrise/LNNs_MagNav/"
     },
     {
         "paper id": "2401.09674",
@@ -4635,50 +4660,6 @@
         "comment": "28 pages, 17 figures, 2 tables"
     },
     {
-        "paper id": "2401.09127",
-        "abstract url": "https://arxiv.org/abs/2401.09127",
-        "title": "AI Empowered Channel Semantic Acquisition for 6G Integrated Sensing and Communication Networks",
-        "rating": -5,
-        "keywords": [
-            [
-                "radar"
-            ],
-            [
-                "face"
-            ],
-            [
-                "6G"
-            ]
-        ],
-        "abstract": "Motivated by the need for increased spectral efficiency and the proliferation of intelligent applications, the sixth-generation (6G) mobile network is anticipated to integrate the dual-functions of communication and sensing (C&S). Although the millimeter wave (mmWave) communication and mmWave radar share similar multiple-input multiple-output (MIMO) architecture for integration, the full potential of dual-function synergy remains to be exploited. In this paper, we commence by overviewing state-of-the-art schemes from the aspects of waveform design and signal processing. Nevertheless, these approaches face the dilemma of mutual compromise between C&S performance. To this end, we reveal and exploit the synergy between C&S. In the proposed framework, we introduce a two-stage frame structure and resort artificial intelligence (AI) to achieve the synergistic gain by designing a joint C&S channel semantic extraction and reconstruction network (JCASCasterNet). With just a cost-effective and energy-efficient single sensing antenna, the proposed scheme achieves enhanced overall performance while requiring only limited pilot and feedback signaling overhead. In the end, we outline the challenges that lie ahead in the future development of integrated sensing and communication networks, along with promising directions for further research.",
-        "subjects": [
-            "cs.IT"
-        ],
-        "comment": "9 pages, 5 figures, accepted by the IEEE journal"
-    },
-    {
-        "paper id": "2401.09285",
-        "abstract url": "https://arxiv.org/abs/2401.09285",
-        "title": "Enhancing Rural Agricultural Value Chains through Electric Mobility Services in Ethiopia",
-        "rating": -5,
-        "keywords": [
-            [
-                "vehicle"
-            ],
-            [
-                "face"
-            ],
-            [
-                "Agricultural"
-            ]
-        ],
-        "abstract": "Transportation is a constitutional part of most supply and value chains in modern economies. Smallholder farmers in rural Ethiopia face severe challenges along their supply and value chains. In particular, suitable, affordable, and available transport services are in high demand. To develop context-specific technical solutions, a problem-to-solution methodology based on the interaction with technology is developed. With this approach, we fill the gap between proven transportation assessment frameworks and general user-centered techniques. Central to our approach is an electric test vehicle that is implemented in rural supply and value chains for research, development, and testing. Based on our objective and the derived methodological requirements, a set of existing methods is selected. Local partners are integrated in an organizational framework that executes major parts of this research endeavour in Arsi Zone, Oromia Region, Ethiopia.",
-        "subjects": [
-            "cs.SE"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2401.09157",
         "abstract url": "https://arxiv.org/abs/2401.09157",
         "title": "Interference analysis of Positioning Reference Signals in 5G NTN",
@@ -4702,41 +4683,6 @@
             "eess.SP"
         ],
         "comment": "Our ongoing research, closely related to our manuscript, promises crucial insights enhancing our findings. Committed to scientific quality and integrity, we refrain from submitting incomplete work to avoid misleading the scientific community"
-    },
-    {
-        "paper id": "2401.09631",
-        "abstract url": "https://arxiv.org/abs/2401.09631",
-        "title": "Physics-Informed Calibration of Aeromagnetic Compensation in Magnetic Navigation Systems using Liquid Time-Constant Networks",
-        "rating": -6.0,
-        "keywords": [
-            [
-                "flight"
-            ],
-            [
-                "Navigation"
-            ],
-            [
-                "attacks"
-            ],
-            [
-                "face"
-            ],
-            [
-                "Physics"
-            ],
-            [
-                "cs.LG"
-            ],
-            [
-                "workshop",
-                "NeurIPS"
-            ]
-        ],
-        "abstract": "Magnetic navigation (MagNav) is a rising alternative to the Global Positioning System (GPS) and has proven useful for aircraft navigation. Traditional aircraft navigation systems, while effective, face limitations in precision and reliability in certain environments and against attacks. Airborne MagNav leverages the Earth's magnetic field to provide accurate positional information. However, external magnetic fields induced by aircraft electronics and Earth's large-scale magnetic fields disrupt the weaker signal of interest. We introduce a physics-informed approach using Tolles-Lawson coefficients for compensation and Liquid Time-Constant Networks (LTCs) to remove complex, noisy signals derived from the aircraft's magnetic sources. Using real flight data with magnetometer measurements and aircraft measurements, we observe up to a 64% reduction in aeromagnetic compensation error (RMSE nT), outperforming conventional models. This significant improvement underscores the potential of a physics-informed, machine learning approach for extracting clean, reliable, and accurate magnetic signals for MagNav positional estimation.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": "Accepted at the NeurIPS 2023 Machine Learning and the Physical Sciences workshop, 7 pages, 4 figures, see code here: https://github.com/fnerrise/LNNs_MagNav/"
     },
     {
         "paper id": "2401.08981",
@@ -4783,6 +4729,18 @@
         "abstract": "Software engineering (SE) requires developers to collaborate with stakeholders, and understanding their emotions and perspectives is often vital. Empathy is a concept characterising a person's ability to understand and share the feelings of another. However, empathy continues to be an under-researched human aspect in SE. We studied how empathy is practised between developers and end users using a mixed methods case study. We used an empathy test, observations and interviews to collect data, and socio technical grounded theory and descriptive statistics to analyse data. We identified the nature of awareness required to trigger empathy and enablers of empathy. We discovered barriers to empathy and a set of potential strategies to overcome these barriers. We report insights on emerging relationships and present a set of recommendations and potential future works on empathy and SE for software practitioners and SE researchers.",
         "subjects": [
             "cs.SE"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2401.09014",
+        "abstract url": "https://arxiv.org/abs/2401.09014",
+        "title": "Data assimilation approach for addressing imperfections in people flow measurement techniques using particle filter",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "Understanding and predicting people flow in urban areas is useful for decision-making in urban planning and marketing strategies. Traditional methods for understanding people flow can be divided into measurement-based approaches and simulation-based approaches. Measurement-based approaches have the advantage of directly capturing actual people flow, but they face the challenge of data imperfection. On the other hand, simulations can obtain complete data on a computer, but they only consider some of the factors determining human behavior, leading to a divergence from actual people flow. Both measurement and simulation methods have unresolved issues, and combining the two can complementarily overcome them. This paper proposes a method that applies data assimilation, a fusion technique of measurement and simulation, to agent-based simulation. Data assimilation combines the advantages of both measurement and simulation, contributing to the creation of an environment that can reflect real people flow while acquiring richer data. The paper verifies the effectiveness of the proposed method in a virtual environment and demonstrates the potential of data assimilation to compensate for the three types of imperfection in people flow measurement techniques. These findings can serve as guidelines for supplementing sparse measurement data in physical environments.",
+        "subjects": [
+            "cs.HC"
         ],
         "comment": null
     },
@@ -4919,18 +4877,6 @@
         "comment": null
     },
     {
-        "paper id": "2401.09149",
-        "abstract url": "https://arxiv.org/abs/2401.09149",
-        "title": "InternEvo: Efficient Long-sequence Large Language Model Training via Hybrid Parallelism and Redundant Sharding",
-        "rating": -10,
-        "keywords": [],
-        "abstract": "Large language models (LLMs) with long sequences begin to power more and more fundamentally new applications we use every day. Existing methods for long-sequence LLM training are neither efficient nor compatible with commonly-used training algorithms such as FlashAttention. We design InternEvo to address these issues. InternEvo decouples all of the sharding dimensions into a new hierarchical space, and systematically analyzes the memory and communication cost of LLM training. Then, it generates an effective hybrid parallelism strategy. We design a new selective overlap mechanism to mitigate the communication overhead introduced by the hybrid parallelism. We also implement memory management techniques to reduce GPU memory fragmentation. Evaluation results show that InternEvo generates parallelization strategies that match or outperform existing methods in model FLOPs utilization.",
-        "subjects": [
-            "cs.DC"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2401.09162",
         "abstract url": "https://arxiv.org/abs/2401.09162",
         "title": "Named Service Networking as a primer for the Metaverse",
@@ -4977,6 +4923,18 @@
             "cs.NI"
         ],
         "comment": "11 pages, 2 figures"
+    },
+    {
+        "paper id": "2401.09199",
+        "abstract url": "https://arxiv.org/abs/2401.09199",
+        "title": "Data Trading and Monetization: Challenges and Open Research Directions",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "Traditional data monetization approaches face challenges related to data protection and logistics. In response, digital data marketplaces have emerged as intermediaries simplifying data transactions. Despite the growing establishment and acceptance of digital data marketplaces, significant challenges hinder efficient data trading. As a result, few companies can derive tangible value from their data, leading to missed opportunities in understanding customers, pricing decisions, and fraud prevention. In this paper, we explore both technical and organizational challenges affecting data monetization. Moreover, we identify areas in need of further research, aiming to expand the boundaries of current knowledge by emphasizing where research is currently limited or lacking.",
+        "subjects": [
+            "cs.DC"
+        ],
+        "comment": "Paper accepted by the International Conference on Future Networks and Distributed Systems (ICFNDS 2023)"
     },
     {
         "paper id": "2401.09201",
@@ -5171,18 +5129,6 @@
         "comment": null
     },
     {
-        "paper id": "2401.09290",
-        "abstract url": "https://arxiv.org/abs/2401.09290",
-        "title": "G-Safe: Safe GPU Sharing in Multi-Tenant Environments",
-        "rating": -10,
-        "keywords": [],
-        "abstract": "Modern GPU applications, such as machine learning (ML) frameworks, can only partially utilize beefy GPUs, leading to GPU underutilization in cloud environments. Sharing GPUs across multiple applications from different users can improve resource utilization and consequently cost, energy, and power efficiency. However, GPU sharing creates memory safety concerns because kernels must share a single GPU address space (GPU context). Previous GPU memory protection approaches have limited deployability because they require specialized hardware extensions or access to source code. This is often unavailable in GPU-accelerated libraries heavily utilized by ML frameworks. In this paper, we present G-Safe, a PTX-level bounds checking approach for GPUs that limits GPU kernels of each application to stay within the memory partition allocated to them. G-Safe relies on three mechanisms: (1) It divides the common GPU address space into separate partitions for different applications. (2) It intercepts and checks data transfers, fencing erroneous operations. (3) It instruments all GPU kernels at the PTX level (available in closed GPU libraries) fencing all kernel memory accesses outside application memory bounds. We implement G-Safe as an external, dynamically linked library that can be pre-loaded at application startup time. G-Safe's approach is transparent to applications and can support real-life, complex frameworks, such as Caffe and PyTorch, that issue billions of GPU kernels. Our evaluation shows that the overhead of G-Safe compared to native (unprotected) for such frameworks is between 4\\% - 12\\% and on average 9\\%.",
-        "subjects": [
-            "cs.DC"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2401.09317",
         "abstract url": "https://arxiv.org/abs/2401.09317",
         "title": "From Zero-Freeness to Strong Spatial Mixing via a Christoffel-Darboux Type Identity",
@@ -5193,6 +5139,18 @@
             "math-ph"
         ],
         "comment": "Main results are slightly improved: A new condition under which Theorem 1 also holds was added. The condition of Theorem 2 was updated to a more general one"
+    },
+    {
+        "paper id": "2401.09339",
+        "abstract url": "https://arxiv.org/abs/2401.09339",
+        "title": "Central Limit Theorem for Two-Timescale Stochastic Approximation with Markovian Noise: Theory and Applications",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "Two-timescale stochastic approximation (TTSA) is among the most general frameworks for iterative stochastic algorithms. This includes well-known stochastic optimization methods such as SGD variants and those designed for bilevel or minimax problems, as well as reinforcement learning like the family of gradient-based temporal difference (GTD) algorithms. In this paper, we conduct an in-depth asymptotic analysis of TTSA under controlled Markovian noise via central limit theorem (CLT), uncovering the coupled dynamics of TTSA influenced by the underlying Markov chain, which has not been addressed by previous CLT results of TTSA only with Martingale difference noise. Building upon our CLT, we expand its application horizon of efficient sampling strategies from vanilla SGD to a wider TTSA context in distributed learning, thus broadening the scope of Hu et al. (2022). In addition, we leverage our CLT result to deduce the statistical properties of GTD algorithms with nonlinear function approximation using Markovian samples and show their identical asymptotic performance, a perspective not evident from current finite-time bounds.",
+        "subjects": [
+            "stat.ML"
+        ],
+        "comment": "To appear in AISTATS 2024"
     },
     {
         "paper id": "2401.09346",
@@ -5459,18 +5417,6 @@
         "comment": null
     },
     {
-        "paper id": "2401.09648",
-        "abstract url": "https://arxiv.org/abs/2401.09648",
-        "title": "Comb Reference Signal Pattern Design for Integrated Communication and Sensing",
-        "rating": -10,
-        "keywords": [],
-        "abstract": "Ambiguity performances of reference signal patterns for integrated communication and sensing are studied via time delay and Doppler shift detection. A reference signal pattern with a staggering offset of a linear slope relatively prime to the transmission comb is suggested for low-complexity, standard-resolution sensing algorithms. We also propose an extended guard interval design to extend the maximum time delay for post-FFT sensing algorithms.",
-        "subjects": [
-            "eess.SP"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2401.09654",
         "abstract url": "https://arxiv.org/abs/2401.09654",
         "title": "User Study: Comparison of Picture Passwords and Current Login Approaches",
@@ -5505,6 +5451,18 @@
             "astro-ph.IM"
         ],
         "comment": "10 pages, 3 figures, submitted to the ADASS 2023 proceedings"
+    },
+    {
+        "paper id": "2401.09691",
+        "abstract url": "https://arxiv.org/abs/2401.09691",
+        "title": "Imitation Learning Inputting Image Feature to Each Layer of Neural Network",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "Imitation learning enables robots to learn and replicate human behavior from training data. Recent advances in machine learning enable end-to-end learning approaches that directly process high-dimensional observation data, such as images. However, these approaches face a critical challenge when processing data from multiple modalities, inadvertently ignoring data with a lower correlation to the desired output, especially when using short sampling periods. This paper presents a useful method to address this challenge, which amplifies the influence of data with a relatively low correlation to the output by inputting the data into each neural network layer. The proposed approach effectively incorporates diverse data sources into the learning process. Through experiments using a simple pick-and-place operation with raw images and joint information as input, significant improvements in success rates are demonstrated even when dealing with data from short sampling periods.",
+        "subjects": [
+            "cs.RO"
+        ],
+        "comment": "6 pages, 4 figures, Accepted at AMC2024"
     },
     {
         "paper id": "2401.09694",
@@ -5599,6 +5557,18 @@
         "abstract": "Preference-based reinforcement learning (RL) provides a framework to train agents using human feedback through pairwise preferences over pairs of behaviors, enabling agents to learn desired behaviors when it is difficult to specify a numerical reward function. While this paradigm leverages human feedback, it currently treats the feedback as given by a single human user. Meanwhile, incorporating preference feedback from crowds (i.e. ensembles of users) in a robust manner remains a challenge, and the problem of training RL agents using feedback from multiple human users remains understudied. In this work, we introduce Crowd-PrefRL, a framework for performing preference-based RL leveraging feedback from crowds. This work demonstrates the viability of learning reward functions from preference feedback provided by crowds of unknown expertise and reliability. Crowd-PrefRL not only robustly aggregates the crowd preference feedback, but also estimates the reliability of each user within the crowd using only the (noisy) crowdsourced preference comparisons. Most importantly, we show that agents trained with Crowd-PrefRL outperform agents trained with majority-vote preferences or preferences from any individual user in most cases, especially when the spread of user error rates among the crowd is large. Results further suggest that our method can identify minority viewpoints within the crowd.",
         "subjects": [
             "cs.HC"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2401.12230",
+        "abstract url": "https://arxiv.org/abs/2401.12230",
+        "title": "Computing in the Era of Large Generative Models: From Cloud-Native to AI-Native",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "In this paper, we investigate the intersection of large generative AI models and cloud-native computing architectures. Recent large models such as ChatGPT, while revolutionary in their capabilities, face challenges like escalating costs and demand for high-end GPUs. Drawing analogies between large-model-as-a-service (LMaaS) and cloud database-as-a-service (DBaaS), we describe an AI-native computing paradigm that harnesses the power of both cloud-native technologies (e.g., multi-tenancy and serverless computing) and advanced machine learning runtime (e.g., batched LoRA inference). These joint efforts aim to optimize costs-of-goods-sold (COGS) and improve resource accessibility. The journey of merging these two domains is just at the beginning and we hope to stimulate future research and development in this area.",
+        "subjects": [
+            "cs.DC"
         ],
         "comment": null
     }

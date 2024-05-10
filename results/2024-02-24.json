@@ -117,6 +117,32 @@
         "comment": "Published as a Tiny Paper at ICLR 2024"
     },
     {
+        "paper id": "2402.15933",
+        "abstract url": "https://arxiv.org/abs/2402.15933",
+        "title": "Bridging the Gap between 2D and 3D Visual Question Answering: A Fusion Approach for 3D VQA",
+        "rating": 1.5,
+        "keywords": [
+            [
+                "vision-language",
+                "VLMs"
+            ],
+            [
+                "3D"
+            ],
+            [
+                "cs.CV"
+            ],
+            [
+                "AAAI"
+            ]
+        ],
+        "abstract": "In 3D Visual Question Answering (3D VQA), the scarcity of fully annotated data and limited visual content diversity hampers the generalization to novel scenes and 3D concepts (e.g., only around 800 scenes are utilized in ScanQA and SQA dataset). Current approaches resort supplement 3D reasoning with 2D information. However, these methods face challenges: either they use top-down 2D views that introduce overly complex and sometimes question-irrelevant visual clues, or they rely on globally aggregated scene/image-level representations from 2D VLMs, losing the fine-grained vision-language correlations. To overcome these limitations, our approach utilizes question-conditional 2D view selection procedure, pinpointing semantically relevant 2D inputs for crucial visual clues. We then integrate this 2D knowledge into the 3D-VQA system via a two-branch Transformer structure. This structure, featuring a Twin-Transformer design, compactly combines 2D and 3D modalities and captures fine-grained correlations between modalities, allowing them mutually augmenting each other. Integrating proposed mechanisms above, we present BridgeQA, that offers a fresh perspective on multi-modal transformer-based architectures for 3D-VQA. Experiments validate that BridgeQA achieves state-of-the-art on 3D-VQA datasets and significantly outperforms existing solutions. Code is available at $\\href{https://github.com/matthewdm0816/BridgeQA}{\\text{this URL}}$.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "To be published in AAAI 24"
+    },
+    {
         "paper id": "2402.16902",
         "abstract url": "https://arxiv.org/abs/2402.16902",
         "title": "PRoLoRA: Partial Rotation Empowers More Parameter-Efficient LoRA",
@@ -1250,35 +1276,6 @@
         "comment": null
     },
     {
-        "paper id": "2402.15933",
-        "abstract url": "https://arxiv.org/abs/2402.15933",
-        "title": "Bridging the Gap between 2D and 3D Visual Question Answering: A Fusion Approach for 3D VQA",
-        "rating": -0.5,
-        "keywords": [
-            [
-                "vision-language",
-                "VLMs"
-            ],
-            [
-                "3D"
-            ],
-            [
-                "face"
-            ],
-            [
-                "cs.CV"
-            ],
-            [
-                "AAAI"
-            ]
-        ],
-        "abstract": "In 3D Visual Question Answering (3D VQA), the scarcity of fully annotated data and limited visual content diversity hampers the generalization to novel scenes and 3D concepts (e.g., only around 800 scenes are utilized in ScanQA and SQA dataset). Current approaches resort supplement 3D reasoning with 2D information. However, these methods face challenges: either they use top-down 2D views that introduce overly complex and sometimes question-irrelevant visual clues, or they rely on globally aggregated scene/image-level representations from 2D VLMs, losing the fine-grained vision-language correlations. To overcome these limitations, our approach utilizes question-conditional 2D view selection procedure, pinpointing semantically relevant 2D inputs for crucial visual clues. We then integrate this 2D knowledge into the 3D-VQA system via a two-branch Transformer structure. This structure, featuring a Twin-Transformer design, compactly combines 2D and 3D modalities and captures fine-grained correlations between modalities, allowing them mutually augmenting each other. Integrating proposed mechanisms above, we present BridgeQA, that offers a fresh perspective on multi-modal transformer-based architectures for 3D-VQA. Experiments validate that BridgeQA achieves state-of-the-art on 3D-VQA datasets and significantly outperforms existing solutions. Code is available at $\\href{https://github.com/matthewdm0816/BridgeQA}{\\text{this URL}}$.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "To be published in AAAI 24"
-    },
-    {
         "paper id": "2402.15957",
         "abstract url": "https://arxiv.org/abs/2402.15957",
         "title": "DynaMITE-RL: A Dynamic Model for Improved Temporal Meta-Reinforcement Learning",
@@ -1450,22 +1447,6 @@
         "abstract": "Conventional tracking paradigm takes in instantaneous measurements such as range and bearing, and produces object tracks across time. In applications such as autonomous driving, lidar measurements in the form of point clouds are usually passed through a \"virtual sensor\" realized by a deep learning model, to produce \"measurements\" such as bounding boxes, which are in turn ingested by a tracking module to produce object tracks. Very often multiple lidar sweeps are accumulated in a buffer to merge and become the input to the virtual sensor. We argue in this paper that such an input already contains temporal information, and therefore the virtual sensor output should also contain temporal information, not just instantaneous values for the time corresponding to the end of the buffer. In particular, we present the deep learning model called MULti-Sweep PAired Detector (MULSPAD) that produces, for each detected object, a pair of bounding boxes at both the end time and the beginning time of the input buffer. This is achieved with fairly straightforward changes in commonly used lidar detection models, and with only marginal extra processing, but the resulting symmetry is satisfying. Such paired detections make it possible not only to construct rudimentary trackers fairly easily, but also to construct more sophisticated trackers that can exploit the extra information conveyed by the pair and be robust to choices of motion models and object birth/death models. We have conducted preliminary training and experimentation using Waymo Open Dataset, which shows the efficacy of our proposed method.",
         "subjects": [
             "cs.CV"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2402.15773",
-        "abstract url": "https://arxiv.org/abs/2402.15773",
-        "title": "Performance bottlenecks detection through microarchitectural sensitivity",
-        "rating": -1,
-        "keywords": [
-            [
-                "depth"
-            ]
-        ],
-        "abstract": "Modern Out-of-Order (OoO) CPUs are complex systems with many components interleaved in non-trivial ways. Pinpointing performance bottlenecks and understanding the underlying causes of program performance issues are critical tasks to make the most of hardware resources. We provide an in-depth overview of performance bottlenecks in recent OoO microarchitectures and describe the difficulties of detecting them. Techniques that measure resources utilization can offer a good understanding of a program's execution, but, due to the constraints inherent to Performance Monitoring Units (PMU) of CPUs, do not provide the relevant metrics for each use case. Another approach is to rely on a performance model to simulate the CPU behavior. Such a model makes it possible to implement any new microarchitecture-related metric. Within this framework, we advocate for implementing modeled resources as parameters that can be varied at will to reveal performance bottlenecks. This allows a generalization of bottleneck analysis that we call sensitivity analysis. We present Gus, a novel performance analysis tool that combines the advantages of sensitivity analysis and dynamic binary instrumentation within a resource-centric CPU model. We evaluate the impact of sensitivity on bottleneck analysis over a set of high-performance computing kernels.",
-        "subjects": [
-            "cs.PF"
         ],
         "comment": null
     },
@@ -1844,6 +1825,25 @@
         "comment": "4 main pages"
     },
     {
+        "paper id": "2405.00023",
+        "abstract url": "https://arxiv.org/abs/2405.00023",
+        "title": "Revolutionizing Retail Analytics: Advancing Inventory and Customer Insight with AI",
+        "rating": -1,
+        "keywords": [
+            [
+                "forecasting"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "In response to the significant challenges facing the retail sector, including inefficient queue management, poor demand forecasting, and ineffective marketing, this paper introduces an innovative approach utilizing cutting-edge machine learning technologies. We aim to create an advanced smart retail analytics system (SRAS), leveraging these technologies to enhance retail efficiency and customer engagement. To enhance customer tracking capabilities, a new hybrid architecture is proposed integrating several predictive models. In the first stage of the proposed hybrid architecture for customer tracking, we fine-tuned the YOLOV8 algorithm using a diverse set of parameters, achieving exceptional results across various performance metrics. This fine-tuning process utilized actual surveillance footage from retail environments, ensuring its practical applicability. In the second stage, we explored integrating two sophisticated object-tracking models, BOT-SORT and ByteTrack, with the labels detected by YOLOV8. This integration is crucial for tracing customer paths within stores, which facilitates the creation of accurate visitor counts and heat maps. These insights are invaluable for understanding consumer behavior and improving store operations. To optimize inventory management, we delved into various predictive models, optimizing and contrasting their performance against complex retail data patterns. The GRU model, with its ability to interpret time-series data with long-range temporal dependencies, consistently surpassed other models like Linear Regression, showing 2.873% and 29.31% improvements in R2-score and mAPE, respectively.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2402.15730",
         "abstract url": "https://arxiv.org/abs/2402.15730",
         "title": "Understanding Missingness in Time-series Electronic Health Records for Individualized Representation",
@@ -1924,20 +1924,20 @@
         "comment": null
     },
     {
-        "paper id": "2402.15719",
-        "abstract url": "https://arxiv.org/abs/2402.15719",
-        "title": "\"It Is Hard to Remove from My Eye\": Design Makeup Residue Visualization System for Chinese Traditional Opera (Xiqu) Performers",
+        "paper id": "2402.15733",
+        "abstract url": "https://arxiv.org/abs/2402.15733",
+        "title": "ArEEG_Chars: Dataset for Envisioned Speech Recognition using EEG for Arabic Characters",
         "rating": -2,
         "keywords": [
             [
-                "face"
+                "EEG"
             ]
         ],
-        "abstract": "Chinese traditional opera (Xiqu) performers often experience skin problems due to the long-term use of heavy-metal-laden face paints. To explore the current skincare challenges encountered by Xiqu performers, we conducted an online survey (N=136) and semi-structured interviews (N=15) as a formative study. We found that incomplete makeup removal is the leading cause of human-induced skin problems, especially the difficulty in removing eye makeup. Therefore, we proposed EyeVis, a prototype that can visualize the residual eye makeup and record the time make-up was worn by Xiqu performers. We conducted a 7-day deployment study (N=12) to evaluate EyeVis. Results indicate that EyeVis helps to increase Xiqu performers' awareness about removing makeup, as well as boosting their confidence and security in skincare. Overall, this work also provides implications for studying the work of people who wear makeup on a daily basis, and helps to promote and preserve the intangible cultural heritage of practitioners.",
+        "abstract": "Brain-Computer-Interface (BCI) has been a hot research topic in the last few years that could help paralyzed people in their lives. Several researches were done to classify electroencephalography (EEG) signals automatically into English characters and words. Arabic language is one of the most used languages around the world. However, to the best of our knowledge, there is no dataset for Arabic characters EEG signals. In this paper, we have created an EEG dataset for Arabic characters and named it ArEEG_Chars. Moreover, several experiments were done on ArEEG_Chars using deep learning. Best results were achieved using LSTM and reached an accuracy of 97%. ArEEG_Chars dataset will be public for researchers.",
         "subjects": [
             "cs.HC"
         ],
-        "comment": "Proceedings of the 2024 CHI Conference on Human Factors in Computing Systems (CHI '24), May 11-16, 2024, Honolulu, HI, USA"
+        "comment": null
     },
     {
         "paper id": "2402.15738",
@@ -1957,6 +1957,29 @@
             "cs.CR"
         ],
         "comment": "16 pages, 5 figures, 4 tables"
+    },
+    {
+        "paper id": "2402.15784",
+        "abstract url": "https://arxiv.org/abs/2402.15784",
+        "title": "IRConStyle: Image Restoration Framework Using Contrastive Learning and Style Transfer",
+        "rating": -2,
+        "keywords": [
+            [
+                "deraining"
+            ],
+            [
+                "Image Restoration",
+                "dehazing"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Recently, the contrastive learning paradigm has achieved remarkable success in high-level tasks such as classification, detection, and segmentation. However, contrastive learning applied in low-level tasks, like image restoration, is limited, and its effectiveness is uncertain. This raises a question: Why does the contrastive learning paradigm not yield satisfactory results in image restoration? In this paper, we conduct in-depth analyses and propose three guidelines to address the above question. In addition, inspired by style transfer and based on contrastive learning, we propose a novel module for image restoration called \\textbf{ConStyle}, which can be efficiently integrated into any U-Net structure network. By leveraging the flexibility of ConStyle, we develop a \\textbf{general restoration network} for image restoration. ConStyle and the general restoration network together form an image restoration framework, namely \\textbf{IRConStyle}. To demonstrate the capability and compatibility of ConStyle, we replace the general restoration network with transformer-based, CNN-based, and MLP-based networks, respectively. We perform extensive experiments on various image restoration tasks, including denoising, deblurring, deraining, and dehazing. The results on 19 benchmarks demonstrate that ConStyle can be integrated with any U-Net-based network and significantly enhance performance. For instance, ConStyle NAFNet significantly outperforms the original NAFNet on SOTS outdoor (dehazing) and Rain100H (deraining) datasets, with PSNR improvements of 4.16 dB and 3.58 dB with 85% fewer parameters.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
     },
     {
         "paper id": "2402.15819",
@@ -2227,30 +2250,20 @@
         "comment": null
     },
     {
-        "paper id": "2402.15784",
-        "abstract url": "https://arxiv.org/abs/2402.15784",
-        "title": "IRConStyle: Image Restoration Framework Using Contrastive Learning and Style Transfer",
-        "rating": -3,
+        "paper id": "2405.00024",
+        "abstract url": "https://arxiv.org/abs/2405.00024",
+        "title": "Swarm UAVs Communication",
+        "rating": -2,
         "keywords": [
             [
-                "depth"
-            ],
-            [
-                "deraining"
-            ],
-            [
-                "Image Restoration",
-                "dehazing"
-            ],
-            [
-                "cs.CV"
+                "UAV"
             ]
         ],
-        "abstract": "Recently, the contrastive learning paradigm has achieved remarkable success in high-level tasks such as classification, detection, and segmentation. However, contrastive learning applied in low-level tasks, like image restoration, is limited, and its effectiveness is uncertain. This raises a question: Why does the contrastive learning paradigm not yield satisfactory results in image restoration? In this paper, we conduct in-depth analyses and propose three guidelines to address the above question. In addition, inspired by style transfer and based on contrastive learning, we propose a novel module for image restoration called \\textbf{ConStyle}, which can be efficiently integrated into any U-Net structure network. By leveraging the flexibility of ConStyle, we develop a \\textbf{general restoration network} for image restoration. ConStyle and the general restoration network together form an image restoration framework, namely \\textbf{IRConStyle}. To demonstrate the capability and compatibility of ConStyle, we replace the general restoration network with transformer-based, CNN-based, and MLP-based networks, respectively. We perform extensive experiments on various image restoration tasks, including denoising, deblurring, deraining, and dehazing. The results on 19 benchmarks demonstrate that ConStyle can be integrated with any U-Net-based network and significantly enhance performance. For instance, ConStyle NAFNet significantly outperforms the original NAFNet on SOTS outdoor (dehazing) and Rain100H (deraining) datasets, with PSNR improvements of 4.16 dB and 3.58 dB with 85% fewer parameters.",
+        "abstract": "The advancement in cyber-physical systems has opened a new way in disaster management and rescue operations. The usage of UAVs is very promising in this context. UAVs, mainly quadcopters, are small in size and their payload capacity is limited. A single UAV can not traverse the whole area. Hence multiple UAVs or swarms of UAVs come into the picture managing the entire payload in a modular and equiproportional manner. In this work we have explored a vast topic related to UAVs. Among the UAVs quadcopter is the main focus. We explored the types of quadcopters, their flying strategy,their communication protocols, architecture and controlling techniques, followed by the swarm behaviour in nature and UAVs. Swarm behaviour and a few swarm optimization algorithms has been explored here. Swarm architecture and communication in between swarm UAV networks also got a special attention in our work. In disaster management the UAV swarm network must have to search a large area. And for this proper path planning algorithm is required. We have discussed the existing path planning algorithm, their advantages and disadvantages in great detail. Formation maintenance of the swarm network is an important issue which has been explored through leader-follower technique. The wireless path loss model has been modelled using friis and ground ray reflection model. Using this path loss models we have managed to create the link budget and simulate the variation of communication link performance with the variation of distance.",
         "subjects": [
-            "cs.CV"
+            "cs.DC"
         ],
-        "comment": null
+        "comment": "50 pages, 17 figures"
     },
     {
         "paper id": "2402.15797",
@@ -2272,6 +2285,26 @@
         "comment": "13 pages, 12 figures"
     },
     {
+        "paper id": "2402.15817",
+        "abstract url": "https://arxiv.org/abs/2402.15817",
+        "title": "BETA-UAV: Blockchain-based Efficient Authentication for Secure UAV Communication",
+        "rating": -3,
+        "keywords": [
+            [
+                "attacks"
+            ],
+            [
+                "UAV",
+                "drone"
+            ]
+        ],
+        "abstract": "Unmanned aerial vehicles (UAV), an emerging architecture that embodies flying ad-hoc networks, face critical privacy and security challenges, mainly when engaged in data-sensitive missions. Therefore, message authentication is a crucial security feature in drone communications. This paper presents a Blockchain-based Efficient, and Trusted Authentication scheme for UAV communication, BETA-UAV, which exploits the inherent properties of blockchain technology concerning memorability and is immutable to record communication sessions via transactions using a smart contract. The smart contract in BETA-UAV allows participants to publish and call transactions from the blockchain network. Furthermore, transaction addresses are proof of freshness and trustworthiness for subsequent transmissions. Furthermore, we investigated their ability to resist active attacks, such as impersonation, replaying, and modification. In addition, we evaluate the gas costs associated with the functions of the smart contract by implementing a BETA-UAV on the Ethereum public blockchain. A comparison of the computation and communication overheads shows that the proposed approach can save significant costs over traditional techniques.",
+        "subjects": [
+            "cs.CR"
+        ],
+        "comment": "6 pages, 4 figures, 22nd IEEE ICCT | 2022 IEEE 22nd International Conference on Communication Technology"
+    },
+    {
         "paper id": "2402.15827",
         "abstract url": "https://arxiv.org/abs/2402.15827",
         "title": "Algorithmic Analysis of Termination Problems for Nondeterministic Quantum Programs",
@@ -2287,6 +2320,28 @@
         "abstract": "We consider the two categories of termination problems of quantum programs with nondeterminism: 1) Is an input of a program terminating with probability one under all schedulers? If not, how can a scheduler be synthesized to evidence the nontermination? 2) Are all inputs terminating with probability one under their respective schedulers? If yes, a further question asks whether there is a scheduler that forces all inputs to be terminating with probability one together with how to synthesize it; otherwise, how can an input be provided to refute the universal termination? For the effective verification of the first category, we over-approximate the reachable set of quantum program states by the reachable subspace, whose algebraic structure is a linear space. On the other hand, we study the set of divergent states from which the program terminates with probability zero under some scheduler. The divergent set has an explicit algebraic structure. Exploiting them, we address the decision problem by a necessary and sufficient condition, i.e. the disjointness of the reachable subspace and the divergent set. Furthermore, the scheduler synthesis is completed in exponential time. For the second category, we reduce the decision problem to the existence of invariant subspace, from which the program terminates with probability zero under all schedulers. The invariant subspace is characterized by linear equations. The states on that invariant subspace are evidence of the nontermination. Furthermore, the scheduler synthesis is completed by seeking a pattern of finite schedulers that forces all inputs to be terminating with positive probability. The repetition of that pattern yields the desired universal scheduler that forces all inputs to be terminating with probability one. All the problems in the second category are shown to be solved in polynomial time.",
         "subjects": [
             "quant-ph"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2402.15945",
+        "abstract url": "https://arxiv.org/abs/2402.15945",
+        "title": "Attention-GAN for Anomaly Detection: A Cutting-Edge Approach to Cybersecurity Threat Management",
+        "rating": -3,
+        "keywords": [
+            [
+                "GAN"
+            ],
+            [
+                "Anomaly Detection"
+            ],
+            [
+                "attack"
+            ]
+        ],
+        "abstract": "This paper proposes an innovative Attention-GAN framework for enhancing cybersecurity, focusing on anomaly detection. In response to the challenges posed by the constantly evolving nature of cyber threats, the proposed approach aims to generate diverse and realistic synthetic attack scenarios, thereby enriching the dataset and improving threat identification. Integrating attention mechanisms with Generative Adversarial Networks (GANs) is a key feature of the proposed method. The attention mechanism enhances the model's ability to focus on relevant features, essential for detecting subtle and complex attack patterns. In addition, GANs address the issue of data scarcity by generating additional varied attack data, encompassing known and emerging threats. This dual approach ensures that the system remains relevant and effective against the continuously evolving cyberattacks. The KDD Cup and CICIDS2017 datasets were used to validate this model, which exhibited significant improvements in anomaly detection. It achieved an accuracy of 99.69% on the KDD dataset and 97.93% on the CICIDS2017 dataset, with precision, recall, and F1-scores above 97%, demonstrating its effectiveness in recognizing complex attack patterns. This study contributes significantly to cybersecurity by providing a scalable and adaptable solution for anomaly detection in the face of sophisticated and dynamic cyber threats. The exploration of GANs for data augmentation highlights a promising direction for future research, particularly in situations where data limitations restrict the development of cybersecurity systems. The attention-GAN framework has emerged as a pioneering approach, setting a new benchmark for advanced cyber-defense strategies.",
+        "subjects": [
+            "cs.CR"
         ],
         "comment": null
     },
@@ -2360,48 +2415,23 @@
         "comment": null
     },
     {
-        "paper id": "2402.15817",
-        "abstract url": "https://arxiv.org/abs/2402.15817",
-        "title": "BETA-UAV: Blockchain-based Efficient Authentication for Secure UAV Communication",
+        "paper id": "2404.16846",
+        "abstract url": "https://arxiv.org/abs/2404.16846",
+        "title": "Securing Bluetooth Low Energy: A Literature Review",
         "rating": -5,
         "keywords": [
             [
                 "attacks"
             ],
             [
-                "face"
+                "healthcare"
             ],
             [
-                "UAV",
-                "drone"
+                "industrial",
+                "IoT"
             ]
         ],
-        "abstract": "Unmanned aerial vehicles (UAV), an emerging architecture that embodies flying ad-hoc networks, face critical privacy and security challenges, mainly when engaged in data-sensitive missions. Therefore, message authentication is a crucial security feature in drone communications. This paper presents a Blockchain-based Efficient, and Trusted Authentication scheme for UAV communication, BETA-UAV, which exploits the inherent properties of blockchain technology concerning memorability and is immutable to record communication sessions via transactions using a smart contract. The smart contract in BETA-UAV allows participants to publish and call transactions from the blockchain network. Furthermore, transaction addresses are proof of freshness and trustworthiness for subsequent transmissions. Furthermore, we investigated their ability to resist active attacks, such as impersonation, replaying, and modification. In addition, we evaluate the gas costs associated with the functions of the smart contract by implementing a BETA-UAV on the Ethereum public blockchain. A comparison of the computation and communication overheads shows that the proposed approach can save significant costs over traditional techniques.",
-        "subjects": [
-            "cs.CR"
-        ],
-        "comment": "6 pages, 4 figures, 22nd IEEE ICCT | 2022 IEEE 22nd International Conference on Communication Technology"
-    },
-    {
-        "paper id": "2402.15945",
-        "abstract url": "https://arxiv.org/abs/2402.15945",
-        "title": "Attention-GAN for Anomaly Detection: A Cutting-Edge Approach to Cybersecurity Threat Management",
-        "rating": -5,
-        "keywords": [
-            [
-                "GAN"
-            ],
-            [
-                "Anomaly Detection"
-            ],
-            [
-                "attack"
-            ],
-            [
-                "face"
-            ]
-        ],
-        "abstract": "This paper proposes an innovative Attention-GAN framework for enhancing cybersecurity, focusing on anomaly detection. In response to the challenges posed by the constantly evolving nature of cyber threats, the proposed approach aims to generate diverse and realistic synthetic attack scenarios, thereby enriching the dataset and improving threat identification. Integrating attention mechanisms with Generative Adversarial Networks (GANs) is a key feature of the proposed method. The attention mechanism enhances the model's ability to focus on relevant features, essential for detecting subtle and complex attack patterns. In addition, GANs address the issue of data scarcity by generating additional varied attack data, encompassing known and emerging threats. This dual approach ensures that the system remains relevant and effective against the continuously evolving cyberattacks. The KDD Cup and CICIDS2017 datasets were used to validate this model, which exhibited significant improvements in anomaly detection. It achieved an accuracy of 99.69% on the KDD dataset and 97.93% on the CICIDS2017 dataset, with precision, recall, and F1-scores above 97%, demonstrating its effectiveness in recognizing complex attack patterns. This study contributes significantly to cybersecurity by providing a scalable and adaptable solution for anomaly detection in the face of sophisticated and dynamic cyber threats. The exploration of GANs for data augmentation highlights a promising direction for future research, particularly in situations where data limitations restrict the development of cybersecurity systems. The attention-GAN framework has emerged as a pioneering approach, setting a new benchmark for advanced cyber-defense strategies.",
+        "abstract": "Bluetooth Low Energy (BLE) technology, operating within the widely used 2.4 GHz ISM band, stands as a cornerstone in modern wireless communication frameworks alongside its classic Bluetooth counterpart. This paper delves into the foundational aspects of BLE, excluding niche components, to explore its core functionalities and pivotal role in diverse connectivity needs. BLE's specialization in catering to low-power devices ensures optimal energy utilization, making it indispensable in IoT applications where energy efficiency is paramount. Its versatility finds applications across consumer electronics, industrial automation, and healthcare, ensuring reliability and efficiency in safety-critical systems and enhancing user convenience through remote control capabilities. However, the wireless nature of BLE interfaces exposes them to cybersecurity threats, necessitating robust security measures for mitigating risks such as sniffing, DoS attacks, and message injection. Continuous research and development efforts are essential to stay ahead of emerging threats and safeguard BLE-enabled systems and data.",
         "subjects": [
             "cs.CR"
         ],
@@ -2418,6 +2448,18 @@
             "stat.ML"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2402.15719",
+        "abstract url": "https://arxiv.org/abs/2402.15719",
+        "title": "\"It Is Hard to Remove from My Eye\": Design Makeup Residue Visualization System for Chinese Traditional Opera (Xiqu) Performers",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "Chinese traditional opera (Xiqu) performers often experience skin problems due to the long-term use of heavy-metal-laden face paints. To explore the current skincare challenges encountered by Xiqu performers, we conducted an online survey (N=136) and semi-structured interviews (N=15) as a formative study. We found that incomplete makeup removal is the leading cause of human-induced skin problems, especially the difficulty in removing eye makeup. Therefore, we proposed EyeVis, a prototype that can visualize the residual eye makeup and record the time make-up was worn by Xiqu performers. We conducted a 7-day deployment study (N=12) to evaluate EyeVis. Results indicate that EyeVis helps to increase Xiqu performers' awareness about removing makeup, as well as boosting their confidence and security in skincare. Overall, this work also provides implications for studying the work of people who wear makeup on a daily basis, and helps to promote and preserve the intangible cultural heritage of practitioners.",
+        "subjects": [
+            "cs.HC"
+        ],
+        "comment": "Proceedings of the 2024 CHI Conference on Human Factors in Computing Systems (CHI '24), May 11-16, 2024, Honolulu, HI, USA"
     },
     {
         "paper id": "2402.15723",
@@ -2456,18 +2498,6 @@
         "comment": null
     },
     {
-        "paper id": "2402.15733",
-        "abstract url": "https://arxiv.org/abs/2402.15733",
-        "title": "ArEEG_Chars: Dataset for Envisioned Speech Recognition using EEG for Arabic Characters",
-        "rating": -10,
-        "keywords": [],
-        "abstract": "Brain-Computer-Interface (BCI) has been a hot research topic in the last few years that could help paralyzed people in their lives. Several researches were done to classify electroencephalography (EEG) signals automatically into English characters and words. Arabic language is one of the most used languages around the world. However, to the best of our knowledge, there is no dataset for Arabic characters EEG signals. In this paper, we have created an EEG dataset for Arabic characters and named it ArEEG_Chars. Moreover, several experiments were done on ArEEG_Chars using deep learning. Best results were achieved using LSTM and reached an accuracy of 97%. ArEEG_Chars dataset will be public for researchers.",
-        "subjects": [
-            "cs.HC"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2402.15749",
         "abstract url": "https://arxiv.org/abs/2402.15749",
         "title": "A summary of the routing algorithm and their optimization,performance",
@@ -2488,6 +2518,18 @@
         "abstract": "Pre-trained code models lead the era of code intelligence. Many models have been designed with impressive performance recently. However, one important problem, data augmentation for code data that automatically helps developers prepare training data lacks study in the field of code learning. In this paper, we introduce a general data augmentation framework, GenCode, to enhance the training of code understanding models. GenCode follows a generation-and-selection paradigm to prepare useful training codes. Specifically, it uses code transformation techniques to generate new code candidates first and then selects important ones as the training data by importance metrics. To evaluate the effectiveness of GenCode with a general importance metric -- loss value, we conduct experiments on four code understanding tasks (e.g., code clone detection) and three pre-trained code models (e.g., CodeT5). Compared to the state-of-the-art (SOTA) code augmentation method, MixCode, GenCode produces code models with 2.92% higher accuracy and 4.90% robustness on average.",
         "subjects": [
             "cs.SE"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2402.15773",
+        "abstract url": "https://arxiv.org/abs/2402.15773",
+        "title": "Performance bottlenecks detection through microarchitectural sensitivity",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "Modern Out-of-Order (OoO) CPUs are complex systems with many components interleaved in non-trivial ways. Pinpointing performance bottlenecks and understanding the underlying causes of program performance issues are critical tasks to make the most of hardware resources. We provide an in-depth overview of performance bottlenecks in recent OoO microarchitectures and describe the difficulties of detecting them. Techniques that measure resources utilization can offer a good understanding of a program's execution, but, due to the constraints inherent to Performance Monitoring Units (PMU) of CPUs, do not provide the relevant metrics for each use case. Another approach is to rely on a performance model to simulate the CPU behavior. Such a model makes it possible to implement any new microarchitecture-related metric. Within this framework, we advocate for implementing modeled resources as parameters that can be varied at will to reveal performance bottlenecks. This allows a generalization of bottleneck analysis that we call sensitivity analysis. We present Gus, a novel performance analysis tool that combines the advantages of sensitivity analysis and dynamic binary instrumentation within a resource-centric CPU model. We evaluate the impact of sensitivity on bottleneck analysis over a set of high-performance computing kernels.",
+        "subjects": [
+            "cs.PF"
         ],
         "comment": null
     },
@@ -2713,11 +2755,11 @@
         "title": "Minimum energy density steering of linear systems with Gromov-Wasserstein terminal cost",
         "rating": -10,
         "keywords": [],
-        "abstract": "In this study, we address optimal control problems focused on steering the probabilistic distribution of state variables in linear dynamical systems. Specifically, we address the problem of controlling the structural properties of Gaussian state distributions to predefined targets at terminal times. This task is not yet explored in existing works that primarily aim to exactly match state distributions. By employing the Gromov-Wasserstein (GW) distance as the terminal cost, we formulate a problem that seeks to align the structure of the state density with that of a desired distribution. This approach allows us to extend the control objectives to capture the distribution's shape. We demonstrate that this complex problem can be reduced to a Difference of Convex (DC) programming, which is efficiently solvable through the DC algorithm. Through numerical experiments, we confirm that the terminal distribution indeed gets closer to the desired structural properties of the target distribution.",
+        "abstract": "In this paper, we newly formulate and solve the optimal density control problem with Gromov-Wasserstein (GW) terminal cost in discrete-time linear Gaussian systems. Differently from the Wasserstein or Kullback-Leibler distances employed in the existing works, the GW distance quantifies the difference in shapes of the distribution, which is invariant under translation and rotation. Consequently, our formulation allows us to find small energy inputs that achieve the desired shape of the terminal distribution, which has practical applications, e.g., robotic swarms. We demonstrate that the problem can be reduced to a Difference of Convex (DC) programming, which is efficiently solvable through the DC algorithm. Through numerical experiments, we confirm that the state distribution reaches the terminal distribution that can be realized with the minimum control energy among those having the specified shape.",
         "subjects": [
             "math.OC"
         ],
-        "comment": "6 pages"
+        "comment": "7 pages"
     },
     {
         "paper id": "2402.15944",

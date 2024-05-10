@@ -3,7 +3,7 @@
         "paper id": "2402.11764",
         "abstract url": "https://arxiv.org/abs/2402.11764",
         "title": "ChatGPT Based Data Augmentation for Improved Parameter-Efficient Debiasing of LLMs",
-        "rating": 3,
+        "rating": 2.5,
         "keywords": [
             [
                 "Parameter-Efficient"
@@ -13,6 +13,9 @@
             ],
             [
                 "cs.CL"
+            ],
+            [
+                "Workshop"
             ]
         ],
         "abstract": "Large Language models (LLMs), while powerful, exhibit harmful social biases. Debiasing is often challenging due to computational costs, data constraints, and potential degradation of multi-task language capabilities. This work introduces a novel approach utilizing ChatGPT to generate synthetic training data, aiming to enhance the debiasing of LLMs. We propose two strategies: Targeted Prompting, which provides effective debiasing for known biases but necessitates prior specification of bias in question; and General Prompting, which, while slightly less effective, offers debiasing across various categories. We leverage resource-efficient LLM debiasing using adapter tuning and compare the effectiveness of our synthetic data to existing debiasing datasets. Our results reveal that: (1) ChatGPT can efficiently produce high-quality training data for debiasing other LLMs; (2) data produced via our approach surpasses existing datasets in debiasing performance while also preserving internal knowledge of a pre-trained LLM; and (3) synthetic data exhibits generalizability across categories, effectively mitigating various biases, including intersectional ones. These findings underscore the potential of synthetic data in advancing the fairness of LLMs with minimal retraining cost.",
@@ -80,6 +83,26 @@
         "comment": "19 pages"
     },
     {
+        "paper id": "2402.11690",
+        "abstract url": "https://arxiv.org/abs/2402.11690",
+        "title": "Vision-Flan: Scaling Human-Labeled Tasks in Visual Instruction Tuning",
+        "rating": 2,
+        "keywords": [
+            [
+                "vision-language",
+                "VLMs"
+            ],
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Despite vision-language models' (VLMs) remarkable capabilities as versatile visual assistants, two substantial challenges persist within the existing VLM frameworks: (1) lacking task diversity in pretraining and visual instruction tuning, and (2) annotation error and bias in GPT-4 synthesized instruction tuning data. Both challenges lead to issues such as poor generalizability, hallucination, and catastrophic forgetting. To address these challenges, we construct Vision-Flan, the most diverse publicly available visual instruction tuning dataset to date, comprising 187 diverse tasks and 1,664,261 instances sourced from academic datasets, and each task is accompanied by an expert-written instruction. In addition, we propose a two-stage instruction tuning framework, in which VLMs are firstly finetuned on Vision-Flan and further tuned on GPT-4 synthesized data. We find this two-stage tuning framework significantly outperforms the traditional single-stage visual instruction tuning framework and achieves the state-of-the-art performance across a wide range of multi-modal evaluation benchmarks. Finally, we conduct in-depth analyses to understand visual instruction tuning and our findings reveal that: (1) GPT-4 synthesized data does not substantially enhance VLMs' capabilities but rather modulates the model's responses to human-preferred formats; (2) A minimal quantity (e.g., 1,000) of GPT-4 synthesized data can effectively align VLM responses with human-preference; (3) Visual instruction tuning mainly helps large-language models (LLMs) to understand visual features.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": "8 Pages, visual instruction tuning"
+    },
+    {
         "paper id": "2402.11710",
         "abstract url": "https://arxiv.org/abs/2402.11710",
         "title": "A Note on Bias to Complete",
@@ -93,6 +116,25 @@
             ]
         ],
         "abstract": "Minimizing social bias strengthens societal bonds, promoting shared understanding and better decision-making. We revisit the definition of bias by discovering new bias types (e.g., societal status) in dynamic environments and describe them relative to context, such as culture, region, time, and personal background. Our framework includes eight hypotheses about bias and a minimizing bias strategy for each assumption as well as five methods as proposed solutions in LLM. The realization of the framework is yet to be completed.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2402.11746",
+        "abstract url": "https://arxiv.org/abs/2402.11746",
+        "title": "Language Models are Homer Simpson! Safety Re-Alignment of Fine-tuned Language Models through Task Arithmetic",
+        "rating": 2,
+        "keywords": [
+            [
+                "parameter-efficient"
+            ],
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Aligned language models face a significant limitation as their fine-tuning often results in compromised safety. To tackle this, we propose a simple method RESTA that performs LLM safety realignment. RESTA stands for REstoring Safety through Task Arithmetic. At its core, it involves a simple arithmetic addition of a safety vector to the weights of the compromised model. We demonstrate the effectiveness of RESTA in both parameter-efficient and full fine-tuning, covering a wide range of downstream tasks, including instruction following in Chinese, English, and Hindi, as well as problem-solving capabilities in Code and Math. We also showcase the generalizability of RESTA on three existing safety evaluation benchmarks and a multilingual benchmark dataset proposed as a part of this work, consisting of 550 harmful questions covering 11 categories, each with 5 sub-categories of harm. Overall, RESTA decreases the harmfulness of the compromised model from 18.6% to 5.1% and from 9.2% to 1.5% in parameter-efficient and full fine-tuning, respectively, while maintaining most of the model's performance on the task. We release the source codes at: https://github.com/declare-lab/resta.",
         "subjects": [
             "cs.CL"
         ],
@@ -224,22 +266,6 @@
         "abstract": "Adapting English-based large language models (LLMs) to other languages has become increasingly popular due to the efficiency and potential of cross-lingual transfer. However, existing language adaptation methods often overlook the benefits of cross-lingual supervision. In this study, we introduce LEIA, a language adaptation tuning method that utilizes Wikipedia entity names aligned across languages. This method involves augmenting the target language corpus with English entity names and training the model using left-to-right language modeling. We assess LEIA on diverse question answering datasets using 7B-parameter LLMs, demonstrating significant performance gains across various non-English languages. The source code is available at https://github.com/studio-ousia/leia.",
         "subjects": [
             "cs.CL"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2402.11488",
-        "abstract url": "https://arxiv.org/abs/2402.11488",
-        "title": "IRFundusSet: An Integrated Retinal Fundus Dataset with a Harmonized Healthy Label",
-        "rating": 1,
-        "keywords": [
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Ocular conditions are a global concern and computational tools utilizing retinal fundus color photographs can aid in routine screening and management. Obtaining comprehensive and sufficiently sized datasets, however, is non-trivial for the intricate retinal fundus, which exhibits heterogeneities within pathologies, in addition to variations from demographics and acquisition. Moreover, retinal fundus datasets in the public space suffer fragmentation in the organization of data and definition of a healthy observation. We present Integrated Retinal Fundus Set (IRFundusSet), a dataset that consolidates, harmonizes and curates several public datasets, facilitating their consumption as a unified whole and with a consistent is_normal label. IRFundusSet comprises a Python package that automates harmonization and avails a dataset object in line with the PyTorch approach. Moreover, images are physically reviewed and a new is_normal label is annotated for a consistent definition of a healthy observation. Ten public datasets are initially considered with a total of 46064 images, of which 25406 are curated for a new is_normal label and 3515 are deemed healthy across the sources.",
-        "subjects": [
-            "cs.CV"
         ],
         "comment": null
     },
@@ -418,6 +444,22 @@
             "cs.CL"
         ],
         "comment": "13 pages"
+    },
+    {
+        "paper id": "2402.11548",
+        "abstract url": "https://arxiv.org/abs/2402.11548",
+        "title": "KMMLU: Measuring Massive Multitask Language Understanding in Korean",
+        "rating": 1,
+        "keywords": [
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "We propose KMMLU, a new Korean benchmark with 35,030 expert-level multiple-choice questions across 45 subjects ranging from humanities to STEM. Unlike previous Korean benchmarks that are translated from existing English benchmarks, KMMLU is collected from original Korean exams, capturing linguistic and cultural aspects of the Korean language. We test 26 publically available and proprietary LLMs, identifying significant room for improvement. The best publicly available model achieves 50.54% on KMMLU, far below the average human performance of 62.6%. This model was primarily trained for English and Chinese, not Korean. Current LLMs tailored to Korean, such as Polyglot-Ko, perform far worse. Surprisingly, even the most capable proprietary LLMs, e.g., GPT-4 and HyperCLOVA X, achieve 59.95% and 53.40%, respectively. This suggests that further work is needed to improve Korean LLMs, and KMMLU offers the right tool to track this progress. We make our dataset publicly available on the Hugging Face Hub and integrate the benchmark into EleutherAI's Language Model Evaluation Harness.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": "Under Review"
     },
     {
         "paper id": "2402.11550",
@@ -701,29 +743,6 @@
         "comment": null
     },
     {
-        "paper id": "2402.11690",
-        "abstract url": "https://arxiv.org/abs/2402.11690",
-        "title": "Vision-Flan: Scaling Human-Labeled Tasks in Visual Instruction Tuning",
-        "rating": 1,
-        "keywords": [
-            [
-                "vision-language",
-                "VLMs"
-            ],
-            [
-                "depth"
-            ],
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Despite vision-language models' (VLMs) remarkable capabilities as versatile visual assistants, two substantial challenges persist within the existing VLM frameworks: (1) lacking task diversity in pretraining and visual instruction tuning, and (2) annotation error and bias in GPT-4 synthesized instruction tuning data. Both challenges lead to issues such as poor generalizability, hallucination, and catastrophic forgetting. To address these challenges, we construct Vision-Flan, the most diverse publicly available visual instruction tuning dataset to date, comprising 187 diverse tasks and 1,664,261 instances sourced from academic datasets, and each task is accompanied by an expert-written instruction. In addition, we propose a two-stage instruction tuning framework, in which VLMs are firstly finetuned on Vision-Flan and further tuned on GPT-4 synthesized data. We find this two-stage tuning framework significantly outperforms the traditional single-stage visual instruction tuning framework and achieves the state-of-the-art performance across a wide range of multi-modal evaluation benchmarks. Finally, we conduct in-depth analyses to understand visual instruction tuning and our findings reveal that: (1) GPT-4 synthesized data does not substantially enhance VLMs' capabilities but rather modulates the model's responses to human-preferred formats; (2) A minimal quantity (e.g., 1,000) of GPT-4 synthesized data can effectively align VLM responses with human-preference; (3) Visual instruction tuning mainly helps large-language models (LLMs) to understand visual features.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": "8 Pages, visual instruction tuning"
-    },
-    {
         "paper id": "2402.11700",
         "abstract url": "https://arxiv.org/abs/2402.11700",
         "title": "Why Lift so Heavy? Slimming Large Language Models by Cutting Off the Layers",
@@ -807,6 +826,38 @@
             ]
         ],
         "abstract": "Large Language Models (LLMs) possess the potential to exert substantial influence on public perceptions and interactions with information. This raises concerns about the societal impact that could arise if the ideologies within these models can be easily manipulated. In this work, we investigate how effectively LLMs can learn and generalize ideological biases from their instruction-tuning data. Our findings reveal a concerning vulnerability: exposure to only a small amount of ideologically driven samples significantly alters the ideology of LLMs. Notably, LLMs demonstrate a startling ability to absorb ideology from one topic and generalize it to even unrelated ones. The ease with which LLMs' ideologies can be skewed underscores the risks associated with intentionally poisoned training data by malicious actors or inadvertently introduced biases by data annotators. It also emphasizes the imperative for robust safeguards to mitigate the influence of ideological manipulations on LLMs.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2402.11728",
+        "abstract url": "https://arxiv.org/abs/2402.11728",
+        "title": "Numerical Claim Detection in Finance: A New Financial Dataset, Weak-Supervision Model, and Market Analysis",
+        "rating": 1,
+        "keywords": [
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "In this paper, we investigate the influence of claims in analyst reports and earnings calls on financial market returns, considering them as significant quarterly events for publicly traded companies. To facilitate a comprehensive analysis, we construct a new financial dataset for the claim detection task in the financial domain. We benchmark various language models on this dataset and propose a novel weak-supervision model that incorporates the knowledge of subject matter experts (SMEs) in the aggregation function, outperforming existing approaches. Furthermore, we demonstrate the practical utility of our proposed model by constructing a novel measure ``optimism\". Furthermore, we observed the dependence of earnings surprise and return on our optimism measure. Our dataset, models, and code will be made publicly (under CC BY 4.0 license) available on GitHub and Hugging Face.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2402.11744",
+        "abstract url": "https://arxiv.org/abs/2402.11744",
+        "title": "Machine-generated Text Localization",
+        "rating": 1,
+        "keywords": [
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Machine-Generated Text (MGT) detection aims to identify a piece of text as machine or human written. Prior work has primarily formulated MGT as a binary classification task over an entire document, with limited work exploring cases where only part of a document is machine generated. This paper provides the first in-depth study of MGT that localizes the portions of a document that were machine generated. Thus, if a bad actor were to change a key portion of a news article to spread misinformation, whole document MGT detection may fail since the vast majority is human written, but our approach can succeed due to its granular approach. A key challenge in our MGT localization task is that short spans of text, e.g., a single sentence, provides little information indicating if it is machine generated due to its short length. To address this, we leverage contextual information, where we predict whether multiple sentences are machine or human written at once. This enables our approach to identify changes in style or content to boost performance. A gain of 4-13% mean Average Precision (mAP) over prior work demonstrates the effectiveness of approach on five diverse datasets: GoodNews, VisualNews, WikiText, Essay, and WP. We release our implementation at \\href{https://github.com/Zhongping-Zhang/MGT_Localization}{this http URL}.",
         "subjects": [
             "cs.CL"
         ],
@@ -1072,6 +1123,28 @@
         "comment": "13 pages"
     },
     {
+        "paper id": "2402.11473",
+        "abstract url": "https://arxiv.org/abs/2402.11473",
+        "title": "Poisoned Forgery Face: Towards Backdoor Attacks on Face Forgery Detection",
+        "rating": 0.5,
+        "keywords": [
+            [
+                "Attacks"
+            ],
+            [
+                "cs.CV"
+            ],
+            [
+                "ICLR"
+            ]
+        ],
+        "abstract": "The proliferation of face forgery techniques has raised significant concerns within society, thereby motivating the development of face forgery detection methods. These methods aim to distinguish forged faces from genuine ones and have proven effective in practical applications. However, this paper introduces a novel and previously unrecognized threat in face forgery detection scenarios caused by backdoor attack. By embedding backdoors into models and incorporating specific trigger patterns into the input, attackers can deceive detectors into producing erroneous predictions for forged faces. To achieve this goal, this paper proposes \\emph{Poisoned Forgery Face} framework, which enables clean-label backdoor attacks on face forgery detectors. Our approach involves constructing a scalable trigger generator and utilizing a novel convolving process to generate translation-sensitive trigger patterns. Moreover, we employ a relative embedding method based on landmark-based regions to enhance the stealthiness of the poisoned samples. Consequently, detectors trained on our poisoned samples are embedded with backdoors. Notably, our approach surpasses SoTA backdoor baselines with a significant improvement in attack success rate (+16.39\\% BD-AUC) and reduction in visibility (-12.65\\% $L_\\infty$). Furthermore, our attack exhibits promising performance against backdoor defenses. We anticipate that this paper will draw greater attention to the potential threats posed by backdoor attacks in face forgery detection scenarios. Our codes will be made available at \\url{https://github.com/JWLiang007/PFF}",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "ICLR 2024 Spotlight"
+    },
+    {
         "paper id": "2402.11515",
         "abstract url": "https://arxiv.org/abs/2402.11515",
         "title": "Optimal Parallelization Strategies for Active Flow Control in Deep Reinforcement Learning-Based Computational Fluid Dynamics",
@@ -1150,6 +1223,22 @@
             "cs.LG"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2402.11653",
+        "abstract url": "https://arxiv.org/abs/2402.11653",
+        "title": "Combinatorial Client-Master Multiagent Deep Reinforcement Learning for Task Offloading in Mobile Edge Computing",
+        "rating": 0.5,
+        "keywords": [
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "Recently, there has been an explosion of mobile applications that perform computationally intensive tasks such as video streaming, data mining, virtual reality, augmented reality, image processing, video processing, face recognition, and online gaming. However, user devices (UDs), such as tablets and smartphones, have a limited ability to perform the computation needs of the tasks. Mobile edge computing (MEC) has emerged as a promising technology to meet the increasing computing demands of UDs. Task offloading in MEC is a strategy that meets the demands of UDs by distributing tasks between UDs and MEC servers. Deep reinforcement learning (DRL) is gaining attention in task-offloading problems because it can adapt to dynamic changes and minimize online computational complexity. However, the various types of continuous and discrete resource constraints on UDs and MEC servers pose challenges to the design of an efficient DRL-based task-offloading strategy. Existing DRL-based task-offloading algorithms focus on the constraints of the UDs, assuming the availability of enough storage resources on the server. Moreover, existing multiagent DRL (MADRL)--based task-offloading algorithms are homogeneous agents and consider homogeneous constraints as a penalty in their reward function. We proposed a novel combinatorial client-master MADRL (CCM\\_MADRL) algorithm for task offloading in MEC (CCM\\_MADRL\\_MEC) that enables UDs to decide their resource requirements and the server to make a combinatorial decision based on the requirements of the UDs. CCM\\_MADRL\\_MEC is the first MADRL in task offloading to consider server storage capacity in addition to the constraints in the UDs. By taking advantage of the combinatorial action selection, CCM\\_MADRL\\_MEC has shown superior convergence over existing MADDPG and heuristic algorithms.",
+        "subjects": [
+            "cs.AI"
+        ],
+        "comment": "11 pages, 5 figures, 2 tables"
     },
     {
         "paper id": "2402.11722",
@@ -1337,11 +1426,11 @@
                 "cs.CY"
             ]
         ],
-        "abstract": "Various risk-limiting audit (RLA) methods have been developed for instant-runoff voting (IRV) elections. A recent method, AWAIRE, is the first efficient approach that does not require cast vote records (CVRs). AWAIRE involves adaptively weighted averages of test statistics, essentially \"learning\" an effective set of hypotheses to test. However, the initial paper on AWAIRE only examined a few weighting schemes and parameter settings. We provide an extensive exploration of schemes and settings, to identify and recommend efficient choices for practical use. We focus only on the (hardest) case where CVRs are not available, using simulations based on real election data to assess performance. Across our comparisons, the most effective schemes are often those that place most or all of the weight on the apparent \"best\" hypotheses based on already seen data. Conversely, the optimal tuning parameters tended to vary based on the election margin. Nonetheless, we quantify the performance trade-offs for different choices across varying election margins, aiding in selecting the most desirable trade-off if a default option is needed. A limitation of the current AWAIRE implementation is its restriction to handling a small number of candidates (previously demonstrated up to six candidates). One path to a more computationally efficient implementation would be to use lazy evaluation and avoid considering all possible hypotheses. Our findings suggest that such an approach could be done without substantially comprising statistical performance.",
+        "abstract": "Various risk-limiting audit (RLA) methods have been developed for instant-runoff voting (IRV) elections. A recent method, AWAIRE, is the first efficient approach that can take advantage of but does not require cast vote records (CVRs). AWAIRE involves adaptively weighted averages of test statistics, essentially \"learning\" an effective set of hypotheses to test. However, the initial paper on AWAIRE only examined a few weighting schemes and parameter settings. We explore schemes and settings more extensively, to identify and recommend efficient choices for practice. We focus on the case where CVRs are not available, assessing performance using simulations based on real election data. The most effective schemes are often those that place most or all of the weight on the apparent \"best\" hypotheses based on already seen data. Conversely, the optimal tuning parameters tended to vary based on the election margin. Nonetheless, we quantify the performance trade-offs for different choices across varying election margins, aiding in selecting the most desirable trade-off if a default option is needed. A limitation of the current AWAIRE implementation is its restriction to a small number of candidates -- up to six in previous implementations. One path to a more computationally efficient implementation would be to use lazy evaluation and avoid considering all possible hypotheses. Our findings suggest that such an approach could be done without substantially compromising statistical performance.",
         "subjects": [
             "cs.CY"
         ],
-        "comment": "15 pages, 4, figures, accepted for Voting'24"
+        "comment": "15 pages, 4, figures, presented at Voting'24. The current version includes some improved wording and fixes a few errors"
     },
     {
         "paper id": "2402.11487",
@@ -1568,47 +1657,6 @@
         "comment": "Published as a conference paper at ICLR 2024"
     },
     {
-        "paper id": "2402.11744",
-        "abstract url": "https://arxiv.org/abs/2402.11744",
-        "title": "Machine-generated Text Localization",
-        "rating": 0,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Machine-Generated Text (MGT) detection aims to identify a piece of text as machine or human written. Prior work has primarily formulated MGT as a binary classification task over an entire document, with limited work exploring cases where only part of a document is machine generated. This paper provides the first in-depth study of MGT that localizes the portions of a document that were machine generated. Thus, if a bad actor were to change a key portion of a news article to spread misinformation, whole document MGT detection may fail since the vast majority is human written, but our approach can succeed due to its granular approach. A key challenge in our MGT localization task is that short spans of text, e.g., a single sentence, provides little information indicating if it is machine generated due to its short length. To address this, we leverage contextual information, where we predict whether multiple sentences are machine or human written at once. This enables our approach to identify changes in style or content to boost performance. A gain of 4-13% mean Average Precision (mAP) over prior work demonstrates the effectiveness of approach on five diverse datasets: GoodNews, VisualNews, WikiText, Essay, and WP. We release our implementation at \\href{https://github.com/Zhongping-Zhang/MGT_Localization}{this http URL}.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2402.11746",
-        "abstract url": "https://arxiv.org/abs/2402.11746",
-        "title": "Language Models are Homer Simpson! Safety Re-Alignment of Fine-tuned Language Models through Task Arithmetic",
-        "rating": 0,
-        "keywords": [
-            [
-                "parameter-efficient"
-            ],
-            [
-                "face"
-            ],
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Aligned language models face a significant limitation as their fine-tuning often results in compromised safety. To tackle this, we propose a simple method RESTA that performs LLM safety realignment. RESTA stands for REstoring Safety through Task Arithmetic. At its core, it involves a simple arithmetic addition of a safety vector to the weights of the compromised model. We demonstrate the effectiveness of RESTA in both parameter-efficient and full fine-tuning, covering a wide range of downstream tasks, including instruction following in Chinese, English, and Hindi, as well as problem-solving capabilities in Code and Math. We also showcase the generalizability of RESTA on three existing safety evaluation benchmarks and a multilingual benchmark dataset proposed as a part of this work, consisting of 550 harmful questions covering 11 categories, each with 5 sub-categories of harm. Overall, RESTA decreases the harmfulness of the compromised model from 18.6% to 5.1% and from 9.2% to 1.5% in parameter-efficient and full fine-tuning, respectively, while maintaining most of the model's performance on the task. We release the source codes at: https://github.com/declare-lab/resta.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2402.11753",
         "abstract url": "https://arxiv.org/abs/2402.11753",
         "title": "ArtPrompt: ASCII Art-based Jailbreak Attacks against Aligned LLMs",
@@ -1686,6 +1734,25 @@
             "cs.CL"
         ],
         "comment": "10 pages"
+    },
+    {
+        "paper id": "2402.14835",
+        "abstract url": "https://arxiv.org/abs/2402.14835",
+        "title": "MIKE: A New Benchmark for Fine-grained Multimodal Entity Knowledge Editing",
+        "rating": 0,
+        "keywords": [
+            [
+                "Knowledge Editing"
+            ],
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Multimodal knowledge editing represents a critical advancement in enhancing the capabilities of Multimodal Large Language Models (MLLMs). Despite its potential, current benchmarks predominantly focus on coarse-grained knowledge, leaving the intricacies of fine-grained (FG) multimodal entity knowledge largely unexplored. This gap presents a notable challenge, as FG entity recognition is pivotal for the practical deployment and effectiveness of MLLMs in diverse real-world scenarios. To bridge this gap, we introduce MIKE, a comprehensive benchmark and dataset specifically designed for the FG multimodal entity knowledge editing. MIKE encompasses a suite of tasks tailored to assess different perspectives, including Vanilla Name Answering, Entity-Level Caption, and Complex-Scenario Recognition. In addition, a new form of knowledge editing, Multi-step Editing, is introduced to evaluate the editing efficiency. Through our extensive evaluations, we demonstrate that the current state-of-the-art methods face significant challenges in tackling our proposed benchmark, underscoring the complexity of FG knowledge editing in MLLMs. Our findings spotlight the urgent need for novel approaches in this domain, setting a clear agenda for future research and development efforts within the community.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": "8 pages"
     },
     {
         "paper id": "2402.11469",
@@ -1782,6 +1849,22 @@
             "cs.LG"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2402.11635",
+        "abstract url": "https://arxiv.org/abs/2402.11635",
+        "title": "Tool-Augmented LLMs as a Universal Interface for IDEs",
+        "rating": -0.5,
+        "keywords": [
+            [
+                "Workshop"
+            ]
+        ],
+        "abstract": "Modern-day Integrated Development Environments (IDEs) have come a long way from the early text editing utilities to the complex programs encompassing thousands of functions to help developers. However, with the increasing number of efficiency-enhancing tools incorporated, IDEs gradually became sophisticated software with a steep learning curve. The rise of the Large Language Models (LLMs) capable of both natural language dialogue and code generation leads to a discourse on the obsolescence of the concept of IDE. In this work, we offer a view on the place of the LLMs in the IDEs as the universal interface wrapping the IDE facilities. We envision a model that is able to perform complex actions involving multiple IDE features upon user command, stripping the user experience of the tedious work involved in searching through options and actions. For the practical part of the work, we engage with the works exploring the ability of LLMs to call for external tools to expedite a given task execution. We showcase a proof-of-concept of such a tool.",
+        "subjects": [
+            "cs.SE"
+        ],
+        "comment": "First IDE Workshop, ICSE'24"
     },
     {
         "paper id": "2402.11641",
@@ -2021,14 +2104,32 @@
         "comment": null
     },
     {
+        "paper id": "2402.11488",
+        "abstract url": "https://arxiv.org/abs/2402.11488",
+        "title": "IRFundusSet: An Integrated Retinal Fundus Dataset with a Harmonized Healthy Label",
+        "rating": -1,
+        "keywords": [
+            [
+                "Retinal"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Ocular conditions are a global concern and computational tools utilizing retinal fundus color photographs can aid in routine screening and management. Obtaining comprehensive and sufficiently sized datasets, however, is non-trivial for the intricate retinal fundus, which exhibits heterogeneities within pathologies, in addition to variations from demographics and acquisition. Moreover, retinal fundus datasets in the public space suffer fragmentation in the organization of data and definition of a healthy observation. We present Integrated Retinal Fundus Set (IRFundusSet), a dataset that consolidates, harmonizes and curates several public datasets, facilitating their consumption as a unified whole and with a consistent is_normal label. IRFundusSet comprises a Python package that automates harmonization and avails a dataset object in line with the PyTorch approach. Moreover, images are physically reviewed and a new is_normal label is annotated for a consistent definition of a healthy observation. Ten public datasets are initially considered with a total of 46064 images, of which 25406 are curated for a new is_normal label and 3515 are deemed healthy across the sources.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2402.11497",
         "abstract url": "https://arxiv.org/abs/2402.11497",
         "title": "Thyroid ultrasound diagnosis improvement via multi-view self-supervised learning and two-stage pre-training",
         "rating": -1,
         "keywords": [
             [
-                "diagnosis",
-                "face"
+                "diagnosis"
             ],
             [
                 "cs.CV"
@@ -2111,25 +2212,6 @@
             "cs.CC"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2402.11548",
-        "abstract url": "https://arxiv.org/abs/2402.11548",
-        "title": "KMMLU: Measuring Massive Multitask Language Understanding in Korean",
-        "rating": -1,
-        "keywords": [
-            [
-                "Face"
-            ],
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "We propose KMMLU, a new Korean benchmark with 35,030 expert-level multiple-choice questions across 45 subjects ranging from humanities to STEM. Unlike previous Korean benchmarks that are translated from existing English benchmarks, KMMLU is collected from original Korean exams, capturing linguistic and cultural aspects of the Korean language. We test 26 publically available and proprietary LLMs, identifying significant room for improvement. The best publicly available model achieves 50.54% on KMMLU, far below the average human performance of 62.6%. This model was primarily trained for English and Chinese, not Korean. Current LLMs tailored to Korean, such as Polyglot-Ko, perform far worse. Surprisingly, even the most capable proprietary LLMs, e.g., GPT-4 and HyperCLOVA X, achieve 59.95% and 53.40%, respectively. This suggests that further work is needed to improve Korean LLMs, and KMMLU offers the right tool to track this progress. We make our dataset publicly available on the Hugging Face Hub and integrate the benchmark into EleutherAI's Language Model Evaluation Harness.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": "Under Review"
     },
     {
         "paper id": "2402.11552",
@@ -2382,25 +2464,6 @@
         "abstract": "We introduce a novel approach for learning memory kernels in Generalized Langevin Equations. This approach initially utilizes a regularized Prony method to estimate correlation functions from trajectory data, followed by regression over a Sobolev norm-based loss function with RKHS regularization. Our method guarantees improved performance within an exponentially weighted L^2 space, with the kernel estimation error controlled by the error in estimated correlation functions. We demonstrate the superiority of our estimator compared to other regression estimators that rely on L^2 loss functions and also an estimator derived from the inverse Laplace transform, using numerical examples that highlight its consistent advantage across various weight parameter selections. Additionally, we provide examples that include the application of force and drift terms in the equation.",
         "subjects": [
             "stat.ML"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2402.11728",
-        "abstract url": "https://arxiv.org/abs/2402.11728",
-        "title": "Numerical Claim Detection in Finance: A New Financial Dataset, Weak-Supervision Model, and Market Analysis",
-        "rating": -1,
-        "keywords": [
-            [
-                "Face"
-            ],
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "In this paper, we investigate the influence of claims in analyst reports and earnings calls on financial market returns, considering them as significant quarterly events for publicly traded companies. To facilitate a comprehensive analysis, we construct a new financial dataset for the claim detection task in the financial domain. We benchmark various language models on this dataset and propose a novel weak-supervision model that incorporates the knowledge of subject matter experts (SMEs) in the aggregation function, outperforming existing approaches. Furthermore, we demonstrate the practical utility of our proposed model by constructing a novel measure ``optimism\". Furthermore, we observed the dependence of earnings surprise and return on our optimism measure. Our dataset, models, and code will be made publicly (under CC BY 4.0 license) available on GitHub and Hugging Face.",
-        "subjects": [
-            "cs.CL"
         ],
         "comment": null
     },
@@ -2677,50 +2740,6 @@
         "comment": "arXiv admin note: substantial text overlap with arXiv:2008.07669, arXiv:nlin/0307015 by other authors"
     },
     {
-        "paper id": "2402.11473",
-        "abstract url": "https://arxiv.org/abs/2402.11473",
-        "title": "Poisoned Forgery Face: Towards Backdoor Attacks on Face Forgery Detection",
-        "rating": -1.5,
-        "keywords": [
-            [
-                "Attacks"
-            ],
-            [
-                "Face"
-            ],
-            [
-                "cs.CV"
-            ],
-            [
-                "ICLR"
-            ]
-        ],
-        "abstract": "The proliferation of face forgery techniques has raised significant concerns within society, thereby motivating the development of face forgery detection methods. These methods aim to distinguish forged faces from genuine ones and have proven effective in practical applications. However, this paper introduces a novel and previously unrecognized threat in face forgery detection scenarios caused by backdoor attack. By embedding backdoors into models and incorporating specific trigger patterns into the input, attackers can deceive detectors into producing erroneous predictions for forged faces. To achieve this goal, this paper proposes \\emph{Poisoned Forgery Face} framework, which enables clean-label backdoor attacks on face forgery detectors. Our approach involves constructing a scalable trigger generator and utilizing a novel convolving process to generate translation-sensitive trigger patterns. Moreover, we employ a relative embedding method based on landmark-based regions to enhance the stealthiness of the poisoned samples. Consequently, detectors trained on our poisoned samples are embedded with backdoors. Notably, our approach surpasses SoTA backdoor baselines with a significant improvement in attack success rate (+16.39\\% BD-AUC) and reduction in visibility (-12.65\\% $L_\\infty$). Furthermore, our attack exhibits promising performance against backdoor defenses. We anticipate that this paper will draw greater attention to the potential threats posed by backdoor attacks in face forgery detection scenarios. Our codes will be made available at \\url{https://github.com/JWLiang007/PFF}",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "ICLR 2024 Spotlight"
-    },
-    {
-        "paper id": "2402.11653",
-        "abstract url": "https://arxiv.org/abs/2402.11653",
-        "title": "Combinatorial Client-Master Multiagent Deep Reinforcement Learning for Task Offloading in Mobile Edge Computing",
-        "rating": -1.5,
-        "keywords": [
-            [
-                "face"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "Recently, there has been an explosion of mobile applications that perform computationally intensive tasks such as video streaming, data mining, virtual reality, augmented reality, image processing, video processing, face recognition, and online gaming. However, user devices (UDs), such as tablets and smartphones, have a limited ability to perform the computation needs of the tasks. Mobile edge computing (MEC) has emerged as a promising technology to meet the increasing computing demands of UDs. Task offloading in MEC is a strategy that meets the demands of UDs by distributing tasks between UDs and MEC servers. Deep reinforcement learning (DRL) is gaining attention in task-offloading problems because it can adapt to dynamic changes and minimize online computational complexity. However, the various types of continuous and discrete resource constraints on UDs and MEC servers pose challenges to the design of an efficient DRL-based task-offloading strategy. Existing DRL-based task-offloading algorithms focus on the constraints of the UDs, assuming the availability of enough storage resources on the server. Moreover, existing multiagent DRL (MADRL)--based task-offloading algorithms are homogeneous agents and consider homogeneous constraints as a penalty in their reward function. We proposed a novel combinatorial client-master MADRL (CCM\\_MADRL) algorithm for task offloading in MEC (CCM\\_MADRL\\_MEC) that enables UDs to decide their resource requirements and the server to make a combinatorial decision based on the requirements of the UDs. CCM\\_MADRL\\_MEC is the first MADRL in task offloading to consider server storage capacity in addition to the constraints in the UDs. By taking advantage of the combinatorial action selection, CCM\\_MADRL\\_MEC has shown superior convergence over existing MADDPG and heuristic algorithms.",
-        "subjects": [
-            "cs.AI"
-        ],
-        "comment": "11 pages, 5 figures, 2 tables"
-    },
-    {
         "paper id": "2402.11664",
         "abstract url": "https://arxiv.org/abs/2402.11664",
         "title": "Interpretable Short-Term Load Forecasting via Multi-Scale Temporal Decomposition",
@@ -2836,6 +2855,22 @@
         "comment": null
     },
     {
+        "paper id": "2402.11490",
+        "abstract url": "https://arxiv.org/abs/2402.11490",
+        "title": "Research status of the Mendeleev Periodic Table: a bibliometric analysis",
+        "rating": -2,
+        "keywords": [
+            [
+                "Chemistry"
+            ]
+        ],
+        "abstract": "In this paper, we present a bibliometric analysis of the Mendeleev Periodic Table. We have conducted a comprehensive analysis of the Scopus-based database using the keyword \"Mendeleev Periodic Table\". Our findings suggest that the Mendeleev Periodic Table is an influential topic in the field of Inorganic as well as Organic Chemistry. Future researchers may focus on expanding our analysis to include other bibliometric indicators to gain a more comprehensive understanding of the impact of the Mendeleev Periodic Table in chemistry-based scientific investigations and even in the field of astrochemistry.",
+        "subjects": [
+            "cs.DL"
+        ],
+        "comment": "16 pages, 9 figures"
+    },
+    {
         "paper id": "2402.11498",
         "abstract url": "https://arxiv.org/abs/2402.11498",
         "title": "Verifiably Following Complex Robot Instructions with Foundation Models",
@@ -2925,7 +2960,7 @@
         "subjects": [
             "quant-ph"
         ],
-        "comment": "10 pages, no figures. Partly different approach from v2 but yielding the same conclusions and a strengthened result. Theorem 6 now states necessary and sufficient conditions. To appear in IEEE Control Systems Letters. Comments are welcome!"
+        "comment": "10 pages, no figures. Minor typos corrected and numbering now follows the published version"
     },
     {
         "paper id": "2402.11588",
@@ -2972,11 +3007,10 @@
         "rating": -2,
         "keywords": [
             [
-                "depth"
+                "event cameras"
             ],
             [
-                "biological",
-                "Face"
+                "biological"
             ],
             [
                 "cs.CV"
@@ -3003,6 +3037,22 @@
             "quant-ph"
         ],
         "comment": "9 pages, 3 figures"
+    },
+    {
+        "paper id": "2402.11662",
+        "abstract url": "https://arxiv.org/abs/2402.11662",
+        "title": "TDE-3: An improved prior for optical flow computation in spiking neural networks",
+        "rating": -2,
+        "keywords": [
+            [
+                "bioinspired"
+            ]
+        ],
+        "abstract": "Motion detection is a primary task required for robotic systems to perceive and navigate in their environment. Proposed in the literature bioinspired neuromorphic Time-Difference Encoder (TDE-2) combines event-based sensors and processors with spiking neural networks to provide real-time and energy-efficient motion detection through extracting temporal correlations between two points in space. However, on the algorithmic level, this design leads to loss of direction-selectivity of individual TDEs in textured environments. Here we propose an augmented 3-point TDE (TDE-3) with additional inhibitory input that makes TDE-3 direction-selectivity robust in textured environments. We developed a procedure to train the new TDE-3 using backpropagation through time and surrogate gradients to linearly map input velocities into an output spike count or an Inter-Spike Interval (ISI). Our work is the first instance of training a spiking neuron to have a specific ISI. Using synthetic data we compared training and inference with spike count and ISI with respect to changes in stimuli dynamic range, spatial frequency, and level of noise. ISI turns out to be more robust towards variation in spatial frequency, whereas the spike count is a more reliable training signal in the presence of noise. We performed the first in-depth quantitative investigation of optical flow coding with TDE and compared TDE-2 vs TDE-3 in terms of energy-efficiency and coding precision. Results show that on the network level both detectors show similar precision (20 degree angular error, 88% correlation with ground truth). Yet, due to the more robust direction-selectivity of individual TDEs, TDE-3 based network spike less and hence is more energy-efficient. Reported precision is on par with model-based methods but the spike-based processing of the TDEs provides allows more energy-efficient inference with neuromorphic hardware.",
+        "subjects": [
+            "cs.NE"
+        ],
+        "comment": null
     },
     {
         "paper id": "2402.11674",
@@ -3222,28 +3272,6 @@
         "comment": "4 pages, submitted to FCS"
     },
     {
-        "paper id": "2402.14835",
-        "abstract url": "https://arxiv.org/abs/2402.14835",
-        "title": "MIKE: A New Benchmark for Fine-grained Multimodal Entity Knowledge Editing",
-        "rating": -2,
-        "keywords": [
-            [
-                "Knowledge Editing"
-            ],
-            [
-                "face"
-            ],
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Multimodal knowledge editing represents a critical advancement in enhancing the capabilities of Multimodal Large Language Models (MLLMs). Despite its potential, current benchmarks predominantly focus on coarse-grained knowledge, leaving the intricacies of fine-grained (FG) multimodal entity knowledge largely unexplored. This gap presents a notable challenge, as FG entity recognition is pivotal for the practical deployment and effectiveness of MLLMs in diverse real-world scenarios. To bridge this gap, we introduce MIKE, a comprehensive benchmark and dataset specifically designed for the FG multimodal entity knowledge editing. MIKE encompasses a suite of tasks tailored to assess different perspectives, including Vanilla Name Answering, Entity-Level Caption, and Complex-Scenario Recognition. In addition, a new form of knowledge editing, Multi-step Editing, is introduced to evaluate the editing efficiency. Through our extensive evaluations, we demonstrate that the current state-of-the-art methods face significant challenges in tackling our proposed benchmark, underscoring the complexity of FG knowledge editing in MLLMs. Our findings spotlight the urgent need for novel approaches in this domain, setting a clear agenda for future research and development efforts within the community.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": "8 pages"
-    },
-    {
         "paper id": "2402.14836",
         "abstract url": "https://arxiv.org/abs/2402.14836",
         "title": "Stealthy Attack on Large Language Model based Recommendation",
@@ -3272,6 +3300,7 @@
         "rating": -2,
         "keywords": [
             [
+                "chemistry",
                 "chemical"
             ]
         ],
@@ -3307,7 +3336,7 @@
                 "health"
             ]
         ],
-        "abstract": "This research note is organized with respect to a novel approach to solving problems related to the spread of fake news and effective fact-checking. Focusing on the least-cost routing problem, the discussion is organized with respect to the use of Metzler functions and Metzler matrices to model the dynamics of information propagation among news providers. With this approach, we designed a strategy to minimize the spread of fake news, which is detrimental to informational health, while at the same time maximizing the spread of credible information. In particular, through the punitive dominance problem and the maximum compensation problem, we developed and examined a path to reassess the incentives of news providers to act and to analyze their impact on the equilibrium of the information market. By applying the concept of entanglement to the context of information propagation, we shed light on the complexity of interactions among news providers and contribute to the formulation of more effective information management strategies. This study provides new theoretical and practical insights into issues related to fake news and fact-checking, and will be examined against improving informational health and public digital health.",
+        "abstract": "This research note is organized with respect to a novel approach to solving problems related to the spread of fake news and effective fact-checking. Focusing on the least-cost routing problem, the discussion is organized with respect to the use of Metzler functions and Metzler matrices to model the dynamics of information propagation among news providers. With this approach, we designed a strategy to minimize the spread of fake news, which is detrimental to informational health, while at the same time maximizing the spread of credible information. In particular, through the punitive dominance problem and the maximum compensation problem, we developed and examined a path to reassess the incentives of news providers to act and to analyze their impact on the equilibrium of the information market. By applying the concept of entanglement to the context of information propagation, we shed light on the complexity of interactions among news providers and contribute to the formulation of more effective information management strategies. This study provides new theoretical and practical insights into issues related to fake news and fact-checking, and will be examined against improving informational health and public digital health.This paper is partially an attempt to utilize \"Generative AI\" and was written with educational intent. There are currently no plans for it to become a peer-reviewed paper.",
         "subjects": [
             "physics.soc-ph"
         ],
@@ -3374,6 +3403,25 @@
         "comment": null
     },
     {
+        "paper id": "2402.11523",
+        "abstract url": "https://arxiv.org/abs/2402.11523",
+        "title": "Neighborhood-Enhanced Supervised Contrastive Learning for Collaborative Filtering",
+        "rating": -3,
+        "keywords": [
+            [
+                "graph"
+            ],
+            [
+                "recommendation"
+            ]
+        ],
+        "abstract": "While effective in recommendation tasks, collaborative filtering (CF) techniques face the challenge of data sparsity. Researchers have begun leveraging contrastive learning to introduce additional self-supervised signals to address this. However, this approach often unintentionally distances the target user/item from their collaborative neighbors, limiting its efficacy. In response, we propose a solution that treats the collaborative neighbors of the anchor node as positive samples within the final objective loss function. This paper focuses on developing two unique supervised contrastive loss functions that effectively combine supervision signals with contrastive loss. We analyze our proposed loss functions through the gradient lens, demonstrating that different positive samples simultaneously influence updating the anchor node's embeddings. These samples' impact depends on their similarities to the anchor node and the negative samples. Using the graph-based collaborative filtering model as our backbone and following the same data augmentation methods as the existing contrastive learning model SGL, we effectively enhance the performance of the recommendation model. Our proposed Neighborhood-Enhanced Supervised Contrastive Loss (NESCL) model substitutes the contrastive loss function in SGL with our novel loss function, showing marked performance improvement. On three real-world datasets, Yelp2018, Gowalla, and Amazon-Book, our model surpasses the original SGL by 10.09%, 7.09%, and 35.36% on NDCG@20, respectively.",
+        "subjects": [
+            "cs.IR"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2402.11538",
         "abstract url": "https://arxiv.org/abs/2402.11538",
         "title": "PASCL: Supervised Contrastive Learning with Perturbative Augmentation for Particle Decay Reconstruction",
@@ -3428,25 +3476,6 @@
         "abstract": "Over the past decade, there has been a remarkable surge in utilizing quadrotors for various purposes due to their simple structure and aggressive maneuverability, such as search and rescue, delivery and autonomous drone racing, etc. One of the key challenges preventing quadrotors from being widely used in these scenarios is online waypoint-constrained time-optimal trajectory generation and control technique. This letter proposes an imitation learning-based online solution to efficiently navigate the quadrotor through multiple waypoints with time-optimal performance. The neural networks (WN&CNets) are trained to learn the control law from the dataset generated by the time-consuming CPC algorithm and then deployed to generate the optimal control commands online to guide the quadrotors. To address the challenge of limited training data and the hover maneuver at the final waypoint, we propose a transition phase strategy that utilizes polynomials to help the quadrotor 'jump over' the stop-and-go maneuver when switching waypoints. Our method is demonstrated in both simulation and real-world experiments, achieving a maximum speed of 7 m/s while navigating through 7 waypoints in a confined space of 6.0 m * 4.0 m * 2.0 m. The results show that with a slight loss in optimality, the WN&CNets significantly reduce the processing time and enable online optimal control for multiple-waypoint-constrained flight tasks.",
         "subjects": [
             "cs.RO"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2402.11662",
-        "abstract url": "https://arxiv.org/abs/2402.11662",
-        "title": "TDE-3: An improved prior for optical flow computation in spiking neural networks",
-        "rating": -3,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "bioinspired"
-            ]
-        ],
-        "abstract": "Motion detection is a primary task required for robotic systems to perceive and navigate in their environment. Proposed in the literature bioinspired neuromorphic Time-Difference Encoder (TDE-2) combines event-based sensors and processors with spiking neural networks to provide real-time and energy-efficient motion detection through extracting temporal correlations between two points in space. However, on the algorithmic level, this design leads to loss of direction-selectivity of individual TDEs in textured environments. Here we propose an augmented 3-point TDE (TDE-3) with additional inhibitory input that makes TDE-3 direction-selectivity robust in textured environments. We developed a procedure to train the new TDE-3 using backpropagation through time and surrogate gradients to linearly map input velocities into an output spike count or an Inter-Spike Interval (ISI). Our work is the first instance of training a spiking neuron to have a specific ISI. Using synthetic data we compared training and inference with spike count and ISI with respect to changes in stimuli dynamic range, spatial frequency, and level of noise. ISI turns out to be more robust towards variation in spatial frequency, whereas the spike count is a more reliable training signal in the presence of noise. We performed the first in-depth quantitative investigation of optical flow coding with TDE and compared TDE-2 vs TDE-3 in terms of energy-efficiency and coding precision. Results show that on the network level both detectors show similar precision (20 degree angular error, 88% correlation with ground truth). Yet, due to the more robust direction-selectivity of individual TDEs, TDE-3 based network spike less and hence is more energy-efficient. Reported precision is on par with model-based methods but the spike-based processing of the TDEs provides allows more energy-efficient inference with neuromorphic hardware.",
-        "subjects": [
-            "cs.NE"
         ],
         "comment": null
     },
@@ -3584,8 +3613,7 @@
                 "graph"
             ],
             [
-                "healthcare",
-                "face"
+                "healthcare"
             ],
             [
                 "cs.LG"
@@ -3664,32 +3692,10 @@
         "comment": null
     },
     {
-        "paper id": "2402.11523",
-        "abstract url": "https://arxiv.org/abs/2402.11523",
-        "title": "Neighborhood-Enhanced Supervised Contrastive Learning for Collaborative Filtering",
-        "rating": -5,
-        "keywords": [
-            [
-                "graph"
-            ],
-            [
-                "face"
-            ],
-            [
-                "recommendation"
-            ]
-        ],
-        "abstract": "While effective in recommendation tasks, collaborative filtering (CF) techniques face the challenge of data sparsity. Researchers have begun leveraging contrastive learning to introduce additional self-supervised signals to address this. However, this approach often unintentionally distances the target user/item from their collaborative neighbors, limiting its efficacy. In response, we propose a solution that treats the collaborative neighbors of the anchor node as positive samples within the final objective loss function. This paper focuses on developing two unique supervised contrastive loss functions that effectively combine supervision signals with contrastive loss. We analyze our proposed loss functions through the gradient lens, demonstrating that different positive samples simultaneously influence updating the anchor node's embeddings. These samples' impact depends on their similarities to the anchor node and the negative samples. Using the graph-based collaborative filtering model as our backbone and following the same data augmentation methods as the existing contrastive learning model SGL, we effectively enhance the performance of the recommendation model. Our proposed Neighborhood-Enhanced Supervised Contrastive Loss (NESCL) model substitutes the contrastive loss function in SGL with our novel loss function, showing marked performance improvement. On three real-world datasets, Yelp2018, Gowalla, and Amazon-Book, our model surpasses the original SGL by 10.09%, 7.09%, and 35.36% on NDCG@20, respectively.",
-        "subjects": [
-            "cs.IR"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2402.11763",
         "abstract url": "https://arxiv.org/abs/2402.11763",
         "title": "Autonomous Hyperspectral Characterisation Station: Robotically Assisted Characterisation of Polymer Degradation",
-        "rating": -5,
+        "rating": -7,
         "keywords": [
             [
                 "robotics",
@@ -3697,6 +3703,9 @@
             ],
             [
                 "biodegradable"
+            ],
+            [
+                "chemistry"
             ],
             [
                 "hyperspectral imaging"
@@ -3731,18 +3740,6 @@
             "eess.SY"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2402.11490",
-        "abstract url": "https://arxiv.org/abs/2402.11490",
-        "title": "Research status of the Mendeleev Periodic Table: a bibliometric analysis",
-        "rating": -10,
-        "keywords": [],
-        "abstract": "In this paper, we present a bibliometric analysis of the Mendeleev Periodic Table. We have conducted a comprehensive analysis of the Scopus-based database using the keyword \"Mendeleev Periodic Table\". Our findings suggest that the Mendeleev Periodic Table is an influential topic in the field of Inorganic as well as Organic Chemistry. Future researchers may focus on expanding our analysis to include other bibliometric indicators to gain a more comprehensive understanding of the impact of the Mendeleev Periodic Table in chemistry-based scientific investigations and even in the field of astrochemistry.",
-        "subjects": [
-            "cs.DL"
-        ],
-        "comment": "16 pages, 9 figures"
     },
     {
         "paper id": "2402.11492",
@@ -3834,7 +3831,7 @@
         "title": "On the Limits of Information Spread by Memory-less Agents",
         "rating": -10,
         "keywords": [],
-        "abstract": "We address the self-stabilizing bit-dissemination problem, designed to capture the challenges of spreading information and reaching consensus among entities with minimal cognitive and communication capacities. Specifically, a group of $n$ agents is required to adopt the correct opinion, initially held by a single informed individual, choosing from two possible opinions. In order to make decisions, agents are restricted to observing the opinions of a few randomly sampled agents, and lack the ability to communicate further and to identify the informed individual. Additionally, agents cannot retain any information from one round to the next. According to a recent publication in SODA (2024), a logarithmic convergence time without memory is achievable in the parallel setting (where agents are updated simultaneously), as long as the number of samples is at least $\u03a9(\\sqrt{n \\log n})$. However, determining the minimal sample size for an efficient protocol to exist remains a challenging open question. As a preliminary step towards an answer, we establish the first lower bound for this problem in the parallel setting. Specifically, we demonstrate that any protocol with constant sample size requires asymptotically an almost-linear number of rounds to converge, with high probability. This lower bound holds even when agents are aware of both the exact value of $n$ and their own opinion, and encompasses various simple existing dynamics designed to achieve consensus. Beyond the bit-dissemination problem, our result sheds light on the convergence time of the \"minority\" dynamics, the counterpart of the well-known majority rule, whose chaotic behavior is yet to be fully understood despite the apparent simplicity of the algorithm.",
+        "abstract": "We address the self-stabilizing bit-dissemination problem, designed to capture the challenges of spreading information and reaching consensus among entities with minimal cognitive and communication capacities. Specifically, a group of $n$ agents is required to adopt the correct opinion, initially held by a single informed individual, choosing from two possible opinions. In order to make decisions, agents are restricted to observing the opinions of a few randomly sampled agents, and lack the ability to communicate further and to identify the informed individual. Additionally, agents cannot retain any information from one round to the next. According to a recent publication in SODA (2024), a logarithmic convergence time without memory is achievable in the parallel setting (where agents are updated simultaneously), as long as the number of samples is at least $\u03a9(\\sqrt{n \\log n})$. However, determining the minimal sample size for an efficient protocol to exist remains a challenging open question. As a preliminary step towards an answer, we establish the first lower bound for this problem in the parallel setting. Specifically, we demonstrate that it is impossible for any memory-less protocol with constant sample size, to converge with high probability in less than an almost-linear number of rounds. This lower bound holds even when agents are aware of both the exact value of $n$ and their own opinion, and encompasses various simple existing dynamics designed to achieve consensus. Beyond the bit-dissemination problem, our result sheds light on the convergence time of the \"minority\" dynamics, the counterpart of the well-known majority rule, whose chaotic behavior is yet to be fully understood despite the apparent simplicity of the algorithm.",
         "subjects": [
             "cs.MA"
         ],
@@ -3923,18 +3920,6 @@
             "eess.SP"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2402.11635",
-        "abstract url": "https://arxiv.org/abs/2402.11635",
-        "title": "Tool-Augmented LLMs as a Universal Interface for IDEs",
-        "rating": -10,
-        "keywords": [],
-        "abstract": "Modern-day Integrated Development Environments (IDEs) have come a long way from the early text editing utilities to the complex programs encompassing thousands of functions to help developers. However, with the increasing number of efficiency-enhancing tools incorporated, IDEs gradually became sophisticated software with a steep learning curve. The rise of the Large Language Models (LLMs) capable of both natural language dialogue and code generation leads to a discourse on the obsolescence of the concept of IDE. In this work, we offer a view on the place of the LLMs in the IDEs as the universal interface wrapping the IDE facilities. We envision a model that is able to perform complex actions involving multiple IDE features upon user command, stripping the user experience of the tedious work involved in searching through options and actions. For the practical part of the work, we engage with the works exploring the ability of LLMs to call for external tools to expedite a given task execution. We showcase a proof-of-concept of such a tool.",
-        "subjects": [
-            "cs.SE"
-        ],
-        "comment": "First IDE Workshop, ICSE'24"
     },
     {
         "paper id": "2402.11648",

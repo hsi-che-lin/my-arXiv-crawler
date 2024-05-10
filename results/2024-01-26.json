@@ -51,7 +51,8 @@
         "keywords": [
             [
                 "parameter-efficient",
-                "efficient fine-tuning"
+                "efficient fine-tuning",
+                "GPU memory"
             ],
             [
                 "cs.LG"
@@ -446,6 +447,25 @@
             "cs.CL"
         ],
         "comment": "Work in progress"
+    },
+    {
+        "paper id": "2401.15024",
+        "abstract url": "https://arxiv.org/abs/2401.15024",
+        "title": "SliceGPT: Compress Large Language Models by Deleting Rows and Columns",
+        "rating": 1.0,
+        "keywords": [
+            [
+                "cs.LG"
+            ],
+            [
+                "ICLR"
+            ]
+        ],
+        "abstract": "Large language models have become the cornerstone of natural language processing, but their use comes with substantial costs in terms of compute and memory resources. Sparsification provides a solution to alleviate these resource constraints, and recent works have shown that trained models can be sparsified post-hoc. Existing sparsification techniques face challenges as they need additional data structures and offer constrained speedup with current hardware. In this paper we present SliceGPT, a new post-training sparsification scheme which replaces each weight matrix with a smaller (dense) matrix, reducing the embedding dimension of the network. Through extensive experimentation, we show that SliceGPT can remove up to 25% of the model parameters (including embeddings) for LLAMA2-70B, OPT 66B and Phi-2 models while maintaining 99%, 99% and 90% zero-shot task performance of the dense model respectively. Our sliced models run on fewer GPUs and run faster without any additional code optimization: on 24GB consumer GPUs we reduce the total compute for inference on LLAMA2-70B to 64% of that of the dense model; on 40GB A100 GPUs we reduce it to 66%. We offer a new insight, computational invariance in transformer networks, which enables SliceGPT and we hope it will inspire and enable future avenues to reduce memory and computation demands for pre-trained models. Code is available at: https://github.com/microsoft/TransformerCompression",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": "22 pages, 8 figures, accepted at ICLR24"
     },
     {
         "paper id": "2401.15030",
@@ -1059,6 +1079,28 @@
         "comment": "7 pages, 4 figures"
     },
     {
+        "paper id": "2401.15261",
+        "abstract url": "https://arxiv.org/abs/2401.15261",
+        "title": "Vanishing-Point-Guided Video Semantic Segmentation of Driving Scenes",
+        "rating": 0.5,
+        "keywords": [
+            [
+                "vehicle"
+            ],
+            [
+                "cs.CV"
+            ],
+            [
+                "CVPR"
+            ]
+        ],
+        "abstract": "The estimation of implicit cross-frame correspondences and the high computational cost have long been major challenges in video semantic segmentation (VSS) for driving scenes. Prior works utilize keyframes, feature propagation, or cross-frame attention to address these issues. By contrast, we are the first to harness vanishing point (VP) priors for more effective segmentation. Intuitively, objects near VPs (i.e., away from the vehicle) are less discernible. Moreover, they tend to move radially away from the VP over time in the usual case of a forward-facing camera, a straight road, and linear forward motion of the vehicle. Our novel, efficient network for VSS, named VPSeg, incorporates two modules that utilize exactly this pair of static and dynamic VP priors: sparse-to-dense feature mining (DenseVP) and VP-guided motion fusion (MotionVP). MotionVP employs VP-guided motion estimation to establish explicit correspondences across frames and help attend to the most relevant features from neighboring frames, while DenseVP enhances weak dynamic features in distant regions around VPs. These modules operate within a context-detail framework, which separates contextual features from high-resolution local features at different input resolutions to reduce computational costs. Contextual and local features are integrated through contextualized motion attention (CMA) for the final prediction. Extensive experiments on two popular driving segmentation benchmarks, Cityscapes and ACDC, demonstrate that VPSeg outperforms previous SOTA methods, with only modest computational overhead.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "CVPR 2024 highlight"
+    },
+    {
         "paper id": "2401.15284",
         "abstract url": "https://arxiv.org/abs/2401.15284",
         "title": "Five ethical principles for generative AI in scientific research",
@@ -1161,23 +1203,20 @@
         "comment": null
     },
     {
-        "paper id": "2401.14675",
-        "abstract url": "https://arxiv.org/abs/2401.14675",
-        "title": "Multi-model learning by sequential reading of untrimmed videos for action recognition",
-        "rating": 0,
+        "paper id": "2402.10921",
+        "abstract url": "https://arxiv.org/abs/2402.10921",
+        "title": "AM^2-EmoJE: Adaptive Missing-Modality Emotion Recognition in Conversation via Joint Embedding Learning",
+        "rating": 0.5,
         "keywords": [
             [
-                "federated learning"
-            ],
-            [
-                "cs.CV"
+                "cs.AI"
             ]
         ],
-        "abstract": "We propose a new method for learning videos by aggregating multiple models by sequentially extracting video clips from untrimmed video. The proposed method reduces the correlation between clips by feeding clips to multiple models in turn and synchronizes these models through federated learning. Experimental results show that the proposed method improves the performance compared to the no synchronization.",
+        "abstract": "Human emotion can be presented in different modes i.e., audio, video, and text. However, the contribution of each mode in exhibiting each emotion is not uniform. Furthermore, the availability of complete mode-specific details may not always be guaranteed in the test time. In this work, we propose AM^2-EmoJE, a model for Adaptive Missing-Modality Emotion Recognition in Conversation via Joint Embedding Learning model that is grounded on two-fold contributions: First, a query adaptive fusion that can automatically learn the relative importance of its mode-specific representations in a query-specific manner. By this the model aims to prioritize the mode-invariant spatial query details of the emotion patterns, while also retaining its mode-exclusive aspects within the learned multimodal query descriptor. Second the multimodal joint embedding learning module that explicitly addresses various missing modality scenarios in test-time. By this, the model learns to emphasize on the correlated patterns across modalities, which may help align the cross-attended mode-specific descriptors pairwise within a joint-embedding space and thereby compensate for missing modalities during inference. By leveraging the spatio-temporal details at the dialogue level, the proposed AM^2-EmoJE not only demonstrates superior performance compared to the best-performing state-of-the-art multimodal methods, by effectively leveraging body language in place of face expression, it also exhibits an enhanced privacy feature. By reporting around 2-5% improvement in the weighted-F1 score, the proposed multimodal joint embedding module facilitates an impressive performance gain in a variety of missing-modality query scenarios during test time.",
         "subjects": [
-            "cs.CV"
+            "cs.AI"
         ],
-        "comment": "The International Workshop on Frontiers of Computer Vision (IW-FCV2024)"
+        "comment": null
     },
     {
         "paper id": "2401.14719",
@@ -1414,25 +1453,6 @@
         "comment": "12 pages, under review"
     },
     {
-        "paper id": "2401.15261",
-        "abstract url": "https://arxiv.org/abs/2401.15261",
-        "title": "Vanishing-Point-Guided Video Semantic Segmentation of Driving Scenes",
-        "rating": 0,
-        "keywords": [
-            [
-                "vehicle"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "The estimation of implicit cross-frame correspondences and the high computational cost have long been major challenges in video semantic segmentation (VSS) for driving scenes. Prior works utilize keyframes, feature propagation, or cross-frame attention to address these issues. By contrast, we are the first to harness vanishing point (VP) priors for more effective segmentation. Intuitively, objects near VPs (i.e., away from the vehicle) are less discernible. Moreover, they tend to move radially away from the VP over time in the usual case of a forward-facing camera, a straight road, and linear forward motion of the vehicle. Our novel, efficient network for VSS, named VPSeg, incorporates two modules that utilize exactly this pair of static and dynamic VP priors: sparse-to-dense feature mining (DenseVP) and VP-guided motion fusion (MotionVP). MotionVP employs VP-guided motion estimation to establish explicit correspondences across frames and help attend to the most relevant features from neighboring frames, while DenseVP enhances weak dynamic features in distant regions around VPs. These modules operate within a context-detail framework, which separates contextual features from high-resolution local features at different input resolutions to reduce computational costs. Contextual and local features are integrated through contextualized motion attention (CMA) for the final prediction. Extensive experiments on two popular driving segmentation benchmarks, Cityscapes and ACDC, demonstrate that VPSeg outperforms previous SOTA methods, with only modest computational overhead.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2401.15282",
         "abstract url": "https://arxiv.org/abs/2401.15282",
         "title": "GEM: Boost Simple Network for Glass Surface Segmentation via Segment Anything Model and Data Synthesis",
@@ -1459,7 +1479,8 @@
         "rating": 0,
         "keywords": [
             [
-                "3D"
+                "3D",
+                "Skeleton"
             ],
             [
                 "cs.CV"
@@ -1472,14 +1493,54 @@
         "comment": "A up-to-date resource (papers, codes, data, etc.) of this survey is provided at https://github.com/Kali-Hac/3D-skeleton-based-person-re-ID-survey"
     },
     {
+        "paper id": "2401.14675",
+        "abstract url": "https://arxiv.org/abs/2401.14675",
+        "title": "Multi-model learning by sequential reading of untrimmed videos for action recognition",
+        "rating": -0.5,
+        "keywords": [
+            [
+                "federated learning"
+            ],
+            [
+                "cs.CV"
+            ],
+            [
+                "Workshop"
+            ]
+        ],
+        "abstract": "We propose a new method for learning videos by aggregating multiple models by sequentially extracting video clips from untrimmed video. The proposed method reduces the correlation between clips by feeding clips to multiple models in turn and synchronizes these models through federated learning. Experimental results show that the proposed method improves the performance compared to the no synchronization.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "The International Workshop on Frontiers of Computer Vision (IW-FCV2024)"
+    },
+    {
+        "paper id": "2401.14702",
+        "abstract url": "https://arxiv.org/abs/2401.14702",
+        "title": "FairSample: Training Fair and Accurate Graph Convolutional Neural Networks Efficiently",
+        "rating": -0.5,
+        "keywords": [
+            [
+                "Graph"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Fairness in Graph Convolutional Neural Networks (GCNs) becomes a more and more important concern as GCNs are adopted in many crucial applications. Societal biases against sensitive groups may exist in many real world graphs. GCNs trained on those graphs may be vulnerable to being affected by such biases. In this paper, we adopt the well-known fairness notion of demographic parity and tackle the challenge of training fair and accurate GCNs efficiently. We present an in-depth analysis on how graph structure bias, node attribute bias, and model parameters may affect the demographic parity of GCNs. Our insights lead to FairSample, a framework that jointly mitigates the three types of biases. We employ two intuitive strategies to rectify graph structures. First, we inject edges across nodes that are in different sensitive groups but similar in node features. Second, to enhance model fairness and retain model quality, we develop a learnable neighbor sampling policy using reinforcement learning. To address the bias in node features and model parameters, FairSample is complemented by a regularization objective to optimize fairness.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": "Accepted by TKDE 2023"
+    },
+    {
         "paper id": "2401.14792",
         "abstract url": "https://arxiv.org/abs/2401.14792",
         "title": "Deep Variational Privacy Funnel: General Modeling with Applications in Face Recognition",
         "rating": -0.5,
         "keywords": [
             [
-                "facial",
-                "Face"
+                "facial"
             ],
             [
                 "cs.CV"
@@ -1545,6 +1606,7 @@
                 "cs.CL"
             ],
             [
+                "Workshop",
                 "AAAI"
             ]
         ],
@@ -1572,6 +1634,22 @@
             "cs.LG"
         ],
         "comment": "12 pages, 5 figures"
+    },
+    {
+        "paper id": "2401.15189",
+        "abstract url": "https://arxiv.org/abs/2401.15189",
+        "title": "SBFT Tool Competition 2024 -- Python Test Case Generation Track",
+        "rating": -0.5,
+        "keywords": [
+            [
+                "Workshop"
+            ]
+        ],
+        "abstract": "Test case generation (TCG) for Python poses distinctive challenges due to the language's dynamic nature and the absence of strict type information. Previous research has successfully explored automated unit TCG for Python, with solutions outperforming random test generation methods. Nevertheless, fundamental issues persist, hindering the practical adoption of existing test case generators. To address these challenges, we report on the organization, challenges, and results of the first edition of the Python Testing Competition. Four tools, namely UTBotPython, Klara, Hypothesis Ghostwriter, and Pynguin were executed on a benchmark set consisting of 35 Python source files sampled from 7 open-source Python projects for a time budget of 400 seconds. We considered one configuration of each tool for each test subject and evaluated the tools' effectiveness in terms of code and mutation coverage. This paper describes our methodology, the analysis of the results together with the competing tools, and the challenges faced while running the competition experiments.",
+        "subjects": [
+            "cs.SE"
+        ],
+        "comment": "4 pages, to appear in the Proceedings of the 17th International Workshop on Search-Based and Fuzz Testing (SBFT@ICSE 2024)"
     },
     {
         "paper id": "2401.15248",
@@ -1664,22 +1742,6 @@
         "comment": null
     },
     {
-        "paper id": "2401.14712",
-        "abstract url": "https://arxiv.org/abs/2401.14712",
-        "title": "A comprehensive review of electricity storage applications in island systems",
-        "rating": -1,
-        "keywords": [
-            [
-                "depth"
-            ]
-        ],
-        "abstract": "Electricity storage is crucial for power systems to achieve higher levels of renewable energy penetration. This is especially significant for non-interconnected island (NII) systems, which are electrically isolated and vulnerable to the fluctuations of intermittent renewable generation. This paper comprehensively reviews existing literature on electricity storage in island systems, documenting relevant storage applications worldwide and emphasizing the role of storage in transitioning NII towards a fossil-fuel-independent electricity sector. On this topic, the literature review indicates that the implementation of storage is a prerequisite for attaining renewable penetration rates of over 50% due to the amplified requirements for system flexibility and renewable energy arbitrage. The analysis also identifies potential storage services and classifies applicable storage architectures for islands. Amongst the available storage designs, two have emerged as particularly important for further investigation; standalone, centrally managed storage stations and storage combined with renewables to form a hybrid plant that operates indivisibly in the market. For each design, the operating principles, remuneration schemes, investment feasibility, and applications discussed in the literature are presented in-depth, while possible implementation barriers are acknowledged. The literature on hybrid power plants mainly focuses on wind-powered pumped-hydro stations. However, recently, PV-powered battery-based hybrid plants have gained momentum due to the decreasing cost of Li-ion technology. On the other hand, standalone storage establishments rely heavily on battery technology and are mainly used to provide flexibility to the island grid. Nevertheless, these investments often suffer from insufficient remunerating frameworks, making it challenging for storage projects to be financially secure.",
-        "subjects": [
-            "eess.SY"
-        ],
-        "comment": "55 pages, 10 figures"
-    },
-    {
         "paper id": "2401.14722",
         "abstract url": "https://arxiv.org/abs/2401.14722",
         "title": "A Nonparametric Bayes Approach to Online Activity Prediction",
@@ -1770,45 +1832,6 @@
         "comment": "12 pages,8 figures"
     },
     {
-        "paper id": "2401.14762",
-        "abstract url": "https://arxiv.org/abs/2401.14762",
-        "title": "A Comparative Study of Compressive Sensing Algorithms for Hyperspectral Imaging Reconstruction",
-        "rating": -1,
-        "keywords": [
-            [
-                "Hyperspectral Imaging"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Hyperspectral Imaging comprises excessive data consequently leading to significant challenges for data processing, storage and transmission. Compressive Sensing has been used in the field of Hyperspectral Imaging as a technique to compress the large amount of data. This work addresses the recovery of hyperspectral images 2.5x compressed. A comparative study in terms of the accuracy and the performance of the convex FISTA/ADMM in addition to the greedy gOMP/BIHT/CoSaMP recovery algorithms is presented. The results indicate that the algorithms recover successfully the compressed data, yet the gOMP algorithm achieves superior accuracy and faster recovery in comparison to the other algorithms at the expense of high dependence on unknown sparsity level of the data to recover.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Hyperspectral Imaging, Compressive Sensing, Convex Algorithms, Greedy Algorithms, FISTA, ADMM, gOMP, BIHT, CoSaMP, IEEE-copyrighted material (2022), IVMSP Workshop (26-29 June 2022)"
-    },
-    {
-        "paper id": "2401.14786",
-        "abstract url": "https://arxiv.org/abs/2401.14786",
-        "title": "Study of the gOMP Algorithm for Recovery of Compressed Sensed Hyperspectral Images",
-        "rating": -1,
-        "keywords": [
-            [
-                "remote sensing",
-                "Hyperspectral Images"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Hyperspectral Imaging (HSI) is used in a wide range of applications such as remote sensing, yet the transmission of the HS images by communication data links becomes challenging due to the large number of spectral bands that the HS images contain together with the limited data bandwidth available in real applications. Compressive Sensing reduces the images by randomly subsampling the spectral bands of each spatial pixel and then it performs the image reconstruction of all the bands using recovery algorithms which impose sparsity in a certain transform domain. Since the image pixels are not strictly sparse, this work studies a data sparsification pre-processing stage prior to compression to ensure the sparsity of the pixels. The sparsified images are compressed $2.5\\times$ and then recovered using the Generalized Orthogonal Matching Pursuit algorithm (gOMP) characterized by high accuracy, low computational requirements and fast convergence. The experiments are performed in five conventional hyperspectral images where the effect of different sparsification levels in the quality of the uncompressed as well as the recovered images is studied. It is concluded that the gOMP algorithm reconstructs the hyperspectral images with higher accuracy as well as faster convergence when the pixels are highly sparsified and hence at the expense of reducing the quality of the recovered images with respect to the original images.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Hyperspectral Imaging, Compressive Sensing, Greedy Algorithms, Generalized Orthogonal Matching Pursuit (gOMP), Sparsity, Sparsification, IEEE-copyrighted material (2022), WHISPERS Workshop (13-16 September 2022)"
-    },
-    {
         "paper id": "2401.14813",
         "abstract url": "https://arxiv.org/abs/2401.14813",
         "title": "Symbol-Specific Sparsification of Interprocedural Distributive Environment Problems",
@@ -1831,6 +1854,7 @@
         "rating": -1,
         "keywords": [
             [
+                "Chemistry",
                 "Chemical"
             ],
             [
@@ -1877,6 +1901,22 @@
             "cs.SD"
         ],
         "comment": "Presented at FIRE 2023 (Forum for Information Retrieval Evaluation) conference, Goa, India"
+    },
+    {
+        "paper id": "2401.14831",
+        "abstract url": "https://arxiv.org/abs/2401.14831",
+        "title": "The Machine Vision Iceberg Explained: Advancing Dynamic Testing by Considering Holistic Environmental Relations",
+        "rating": -1,
+        "keywords": [
+            [
+                "automated driving"
+            ]
+        ],
+        "abstract": "Machine Vision (MV) is essential for solving driving automation. This paper examines potential shortcomings in current MV testing strategies for highly automated driving (HAD) systems. We argue for a more comprehensive understanding of the performance factors that must be considered during the MV evaluation process, noting that neglecting these factors can lead to significant risks. This is not only relevant to MV component testing, but also to integration testing. To illustrate this point, we draw an analogy to a ship navigating towards an iceberg to show potential hidden challenges in current MV testing strategies. The main contribution is a novel framework for black-box testing which observes environmental relations. This means it is designed to enhance MV assessments by considering the attributes and surroundings of relevant individual objects. The framework provides the identification of seven general concerns about the object recognition of MV, which are not addressed adequately in established test processes. To detect these deficits based on their performance factors, we propose the use of a taxonomy called \"granularity orders\" along with a graphical representation. This allows an identification of MV uncertainties across a range of driving scenarios. This approach aims to advance the precision, efficiency, and completeness of testing procedures for MV.",
+        "subjects": [
+            "cs.RO"
+        ],
+        "comment": "Submitted at IEEE ITSC 2024"
     },
     {
         "paper id": "2401.14858",
@@ -2046,45 +2086,6 @@
         "comment": null
     },
     {
-        "paper id": "2401.15024",
-        "abstract url": "https://arxiv.org/abs/2401.15024",
-        "title": "SliceGPT: Compress Large Language Models by Deleting Rows and Columns",
-        "rating": -1.0,
-        "keywords": [
-            [
-                "face"
-            ],
-            [
-                "cs.LG"
-            ],
-            [
-                "ICLR"
-            ]
-        ],
-        "abstract": "Large language models have become the cornerstone of natural language processing, but their use comes with substantial costs in terms of compute and memory resources. Sparsification provides a solution to alleviate these resource constraints, and recent works have shown that trained models can be sparsified post-hoc. Existing sparsification techniques face challenges as they need additional data structures and offer constrained speedup with current hardware. In this paper we present SliceGPT, a new post-training sparsification scheme which replaces each weight matrix with a smaller (dense) matrix, reducing the embedding dimension of the network. Through extensive experimentation, we show that SliceGPT can remove up to 25% of the model parameters (including embeddings) for LLAMA2-70B, OPT 66B and Phi-2 models while maintaining 99%, 99% and 90% zero-shot task performance of the dense model respectively. Our sliced models run on fewer GPUs and run faster without any additional code optimization: on 24GB consumer GPUs we reduce the total compute for inference on LLAMA2-70B to 64% of that of the dense model; on 40GB A100 GPUs we reduce it to 66%. We offer a new insight, computational invariance in transformer networks, which enables SliceGPT and we hope it will inspire and enable future avenues to reduce memory and computation demands for pre-trained models. Code is available at: https://github.com/microsoft/TransformerCompression",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": "22 pages, 8 figures, accepted at ICLR24"
-    },
-    {
-        "paper id": "2401.15026",
-        "abstract url": "https://arxiv.org/abs/2401.15026",
-        "title": "Multi-Agent Coordination for a Partially Observable and Dynamic Robot Soccer Environment with Limited Communication",
-        "rating": -1,
-        "keywords": [
-            [
-                "robotics",
-                "Robot"
-            ]
-        ],
-        "abstract": "RoboCup represents an International testbed for advancing research in AI and robotics, focusing on a definite goal: developing a robot team that can win against the human world soccer champion team by the year 2050. To achieve this goal, autonomous humanoid robots' coordination is crucial. This paper explores novel solutions within the RoboCup Standard Platform League (SPL), where a reduction in WiFi communication is imperative, leading to the development of new coordination paradigms. The SPL has experienced a substantial decrease in network packet rate, compelling the need for advanced coordination architectures to maintain optimal team functionality in dynamic environments. Inspired by market-based task assignment, we introduce a novel distributed coordination system to orchestrate autonomous robots' actions efficiently in low communication scenarios. This approach has been tested with NAO robots during official RoboCup competitions and in the SimRobot simulator, demonstrating a notable reduction in task overlaps in limited communication settings.",
-        "subjects": [
-            "cs.RO"
-        ],
-        "comment": "International Conference of the Italian Association for Artificial Intelligence (AIxIA 2023) - Italian Workshop on Artificial Intelligence and Robotics (AIRO) Rome, 6 - 9 November, 2023"
-    },
-    {
         "paper id": "2401.15036",
         "abstract url": "https://arxiv.org/abs/2401.15036",
         "title": "Distributed Simultaneous Localisation and Auto-Calibration using Gaussian Belief Propagation",
@@ -2099,6 +2100,25 @@
             "cs.RO"
         ],
         "comment": "Published in IEEE Robotics and Automation Letters (RA-L) 2024"
+    },
+    {
+        "paper id": "2401.15042",
+        "abstract url": "https://arxiv.org/abs/2401.15042",
+        "title": "PROXYQA: An Alternative Framework for Evaluating Long-Form Text Generation with Large Language Models",
+        "rating": -1,
+        "keywords": [
+            [
+                "quality assessment"
+            ],
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Large Language Models (LLMs) have exhibited remarkable success in long-form context comprehension tasks. However, their capacity to generate long contents, such as reports and articles, remains insufficiently explored. Current benchmarks do not adequately assess LLMs' ability to produce informative and comprehensive content, necessitating a more rigorous evaluation approach. In this study, we introduce \\textsc{ProxyQA}, a framework for evaluating long-form text generation, comprising in-depth human-curated \\textit{meta-questions} spanning various domains. Each meta-question contains corresponding \\textit{proxy-questions} with annotated answers. LLMs are prompted to generate extensive content in response to these meta-questions. Utilizing an evaluator and incorporating generated content as background context, \\textsc{ProxyQA} evaluates the quality of generated content based on the evaluator's performance in answering the \\textit{proxy-questions}. We examine multiple LLMs, emphasizing \\textsc{ProxyQA}'s demanding nature as a high-quality assessment tool. Human evaluation demonstrates that evaluating through \\textit{proxy-questions} is a highly self-consistent and human-criteria-correlated validation method. The dataset and leaderboard will be available at \\url{https://github.com/Namco0816/ProxyQA}.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": null
     },
     {
         "paper id": "2401.15043",
@@ -2120,6 +2140,22 @@
             "cs.CL"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2401.15045",
+        "abstract url": "https://arxiv.org/abs/2401.15045",
+        "title": "Emulating Complex Synapses Using Interlinked Proton Conductors",
+        "rating": -1,
+        "keywords": [
+            [
+                "diffusion"
+            ]
+        ],
+        "abstract": "In terms of energy efficiency and computational speed, neuromorphic electronics based on non-volatile memory devices is expected to be one of most promising hardware candidates for future artificial intelligence (AI). However, catastrophic forgetting, networks rapidly overwriting previously learned weights when learning new tasks, remains as a pivotal hurdle in either digital or analog AI chips for unleashing the true power of brain-like computing. To address catastrophic forgetting in the context of online memory storage, a complex synapse model (the Benna-Fusi model) has been proposed recently[1], whose synaptic weight and internal variables evolve following a diffusion dynamics. In this work, by designing a proton transistor with a series of charge-diffusion-controlled storage components, we have experimentally realized the Benna-Fusi artificial complex synapse. The memory consolidation from coupled storage components is revealed by both numerical simulations and experimental observations. Different memory timescales for the complex synapse are engineered by the diffusion length of charge carriers, the capacity and number of coupled storage components. The advantage of the demonstrated complex synapse in both memory capacity and memory consolidation is revealed by neural network simulations of face familiarity detection. Our experimental realization of the complex synapse suggests a promising approach to enhance memory capacity and to enable continual learning.",
+        "subjects": [
+            "cs.NE"
+        ],
+        "comment": "6 figures"
     },
     {
         "paper id": "2401.15048",
@@ -2155,7 +2191,7 @@
         "subjects": [
             "cs.IT"
         ],
-        "comment": "12 pages (double column), 5 figures, the short version has been submitted to the IEEE International Symposium on Information Theory (ISIT)"
+        "comment": "12 pages (double column), 5 figures, the short version has been accepted at the IEEE International Symposium on Information Theory (ISIT)"
     },
     {
         "paper id": "2401.15168",
@@ -2298,11 +2334,11 @@
                 "eess.IV"
             ]
         ],
-        "abstract": "Image restoration tasks traditionally rely on convolutional neural networks. However, given the local nature of the convolutional operator, they struggle to capture global information. The promise of attention mechanisms in Transformers is to circumvent this problem, but it comes at the cost of intensive computational overhead. Many recent studies in image restoration have focused on solving the challenge of balancing performance and computational cost via Transformer variants. In this paper, we present CascadedGaze Network (CGNet), an encoder-decoder architecture that employs Global Context Extractor (GCE), a novel and efficient way to capture global information for image restoration. The GCE module leverages small kernels across convolutional layers to learn global dependencies, without requiring self-attention. Extensive experimental results show that our approach outperforms a range of state-of-the-art methods on denoising benchmark datasets including both real image denoising and synthetic image denoising, as well as on image deblurring task, while being more computationally efficient.",
+        "abstract": "Image restoration tasks traditionally rely on convolutional neural networks. However, given the local nature of the convolutional operator, they struggle to capture global information. The promise of attention mechanisms in Transformers is to circumvent this problem, but it comes at the cost of intensive computational overhead. Many recent studies in image restoration have focused on solving the challenge of balancing performance and computational cost via Transformer variants. In this paper, we present CascadedGaze Network (CGNet), an encoder-decoder architecture that employs Global Context Extractor (GCE), a novel and efficient way to capture global information for image restoration. The GCE module leverages small kernels across convolutional layers to learn global dependencies, without requiring self-attention. Extensive experimental results show that our computationally efficient approach performs competitively to a range of state-of-the-art methods on synthetic image denoising and single image deblurring tasks, and pushes the performance boundary further on the real image denoising task.",
         "subjects": [
             "eess.IV"
         ],
-        "comment": "16 pages. ArXiV preprint"
+        "comment": "Published in Transactions on Machine Learning Research (TMLR), 2024. 20 pages"
     },
     {
         "paper id": "2401.15236",
@@ -2322,22 +2358,6 @@
             "cs.CV"
         ],
         "comment": "Accepted for publication in the 2024 Design, Automation and Test in Europe (DATE) conference"
-    },
-    {
-        "paper id": "2401.15239",
-        "abstract url": "https://arxiv.org/abs/2401.15239",
-        "title": "MEA-Defender: A Robust Watermark against Model Extraction Attack",
-        "rating": -1,
-        "keywords": [
-            [
-                "Attack"
-            ]
-        ],
-        "abstract": "Recently, numerous highly-valuable Deep Neural Networks (DNNs) have been trained using deep learning algorithms. To protect the Intellectual Property (IP) of the original owners over such DNN models, backdoor-based watermarks have been extensively studied. However, most of such watermarks fail upon model extraction attack, which utilizes input samples to query the target model and obtains the corresponding outputs, thus training a substitute model using such input-output pairs. In this paper, we propose a novel watermark to protect IP of DNN models against model extraction, named MEA-Defender. In particular, we obtain the watermark by combining two samples from two source classes in the input domain and design a watermark loss function that makes the output domain of the watermark within that of the main task samples. Since both the input domain and the output domain of our watermark are indispensable parts of those of the main task samples, the watermark will be extracted into the stolen model along with the main task during model extraction. We conduct extensive experiments on four model extraction attacks, using five datasets and six models trained based on supervised learning and self-supervised learning algorithms. The experimental results demonstrate that MEA-Defender is highly robust against different model extraction attacks, and various watermark removal/detection approaches.",
-        "subjects": [
-            "cs.CR"
-        ],
-        "comment": "To Appear in IEEE Symposium on Security and Privacy 2024 (IEEE S&P 2024), MAY 20-23, 2024, SAN FRANCISCO, CA, USA"
     },
     {
         "paper id": "2401.15245",
@@ -2498,6 +2518,22 @@
         "comment": "14 pages, 7 figures"
     },
     {
+        "paper id": "2405.00678",
+        "abstract url": "https://arxiv.org/abs/2405.00678",
+        "title": "Low-cost modular devices for on-road vehicle detection and characterisation",
+        "rating": -1,
+        "keywords": [
+            [
+                "vehicle"
+            ]
+        ],
+        "abstract": "Detecting and characterising vehicles is one of the purposes of embedded systems used in intelligent environments. An analysis of a vehicle characteristics can reveal inappropriate or dangerous behaviour. This detection makes it possible to sanction or notify emergency services to take early and practical actions. Vehicle detection and characterisation systems employ complex sensors such as video cameras, especially in urban environments. These sensors provide high precision and performance, although the price and computational requirements are proportional to their accuracy. These sensors offer high accuracy, but the price and computational requirements are directly proportional to their performance. This article introduces a system based on modular devices that is economical and has a low computational cost. These devices use ultrasonic sensors to detect the speed and length of vehicles. The measurement accuracy is improved through the collaboration of the device modules. The experiments were performed using multiple modules oriented to different angles. This module is coupled with another specifically designed to detect distance using previous modules speed and length data. The collaboration between different modules reduces the speed relative error ranges from 1 to 5, depending on the angle configuration used in the modules.",
+        "subjects": [
+            "eess.SP"
+        ],
+        "comment": "17 pages"
+    },
+    {
         "paper id": "2401.14694",
         "abstract url": "https://arxiv.org/abs/2401.14694",
         "title": "TA-RNN: an Attention-based Time-aware Recurrent Neural Network Architecture for Electronic Health Records",
@@ -2522,28 +2558,6 @@
         "comment": null
     },
     {
-        "paper id": "2401.14702",
-        "abstract url": "https://arxiv.org/abs/2401.14702",
-        "title": "FairSample: Training Fair and Accurate Graph Convolutional Neural Networks Efficiently",
-        "rating": -1.5,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "Graph"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Fairness in Graph Convolutional Neural Networks (GCNs) becomes a more and more important concern as GCNs are adopted in many crucial applications. Societal biases against sensitive groups may exist in many real world graphs. GCNs trained on those graphs may be vulnerable to being affected by such biases. In this paper, we adopt the well-known fairness notion of demographic parity and tackle the challenge of training fair and accurate GCNs efficiently. We present an in-depth analysis on how graph structure bias, node attribute bias, and model parameters may affect the demographic parity of GCNs. Our insights lead to FairSample, a framework that jointly mitigates the three types of biases. We employ two intuitive strategies to rectify graph structures. First, we inject edges across nodes that are in different sensitive groups but similar in node features. Second, to enhance model fairness and retain model quality, we develop a learnable neighbor sampling policy using reinforcement learning. To address the bias in node features and model parameters, FairSample is complemented by a regularization objective to optimize fairness.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": "Accepted by TKDE 2023"
-    },
-    {
         "paper id": "2401.14743",
         "abstract url": "https://arxiv.org/abs/2401.14743",
         "title": "Synthetic Multimodal Dataset for Empowering Safety and Well-being in Home Environments",
@@ -2564,6 +2578,51 @@
             "cs.AI"
         ],
         "comment": "7 pages, 2 figures,4 tables"
+    },
+    {
+        "paper id": "2401.14762",
+        "abstract url": "https://arxiv.org/abs/2401.14762",
+        "title": "A Comparative Study of Compressive Sensing Algorithms for Hyperspectral Imaging Reconstruction",
+        "rating": -1.5,
+        "keywords": [
+            [
+                "Hyperspectral Imaging"
+            ],
+            [
+                "cs.CV"
+            ],
+            [
+                "Workshop"
+            ]
+        ],
+        "abstract": "Hyperspectral Imaging comprises excessive data consequently leading to significant challenges for data processing, storage and transmission. Compressive Sensing has been used in the field of Hyperspectral Imaging as a technique to compress the large amount of data. This work addresses the recovery of hyperspectral images 2.5x compressed. A comparative study in terms of the accuracy and the performance of the convex FISTA/ADMM in addition to the greedy gOMP/BIHT/CoSaMP recovery algorithms is presented. The results indicate that the algorithms recover successfully the compressed data, yet the gOMP algorithm achieves superior accuracy and faster recovery in comparison to the other algorithms at the expense of high dependence on unknown sparsity level of the data to recover.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Hyperspectral Imaging, Compressive Sensing, Convex Algorithms, Greedy Algorithms, FISTA, ADMM, gOMP, BIHT, CoSaMP, IEEE-copyrighted material (2022), IVMSP Workshop (26-29 June 2022)"
+    },
+    {
+        "paper id": "2401.14786",
+        "abstract url": "https://arxiv.org/abs/2401.14786",
+        "title": "Study of the gOMP Algorithm for Recovery of Compressed Sensed Hyperspectral Images",
+        "rating": -1.5,
+        "keywords": [
+            [
+                "remote sensing",
+                "Hyperspectral Images"
+            ],
+            [
+                "cs.CV"
+            ],
+            [
+                "Workshop"
+            ]
+        ],
+        "abstract": "Hyperspectral Imaging (HSI) is used in a wide range of applications such as remote sensing, yet the transmission of the HS images by communication data links becomes challenging due to the large number of spectral bands that the HS images contain together with the limited data bandwidth available in real applications. Compressive Sensing reduces the images by randomly subsampling the spectral bands of each spatial pixel and then it performs the image reconstruction of all the bands using recovery algorithms which impose sparsity in a certain transform domain. Since the image pixels are not strictly sparse, this work studies a data sparsification pre-processing stage prior to compression to ensure the sparsity of the pixels. The sparsified images are compressed $2.5\\times$ and then recovered using the Generalized Orthogonal Matching Pursuit algorithm (gOMP) characterized by high accuracy, low computational requirements and fast convergence. The experiments are performed in five conventional hyperspectral images where the effect of different sparsification levels in the quality of the uncompressed as well as the recovered images is studied. It is concluded that the gOMP algorithm reconstructs the hyperspectral images with higher accuracy as well as faster convergence when the pixels are highly sparsified and hence at the expense of reducing the quality of the recovered images with respect to the original images.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Hyperspectral Imaging, Compressive Sensing, Greedy Algorithms, Generalized Orthogonal Matching Pursuit (gOMP), Sparsity, Sparsification, IEEE-copyrighted material (2022), WHISPERS Workshop (13-16 September 2022)"
     },
     {
         "paper id": "2401.14876",
@@ -2605,6 +2664,26 @@
             "cs.AI"
         ],
         "comment": "This document is the Accepted Manuscript version of a Published Work that appeared in final form in Methods of Information in Medicine 57(01/02) : 55-61 (2018), copyright 2018 Schattauer. To access the final edited and published work see https://doi.org/10.3414/ME17-01-0109"
+    },
+    {
+        "paper id": "2401.15026",
+        "abstract url": "https://arxiv.org/abs/2401.15026",
+        "title": "Multi-Agent Coordination for a Partially Observable and Dynamic Robot Soccer Environment with Limited Communication",
+        "rating": -1.5,
+        "keywords": [
+            [
+                "robotics",
+                "Robot"
+            ],
+            [
+                "Workshop"
+            ]
+        ],
+        "abstract": "RoboCup represents an International testbed for advancing research in AI and robotics, focusing on a definite goal: developing a robot team that can win against the human world soccer champion team by the year 2050. To achieve this goal, autonomous humanoid robots' coordination is crucial. This paper explores novel solutions within the RoboCup Standard Platform League (SPL), where a reduction in WiFi communication is imperative, leading to the development of new coordination paradigms. The SPL has experienced a substantial decrease in network packet rate, compelling the need for advanced coordination architectures to maintain optimal team functionality in dynamic environments. Inspired by market-based task assignment, we introduce a novel distributed coordination system to orchestrate autonomous robots' actions efficiently in low communication scenarios. This approach has been tested with NAO robots during official RoboCup competitions and in the SimRobot simulator, demonstrating a notable reduction in task overlaps in limited communication settings.",
+        "subjects": [
+            "cs.RO"
+        ],
+        "comment": "International Conference of the Italian Association for Artificial Intelligence (AIxIA 2023) - Italian Workshop on Artificial Intelligence and Robotics (AIRO) Rome, 6 - 9 November, 2023"
     },
     {
         "paper id": "2401.15062",
@@ -2700,25 +2779,6 @@
         "abstract": "This survey paper offers a thorough analysis of techniques and algorithms used in the identification of crime leaders within criminal networks. For each technique, the paper examines its effectiveness, limitations, potential for improvement, and future prospects. The main challenge faced by existing survey papers focusing on algorithms for identifying crime leaders and predicting crimes is effectively categorizing these algorithms. To address this limitation, this paper proposes a new methodological taxonomy that hierarchically classifies algorithms into more detailed categories and specific techniques. The paper includes empirical and experimental evaluations to rank the different techniques. The combination of the methodological taxonomy, empirical evaluations, and experimental comparisons allows for a nuanced and comprehensive understanding of the techniques and algorithms for identifying crime leaders, assisting researchers in making informed decisions. Moreover, the paper offers valuable insights into the future prospects of techniques for identifying crime leaders, emphasizing potential advancements and opportunities for further research. Here's an overview of our empirical analysis findings and experimental insights, along with the solution we've devised: (1) PageRank and Eigenvector centrality are reliable for mapping network connections, (2) Katz Centrality can effectively identify influential criminals through indirect links, stressing their significance in criminal networks, (3) current models fail to account for the specific impacts of criminal influence levels, the importance of socio-economic context, and the dynamic nature of criminal networks and hierarchies, and (4) we propose enhancements, such as incorporating temporal dynamics and sentiment analysis to reflect the fluidity of criminal activities and relationships",
         "subjects": [
             "cs.SI"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2402.10921",
-        "abstract url": "https://arxiv.org/abs/2402.10921",
-        "title": "AM^2-EmoJE: Adaptive Missing-Modality Emotion Recognition in Conversation via Joint Embedding Learning",
-        "rating": -1.5,
-        "keywords": [
-            [
-                "face"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "Human emotion can be presented in different modes i.e., audio, video, and text. However, the contribution of each mode in exhibiting each emotion is not uniform. Furthermore, the availability of complete mode-specific details may not always be guaranteed in the test time. In this work, we propose AM^2-EmoJE, a model for Adaptive Missing-Modality Emotion Recognition in Conversation via Joint Embedding Learning model that is grounded on two-fold contributions: First, a query adaptive fusion that can automatically learn the relative importance of its mode-specific representations in a query-specific manner. By this the model aims to prioritize the mode-invariant spatial query details of the emotion patterns, while also retaining its mode-exclusive aspects within the learned multimodal query descriptor. Second the multimodal joint embedding learning module that explicitly addresses various missing modality scenarios in test-time. By this, the model learns to emphasize on the correlated patterns across modalities, which may help align the cross-attended mode-specific descriptors pairwise within a joint-embedding space and thereby compensate for missing modalities during inference. By leveraging the spatio-temporal details at the dialogue level, the proposed AM^2-EmoJE not only demonstrates superior performance compared to the best-performing state-of-the-art multimodal methods, by effectively leveraging body language in place of face expression, it also exhibits an enhanced privacy feature. By reporting around 2-5% improvement in the weighted-F1 score, the proposed multimodal joint embedding module facilitates an impressive performance gain in a variety of missing-modality query scenarios during test time.",
-        "subjects": [
-            "cs.AI"
         ],
         "comment": null
     },
@@ -2838,25 +2898,6 @@
         "comment": "Submitted to EuCNC"
     },
     {
-        "paper id": "2401.14831",
-        "abstract url": "https://arxiv.org/abs/2401.14831",
-        "title": "The Machine Vision Iceberg Explained: Advancing Dynamic Testing by Considering Holistic Environmental Circumstances",
-        "rating": -2,
-        "keywords": [
-            [
-                "Automated Driving"
-            ],
-            [
-                "graph"
-            ]
-        ],
-        "abstract": "Are we heading for an iceberg with the current testing of machine vision? This work delves into the landscape of Machine Vision (MV) testing, which is heavily required in Highly Automated Driving (HAD) systems. Utilizing the metaphorical notion of navigating towards an iceberg, we discuss the potential shortcomings concealed within current testing strategies. We emphasize the urgent need for a deeper understanding of how to deal with the opaque functions of MV in development processes. As overlooked considerations can cost lives. Our main contribution is the hierarchical level model, which we call Granularity Grades. The model encourages a refined exploration of the multi-scaled depths of understanding about the circumstances of environments in which MV is intended to operate. This model aims to provide a holistic overview of all entities that may impact MV functions, ranging from relations of individual entities like object attributes to entire environmental scenes. The application of our model delivers a structured exploration of entities in a specific domain, their relationships and assigning results of a MV-under-test to construct an entity-relationship graph. Through clustering patterns of relations in the graph general MV deficits are arguable. In Summary, our work contributes to a more nuanced and systematized identification of deficits of a MV test object in correlation to holistic circumstances in HAD operating domains.",
-        "subjects": [
-            "cs.RO"
-        ],
-        "comment": "Submitted at IEEE IV 2024"
-    },
-    {
         "paper id": "2401.14898",
         "abstract url": "https://arxiv.org/abs/2401.14898",
         "title": "Decentralized real-time iterations for distributed nonlinear model predictive control",
@@ -2888,22 +2929,6 @@
             "cs.GR"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2401.14913",
-        "abstract url": "https://arxiv.org/abs/2401.14913",
-        "title": "On Repairing Quantum Programs Using ChatGPT",
-        "rating": -2,
-        "keywords": [
-            [
-                "Quantum"
-            ]
-        ],
-        "abstract": "Automated Program Repair (APR) is a vital area in software engineering aimed at generating automatic patches for vulnerable programs. While numerous techniques have been proposed for repairing classical programs, the realm of quantum programming lacks a comparable automated repair technique. In this initial exploration, we investigate the use of ChatGPT for quantum program repair and evaluate its performance on Bugs4Q, a benchmark suite of quantum program bugs. Our findings demonstrate the feasibility of employing ChatGPT for quantum program repair. Specifically, we assess ChatGPT's ability to address bugs within the Bugs4Q benchmark, revealing its success in repairing 29 out of 38 bugs. This research represents a promising step towards automating the repair process for quantum programs.",
-        "subjects": [
-            "cs.SE"
-        ],
-        "comment": "The 5th International Workshop on Quantum Software Engineering (Q-SE 2024)"
     },
     {
         "paper id": "2401.14972",
@@ -2993,44 +3018,6 @@
         "abstract": "In the past decades, Ethernet has become an alternative technology for the field buses traditionally used in industrial control systems and distributed measurement systems. Among different transmission media in Ethernet standards, optical fiber provides the best bandwidth, excellent immunity to electromagnetic interference, and less signal loses than other wired media. Due to the absence of a standard that provides security at the physical layer of optical Ethernet links, the main motivation of this paper is to propose and implement the necessary modifications to introduce encryption in Ethernet 1000Base-X standard. This has consisted of symmetric streaming encryption of the 8b10b symbols flow at physical coding sublayer level, thanks to a keystream generator based on chaotic algorithm. The overall system has been implemented and tested in an field programmable gate array and Ethernet traffic has been encrypted and transmitted over an optical link. The experimental results show that it is possible to cipher traffic at this level and hide the complete Ethernet traffic pattern from passive eavesdroppers. In addition, no space overhead is introduced in data frames during encryption, achieving the maximum throughput.",
         "subjects": [
             "cs.CR"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2401.15042",
-        "abstract url": "https://arxiv.org/abs/2401.15042",
-        "title": "PROXYQA: An Alternative Framework for Evaluating Long-Form Text Generation with Large Language Models",
-        "rating": -2,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "quality assessment"
-            ],
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Large Language Models (LLMs) have exhibited remarkable success in long-form context comprehension tasks. However, their capacity to generate long contents, such as reports and articles, remains insufficiently explored. Current benchmarks do not adequately assess LLMs' ability to produce informative and comprehensive content, necessitating a more rigorous evaluation approach. In this study, we introduce \\textsc{ProxyQA}, a framework for evaluating long-form text generation, comprising in-depth human-curated \\textit{meta-questions} spanning various domains. Each meta-question contains corresponding \\textit{proxy-questions} with annotated answers. LLMs are prompted to generate extensive content in response to these meta-questions. Utilizing an evaluator and incorporating generated content as background context, \\textsc{ProxyQA} evaluates the quality of generated content based on the evaluator's performance in answering the \\textit{proxy-questions}. We examine multiple LLMs, emphasizing \\textsc{ProxyQA}'s demanding nature as a high-quality assessment tool. Human evaluation demonstrates that evaluating through \\textit{proxy-questions} is a highly self-consistent and human-criteria-correlated validation method. The dataset and leaderboard will be available at \\url{https://github.com/Namco0816/ProxyQA}.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2401.15061",
-        "abstract url": "https://arxiv.org/abs/2401.15061",
-        "title": "Digital-analog hybrid matrix multiplication processor for optical neural networks",
-        "rating": -2,
-        "keywords": [
-            [
-                "face"
-            ]
-        ],
-        "abstract": "The computational demands of modern AI have spurred interest in optical neural networks (ONNs) which offer the potential benefits of increased speed and lower power consumption. However, current ONNs face various challenges,most significantly a limited calculation precision (typically around 4 bits) and the requirement for high-resolution signal format converters (digital-to-analogue conversions (DACs) and analogue-to-digital conversions (ADCs)). These challenges are inherent to their analog computing nature and pose significant obstacles in practical implementation. Here, we propose a digital-analog hybrid optical computing architecture for ONNs, which utilizes digital optical inputs in the form of binary words. By introducing the logic levels and decisions based on thresholding, the calculation precision can be significantly enhanced. The DACs for input data can be removed and the resolution of the ADCs can be greatly reduced. This can increase the operating speed at a high calculation precision and facilitate the compatibility with microelectronics. To validate our approach, we have fabricated a proof-of-concept photonic chip and built up a hybrid optical processor (HOP) system for neural network applications. We have demonstrated an unprecedented 16-bit calculation precision for high-definition image processing, with a pixel error rate (PER) as low as $1.8\\times10^{-3}$ at an signal-to-noise ratio (SNR) of 18.2 dB. We have also implemented a convolutional neural network for handwritten digit recognition that shows the same accuracy as the one achieved by a desktop computer. The concept of the digital-analog hybrid optical computing architecture offers a methodology that could potentially be applied to various ONN implementations and may intrigue new research into efficient and accurate domain-specific optical computing architectures for neural networks.",
-        "subjects": [
-            "cs.NE"
         ],
         "comment": null
     },
@@ -3222,6 +3209,29 @@
         "comment": null
     },
     {
+        "paper id": "2404.16037",
+        "abstract url": "https://arxiv.org/abs/2404.16037",
+        "title": "VN-Net: Vision-Numerical Fusion Graph Convolutional Network for Sparse Spatio-Temporal Meteorological Forecasting",
+        "rating": -2,
+        "keywords": [
+            [
+                "Graph"
+            ],
+            [
+                "Forecasting",
+                "satellite"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Sparse meteorological forecasting is indispensable for fine-grained weather forecasting and deserves extensive attention. Recent studies have highlighted the potential of spatio-temporal graph convolutional networks (ST-GCNs) in predicting numerical data from ground weather stations. However, as one of the highest fidelity and lowest latency data, the application of the vision data from satellites in ST-GCNs remains unexplored. There are few studies to demonstrate the effectiveness of combining the above multi-modal data for sparse meteorological forecasting. Towards this objective, we introduce Vision-Numerical Fusion Graph Convolutional Network (VN-Net), which mainly utilizes: 1) Numerical-GCN (N-GCN) to adaptively model the static and dynamic patterns of spatio-temporal numerical data; 2) Vision-LSTM Network (V-LSTM) to capture multi-scale joint channel and spatial features from time series satellite images; 4) a GCN-based decoder to generate hourly predictions of specified meteorological factors. As far as we know, VN-Net is the first attempt to introduce GCN method to utilize multi-modal data for better handling sparse spatio-temporal meteorological forecasting. Our experiments on Weather2k dataset show VN-Net outperforms state-of-the-art by a significant margin on mean absolute error (MAE) and root mean square error (RMSE) for temperature, relative humidity, and visibility forecasting. Furthermore, we conduct interpretation analysis and design quantitative evaluation metrics to assess the impact of incorporating vision data.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2401.14840",
         "abstract url": "https://arxiv.org/abs/2401.14840",
         "title": "GuardML: Efficient Privacy-Preserving Machine Learning Services Through Hybrid Homomorphic Encryption",
@@ -3242,6 +3252,25 @@
             "cs.LG"
         ],
         "comment": "10 pages, accepted at The 39th ACM/SIGAPP Symposium on Applied Computing (SAC) conference"
+    },
+    {
+        "paper id": "2401.14913",
+        "abstract url": "https://arxiv.org/abs/2401.14913",
+        "title": "On Repairing Quantum Programs Using ChatGPT",
+        "rating": -2.5,
+        "keywords": [
+            [
+                "Quantum"
+            ],
+            [
+                "Workshop"
+            ]
+        ],
+        "abstract": "Automated Program Repair (APR) is a vital area in software engineering aimed at generating automatic patches for vulnerable programs. While numerous techniques have been proposed for repairing classical programs, the realm of quantum programming lacks a comparable automated repair technique. In this initial exploration, we investigate the use of ChatGPT for quantum program repair and evaluate its performance on Bugs4Q, a benchmark suite of quantum program bugs. Our findings demonstrate the feasibility of employing ChatGPT for quantum program repair. Specifically, we assess ChatGPT's ability to address bugs within the Bugs4Q benchmark, revealing its success in repairing 29 out of 38 bugs. This research represents a promising step towards automating the repair process for quantum programs.",
+        "subjects": [
+            "cs.SE"
+        ],
+        "comment": "The 5th International Workshop on Quantum Software Engineering (Q-SE 2024)"
     },
     {
         "paper id": "2401.15122",
@@ -3288,6 +3317,28 @@
         "comment": "10 pages, 8 figures"
     },
     {
+        "paper id": "2401.14656",
+        "abstract url": "https://arxiv.org/abs/2401.14656",
+        "title": "Scientific Large Language Models: A Survey on Biological & Chemical Domains",
+        "rating": -3,
+        "keywords": [
+            [
+                "Biological"
+            ],
+            [
+                "Chemical"
+            ],
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Large Language Models (LLMs) have emerged as a transformative power in enhancing natural language comprehension, representing a significant stride toward artificial general intelligence. The application of LLMs extends beyond conventional linguistic boundaries, encompassing specialized linguistic systems developed within various scientific disciplines. This growing interest has led to the advent of scientific LLMs, a novel subclass specifically engineered for facilitating scientific discovery. As a burgeoning area in the community of AI for Science, scientific LLMs warrant comprehensive exploration. However, a systematic and up-to-date survey introducing them is currently lacking. In this paper, we endeavor to methodically delineate the concept of \"scientific language\", whilst providing a thorough review of the latest advancements in scientific LLMs. Given the expansive realm of scientific disciplines, our analysis adopts a focused lens, concentrating on the biological and chemical domains. This includes an in-depth examination of LLMs for textual knowledge, small molecules, macromolecular proteins, genomic sequences, and their combinations, analyzing them in terms of model architectures, capabilities, datasets, and evaluation. Finally, we critically examine the prevailing challenges and point out promising research directions along with the advances of LLMs. By offering a comprehensive overview of technical developments in this field, this survey aspires to be an invaluable resource for researchers navigating the intricate landscape of scientific LLMs.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2401.14665",
         "abstract url": "https://arxiv.org/abs/2401.14665",
         "title": "PepGB: Facilitating peptide drug discovery via graph neural networks",
@@ -3297,8 +3348,7 @@
                 "graph"
             ],
             [
-                "biomedical",
-                "face"
+                "biomedical"
             ]
         ],
         "abstract": "Peptides offer great biomedical potential and serve as promising drug candidates. Currently, the majority of approved peptide drugs are directly derived from well-explored natural human peptides. It is quite necessary to utilize advanced deep learning techniques to identify novel peptide drugs in the vast, unexplored biochemical space. Despite various in silico methods having been developed to accelerate peptide early drug discovery, existing models face challenges of overfitting and lacking generalizability due to the limited size, imbalanced distribution and inconsistent quality of experimental data. In this study, we propose PepGB, a deep learning framework to facilitate peptide early drug discovery by predicting peptide-protein interactions (PepPIs). Employing graph neural networks, PepGB incorporates a fine-grained perturbation module and a dual-view objective with contrastive learning-based peptide pre-trained representation to predict PepPIs. Through rigorous evaluations, we demonstrated that PepGB greatly outperforms baselines and can accurately identify PepPIs for novel targets and peptide hits, thereby contributing to the target identification and hit discovery processes. Next, we derive an extended version, diPepGB, to tackle the bottleneck of modeling highly imbalanced data prevalent in lead generation and optimization processes. Utilizing directed edges to represent relative binding strength between two peptide nodes, diPepGB achieves superior performance in real-world assays. In summary, our proposed frameworks can serve as potent tools to facilitate peptide early drug discovery.",
@@ -3434,25 +3484,6 @@
         "comment": "11 pages, 7 figures, accepted by The Web Conference 2024"
     },
     {
-        "paper id": "2401.15045",
-        "abstract url": "https://arxiv.org/abs/2401.15045",
-        "title": "Emulating Complex Synapses Using Interlinked Proton Conductors",
-        "rating": -3,
-        "keywords": [
-            [
-                "diffusion"
-            ],
-            [
-                "face"
-            ]
-        ],
-        "abstract": "In terms of energy efficiency and computational speed, neuromorphic electronics based on non-volatile memory devices is expected to be one of most promising hardware candidates for future artificial intelligence (AI). However, catastrophic forgetting, networks rapidly overwriting previously learned weights when learning new tasks, remains as a pivotal hurdle in either digital or analog AI chips for unleashing the true power of brain-like computing. To address catastrophic forgetting in the context of online memory storage, a complex synapse model (the Benna-Fusi model) has been proposed recently[1], whose synaptic weight and internal variables evolve following a diffusion dynamics. In this work, by designing a proton transistor with a series of charge-diffusion-controlled storage components, we have experimentally realized the Benna-Fusi artificial complex synapse. The memory consolidation from coupled storage components is revealed by both numerical simulations and experimental observations. Different memory timescales for the complex synapse are engineered by the diffusion length of charge carriers, the capacity and number of coupled storage components. The advantage of the demonstrated complex synapse in both memory capacity and memory consolidation is revealed by neural network simulations of face familiarity detection. Our experimental realization of the complex synapse suggests a promising approach to enhance memory capacity and to enable continual learning.",
-        "subjects": [
-            "cs.NE"
-        ],
-        "comment": "6 figures"
-    },
-    {
         "paper id": "2401.15159",
         "abstract url": "https://arxiv.org/abs/2401.15159",
         "title": "RABBIT: A Robot-Assisted Bed Bathing System with Multimodal Perception and Integrated Compliance",
@@ -3493,6 +3524,25 @@
             "cs.CV"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2401.15239",
+        "abstract url": "https://arxiv.org/abs/2401.15239",
+        "title": "MEA-Defender: A Robust Watermark against Model Extraction Attack",
+        "rating": -3,
+        "keywords": [
+            [
+                "Attack"
+            ],
+            [
+                "Watermark"
+            ]
+        ],
+        "abstract": "Recently, numerous highly-valuable Deep Neural Networks (DNNs) have been trained using deep learning algorithms. To protect the Intellectual Property (IP) of the original owners over such DNN models, backdoor-based watermarks have been extensively studied. However, most of such watermarks fail upon model extraction attack, which utilizes input samples to query the target model and obtains the corresponding outputs, thus training a substitute model using such input-output pairs. In this paper, we propose a novel watermark to protect IP of DNN models against model extraction, named MEA-Defender. In particular, we obtain the watermark by combining two samples from two source classes in the input domain and design a watermark loss function that makes the output domain of the watermark within that of the main task samples. Since both the input domain and the output domain of our watermark are indispensable parts of those of the main task samples, the watermark will be extracted into the stolen model along with the main task during model extraction. We conduct extensive experiments on four model extraction attacks, using five datasets and six models trained based on supervised learning and self-supervised learning algorithms. The experimental results demonstrate that MEA-Defender is highly robust against different model extraction attacks, and various watermark removal/detection approaches.",
+        "subjects": [
+            "cs.CR"
+        ],
+        "comment": "To Appear in IEEE Symposium on Security and Privacy 2024 (IEEE S&P 2024), MAY 20-23, 2024, SAN FRANCISCO, CA, USA"
     },
     {
         "paper id": "2402.00054",
@@ -3536,31 +3586,6 @@
             "cs.AI"
         ],
         "comment": "MOBILESoft 2024"
-    },
-    {
-        "paper id": "2401.14656",
-        "abstract url": "https://arxiv.org/abs/2401.14656",
-        "title": "Scientific Large Language Models: A Survey on Biological & Chemical Domains",
-        "rating": -4,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "Biological"
-            ],
-            [
-                "Chemical"
-            ],
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Large Language Models (LLMs) have emerged as a transformative power in enhancing natural language comprehension, representing a significant stride toward artificial general intelligence. The application of LLMs extends beyond conventional linguistic boundaries, encompassing specialized linguistic systems developed within various scientific disciplines. This growing interest has led to the advent of scientific LLMs, a novel subclass specifically engineered for facilitating scientific discovery. As a burgeoning area in the community of AI for Science, scientific LLMs warrant comprehensive exploration. However, a systematic and up-to-date survey introducing them is currently lacking. In this paper, we endeavor to methodically delineate the concept of \"scientific language\", whilst providing a thorough review of the latest advancements in scientific LLMs. Given the expansive realm of scientific disciplines, our analysis adopts a focused lens, concentrating on the biological and chemical domains. This includes an in-depth examination of LLMs for textual knowledge, small molecules, macromolecular proteins, genomic sequences, and their combinations, analyzing them in terms of model architectures, capabilities, datasets, and evaluation. Finally, we critically examine the prevailing challenges and point out promising research directions along with the advances of LLMs. By offering a comprehensive overview of technical developments in this field, this survey aspires to be an invaluable resource for researchers navigating the intricate landscape of scientific LLMs.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": null
     },
     {
         "paper id": "2401.14938",
@@ -3611,6 +3636,25 @@
         "comment": null
     },
     {
+        "paper id": "2401.15216",
+        "abstract url": "https://arxiv.org/abs/2401.15216",
+        "title": "Quantum-Assisted Adaptive Beamforming in UASs Network: Enhancing Airborne Communication via Collaborative UASs for NextG IoT",
+        "rating": -4,
+        "keywords": [
+            [
+                "IoT"
+            ],
+            [
+                "Quantum"
+            ]
+        ],
+        "abstract": "This paper introduces a novel quantum-based method for dynamic beamforming and re-forming in Unmanned Aircraft Systems (UASs), specifically addressing the critical challenges posed by the unavoidable hovering characteristics of UAVs. Hovering creates significant beam path distortions, impacting the reliability and quality of distributed beamforming in airborne networks. To overcome these challenges, our Quantum Search for UAS Beamforming (QSUB) employs quantum superposition, entanglement, and amplitude amplification. It adaptively reconfigures beams, enhancing beam quality and maintaining robust communication links in the face of rapid UAS state changes due to hovering. Furthermore, we propose an optimized framework, Quantum-Position-Locked Loop (Q-P-LL), that is based on the principle of the Nelder-Mead optimization method for adaptive search to reduce prediction error and improve resilience against angle-of-arrival estimation errors, crucial under dynamic hovering conditions. We also demonstrate the scalability of the system performance and computation complexity by comparing various numbers of active UASs. Importantly, QSUB and Q-P-LL can be applied to both classical and quantum computing architectures. Comparative analyses with conventional Maximum Ratio Transmission (MRT) schemes demonstrate the superior performance and scalability of our quantum approaches, marking significant advancements in the next-generation Internet of Things (IoT) applications requiring reliable airborne communication networks.",
+        "subjects": [
+            "eess.SP"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2401.15219",
         "abstract url": "https://arxiv.org/abs/2401.15219",
         "title": "Harnessing Deep Learning of Point Clouds for Inverse Control of 3D Shape Morphing",
@@ -3653,6 +3697,25 @@
         "comment": "This submission includes 51 pages and 24 figures"
     },
     {
+        "paper id": "2405.00006",
+        "abstract url": "https://arxiv.org/abs/2405.00006",
+        "title": "Steel Plate Fault Detection using the Fitness Dependent Optimizer and Neural Networks",
+        "rating": -4,
+        "keywords": [
+            [
+                "diagnosing"
+            ],
+            [
+                "industrial"
+            ]
+        ],
+        "abstract": "Detecting faults in steel plates is crucial for ensuring the safety and reliability of the structures and industrial equipment. Early detection of faults can prevent further damage and costly repairs. This chapter aims at diagnosing and predicting the likelihood of steel plates developing faults using experimental text data. Various machine learning methods such as GWO-based and FDO-based MLP and CMLP are tested to classify steel plates as either faulty or non-faulty. The experiments produced promising results for all models, with similar accuracy and performance. However, the FDO-based MLP and CMLP models consistently achieved the best results, with 100% accuracy in all tested datasets. The other models' outcomes varied from one experiment to another. The findings indicate that models that employed the FDO as a learning algorithm had the potential to achieve higher accuracy with a little longer runtime compared to other algorithms. In conclusion, early detection of faults in steel plates is critical for maintaining safety and reliability, and machine learning techniques can help predict and diagnose these faults accurately.",
+        "subjects": [
+            "cs.NE"
+        ],
+        "comment": "19 pages"
+    },
+    {
         "paper id": "2401.14695",
         "abstract url": "https://arxiv.org/abs/2401.14695",
         "title": "Continuously Evolving Graph Neural Controlled Differential Equations for Traffic Forecasting",
@@ -3676,28 +3739,6 @@
             "cs.LG"
         ],
         "comment": "9 pages, 4 figures"
-    },
-    {
-        "paper id": "2401.15216",
-        "abstract url": "https://arxiv.org/abs/2401.15216",
-        "title": "Quantum-Assisted Adaptive Beamforming in UASs Network: Enhancing Airborne Communication via Collaborative UASs for NextG IoT",
-        "rating": -6,
-        "keywords": [
-            [
-                "face"
-            ],
-            [
-                "IoT"
-            ],
-            [
-                "Quantum"
-            ]
-        ],
-        "abstract": "This paper introduces a novel quantum-based method for dynamic beamforming and re-forming in Unmanned Aircraft Systems (UASs), specifically addressing the critical challenges posed by the unavoidable hovering characteristics of UAVs. Hovering creates significant beam path distortions, impacting the reliability and quality of distributed beamforming in airborne networks. To overcome these challenges, our Quantum Search for UAS Beamforming (QSUB) employs quantum superposition, entanglement, and amplitude amplification. It adaptively reconfigures beams, enhancing beam quality and maintaining robust communication links in the face of rapid UAS state changes due to hovering. Furthermore, we propose an optimized framework, Quantum-Position-Locked Loop (Q-P-LL), that is based on the principle of the Nelder-Mead optimization method for adaptive search to reduce prediction error and improve resilience against angle-of-arrival estimation errors, crucial under dynamic hovering conditions. We also demonstrate the scalability of the system performance and computation complexity by comparing various numbers of active UASs. Importantly, QSUB and Q-P-LL can be applied to both classical and quantum computing architectures. Comparative analyses with conventional Maximum Ratio Transmission (MRT) schemes demonstrate the superior performance and scalability of our quantum approaches, marking significant advancements in the next-generation Internet of Things (IoT) applications requiring reliable airborne communication networks.",
-        "subjects": [
-            "eess.SP"
-        ],
-        "comment": null
     },
     {
         "paper id": "2401.14652",
@@ -3782,6 +3823,18 @@
             "cs.IT"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2401.14712",
+        "abstract url": "https://arxiv.org/abs/2401.14712",
+        "title": "A comprehensive review of electricity storage applications in island systems",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "Electricity storage is crucial for power systems to achieve higher levels of renewable energy penetration. This is especially significant for non-interconnected island (NII) systems, which are electrically isolated and vulnerable to the fluctuations of intermittent renewable generation. This paper comprehensively reviews existing literature on electricity storage in island systems, documenting relevant storage applications worldwide and emphasizing the role of storage in transitioning NII towards a fossil-fuel-independent electricity sector. On this topic, the literature review indicates that the implementation of storage is a prerequisite for attaining renewable penetration rates of over 50% due to the amplified requirements for system flexibility and renewable energy arbitrage. The analysis also identifies potential storage services and classifies applicable storage architectures for islands. Amongst the available storage designs, two have emerged as particularly important for further investigation; standalone, centrally managed storage stations and storage combined with renewables to form a hybrid plant that operates indivisibly in the market. For each design, the operating principles, remuneration schemes, investment feasibility, and applications discussed in the literature are presented in-depth, while possible implementation barriers are acknowledged. The literature on hybrid power plants mainly focuses on wind-powered pumped-hydro stations. However, recently, PV-powered battery-based hybrid plants have gained momentum due to the decreasing cost of Li-ion technology. On the other hand, standalone storage establishments rely heavily on battery technology and are mainly used to provide flexibility to the island grid. Nevertheless, these investments often suffer from insufficient remunerating frameworks, making it challenging for storage projects to be financially secure.",
+        "subjects": [
+            "eess.SY"
+        ],
+        "comment": "55 pages, 10 figures"
     },
     {
         "paper id": "2401.14723",
@@ -3957,7 +4010,7 @@
         "title": "The Power of Noise: Redefining Retrieval for RAG Systems",
         "rating": -10,
         "keywords": [],
-        "abstract": "Retrieval-Augmented Generation (RAG) systems represent a significant advancement over traditional Large Language Models (LLMs). RAG systems enhance their generation ability by incorporating external data retrieved through an Information Retrieval (IR) phase, overcoming the limitations of standard LLMs, which are restricted to their pre-trained knowledge and limited context window. Most research in this area has predominantly concentrated on the generative aspect of LLMs within RAG systems. Our study fills this gap by thoroughly and critically analyzing the influence of IR components on RAG systems. This paper analyzes which characteristics a retriever should possess for an effective RAG's prompt formulation, focusing on the type of documents that should be retrieved. We evaluate various elements, such as the relevance of the documents to the prompt, their position, and the number included in the context. Our findings reveal, among other insights, that including irrelevant documents can unexpectedly enhance performance by more than 30% in accuracy, contradicting our initial assumption of diminished quality. These results underscore the need for developing specialized strategies to integrate retrieval with language generation models, thereby laying the groundwork for future research in this field.",
+        "abstract": "Retrieval-Augmented Generation (RAG) has recently emerged as a method to extend beyond the pre-trained knowledge of Large Language Models by augmenting the original prompt with relevant passages or documents retrieved by an Information Retrieval (IR) system. RAG has become increasingly important for Generative AI solutions, especially in enterprise settings or in any domain in which knowledge is constantly refreshed and cannot be memorized in the LLM. We argue here that the retrieval component of RAG systems, be it dense or sparse, deserves increased attention from the research community, and accordingly, we conduct the first comprehensive and systematic examination of the retrieval strategy of RAG systems. We focus, in particular, on the type of passages IR systems within a RAG solution should retrieve. Our analysis considers multiple factors, such as the relevance of the passages included in the prompt context, their position, and their number. One counter-intuitive finding of this work is that the retriever's highest-scoring documents that are not directly relevant to the query (e.g., do not contain the answer) negatively impact the effectiveness of the LLM. Even more surprising, we discovered that adding random documents in the prompt improves the LLM accuracy by up to 35%. These results highlight the need to investigate the appropriate strategies when integrating retrieval with LLMs, thereby laying the groundwork for future research in this area.",
         "subjects": [
             "cs.IR"
         ],
@@ -4348,6 +4401,18 @@
         "comment": null
     },
     {
+        "paper id": "2401.15061",
+        "abstract url": "https://arxiv.org/abs/2401.15061",
+        "title": "Digital-analog hybrid matrix multiplication processor for optical neural networks",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "The computational demands of modern AI have spurred interest in optical neural networks (ONNs) which offer the potential benefits of increased speed and lower power consumption. However, current ONNs face various challenges,most significantly a limited calculation precision (typically around 4 bits) and the requirement for high-resolution signal format converters (digital-to-analogue conversions (DACs) and analogue-to-digital conversions (ADCs)). These challenges are inherent to their analog computing nature and pose significant obstacles in practical implementation. Here, we propose a digital-analog hybrid optical computing architecture for ONNs, which utilizes digital optical inputs in the form of binary words. By introducing the logic levels and decisions based on thresholding, the calculation precision can be significantly enhanced. The DACs for input data can be removed and the resolution of the ADCs can be greatly reduced. This can increase the operating speed at a high calculation precision and facilitate the compatibility with microelectronics. To validate our approach, we have fabricated a proof-of-concept photonic chip and built up a hybrid optical processor (HOP) system for neural network applications. We have demonstrated an unprecedented 16-bit calculation precision for high-definition image processing, with a pixel error rate (PER) as low as $1.8\\times10^{-3}$ at an signal-to-noise ratio (SNR) of 18.2 dB. We have also implemented a convolutional neural network for handwritten digit recognition that shows the same accuracy as the one achieved by a desktop computer. The concept of the digital-analog hybrid optical computing architecture offers a methodology that could potentially be applied to various ONN implementations and may intrigue new research into efficient and accurate domain-specific optical computing architectures for neural networks.",
+        "subjects": [
+            "cs.NE"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2401.15127",
         "abstract url": "https://arxiv.org/abs/2401.15127",
         "title": "Evaluation of LLM Chatbots for OSINT-based Cyber Threat Awareness",
@@ -4413,11 +4478,11 @@
         "title": "Link Prediction Accuracy on Real-World Networks Under Non-Uniform Missing Edge Patterns",
         "rating": -10,
         "keywords": [],
-        "abstract": "Real-world network datasets are typically obtained in ways that fail to capture all links, and there are many different non-uniform ways in which real data might be missing. Nevertheless, uniform missing data is a common assumption made when no additional information is available about the underlying ''missingness function.'' To investigate the impact of different missingness patterns on link prediction accuracy, we employ 9 link prediction algorithms from 4 different families to analyze 20 different missingness functions categorized into 5 groups. By studying 250 real-world network datasets, we illustrate that different prediction algorithms exhibit significant differences in accuracy contingent upon both the dataset domain and the nature of the missingness pattern. Our study thereby provides guidance for selecting appropriate prediction algorithms when encountering diverse patterns of missing data across various domains, emphasizing the importance of considering the specific characteristics of the dataset for effective link prediction.",
+        "abstract": "Real-world network datasets are typically obtained in ways that fail to capture all edges. The patterns of missing data are often non-uniform as they reflect biases and other shortcomings of different data collection methods. Nevertheless, uniform missing data is a common assumption made when no additional information is available about the underlying missing-edge pattern, and link prediction methods are frequently tested against uniformly missing edges. To investigate the impact of different missing-edge patterns on link prediction accuracy, we employ 9 link prediction algorithms from 4 different families to analyze 20 different missing-edge patterns that we categorize into 5 groups. Our comparative simulation study, spanning 250 real-world network datasets from 6 different domains, provides a detailed picture of the significant variations in the performance of different link prediction algorithms in these different settings. With this study, we aim to provide a guide for future researchers to help them select a link prediction algorithm that is well suited to their sampled network data, considering the data collection process and application domain.",
         "subjects": [
             "math.DS"
         ],
-        "comment": "Submitted to IEEE Transaction on Network Science and Engineering"
+        "comment": "Submitted to PLOS ONE"
     },
     {
         "paper id": "2401.15154",
@@ -4453,7 +4518,7 @@
         "subjects": [
             "cs.HC"
         ],
-        "comment": "7 pages, 1 figure, 1 table"
+        "comment": "6 pages, 3 figure, 1 table"
     },
     {
         "paper id": "2401.15186",
@@ -4466,18 +4531,6 @@
             "cs.CC"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2401.15189",
-        "abstract url": "https://arxiv.org/abs/2401.15189",
-        "title": "SBFT Tool Competition 2024 -- Python Test Case Generation Track",
-        "rating": -10,
-        "keywords": [],
-        "abstract": "Test case generation (TCG) for Python poses distinctive challenges due to the language's dynamic nature and the absence of strict type information. Previous research has successfully explored automated unit TCG for Python, with solutions outperforming random test generation methods. Nevertheless, fundamental issues persist, hindering the practical adoption of existing test case generators. To address these challenges, we report on the organization, challenges, and results of the first edition of the Python Testing Competition. Four tools, namely UTBotPython, Klara, Hypothesis Ghostwriter, and Pynguin were executed on a benchmark set consisting of 35 Python source files sampled from 7 open-source Python projects for a time budget of 400 seconds. We considered one configuration of each tool for each test subject and evaluated the tools' effectiveness in terms of code and mutation coverage. This paper describes our methodology, the analysis of the results together with the competing tools, and the challenges faced while running the competition experiments.",
-        "subjects": [
-            "cs.SE"
-        ],
-        "comment": "4 pages, to appear in the Proceedings of the 17th International Workshop on Search-Based and Fuzz Testing (SBFT@ICSE 2024)"
     },
     {
         "paper id": "2401.15195",

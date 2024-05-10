@@ -179,6 +179,7 @@
                 "cs.LG"
             ],
             [
+                "Workshop",
                 "NeurIPS"
             ]
         ],
@@ -214,6 +215,7 @@
                 "cs.CY"
             ],
             [
+                "Workshop",
                 "AAAI"
             ]
         ],
@@ -432,6 +434,22 @@
         "comment": "preprint"
     },
     {
+        "paper id": "2402.07198",
+        "abstract url": "https://arxiv.org/abs/2402.07198",
+        "title": "More Benefits of Being Distributional: Second-Order Bounds for Reinforcement Learning",
+        "rating": 0.5,
+        "keywords": [
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "In this paper, we prove that Distributional Reinforcement Learning (DistRL), which learns the return distribution, can obtain second-order bounds in both online and offline RL in general settings with function approximation. Second-order bounds are instance-dependent bounds that scale with the variance of return, which we prove are tighter than the previously known small-loss bounds of distributional RL. To the best of our knowledge, our results are the first second-order bounds for low-rank MDPs and for offline RL. When specializing to contextual bandits (one-step RL problem), we show that a distributional learning based optimism algorithm achieves a second-order worst-case regret bound, and a second-order gap dependent bound, simultaneously. We also empirically demonstrate the benefit of DistRL in contextual bandits on real-world datasets. We highlight that our analysis with DistRL is relatively simple, follows the general framework of optimism in the face of uncertainty and does not require weighted regression. Our results suggest that DistRL is a promising framework for obtaining second-order bounds in general RL settings, thus further reinforcing the benefits of DistRL.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2402.07204",
         "abstract url": "https://arxiv.org/abs/2402.07204",
         "title": "Synergizing Spatial Optimization with Large Language Models for Open-Domain Urban Itinerary Planning",
@@ -448,6 +466,22 @@
         "comment": null
     },
     {
+        "paper id": "2402.07208",
+        "abstract url": "https://arxiv.org/abs/2402.07208",
+        "title": "ML Framework for Wireless MAC Protocol Design",
+        "rating": 0.5,
+        "keywords": [
+            [
+                "ICML"
+            ]
+        ],
+        "abstract": "Adaptivity, reconfigurability and intelligence are key features of the next-generation wireless networks to meet the increasingly diverse quality of service (QoS) requirements of the future applications. Conventional protocol designs, however, struggle to provide flexibility and agility to changing radio environments, traffic types and different user service requirements. In this paper, we explore the potential of deep reinforcement learning (DRL), in particular Proximal Policy Optimization (PPO), to design and configure intelligent and application-specific medium access control (MAC) protocols. We propose a framework that enables the addition, removal, or modification of protocol features to meet individual application needs. The DRL channel access policy design empowers the protocol to adapt and optimize in accordance with the network and radio environment. Through extensive simulations, we demonstrate the superior performance of the learned protocols over legacy IEEE 802.11ac in terms of throughput and latency.",
+        "subjects": [
+            "cs.NI"
+        ],
+        "comment": "Accepted for Publication in IEEE ICMLCN 2024"
+    },
+    {
         "paper id": "2402.07221",
         "abstract url": "https://arxiv.org/abs/2402.07221",
         "title": "The Reasons that Agents Act: Intention and Instrumental Goals",
@@ -462,6 +496,22 @@
             "cs.AI"
         ],
         "comment": "AAMAS24"
+    },
+    {
+        "paper id": "2402.07234",
+        "abstract url": "https://arxiv.org/abs/2402.07234",
+        "title": "CPSDBench: A Large Language Model Evaluation Benchmark and Baseline for Chinese Public Security Domain",
+        "rating": 0.5,
+        "keywords": [
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "Large Language Models (LLMs) have demonstrated significant potential and effectiveness across multiple application domains. To assess the performance of mainstream LLMs in public security tasks, this study aims to construct a specialized evaluation benchmark tailored to the Chinese public security domain--CPSDbench. CPSDbench integrates datasets related to public security collected from real-world scenarios, supporting a comprehensive assessment of LLMs across four key dimensions: text classification, information extraction, question answering, and text generation. Furthermore, this study introduces a set of innovative evaluation metrics designed to more precisely quantify the efficacy of LLMs in executing tasks related to public security. Through the in-depth analysis and evaluation conducted in this research, we not only enhance our understanding of the performance strengths and limitations of existing models in addressing public security issues but also provide references for the future development of more accurate and customized LLM models targeted at applications in this field.",
+        "subjects": [
+            "cs.AI"
+        ],
+        "comment": null
     },
     {
         "paper id": "2402.07246",
@@ -514,18 +564,18 @@
     {
         "paper id": "2402.07314",
         "abstract url": "https://arxiv.org/abs/2402.07314",
-        "title": "A Theoretical Analysis of Nash Learning from Human Feedback under General KL-Regularized Preference",
+        "title": "Online Iterative Reinforcement Learning from Human Feedback with General Preference Model",
         "rating": 0.5,
         "keywords": [
             [
                 "cs.LG"
             ]
         ],
-        "abstract": "Reinforcement Learning from Human Feedback (RLHF) learns from the preference signal provided by a probabilistic preference model, which takes a prompt and two responses as input, and produces a score indicating the preference of one response against another. So far, the most popular RLHF paradigm is reward-based, which starts with an initial step of reward modeling, and the constructed reward is then used to provide a reward signal for the subsequent reward optimization stage. However, the existence of a reward function is a strong assumption and the reward-based RLHF is limited in expressivity and cannot capture the real-world complicated human preference. In this work, we provide theoretical insights for a recently proposed learning paradigm, Nash learning from human feedback (NLHF), which considered a general preference model and formulated the alignment process as a game between two competitive LLMs. The learning objective is to find a policy that consistently generates responses preferred over any competing policy while staying close to the initial model. The objective is defined as the Nash equilibrium (NE) of the KL-regularized preference model. We aim to make the first attempt to study the theoretical learnability of the KL-regularized NLHF by considering both offline and online settings. For the offline learning from a pre-collected dataset, we propose algorithms that are efficient under suitable coverage conditions of the dataset. For batch online learning from iterative interactions with a preference oracle, our proposed algorithm enjoys a finite sample guarantee under the structural condition of the underlying preference model. Our results connect the new NLHF paradigm with traditional RL theory, and validate the potential of reward-model-free learning under general preference.",
+        "abstract": "We study Reinforcement Learning from Human Feedback (RLHF) under a general preference oracle. In particular, we do not assume that there exists a reward function and the preference signal is drawn from the Bradley-Terry model as most of the prior works do. We consider a standard mathematical formulation, the reverse-KL regularized minimax game between two LLMs for RLHF under general preference oracle. The learning objective of this formulation is to find a policy so that it is consistently preferred by the KL-regularized preference oracle over any competing LLMs. We show that this framework is strictly more general than the reward-based one, and propose sample-efficient algorithms for both the offline learning from a pre-collected preference dataset and online learning where we can query the preference oracle along the way of training. Empirical studies verify the effectiveness of the proposed framework.",
         "subjects": [
             "cs.LG"
         ],
-        "comment": "RLHF, NLHF, Alignment for LLMs"
+        "comment": "RLHF, Preference Learning, Alignment for LLMs"
     },
     {
         "paper id": "2402.07319",
@@ -566,6 +616,7 @@
         "rating": 0.5,
         "keywords": [
             [
+                "Workshop",
                 "AAAI"
             ]
         ],
@@ -658,18 +709,18 @@
     {
         "paper id": "2402.07397",
         "abstract url": "https://arxiv.org/abs/2402.07397",
-        "title": "Leveraging AI to Advance Science and Computing Education across Africa: Progress, Challenges, and Opportunities",
+        "title": "Leveraging AI to Advance Science and Computing Education across Africa: Challenges, Progress and Opportunities",
         "rating": 0.5,
         "keywords": [
             [
                 "cs.CY"
             ]
         ],
-        "abstract": "Across the African continent, students grapple with various educational challenges, including limited access to essential resources such as computers, internet connectivity, reliable electricity, and a shortage of qualified teachers. Despite these challenges, recent advances in AI such as BERT, and GPT-4 have demonstrated their potential for advancing education. Yet, these AI tools tend to be deployed and evaluated predominantly within the context of Western educational settings, with limited attention directed towards the unique needs and challenges faced by students in Africa. In this book chapter, we describe our works developing and deploying AI in Education tools in Africa: (1) SuaCode, an AI-powered app that enables Africans to learn to code using their smartphones, (2) AutoGrad, an automated grading, and feedback tool for graphical and interactive coding assignments, (3) a tool for code plagiarism detection that shows visual evidence of plagiarism, (4) Kwame, a bilingual AI teaching assistant for coding courses, (5) Kwame for Science, a web-based AI teaching assistant that provides instant answers to students' science questions and (6) Brilla AI, an AI contestant for the National Science and Maths Quiz competition. We discuss challenges and potential opportunities to use AI to advance science and computing education across Africa.",
+        "abstract": "Across the African continent, students grapple with various educational challenges, including limited access to essential resources such as computers, internet connectivity, reliable electricity, and a shortage of qualified teachers. Despite these challenges, recent advances in AI such as BERT, and GPT-4 have demonstrated their potential for advancing education. Yet, these AI tools tend to be deployed and evaluated predominantly within the context of Western educational settings, with limited attention directed towards the unique needs and challenges faced by students in Africa. In this chapter, we discuss challenges with using AI to advance education across Africa. Then, we describe our work developing and deploying AI in Education tools in Africa for science and computing education: (1) SuaCode, an AI-powered app that enables Africans to learn to code using their smartphones, (2) AutoGrad, an automated grading, and feedback tool for graphical and interactive coding assignments, (3) a tool for code plagiarism detection that shows visual evidence of plagiarism, (4) Kwame, a bilingual AI teaching assistant for coding courses, (5) Kwame for Science, a web-based AI teaching assistant that provides instant answers to students' science questions and (6) Brilla AI, an AI contestant for the National Science and Maths Quiz competition. Finally, we discuss potential opportunities to leverage AI to advance education across Africa.",
         "subjects": [
             "cs.CY"
         ],
-        "comment": "Book chapter for upcoming book: \"Artificial Intelligence in Education: The Intersection of Technology and Pedagogy\""
+        "comment": "Book chapter for the book: \"Artificial Intelligence in Education: The Intersection of Technology and Pedagogy\""
     },
     {
         "paper id": "2402.07398",
@@ -748,6 +799,7 @@
                 "cs.LG"
             ],
             [
+                "Workshop",
                 "NeurIPS"
             ]
         ],
@@ -839,6 +891,26 @@
         "abstract": "Blind or Low-Vision (BLV) users often rely on audio descriptions (AD) to access video content. However, conventional static ADs can leave out detailed information in videos, impose a high mental load, neglect the diverse needs and preferences of BLV users, and lack immersion. To tackle these challenges, we introduce SPICA, an AI-powered system that enables BLV users to interactively explore video content. Informed by prior empirical studies on BLV video consumption, SPICA offers novel interactive mechanisms for supporting temporal navigation of frame captions and spatial exploration of objects within key frames. Leveraging an audio-visual machine learning pipeline, SPICA augments existing ADs by adding interactivity, spatial sound effects, and individual object descriptions without requiring additional human annotation. Through a user study with 14 BLV participants, we evaluated the usability and usefulness of SPICA and explored user behaviors, preferences, and mental models when interacting with augmented ADs.",
         "subjects": [
             "cs.HC"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2402.07301",
+        "abstract url": "https://arxiv.org/abs/2402.07301",
+        "title": "LISR: Learning Linear 3D Implicit Surface Representation Using Compactly Supported Radial Basis Functions",
+        "rating": 0,
+        "keywords": [
+            [
+                "3D",
+                "point cloud"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Implicit 3D surface reconstruction of an object from its partial and noisy 3D point cloud scan is the classical geometry processing and 3D computer vision problem. In the literature, various 3D shape representations have been developed, differing in memory efficiency and shape retrieval effectiveness, such as volumetric, parametric, and implicit surfaces. Radial basis functions provide memory-efficient parameterization of the implicit surface. However, we show that training a neural network using the mean squared error between the ground-truth implicit surface and the linear basis-based implicit surfaces does not converge to the global solution. In this work, we propose locally supported compact radial basis functions for a linear representation of the implicit surface. This representation enables us to generate 3D shapes with arbitrary topologies at any resolution due to their continuous nature. We then propose a neural network architecture for learning the linear implicit shape representation of the 3D surface of an object. We learn linear implicit shapes within a supervised learning framework using ground truth Signed-Distance Field (SDF) data for guidance. The classical strategies face difficulties in finding linear implicit shapes from a given 3D point cloud due to numerical issues (requires solving inverse of a large matrix) in basis and query point selection. The proposed approach achieves better Chamfer distance and comparable F-score than the state-of-the-art approach on the benchmark dataset. We also show the effectiveness of the proposed approach by using it for the 3D shape completion task.",
+        "subjects": [
+            "cs.CV"
         ],
         "comment": null
     },
@@ -977,6 +1049,25 @@
         "comment": "9 pages"
     },
     {
+        "paper id": "2402.07191",
+        "abstract url": "https://arxiv.org/abs/2402.07191",
+        "title": "GSINA: Improving Subgraph Extraction for Graph Invariant Learning via Graph Sinkhorn Attention",
+        "rating": -0.5,
+        "keywords": [
+            [
+                "Graph"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Graph invariant learning (GIL) has been an effective approach to discovering the invariant relationships between graph data and its labels for different graph learning tasks under various distribution shifts. Many recent endeavors of GIL focus on extracting the invariant subgraph from the input graph for prediction as a regularization strategy to improve the generalization performance of graph learning. Despite their success, such methods also have various limitations in obtaining their invariant subgraphs. In this paper, we provide in-depth analyses of the drawbacks of existing works and propose corresponding principles of our invariant subgraph extraction: 1) the sparsity, to filter out the variant features, 2) the softness, for a broader solution space, and 3) the differentiability, for a soundly end-to-end optimization. To meet these principles in one shot, we leverage the Optimal Transport (OT) theory and propose a novel graph attention mechanism called Graph Sinkhorn Attention (GSINA). This novel approach serves as a powerful regularization method for GIL tasks. By GSINA, we are able to obtain meaningful, differentiable invariant subgraphs with controllable sparsity and softness. Moreover, GSINA is a general graph learning framework that could handle GIL tasks of multiple data grain levels. Extensive experiments on both synthetic and real-world datasets validate the superiority of our GSINA, which outperforms the state-of-the-art GIL methods by large margins on both graph-level tasks and node-level tasks. Our code is publicly available at \\url{https://github.com/dingfangyu/GSINA}.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2402.07197",
         "abstract url": "https://arxiv.org/abs/2402.07197",
         "title": "GraphTranslator: Aligning Graph Model to Large Language Model for Open-ended Tasks",
@@ -1031,25 +1122,6 @@
         "abstract": "Vehicle movement is frequently captured in the form of trajectories, i.e., sequences of timestamped locations. Numerous methods exist that target different tasks involving trajectories such as travel-time estimation, trajectory recovery, and trajectory prediction. However, most methods target only one specific task and cannot be applied universally. Existing efforts to create a universal trajectory model often involve adding prediction modules for adapting to different tasks, while also struggle with incomplete or sparse trajectories. To address these shortcomings, we propose the Universal Vehicle Trajectory Model (UVTM) designed to support different tasks based on incomplete or sparse trajectories without the need for retraining or extra prediction modules. To addresses task adaptability on incomplete trajectories, UVTM divide the spatio-temporal features of trajectories into three distinct domains. Each domain can be masked and generated independently to suit the input and output needs of specific tasks. To handle sparse trajectories effectively, UVTM is pre-trained by reconstructing densely sampled trajectories from sparsely sampled ones, allowing it to extract detailed spatio-temporal information from sparse trajectories. Experiments involving three representative trajectory-related tasks on two real-world vehicle trajectory datasets provide insight into the intended properties performance of UVTM and offer evidence that UVTM is capable of meeting its objectives.",
         "subjects": [
             "cs.LG"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2402.07234",
-        "abstract url": "https://arxiv.org/abs/2402.07234",
-        "title": "CPSDBench: A Large Language Model Evaluation Benchmark and Baseline for Chinese Public Security Domain",
-        "rating": -0.5,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "Large Language Models (LLMs) have demonstrated significant potential and effectiveness across multiple application domains. To assess the performance of mainstream LLMs in public security tasks, this study aims to construct a specialized evaluation benchmark tailored to the Chinese public security domain--CPSDbench. CPSDbench integrates datasets related to public security collected from real-world scenarios, supporting a comprehensive assessment of LLMs across four key dimensions: text classification, information extraction, question answering, and text generation. Furthermore, this study introduces a set of innovative evaluation metrics designed to more precisely quantify the efficacy of LLMs in executing tasks related to public security. Through the in-depth analysis and evaluation conducted in this research, we not only enhance our understanding of the performance strengths and limitations of existing models in addressing public security issues but also provide references for the future development of more accurate and customized LLM models targeted at applications in this field.",
-        "subjects": [
-            "cs.AI"
         ],
         "comment": null
     },
@@ -1128,6 +1200,22 @@
             "cs.LG"
         ],
         "comment": "ACM/SIGAPP Symposium on Applied Computing 2024"
+    },
+    {
+        "paper id": "2402.07323",
+        "abstract url": "https://arxiv.org/abs/2402.07323",
+        "title": "Lessons Learned from Mining the Hugging Face Repository",
+        "rating": -0.5,
+        "keywords": [
+            [
+                "Workshop"
+            ]
+        ],
+        "abstract": "The rapidly evolving fields of Machine Learning (ML) and Artificial Intelligence have witnessed the emergence of platforms like Hugging Face (HF) as central hubs for model development and sharing. This experience report synthesizes insights from two comprehensive studies conducted on HF, focusing on carbon emissions and the evolutionary and maintenance aspects of ML models. Our objective is to provide a practical guide for future researchers embarking on mining software repository studies within the HF ecosystem to enhance the quality of these studies. We delve into the intricacies of the replication package used in our studies, highlighting the pivotal tools and methodologies that facilitated our analysis. Furthermore, we propose a nuanced stratified sampling strategy tailored for the diverse HF Hub dataset, ensuring a representative and comprehensive analytical approach. The report also introduces preliminary guidelines, transitioning from repository mining to cohort studies, to establish causality in repository mining studies, particularly within the ML model of HF context. This transition is inspired by existing frameworks and is adapted to suit the unique characteristics of the HF model ecosystem. Our report serves as a guiding framework for researchers, contributing to the responsible and sustainable advancement of ML, and fostering a deeper understanding of the broader implications of ML models.",
+        "subjects": [
+            "cs.SE"
+        ],
+        "comment": "Accepted at the 2024 ACM/IEEE 1st International Workshop on Methodological Issues with Empirical Studies in Software Engineering (WSESE)"
     },
     {
         "paper id": "2402.07327",
@@ -1264,22 +1352,6 @@
         "comment": null
     },
     {
-        "paper id": "2402.07132",
-        "abstract url": "https://arxiv.org/abs/2402.07132",
-        "title": "BAFLineDP: Code Bilinear Attention Fusion Framework for Line-Level Defect Prediction",
-        "rating": -1,
-        "keywords": [
-            [
-                "depth"
-            ]
-        ],
-        "abstract": "Software defect prediction aims to identify defect-prone code, aiding developers in optimizing testing resource allocation. Most defect prediction approaches primarily focus on coarse-grained, file-level defect prediction, which fails to provide developers with the precision required to locate defective code. Recently, some researchers have proposed fine-grained, line-level defect prediction methods. However, most of these approaches lack an in-depth consideration of the contextual semantics of code lines and neglect the local interaction information among code lines. To address the above issues, this paper presents a line-level defect prediction method grounded in a code bilinear attention fusion framework (BAFLineDP). This method discerns defective code files and lines by integrating source code line semantics, line-level context, and local interaction information between code lines and line-level context. Through an extensive analysis involving within- and cross-project defect prediction across 9 distinct projects encompassing 32 releases, our results demonstrate that BAFLineDP outperforms current advanced file-level and line-level defect prediction approaches.",
-        "subjects": [
-            "cs.SE"
-        ],
-        "comment": "Accepted by IEEE SANER 2024"
-    },
-    {
         "paper id": "2402.07144",
         "abstract url": "https://arxiv.org/abs/2402.07144",
         "title": "A Fundamental Analysis of the Impact on Traffic Assignment by Toll System of Electric Road System",
@@ -1363,7 +1435,6 @@
                 "Medical",
                 "healthcare",
                 "MRI",
-                "face",
                 "cardiac"
             ],
             [
@@ -1469,37 +1540,20 @@
         "comment": "6 pages, 5 figures"
     },
     {
-        "paper id": "2402.07304",
-        "abstract url": "https://arxiv.org/abs/2402.07304",
-        "title": "Insights into Natural Language Database Query Errors: From Attention Misalignment to User Handling Strategies",
-        "rating": -1,
-        "keywords": [
-            [
-                "depth"
-            ]
-        ],
-        "abstract": "Querying structured databases with natural language (NL2SQL) has remained a difficult problem for years. Recently, the advancement of machine learning (ML), natural language processing (NLP), and large language models (LLM) have led to significant improvements in performance, with the best model achieving ~85% percent accuracy on the benchmark Spider dataset. However, there is a lack of a systematic understanding of the types, causes, and effectiveness of error-handling mechanisms of errors for erroneous queries nowadays. To bridge the gap, a taxonomy of errors made by four representative NL2SQL models was built in this work, along with an in-depth analysis of the errors. Second, the causes of model errors were explored by analyzing the model-human attention alignment to the natural language query. Last, a within-subjects user study with 26 participants was conducted to investigate the effectiveness of three interactive error-handling mechanisms in NL2SQL. Findings from this paper shed light on the design of model structure and error discovery and repair strategies for natural language data query interfaces in the future.",
-        "subjects": [
-            "cs.HC"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2402.07330",
         "abstract url": "https://arxiv.org/abs/2402.07330",
-        "title": "Deep Learning for Medical Image Segmentation with Imprecise Annotation",
+        "title": "Expert-Adaptive Medical Image Segmentation",
         "rating": -1,
         "keywords": [
             [
                 "Medical",
-                "diagnosis",
                 "MRI"
             ],
             [
                 "cs.CV"
             ]
         ],
-        "abstract": "Medical image segmentation (MIS) plays an instrumental role in medical image analysis, where considerable efforts have been devoted to automating the process. Currently, mainstream MIS approaches are based on deep neural networks (DNNs) which are typically trained on a dataset that contains annotation masks produced by doctors. However, in the medical domain, the annotation masks generated by different doctors can inherently vary because a doctor may unnecessarily produce precise and unique annotations to meet the goal of diagnosis. Therefore, the DNN model trained on the data annotated by certain doctors, often just a single doctor, could undesirably favour those doctors who annotate the training data, leading to the unsatisfaction of a new doctor who will use the trained model. To address this issue, this work investigates the utilization of multi-expert annotation to enhance the adaptability of the model to a new doctor and we conduct a pilot study on the MRI brain segmentation task. Experimental results demonstrate that the model trained on a dataset with multi-expert annotation can efficiently cater for a new doctor, after lightweight fine-tuning on just a few annotations from the new doctor.",
+        "abstract": "Medical image segmentation (MIS) plays an instrumental role in medical image analysis, where considerable effort has been devoted to automating the process. Currently, mainstream MIS approaches are based on deep neural networks (DNNs), which are typically trained on a dataset with annotations produced by certain medical experts. In the medical domain, the annotations generated by different experts can be inherently distinct due to complexity of medical images and variations in expertise and post-segmentation missions. Consequently, the DNN model trained on the data annotated by some experts may hardly adapt to a new expert. In this work, we evaluate a customised expert-adaptive method, characterised by multi-expert annotation, multi-task DNN-based model training, and lightweight model fine-tuning, to investigate model's adaptivity to a new expert in the situation where the amount and mobility of training images are limited. Experiments conducted on brain MRI segmentation tasks with limited training data demonstrate its effectiveness and the impact of its key parameters.",
         "subjects": [
             "cs.CV"
         ],
@@ -1544,8 +1598,7 @@
         "rating": -1,
         "keywords": [
             [
-                "facial",
-                "Face"
+                "facial"
             ],
             [
                 "cs.CV"
@@ -1654,47 +1707,6 @@
         "abstract": "Treatment planning is currently a patient specific, time-consuming, and resource demanding task in radiotherapy. Dose-volume histogram (DVH) prediction plays a critical role in automating this process. The geometric relationship between DVHs in radiotherapy plans and organs-at-risk (OAR) and planning target volume (PTV) has been well established. This study explores the potential of deep learning models for predicting DVHs using images and subsequent human intervention facilitated by a large-language model (LLM) to enhance the planning quality. We propose a pipeline to convert unstructured images to a structured graph consisting of image-patch nodes and dose nodes. A novel Dose Graph Neural Network (DoseGNN) model is developed for predicting DVHs from the structured graph. The proposed DoseGNN is enhanced with the LLM to encode massive knowledge from prescriptions and interactive instructions from clinicians. In this study, we introduced an online human-AI collaboration (OHAC) system as a practical implementation of the concept proposed for the automation of intensity-modulated radiotherapy (IMRT) planning. In comparison to the widely-employed DL models used in radiotherapy, DoseGNN achieved mean square errors that were 80$\\%$, 76$\\%$ and 41.0$\\%$ of those predicted by Swin U-Net Transformer, 3D U-Net CNN and vanilla MLP, respectively. Moreover, the LLM-empowered DoseGNN model facilitates seamless adjustment to treatment plans through interaction with clinicians using natural language.",
         "subjects": [
             "cs.AI"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2402.07191",
-        "abstract url": "https://arxiv.org/abs/2402.07191",
-        "title": "GSINA: Improving Subgraph Extraction for Graph Invariant Learning via Graph Sinkhorn Attention",
-        "rating": -1.5,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "Graph"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Graph invariant learning (GIL) has been an effective approach to discovering the invariant relationships between graph data and its labels for different graph learning tasks under various distribution shifts. Many recent endeavors of GIL focus on extracting the invariant subgraph from the input graph for prediction as a regularization strategy to improve the generalization performance of graph learning. Despite their success, such methods also have various limitations in obtaining their invariant subgraphs. In this paper, we provide in-depth analyses of the drawbacks of existing works and propose corresponding principles of our invariant subgraph extraction: 1) the sparsity, to filter out the variant features, 2) the softness, for a broader solution space, and 3) the differentiability, for a soundly end-to-end optimization. To meet these principles in one shot, we leverage the Optimal Transport (OT) theory and propose a novel graph attention mechanism called Graph Sinkhorn Attention (GSINA). This novel approach serves as a powerful regularization method for GIL tasks. By GSINA, we are able to obtain meaningful, differentiable invariant subgraphs with controllable sparsity and softness. Moreover, GSINA is a general graph learning framework that could handle GIL tasks of multiple data grain levels. Extensive experiments on both synthetic and real-world datasets validate the superiority of our GSINA, which outperforms the state-of-the-art GIL methods by large margins on both graph-level tasks and node-level tasks. Our code is publicly available at \\url{https://github.com/dingfangyu/GSINA}.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2402.07198",
-        "abstract url": "https://arxiv.org/abs/2402.07198",
-        "title": "More Benefits of Being Distributional: Second-Order Bounds for Reinforcement Learning",
-        "rating": -1.5,
-        "keywords": [
-            [
-                "face"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "In this paper, we prove that Distributional Reinforcement Learning (DistRL), which learns the return distribution, can obtain second-order bounds in both online and offline RL in general settings with function approximation. Second-order bounds are instance-dependent bounds that scale with the variance of return, which we prove are tighter than the previously known small-loss bounds of distributional RL. To the best of our knowledge, our results are the first second-order bounds for low-rank MDPs and for offline RL. When specializing to contextual bandits (one-step RL problem), we show that a distributional learning based optimism algorithm achieves a second-order worst-case regret bound, and a second-order gap dependent bound, simultaneously. We also empirically demonstrate the benefit of DistRL in contextual bandits on real-world datasets. We highlight that our analysis with DistRL is relatively simple, follows the general framework of optimism in the face of uncertainty and does not require weighted regression. Our results suggest that DistRL is a promising framework for obtaining second-order bounds in general RL settings, thus further reinforcing the benefits of DistRL.",
-        "subjects": [
-            "cs.LG"
         ],
         "comment": null
     },
@@ -1874,45 +1886,6 @@
             "cs.RO"
         ],
         "comment": "8 pages, 4 figures, accepted to RA-L"
-    },
-    {
-        "paper id": "2402.07301",
-        "abstract url": "https://arxiv.org/abs/2402.07301",
-        "title": "LISR: Learning Linear 3D Implicit Surface Representation Using Compactly Supported Radial Basis Functions",
-        "rating": -2,
-        "keywords": [
-            [
-                "3D",
-                "point cloud"
-            ],
-            [
-                "face"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Implicit 3D surface reconstruction of an object from its partial and noisy 3D point cloud scan is the classical geometry processing and 3D computer vision problem. In the literature, various 3D shape representations have been developed, differing in memory efficiency and shape retrieval effectiveness, such as volumetric, parametric, and implicit surfaces. Radial basis functions provide memory-efficient parameterization of the implicit surface. However, we show that training a neural network using the mean squared error between the ground-truth implicit surface and the linear basis-based implicit surfaces does not converge to the global solution. In this work, we propose locally supported compact radial basis functions for a linear representation of the implicit surface. This representation enables us to generate 3D shapes with arbitrary topologies at any resolution due to their continuous nature. We then propose a neural network architecture for learning the linear implicit shape representation of the 3D surface of an object. We learn linear implicit shapes within a supervised learning framework using ground truth Signed-Distance Field (SDF) data for guidance. The classical strategies face difficulties in finding linear implicit shapes from a given 3D point cloud due to numerical issues (requires solving inverse of a large matrix) in basis and query point selection. The proposed approach achieves better Chamfer distance and comparable F-score than the state-of-the-art approach on the benchmark dataset. We also show the effectiveness of the proposed approach by using it for the 3D shape completion task.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2402.07323",
-        "abstract url": "https://arxiv.org/abs/2402.07323",
-        "title": "Lessons Learned from Mining the Hugging Face Repository",
-        "rating": -2,
-        "keywords": [
-            [
-                "Face"
-            ]
-        ],
-        "abstract": "The rapidly evolving fields of Machine Learning (ML) and Artificial Intelligence have witnessed the emergence of platforms like Hugging Face (HF) as central hubs for model development and sharing. This experience report synthesizes insights from two comprehensive studies conducted on HF, focusing on carbon emissions and the evolutionary and maintenance aspects of ML models. Our objective is to provide a practical guide for future researchers embarking on mining software repository studies within the HF ecosystem to enhance the quality of these studies. We delve into the intricacies of the replication package used in our studies, highlighting the pivotal tools and methodologies that facilitated our analysis. Furthermore, we propose a nuanced stratified sampling strategy tailored for the diverse HF Hub dataset, ensuring a representative and comprehensive analytical approach. The report also introduces preliminary guidelines, transitioning from repository mining to cohort studies, to establish causality in repository mining studies, particularly within the ML model of HF context. This transition is inspired by existing frameworks and is adapted to suit the unique characteristics of the HF model ecosystem. Our report serves as a guiding framework for researchers, contributing to the responsible and sustainable advancement of ML, and fostering a deeper understanding of the broader implications of ML models.",
-        "subjects": [
-            "cs.SE"
-        ],
-        "comment": "Accepted at the 2024 ACM/IEEE 1st International Workshop on Methodological Issues with Empirical Studies in Software Engineering (WSESE)"
     },
     {
         "paper id": "2402.07354",
@@ -2195,8 +2168,7 @@
                 "depth"
             ],
             [
-                "Facial",
-                "face"
+                "Facial"
             ],
             [
                 "thermal"
@@ -2282,13 +2254,16 @@
         "paper id": "2402.07148",
         "abstract url": "https://arxiv.org/abs/2402.07148",
         "title": "X-LoRA: Mixture of Low-Rank Adapter Experts, a Flexible Framework for Large Language Models with Applications in Protein Mechanics and Molecular Design",
-        "rating": -5,
+        "rating": -7,
         "keywords": [
             [
                 "graph"
             ],
             [
                 "biological"
+            ],
+            [
+                "chemistry"
             ],
             [
                 "quantum",
@@ -2324,6 +2299,18 @@
             "stat.ML"
         ],
         "comment": "35 pages"
+    },
+    {
+        "paper id": "2402.07132",
+        "abstract url": "https://arxiv.org/abs/2402.07132",
+        "title": "BAFLineDP: Code Bilinear Attention Fusion Framework for Line-Level Defect Prediction",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "Software defect prediction aims to identify defect-prone code, aiding developers in optimizing testing resource allocation. Most defect prediction approaches primarily focus on coarse-grained, file-level defect prediction, which fails to provide developers with the precision required to locate defective code. Recently, some researchers have proposed fine-grained, line-level defect prediction methods. However, most of these approaches lack an in-depth consideration of the contextual semantics of code lines and neglect the local interaction information among code lines. To address the above issues, this paper presents a line-level defect prediction method grounded in a code bilinear attention fusion framework (BAFLineDP). This method discerns defective code files and lines by integrating source code line semantics, line-level context, and local interaction information between code lines and line-level context. Through an extensive analysis involving within- and cross-project defect prediction across 9 distinct projects encompassing 32 releases, our results demonstrate that BAFLineDP outperforms current advanced file-level and line-level defect prediction approaches.",
+        "subjects": [
+            "cs.SE"
+        ],
+        "comment": "Accepted by IEEE SANER 2024"
     },
     {
         "paper id": "2402.07138",
@@ -2446,18 +2433,6 @@
         "comment": null
     },
     {
-        "paper id": "2402.07208",
-        "abstract url": "https://arxiv.org/abs/2402.07208",
-        "title": "ML Framework for Wireless MAC Protocol Design",
-        "rating": -10,
-        "keywords": [],
-        "abstract": "Adaptivity, reconfigurability and intelligence are key features of the next-generation wireless networks to meet the increasingly diverse quality of service (QoS) requirements of the future applications. Conventional protocol designs, however, struggle to provide flexibility and agility to changing radio environments, traffic types and different user service requirements. In this paper, we explore the potential of deep reinforcement learning (DRL), in particular Proximal Policy Optimization (PPO), to design and configure intelligent and application-specific medium access control (MAC) protocols. We propose a framework that enables the addition, removal, or modification of protocol features to meet individual application needs. The DRL channel access policy design empowers the protocol to adapt and optimize in accordance with the network and radio environment. Through extensive simulations, we demonstrate the superior performance of the learned protocols over legacy IEEE 802.11ac in terms of throughput and latency.",
-        "subjects": [
-            "cs.NI"
-        ],
-        "comment": "Accepted for Publication in IEEE ICMLCN 2024"
-    },
-    {
         "paper id": "2402.07217",
         "abstract url": "https://arxiv.org/abs/2402.07217",
         "title": "Content and structure of laboratory packages for software engineering experiments",
@@ -2552,6 +2527,18 @@
             "cs.DC"
         ],
         "comment": "12 pages, 6 figures"
+    },
+    {
+        "paper id": "2402.07304",
+        "abstract url": "https://arxiv.org/abs/2402.07304",
+        "title": "Insights into Natural Language Database Query Errors: From Attention Misalignment to User Handling Strategies",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "Querying structured databases with natural language (NL2SQL) has remained a difficult problem for years. Recently, the advancement of machine learning (ML), natural language processing (NLP), and large language models (LLM) have led to significant improvements in performance, with the best model achieving ~85% percent accuracy on the benchmark Spider dataset. However, there is a lack of a systematic understanding of the types, causes, and effectiveness of error-handling mechanisms of errors for erroneous queries nowadays. To bridge the gap, a taxonomy of errors made by four representative NL2SQL models was built in this work, along with an in-depth analysis of the errors. Second, the causes of model errors were explored by analyzing the model-human attention alignment to the natural language query. Last, a within-subjects user study with 26 participants was conducted to investigate the effectiveness of three interactive error-handling mechanisms in NL2SQL. Findings from this paper shed light on the design of model structure and error discovery and repair strategies for natural language data query interfaces in the future.",
+        "subjects": [
+            "cs.HC"
+        ],
+        "comment": null
     },
     {
         "paper id": "2402.07307",
@@ -2852,5 +2839,17 @@
             "q-fin.ST"
         ],
         "comment": "26 pages; 14 figures"
+    },
+    {
+        "paper id": "2405.00016",
+        "abstract url": "https://arxiv.org/abs/2405.00016",
+        "title": "HPX with Spack and Singularity Containers: Evaluating Overheads for HPX/Kokkos using an astrophysics application",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "Cloud computing for high performance computing resources is an emerging topic. This service is of interest to researchers who care about reproducible computing, for software packages with complex installations, and for companies or researchers who need the compute resources only occasionally or do not want to run and maintain a supercomputer on their own. The connection between HPC and containers is exemplified by the fact that Microsoft Azure's Eagle cloud service machine is number three on the November 23 Top 500 list. For cloud services, the HPC application and dependencies are installed in containers, e.g. Docker, Singularity, or something else, and these containers are executed on the physical hardware. Although containerization leverages the existing Linux kernel and should not impose overheads on the computation, there is the possibility that machine-specific optimizations might be lost, particularly machine-specific installs of commonly used packages. In this paper, we will use an astrophysics application using HPX-Kokkos and measure overheads on homogeneous resources, e.g. Supercomputer Fugaku, using CPUs only and on heterogenous resources, e.g. LSU's hybrid CPU and GPU system. We will report on challenges in compiling, running, and using the containers as well as performance performance differences.",
+        "subjects": [
+            "cs.DC"
+        ],
+        "comment": null
     }
 ]

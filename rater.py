@@ -30,16 +30,17 @@ class Rater:
         self.PhraseOfInterest = {
             -2: [
                 [r"bio\S*", "medical", "health", "healthcare", "surgical",
-                 "surgery", "survival", "diagnosi(s|ng)", "f?MRI", "CT",
+                 "surgery", "survival", "diagnosi(s|ng)", "f?MRI", "CT", "eeg",
                  "whole slide", "X-ray", "cancer", "disease", "skin lesions",
                  "sign language", "clinical", "facial", "cardiac", "tumor",
-                 "endoscopic", "psychological", "pathological",
-                 "red blood cells", "organ", "DNA"],
+                 "endoscopic", "psychological", "pathological", "retinal?",
+                 "red blood cells", "organ", "DNA", "radiology"],
                 ["5G", "6G", "industrial", "IoT", "recommendation", "patent",
-                 "thermal", "alloys?", "chemical", "watermark(ing)?"],
+                 "thermal", "alloys?", "chemistry", "chemical", "astronaut",
+                 "watermark(ing)?"],
                 ["remote sensing", "UAV", "forecast(ing)?", "satellite",
                  "hyperspectral (data|imag(es|ing))", "bird's-eye view", "BEV",
-                 "drone", "agricultural", "mineral", "drill core"],
+                 "drone", "agricultural", "mineral", "drill core", "seafloor"],
                 ["HDR", "image restoration", "haze", "dehazing",
                  "neural( image)? codecs?", "quality assessment",
                  "((image|video|low-light)( quality| color)? enhancement)"],
@@ -50,8 +51,8 @@ class Rater:
             ],
             -1: [
                 ["3D", "Gaussian splatting", "voxel", "point cloud", "(6|multi)-?DoFs?",
-                 "6D", "RGB-?D", "depth", "NeRF", "radiance fields", "avatar"
-                 "event cameras?"],
+                 "6D", "RGB-?D", r"(?<!in(-| ))depth", "NeRF", "radiance fields",
+                 "avatar", "event cameras?", "skeletons?"],
                 ["diffusion", "GAN", "synthesi(s|ze|zer|zing)", "inpaint(ing)?",
                  "(image|video) edit(ing)?", "text[ -]to[ -](image|video|vision)",
                  "super[ -]?resolution", "image retouching", "derain(ing)?"],
@@ -68,7 +69,7 @@ class Rater:
             ],
             1: [
                 ["(parameters?|meory|time|training)[ -]?(efficient|efficiency)",
-                 "PEFT", "efficient fine-?tun(e|ing)"],
+                 "PEFT", "efficient fine-?tun(e|ing)", "GPU memory"],
                 ["(vision|visual)[ -]language", "VLMs?"],
                 ["audio[ -](vision|visual)"],
                 ["(social|cultral) bias(es)?"]
@@ -81,9 +82,9 @@ class Rater:
         self.ConferenceOfInterest = {
             0.5: [
                 "AAAI", "CVPR", "ECCV", "EMNLP", "ICASSP", "ICCV", "ICLR",
-                "Interspeech", "NeurIPS", "NIPS", "WACV"
+                "Interspeech", "NeurIPS", "NIPS", "WACV", "ICML"
             ],
-            -0.5: ["workshop"]
+            -0.5: ["workshop", "Workshop"]
         }
 
     

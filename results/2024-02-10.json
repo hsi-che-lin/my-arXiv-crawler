@@ -9,6 +9,7 @@
                 "eess.AS"
             ],
             [
+                "Workshop",
                 "ICASSP"
             ]
         ],
@@ -37,6 +38,25 @@
             "cs.CL"
         ],
         "comment": "Accepted to ICASSP 2024, Self-supervision in Audio, Speech, and Beyond (SASB) workshop"
+    },
+    {
+        "paper id": "2402.07033",
+        "abstract url": "https://arxiv.org/abs/2402.07033",
+        "title": "Fiddler: CPU-GPU Orchestration for Fast Inference of Mixture-of-Experts Models",
+        "rating": 1.5,
+        "keywords": [
+            [
+                "GPU memory"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Large Language Models (LLMs) based on Mixture-of-Experts (MoE) architecture are showing promising performance on various tasks. However, running them on resource-constrained settings, where GPU memory resources are not abundant, is challenging due to huge model sizes. Existing systems that offload model weights to CPU memory suffer from the significant overhead of frequently moving data between CPU and GPU. In this paper, we propose Fiddler, a resource-efficient inference engine with CPU-GPU orchestration for MoE models. The key idea of Fiddler is to use the computation ability of the CPU to minimize the data movement between the CPU and GPU. Our evaluation shows that Fiddler can run the uncompressed Mixtral-8x7B model, which exceeds 90GB in parameters, to generate over $3$ tokens per second on a single GPU with 24GB memory, showing an order of magnitude improvement over existing methods. The code of Fiddler is publicly available at \\url{https://github.com/efeslab/fiddler}",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": null
     },
     {
         "paper id": "2402.07081",
@@ -244,7 +264,7 @@
                 "cs.SD"
             ]
         ],
-        "abstract": "Despite recent improvements in audio-text modeling, audio-text contrastive models still lag behind their image-text counterparts in scale and performance. We propose a method to improve both the scale and the training of audio-text contrastive models. Specifically, we craft a large-scale audio-text dataset consisting of over 13,000 hours of text-labeled audio, aided by large language model (LLM) processing and audio captioning. Further, we employ an masked autoencoder (MAE) pre-pretraining phase with random patch dropout, which allows us to both scale unlabeled audio datasets and train efficiently with variable length audio. After MAE pre-pretraining of our audio encoder, we train a contrastive model with an auxiliary captioning objective. Our final model, which we name Cacophony, achieves state-of-the-art performance on audio-text retrieval tasks, and exhibits competitive results on other downstream tasks such as zero-shot classification.",
+        "abstract": "Despite recent advancements in audio-text modeling, audio-text contrastive models still lag behind their image-text counterparts in scale and performance. We propose a method to improve both the scale and the training of audio-text contrastive models. Specifically, we craft a large-scale audio-text dataset containing 13,000 hours of text-labeled audio, using pretrained language models to process noisy text descriptions and automatic captioning to obtain text descriptions for unlabeled audio samples. We first train on audio-only data with a masked autoencoder (MAE) objective, which allows us to benefit from the scalability of unlabeled audio datasets. We then, initializing our audio encoder from the MAE model, train a contrastive model with an auxiliary captioning objective. Our final model, which we name Cacophony, achieves state-of-the-art performance on audio-text retrieval tasks, and exhibits competitive results on the HEAR benchmark and other downstream tasks such as zero-shot classification.",
         "subjects": [
             "cs.SD"
         ],
@@ -363,6 +383,22 @@
         "comment": null
     },
     {
+        "paper id": "2402.06929",
+        "abstract url": "https://arxiv.org/abs/2402.06929",
+        "title": "Making a prototype of Seoul historical sites chatbot using Langchain",
+        "rating": 0.5,
+        "keywords": [
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "In this paper, we are going to share a draft of the development of a conversational agent created to disseminate information about historical sites located in the Seoul. The primary objective of the agent is to increase awareness among visitors who are not familiar with Seoul, about the presence and precise locations of valuable cultural heritage sites. It aims to promote a basic understanding of Korea's rich and diverse cultural history. The agent is thoughtfully designed for accessibility in English and utilizes data generously provided by the Seoul Metropolitan Government. Despite the limited data volume, it consistently delivers reliable and accurate responses, seamlessly aligning with the available information. We have meticulously detailed the methodologies employed in creating this agent and provided a comprehensive overview of its underlying structure within the paper. Additionally, we delve into potential improvements to enhance this initial version of the system, with a primary emphasis on expanding the available data through our prompting. In conclusion, we provide an in-depth discussion of our expectations regarding the future impact of this agent in promoting and facilitating the sharing of historical sites.",
+        "subjects": [
+            "cs.AI"
+        ],
+        "comment": "4 pages, 4 figures, draft"
+    },
+    {
         "paper id": "2402.06966",
         "abstract url": "https://arxiv.org/abs/2402.06966",
         "title": "DeepCover: Advancing RNN Test Coverage and Online Error Prediction using State Machine Extraction",
@@ -405,22 +441,6 @@
             ]
         ],
         "abstract": "Many tasks can be easily solved using machine learning techniques. However, some tasks cannot readily be solved using statistical models, requiring a symbolic approach instead. Program induction is one of the ways that such tasks can be solved by means of capturing an interpretable and generalizable algorithm through training. However, contemporary approaches to program induction are not sophisticated enough to readily be applied to various types of tasks as they tend to be formulated as a single, all-encompassing model, usually parameterized by neural networks. In an attempt to make program induction a viable solution for many scenarios, we propose a framework for learning parameterized programs via search gradients using evolution strategies. This formulation departs from traditional program induction as it allows for the programmer to impart task-specific code to the program 'sketch', while also enjoying the benefits of accelerated learning through end-to-end gradient-based optimization.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2402.07033",
-        "abstract url": "https://arxiv.org/abs/2402.07033",
-        "title": "Fiddler: CPU-GPU Orchestration for Fast Inference of Mixture-of-Experts Models",
-        "rating": 0.5,
-        "keywords": [
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Large Language Models (LLMs) based on Mixture-of-Experts (MoE) architecture are showing promising performance on various tasks. However, running them on resource-constrained settings, where GPU memory resources are not abundant, is challenging due to huge model sizes. Existing systems that offload model weights to CPU memory suffer from the significant overhead of frequently moving data between CPU and GPU. In this paper, we propose Fiddler, a resource-efficient inference engine with CPU-GPU orchestration for MoE models. The key idea of Fiddler is to use the computation ability of the CPU to minimize the data movement between the CPU and GPU. Our evaluation shows that Fiddler can run the uncompressed Mixtral-8x7B model, which exceeds 90GB in parameters, to generate over $3$ tokens per second on a single GPU with 24GB memory, showing an order of magnitude improvement over existing methods. The code of Fiddler is publicly available at \\url{https://github.com/efeslab/fiddler}",
         "subjects": [
             "cs.LG"
         ],
@@ -603,6 +623,22 @@
         "comment": null
     },
     {
+        "paper id": "2403.07194",
+        "abstract url": "https://arxiv.org/abs/2403.07194",
+        "title": "Improving prediction of students' performance in intelligent tutoring systems using attribute selection and ensembles of different multimodal data sources",
+        "rating": 0.5,
+        "keywords": [
+            [
+                "cs.CY"
+            ]
+        ],
+        "abstract": "The aim of this study was to predict university students' learning performance using different sources of data from an Intelligent Tutoring System. We collected and preprocessed data from 40 students from different multimodal sources: learning strategies from system logs, emotions from face recording videos, interaction zones from eye tracking, and test performance from final knowledge evaluation. Our objective was to test whether the prediction could be improved by using attribute selection and classification ensembles. We carried out three experiments by applying six classification algorithms to numerical and discretized preprocessed multimodal data. The results show that the best predictions were produced using ensembles and selecting the best attributes approach with numerical data.",
+        "subjects": [
+            "cs.CY"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2402.07085",
         "abstract url": "https://arxiv.org/abs/2402.07085",
         "title": "Speech Rhythm-Based Speaker Embeddings Extraction from Phonemes and Phoneme Duration for Multi-Speaker Speech Synthesis",
@@ -653,6 +689,7 @@
                 "eess.AS"
             ],
             [
+                "Workshop",
                 "ICASSP"
             ]
         ],
@@ -661,25 +698,6 @@
             "eess.AS"
         ],
         "comment": "5 pages, 1 figure Accepted in IEEE ICASSP 2024 Workshops - Self-Supervision in Audio, Speech, and Beyond"
-    },
-    {
-        "paper id": "2402.06929",
-        "abstract url": "https://arxiv.org/abs/2402.06929",
-        "title": "Making a prototype of Seoul historical sites chatbot using Langchain",
-        "rating": -0.5,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "In this paper, we are going to share a draft of the development of a conversational agent created to disseminate information about historical sites located in the Seoul. The primary objective of the agent is to increase awareness among visitors who are not familiar with Seoul, about the presence and precise locations of valuable cultural heritage sites. It aims to promote a basic understanding of Korea's rich and diverse cultural history. The agent is thoughtfully designed for accessibility in English and utilizes data generously provided by the Seoul Metropolitan Government. Despite the limited data volume, it consistently delivers reliable and accurate responses, seamlessly aligning with the available information. We have meticulously detailed the methodologies employed in creating this agent and provided a comprehensive overview of its underlying structure within the paper. Additionally, we delve into potential improvements to enhance this initial version of the system, with a primary emphasis on expanding the available data through our prompting. In conclusion, we provide an in-depth discussion of our expectations regarding the future impact of this agent in promoting and facilitating the sharing of historical sites.",
-        "subjects": [
-            "cs.AI"
-        ],
-        "comment": "4 pages, 4 figures, draft"
     },
     {
         "paper id": "2402.06932",
@@ -981,8 +999,7 @@
         "keywords": [
             [
                 "Medical",
-                "healthcare",
-                "Face"
+                "healthcare"
             ],
             [
                 "cs.CL"
@@ -1054,22 +1071,6 @@
             ]
         ],
         "abstract": "Continuum soft robots are nonlinear mechanical systems with theoretically infinite degrees of freedom (DoFs) that exhibit complex behaviors. Achieving motor intelligence under dynamic conditions necessitates the development of control-oriented reduced-order models (ROMs), which employ as few DoFs as possible while still accurately capturing the core characteristics of the theoretically infinite-dimensional dynamics. However, there is no quantitative way to measure if the ROM of a soft robot has succeeded in this task. In other fields, like structural dynamics or flexible link robotics, linear normal modes are routinely used to this end. Yet, this theory is not applicable to soft robots due to their nonlinearities. In this work, we propose to use the recent nonlinear extension in modal theory -- called eigenmanifolds -- as a means to evaluate control-oriented models for soft robots and compare them. To achieve this, we propose three similarity metrics relying on the projection of the nonlinear modes of the system into a task space of interest. We use this approach to compare quantitatively, for the first time, ROMs of increasing order generated under the piecewise constant curvature (PCC) hypothesis with a high-dimensional finite element (FE)-like model of a soft arm. Results show that by increasing the order of the discretization, the eigenmanifolds of the PCC model converge to those of the FE model.",
-        "subjects": [
-            "cs.RO"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2402.07041",
-        "abstract url": "https://arxiv.org/abs/2402.07041",
-        "title": "Risk assessment and observation of driver with pedestrian using instantaneous heart rate and HRV",
-        "rating": -1,
-        "keywords": [
-            [
-                "vehicle"
-            ]
-        ],
-        "abstract": "Currently, human drivers outperform self-driving vehicles in many conditions such as collision avoidance. Therefore, understanding human driver behaviour in these conditions will provide insight for future autonomous vehicles. For understanding driver behaviour, risk assessment is applied so far as one of the approaches by using both subjective and objective measurement. Subjective measurement methods such as questionnaires may provide insight into driver risk assessment but there is often significant variability between drivers.Physiological measurements such as heart rate (HR), electroencephalogram (EEG), and electromyogram (EMG) provide more objective measurements of driver risk assessment. HR is often used for measuring driver risk assessment based on observed correlations between HR and risk perception. Previous work has used HR to measure driver risk assessment in self-driving systems, but pedestrian dynamics is not considered for the research. In this study, we observed driver behaviour in certain scenarios which have pedestrian on driving simulator. The scenarios have safe/unsafe situations (i.e., pedestrian crosses road and vehicle may hit pedestrian in one scenario), HR analysis in time/frequency domain is processed for risk assessment. As a result, HR analysis in frequency domain shows certain reasonability for driver risk assessment when driver has pedestrian in its traffic.",
         "subjects": [
             "cs.RO"
         ],
@@ -1210,25 +1211,6 @@
             ]
         ],
         "abstract": "The aim of this paper is to categorize and describe different types of learners in massive open online courses (MOOCs) by means of a subgroup discovery approach based on MapReduce. The final objective is to discover IF-THEN rules that appear in different MOOCs. The proposed subgroup discovery approach, which is an extension of the well-known FP-Growth algorithm, considers emerging parallel methodologies like MapReduce to be able to cope with extremely large datasets. As an additional feature, the proposal includes a threshold value to denote the number of courses that each discovered rule should satisfy. A post-processing step is also included so redundant subgroups can be removed. The experimental stage is carried out by considering de-identified data from the first year of 16 MITx and HarvardX courses on the edX platform. Experimental results demonstrate that the proposed MapReduce approach outperforms traditional sequential subgroup discovery approaches, achieving a runtime that is almost constant for different courses. Additionally, thanks to the final post-processing step, only interesting and not-redundant rules are discovered, hence reducing the number of subgroups in one or two orders of magnitude. Finally, the discovered subgroups are easily used by courses' instructors not only for descriptive purposes but also for additional tasks such as recommendation or personalization.",
-        "subjects": [
-            "cs.CY"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2403.07194",
-        "abstract url": "https://arxiv.org/abs/2403.07194",
-        "title": "Improving prediction of students' performance in intelligent tutoring systems using attribute selection and ensembles of different multimodal data sources",
-        "rating": -1.5,
-        "keywords": [
-            [
-                "face"
-            ],
-            [
-                "cs.CY"
-            ]
-        ],
-        "abstract": "The aim of this study was to predict university students' learning performance using different sources of data from an Intelligent Tutoring System. We collected and preprocessed data from 40 students from different multimodal sources: learning strategies from system logs, emotions from face recording videos, interaction zones from eye tracking, and test performance from final knowledge evaluation. Our objective was to test whether the prediction could be improved by using attribute selection and classification ensembles. We carried out three experiments by applying six classification algorithms to numerical and discretized preprocessed multimodal data. The results show that the best predictions were produced using ensembles and selecting the best attributes approach with numerical data.",
         "subjects": [
             "cs.CY"
         ],
@@ -1626,6 +1608,23 @@
         "comment": "5 pages, in Chinese language. 8 figures. Presented at 2022 Taiwan telecommunications annual symposium"
     },
     {
+        "paper id": "2404.15280",
+        "abstract url": "https://arxiv.org/abs/2404.15280",
+        "title": "Expanding Conservation Science through Emerging Interdisciplinary STEM Fields",
+        "rating": -2,
+        "keywords": [
+            [
+                "biological",
+                "health"
+            ]
+        ],
+        "abstract": "Conservation science is an interdisciplinary field that primarily draws on knowledge from the natural sciences, social sciences, and humanities to inform policy, planning, and practice. Since its formalization as a discipline, conservation science has also increasingly incorporated tools from integrative biological fields, such as animal behavior, genetics, and, more recently, physiology. Given that the biodiversity crisis constitutes one of the greatest challenges of the 21st century, with tremendous consequences for global sustainability and human health, creating a diverse conservation toolbox is important for addressing complex conservation threats. To assess the integration of three emerging integrative biological disciplines (physiology, biomechanics, and technology) into recent conservation science research, we queried publications from five broad-scope conservation-focused journals from 2010-2022. We found that the proportion of published articles incorporating these integrative biological techniques was low, ranging from 0-4% per year. With only 2.1% of total articles accessing tools or techniques from conservation physiology, conservation technology, and conservation biomechanics, we propose that there is still a substantial opportunity for further integration. We provide a case study for each integrative field to illustrate the capacity for its tools to contribute to positive conservation outcomes. We further outline how each field promotes novel or reimagined opportunities for collaborations. Finally, we discuss the interconnectedness of the three fields and how they can support the continuing expansion of conservation science as an evidence-based, action-oriented discipline through the application of a Challenge-Mechanism-Partnership framework.",
+        "subjects": [
+            "cs.DL"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2402.06937",
         "abstract url": "https://arxiv.org/abs/2402.06937",
         "title": "Assessing Uncertainty Estimation Methods for 3D Image Segmentation under Distribution Shifts",
@@ -1755,6 +1754,25 @@
             "cs.RO"
         ],
         "comment": "2017 IEEE International Conference on Robotics and Automation (ICRA). arXiv admin note: substantial text overlap with arXiv:1610.00366"
+    },
+    {
+        "paper id": "2402.07041",
+        "abstract url": "https://arxiv.org/abs/2402.07041",
+        "title": "Risk assessment and observation of driver with pedestrian using instantaneous heart rate and HRV",
+        "rating": -3,
+        "keywords": [
+            [
+                "vehicle"
+            ],
+            [
+                "EEG"
+            ]
+        ],
+        "abstract": "Currently, human drivers outperform self-driving vehicles in many conditions such as collision avoidance. Therefore, understanding human driver behaviour in these conditions will provide insight for future autonomous vehicles. For understanding driver behaviour, risk assessment is applied so far as one of the approaches by using both subjective and objective measurement. Subjective measurement methods such as questionnaires may provide insight into driver risk assessment but there is often significant variability between drivers.Physiological measurements such as heart rate (HR), electroencephalogram (EEG), and electromyogram (EMG) provide more objective measurements of driver risk assessment. HR is often used for measuring driver risk assessment based on observed correlations between HR and risk perception. Previous work has used HR to measure driver risk assessment in self-driving systems, but pedestrian dynamics is not considered for the research. In this study, we observed driver behaviour in certain scenarios which have pedestrian on driving simulator. The scenarios have safe/unsafe situations (i.e., pedestrian crosses road and vehicle may hit pedestrian in one scenario), HR analysis in time/frequency domain is processed for risk assessment. As a result, HR analysis in frequency domain shows certain reasonability for driver risk assessment when driver has pedestrian in its traffic.",
+        "subjects": [
+            "cs.RO"
+        ],
+        "comment": null
     },
     {
         "paper id": "2402.07065",
@@ -2034,7 +2052,7 @@
         "title": "Instance-Level Safety-Aware Fidelity of Synthetic Data and Its Calibration",
         "rating": -10,
         "keywords": [],
-        "abstract": "Modeling and calibrating the fidelity of synthetic data is paramount in shaping the future of safe and reliable self-driving technology by offering a cost-effective and scalable alternative to real-world data collection. We focus on its role in safety-critical applications, introducing four types of instance-level fidelity that go beyond mere visual input characteristics. The aim is to align synthetic data with real-world safety issues. We suggest an optimization method to refine the synthetic data generator, reducing fidelity gaps identified by the DNN-based component. Our findings show this tuning enhances the correlation between safety-critical errors in synthetic and real images.",
+        "abstract": "Modeling and calibrating the fidelity of synthetic data is paramount in shaping the future of safe and reliable self-driving technology by offering a cost-effective and scalable alternative to real-world data collection. We focus on its role in safety-critical applications, introducing four types of instance-level fidelity that go beyond mere visual input characteristics. The aim is to ensure that applying testing on synthetic data can reveal real-world safety issues, and the absence of safety-critical issues when testing under synthetic data can provide a strong safety guarantee in real-world behavior. We suggest an optimization method to refine the synthetic data generator, reducing fidelity gaps identified by deep learning components. Experiments show this tuning enhances the correlation between safety-critical errors in synthetic and real data.",
         "subjects": [
             "cs.SE"
         ],

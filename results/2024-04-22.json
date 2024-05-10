@@ -98,26 +98,6 @@
         "comment": "CVPR2024 Highlight"
     },
     {
-        "paper id": "2404.14279",
-        "abstract url": "https://arxiv.org/abs/2404.14279",
-        "title": "Co-designing a Sub-millisecond Latency Event-based Eye Tracking System with Submanifold Sparse CNN",
-        "rating": 1.5,
-        "keywords": [
-            [
-                "cs.CV"
-            ],
-            [
-                "workshop",
-                "CVPR"
-            ]
-        ],
-        "abstract": "Eye-tracking technology is integral to numerous consumer electronics applications, particularly in the realm of virtual and augmented reality (VR/AR). These applications demand solutions that excel in three crucial aspects: low-latency, low-power consumption, and precision. Yet, achieving optimal performance across all these fronts presents a formidable challenge, necessitating a balance between sophisticated algorithms and efficient backend hardware implementations. In this study, we tackle this challenge through a synergistic software/hardware co-design of the system with an event camera. Leveraging the inherent sparsity of event-based input data, we integrate a novel sparse FPGA dataflow accelerator customized for submanifold sparse convolution neural networks (SCNN). The SCNN implemented on the accelerator can efficiently extract the embedding feature vector from each representation of event slices by only processing the non-zero activations. Subsequently, these vectors undergo further processing by a gated recurrent unit (GRU) and a fully connected layer on the host CPU to generate the eye centers. Deployment and evaluation of our system reveal outstanding performance metrics. On the Event-based Eye-Tracking-AIS2024 dataset, our system achieves 81% p5 accuracy, 99.5% p10 accuracy, and 3.71 Mean Euclidean Distance with 0.7 ms latency while only consuming 2.29 mJ per inference. Notably, our solution opens up opportunities for future eye-tracking systems. Code is available at https://github.com/CASR-HKU/ESDA/tree/eye_tracking.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Accepted to CVPR 2024 workshop, AIS: Vision, Graphics, and AI for Streaming"
-    },
-    {
         "paper id": "2404.14674",
         "abstract url": "https://arxiv.org/abs/2404.14674",
         "title": "HOIN: High-Order Implicit Neural Representations",
@@ -151,6 +131,25 @@
             "cs.CV"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2404.13904",
+        "abstract url": "https://arxiv.org/abs/2404.13904",
+        "title": "Deep Regression Representation Learning with Topology",
+        "rating": 1.0,
+        "keywords": [
+            [
+                "cs.LG"
+            ],
+            [
+                "ICML"
+            ]
+        ],
+        "abstract": "Most works studying representation learning focus only on classification and neglect regression. Yet, the learning objectives and therefore the representation topologies of the two tasks are fundamentally different: classification targets class separation, leading to disconnected representations, whereas regression requires ordinality with respect to the target, leading to continuous representations. We thus wonder how the effectiveness of a regression representation is influenced by its topology, with evaluation based on the Information Bottleneck (IB) principle. The IB principle is an important framework that provides principles for learning effectiveness representations. We establish two connections between it and the topology of regression representations. The first connection reveals that a lower intrinsic dimension of the feature space implies a reduced complexity of the representation Z. This complexity can be quantified as the conditional entropy of Z on the target space Y and serves as an upper bound on the generalization error. The second connection suggests learning a feature space that is topologically similar to the target space will better align with the IB principle. Based on these two connections, we introduce PH-Reg, a regularizer specific to regression that matches the intrinsic dimension and topology of the feature space with the target space. Experiments on synthetic and real-world regression tasks demonstrate the benefits of PH-Reg.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": "ICML 2024"
     },
     {
         "paper id": "2404.13905",
@@ -508,6 +507,22 @@
         "comment": "23 pages, 12 tables"
     },
     {
+        "paper id": "2404.14188",
+        "abstract url": "https://arxiv.org/abs/2404.14188",
+        "title": "Experimental Validation of Ultrasound Beamforming with End-to-End Deep Learning for Single Plane Wave Imaging",
+        "rating": 1,
+        "keywords": [
+            [
+                "eess.IV"
+            ]
+        ],
+        "abstract": "Ultrafast ultrasound imaging insonifies a medium with one or a combination of a few plane waves at different beam-steered angles instead of many focused waves. It can achieve much higher frame rates, but often at the cost of reduced image quality. Deep learning approaches have been proposed to mitigate this disadvantage, in particular for single plane wave imaging. Predominantly, image-to-image post-processing networks or fully learned data-to-image neural networks are used. Both construct their mapping purely data-driven and require expressive networks and large amounts of training data to perform well. In contrast, we consider data-to-image networks which incorporate a conventional image formation techniques as differentiable layers in the network architecture. This allows for end-to-end training with small amounts of training data. In this work, using f-k migration as an image formation layer is evaluated in-depth with experimental data. We acquired a data collection designed for benchmarking data-driven plane wave imaging approaches using a realistic breast mimicking phantom and an ultrasound calibration phantom. The evaluation considers global and local image similarity measures and contrast, resolution and lesion detectability analysis. The results show that the proposed network architecture is capable of improving the image quality of single plane wave images on all evaluation metrics. Furthermore, these image quality improvements can be achieved with surprisingly little amounts of training data.",
+        "subjects": [
+            "eess.IV"
+        ],
+        "comment": "8 pages, 9 figures, currently submitted to IEEE Transactions on Medical Imaging"
+    },
+    {
         "paper id": "2404.14192",
         "abstract url": "https://arxiv.org/abs/2404.14192",
         "title": "Swap distance minimization beyond entropy minimization in word order variation",
@@ -614,22 +629,6 @@
             ]
         ],
         "abstract": "When prompting a language model (LM), users frequently expect the model to adhere to a set of behavioral principles across diverse tasks, such as producing insightful content while avoiding harmful or biased language. Instilling such principles into a model can be resource-intensive and technically challenging, generally requiring human preference labels or examples. We introduce SAMI, a method for teaching a pretrained LM to follow behavioral principles that does not require any preference labels or demonstrations. SAMI is an iterative algorithm that finetunes a pretrained LM to increase the conditional mutual information between constitutions and self-generated responses given queries from a datasest. On single-turn dialogue and summarization, a SAMI-trained mistral-7b outperforms the initial pretrained model, with win rates between 66% and 77%. Strikingly, it also surpasses an instruction-finetuned baseline (mistral-7b-instruct) with win rates between 55% and 57% on single-turn dialogue. SAMI requires a \"principle writer\" model; to avoid dependence on stronger models, we further evaluate aligning a strong pretrained model (mixtral-8x7b) using constitutions written by a weak instruction-finetuned model (mistral-7b-instruct). The SAMI-trained mixtral-8x7b outperforms both the initial model and the instruction-finetuned model, achieving a 65% win rate on summarization. Our results indicate that a pretrained LM can learn to follow constitutions without using preference labels, demonstrations, or human oversight.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2404.14316",
-        "abstract url": "https://arxiv.org/abs/2404.14316",
-        "title": "Automated Long Answer Grading with RiceChem Dataset",
-        "rating": 1,
-        "keywords": [
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "We introduce a new area of study in the field of educational Natural Language Processing: Automated Long Answer Grading (ALAG). Distinguishing itself from Automated Short Answer Grading (ASAG) and Automated Essay Grading (AEG), ALAG presents unique challenges due to the complexity and multifaceted nature of fact-based long answers. To study ALAG, we introduce RiceChem, a dataset derived from a college chemistry course, featuring real student responses to long-answer questions with an average word count notably higher than typical ASAG datasets. We propose a novel approach to ALAG by formulating it as a rubric entailment problem, employing natural language inference models to verify whether each criterion, represented by a rubric item, is addressed in the student's response. This formulation enables the effective use of MNLI for transfer learning, significantly improving the performance of models on the RiceChem dataset. We demonstrate the importance of rubric-based formulation in ALAG, showcasing its superiority over traditional score-based approaches in capturing the nuances of student responses. We also investigate the performance of models in cold start scenarios, providing valuable insights into the practical deployment considerations in educational settings. Lastly, we benchmark state-of-the-art open-sourced Large Language Models (LLMs) on RiceChem and compare their results to GPT models, highlighting the increased complexity of ALAG compared to ASAG. Despite leveraging the benefits of a rubric-based approach and transfer learning from MNLI, the lower performance of LLMs on RiceChem underscores the significant difficulty posed by the ALAG task. With this work, we offer a fresh perspective on grading long, fact-based answers and introduce a new dataset to stimulate further research in this important area. Code: \\url{https://github.com/luffycodes/Automated-Long-Answer-Grading}.",
         "subjects": [
             "cs.CL"
         ],
@@ -1164,22 +1163,6 @@
         "comment": null
     },
     {
-        "paper id": "2404.13904",
-        "abstract url": "https://arxiv.org/abs/2404.13904",
-        "title": "Deep Regression Representation Learning with Topology",
-        "rating": 0.5,
-        "keywords": [
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Most works studying representation learning focus only on classification and neglect regression. Yet, the learning objectives and therefore the representation topologies of the two tasks are fundamentally different: classification targets class separation, leading to disconnected representations, whereas regression requires ordinality with respect to the target, leading to continuous representations. We thus wonder how the effectiveness of a regression representation is influenced by its topology, with evaluation based on the Information Bottleneck (IB) principle. The IB principle is an important framework that provides principles for learning effectiveness representations. We establish two connections between it and the topology of regression representations. The first connection reveals that a lower intrinsic dimension of the feature space implies a reduced complexity of the representation Z. This complexity can be quantified as the conditional entropy of Z on the target space Y and serves as an upper bound on the generalization error. The second connection suggests learning a feature space that is topologically similar to the target space will better align with the IB principle. Based on these two connections, we introduce PH-Reg, a regularizer specific to regression that matches the intrinsic dimension and topology of the feature space with the target space. Experiments on synthetic and real-world regression tasks demonstrate the benefits of PH-Reg.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2404.13954",
         "abstract url": "https://arxiv.org/abs/2404.13954",
         "title": "A survey of air combat behavior modeling using machine learning",
@@ -1503,6 +1486,29 @@
         "comment": "15 pages, 5 figures"
     },
     {
+        "paper id": "2404.14279",
+        "abstract url": "https://arxiv.org/abs/2404.14279",
+        "title": "Co-designing a Sub-millisecond Latency Event-based Eye Tracking System with Submanifold Sparse CNN",
+        "rating": 0.5,
+        "keywords": [
+            [
+                "event camera"
+            ],
+            [
+                "cs.CV"
+            ],
+            [
+                "workshop",
+                "CVPR"
+            ]
+        ],
+        "abstract": "Eye-tracking technology is integral to numerous consumer electronics applications, particularly in the realm of virtual and augmented reality (VR/AR). These applications demand solutions that excel in three crucial aspects: low-latency, low-power consumption, and precision. Yet, achieving optimal performance across all these fronts presents a formidable challenge, necessitating a balance between sophisticated algorithms and efficient backend hardware implementations. In this study, we tackle this challenge through a synergistic software/hardware co-design of the system with an event camera. Leveraging the inherent sparsity of event-based input data, we integrate a novel sparse FPGA dataflow accelerator customized for submanifold sparse convolution neural networks (SCNN). The SCNN implemented on the accelerator can efficiently extract the embedding feature vector from each representation of event slices by only processing the non-zero activations. Subsequently, these vectors undergo further processing by a gated recurrent unit (GRU) and a fully connected layer on the host CPU to generate the eye centers. Deployment and evaluation of our system reveal outstanding performance metrics. On the Event-based Eye-Tracking-AIS2024 dataset, our system achieves 81% p5 accuracy, 99.5% p10 accuracy, and 3.71 Mean Euclidean Distance with 0.7 ms latency while only consuming 2.29 mJ per inference. Notably, our solution opens up opportunities for future eye-tracking systems. Code is available at https://github.com/CASR-HKU/ESDA/tree/eye_tracking.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Accepted to CVPR 2024 workshop, AIS: Vision, Graphics, and AI for Streaming"
+    },
+    {
         "paper id": "2404.14367",
         "abstract url": "https://arxiv.org/abs/2404.14367",
         "title": "Preference Fine-Tuning of LLMs Should Leverage Suboptimal, On-Policy Data",
@@ -1731,6 +1737,38 @@
             "cs.LG"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2404.17595",
+        "abstract url": "https://arxiv.org/abs/2404.17595",
+        "title": "TICE and normalisation, pour une r{\u00e9}novation universitaire dans les pays du Sud",
+        "rating": 0.5,
+        "keywords": [
+            [
+                "cs.CY"
+            ]
+        ],
+        "abstract": "University renovation is a recurring fact generated by permanent technological innovations and new methods of organizing universities and training offers. Technological interoperability standards play a determining role, not only by providing added value in terms of saving space and time, but also by changing educational models and knowledge acquisition processes. The countries of sub-Saharan Africa present an institutional framework and a particular type of university organization which requires an in-depth rereading of their operating methods for a better recovery on the path to renovation through ICT. This document offers avenues for reflection and action frameworks that focus on the achievements of norms and interoperability standards.",
+        "subjects": [
+            "cs.CY"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2405.02324",
+        "abstract url": "https://arxiv.org/abs/2405.02324",
+        "title": "Combined Compromise for Ideal Solution (CoCoFISo): a multi-criteria decision-making based on the CoCoSo method algorithm",
+        "rating": 0.5,
+        "keywords": [
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "Each decision-making tool should be tested and validated in real case studies to be practical and fit to global problems. The application of multi-criteria decision-making methods (MCDM) is currently a trend to rank alternatives. In the literature, there are several multi-criteria decision-making methods according to their classification. During our experimentation on the Combined Compromise Solution (CoCoSo) method, we encountered its limits for real cases. The authors examined the applicability of the CoCoFISo method (improved version of combined compromise solution), by a real case study in a university campus and compared the obtained results to other MCDMs such as Preference Ranking Organisation Method for Enrichment Evaluations (PROMETHEE), Weighted Sum Method (WSM) and Technique for Order Preference by Similarity to the Ideal Solution (TOPSIS). Our research finding indicates that CoCoSo is an applied method that has been developed to solve complex multi variable assessment problems, while CoCoFISo can improve the shortages observed in CoCoSo and deliver stable outcomes compared to other developed tools. The findings imply that application of CoCoFISo is suggested to decision makers, experts and researchers while they are facing practical challenges and sensitive questions regarding the utilization of a reliable decision-making method. Unlike many prior studies, the current version of CoCoSo is unique, original and is presented for the first time. Its performance was approved using several strategies and examinations.",
+        "subjects": [
+            "cs.AI"
+        ],
+        "comment": "Expert Systems with Applications, 2024"
     },
     {
         "paper id": "2404.13892",
@@ -1968,25 +2006,6 @@
         "comment": "Accepted by IJCAI 2024"
     },
     {
-        "paper id": "2404.14188",
-        "abstract url": "https://arxiv.org/abs/2404.14188",
-        "title": "Experimental Validation of Ultrasound Beamforming with End-to-End Deep Learning for Single Plane Wave Imaging",
-        "rating": 0,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "eess.IV"
-            ]
-        ],
-        "abstract": "Ultrafast ultrasound imaging insonifies a medium with one or a combination of a few plane waves at different beam-steered angles instead of many focused waves. It can achieve much higher frame rates, but often at the cost of reduced image quality. Deep learning approaches have been proposed to mitigate this disadvantage, in particular for single plane wave imaging. Predominantly, image-to-image post-processing networks or fully learned data-to-image neural networks are used. Both construct their mapping purely data-driven and require expressive networks and large amounts of training data to perform well. In contrast, we consider data-to-image networks which incorporate a conventional image formation techniques as differentiable layers in the network architecture. This allows for end-to-end training with small amounts of training data. In this work, using f-k migration as an image formation layer is evaluated in-depth with experimental data. We acquired a data collection designed for benchmarking data-driven plane wave imaging approaches using a realistic breast mimicking phantom and an ultrasound calibration phantom. The evaluation considers global and local image similarity measures and contrast, resolution and lesion detectability analysis. The results show that the proposed network architecture is capable of improving the image quality of single plane wave images on all evaluation metrics. Furthermore, these image quality improvements can be achieved with surprisingly little amounts of training data.",
-        "subjects": [
-            "eess.IV"
-        ],
-        "comment": "8 pages, 9 figures, currently submitted to IEEE Transactions on Medical Imaging"
-    },
-    {
         "paper id": "2404.14239",
         "abstract url": "https://arxiv.org/abs/2404.14239",
         "title": "MultiBooth: Towards Generating All Your Concepts in an Image from Text",
@@ -2021,6 +2040,25 @@
         "abstract": "Multiview Structure from Motion is a fundamental and challenging computer vision problem. A recent deep-based approach was proposed utilizing matrix equivariant architectures for the simultaneous recovery of camera pose and 3D scene structure from large image collections. This work however made the unrealistic assumption that the point tracks given as input are clean of outliers. Here we propose an architecture suited to dealing with outliers by adding an inlier/outlier classifying module that respects the model equivariance and by adding a robust bundle adjustment step. Experiments demonstrate that our method can be successfully applied in realistic settings that include large image collections and point tracks extracted with common heuristics and include many outliers.",
         "subjects": [
             "cs.CV"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2404.14301",
+        "abstract url": "https://arxiv.org/abs/2404.14301",
+        "title": "Marking: Visual Grading with Highlighting Errors and Annotating Missing Bits",
+        "rating": 0,
+        "keywords": [
+            [
+                "trajectory"
+            ],
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "In this paper, we introduce \"Marking\", a novel grading task that enhances automated grading systems by performing an in-depth analysis of student responses and providing students with visual highlights. Unlike traditional systems that provide binary scores, \"marking\" identifies and categorizes segments of the student response as correct, incorrect, or irrelevant and detects omissions from gold answers. We introduce a new dataset meticulously curated by Subject Matter Experts specifically for this task. We frame \"Marking\" as an extension of the Natural Language Inference (NLI) task, which is extensively explored in the field of Natural Language Processing. The gold answer and the student response play the roles of premise and hypothesis in NLI, respectively. We subsequently train language models to identify entailment, contradiction, and neutrality from student response, akin to NLI, and with the added dimension of identifying omissions from gold answers. Our experimental setup involves the use of transformer models, specifically BERT and RoBERTa, and an intelligent training step using the e-SNLI dataset. We present extensive baseline results highlighting the complexity of the \"Marking\" task, which sets a clear trajectory for the upcoming study. Our work not only opens up new avenues for research in AI-powered educational assessment tools, but also provides a valuable benchmark for the AI in education community to engage with and improve upon in the future. The code and dataset can be found at https://github.com/luffycodes/marking.",
+        "subjects": [
+            "cs.CL"
         ],
         "comment": null
     },
@@ -2310,6 +2348,7 @@
                 "cs.CV"
             ],
             [
+                "Workshop",
                 "CVPR"
             ]
         ],
@@ -2318,6 +2357,22 @@
             "cs.CV"
         ],
         "comment": "This paper is accepted by CVPR2024 Workshop, Code: https://github.com/CalvinYang0/CRNet"
+    },
+    {
+        "paper id": "2404.14218",
+        "abstract url": "https://arxiv.org/abs/2404.14218",
+        "title": "Designing Safe and Engaging AI Experiences for Children: Towards the Definition of Best Practices in UI/UX Design",
+        "rating": -0.5,
+        "keywords": [
+            [
+                "Workshop"
+            ]
+        ],
+        "abstract": "This workshop proposal focuses on best practices in UI/UX design for AI applications aimed at children, emphasising safety, engagement, and ethics. It aims to address the challenge of measuring the safety, trustworthiness, and reliability of interactions between children and AI systems. Through collaborative discussions, participants will explore effective design strategies and ethical guidelines while developing methodologies for assessing the safety and reliability of AI interactions with children. This proposal seeks to foster responsible and child-centered AI design practices within the CHI community.",
+        "subjects": [
+            "cs.HC"
+        ],
+        "comment": "4 pages, The paper has been peer-reviewed and presented at the \"CHI 2024 Workshop on Child-centred AI Design\", May 11, 2024, Honolulu, HI, USA"
     },
     {
         "paper id": "2404.14265",
@@ -2527,25 +2582,6 @@
         "comment": "The 24th IEEE/ACM International Symposium on Cluster, Cloud and Internet Computing"
     },
     {
-        "paper id": "2404.17595",
-        "abstract url": "https://arxiv.org/abs/2404.17595",
-        "title": "TICE and normalisation, pour une r{\u00e9}novation universitaire dans les pays du Sud",
-        "rating": -0.5,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "cs.CY"
-            ]
-        ],
-        "abstract": "University renovation is a recurring fact generated by permanent technological innovations and new methods of organizing universities and training offers. Technological interoperability standards play a determining role, not only by providing added value in terms of saving space and time, but also by changing educational models and knowledge acquisition processes. The countries of sub-Saharan Africa present an institutional framework and a particular type of university organization which requires an in-depth rereading of their operating methods for a better recovery on the path to renovation through ICT. This document offers avenues for reflection and action frameworks that focus on the achievements of norms and interoperability standards.",
-        "subjects": [
-            "cs.CY"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2404.13898",
         "abstract url": "https://arxiv.org/abs/2404.13898",
         "title": "Cross-Modal Generative Semantic Communications for Mobile AIGC: Joint Semantic Encoding and Prompt Engineering",
@@ -2646,25 +2682,9 @@
         "comment": null
     },
     {
-        "paper id": "2404.13933",
-        "abstract url": "https://arxiv.org/abs/2404.13933",
-        "title": "Comparison of On-Orbit Manual Attitude Control Methods for Non-Docking Spacecraft Through Virtual Reality Simulation",
-        "rating": -1,
-        "keywords": [
-            [
-                "flight"
-            ]
-        ],
-        "abstract": "On-orbit manual attitude control of manned spacecraft is accomplished using external visual references and some method of three axis attitude control. All past, present, and developmental spacecraft feature the capability to manually control attitude for deorbit. National Aeronautics and Space Administration (NASA) spacecraft permit an aircraft windshield type front view, wherein an arc of the Earths horizon is visible to the crew in deorbit attitude. Russian and Chinese spacecraft permit the crew a bottom view wherein the entire circular Earth horizon disk is visible to the crew in deorbit attitude. Our study compared these two types of external views for efficiency in achievement of deorbit attitude. We used a Unity Virtual Reality (VR) spacecraft simulator that we built in house. The task was to accurately achieve deorbit attitude while in a 400 km circular orbit. Six military test pilots and six civilians with gaming experience flew the task using two methods of visual reference. Comparison was based on time taken, fuel consumed, cognitive workload assessment and user preference. We used ocular parameters, EEG, NASA TLX and IBM SUS to quantify our results. Our study found that the bottom view was easier to operate for manual deorbit task. Additionally, we realized that a VR based system can work as a training simulator for manual on-orbit flight path control tasks by pilots and non pilots. Results from our study can be used for design of manual on orbit attitude control of present and future spacecrafts.",
-        "subjects": [
-            "cs.HC"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2404.13945",
         "abstract url": "https://arxiv.org/abs/2404.13945",
-        "title": "Benchmarking Multi-Modal LLMs for Testing Visual Deep Learning Systems Through the Lens of Image Mutation",
+        "title": "How do LLMs Support Deep Learning Testing? A Comprehensive Study Through the Lens of Image Mutation",
         "rating": -1,
         "keywords": [
             [
@@ -2938,22 +2958,6 @@
         "comment": null
     },
     {
-        "paper id": "2404.14157",
-        "abstract url": "https://arxiv.org/abs/2404.14157",
-        "title": "Autonomous Forest Inventory with Legged Robots: System Design and Field Deployment",
-        "rating": -1,
-        "keywords": [
-            [
-                "navigation"
-            ]
-        ],
-        "abstract": "We present a solution for autonomous forest inventory with a legged robotic platform. Compared to their wheeled and aerial counterparts, legged platforms offer an attractive balance of endurance and low soil impact for forest applications. In this paper, we present the complete system architecture of our forest inventory solution which includes state estimation, navigation, mission planning, and real-time tree segmentation and trait estimation. We present preliminary results for three campaigns in forests in Finland and the UK and summarize the main outcomes, lessons, and challenges. Our UK experiment at the Forest of Dean with the ANYmal D legged platform, achieved an autonomous survey of a 0.96 hectare plot in 20 min, identifying over 100 trees with typical DBH accuracy of 2 cm.",
-        "subjects": [
-            "cs.RO"
-        ],
-        "comment": "Accepted to the IEEE ICRA Workshop on Field Robotics 2024"
-    },
-    {
         "paper id": "2404.14228",
         "abstract url": "https://arxiv.org/abs/2404.14228",
         "title": "A Survey of Decomposition-Based Evolutionary Multi-Objective Optimization: Part II -- A Data Science Perspective",
@@ -3149,28 +3153,6 @@
         "comment": "International Congress of Actuaries (2023)"
     },
     {
-        "paper id": "2404.14301",
-        "abstract url": "https://arxiv.org/abs/2404.14301",
-        "title": "Marking: Visual Grading with Highlighting Errors and Annotating Missing Bits",
-        "rating": -1,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "trajectory"
-            ],
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "In this paper, we introduce \"Marking\", a novel grading task that enhances automated grading systems by performing an in-depth analysis of student responses and providing students with visual highlights. Unlike traditional systems that provide binary scores, \"marking\" identifies and categorizes segments of the student response as correct, incorrect, or irrelevant and detects omissions from gold answers. We introduce a new dataset meticulously curated by Subject Matter Experts specifically for this task. We frame \"Marking\" as an extension of the Natural Language Inference (NLI) task, which is extensively explored in the field of Natural Language Processing. The gold answer and the student response play the roles of premise and hypothesis in NLI, respectively. We subsequently train language models to identify entailment, contradiction, and neutrality from student response, akin to NLI, and with the added dimension of identifying omissions from gold answers. Our experimental setup involves the use of transformer models, specifically BERT and RoBERTa, and an intelligent training step using the e-SNLI dataset. We present extensive baseline results highlighting the complexity of the \"Marking\" task, which sets a clear trajectory for the upcoming study. Our work not only opens up new avenues for research in AI-powered educational assessment tools, but also provides a valuable benchmark for the AI in education community to engage with and improve upon in the future. The code and dataset can be found at https://github.com/luffycodes/marking.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2404.14309",
         "abstract url": "https://arxiv.org/abs/2404.14309",
         "title": "Towards Better Adversarial Purification via Adversarial Denoising Diffusion Training",
@@ -3189,6 +3171,25 @@
         "abstract": "Recently, diffusion-based purification (DBP) has emerged as a promising approach for defending against adversarial attacks. However, previous studies have used questionable methods to evaluate the robustness of DBP models, their explanations of DBP robustness also lack experimental support. We re-examine DBP robustness using precise gradient, and discuss the impact of stochasticity on DBP robustness. To better explain DBP robustness, we assess DBP robustness under a novel attack setting, Deterministic White-box, and pinpoint stochasticity as the main factor in DBP robustness. Our results suggest that DBP models rely on stochasticity to evade the most effective attack direction, rather than directly countering adversarial perturbations. To improve the robustness of DBP models, we propose Adversarial Denoising Diffusion Training (ADDT). This technique uses Classifier-Guided Perturbation Optimization (CGPO) to generate adversarial perturbation through guidance from a pre-trained classifier, and uses Rank-Based Gaussian Mapping (RBGM) to convert adversarial pertubation into a normal Gaussian distribution. Empirical results show that ADDT improves the robustness of DBP models. Further experiments confirm that ADDT equips DBP models with the ability to directly counter adversarial perturbations.",
         "subjects": [
             "cs.CV"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2404.14316",
+        "abstract url": "https://arxiv.org/abs/2404.14316",
+        "title": "Automated Long Answer Grading with RiceChem Dataset",
+        "rating": -1,
+        "keywords": [
+            [
+                "chemistry"
+            ],
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "We introduce a new area of study in the field of educational Natural Language Processing: Automated Long Answer Grading (ALAG). Distinguishing itself from Automated Short Answer Grading (ASAG) and Automated Essay Grading (AEG), ALAG presents unique challenges due to the complexity and multifaceted nature of fact-based long answers. To study ALAG, we introduce RiceChem, a dataset derived from a college chemistry course, featuring real student responses to long-answer questions with an average word count notably higher than typical ASAG datasets. We propose a novel approach to ALAG by formulating it as a rubric entailment problem, employing natural language inference models to verify whether each criterion, represented by a rubric item, is addressed in the student's response. This formulation enables the effective use of MNLI for transfer learning, significantly improving the performance of models on the RiceChem dataset. We demonstrate the importance of rubric-based formulation in ALAG, showcasing its superiority over traditional score-based approaches in capturing the nuances of student responses. We also investigate the performance of models in cold start scenarios, providing valuable insights into the practical deployment considerations in educational settings. Lastly, we benchmark state-of-the-art open-sourced Large Language Models (LLMs) on RiceChem and compare their results to GPT models, highlighting the increased complexity of ALAG compared to ASAG. Despite leveraging the benefits of a rubric-based approach and transfer learning from MNLI, the lower performance of LLMs on RiceChem underscores the significant difficulty posed by the ALAG task. With this work, we offer a fresh perspective on grading long, fact-based answers and introduce a new dataset to stimulate further research in this important area. Code: \\url{https://github.com/luffycodes/Automated-Long-Answer-Grading}.",
+        "subjects": [
+            "cs.CL"
         ],
         "comment": null
     },
@@ -3839,6 +3840,22 @@
         "comment": null
     },
     {
+        "paper id": "2405.05140",
+        "abstract url": "https://arxiv.org/abs/2405.05140",
+        "title": "Distributed Learning for Wi-Fi AP Load Prediction",
+        "rating": -1,
+        "keywords": [
+            [
+                "Federated Learning"
+            ]
+        ],
+        "abstract": "The increasing cloudification and softwarization of networks foster the interplay among multiple independently managed deployments. An appealing reason for such an interplay lies in distributed Machine Learning (ML), which allows the creation of robust ML models by leveraging collective intelligence and computational power. In this paper, we study the application of the two cornerstones of distributed learning, namely Federated Learning (FL) and Knowledge Distillation (KD), on the Wi-Fi Access Point (AP) load prediction use case. The analysis conducted in this paper is done on a dataset that contains real measurements from a large Wi-Fi campus network, which we use to train the ML model under study based on different strategies. Performance evaluation includes relevant aspects for the suitability of distributed learning operation in real use cases, including the predictive performance, the associated communication overheads, or the energy consumption. In particular, we prove that distributed learning can improve the predictive accuracy centralized ML solutions by up to 93% while reducing the communication overheads and the energy cost by 80%.",
+        "subjects": [
+            "cs.NI"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2404.13910",
         "abstract url": "https://arxiv.org/abs/2404.13910",
         "title": "Integrated Gradient Correlation: a Dataset-wise Attribution Method",
@@ -3920,6 +3937,25 @@
             "cs.LG"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2404.14157",
+        "abstract url": "https://arxiv.org/abs/2404.14157",
+        "title": "Autonomous Forest Inventory with Legged Robots: System Design and Field Deployment",
+        "rating": -1.5,
+        "keywords": [
+            [
+                "navigation"
+            ],
+            [
+                "Workshop"
+            ]
+        ],
+        "abstract": "We present a solution for autonomous forest inventory with a legged robotic platform. Compared to their wheeled and aerial counterparts, legged platforms offer an attractive balance of endurance and low soil impact for forest applications. In this paper, we present the complete system architecture of our forest inventory solution which includes state estimation, navigation, mission planning, and real-time tree segmentation and trait estimation. We present preliminary results for three campaigns in forests in Finland and the UK and summarize the main outcomes, lessons, and challenges. Our UK experiment at the Forest of Dean with the ANYmal D legged platform, achieved an autonomous survey of a 0.96 hectare plot in 20 min, identifying over 100 trees with typical DBH accuracy of 2 cm.",
+        "subjects": [
+            "cs.RO"
+        ],
+        "comment": "Accepted to the IEEE ICRA Workshop on Field Robotics 2024"
     },
     {
         "paper id": "2404.14366",
@@ -4106,6 +4142,25 @@
             "cs.LG"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2405.02325",
+        "abstract url": "https://arxiv.org/abs/2405.02325",
+        "title": "Meat Meets Machine! Multiscale Competency Enables Causal Learning",
+        "rating": -1.5,
+        "keywords": [
+            [
+                "Biological"
+            ],
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "Biological intelligence uses a \"multiscale competency architecture\" (MCA). It exhibits adaptive, goal directed behaviour at all scales, from cells to organs to organisms. In contrast, machine intelligence is only adaptive and goal directed at a high level. Learned policies are passively interpreted using abstractions (e.g. arithmetic) embodied in static interpreters (e.g. x86). Biological intelligence excels at causal learning. Machine intelligence does not. Previous work showed causal learning follows from weak policy optimisation, which is hindered by presupposed abstractions in silico. Here we formalise MCAs as nested \"agentic abstraction layers\", to understand how they might learn causes. We show that weak policy optimisation at low levels enables weak policy optimisation at high. This facilitates what we call \"multiscale causal learning\" and high level goal directed behaviour. We argue that by engineering human abstractions in silico we disconnect high level goal directed behaviour from the low level goal directed behaviour that gave rise to it. This inhibits causal learning, and we speculate this is one reason why human recall would be accompanied by feeling, and in silico recall not.",
+        "subjects": [
+            "cs.AI"
+        ],
+        "comment": "Definitions shared with arXiv:2404.07227, arXiv:2302.00843"
     },
     {
         "paper id": "2404.13878",
@@ -4843,7 +4898,8 @@
         "keywords": [
             [
                 "disease",
-                "clinical"
+                "clinical",
+                "Retinal"
             ]
         ],
         "abstract": "Retinal implants are a promising treatment option for degenerative retinal disease. While numerous models have been developed to simulate the appearance of elicited visual percepts (\"phosphenes\"), these models often either focus solely on spatial characteristics or inadequately capture the complex temporal dynamics observed in clinical trials, which vary heavily across implant technologies, subjects, and stimulus conditions. Here we introduce two computational models designed to accurately predict phosphene fading and persistence under varying stimulus conditions, cross-validated on behavioral data reported by nine users of the Argus II Retinal Prosthesis System. Both models segment the time course of phosphene perception into discrete intervals, decomposing phosphene fading and persistence into either sinusoidal or exponential components. Our spectral model demonstrates state-of-the-art predictions of phosphene intensity over time (r = 0.7 across all participants). Overall, this study lays the groundwork for enhancing prosthetic vision by improving our understanding of phosphene temporal dynamics.",
@@ -4936,6 +4992,39 @@
         "comment": null
     },
     {
+        "paper id": "2405.02323",
+        "abstract url": "https://arxiv.org/abs/2405.02323",
+        "title": "CNN-Based Equalization for Communications: Achieving Gigabit Throughput with a Flexible FPGA Hardware Architecture",
+        "rating": -2,
+        "keywords": [
+            [
+                "5G",
+                "6G"
+            ]
+        ],
+        "abstract": "To satisfy the growing throughput demand of data-intensive applications, the performance of optical communication systems increased dramatically in recent years. With higher throughput, more advanced equalizers are crucial, to compensate for impairments caused by inter-symbol interference (ISI). The latest research shows that artificial neural network (ANN)-based equalizers are promising candidates to replace traditional algorithms for high-throughput communications. On the other hand, not only throughput but also flexibility is a main objective of beyond-5G and 6G communication systems. A platform that is able to satisfy the strict throughput and flexibility requirements of modern communication systems are field programmable gate arrays (FPGAs). Thus, in this work, we present a high-performance FPGA implementation of an ANN-based equalizer, which meets the throughput requirements of modern optical communication systems. Further, our architecture is highly flexible since it includes a variable degree of parallelism (DOP) and therefore can also be applied to low-cost or low-power applications which is demonstrated for a magnetic recording channel. The implementation is based on a cross-layer design approach featuring optimizations from the algorithm down to the hardware architecture, including a detailed quantization analysis. Moreover, we present a framework to reduce the latency of the ANN-based equalizer under given throughput constraints. As a result, the bit error ratio (BER) of our equalizer for the optical fiber channel is around four times lower than that of a conventional one, while the corresponding FPGA implementation achieves a throughput of more than 40 GBd, outperforming a high-performance graphics processing unit (GPU) by three orders of magnitude for a similar batch size.",
+        "subjects": [
+            "cs.AR"
+        ],
+        "comment": "The article was submitted to the International Journal of Parallel Programming (IJPP) and is currently under review"
+    },
+    {
+        "paper id": "2405.05141",
+        "abstract url": "https://arxiv.org/abs/2405.05141",
+        "title": "Learning-to-learn enables rapid learning with phase-change memory-based in-memory computing",
+        "rating": -2,
+        "keywords": [
+            [
+                "biologically-inspired"
+            ]
+        ],
+        "abstract": "There is a growing demand for low-power, autonomously learning artificial intelligence (AI) systems that can be applied at the edge and rapidly adapt to the specific situation at deployment site. However, current AI models struggle in such scenarios, often requiring extensive fine-tuning, computational resources, and data. In contrast, humans can effortlessly adjust to new tasks by transferring knowledge from related ones. The concept of learning-to-learn (L2L) mimics this process and enables AI models to rapidly adapt with only little computational effort and data. In-memory computing neuromorphic hardware (NMHW) is inspired by the brain's operating principles and mimics its physical co-location of memory and compute. In this work, we pair L2L with in-memory computing NMHW based on phase-change memory devices to build efficient AI models that can rapidly adapt to new tasks. We demonstrate the versatility of our approach in two scenarios: a convolutional neural network performing image classification and a biologically-inspired spiking neural network generating motor commands for a real robotic arm. Both models rapidly learn with few parameter updates. Deployed on the NMHW, they perform on-par with their software equivalents. Moreover, meta-training of these models can be performed in software with high-precision, alleviating the need for accurate hardware models.",
+        "subjects": [
+            "cs.NE"
+        ],
+        "comment": "16 pages and 3 appendix pages; Preprint currently under review"
+    },
+    {
         "paper id": "2404.14326",
         "abstract url": "https://arxiv.org/abs/2404.14326",
         "title": "Machine Learning Techniques for MRI Data Processing at Expanding Scale",
@@ -4979,6 +5068,7 @@
                 "eess.IV"
             ],
             [
+                "Workshop",
                 "CVPR"
             ]
         ],
@@ -5051,6 +5141,25 @@
         "abstract": "Understanding how buildings are distributed globally is crucial to revealing the human footprint on our home planet. This built environment affects local climate, land surface albedo, resource distribution, and many other key factors that influence well-being and human health. Despite this, quantitative and comprehensive data on the distribution and properties of buildings worldwide is lacking. To this end, by using a big data analytics approach and nearly 800,000 satellite images, we generated the highest resolution and highest accuracy building map ever created: the Global OpenBuildingMap (Global OBM). A joint analysis of building maps and solar potentials indicates that rooftop solar energy can supply the global energy consumption need at a reasonable cost. Specifically, if solar panels were placed on the roofs of all buildings, they could supply 1.1-3.3 times -- depending on the efficiency of the solar device -- the global energy consumption in 2020, which is the year with the highest consumption on record. We also identified a clear geospatial correlation between building areas and key socioeconomic variables, which indicates our global building map can serve as an important input to modeling global socioeconomic needs and drivers.",
         "subjects": [
             "cs.CV"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2404.13933",
+        "abstract url": "https://arxiv.org/abs/2404.13933",
+        "title": "Comparison of On-Orbit Manual Attitude Control Methods for Non-Docking Spacecraft Through Virtual Reality Simulation",
+        "rating": -3,
+        "keywords": [
+            [
+                "flight"
+            ],
+            [
+                "EEG"
+            ]
+        ],
+        "abstract": "On-orbit manual attitude control of manned spacecraft is accomplished using external visual references and some method of three axis attitude control. All past, present, and developmental spacecraft feature the capability to manually control attitude for deorbit. National Aeronautics and Space Administration (NASA) spacecraft permit an aircraft windshield type front view, wherein an arc of the Earths horizon is visible to the crew in deorbit attitude. Russian and Chinese spacecraft permit the crew a bottom view wherein the entire circular Earth horizon disk is visible to the crew in deorbit attitude. Our study compared these two types of external views for efficiency in achievement of deorbit attitude. We used a Unity Virtual Reality (VR) spacecraft simulator that we built in house. The task was to accurately achieve deorbit attitude while in a 400 km circular orbit. Six military test pilots and six civilians with gaming experience flew the task using two methods of visual reference. Comparison was based on time taken, fuel consumed, cognitive workload assessment and user preference. We used ocular parameters, EEG, NASA TLX and IBM SUS to quantify our results. Our study found that the bottom view was easier to operate for manual deorbit task. Additionally, we realized that a VR based system can work as a training simulator for manual on-orbit flight path control tasks by pilots and non pilots. Results from our study can be used for design of manual on orbit attitude control of present and future spacecrafts.",
+        "subjects": [
+            "cs.HC"
         ],
         "comment": null
     },
@@ -5128,6 +5237,31 @@
             "cs.CV"
         ],
         "comment": "https://yuhongyun777.github.io/GaussianTalker/"
+    },
+    {
+        "paper id": "2404.14055",
+        "abstract url": "https://arxiv.org/abs/2404.14055",
+        "title": "RingID: Rethinking Tree-Ring Watermarking for Enhanced Multi-Key Identification",
+        "rating": -3,
+        "keywords": [
+            [
+                "diffusion"
+            ],
+            [
+                "attacks"
+            ],
+            [
+                "Watermarking"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "We revisit Tree-Ring Watermarking, a recent diffusion model watermarking method that demonstrates great robustness to various attacks. We conduct an in-depth study on it and reveal that the distribution shift unintentionally introduced by the watermarking process, apart from watermark pattern matching, contributes to its exceptional robustness. Our investigation further exposes inherent flaws in its original design, particularly in its ability to identify multiple distinct keys, where distribution shift offers no assistance. Based on these findings and analysis, we present RingID for enhanced multi-key identification. It consists of a novel multi-channel heterogeneous watermarking approach designed to seamlessly amalgamate distinctive advantages from diverse watermarks. Coupled with a series of suggested enhancements, RingID exhibits substantial advancements in multi-key identification. Github Page: https://github.com/showlab/RingID",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "25 pages, 8 figures"
     },
     {
         "paper id": "2404.14069",
@@ -5222,6 +5356,7 @@
                 "Biological"
             ],
             [
+                "chemistry",
                 "chemical"
             ],
             [
@@ -5388,6 +5523,7 @@
                 "biological"
             ],
             [
+                "Chemistry",
                 "chemical"
             ],
             [
@@ -5541,34 +5677,6 @@
             "cs.CV"
         ],
         "comment": "Accepted by IEEE Transactions on Geoscience and Remote Sensing"
-    },
-    {
-        "paper id": "2404.14055",
-        "abstract url": "https://arxiv.org/abs/2404.14055",
-        "title": "RingID: Rethinking Tree-Ring Watermarking for Enhanced Multi-Key Identification",
-        "rating": -4,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "diffusion"
-            ],
-            [
-                "attacks"
-            ],
-            [
-                "Watermarking"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "We revisit Tree-Ring Watermarking, a recent diffusion model watermarking method that demonstrates great robustness to various attacks. We conduct an in-depth study on it and reveal that the distribution shift unintentionally introduced by the watermarking process, apart from watermark pattern matching, contributes to its exceptional robustness. Our investigation further exposes inherent flaws in its original design, particularly in its ability to identify multiple distinct keys, where distribution shift offers no assistance. Based on these findings and analysis, we present RingID for enhanced multi-key identification. It consists of a novel multi-channel heterogeneous watermarking approach designed to seamlessly amalgamate distinctive advantages from diverse watermarks. Coupled with a series of suggested enhancements, RingID exhibits substantial advancements in multi-key identification. Github Page: https://github.com/showlab/RingID",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "25 pages, 8 figures"
     },
     {
         "paper id": "2404.14167",
@@ -5847,14 +5955,14 @@
     {
         "paper id": "2404.13924",
         "abstract url": "https://arxiv.org/abs/2404.13924",
-        "title": "ActSonic: Everyday Activity Recognition on Smart Glasses using Active Acoustic Sensing",
+        "title": "ActSonic: Recognizing Everyday Activities from Inaudible Acoustic Waves Around the Body",
         "rating": -10,
         "keywords": [],
-        "abstract": "In this paper, we introduce ActSonic, an intelligent, low-power active acoustic sensing system integrated into eyeglasses. ActSonic is designed to recognize 27 different everyday activities (e.g., eating, drinking, toothbrushing). It only needs a pair of miniature speakers and microphones mounted on each hinge of eyeglasses to emit ultrasonic waves to create an acoustic aura around the body. Based on the position and motion of various body parts, the acoustic signals are reflected with unique patterns captured by the microphone and analyzed by a customized self-supervised deep learning framework to infer the performed activities. ActSonic was deployed in a user study with 19 participants across 19 households to evaluate its efficacy. Without requiring any training data from a new user (leave-one-participant-out evaluation), ActSonic was able to detect 27 activities with an inference resolution of 1 second, achieving an average F1-score of 86.6% in an unconstrained setting and 93.4% in a prompted setting.",
+        "abstract": "We present ActSonic, an intelligent, low-power active acoustic sensing system integrated into eyeglasses that can recognize 27 different everyday activities (e.g., eating, drinking, toothbrushing) from inaudible acoustic waves around the body with a time resolution of one second. It only needs a pair of miniature speakers and microphones mounted on each hinge of eyeglasses to emit ultrasonic waves to create an acoustic aura around the body. Based on the position and motion of various body parts, the acoustic signals are reflected with unique patterns captured by the microphone and analyzed by a customized self-supervised deep learning framework to infer the performed activities. ActSonic was deployed in a user study with 19 participants across 19 households to evaluate its efficacy. Without requiring any training data from a new user (leave-one-participant-out evaluation), ActSonic was able to detect 27 activities, achieving an average F1-score of 86.6% in fully unconstrained scenarios and 93.4% in prompted settings at participants' homes.",
         "subjects": [
             "cs.HC"
         ],
-        "comment": "27 pages, 11 figures"
+        "comment": "29 pages, 11 figures"
     },
     {
         "paper id": "2404.13937",
@@ -6167,18 +6275,6 @@
             "cs.DS"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2404.14218",
-        "abstract url": "https://arxiv.org/abs/2404.14218",
-        "title": "Designing Safe and Engaging AI Experiences for Children: Towards the Definition of Best Practices in UI/UX Design",
-        "rating": -10,
-        "keywords": [],
-        "abstract": "This workshop proposal focuses on best practices in UI/UX design for AI applications aimed at children, emphasising safety, engagement, and ethics. It aims to address the challenge of measuring the safety, trustworthiness, and reliability of interactions between children and AI systems. Through collaborative discussions, participants will explore effective design strategies and ethical guidelines while developing methodologies for assessing the safety and reliability of AI interactions with children. This proposal seeks to foster responsible and child-centered AI design practices within the CHI community.",
-        "subjects": [
-            "cs.HC"
-        ],
-        "comment": "4 pages, The paper has been peer-reviewed and presented at the \"CHI 2024 Workshop on Child-centred AI Design\", May 11, 2024, Honolulu, HI, USA"
     },
     {
         "paper id": "2404.14221",
@@ -6735,10 +6831,10 @@
     {
         "paper id": "2404.14665",
         "abstract url": "https://arxiv.org/abs/2404.14665",
-        "title": "Illuminating the Unseen: A Framework for Designing and Mitigating Context-induced Harms in Behavioral Sensing",
+        "title": "Illuminating the Unseen: Investigating the Context-induced Harms in Behavioral Sensing",
         "rating": -10,
         "keywords": [],
-        "abstract": "With the advanced ability to capture longitudinal sensed data and model human behavior, behavioral sensing technologies are progressing toward numerous wellbeing applications. However, the widespread use of top-down design approaches, often based on assumptions made by technology builders about user goals, needs, and preferences, can result in a lack of context sensitivity. Such oversights may lead to technologies that do not fully support the diverse needs of users and may even introduce potential harms. In this paper, we highlight two primary areas of potential harm in behavioral sensing technologies: identity-based and situation-based harms. By adopting a theory-driven approach, we propose a framework for identifying and mitigating these harms. To validate this framework, we applied it to two real-world studies of behavioral sensing as tools for systematic evaluation. Our analysis provides empirical evidence of potential harms and demonstrates the framework's effectiveness in identifying and addressing these issues. The insights derived from our evaluations, coupled with the reflection on the framework, contribute both conceptually and practically to the field. Our goal is to guide technology builders in designing more context-sensitive sensing technologies, thereby supporting responsible decision-making in this rapidly evolving field.",
+        "abstract": "Behavioral sensing technologies are rapidly evolving across a range of well-being applications. Despite its potential, concerns about the responsible use of such technology are escalating. In response, recent research within the sensing technology has started to address these issues. While promising, they primarily focus on broad demographic categories and overlook more nuanced, context-specific identities. These approaches lack grounding within domain-specific harms that arise from deploying sensing technology in diverse social, environmental, and technological settings. Additionally, existing frameworks for evaluating harms are designed for a generic ML life cycle, and fail to adapt to the dynamic and longitudinal considerations for behavioral sensing technology. To address these gaps, we introduce a framework specifically designed for evaluating behavioral sensing technologies. This framework emphasizes a comprehensive understanding of context, particularly the situated identities of users and the deployment settings of the sensing technology. It also highlights the necessity for iterative harm mitigation and continuous maintenance to adapt to the evolving nature of technology and its use. We demonstrate the feasibility and generalizability of our framework through post-hoc evaluations on two real-world behavioral sensing studies conducted in different international contexts, involving varied population demographics and machine learning tasks. Our evaluations provide empirical evidence of both situated identity-based harm and more domain-specific harms, and discuss the trade-offs introduced by implementing bias mitigation techniques.",
         "subjects": [
             "cs.HC"
         ],

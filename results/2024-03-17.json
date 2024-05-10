@@ -57,6 +57,25 @@
         "comment": null
     },
     {
+        "paper id": "2403.11236",
+        "abstract url": "https://arxiv.org/abs/2403.11236",
+        "title": "ChartThinker: A Contextual Chain-of-Thought Approach to Optimized Chart Summarization",
+        "rating": 2,
+        "keywords": [
+            [
+                "visual-language"
+            ],
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Data visualization serves as a critical means for presenting data and mining its valuable insights. The task of chart summarization, through natural language processing techniques, facilitates in-depth data analysis of charts. However, there still are notable deficiencies in terms of visual-language matching and reasoning ability for existing approaches. To address these limitations, this study constructs a large-scale dataset of comprehensive chart-caption pairs and fine-tuning instructions on each chart. Thanks to the broad coverage of various topics and visual styles within this dataset, better matching degree can be achieved from the view of training data. Moreover, we propose an innovative chart summarization method, ChartThinker, which synthesizes deep analysis based on chains of thought and strategies of context retrieval, aiming to improve the logical coherence and accuracy of the generated summaries. Built upon the curated datasets, our trained model consistently exhibits superior performance in chart summarization tasks, surpassing 8 state-of-the-art models over 7 evaluation metrics. Our dataset and codes are publicly accessible.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": "Accepted by LREC-COLING 2024"
+    },
+    {
         "paper id": "2403.11299",
         "abstract url": "https://arxiv.org/abs/2403.11299",
         "title": "SQ-LLaVA: Self-Questioning for Large Vision-Language Assistant",
@@ -94,6 +113,25 @@
             "cs.CL"
         ],
         "comment": "LREC-COLING 2024, Long Paper"
+    },
+    {
+        "paper id": "2403.11373",
+        "abstract url": "https://arxiv.org/abs/2403.11373",
+        "title": "Reconstruct before Query: Continual Missing Modality Learning with Decomposed Prompt Collaboration",
+        "rating": 2,
+        "keywords": [
+            [
+                "ParameterEfficient"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Pre-trained large multi-modal models (LMMs) exploit fine-tuning to adapt diverse user applications. Nevertheless, fine-tuning may face challenges due to deactivated sensors (e.g., cameras turned off for privacy or technical issues), yielding modality-incomplete data and leading to inconsistency in training data and the data for inference. Additionally, continuous training leads to catastrophic forgetting, diluting the knowledge in pre-trained LMMs. To overcome these challenges, we introduce a novel task, Continual Missing Modality Learning (CMML), to investigate how models can generalize when data of certain modalities is missing during continual fine-tuning. Our preliminary benchmarks reveal that existing methods suffer from a significant performance drop in CMML, even with the aid of advanced continual learning techniques. Therefore, we devise a framework termed Reconstruct before Query (RebQ). It decomposes prompts into modality-specific ones and breaks them into components stored in pools accessible via a key-query mechanism, which facilitates ParameterEfficient Fine-Tuning and enhances knowledge transferability for subsequent tasks. Meanwhile, our RebQ leverages extensive multi-modal knowledge from pre-trained LMMs to reconstruct the data of missing modality. Comprehensive experiments demonstrate that RebQ effectively reconstructs the missing modality information and retains pre-trained knowledge. Specifically, compared with the baseline, RebQ improves average precision from 20.00 to 50.92 and decreases average forgetting from 75.95 to 8.56. Code and datasets are available on https://github.com/Tree-Shu-Zhao/RebQ.pytorch",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
     },
     {
         "paper id": "2403.11399",
@@ -172,6 +210,25 @@
         "comment": "Accepted by CVPR 2024"
     },
     {
+        "paper id": "2403.11204",
+        "abstract url": "https://arxiv.org/abs/2403.11204",
+        "title": "Partitioned Neural Network Training via Synthetic Intermediate Labels",
+        "rating": 1.5,
+        "keywords": [
+            [
+                "GPU memory"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "The proliferation of extensive neural network architectures, particularly deep learning models, presents a challenge in terms of resource-intensive training. GPU memory constraints have become a notable bottleneck in training such sizable models. Existing strategies, including data parallelism, model parallelism, pipeline parallelism, and fully sharded data parallelism, offer partial solutions. Model parallelism, in particular, enables the distribution of the entire model across multiple GPUs, yet the ensuing data communication between these partitions slows down training. Additionally, the substantial memory overhead required to store auxiliary parameters on each GPU compounds computational demands. Instead of using the entire model for training, this study advocates partitioning the model across GPUs and generating synthetic intermediate labels to train individual segments. These labels, produced through a random process, mitigate memory overhead and computational load. This approach results in a more efficient training process that minimizes data communication while maintaining model accuracy. To validate this method, a 6-layer fully connected neural network is partitioned into two parts and its performance is assessed on the extended MNIST dataset. Experimental results indicate that the proposed approach achieves similar testing accuracies to conventional training methods, while significantly reducing memory and computational requirements. This work contributes to mitigating the resource-intensive nature of training large neural networks, paving the way for more efficient deep learning model development.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": "12 pages, 10 figures"
+    },
+    {
         "paper id": "2403.11234",
         "abstract url": "https://arxiv.org/abs/2403.11234",
         "title": "Universal Semi-Supervised Domain Adaptation by Mitigating Common-Class Bias",
@@ -189,6 +246,25 @@
             "cs.CV"
         ],
         "comment": "Accepted to CVPR 2024"
+    },
+    {
+        "paper id": "2403.11366",
+        "abstract url": "https://arxiv.org/abs/2403.11366",
+        "title": "JORA: JAX Tensor-Parallel LoRA Library for Retrieval Augmented Fine-Tuning",
+        "rating": 1.5,
+        "keywords": [
+            [
+                "PEFT"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "The scaling of Large Language Models (LLMs) for retrieval-based tasks, particularly in Retrieval Augmented Generation (RAG), faces significant memory constraints, especially when fine-tuning extensive prompt sequences. Current open-source libraries support full-model inference and fine-tuning across multiple GPUs but fall short of accommodating the efficient parameter distribution required for retrieved context. Addressing this gap, we introduce a novel framework for PEFT-compatible fine-tuning of Llama-2 models, leveraging distributed training. Our framework uniquely utilizes JAX's just-in-time (JIT) compilation and tensor-sharding for efficient resource management, thereby enabling accelerated fine-tuning with reduced memory requirements. This advancement significantly improves the scalability and feasibility of fine-tuning LLMs for complex RAG applications, even on systems with limited GPU resources. Our experiments show more than 12x improvement in runtime compared to Hugging Face/DeepSpeed implementation with four GPUs while consuming less than half the VRAM per GPU.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": null
     },
     {
         "paper id": "2403.11463",
@@ -395,11 +471,11 @@
                 "cs.CL"
             ]
         ],
-        "abstract": "Real-world misinformation can be partially correct and even factual but misleading. It undermines public trust in science and democracy, particularly on social media, where it can spread rapidly. High-quality and timely correction of misinformation that identifies and explains its (in)accuracies has been shown to effectively reduce false beliefs. Despite the wide acceptance of manual correction, it is difficult to promptly correct newly created misinformation and to scale this approach, a concern as technologies like large language models (LLMs) make misinformation easier to produce. LLMs also have versatile capabilities that could accelerate misinformation correction--however, they struggle due to a lack of recent information, a tendency to produce false content, and limitations in addressing multimodal information. We propose MUSE, an LLM augmented with access to and credibility evaluation of up-to-date information. By retrieving evidence as refutations or contexts, MUSE identifies and explains (in)accuracies in a piece of content--not presupposed to be misinformation--with references. It also describes images and conducts multimodal searches to verify and correct multimodal content. Fact-checking experts evaluate responses to social media content that are not presupposed to be (non-)misinformation but broadly include incorrect, partially correct, and correct posts, that may or may not be misleading. We propose and evaluate 13 dimensions of misinformation correction quality, ranging from the accuracy of identifications and factuality of explanations to the relevance and credibility of references. The results demonstrate MUSE's ability to promptly write high-quality responses to potential misinformation on social media--overall, MUSE outperforms GPT-4 by 37% and even high-quality responses from laypeople by 29%.",
+        "abstract": "Real-world misinformation can be partially correct and even factual but misleading. It undermines public trust in science and democracy, particularly on social media, where it can spread rapidly. High-quality and timely correction of misinformation that identifies and explains its (in)accuracies has been shown to effectively reduce false beliefs. Despite the wide acceptance of manual correction, it is difficult to be timely and scalable, a concern as technologies like large language models (LLMs) make misinformation easier to produce. LLMs also have versatile capabilities that could accelerate misinformation correction-however, they struggle due to a lack of recent information, a tendency to produce false content, and limitations in addressing multimodal information. We propose MUSE, an LLM augmented with access to and credibility evaluation of up-to-date information. By retrieving evidence as refutations or contexts, MUSE identifies and explains (in)accuracies in a piece of content-not presupposed to be misinformation-with references. It also describes images and conducts multimodal searches to verify and correct multimodal content. Fact-checking experts evaluate responses to social media content that are not presupposed to be (non-)misinformation but broadly include incorrect, partially correct, and correct posts, that may or may not be misleading. We propose and evaluate 13 dimensions of misinformation correction quality, ranging from the accuracy of identifications and factuality of explanations to the relevance and credibility of references. The results demonstrate MUSE's ability to promptly write high-quality responses to potential misinformation on social media-overall, MUSE outperforms GPT-4 by 37% and even high-quality responses from laypeople by 29%. This work reveals LLMs' potential to help combat real-world misinformation effectively and efficiently.",
         "subjects": [
             "cs.CL"
         ],
-        "comment": "52 pages"
+        "comment": "53 pages"
     },
     {
         "paper id": "2403.11189",
@@ -416,6 +492,22 @@
             "cs.CV"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2403.11197",
+        "abstract url": "https://arxiv.org/abs/2403.11197",
+        "title": "TAG: Guidance-free Open-Vocabulary Semantic Segmentation",
+        "rating": 1,
+        "keywords": [
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Semantic segmentation is a crucial task in computer vision, where each pixel in an image is classified into a category. However, traditional methods face significant challenges, including the need for pixel-level annotations and extensive training. Furthermore, because supervised learning uses a limited set of predefined categories, models typically struggle with rare classes and cannot recognize new ones. Unsupervised and open-vocabulary segmentation, proposed to tackle these issues, faces challenges, including the inability to assign specific class labels to clusters and the necessity of user-provided text queries for guidance. In this context, we propose a novel approach, TAG which achieves Training, Annotation, and Guidance-free open-vocabulary semantic segmentation. TAG utilizes pre-trained models such as CLIP and DINO to segment images into meaningful categories without additional training or dense annotations. It retrieves class labels from an external database, providing flexibility to adapt to new scenarios. Our TAG achieves state-of-the-art results on PascalVOC, PascalContext and ADE20K for open-vocabulary segmentation without given class names, i.e. improvement of +15.3 mIoU on PascalVOC. All code and data will be released at https://github.com/Valkyrja3607/TAG.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "18 pages"
     },
     {
         "paper id": "2403.11203",
@@ -446,28 +538,6 @@
         "abstract": "Object detection methods under known single degradations have been extensively investigated. However, existing approaches require prior knowledge of the degradation type and train a separate model for each, limiting their practical applications in unpredictable environments. To address this challenge, we propose a chain-of-thought (CoT) prompted adaptive enhancer, CPA-Enhancer, for object detection under unknown degradations. Specifically, CPA-Enhancer progressively adapts its enhancement strategy under the step-by-step guidance of CoT prompts, that encode degradation-related information. To the best of our knowledge, it's the first work that exploits CoT prompting for object detection tasks. Overall, CPA-Enhancer is a plug-and-play enhancement model that can be integrated into any generic detectors to achieve substantial gains on degraded images, without knowing the degradation type priorly. Experimental results demonstrate that CPA-Enhancer not only sets the new state of the art for object detection but also boosts the performance of other downstream vision tasks under unknown degradations.",
         "subjects": [
             "cs.CV"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2403.11236",
-        "abstract url": "https://arxiv.org/abs/2403.11236",
-        "title": "ChartThinker: A Contextual Chain-of-Thought Approach to Optimized Chart Summarization",
-        "rating": 1,
-        "keywords": [
-            [
-                "visual-language"
-            ],
-            [
-                "depth"
-            ],
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Data visualization serves as a critical means for presenting data and mining its valuable insights. The task of chart summarization, through natural language processing techniques, facilitates in-depth data analysis of charts. However, there still are notable deficiencies in terms of visual-language matching and reasoning ability for existing approaches. To address these limitations, this study constructs a large-scale dataset of comprehensive chart-caption pairs and fine-tuning instructions on each chart. Thanks to the broad coverage of various topics and visual styles within this dataset, better matching degree can be achieved from the view of training data. Moreover, we propose an innovative chart summarization method, ChartThinker, which synthesizes deep analysis based on chains of thought and strategies of context retrieval, aiming to improve the logical coherence and accuracy of the generated summaries. Built upon the curated datasets, our trained model consistently exhibits superior performance in chart summarization tasks, surpassing 8 state-of-the-art models over 7 evaluation metrics. Our dataset and codes are publicly accessible.",
-        "subjects": [
-            "cs.CL"
         ],
         "comment": null
     },
@@ -651,6 +721,22 @@
         "comment": "Accepted to ICLR 2024"
     },
     {
+        "paper id": "2403.11369",
+        "abstract url": "https://arxiv.org/abs/2403.11369",
+        "title": "What Makes Math Word Problems Challenging for LLMs?",
+        "rating": 1,
+        "keywords": [
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "This paper investigates the question of what makes math word problems (MWPs) in English challenging for large language models (LLMs). We conduct an in-depth analysis of the key linguistic and mathematical characteristics of MWPs. In addition, we train feature-based classifiers to better understand the impact of each feature on the overall difficulty of MWPs for prominent LLMs and investigate whether this helps predict how well LLMs fare against specific categories of MWPs.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": "Accepted to NAACL Findings 2024"
+    },
+    {
         "paper id": "2403.11376",
         "abstract url": "https://arxiv.org/abs/2403.11376",
         "title": "ShapeFormer: Shape Prior Visible-to-Amodal Transformer-based Amodal Instance Segmentation",
@@ -785,6 +871,22 @@
         "comment": null
     },
     {
+        "paper id": "2403.15445",
+        "abstract url": "https://arxiv.org/abs/2403.15445",
+        "title": "Decoding Multilingual Topic Dynamics and Trend Identification through ARIMA Time Series Analysis on Social Networks: A Novel Data Translation Framework Enhanced by LDA/HDP Models",
+        "rating": 1,
+        "keywords": [
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "In this study, the authors present a novel methodology adept at decoding multilingual topic dynamics and identifying communication trends during crises. We focus on dialogues within Tunisian social networks during the Coronavirus Pandemic and other notable themes like sports and politics. We start by aggregating a varied multilingual corpus of comments relevant to these subjects. This dataset undergoes rigorous refinement during data preprocessing. We then introduce our No-English-to-English Machine Translation approach to handle linguistic differences. Empirical tests of this method showed high accuracy and F1 scores, highlighting its suitability for linguistically coherent tasks. Delving deeper, advanced modeling techniques, specifically LDA and HDP models are employed to extract pertinent topics from the translated content. This leads to applying ARIMA time series analysis to decode evolving topic trends. Applying our method to a multilingual Tunisian dataset, we effectively identified key topics mirroring public sentiment. Such insights prove vital for organizations and governments striving to understand public perspectives during crises. Compared to standard approaches, our model outperforms, as confirmed by metrics like Coherence Score, U-mass, and Topic Coherence. Additionally, an in-depth assessment of the identified topics revealed notable thematic shifts in discussions, with our trends identification indicating impressive accuracy, backed by RMSE-based analysis.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2403.15447",
         "abstract url": "https://arxiv.org/abs/2403.15447",
         "title": "Decoding Compressed Trust: Scrutinizing the Trustworthiness of Efficient LLMs Under Compression",
@@ -875,22 +977,6 @@
             "cs.CV"
         ],
         "comment": "Accepted by CVPR 2024"
-    },
-    {
-        "paper id": "2403.11204",
-        "abstract url": "https://arxiv.org/abs/2403.11204",
-        "title": "Partitioned Neural Network Training via Synthetic Intermediate Labels",
-        "rating": 0.5,
-        "keywords": [
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "The proliferation of extensive neural network architectures, particularly deep learning models, presents a challenge in terms of resource-intensive training. GPU memory constraints have become a notable bottleneck in training such sizable models. Existing strategies, including data parallelism, model parallelism, pipeline parallelism, and fully sharded data parallelism, offer partial solutions. Model parallelism, in particular, enables the distribution of the entire model across multiple GPUs, yet the ensuing data communication between these partitions slows down training. Additionally, the substantial memory overhead required to store auxiliary parameters on each GPU compounds computational demands. Instead of using the entire model for training, this study advocates partitioning the model across GPUs and generating synthetic intermediate labels to train individual segments. These labels, produced through a random process, mitigate memory overhead and computational load. This approach results in a more efficient training process that minimizes data communication while maintaining model accuracy. To validate this method, a 6-layer fully connected neural network is partitioned into two parts and its performance is assessed on the extended MNIST dataset. Experimental results indicate that the proposed approach achieves similar testing accuracies to conventional training methods, while significantly reducing memory and computational requirements. This work contributes to mitigating the resource-intensive nature of training large neural networks, paving the way for more efficient deep learning model development.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": "12 pages, 10 figures"
     },
     {
         "paper id": "2403.11206",
@@ -1264,6 +1350,38 @@
         "comment": null
     },
     {
+        "paper id": "2403.14708",
+        "abstract url": "https://arxiv.org/abs/2403.14708",
+        "title": "Visualizing Progress in Broadening Participation in Computing: The Value of Context",
+        "rating": 0.5,
+        "keywords": [
+            [
+                "cs.CY"
+            ]
+        ],
+        "abstract": "Concerns about representation in computing within the U.S. have driven numerous activities to broaden participation. Assessment of the impact of these efforts and, indeed, a clear assessment of the actual \"problem\" being addressed are limited by the nature of the most common data analysis which looks at the representation of each population as a percentage of the number of students graduating with a degree in computing. This use of a single metric cannot adequately assess the impact of broadening participation efforts. First, this approach fails to account for changing demographics of the undergraduate population in terms of overall numbers and relative proportion of the Federally designated gender, race, and ethnicity groupings. A second issue is that the majority of literature on broadening participation in computing (BPC) reports data on gender or on race/ethnicity, omitting data on students' intersectional identities. This leads to an incorrect understanding of both the data and the challenges we face as a field. In this paper we present several different approaches to tracking the impact of BPC efforts. We make three recommendations: 1) cohort-based analysis should be used to accurately show student engagement in computing; 2) the field as a whole needs to adopt the norm of always reporting intersectional data; 3) university demographic context matters when looking at how well a CS department is doing to broaden participation in computing, including longitudinal analysis of university demographic shifts that impact the local demographics of computing.",
+        "subjects": [
+            "cs.CY"
+        ],
+        "comment": "Accepted for publication in Communications of the ACM, late summer or Fall 2024"
+    },
+    {
+        "paper id": "2404.00017",
+        "abstract url": "https://arxiv.org/abs/2404.00017",
+        "title": "Psittacines of Innovation? Assessing the True Novelty of AI Creations",
+        "rating": 0.5,
+        "keywords": [
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "We examine whether Artificial Intelligence (AI) systems generate truly novel ideas rather than merely regurgitating patterns learned during training. Utilizing a novel experimental design, we task an AI with generating project titles for hypothetical crowdfunding campaigns. We compare within AI-generated project titles, measuring repetition and complexity. We compare between the AI-generated titles and actual observed field data using an extension of maximum mean discrepancy--a metric derived from the application of kernel mean embeddings of statistical distributions to high-dimensional machine learning (large language) embedding vectors--yielding a structured analysis of AI output novelty. Results suggest that (1) the AI generates unique content even under increasing task complexity, and at the limits of its computational capabilities, (2) the generated content has face validity, being consistent with both inputs to other generative AI and in qualitative comparison to field data, and (3) exhibits divergence from field data, mitigating concerns relating to intellectual property rights. We discuss implications for copyright and trademark law.",
+        "subjects": [
+            "cs.AI"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2403.11092",
         "abstract url": "https://arxiv.org/abs/2403.11092",
         "title": "Lost in Translation? Translation Errors and Challenges for Fair Assessment of Text-to-Image Models on Multilingual Concepts",
@@ -1364,26 +1482,23 @@
         "comment": "This work is under consideration at Computer Vision and Image Understanding"
     },
     {
-        "paper id": "2403.11261",
-        "abstract url": "https://arxiv.org/abs/2403.11261",
-        "title": "A Lie Group Approach to Riemannian Batch Normalization",
-        "rating": 0.0,
+        "paper id": "2403.11194",
+        "abstract url": "https://arxiv.org/abs/2403.11194",
+        "title": "MaskDiffusion: Exploiting Pre-trained Diffusion Models for Semantic Segmentation",
+        "rating": 0,
         "keywords": [
             [
-                "radar"
+                "Diffusion"
             ],
             [
-                "cs.LG"
-            ],
-            [
-                "ICLR"
+                "cs.CV"
             ]
         ],
-        "abstract": "Manifold-valued measurements exist in numerous applications within computer vision and machine learning. Recent studies have extended Deep Neural Networks (DNNs) to manifolds, and concomitantly, normalization techniques have also been adapted to several manifolds, referred to as Riemannian normalization. Nonetheless, most of the existing Riemannian normalization methods have been derived in an ad hoc manner and only apply to specific manifolds. This paper establishes a unified framework for Riemannian Batch Normalization (RBN) techniques on Lie groups. Our framework offers the theoretical guarantee of controlling both the Riemannian mean and variance. Empirically, we focus on Symmetric Positive Definite (SPD) manifolds, which possess three distinct types of Lie group structures. Using the deformation concept, we generalize the existing Lie groups on SPD manifolds into three families of parameterized Lie groups. Specific normalization layers induced by these Lie groups are then proposed for SPD neural networks. We demonstrate the effectiveness of our approach through three sets of experiments: radar recognition, human action recognition, and electroencephalography (EEG) classification. The code is available at https://github.com/GitZH-Chen/LieBN.git.",
+        "abstract": "Semantic segmentation is essential in computer vision for various applications, yet traditional approaches face significant challenges, including the high cost of annotation and extensive training for supervised learning. Additionally, due to the limited predefined categories in supervised learning, models typically struggle with infrequent classes and are unable to predict novel classes. To address these limitations, we propose MaskDiffusion, an innovative approach that leverages pretrained frozen Stable Diffusion to achieve open-vocabulary semantic segmentation without the need for additional training or annotation, leading to improved performance compared to similar methods. We also demonstrate the superior performance of MaskDiffusion in handling open vocabularies, including fine-grained and proper noun-based categories, thus expanding the scope of segmentation applications. Overall, our MaskDiffusion shows significant qualitative and quantitative improvements in contrast to other comparable unsupervised segmentation methods, i.e. on the Potsdam dataset (+10.5 mIoU compared to GEM) and COCO-Stuff (+14.8 mIoU compared to DiffSeg). All code and data will be released at https://github.com/Valkyrja3607/MaskDiffusion.",
         "subjects": [
-            "cs.LG"
+            "cs.CV"
         ],
-        "comment": "Accepted by ICLR 2024"
+        "comment": "19 pages"
     },
     {
         "paper id": "2403.11284",
@@ -1425,45 +1540,31 @@
         "comment": "The paper is a preprint of a version submitted in ICCIDA 2024. It consists of 10 pages and contains 7 tables"
     },
     {
-        "paper id": "2403.11369",
-        "abstract url": "https://arxiv.org/abs/2403.11369",
-        "title": "What Makes Math Word Problems Challenging for LLMs?",
+        "paper id": "2403.11367",
+        "abstract url": "https://arxiv.org/abs/2403.11367",
+        "title": "3DGS-ReLoc: 3D Gaussian Splatting for Map Representation and Visual ReLocalization",
         "rating": 0,
         "keywords": [
             [
-                "depth"
+                "GPU memory"
             ],
             [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "This paper investigates the question of what makes math word problems (MWPs) in English challenging for large language models (LLMs). We conduct an in-depth analysis of the key linguistic and mathematical characteristics of MWPs. In addition, we train feature-based classifiers to better understand the impact of each feature on the overall difficulty of MWPs for prominent LLMs and investigate whether this helps predict how well LLMs fare against specific categories of MWPs.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": "Accepted to NAACL Findings 2024"
-    },
-    {
-        "paper id": "2403.11373",
-        "abstract url": "https://arxiv.org/abs/2403.11373",
-        "title": "Reconstruct before Query: Continual Missing Modality Learning with Decomposed Prompt Collaboration",
-        "rating": 0,
-        "keywords": [
-            [
-                "ParameterEfficient"
+                "3D",
+                "Gaussian Splatting",
+                "voxel"
             ],
             [
-                "face"
+                "LiDAR"
             ],
             [
                 "cs.CV"
             ]
         ],
-        "abstract": "Pre-trained large multi-modal models (LMMs) exploit fine-tuning to adapt diverse user applications. Nevertheless, fine-tuning may face challenges due to deactivated sensors (e.g., cameras turned off for privacy or technical issues), yielding modality-incomplete data and leading to inconsistency in training data and the data for inference. Additionally, continuous training leads to catastrophic forgetting, diluting the knowledge in pre-trained LMMs. To overcome these challenges, we introduce a novel task, Continual Missing Modality Learning (CMML), to investigate how models can generalize when data of certain modalities is missing during continual fine-tuning. Our preliminary benchmarks reveal that existing methods suffer from a significant performance drop in CMML, even with the aid of advanced continual learning techniques. Therefore, we devise a framework termed Reconstruct before Query (RebQ). It decomposes prompts into modality-specific ones and breaks them into components stored in pools accessible via a key-query mechanism, which facilitates ParameterEfficient Fine-Tuning and enhances knowledge transferability for subsequent tasks. Meanwhile, our RebQ leverages extensive multi-modal knowledge from pre-trained LMMs to reconstruct the data of missing modality. Comprehensive experiments demonstrate that RebQ effectively reconstructs the missing modality information and retains pre-trained knowledge. Specifically, compared with the baseline, RebQ improves average precision from 20.00 to 50.92 and decreases average forgetting from 75.95 to 8.56. Code and datasets are available on https://github.com/Tree-Shu-Zhao/RebQ.pytorch",
+        "abstract": "This paper presents a novel system designed for 3D mapping and visual relocalization using 3D Gaussian Splatting. Our proposed method uses LiDAR and camera data to create accurate and visually plausible representations of the environment. By leveraging LiDAR data to initiate the training of the 3D Gaussian Splatting map, our system constructs maps that are both detailed and geometrically accurate. To mitigate excessive GPU memory usage and facilitate rapid spatial queries, we employ a combination of a 2D voxel map and a KD-tree. This preparation makes our method well-suited for visual localization tasks, enabling efficient identification of correspondences between the query image and the rendered image from the Gaussian Splatting map via normalized cross-correlation (NCC). Additionally, we refine the camera pose of the query image using feature-based matching and the Perspective-n-Point (PnP) technique. The effectiveness, adaptability, and precision of our system are demonstrated through extensive evaluation on the KITTI360 dataset.",
         "subjects": [
             "cs.CV"
         ],
-        "comment": null
+        "comment": "8 pages, 7 figures"
     },
     {
         "paper id": "2403.11415",
@@ -1506,28 +1607,6 @@
         "comment": null
     },
     {
-        "paper id": "2403.11450",
-        "abstract url": "https://arxiv.org/abs/2403.11450",
-        "title": "Zero-shot Compound Expression Recognition with Visual Language Model at the 6th ABAW Challenge",
-        "rating": 0,
-        "keywords": [
-            [
-                "Visual Language"
-            ],
-            [
-                "facial"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Conventional approaches to facial expression recognition primarily focus on the classification of six basic facial expressions. Nevertheless, real-world situations present a wider range of complex compound expressions that consist of combinations of these basics ones due to limited availability of comprehensive training datasets. The 6th Workshop and Competition on Affective Behavior Analysis in-the-wild (ABAW) offered unlabeled datasets containing compound expressions. In this study, we propose a zero-shot approach for recognizing compound expressions by leveraging a pretrained visual language model integrated with some traditional CNN networks.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "USTC-AC's paper for Compound Expression (CE) Recognition Challenge in 6th Workshop and Competition on Affective Behavior Analysis in-the-wild (ABAW)"
-    },
-    {
         "paper id": "2403.11468",
         "abstract url": "https://arxiv.org/abs/2403.11468",
         "title": "Collage Prompting: Budget-Friendly Visual Recognition with GPT-4V",
@@ -1543,45 +1622,6 @@
         "abstract": "Recent advancements in generative AI have suggested that by taking visual prompt, GPT-4V can demonstrate significant proficiency in image recognition task. Despite its impressive capabilities, the financial cost associated with GPT-4V's inference presents a substantial barrier for its wide use. To address this challenge, our work introduces Collage Prompting, a budget-friendly prompting approach that concatenates multiple images into a single visual input. With collage prompt, GPT-4V is able to perform image recognition on several images simultaneously. Based on the observation that the accuracy of GPT-4V's image recognition varies significantly with the order of images within the collage prompt, our method further learns to optimize the arrangement of images for maximum recognition accuracy. A graph predictor is trained to indicate the accuracy of each collage prompt, then we propose an optimization method to navigate the search space of possible image arrangements. Experiment results across various datasets demonstrate the cost-efficiency score of collage prompt is much larger than standard prompt. Additionally, collage prompt with learned arrangement achieves clearly better accuracy than collage prompt with random arrangement in GPT-4V's visual recognition.",
         "subjects": [
             "cs.CV"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2403.11469",
-        "abstract url": "https://arxiv.org/abs/2403.11469",
-        "title": "Generative Motion Stylization within Canonical Motion Space",
-        "rating": 0,
-        "keywords": [
-            [
-                "diffusion",
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Stylized motion breathes life into characters. However, the fixed skeleton structure and style representation hinder existing data-driven motion synthesis methods from generating stylized motion for various characters. In this work, we propose a generative motion stylization pipeline, named MotionS, for synthesizing diverse and stylized motion on cross-structure characters using cross-modality style prompts. Our key insight is to embed motion style into a cross-modality latent space and perceive the cross-structure skeleton topologies, allowing for motion stylization within a canonical motion space. Specifically, the large-scale Contrastive-Language-Image-Pre-training (CLIP) model is leveraged to construct the cross-modality latent space, enabling flexible style representation within this space. Additionally, two topology-encoded tokens are learned to capture the canonical and specific skeleton topologies, facilitating cross-structure topology shifting. Subsequently, the topology-shifted stylization diffusion is designed to generate motion content for the specific skeleton and stylize it in the shifted canonical motion space using multi-modality style descriptions. Through an extensive set of examples, we demonstrate the flexibility and generalizability of our pipeline across various characters and style descriptions. Qualitative and quantitative experiments underscore the superiority of our pipeline over state-of-the-art methods, consistently delivering high-quality stylized motion across a broad spectrum of skeletal structures.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2403.15445",
-        "abstract url": "https://arxiv.org/abs/2403.15445",
-        "title": "Decoding Multilingual Topic Dynamics and Trend Identification through ARIMA Time Series Analysis on Social Networks: A Novel Data Translation Framework Enhanced by LDA/HDP Models",
-        "rating": 0,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "In this study, the authors present a novel methodology adept at decoding multilingual topic dynamics and identifying communication trends during crises. We focus on dialogues within Tunisian social networks during the Coronavirus Pandemic and other notable themes like sports and politics. We start by aggregating a varied multilingual corpus of comments relevant to these subjects. This dataset undergoes rigorous refinement during data preprocessing. We then introduce our No-English-to-English Machine Translation approach to handle linguistic differences. Empirical tests of this method showed high accuracy and F1 scores, highlighting its suitability for linguistically coherent tasks. Delving deeper, advanced modeling techniques, specifically LDA and HDP models are employed to extract pertinent topics from the translated content. This leads to applying ARIMA time series analysis to decode evolving topic trends. Applying our method to a multilingual Tunisian dataset, we effectively identified key topics mirroring public sentiment. Such insights prove vital for organizations and governments striving to understand public perspectives during crises. Compared to standard approaches, our model outperforms, as confirmed by metrics like Coherence Score, U-mass, and Topic Coherence. Additionally, an in-depth assessment of the identified topics revealed notable thematic shifts in discussions, with our trends identification indicating impressive accuracy, backed by RMSE-based analysis.",
-        "subjects": [
-            "cs.CL"
         ],
         "comment": null
     },
@@ -1669,6 +1709,22 @@
         "comment": null
     },
     {
+        "paper id": "2403.11272",
+        "abstract url": "https://arxiv.org/abs/2403.11272",
+        "title": "Interference Cancellation for OTFS-Based Over-the-Air Computation",
+        "rating": -0.5,
+        "keywords": [
+            [
+                "Workshop"
+            ]
+        ],
+        "abstract": "This paper investigates over-the-air computation (AirComp) in the context of multiple-access time-varying multipath channels. We focus on a scenario where devices with high mobility transmit their sensing data to a fusion center (FC) for averaging. To combat the time-varying channel and Doppler effect, each device adopts orthogonal time frequency space (OTFS) modulation. After signals are received by the FC, the aggregated data undergoes demodulation and estimation within the delay-Doppler domain. We leverage the mean squared error (MSE) as a metric for the computational error of OTFS-based AirComp. We then derive the optimal transmit power at each device and signal scaling factor at FC for minimizing MSE. Notably, the performance of OTFS-based AirComp is not only affected by the noise but also by the inter-symbol interference and inter-link interference arising from the multipath channel. To counteract the interference-induced computational errors, we incorporate zero-padding (ZP)-assisted OTFS into AirComp and propose algorithms for interference cancellation. Numerical results underscore the enhanced performance of ZP-assisted OTFS-based AirComp over naive OTFS-based AirComp.",
+        "subjects": [
+            "cs.IT"
+        ],
+        "comment": "6 pages, 4 figures. Accepted by IEEE ICC 2024 Workshop"
+    },
+    {
         "paper id": "2403.11292",
         "abstract url": "https://arxiv.org/abs/2403.11292",
         "title": "Multi-Relational Graph Neural Network for Out-of-Domain Link Prediction",
@@ -1707,6 +1763,22 @@
         "comment": null
     },
     {
+        "paper id": "2403.11335",
+        "abstract url": "https://arxiv.org/abs/2403.11335",
+        "title": "ConvSDG: Session Data Generation for Conversational Search",
+        "rating": -0.5,
+        "keywords": [
+            [
+                "Workshop"
+            ]
+        ],
+        "abstract": "Conversational search provides a more convenient interface for users to search by allowing multi-turn interaction with the search engine. However, the effectiveness of the conversational dense retrieval methods is limited by the scarcity of training data required for their fine-tuning. Thus, generating more training conversational sessions with relevant labels could potentially improve search performance. Based on the promising capabilities of large language models (LLMs) on text generation, we propose ConvSDG, a simple yet effective framework to explore the feasibility of boosting conversational search by using LLM for session data generation. Within this framework, we design dialogue/session-level and query-level data generation with unsupervised and semi-supervised learning, according to the availability of relevance judgments. The generated data are used to fine-tune the conversational dense retriever. Extensive experiments on four widely used datasets demonstrate the effectiveness and broad applicability of our ConvSDG framework compared with several strong baselines.",
+        "subjects": [
+            "cs.IR"
+        ],
+        "comment": "Accepted by WWW 2024 Workshop"
+    },
+    {
         "paper id": "2403.11343",
         "abstract url": "https://arxiv.org/abs/2403.11343",
         "title": "Federated Transfer Learning with Differential Privacy",
@@ -1724,28 +1796,6 @@
             "cs.LG"
         ],
         "comment": "78 pages, 3 figures"
-    },
-    {
-        "paper id": "2403.11366",
-        "abstract url": "https://arxiv.org/abs/2403.11366",
-        "title": "JORA: JAX Tensor-Parallel LoRA Library for Retrieval Augmented Fine-Tuning",
-        "rating": -0.5,
-        "keywords": [
-            [
-                "PEFT"
-            ],
-            [
-                "Face"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "The scaling of Large Language Models (LLMs) for retrieval-based tasks, particularly in Retrieval Augmented Generation (RAG), faces significant memory constraints, especially when fine-tuning extensive prompt sequences. Current open-source libraries support full-model inference and fine-tuning across multiple GPUs but fall short of accommodating the efficient parameter distribution required for retrieved context. Addressing this gap, we introduce a novel framework for PEFT-compatible fine-tuning of Llama-2 models, leveraging distributed training. Our framework uniquely utilizes JAX's just-in-time (JIT) compilation and tensor-sharding for efficient resource management, thereby enabling accelerated fine-tuning with reduced memory requirements. This advancement significantly improves the scalability and feasibility of fine-tuning LLMs for complex RAG applications, even on systems with limited GPU resources. Our experiments show more than 12x improvement in runtime compared to Hugging Face/DeepSpeed implementation with four GPUs while consuming less than half the VRAM per GPU.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": null
     },
     {
         "paper id": "2403.11408",
@@ -1788,6 +1838,31 @@
         "comment": null
     },
     {
+        "paper id": "2403.11450",
+        "abstract url": "https://arxiv.org/abs/2403.11450",
+        "title": "Zero-shot Compound Expression Recognition with Visual Language Model at the 6th ABAW Challenge",
+        "rating": -0.5,
+        "keywords": [
+            [
+                "Visual Language"
+            ],
+            [
+                "facial"
+            ],
+            [
+                "cs.CV"
+            ],
+            [
+                "Workshop"
+            ]
+        ],
+        "abstract": "Conventional approaches to facial expression recognition primarily focus on the classification of six basic facial expressions. Nevertheless, real-world situations present a wider range of complex compound expressions that consist of combinations of these basics ones due to limited availability of comprehensive training datasets. The 6th Workshop and Competition on Affective Behavior Analysis in-the-wild (ABAW) offered unlabeled datasets containing compound expressions. In this study, we propose a zero-shot approach for recognizing compound expressions by leveraging a pretrained visual language model integrated with some traditional CNN networks.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "USTC-AC's paper for Compound Expression (CE) Recognition Challenge in 6th Workshop and Competition on Affective Behavior Analysis in-the-wild (ABAW)"
+    },
+    {
         "paper id": "2403.12106",
         "abstract url": "https://arxiv.org/abs/2403.12106",
         "title": "Circular Belief Propagation for Approximate Probabilistic Inference",
@@ -1813,8 +1888,7 @@
         "rating": -1,
         "keywords": [
             [
-                "bioacoustic",
-                "face"
+                "bioacoustic"
             ],
             [
                 "cs.SD"
@@ -2038,25 +2112,6 @@
         "comment": null
     },
     {
-        "paper id": "2403.11197",
-        "abstract url": "https://arxiv.org/abs/2403.11197",
-        "title": "TAG: Guidance-free Open-Vocabulary Semantic Segmentation",
-        "rating": -1,
-        "keywords": [
-            [
-                "face"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Semantic segmentation is a crucial task in computer vision, where each pixel in an image is classified into a category. However, traditional methods face significant challenges, including the need for pixel-level annotations and extensive training. Furthermore, because supervised learning uses a limited set of predefined categories, models typically struggle with rare classes and cannot recognize new ones. Unsupervised and open-vocabulary segmentation, proposed to tackle these issues, faces challenges, including the inability to assign specific class labels to clusters and the necessity of user-provided text queries for guidance. In this context, we propose a novel approach, TAG which achieves Training, Annotation, and Guidance-free open-vocabulary semantic segmentation. TAG utilizes pre-trained models such as CLIP and DINO to segment images into meaningful categories without additional training or dense annotations. It retrieves class labels from an external database, providing flexibility to adapt to new scenarios. Our TAG achieves state-of-the-art results on PascalVOC, PascalContext and ADE20K for open-vocabulary segmentation without given class names, i.e. improvement of +15.3 mIoU on PascalVOC. All code and data will be released at https://github.com/Valkyrja3607/TAG.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "18 pages"
-    },
-    {
         "paper id": "2403.11198",
         "abstract url": "https://arxiv.org/abs/2403.11198",
         "title": "Learning-Based Wiping Behavior of Low-Rigidity Robots Considering Various Surface Materials and Task Definitions",
@@ -2160,8 +2215,7 @@
         "rating": -1,
         "keywords": [
             [
-                "CT",
-                "face"
+                "CT"
             ],
             [
                 "eess.IV"
@@ -2239,8 +2293,7 @@
         "rating": -1,
         "keywords": [
             [
-                "Facial",
-                "Face"
+                "Facial"
             ],
             [
                 "cs.CV"
@@ -2279,7 +2332,7 @@
     {
         "paper id": "2403.11279",
         "abstract url": "https://arxiv.org/abs/2403.11279",
-        "title": "Hybrid Feedback for Three-dimensional Convex Obstacle Avoidance",
+        "title": "Hybrid Feedback for Three-dimensional Convex Obstacle Avoidance (Extended version)",
         "rating": -1,
         "keywords": [
             [
@@ -2460,30 +2513,6 @@
         "comment": "10 pages with figures"
     },
     {
-        "paper id": "2403.11367",
-        "abstract url": "https://arxiv.org/abs/2403.11367",
-        "title": "3DGS-ReLoc: 3D Gaussian Splatting for Map Representation and Visual ReLocalization",
-        "rating": -1,
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting",
-                "voxel"
-            ],
-            [
-                "LiDAR"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "This paper presents a novel system designed for 3D mapping and visual relocalization using 3D Gaussian Splatting. Our proposed method uses LiDAR and camera data to create accurate and visually plausible representations of the environment. By leveraging LiDAR data to initiate the training of the 3D Gaussian Splatting map, our system constructs maps that are both detailed and geometrically accurate. To mitigate excessive GPU memory usage and facilitate rapid spatial queries, we employ a combination of a 2D voxel map and a KD-tree. This preparation makes our method well-suited for visual localization tasks, enabling efficient identification of correspondences between the query image and the rendered image from the Gaussian Splatting map via normalized cross-correlation (NCC). Additionally, we refine the camera pose of the query image using feature-based matching and the Perspective-n-Point (PnP) technique. The effectiveness, adaptability, and precision of our system are demonstrated through extensive evaluation on the KITTI360 dataset.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "8 pages, 7 figures"
-    },
-    {
         "paper id": "2403.11368",
         "abstract url": "https://arxiv.org/abs/2403.11368",
         "title": "Driving Style Alignment for LLM-powered Driver Agent",
@@ -2554,8 +2583,7 @@
                 "biological",
                 "Survival",
                 "cancer",
-                "clinical",
-                "face"
+                "clinical"
             ],
             [
                 "cs.CV"
@@ -2779,14 +2807,36 @@
         "comment": null
     },
     {
+        "paper id": "2403.11469",
+        "abstract url": "https://arxiv.org/abs/2403.11469",
+        "title": "Generative Motion Stylization within Canonical Motion Space",
+        "rating": -1,
+        "keywords": [
+            [
+                "skeleton"
+            ],
+            [
+                "diffusion",
+                "synthesis"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Stylized motion breathes life into characters. However, the fixed skeleton structure and style representation hinder existing data-driven motion synthesis methods from generating stylized motion for various characters. In this work, we propose a generative motion stylization pipeline, named MotionS, for synthesizing diverse and stylized motion on cross-structure characters using cross-modality style prompts. Our key insight is to embed motion style into a cross-modality latent space and perceive the cross-structure skeleton topologies, allowing for motion stylization within a canonical motion space. Specifically, the large-scale Contrastive-Language-Image-Pre-training (CLIP) model is leveraged to construct the cross-modality latent space, enabling flexible style representation within this space. Additionally, two topology-encoded tokens are learned to capture the canonical and specific skeleton topologies, facilitating cross-structure topology shifting. Subsequently, the topology-shifted stylization diffusion is designed to generate motion content for the specific skeleton and stylize it in the shifted canonical motion space using multi-modality style descriptions. Through an extensive set of examples, we demonstrate the flexibility and generalizability of our pipeline across various characters and style descriptions. Qualitative and quantitative experiments underscore the superiority of our pipeline over state-of-the-art methods, consistently delivering high-quality stylized motion across a broad spectrum of skeletal structures.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2403.13014",
         "abstract url": "https://arxiv.org/abs/2403.13014",
         "title": "General Line Coordinates in 3D",
         "rating": -1,
         "keywords": [
             [
-                "3D",
-                "depth"
+                "3D"
             ]
         ],
         "abstract": "Interpretable interactive visual pattern discovery in lossless 3D visualization is a promising way to advance machine learning. It enables end users who are not data scientists to take control of the model development process as a self-service. It is conducted in 3D General Line Coordinates (GLC) visualization space, which preserves all n-D information in 3D. This paper presents a system which combines three types of GLC: Shifted Paired Coordinates (SPC), Shifted Tripled Coordinates (STC), and General Line Coordinates-Linear (GLC-L) for interactive visual pattern discovery. A transition from 2-D visualization to 3-D visualization allows for a more distinct visual pattern than in 2-D and it also allows for finding the best data viewing positions, which are not available in 2-D. It enables in-depth visual analysis of various class-specific data subsets comprehensible for end users in the original interpretable attributes. Controlling model overgeneralization by end users is an additional benefit of this approach.",
@@ -2824,7 +2874,7 @@
                 "cs.LG"
             ]
         ],
-        "abstract": "In the realm of time series forecasting (TSF), it is imperative for models to adeptly discern and distill dependencies embedded within historical time series data. This encompasses the extraction of temporal dependencies and inter-variate correlations (VC), thereby empowering the models to forecast future states. Transformer-based models have exhibited formidable efficacy in TSF, primarily attributed to their distinct proficiency in apprehending both TD and VC. However, due to the inefficiencies, ongoing efforts to refine the Transformer persist. Recently, state space models (SSMs), e.g. Mamba, have gained traction due to their ability to process complex dependencies in sequences, similar to the Transformer, while maintaining near-linear complexity. This has piqued our interest in exploring SSM's potential in TSF tasks. Therefore, we propose a Mamba-based model named Simple-Mamba (S-Mamba) for TSF. Specifically, we tokenize the time points of each variate autonomously via a linear layer. Subsequently, a bidirectional Mamba layer is utilized to extract VC, followed by the generation of forecast outcomes through a composite structure of a Feed-Forward Network for TD and a mapping layer. Experiments on several datasets prove that S-Mamba maintains low computational overhead and achieves leading performance. Furthermore, we conduct extensive experiments to delve deeper into the potential of Mamba compared to the Transformer in the TSF. Our code is available at https://github.com/wzhwzhwzh0921/S-D-Mamba.",
+        "abstract": "In the realm of time series forecasting (TSF), it is imperative for models to adeptly discern and distill hidden patterns within historical time series data to forecast future states. Transformer-based models exhibit formidable efficacy in TSF, primarily attributed to their advantage in apprehending these patterns. However, the quadratic complexity of the Transformer leads to low computational efficiency and high costs, which somewhat hinders the deployment of the TSF model in real-world scenarios. Recently, Mamba, a selective state space model, has gained traction due to its ability to process dependencies in sequences while maintaining near-linear complexity. For TSF tasks, these characteristics enable Mamba to comprehend hidden patterns as the Transformer and reduce computational overhead compared to the Transformer. Therefore, we propose a Mamba-based model named Simple-Mamba (S-Mamba) for TSF. Specifically, we tokenize the time points of each variate autonomously via a linear layer. A bidirectional Mamba layer is utilized to extract inter-variate correlations and a Feed-Forward Network is set to learn temporal dependencies. Finally, the generation of forecast outcomes through a linear mapping layer. Experiments on thirteen public datasets prove that S-Mamba maintains low computational overhead and achieves leading performance. Furthermore, we conduct extensive experiments to explore Mamba's potential in TSF tasks. Our code is available at https://github.com/wzhwzhwzh0921/S-D-Mamba.",
         "subjects": [
             "cs.LG"
         ],
@@ -3006,25 +3056,6 @@
         "comment": null
     },
     {
-        "paper id": "2403.14708",
-        "abstract url": "https://arxiv.org/abs/2403.14708",
-        "title": "Visualizing Progress in Broadening Participation in Computing: The Value of Context",
-        "rating": -1.5,
-        "keywords": [
-            [
-                "face"
-            ],
-            [
-                "cs.CY"
-            ]
-        ],
-        "abstract": "Concerns about representation in computing within the U.S. have driven numerous activities to broaden participation. Assessment of the impact of these efforts and, indeed, a clear assessment of the actual \"problem\" being addressed are limited by the nature of the most common data analysis which looks at the representation of each population as a percentage of the number of students graduating with a degree in computing. This use of a single metric cannot adequately assess the impact of broadening participation efforts. First, this approach fails to account for changing demographics of the undergraduate population in terms of overall numbers and relative proportion of the Federally designated gender, race, and ethnicity groupings. A second issue is that the majority of literature on broadening participation in computing (BPC) reports data on gender or on race/ethnicity, omitting data on students' intersectional identities. This leads to an incorrect understanding of both the data and the challenges we face as a field. In this paper we present several different approaches to tracking the impact of BPC efforts. We make three recommendations: 1) cohort-based analysis should be used to accurately show student engagement in computing; 2) the field as a whole needs to adopt the norm of always reporting intersectional data; 3) university demographic context matters when looking at how well a CS department is doing to broaden participation in computing, including longitudinal analysis of university demographic shifts that impact the local demographics of computing.",
-        "subjects": [
-            "cs.CY"
-        ],
-        "comment": "Accepted for publication in Communications of the ACM, late summer or Fall 2024"
-    },
-    {
         "paper id": "2403.15441",
         "abstract url": "https://arxiv.org/abs/2403.15441",
         "title": "Unified Generative Modeling of 3D Molecules via Bayesian Flow Networks",
@@ -3045,25 +3076,6 @@
             "physics.chem-ph"
         ],
         "comment": "ICLR 2024"
-    },
-    {
-        "paper id": "2404.00017",
-        "abstract url": "https://arxiv.org/abs/2404.00017",
-        "title": "Psittacines of Innovation? Assessing the True Novelty of AI Creations",
-        "rating": -1.5,
-        "keywords": [
-            [
-                "face"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "We examine whether Artificial Intelligence (AI) systems generate truly novel ideas rather than merely regurgitating patterns learned during training. Utilizing a novel experimental design, we task an AI with generating project titles for hypothetical crowdfunding campaigns. We compare within AI-generated project titles, measuring repetition and complexity. We compare between the AI-generated titles and actual observed field data using an extension of maximum mean discrepancy--a metric derived from the application of kernel mean embeddings of statistical distributions to high-dimensional machine learning (large language) embedding vectors--yielding a structured analysis of AI output novelty. Results suggest that (1) the AI generates unique content even under increasing task complexity, and at the limits of its computational capabilities, (2) the generated content has face validity, being consistent with both inputs to other generative AI and in qualitative comparison to field data, and (3) exhibits divergence from field data, mitigating concerns relating to intellectual property rights. We discuss implications for copyright and trademark law.",
-        "subjects": [
-            "cs.AI"
-        ],
-        "comment": null
     },
     {
         "paper id": "2403.11096",
@@ -3091,8 +3103,7 @@
                 "Attacks"
             ],
             [
-                "facial",
-                "Face"
+                "facial"
             ],
             [
                 "cs.CV"
@@ -3235,28 +3246,6 @@
             "cs.CV"
         ],
         "comment": "28 pages"
-    },
-    {
-        "paper id": "2403.11194",
-        "abstract url": "https://arxiv.org/abs/2403.11194",
-        "title": "MaskDiffusion: Exploiting Pre-trained Diffusion Models for Semantic Segmentation",
-        "rating": -2,
-        "keywords": [
-            [
-                "Diffusion"
-            ],
-            [
-                "face"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Semantic segmentation is essential in computer vision for various applications, yet traditional approaches face significant challenges, including the high cost of annotation and extensive training for supervised learning. Additionally, due to the limited predefined categories in supervised learning, models typically struggle with infrequent classes and are unable to predict novel classes. To address these limitations, we propose MaskDiffusion, an innovative approach that leverages pretrained frozen Stable Diffusion to achieve open-vocabulary semantic segmentation without the need for additional training or annotation, leading to improved performance compared to similar methods. We also demonstrate the superior performance of MaskDiffusion in handling open vocabularies, including fine-grained and proper noun-based categories, thus expanding the scope of segmentation applications. Overall, our MaskDiffusion shows significant qualitative and quantitative improvements in contrast to other comparable unsupervised segmentation methods, i.e. on the Potsdam dataset (+10.5 mIoU compared to GEM) and COCO-Stuff (+14.8 mIoU compared to DiffSeg). All code and data will be released at https://github.com/Valkyrja3607/MaskDiffusion.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "19 pages"
     },
     {
         "paper id": "2403.11207",
@@ -3405,6 +3394,31 @@
             "cs.RO"
         ],
         "comment": "Accepted at 7th International Conference on Robotics and Automation Engineering, ICRAE 2022, Singapore, November 18 - November 20, 2022"
+    },
+    {
+        "paper id": "2403.11261",
+        "abstract url": "https://arxiv.org/abs/2403.11261",
+        "title": "A Lie Group Approach to Riemannian Batch Normalization",
+        "rating": -2.0,
+        "keywords": [
+            [
+                "radar"
+            ],
+            [
+                "EEG"
+            ],
+            [
+                "cs.LG"
+            ],
+            [
+                "ICLR"
+            ]
+        ],
+        "abstract": "Manifold-valued measurements exist in numerous applications within computer vision and machine learning. Recent studies have extended Deep Neural Networks (DNNs) to manifolds, and concomitantly, normalization techniques have also been adapted to several manifolds, referred to as Riemannian normalization. Nonetheless, most of the existing Riemannian normalization methods have been derived in an ad hoc manner and only apply to specific manifolds. This paper establishes a unified framework for Riemannian Batch Normalization (RBN) techniques on Lie groups. Our framework offers the theoretical guarantee of controlling both the Riemannian mean and variance. Empirically, we focus on Symmetric Positive Definite (SPD) manifolds, which possess three distinct types of Lie group structures. Using the deformation concept, we generalize the existing Lie groups on SPD manifolds into three families of parameterized Lie groups. Specific normalization layers induced by these Lie groups are then proposed for SPD neural networks. We demonstrate the effectiveness of our approach through three sets of experiments: radar recognition, human action recognition, and electroencephalography (EEG) classification. The code is available at https://github.com/GitZH-Chen/LieBN.git.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": "Accepted by ICLR 2024"
     },
     {
         "paper id": "2403.11298",
@@ -3558,22 +3572,6 @@
         "comment": null
     },
     {
-        "paper id": "2403.11414",
-        "abstract url": "https://arxiv.org/abs/2403.11414",
-        "title": "Table-Lookup MAC: Scalable Processing of Quantised Neural Networks in FPGA Soft Logic",
-        "rating": -2,
-        "keywords": [
-            [
-                "face"
-            ]
-        ],
-        "abstract": "Recent advancements in neural network quantisation have yielded remarkable outcomes, with three-bit networks reaching state-of-the-art full-precision accuracy in complex tasks. These achievements present valuable opportunities for accelerating neural networks by computing in reduced precision. Implementing it on FPGAs can take advantage of bit-level reconfigurability, which is not available on conventional CPUs and GPUs. Simultaneously, the high data intensity of neural network processing has inspired computing-in-memory paradigms, including on FPGA platforms. By programming the effects of trained model weights as lookup operations in soft logic, the transfer of weight data from memory units can be avoided, alleviating the memory bottleneck. However, previous methods face poor scalability - the high logic utilisation limiting them to small networks/sub-networks of binary models with low accuracy. In this paper, we introduce Table Lookup Multiply-Accumulate (TLMAC) as a framework to compile and optimise quantised neural networks for scalable lookup-based processing. TLMAC clusters and maps unique groups of weights to lookup-based processing elements, enabling highly parallel computation while taking advantage of parameter redundancy. Further place and route algorithms are proposed to reduce LUT utilisation and routing congestion. We demonstrate that TLMAC significantly improves the scalability of previous related works. Our efficient logic mapping and high degree of reuse enables entire ImageNet-scale quantised models with full-precision accuracy to be implemented using lookup-based computing on one commercially available FPGA.",
-        "subjects": [
-            "cs.AR"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2403.11417",
         "abstract url": "https://arxiv.org/abs/2403.11417",
         "title": "Positioning Using Wireless Networks: Applications, Recent Progress and Future Challenges",
@@ -3604,6 +3602,30 @@
             "hep-th"
         ],
         "comment": "24 pages, 6 figures"
+    },
+    {
+        "paper id": "2403.11423",
+        "abstract url": "https://arxiv.org/abs/2403.11423",
+        "title": "VmambaIR: Visual State Space Model for Image Restoration",
+        "rating": -2,
+        "keywords": [
+            [
+                "diffusion",
+                "super-resolution",
+                "deraining"
+            ],
+            [
+                "Image Restoration"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Image restoration is a critical task in low-level computer vision, aiming to restore high-quality images from degraded inputs. Various models, such as convolutional neural networks (CNNs), generative adversarial networks (GANs), transformers, and diffusion models (DMs), have been employed to address this problem with significant impact. However, CNNs have limitations in capturing long-range dependencies. DMs require large prior models and computationally intensive denoising steps. Transformers have powerful modeling capabilities but face challenges due to quadratic complexity with input image size. To address these challenges, we propose VmambaIR, which introduces State Space Models (SSMs) with linear complexity into comprehensive image restoration tasks. We utilize a Unet architecture to stack our proposed Omni Selective Scan (OSS) blocks, consisting of an OSS module and an Efficient Feed-Forward Network (EFFN). Our proposed omni selective scan mechanism overcomes the unidirectional modeling limitation of SSMs by efficiently modeling image information flows in all six directions. Furthermore, we conducted a comprehensive evaluation of our VmambaIR across multiple image restoration tasks, including image deraining, single image super-resolution, and real-world image super-resolution. Extensive experimental results demonstrate that our proposed VmambaIR achieves state-of-the-art (SOTA) performance with much fewer computational resources and parameters. Our research highlights the potential of state space models as promising alternatives to the transformer and CNN architectures in serving as foundational frameworks for next-generation low-level visual tasks.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "23 pages"
     },
     {
         "paper id": "2403.11433",
@@ -3752,6 +3774,22 @@
         "abstract": "Alzheimer's disease is a progressive neurodegenerative disorder that primarily affects cognitive functions such as memory, thinking, and behavior. In this disease, there is a critical phase, mild cognitive impairment, that is really important to be diagnosed early since some patients with progressive MCI will develop the disease. This study delves into the challenging task of classifying Alzheimer's disease into four distinct groups: control normal (CN), progressive mild cognitive impairment (pMCI), stable mild cognitive impairment (sMCI), and Alzheimer's disease (AD). This classification is based on a thorough examination of PET scan images obtained from the ADNI dataset, which provides a thorough understanding of the disease's progression. Several deep-learning and traditional machine-learning models have been used to detect Alzheimer's disease. In this paper, three deep-learning models, namely VGG16 and AlexNet, and a custom Convolutional neural network (CNN) with 8-fold cross-validation have been used for classification. Finally, an ensemble technique is used to improve the overall result of these models. The results show that using deep-learning models to tell the difference between MCI patients gives an overall average accuracy of 93.13% and an AUC of 94.4%.",
         "subjects": [
             "eess.SP"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2405.01555",
+        "abstract url": "https://arxiv.org/abs/2405.01555",
+        "title": "Digital Twin-Empowered Task Assignment in Aerial MEC Network: A Resource Coalition Cooperation Approach with Generative Model",
+        "rating": -2,
+        "keywords": [
+            [
+                "6G"
+            ]
+        ],
+        "abstract": "To meet the demands for ubiquitous communication and temporary edge computing in 6G networks, aerial mobile edge computing (MEC) networks have been envisioned as a new paradigm. However, dynamic user requests pose challenges for task assignment strategies. Most of the existing research assumes that the strategy is deployed on ground-based stations or UAVs, which will be ineffective in an environment lacking infrastructure and continuous energy supply. Moreover, the resource mutual exclusion problem of dynamic task assignment has not been effectively solved. Toward this end, we introduce the digital twin (DT) into the aerial MEC network to study the resource coalition cooperation approach with the generative model (GM), which provides a preliminary coalition structure for the coalition game. Specifically, we propose a novel network framework that is composed of an application plane, a physical plane, and a virtual plane. After that, the task assignment problem is simplified to convex optimization programming with linear constraints. And then, we also propose a resource coalition cooperation approach that is based on a transferable utility (TU) coalition game to obtain an approximate optimal solution. Numerical results confirm the effectiveness of our proposed approach in terms of energy consumption and utilization of resources.",
+        "subjects": [
+            "cs.NI"
         ],
         "comment": null
     },
@@ -3993,6 +4031,28 @@
         "comment": null
     },
     {
+        "paper id": "2403.14707",
+        "abstract url": "https://arxiv.org/abs/2403.14707",
+        "title": "Information Fusion in Multimodal IoT Systems for physical activity level monitoring",
+        "rating": -3.5,
+        "keywords": [
+            [
+                "health"
+            ],
+            [
+                "IoT"
+            ],
+            [
+                "cs.CY"
+            ]
+        ],
+        "abstract": "This study exploits information fusion in IoT systems and uses a clustering method to identify similarities in behaviours and key characteristics within each cluster. This approach facilitates early detection of behaviour changes and provides a more in-depth understanding of behaviour routines for continuous health monitoring.",
+        "subjects": [
+            "cs.CY"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2403.11095",
         "abstract url": "https://arxiv.org/abs/2403.11095",
         "title": "PyroTrack: Belief-Based Deep Reinforcement Learning Path Planning for Aerial Wildfire Monitoring in Partially Observable Environments",
@@ -4060,58 +4120,6 @@
             "cs.CR"
         ],
         "comment": "Deakin University, Australia | This material is based upon work supported by the Air Force Office of Scientific Research under award number FA2386-23-1-4003"
-    },
-    {
-        "paper id": "2403.11423",
-        "abstract url": "https://arxiv.org/abs/2403.11423",
-        "title": "VmambaIR: Visual State Space Model for Image Restoration",
-        "rating": -4,
-        "keywords": [
-            [
-                "diffusion",
-                "super-resolution",
-                "deraining"
-            ],
-            [
-                "face"
-            ],
-            [
-                "Image Restoration"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Image restoration is a critical task in low-level computer vision, aiming to restore high-quality images from degraded inputs. Various models, such as convolutional neural networks (CNNs), generative adversarial networks (GANs), transformers, and diffusion models (DMs), have been employed to address this problem with significant impact. However, CNNs have limitations in capturing long-range dependencies. DMs require large prior models and computationally intensive denoising steps. Transformers have powerful modeling capabilities but face challenges due to quadratic complexity with input image size. To address these challenges, we propose VmambaIR, which introduces State Space Models (SSMs) with linear complexity into comprehensive image restoration tasks. We utilize a Unet architecture to stack our proposed Omni Selective Scan (OSS) blocks, consisting of an OSS module and an Efficient Feed-Forward Network (EFFN). Our proposed omni selective scan mechanism overcomes the unidirectional modeling limitation of SSMs by efficiently modeling image information flows in all six directions. Furthermore, we conducted a comprehensive evaluation of our VmambaIR across multiple image restoration tasks, including image deraining, single image super-resolution, and real-world image super-resolution. Extensive experimental results demonstrate that our proposed VmambaIR achieves state-of-the-art (SOTA) performance with much fewer computational resources and parameters. Our research highlights the potential of state space models as promising alternatives to the transformer and CNN architectures in serving as foundational frameworks for next-generation low-level visual tasks.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "23 pages"
-    },
-    {
-        "paper id": "2403.14707",
-        "abstract url": "https://arxiv.org/abs/2403.14707",
-        "title": "Information Fusion in Multimodal IoT Systems for physical activity level monitoring",
-        "rating": -4.5,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "health"
-            ],
-            [
-                "IoT"
-            ],
-            [
-                "cs.CY"
-            ]
-        ],
-        "abstract": "This study exploits information fusion in IoT systems and uses a clustering method to identify similarities in behaviours and key characteristics within each cluster. This approach facilitates early detection of behaviour changes and provides a more in-depth understanding of behaviour routines for continuous health monitoring.",
-        "subjects": [
-            "cs.CY"
-        ],
-        "comment": null
     },
     {
         "paper id": "2403.11090",
@@ -4414,18 +4422,6 @@
         "comment": null
     },
     {
-        "paper id": "2403.11272",
-        "abstract url": "https://arxiv.org/abs/2403.11272",
-        "title": "Interference Cancellation for OTFS-Based Over-the-Air Computation",
-        "rating": -10,
-        "keywords": [],
-        "abstract": "This paper investigates over-the-air computation (AirComp) in the context of multiple-access time-varying multipath channels. We focus on a scenario where devices with high mobility transmit their sensing data to a fusion center (FC) for averaging. To combat the time-varying channel and Doppler effect, each device adopts orthogonal time frequency space (OTFS) modulation. After signals are received by the FC, the aggregated data undergoes demodulation and estimation within the delay-Doppler domain. We leverage the mean squared error (MSE) as a metric for the computational error of OTFS-based AirComp. We then derive the optimal transmit power at each device and signal scaling factor at FC for minimizing MSE. Notably, the performance of OTFS-based AirComp is not only affected by the noise but also by the inter-symbol interference and inter-link interference arising from the multipath channel. To counteract the interference-induced computational errors, we incorporate zero-padding (ZP)-assisted OTFS into AirComp and propose algorithms for interference cancellation. Numerical results underscore the enhanced performance of ZP-assisted OTFS-based AirComp over naive OTFS-based AirComp.",
-        "subjects": [
-            "cs.IT"
-        ],
-        "comment": "6 pages, 4 figures. Accepted by IEEE ICC 2024 Workshop"
-    },
-    {
         "paper id": "2403.11281",
         "abstract url": "https://arxiv.org/abs/2403.11281",
         "title": "Java JIT Testing with Template Extraction",
@@ -4522,18 +4518,6 @@
         "comment": "Submitted to RA-L"
     },
     {
-        "paper id": "2403.11335",
-        "abstract url": "https://arxiv.org/abs/2403.11335",
-        "title": "ConvSDG: Session Data Generation for Conversational Search",
-        "rating": -10,
-        "keywords": [],
-        "abstract": "Conversational search provides a more convenient interface for users to search by allowing multi-turn interaction with the search engine. However, the effectiveness of the conversational dense retrieval methods is limited by the scarcity of training data required for their fine-tuning. Thus, generating more training conversational sessions with relevant labels could potentially improve search performance. Based on the promising capabilities of large language models (LLMs) on text generation, we propose ConvSDG, a simple yet effective framework to explore the feasibility of boosting conversational search by using LLM for session data generation. Within this framework, we design dialogue/session-level and query-level data generation with unsupervised and semi-supervised learning, according to the availability of relevance judgments. The generated data are used to fine-tune the conversational dense retriever. Extensive experiments on four widely used datasets demonstrate the effectiveness and broad applicability of our ConvSDG framework compared with several strong baselines.",
-        "subjects": [
-            "cs.IR"
-        ],
-        "comment": "Accepted by WWW 2024 Workshop"
-    },
-    {
         "paper id": "2403.11350",
         "abstract url": "https://arxiv.org/abs/2403.11350",
         "title": "Robustness of the data-driven approach in limited angle tomography",
@@ -4616,6 +4600,18 @@
             "cs.RO"
         ],
         "comment": "ICRA 2024"
+    },
+    {
+        "paper id": "2403.11414",
+        "abstract url": "https://arxiv.org/abs/2403.11414",
+        "title": "Table-Lookup MAC: Scalable Processing of Quantised Neural Networks in FPGA Soft Logic",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "Recent advancements in neural network quantisation have yielded remarkable outcomes, with three-bit networks reaching state-of-the-art full-precision accuracy in complex tasks. These achievements present valuable opportunities for accelerating neural networks by computing in reduced precision. Implementing it on FPGAs can take advantage of bit-level reconfigurability, which is not available on conventional CPUs and GPUs. Simultaneously, the high data intensity of neural network processing has inspired computing-in-memory paradigms, including on FPGA platforms. By programming the effects of trained model weights as lookup operations in soft logic, the transfer of weight data from memory units can be avoided, alleviating the memory bottleneck. However, previous methods face poor scalability - the high logic utilisation limiting them to small networks/sub-networks of binary models with low accuracy. In this paper, we introduce Table Lookup Multiply-Accumulate (TLMAC) as a framework to compile and optimise quantised neural networks for scalable lookup-based processing. TLMAC clusters and maps unique groups of weights to lookup-based processing elements, enabling highly parallel computation while taking advantage of parameter redundancy. Further place and route algorithms are proposed to reduce LUT utilisation and routing congestion. We demonstrate that TLMAC significantly improves the scalability of previous related works. Our efficient logic mapping and high degree of reuse enables entire ImageNet-scale quantised models with full-precision accuracy to be implemented using lookup-based computing on one commercially available FPGA.",
+        "subjects": [
+            "cs.AR"
+        ],
+        "comment": null
     },
     {
         "paper id": "2403.11421",

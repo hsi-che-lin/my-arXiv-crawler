@@ -1,5 +1,24 @@
 [
     {
+        "paper id": "2404.13781",
+        "abstract url": "https://arxiv.org/abs/2404.13781",
+        "title": "Evaluating Retrieval Quality in Retrieval-Augmented Generation",
+        "rating": 2,
+        "keywords": [
+            [
+                "GPU memory"
+            ],
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Evaluating retrieval-augmented generation (RAG) presents challenges, particularly for retrieval models within these systems. Traditional end-to-end evaluation methods are computationally expensive. Furthermore, evaluation of the retrieval model's performance based on query-document relevance labels shows a small correlation with the RAG system's downstream performance. We propose a novel evaluation approach, eRAG, where each document in the retrieval list is individually utilized by the large language model within the RAG system. The output generated for each document is then evaluated based on the downstream task ground truth labels. In this manner, the downstream performance for each document serves as its relevance label. We employ various downstream task metrics to obtain document-level annotations and aggregate them using set-based or ranking metrics. Extensive experiments on a wide range of datasets demonstrate that eRAG achieves a higher correlation with downstream RAG performance compared to baseline methods, with improvements in Kendall's $\u03c4$ correlation ranging from 0.168 to 0.494. Additionally, eRAG offers significant computational advantages, improving runtime and consuming up to 50 times less GPU memory than end-to-end evaluation.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2404.13874",
         "abstract url": "https://arxiv.org/abs/2404.13874",
         "title": "VALOR-EVAL: Holistic Coverage and Faithfulness Evaluation of Large Vision-Language Models",
@@ -17,6 +36,25 @@
             "cs.CL"
         ],
         "comment": "Work in process"
+    },
+    {
+        "paper id": "2404.15159",
+        "abstract url": "https://arxiv.org/abs/2404.15159",
+        "title": "MixLoRA: Enhancing Large Language Models Fine-Tuning with LoRA based Mixture of Experts",
+        "rating": 2,
+        "keywords": [
+            [
+                "GPU memory"
+            ],
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Large Language Models (LLMs) have showcased exceptional performance across a wide array of Natural Language Processing (NLP) tasks. Fine-tuning techniques are commonly utilized to tailor pre-trained models to specific applications. While methods like LoRA have effectively tackled GPU memory constraints during fine-tuning, their applicability is often restricted to limited performance, especially on multi-task. On the other hand, Mix-of-Expert (MoE) models, such as Mixtral 8x7B, demonstrate remarkable performance across multiple NLP tasks while maintaining a reduced parameter count. However, the resource requirements of these MoEs still challenging, particularly for consumer-grade GPUs only have limited VRAM. To address these challenge, we propose MixLoRA, an innovative approach aimed at constructing a resource-efficient sparse MoE model based on LoRA. MixLoRA inserts multiple LoRA-based experts within the feed-forward network block of a frozen pre-trained dense model through fine-tuning, employing a commonly used top-k router. Unlike other LoRA based MoE methods, MixLoRA enhances model performance by utilizing independently configurable attention-layer LoRA adapters, supporting the use of LoRA and its variants for the construction of experts, and applying auxiliary load balance loss to address the imbalance problem of the router. In experiments, MixLoRA achieves commendable performance across all evaluation metrics in both single-task and multi-task learning scenarios. Implemented within the m-LoRA framework, MixLoRA enables parallel fine-tuning of multiple mixture-of-experts models on a single 24GB consumer-grade GPU without quantization, thereby reducing GPU memory consumption by 41\\% and latency during the training process by 17\\%.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": "11 pages, 4 figures"
     },
     {
         "paper id": "2404.13605",
@@ -417,22 +455,6 @@
         "comment": "15 pages"
     },
     {
-        "paper id": "2404.13781",
-        "abstract url": "https://arxiv.org/abs/2404.13781",
-        "title": "Evaluating Retrieval Quality in Retrieval-Augmented Generation",
-        "rating": 1,
-        "keywords": [
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Evaluating retrieval-augmented generation (RAG) presents challenges, particularly for retrieval models within these systems. Traditional end-to-end evaluation methods are computationally expensive. Furthermore, evaluation of the retrieval model's performance based on query-document relevance labels shows a small correlation with the RAG system's downstream performance. We propose a novel evaluation approach, eRAG, where each document in the retrieval list is individually utilized by the large language model within the RAG system. The output generated for each document is then evaluated based on the downstream task ground truth labels. In this manner, the downstream performance for each document serves as its relevance label. We employ various downstream task metrics to obtain document-level annotations and aggregate them using set-based or ranking metrics. Extensive experiments on a wide range of datasets demonstrate that eRAG achieves a higher correlation with downstream RAG performance compared to baseline methods, with improvements in Kendall's $\u03c4$ correlation ranging from 0.168 to 0.494. Additionally, eRAG offers significant computational advantages, improving runtime and consuming up to 50 times less GPU memory than end-to-end evaluation.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2404.13789",
         "abstract url": "https://arxiv.org/abs/2404.13789",
         "title": "Anchor-aware Deep Metric Learning for Audio-visual Retrieval",
@@ -567,6 +589,22 @@
         "comment": null
     },
     {
+        "paper id": "2404.13865",
+        "abstract url": "https://arxiv.org/abs/2404.13865",
+        "title": "Context-Enhanced Language Models for Generating Multi-Paper Citations",
+        "rating": 1,
+        "keywords": [
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Citation text plays a pivotal role in elucidating the connection between scientific documents, demanding an in-depth comprehension of the cited paper. Constructing citations is often time-consuming, requiring researchers to delve into extensive literature and grapple with articulating relevant content. To address this challenge, the field of citation text generation (CTG) has emerged. However, while earlier methods have primarily centered on creating single-sentence citations, practical scenarios frequently necessitate citing multiple papers within a single paragraph. To bridge this gap, we propose a method that leverages Large Language Models (LLMs) to generate multi-citation sentences. Our approach involves a single source paper and a collection of target papers, culminating in a coherent paragraph containing multi-sentence citation text. Furthermore, we introduce a curated dataset named MCG-S2ORC, composed of English-language academic research papers in Computer Science, showcasing multiple citation instances. In our experiments, we evaluate three LLMs LLaMA, Alpaca, and Vicuna to ascertain the most effective model for this endeavor. Additionally, we exhibit enhanced performance by integrating knowledge graphs from target papers into the prompts for generating citation text. This research underscores the potential of harnessing LLMs for citation generation, opening a compelling avenue for exploring the intricate connections between scientific documents.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": "14 pages, 7 figures, 11th International Conference, BDA 2023, Delhi, India"
+    },
+    {
         "paper id": "2404.13866",
         "abstract url": "https://arxiv.org/abs/2404.13866",
         "title": "Plug-and-Play Algorithm Convergence Analysis From The Standpoint of Stochastic Differential Equation",
@@ -593,6 +631,22 @@
             ]
         ],
         "abstract": "Multi-object tracking (MOT) is a critical and challenging task in computer vision, particularly in situations involving objects with similar appearances but diverse movements, as seen in team sports. Current methods, largely reliant on object detection and appearance, often fail to track targets in such complex scenarios accurately. This limitation is further exacerbated by the lack of comprehensive and diverse datasets covering the full view of sports pitches. Addressing these issues, we introduce TeamTrack, a pioneering benchmark dataset specifically designed for MOT in sports. TeamTrack is an extensive collection of full-pitch video data from various sports, including soccer, basketball, and handball. Furthermore, we perform a comprehensive analysis and benchmarking effort to underscore TeamTrack's utility and potential impact. Our work signifies a crucial step forward, promising to elevate the precision and effectiveness of MOT in complex, dynamic settings such as team sports. The dataset, project code and competition is released at: https://atomscott.github.io/TeamTrack/.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2404.13872",
+        "abstract url": "https://arxiv.org/abs/2404.13872",
+        "title": "FreqBlender: Enhancing DeepFake Detection by Blending Frequency Knowledge",
+        "rating": 1,
+        "keywords": [
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Generating synthetic fake faces, known as pseudo-fake faces, is an effective way to improve the generalization of DeepFake detection. Existing methods typically generate these faces by blending real or fake faces in color space. While these methods have shown promise, they overlook the simulation of frequency distribution in pseudo-fake faces, limiting the learning of generic forgery traces in-depth. To address this, this paper introduces {\\em FreqBlender}, a new method that can generate pseudo-fake faces by blending frequency knowledge. Specifically, we investigate the major frequency components and propose a Frequency Parsing Network to adaptively partition frequency components related to forgery traces. Then we blend this frequency knowledge from fake faces into real faces to generate pseudo-fake faces. Since there is no ground truth for frequency components, we describe a dedicated training strategy by leveraging the inner correlations among different frequency knowledge to instruct the learning process. Experimental results demonstrate the effectiveness of our method in enhancing DeepFake detection, making it a potential plug-and-play strategy for other methods.",
         "subjects": [
             "cs.CV"
         ],
@@ -629,22 +683,6 @@
             "cs.CL"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2404.15159",
-        "abstract url": "https://arxiv.org/abs/2404.15159",
-        "title": "MixLoRA: Enhancing Large Language Models Fine-Tuning with LoRA based Mixture of Experts",
-        "rating": 1,
-        "keywords": [
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Large Language Models (LLMs) have showcased exceptional performance across a wide array of Natural Language Processing (NLP) tasks. Fine-tuning techniques are commonly utilized to tailor pre-trained models to specific applications. While methods like LoRA have effectively tackled GPU memory constraints during fine-tuning, their applicability is often restricted to limited performance, especially on multi-task. On the other hand, Mix-of-Expert (MoE) models, such as Mixtral 8x7B, demonstrate remarkable performance across multiple NLP tasks while maintaining a reduced parameter count. However, the resource requirements of these MoEs still challenging, particularly for consumer-grade GPUs only have limited VRAM. To address these challenge, we propose MixLoRA, an innovative approach aimed at constructing a resource-efficient sparse MoE model based on LoRA. MixLoRA inserts multiple LoRA-based experts within the feed-forward network block of a frozen pre-trained dense model through fine-tuning, employing a commonly used top-k router. Unlike other LoRA based MoE methods, MixLoRA enhances model performance by utilizing independently configurable attention-layer LoRA adapters, supporting the use of LoRA and its variants for the construction of experts, and applying auxiliary load balance loss to address the imbalance problem of the router. In experiments, MixLoRA achieves commendable performance across all evaluation metrics in both single-task and multi-task learning scenarios. Implemented within the m-LoRA framework, MixLoRA enables parallel fine-tuning of multiple mixture-of-experts models on a single 24GB consumer-grade GPU without quantization, thereby reducing GPU memory consumption by 41\\% and latency during the training process by 17\\%.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": "11 pages, 4 figures"
     },
     {
         "paper id": "2404.15160",
@@ -701,6 +739,7 @@
         "rating": 0.5,
         "keywords": [
             [
+                "Workshop",
                 "ICLR"
             ]
         ],
@@ -724,6 +763,7 @@
             ],
             [
                 "workshop",
+                "Workshop",
                 "CVPR"
             ]
         ],
@@ -829,6 +869,7 @@
                 "cs.CV"
             ],
             [
+                "Workshop",
                 "CVPR"
             ]
         ],
@@ -1172,44 +1213,6 @@
             "cs.CL"
         ],
         "comment": "10 pages"
-    },
-    {
-        "paper id": "2404.13865",
-        "abstract url": "https://arxiv.org/abs/2404.13865",
-        "title": "Context-Enhanced Language Models for Generating Multi-Paper Citations",
-        "rating": 0,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Citation text plays a pivotal role in elucidating the connection between scientific documents, demanding an in-depth comprehension of the cited paper. Constructing citations is often time-consuming, requiring researchers to delve into extensive literature and grapple with articulating relevant content. To address this challenge, the field of citation text generation (CTG) has emerged. However, while earlier methods have primarily centered on creating single-sentence citations, practical scenarios frequently necessitate citing multiple papers within a single paragraph. To bridge this gap, we propose a method that leverages Large Language Models (LLMs) to generate multi-citation sentences. Our approach involves a single source paper and a collection of target papers, culminating in a coherent paragraph containing multi-sentence citation text. Furthermore, we introduce a curated dataset named MCG-S2ORC, composed of English-language academic research papers in Computer Science, showcasing multiple citation instances. In our experiments, we evaluate three LLMs LLaMA, Alpaca, and Vicuna to ascertain the most effective model for this endeavor. Additionally, we exhibit enhanced performance by integrating knowledge graphs from target papers into the prompts for generating citation text. This research underscores the potential of harnessing LLMs for citation generation, opening a compelling avenue for exploring the intricate connections between scientific documents.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": "14 pages, 7 figures, 11th International Conference, BDA 2023, Delhi, India"
-    },
-    {
-        "paper id": "2404.13872",
-        "abstract url": "https://arxiv.org/abs/2404.13872",
-        "title": "FreqBlender: Enhancing DeepFake Detection by Blending Frequency Knowledge",
-        "rating": 0,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Generating synthetic fake faces, known as pseudo-fake faces, is an effective way to improve the generalization of DeepFake detection. Existing methods typically generate these faces by blending real or fake faces in color space. While these methods have shown promise, they overlook the simulation of frequency distribution in pseudo-fake faces, limiting the learning of generic forgery traces in-depth. To address this, this paper introduces {\\em FreqBlender}, a new method that can generate pseudo-fake faces by blending frequency knowledge. Specifically, we investigate the major frequency components and propose a Frequency Parsing Network to adaptively partition frequency components related to forgery traces. Then we blend this frequency knowledge from fake faces into real faces to generate pseudo-fake faces. Since there is no ground truth for frequency components, we describe a dedicated training strategy by leveraging the inner correlations among different frequency knowledge to instruct the learning process. Experimental results demonstrate the effectiveness of our method in enhancing DeepFake detection, making it a potential plug-and-play strategy for other methods.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
     },
     {
         "paper id": "2404.14990",
@@ -1655,22 +1658,6 @@
         "comment": "Submitted; 35 pages, 15 figures"
     },
     {
-        "paper id": "2404.13683",
-        "abstract url": "https://arxiv.org/abs/2404.13683",
-        "title": "Low-ordered Orthogonal Voxel Finite Element with INT8 Tensor Cores for GPU-based Explicit Elastic Wave Propagation Analysis",
-        "rating": -1,
-        "keywords": [
-            [
-                "Voxel"
-            ]
-        ],
-        "abstract": "Faster explicit elastic wavefield simulations are required for large and complex three-dimensional media using a structured finite element method. Such wavefield simulations are suitable for GPUs, which have exhibited improved computational performance in recent years, and the use of GPUs is expected to speed up such simulations. However, available computational performance on GPUs is typically not fully exploited, and the conventional method involves some numerical dispersion. Thus, in this paper, we propose an explicit structured-mesh wavefield simulation method that uses INT8 Tensor Cores and reduces numerical dispersion to speed up computation on GPUs. The proposed method was implemented for GPUs, and its performance was evaluated in a simulation experiment of a real-world problem. The results demonstrate that the proposed method is 17.0 times faster than the conventional method.",
-        "subjects": [
-            "cs.DC"
-        ],
-        "comment": "16 pages, 6 figures, accepted for IHPCES/ICCS 2024 (14th International Workshop on Advances in High-Performance Computational Earth Sciences: Numerical Methods, Frameworks & Applications / 24th International Conference on Computational Science)"
-    },
-    {
         "paper id": "2404.13686",
         "abstract url": "https://arxiv.org/abs/2404.13686",
         "title": "Hyper-SD: Trajectory Segmented Consistency Model for Efficient Image Synthesis",
@@ -2101,22 +2088,6 @@
         "comment": "9 pages, 5 figures, 3 algorithms, 1 table, to be presented as a Poster at the ICCS'24"
     },
     {
-        "paper id": "2404.15373",
-        "abstract url": "https://arxiv.org/abs/2404.15373",
-        "title": "Robust EEG-based Emotion Recognition Using an Inception and Two-sided Perturbation Model",
-        "rating": -1,
-        "keywords": [
-            [
-                "attacks"
-            ]
-        ],
-        "abstract": "Automated emotion recognition using electroencephalogram (EEG) signals has gained substantial attention. Although deep learning approaches exhibit strong performance, they often suffer from vulnerabilities to various perturbations, like environmental noise and adversarial attacks. In this paper, we propose an Inception feature generator and two-sided perturbation (INC-TSP) approach to enhance emotion recognition in brain-computer interfaces. INC-TSP integrates the Inception module for EEG data analysis and employs two-sided perturbation (TSP) as a defensive mechanism against input perturbations. TSP introduces worst-case perturbations to the model's weights and inputs, reinforcing the model's elasticity against adversarial attacks. The proposed approach addresses the challenge of maintaining accurate emotion recognition in the presence of input uncertainties. We validate INC-TSP in a subject-independent three-class emotion recognition scenario, demonstrating robust performance.",
-        "subjects": [
-            "eess.SP"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2404.16873",
         "abstract url": "https://arxiv.org/abs/2404.16873",
         "title": "AdvPrompter: Fast Adaptive Adversarial Prompting for LLMs",
@@ -2148,6 +2119,7 @@
                 "eess.IV"
             ],
             [
+                "Workshop",
                 "CVPR"
             ]
         ],
@@ -2173,6 +2145,7 @@
                 "cs.CV"
             ],
             [
+                "Workshop",
                 "CVPR"
             ]
         ],
@@ -2200,6 +2173,25 @@
             "cs.LG"
         ],
         "comment": "17 pages, 6 figures, a physics inspired machine without backpropagation and enhanced adversarial robustness"
+    },
+    {
+        "paper id": "2404.13683",
+        "abstract url": "https://arxiv.org/abs/2404.13683",
+        "title": "Low-ordered Orthogonal Voxel Finite Element with INT8 Tensor Cores for GPU-based Explicit Elastic Wave Propagation Analysis",
+        "rating": -1.5,
+        "keywords": [
+            [
+                "Voxel"
+            ],
+            [
+                "Workshop"
+            ]
+        ],
+        "abstract": "Faster explicit elastic wavefield simulations are required for large and complex three-dimensional media using a structured finite element method. Such wavefield simulations are suitable for GPUs, which have exhibited improved computational performance in recent years, and the use of GPUs is expected to speed up such simulations. However, available computational performance on GPUs is typically not fully exploited, and the conventional method involves some numerical dispersion. Thus, in this paper, we propose an explicit structured-mesh wavefield simulation method that uses INT8 Tensor Cores and reduces numerical dispersion to speed up computation on GPUs. The proposed method was implemented for GPUs, and its performance was evaluated in a simulation experiment of a real-world problem. The results demonstrate that the proposed method is 17.0 times faster than the conventional method.",
+        "subjects": [
+            "cs.DC"
+        ],
+        "comment": "16 pages, 6 figures, accepted for IHPCES/ICCS 2024 (14th International Workshop on Advances in High-Performance Computational Earth Sciences: Numerical Methods, Frameworks & Applications / 24th International Conference on Computational Science)"
     },
     {
         "paper id": "2404.13715",
@@ -2630,7 +2622,6 @@
         "keywords": [
             [
                 "3D",
-                "depth",
                 "NeRF"
             ],
             [
@@ -2673,6 +2664,29 @@
         "comment": null
     },
     {
+        "paper id": "2404.13634",
+        "abstract url": "https://arxiv.org/abs/2404.13634",
+        "title": "Bt-GAN: Generating Fair Synthetic Healthdata via Bias-transforming Generative Adversarial Networks",
+        "rating": -2.5,
+        "keywords": [
+            [
+                "GAN"
+            ],
+            [
+                "health",
+                "Healthcare"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Synthetic data generation offers a promising solution to enhance the usefulness of Electronic Healthcare Records (EHR) by generating realistic de-identified data. However, the existing literature primarily focuses on the quality of synthetic health data, neglecting the crucial aspect of fairness in downstream predictions. Consequently, models trained on synthetic EHR have faced criticism for producing biased outcomes in target tasks. These biases can arise from either spurious correlations between features or the failure of models to accurately represent sub-groups. To address these concerns, we present Bias-transforming Generative Adversarial Networks (Bt-GAN), a GAN-based synthetic data generator specifically designed for the healthcare domain. In order to tackle spurious correlations (i), we propose an information-constrained Data Generation Process that enables the generator to learn a fair deterministic transformation based on a well-defined notion of algorithmic fairness. To overcome the challenge of capturing exact sub-group representations (ii), we incentivize the generator to preserve sub-group densities through score-based weighted sampling. This approach compels the generator to learn from underrepresented regions of the data manifold. We conduct extensive experiments using the MIMIC-III database. Our results demonstrate that Bt-GAN achieves SOTA accuracy while significantly improving fairness and minimizing bias amplification. We also perform an in-depth explainability analysis to provide additional evidence supporting the validity of our study. In conclusion, our research introduces a novel and professional approach to addressing the limitations of synthetic data generation in the healthcare domain. By incorporating fairness considerations and leveraging advanced techniques such as GANs, we pave the way for more reliable and unbiased predictions in healthcare applications.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2404.13853",
         "abstract url": "https://arxiv.org/abs/2404.13853",
         "title": "ICST-DNET: An Interpretable Causal Spatio-Temporal Diffusion Network for Traffic Speed Prediction",
@@ -2698,29 +2712,28 @@
         "comment": null
     },
     {
-        "paper id": "2404.13600",
-        "abstract url": "https://arxiv.org/abs/2404.13600",
-        "title": "Are We Ready for Planetary Exploration Robots? The TAIL-Plus Dataset for SLAM in Granular Environments",
-        "rating": -3,
+        "paper id": "2405.02321",
+        "abstract url": "https://arxiv.org/abs/2405.02321",
+        "title": "Accelerating Medical Knowledge Discovery through Automated Knowledge Graph Generation and Enrichment",
+        "rating": -2.5,
         "keywords": [
             [
-                "3D",
-                "RGB-D"
+                "Graph"
             ],
             [
-                "LiDAR",
-                "SLAM"
+                "BioPortal",
+                "Medical",
+                "Health"
             ],
             [
-                "robot",
-                "navigation"
+                "cs.AI"
             ]
         ],
-        "abstract": "So far, planetary surface exploration depends on various mobile robot platforms. The autonomous navigation and decision-making of these mobile robots in complex terrains largely rely on their terrain-aware perception, localization and mapping capabilities. In this paper we release the TAIL-Plus dataset, a new challenging dataset in deformable granular environments for planetary exploration robots, which is an extension to our previous work, TAIL (Terrain-Aware multI-modaL) dataset. We conducted field experiments on beaches that are considered as planetary surface analog environments for diverse sandy terrains. In TAIL-Plus dataset, we provide more sequences with multiple loops and expand the scene from day to night. Benefit from our sensor suite with modular design, we use both wheeled and quadruped robots for data collection. The sensors include a 3D LiDAR, three downward RGB-D cameras, a pair of global-shutter color cameras that can be used as a forward-looking stereo camera, an RTK-GPS device and an extra IMU. Our datasets are intended to help researchers developing multi-sensor simultaneous localization and mapping (SLAM) algorithms for robots in unstructured, deformable granular terrains. Our datasets and supplementary materials will be available at \\url{https://tailrobot.github.io/}.",
+        "abstract": "Knowledge graphs (KGs) serve as powerful tools for organizing and representing structured knowledge. While their utility is widely recognized, challenges persist in their automation and completeness. Despite efforts in automation and the utilization of expert-created ontologies, gaps in connectivity remain prevalent within KGs. In response to these challenges, we propose an innovative approach termed ``Medical Knowledge Graph Automation (M-KGA)\". M-KGA leverages user-provided medical concepts and enriches them semantically using BioPortal ontologies, thereby enhancing the completeness of knowledge graphs through the integration of pre-trained embeddings. Our approach introduces two distinct methodologies for uncovering hidden connections within the knowledge graph: a cluster-based approach and a node-based approach. Through rigorous testing involving 100 frequently occurring medical concepts in Electronic Health Records (EHRs), our M-KGA framework demonstrates promising results, indicating its potential to address the limitations of existing knowledge graph automation techniques.",
         "subjects": [
-            "cs.RO"
+            "cs.AI"
         ],
-        "comment": "Accepted to the IEEE ICRA Workshop on Field Robotics 2024"
+        "comment": "18 pages, 5 figures"
     },
     {
         "paper id": "2404.13691",
@@ -2770,10 +2783,57 @@
         "comment": null
     },
     {
+        "paper id": "2404.15373",
+        "abstract url": "https://arxiv.org/abs/2404.15373",
+        "title": "Robust EEG-based Emotion Recognition Using an Inception and Two-sided Perturbation Model",
+        "rating": -3,
+        "keywords": [
+            [
+                "attacks"
+            ],
+            [
+                "EEG"
+            ]
+        ],
+        "abstract": "Automated emotion recognition using electroencephalogram (EEG) signals has gained substantial attention. Although deep learning approaches exhibit strong performance, they often suffer from vulnerabilities to various perturbations, like environmental noise and adversarial attacks. In this paper, we propose an Inception feature generator and two-sided perturbation (INC-TSP) approach to enhance emotion recognition in brain-computer interfaces. INC-TSP integrates the Inception module for EEG data analysis and employs two-sided perturbation (TSP) as a defensive mechanism against input perturbations. TSP introduces worst-case perturbations to the model's weights and inputs, reinforcing the model's elasticity against adversarial attacks. The proposed approach addresses the challenge of maintaining accurate emotion recognition in the presence of input uncertainties. We validate INC-TSP in a subject-independent three-class emotion recognition scenario, demonstrating robust performance.",
+        "subjects": [
+            "eess.SP"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2404.13600",
+        "abstract url": "https://arxiv.org/abs/2404.13600",
+        "title": "Are We Ready for Planetary Exploration Robots? The TAIL-Plus Dataset for SLAM in Granular Environments",
+        "rating": -3.5,
+        "keywords": [
+            [
+                "3D",
+                "RGB-D"
+            ],
+            [
+                "LiDAR",
+                "SLAM"
+            ],
+            [
+                "robot",
+                "navigation"
+            ],
+            [
+                "Workshop"
+            ]
+        ],
+        "abstract": "So far, planetary surface exploration depends on various mobile robot platforms. The autonomous navigation and decision-making of these mobile robots in complex terrains largely rely on their terrain-aware perception, localization and mapping capabilities. In this paper we release the TAIL-Plus dataset, a new challenging dataset in deformable granular environments for planetary exploration robots, which is an extension to our previous work, TAIL (Terrain-Aware multI-modaL) dataset. We conducted field experiments on beaches that are considered as planetary surface analog environments for diverse sandy terrains. In TAIL-Plus dataset, we provide more sequences with multiple loops and expand the scene from day to night. Benefit from our sensor suite with modular design, we use both wheeled and quadruped robots for data collection. The sensors include a 3D LiDAR, three downward RGB-D cameras, a pair of global-shutter color cameras that can be used as a forward-looking stereo camera, an RTK-GPS device and an extra IMU. Our datasets are intended to help researchers developing multi-sensor simultaneous localization and mapping (SLAM) algorithms for robots in unstructured, deformable granular terrains. Our datasets and supplementary materials will be available at \\url{https://tailrobot.github.io/}.",
+        "subjects": [
+            "cs.RO"
+        ],
+        "comment": "Accepted to the IEEE ICRA Workshop on Field Robotics 2024"
+    },
+    {
         "paper id": "2404.13852",
         "abstract url": "https://arxiv.org/abs/2404.13852",
         "title": "Toward Robust LiDAR based 3D Object Detection via Density-Aware Adaptive Thresholding",
-        "rating": -3,
+        "rating": -3.5,
         "keywords": [
             [
                 "3D"
@@ -2784,6 +2844,9 @@
             ],
             [
                 "robotics"
+            ],
+            [
+                "Workshop"
             ]
         ],
         "abstract": "Robust 3D object detection is a core challenge for autonomous mobile systems in field robotics. To tackle this issue, many researchers have demonstrated improvements in 3D object detection performance in datasets. However, real-world urban scenarios with unstructured and dynamic situations can still lead to numerous false positives, posing a challenge for robust 3D object detection models. This paper presents a post-processing algorithm that dynamically adjusts object detection thresholds based on the distance from the ego-vehicle. 3D object detection models usually perform well in detecting nearby objects but may exhibit suboptimal performance for distant ones. While conventional perception algorithms typically employ a single threshold in post-processing, the proposed algorithm addresses this issue by employing adaptive thresholds based on the distance from the ego-vehicle, minimizing false negatives and reducing false positives in urban scenarios. The results show performance enhancements in 3D object detection models across a range of scenarios, not only in dynamic urban road conditions but also in scenarios involving adverse weather conditions.",
@@ -2791,32 +2854,6 @@
             "cs.RO"
         ],
         "comment": "5 pages, 4 figures, Accepted to the IEEE ICRA Workshop on Field Robotics 2024"
-    },
-    {
-        "paper id": "2404.13634",
-        "abstract url": "https://arxiv.org/abs/2404.13634",
-        "title": "Bt-GAN: Generating Fair Synthetic Healthdata via Bias-transforming Generative Adversarial Networks",
-        "rating": -3.5,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "GAN"
-            ],
-            [
-                "health",
-                "Healthcare"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Synthetic data generation offers a promising solution to enhance the usefulness of Electronic Healthcare Records (EHR) by generating realistic de-identified data. However, the existing literature primarily focuses on the quality of synthetic health data, neglecting the crucial aspect of fairness in downstream predictions. Consequently, models trained on synthetic EHR have faced criticism for producing biased outcomes in target tasks. These biases can arise from either spurious correlations between features or the failure of models to accurately represent sub-groups. To address these concerns, we present Bias-transforming Generative Adversarial Networks (Bt-GAN), a GAN-based synthetic data generator specifically designed for the healthcare domain. In order to tackle spurious correlations (i), we propose an information-constrained Data Generation Process that enables the generator to learn a fair deterministic transformation based on a well-defined notion of algorithmic fairness. To overcome the challenge of capturing exact sub-group representations (ii), we incentivize the generator to preserve sub-group densities through score-based weighted sampling. This approach compels the generator to learn from underrepresented regions of the data manifold. We conduct extensive experiments using the MIMIC-III database. Our results demonstrate that Bt-GAN achieves SOTA accuracy while significantly improving fairness and minimizing bias amplification. We also perform an in-depth explainability analysis to provide additional evidence supporting the validity of our study. In conclusion, our research introduces a novel and professional approach to addressing the limitations of synthetic data generation in the healthcare domain. By incorporating fairness considerations and leveraging advanced techniques such as GANs, we pave the way for more reliable and unbiased predictions in healthcare applications.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": null
     },
     {
         "paper id": "2404.13652",
@@ -3306,5 +3343,17 @@
             "cs.CR"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2405.01573",
+        "abstract url": "https://arxiv.org/abs/2405.01573",
+        "title": "Class-Level Code Generation from Natural Language Using Iterative, Tool-Enhanced Reasoning over Repository",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "LLMs have demonstrated significant potential in code generation tasks, achieving promising results at the function or statement level in various benchmarks. However, the complexities associated with creating code artifacts like classes, particularly within the context of real-world software repositories, remain underexplored. Existing research often treats class-level generation as an isolated task, neglecting the intricate dependencies and interactions that characterize real-world software development environments. To address this gap, we introduce RepoClassBench, a benchmark designed to rigorously evaluate LLMs in generating complex, class-level code within real-world repositories. RepoClassBench includes natural language to class generation tasks across Java and Python, from a selection of public repositories. We ensure that each class in our dataset not only has cross-file dependencies within the repository but also includes corresponding test cases to verify its functionality. We find that current models struggle with the realistic challenges posed by our benchmark, primarily due to their limited exposure to relevant repository contexts. To address this shortcoming, we introduce Retrieve-Repotools-Reflect (RRR), a novel approach that equips LLMs with static analysis tools to iteratively navigate & reason about repository-level context in an agent-based framework. Our experiments demonstrate that RRR significantly outperforms existing baselines on RepoClassBench, showcasing its effectiveness across programming languages and in various settings. Our findings emphasize the need for benchmarks that incorporate repository-level dependencies to more accurately reflect the complexities of software development. Our work illustrates the benefits of leveraging specialized tools to enhance LLMs understanding of repository context. We plan to make our dataset and evaluation harness public.",
+        "subjects": [
+            "cs.SE"
+        ],
+        "comment": "Preprint"
     }
 ]

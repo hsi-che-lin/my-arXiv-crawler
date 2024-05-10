@@ -115,6 +115,25 @@
         "comment": null
     },
     {
+        "paper id": "2402.13533",
+        "abstract url": "https://arxiv.org/abs/2402.13533",
+        "title": "FinGPT-HPC: Efficient Pretraining and Finetuning Large Language Models for Financial Applications with High-Performance Computing",
+        "rating": 1.5,
+        "keywords": [
+            [
+                "GPU memory"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Large language models (LLMs) are computationally intensive. The computation workload and the memory footprint grow quadratically with the dimension (layer width). Most of LLMs' parameters come from the linear layers of the transformer structure and are highly redundant. These linear layers contribute more than 80% of the computation workload and 99% of the model size. To pretrain and finetune LLMs efficiently, there are three major challenges to address: 1) reducing redundancy of the linear layers; 2) reducing GPU memory footprint; 3) improving GPU utilization when using distributed training. Prior methods, such as LoRA and QLoRA, utilized low-rank matrices and quantization to reduce the number of trainable parameters and model size, respectively. However, the resulting model still consumes a large amount of GPU memory. In this paper, we present high-performance GPU-based methods that exploit low-rank structures to pretrain and finetune LLMs for financial applications. We replace one conventional linear layer of the transformer structure with two narrower linear layers, which allows us to reduce the number of parameters by several orders of magnitude. By quantizing the parameters into low precision (8-bit and 4-bit), the memory consumption of the resulting model is further reduced. Compared with existing LLMs, our methods achieve a speedup of 1.3X and a model compression ratio of 2.64X for pretaining without accuracy drop. For finetuning, our methods achieve an average accuracy increase of 6.3% and 24.0% in general tasks and financial tasks, respectively, and GPU memory consumption ratio of 6.3X. The sizes of our models are smaller than 0.59 GB, allowing inference on a smartphone.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2402.13536",
         "abstract url": "https://arxiv.org/abs/2402.13536",
         "title": "Exploring the Limits of Semantic Image Compression at Micro-bits per Pixel",
@@ -143,6 +162,7 @@
                 "eess.AS"
             ],
             [
+                "Workshop",
                 "ICASSP"
             ]
         ],
@@ -151,6 +171,44 @@
             "eess.AS"
         ],
         "comment": "Accepted for publication at ICASSP 2024 - HSCMA Workshop"
+    },
+    {
+        "paper id": "2402.14139",
+        "abstract url": "https://arxiv.org/abs/2402.14139",
+        "title": "NeuroFlux: Memory-Efficient CNN Training Using Adaptive Local Learning",
+        "rating": 1.5,
+        "keywords": [
+            [
+                "GPU memory"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Efficient on-device Convolutional Neural Network (CNN) training in resource-constrained mobile and edge environments is an open challenge. Backpropagation is the standard approach adopted, but it is GPU memory intensive due to its strong inter-layer dependencies that demand intermediate activations across the entire CNN model to be retained in GPU memory. This necessitates smaller batch sizes to make training possible within the available GPU memory budget, but in turn, results in substantially high and impractical training time. We introduce NeuroFlux, a novel CNN training system tailored for memory-constrained scenarios. We develop two novel opportunities: firstly, adaptive auxiliary networks that employ a variable number of filters to reduce GPU memory usage, and secondly, block-specific adaptive batch sizes, which not only cater to the GPU memory constraints but also accelerate the training process. NeuroFlux segments a CNN into blocks based on GPU memory usage and further attaches an auxiliary network to each layer in these blocks. This disrupts the typical layer dependencies under a new training paradigm - $\\textit{`adaptive local learning'}$. Moreover, NeuroFlux adeptly caches intermediate activations, eliminating redundant forward passes over previously trained blocks, further accelerating the training process. The results are twofold when compared to Backpropagation: on various hardware platforms, NeuroFlux demonstrates training speed-ups of 2.3$\\times$ to 6.1$\\times$ under stringent GPU memory budgets, and NeuroFlux generates streamlined models that have 10.9$\\times$ to 29.4$\\times$ fewer parameters.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": "Accepted to EuroSys 2024"
+    },
+    {
+        "paper id": "2402.14205",
+        "abstract url": "https://arxiv.org/abs/2402.14205",
+        "title": "Compression Robust Synthetic Speech Detection Using Patched Spectrogram Transformer",
+        "rating": 1.5,
+        "keywords": [
+            [
+                "cs.SD"
+            ],
+            [
+                "ICML"
+            ]
+        ],
+        "abstract": "Many deep learning synthetic speech generation tools are readily available. The use of synthetic speech has caused financial fraud, impersonation of people, and misinformation to spread. For this reason forensic methods that can detect synthetic speech have been proposed. Existing methods often overfit on one dataset and their performance reduces substantially in practical scenarios such as detecting synthetic speech shared on social platforms. In this paper we propose, Patched Spectrogram Synthetic Speech Detection Transformer (PS3DT), a synthetic speech detector that converts a time domain speech signal to a mel-spectrogram and processes it in patches using a transformer neural network. We evaluate the detection performance of PS3DT on ASVspoof2019 dataset. Our experiments show that PS3DT performs well on ASVspoof2019 dataset compared to other approaches using spectrogram for synthetic speech detection. We also investigate generalization performance of PS3DT on In-the-Wild dataset. PS3DT generalizes well than several existing methods on detecting synthetic speech from an out-of-distribution dataset. We also evaluate robustness of PS3DT to detect telephone quality synthetic speech and synthetic speech shared on social platforms (compressed speech). PS3DT is robust to compression and can detect telephone quality synthetic speech better than several existing methods.",
+        "subjects": [
+            "cs.SD"
+        ],
+        "comment": "Accepted as long oral paper at ICMLA 2023"
     },
     {
         "paper id": "2402.13534",
@@ -768,6 +826,22 @@
         "comment": null
     },
     {
+        "paper id": "2402.13771",
+        "abstract url": "https://arxiv.org/abs/2402.13771",
+        "title": "Mask-up: Investigating Biases in Face Re-identification for Masked Faces",
+        "rating": 1,
+        "keywords": [
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "AI based Face Recognition Systems (FRSs) are now widely distributed and deployed as MLaaS solutions all over the world, moreso since the COVID-19 pandemic for tasks ranging from validating individuals' faces while buying SIM cards to surveillance of citizens. Extensive biases have been reported against marginalized groups in these systems and have led to highly discriminatory outcomes. The post-pandemic world has normalized wearing face masks but FRSs have not kept up with the changing times. As a result, these systems are susceptible to mask based face occlusion. In this study, we audit four commercial and nine open-source FRSs for the task of face re-identification between different varieties of masked and unmasked images across five benchmark datasets (total 14,722 images). These simulate a realistic validation/surveillance task as deployed in all major countries around the world. Three of the commercial and five of the open-source FRSs are highly inaccurate; they further perpetuate biases against non-White individuals, with the lowest accuracy being 0%. A survey for the same task with 85 human participants also results in a low accuracy of 40%. Thus a human-in-the-loop moderation in the pipeline does not alleviate the concerns, as has been frequently hypothesized in literature. Our large-scale study shows that developers, lawmakers and users of such services need to rethink the design principles behind FRSs, especially for the task of face re-identification, taking cognizance of observed biases.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "This work has been submitted to the IEEE for possible publication"
+    },
+    {
         "paper id": "2402.13810",
         "abstract url": "https://arxiv.org/abs/2402.13810",
         "title": "The Expected Loss of Preconditioned Langevin Dynamics Reveals the Hessian Rank",
@@ -856,6 +930,22 @@
             "cs.CL"
         ],
         "comment": "version 2.0"
+    },
+    {
+        "paper id": "2402.13874",
+        "abstract url": "https://arxiv.org/abs/2402.13874",
+        "title": "$Se^2$: Sequential Example Selection for In-Context Learning",
+        "rating": 1,
+        "keywords": [
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "The remarkable capability of large language models (LLMs) for in-context learning (ICL) needs to be activated by demonstration examples. Prior work has extensively explored the selection of examples for ICL, predominantly following the \"select then organize\" paradigm, such approaches often neglect the internal relationships between examples and exist an inconsistency between the training and inference. In this paper, we formulate the problem as a $\\textit{se}$quential $\\textit{se}$lection problem and introduce $Se^2$, a sequential-aware method that leverages the LLM's feedback on varying context, aiding in capturing inter-relationships and sequential information among examples, significantly enriching the contextuality and relevance of ICL prompts. Meanwhile, we utilize beam search to seek and construct example sequences, enhancing both quality and diversity. Extensive experiments across 23 NLP tasks from 8 distinct categories illustrate that $Se^2$ markedly surpasses competitive baselines and achieves 42% relative improvement over random selection. Further in-depth analysis show the effectiveness of proposed strategies, highlighting $Se^2$'s exceptional stability and adaptability across various scenarios. Our code will be released to facilitate future research.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": "19 pages, 5 figures"
     },
     {
         "paper id": "2402.13887",
@@ -1162,22 +1252,6 @@
         "comment": "Findings of EACL 2024, 10 pages"
     },
     {
-        "paper id": "2402.14205",
-        "abstract url": "https://arxiv.org/abs/2402.14205",
-        "title": "Compression Robust Synthetic Speech Detection Using Patched Spectrogram Transformer",
-        "rating": 1,
-        "keywords": [
-            [
-                "cs.SD"
-            ]
-        ],
-        "abstract": "Many deep learning synthetic speech generation tools are readily available. The use of synthetic speech has caused financial fraud, impersonation of people, and misinformation to spread. For this reason forensic methods that can detect synthetic speech have been proposed. Existing methods often overfit on one dataset and their performance reduces substantially in practical scenarios such as detecting synthetic speech shared on social platforms. In this paper we propose, Patched Spectrogram Synthetic Speech Detection Transformer (PS3DT), a synthetic speech detector that converts a time domain speech signal to a mel-spectrogram and processes it in patches using a transformer neural network. We evaluate the detection performance of PS3DT on ASVspoof2019 dataset. Our experiments show that PS3DT performs well on ASVspoof2019 dataset compared to other approaches using spectrogram for synthetic speech detection. We also investigate generalization performance of PS3DT on In-the-Wild dataset. PS3DT generalizes well than several existing methods on detecting synthetic speech from an out-of-distribution dataset. We also evaluate robustness of PS3DT to detect telephone quality synthetic speech and synthetic speech shared on social platforms (compressed speech). PS3DT is robust to compression and can detect telephone quality synthetic speech better than several existing methods.",
-        "subjects": [
-            "cs.SD"
-        ],
-        "comment": "Accepted as long oral paper at ICMLA 2023"
-    },
-    {
         "paper id": "2402.14208",
         "abstract url": "https://arxiv.org/abs/2402.14208",
         "title": "Content Conditional Debiasing for Fair Text Embedding",
@@ -1466,22 +1540,6 @@
         "comment": "22 pages, 11 figures"
     },
     {
-        "paper id": "2402.13533",
-        "abstract url": "https://arxiv.org/abs/2402.13533",
-        "title": "FinGPT-HPC: Efficient Pretraining and Finetuning Large Language Models for Financial Applications with High-Performance Computing",
-        "rating": 0.5,
-        "keywords": [
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Large language models (LLMs) are computationally intensive. The computation workload and the memory footprint grow quadratically with the dimension (layer width). Most of LLMs' parameters come from the linear layers of the transformer structure and are highly redundant. These linear layers contribute more than 80% of the computation workload and 99% of the model size. To pretrain and finetune LLMs efficiently, there are three major challenges to address: 1) reducing redundancy of the linear layers; 2) reducing GPU memory footprint; 3) improving GPU utilization when using distributed training. Prior methods, such as LoRA and QLoRA, utilized low-rank matrices and quantization to reduce the number of trainable parameters and model size, respectively. However, the resulting model still consumes a large amount of GPU memory. In this paper, we present high-performance GPU-based methods that exploit low-rank structures to pretrain and finetune LLMs for financial applications. We replace one conventional linear layer of the transformer structure with two narrower linear layers, which allows us to reduce the number of parameters by several orders of magnitude. By quantizing the parameters into low precision (8-bit and 4-bit), the memory consumption of the resulting model is further reduced. Compared with existing LLMs, our methods achieve a speedup of 1.3X and a model compression ratio of 2.64X for pretaining without accuracy drop. For finetuning, our methods achieve an average accuracy increase of 6.3% and 24.0% in general tasks and financial tasks, respectively, and GPU memory consumption ratio of 6.3X. The sizes of our models are smaller than 0.59 GB, allowing inference on a smartphone.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2402.13567",
         "abstract url": "https://arxiv.org/abs/2402.13567",
         "title": "Spot Check Equivalence: an Interpretable Metric for Information Elicitation Mechanisms",
@@ -1713,6 +1771,22 @@
         "comment": null
     },
     {
+        "paper id": "2402.13846",
+        "abstract url": "https://arxiv.org/abs/2402.13846",
+        "title": "Large Language Models are Advanced Anonymizers",
+        "rating": 0.5,
+        "keywords": [
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "Recent work in privacy research on large language models has shown that they achieve near human-level performance at inferring personal data from real-world online texts. With consistently increasing model capabilities, existing text anonymization methods are currently lacking behind regulatory requirements and adversarial threats. This raises the question of how individuals can effectively protect their personal data in sharing online texts. In this work, we take two steps to answer this question: We first present a new setting for evaluating anonymizations in the face of adversarial LLMs inferences, allowing for a natural measurement of anonymization performance while remedying some of the shortcomings of previous metrics. We then present our LLM-based adversarial anonymization framework leveraging the strong inferential capabilities of LLMs to inform our anonymization procedure. In our experimental evaluation, we show on real-world and synthetic online texts how adversarial anonymization outperforms current industry-grade anonymizers both in terms of the resulting utility and privacy.",
+        "subjects": [
+            "cs.AI"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2402.13855",
         "abstract url": "https://arxiv.org/abs/2402.13855",
         "title": "What we can learn from TikTok through its Research API",
@@ -1921,6 +1995,22 @@
         "comment": null
     },
     {
+        "paper id": "2402.14083",
+        "abstract url": "https://arxiv.org/abs/2402.14083",
+        "title": "Beyond A*: Better Planning with Transformers via Search Dynamics Bootstrapping",
+        "rating": 0.5,
+        "keywords": [
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "While Transformers have enabled tremendous progress in various application settings, such architectures still trail behind traditional symbolic planners for solving complex decision making tasks. In this work, we demonstrate how to train Transformers to solve complex planning tasks. This is accomplished by training an encoder-decoder Transformer model to predict the search dynamics of the $A^*$ search algorithm. We fine tune this model to obtain a Searchformer, a Transformer model that optimally solves previously unseen Sokoban puzzles 93.7% of the time, while using up to 26.8% fewer search steps than the $A^*$ implementation that was used for training initially. In our training method, $A^*$'s search dynamics are expressed as a token sequence outlining when task states are added and removed into the search tree during symbolic planning. Searchformer significantly outperforms baselines that predict the optimal plan directly with a 5-10$\\times$ smaller model size and a 10$\\times$ smaller training dataset. Lastly, we demonstrate how Searchformer scales to larger and more complex decision making tasks with improved percentage of solved tasks and shortened search dynamics.",
+        "subjects": [
+            "cs.AI"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2402.14090",
         "abstract url": "https://arxiv.org/abs/2402.14090",
         "title": "Social Environment Design",
@@ -1952,11 +2042,11 @@
                 "ICLR"
             ]
         ],
-        "abstract": "Generalization to unseen data is a key desideratum for deep networks, but its relation to classification accuracy is unclear. Using a minimalist vision dataset and a measure of generalizability, we show that popular networks, from deep convolutional networks (CNNs) to transformers, vary in their power to extrapolate to unseen classes both across layers and across architectures. Accuracy is not a good predictor of generalizability, and generalization varies non-monotonically with layer depth. Code is available at https://github.com/dyballa/zero-shot-generalization.",
+        "abstract": "Generalization to unseen data is a key desideratum for deep networks, but its relation to classification accuracy is unclear. Using a minimalist vision dataset and a measure of generalizability, we show that popular networks, from deep convolutional networks (CNNs) to transformers, vary in their power to extrapolate to unseen classes both across layers and across architectures. Accuracy is not a good predictor of generalizability, and generalization varies non-monotonically with layer depth.",
         "subjects": [
             "cs.CV"
         ],
-        "comment": "Accepted as a Tiny Paper at ICLR 24"
+        "comment": "Accepted as a Tiny Paper at ICLR 2024. Code available at https://github.com/dyballa/generalization/tree/ICLR2024TinyPaper"
     },
     {
         "paper id": "2402.14098",
@@ -2005,22 +2095,6 @@
             "cs.LG"
         ],
         "comment": "Preprint"
-    },
-    {
-        "paper id": "2402.14139",
-        "abstract url": "https://arxiv.org/abs/2402.14139",
-        "title": "NeuroFlux: Memory-Efficient CNN Training Using Adaptive Local Learning",
-        "rating": 0.5,
-        "keywords": [
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Efficient on-device Convolutional Neural Network (CNN) training in resource-constrained mobile and edge environments is an open challenge. Backpropagation is the standard approach adopted, but it is GPU memory intensive due to its strong inter-layer dependencies that demand intermediate activations across the entire CNN model to be retained in GPU memory. This necessitates smaller batch sizes to make training possible within the available GPU memory budget, but in turn, results in substantially high and impractical training time. We introduce NeuroFlux, a novel CNN training system tailored for memory-constrained scenarios. We develop two novel opportunities: firstly, adaptive auxiliary networks that employ a variable number of filters to reduce GPU memory usage, and secondly, block-specific adaptive batch sizes, which not only cater to the GPU memory constraints but also accelerate the training process. NeuroFlux segments a CNN into blocks based on GPU memory usage and further attaches an auxiliary network to each layer in these blocks. This disrupts the typical layer dependencies under a new training paradigm - $\\textit{`adaptive local learning'}$. Moreover, NeuroFlux adeptly caches intermediate activations, eliminating redundant forward passes over previously trained blocks, further accelerating the training process. The results are twofold when compared to Backpropagation: on various hardware platforms, NeuroFlux demonstrates training speed-ups of 2.3$\\times$ to 6.1$\\times$ under stringent GPU memory budgets, and NeuroFlux generates streamlined models that have 10.9$\\times$ to 29.4$\\times$ fewer parameters.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": "Accepted to EuroSys 2024"
     },
     {
         "paper id": "2402.14160",
@@ -2502,25 +2576,6 @@
         "comment": null
     },
     {
-        "paper id": "2402.13874",
-        "abstract url": "https://arxiv.org/abs/2402.13874",
-        "title": "$Se^2$: Sequential Example Selection for In-Context Learning",
-        "rating": 0,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "The remarkable capability of large language models (LLMs) for in-context learning (ICL) needs to be activated by demonstration examples. Prior work has extensively explored the selection of examples for ICL, predominantly following the \"select then organize\" paradigm, such approaches often neglect the internal relationships between examples and exist an inconsistency between the training and inference. In this paper, we formulate the problem as a $\\textit{se}$quential $\\textit{se}$lection problem and introduce $Se^2$, a sequential-aware method that leverages the LLM's feedback on varying context, aiding in capturing inter-relationships and sequential information among examples, significantly enriching the contextuality and relevance of ICL prompts. Meanwhile, we utilize beam search to seek and construct example sequences, enhancing both quality and diversity. Extensive experiments across 23 NLP tasks from 8 distinct categories illustrate that $Se^2$ markedly surpasses competitive baselines and achieves 42% relative improvement over random selection. Further in-depth analysis show the effectiveness of proposed strategies, highlighting $Se^2$'s exceptional stability and adaptability across various scenarios. Our code will be released to facilitate future research.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": "19 pages, 5 figures"
-    },
-    {
         "paper id": "2402.13926",
         "abstract url": "https://arxiv.org/abs/2402.13926",
         "title": "Large Language Models are Vulnerable to Bait-and-Switch Attacks for Generating Harmful Content",
@@ -2600,25 +2655,6 @@
             "cs.LG"
         ],
         "comment": "Accepted at AAAI-24"
-    },
-    {
-        "paper id": "2402.14007",
-        "abstract url": "https://arxiv.org/abs/2402.14007",
-        "title": "Can Watermarks Survive Translation? On the Cross-lingual Consistency of Text Watermark for Large Language Models",
-        "rating": 0,
-        "keywords": [
-            [
-                "Attack"
-            ],
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Text watermarking technology aims to tag and identify content produced by large language models (LLMs) to prevent misuse. In this study, we introduce the concept of ''cross-lingual consistency'' in text watermarking, which assesses the ability of text watermarks to maintain their effectiveness after being translated into other languages. Preliminary empirical results from two LLMs and three watermarking methods reveal that current text watermarking technologies lack consistency when texts are translated into various languages. Based on this observation, we propose a Cross-lingual Watermark Removal Attack (CWRA) to bypass watermarking by first obtaining a response from an LLM in a pivot language, which is then translated into the target language. CWRA can effectively remove watermarks by reducing the Area Under the Curve (AUC) from 0.95 to 0.67 without performance loss. Furthermore, we analyze two key factors that contribute to the cross-lingual consistency in text watermarking and propose a defense method that increases the AUC from 0.67 to 0.88 under CWRA.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": "Under review"
     },
     {
         "paper id": "2402.14016",
@@ -2790,6 +2826,7 @@
                 "cs.LG"
             ],
             [
+                "Workshop",
                 "AAAI"
             ]
         ],
@@ -2899,6 +2936,25 @@
         "comment": "6 pages, 4 figures, accepted in SUPER-CLAM workshop, ICASSP 2024"
     },
     {
+        "paper id": "2402.13777",
+        "abstract url": "https://arxiv.org/abs/2402.13777",
+        "title": "Deep Generative Models for Offline Policy Learning: Tutorial, Survey, and Perspectives on Future Directions",
+        "rating": -0.5,
+        "keywords": [
+            [
+                "Diffusion"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Deep generative models (DGMs) have demonstrated great success across various domains, particularly in generating texts, images, and videos using models trained from offline data. Similarly, data-driven decision-making and robotic control also necessitate learning a generator function from the offline data to serve as the strategy or policy. In this case, applying deep generative models in offline policy learning exhibits great potential, and numerous studies have explored in this direction. However, this field still lacks a comprehensive review and so developments of different branches are relatively independent. Thus, we provide the first systematic review on the applications of deep generative models for offline policy learning. In particular, we cover five mainstream deep generative models, including Variational Auto-Encoders, Generative Adversarial Networks, Normalizing Flows, Transformers, and Diffusion Models, and their applications in both offline reinforcement learning (offline RL) and imitation learning (IL). Offline RL and IL are two main branches of offline policy learning and are widely-adopted techniques for sequential decision-making. Specifically, for each type of DGM-based offline policy learning, we distill its fundamental scheme, categorize related works based on the usage of the DGM, and sort out the development process of algorithms in that field. Subsequent to the main content, we provide in-depth discussions on deep generative models and offline policy learning as a summary, based on which we present our perspectives on future research directions. This work offers a hands-on reference for the research progress in deep generative models for offline policy learning, and aims to inspire improved DGM-based offline RL or IL algorithms. For convenience, we maintain a paper list on https://github.com/LucasCJYSDL/DGMs-for-Offline-Policy-Learning.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": "Added more insights on future directions"
+    },
+    {
         "paper id": "2402.13901",
         "abstract url": "https://arxiv.org/abs/2402.13901",
         "title": "Non-asymptotic Convergence of Discrete-time Diffusion Models: New Approach and Improved Rate",
@@ -2937,6 +2993,25 @@
         "comment": null
     },
     {
+        "paper id": "2402.14015",
+        "abstract url": "https://arxiv.org/abs/2402.14015",
+        "title": "Corrective Machine Unlearning",
+        "rating": -0.5,
+        "keywords": [
+            [
+                "Unlearning"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Machine Learning models increasingly face data integrity challenges due to the use of large-scale training datasets drawn from the internet. We study what model developers can do if they detect that some data was manipulated or incorrect. Such manipulated data can cause adverse effects like vulnerability to backdoored samples, systematic biases, and in general, reduced accuracy on certain input domains. Often, all manipulated training samples are not known, and only a small, representative subset of the affected data is flagged. We formalize \"Corrective Machine Unlearning\" as the problem of mitigating the impact of data affected by unknown manipulations on a trained model, possibly knowing only a subset of impacted samples. We demonstrate that the problem of corrective unlearning has significantly different requirements from traditional privacy-oriented unlearning. We find most existing unlearning methods, including the gold-standard retraining-from-scratch, require most of the manipulated data to be identified for effective corrective unlearning. However, one approach, SSD, achieves limited success in unlearning adverse effects with just a small portion of the manipulated samples, showing the tractability of this setting. We hope our work spurs research towards developing better methods for corrective unlearning and offers practitioners a new strategy to handle data integrity challenges arising from web-scale training.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": "17 pages, 7 figures"
+    },
+    {
         "paper id": "2402.14017",
         "abstract url": "https://arxiv.org/abs/2402.14017",
         "title": "D-Flow: Differentiating through Flows for Controlled Generation",
@@ -2973,25 +3048,6 @@
             "cs.LG"
         ],
         "comment": "32 pages. Implementation available at https://github.com/JonasGeiping/carving"
-    },
-    {
-        "paper id": "2402.14083",
-        "abstract url": "https://arxiv.org/abs/2402.14083",
-        "title": "Beyond A*: Better Planning with Transformers via Search Dynamics Bootstrapping",
-        "rating": -0.5,
-        "keywords": [
-            [
-                "navigation"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "While Transformers have enabled tremendous progress in various application settings, such architectures still lag behind traditional symbolic planners for solving complex decision making tasks. In this work, we demonstrate how to train Transformers to solve complex planning tasks and present Searchformer, a Transformer model that optimally solves previously unseen Sokoban puzzles 93.7% of the time, while using up to 26.8% fewer search steps than standard $A^*$ search. Searchformer is an encoder-decoder Transformer model trained to predict the search dynamics of $A^*$. This model is then fine-tuned via expert iterations to perform fewer search steps than $A^*$ search while still generating an optimal plan. In our training method, $A^*$'s search dynamics are expressed as a token sequence outlining when task states are added and removed into the search tree during symbolic planning. In our ablation studies on maze navigation, we find that Searchformer significantly outperforms baselines that predict the optimal plan directly with a 5-10$\\times$ smaller model size and a 10$\\times$ smaller training dataset. We also demonstrate how Searchformer scales to larger and more complex decision making tasks like Sokoban with improved percentage of solved tasks and shortened search dynamics.",
-        "subjects": [
-            "cs.AI"
-        ],
-        "comment": null
     },
     {
         "paper id": "2402.14172",
@@ -3108,6 +3164,28 @@
         "comment": "11 pages, 5 figures in main body; 14 pages and 2 figures in appendices"
     },
     {
+        "paper id": "2402.14881",
+        "abstract url": "https://arxiv.org/abs/2402.14881",
+        "title": "A Study on the Vulnerability of Test Questions against ChatGPT-based Cheating",
+        "rating": -0.5,
+        "keywords": [
+            [
+                "medical"
+            ],
+            [
+                "cs.CL"
+            ],
+            [
+                "ICML"
+            ]
+        ],
+        "abstract": "ChatGPT is a chatbot that can answer text prompts fairly accurately, even performing very well on postgraduate-level questions. Many educators have found that their take-home or remote tests and exams are vulnerable to ChatGPT-based cheating because students may directly use answers provided by tools like ChatGPT. In this paper, we try to provide an answer to an important question: how well ChatGPT can answer test questions and how we can detect whether the questions of a test can be answered correctly by ChatGPT. We generated ChatGPT's responses to the MedMCQA dataset, which contains over 10,000 medical school entrance exam questions. We analyzed the responses and uncovered certain types of questions ChatGPT answers more inaccurately than others. In addition, we have created a basic natural language processing model to single out the most vulnerable questions to ChatGPT in a collection of questions or a sample exam. Our tool can be used by test-makers to avoid ChatGPT-vulnerable test questions.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": "2023 International Conference on Machine Learning and Applications (ICMLA)"
+    },
+    {
         "paper id": "2402.14882",
         "abstract url": "https://arxiv.org/abs/2402.14882",
         "title": "Deep Generative Model-based Synthesis of Four-bar Linkage Mechanisms with Target Conditions",
@@ -3202,6 +3280,22 @@
             "cs.IT"
         ],
         "comment": "submitted to IEEE"
+    },
+    {
+        "paper id": "2402.13617",
+        "abstract url": "https://arxiv.org/abs/2402.13617",
+        "title": "A Monolithic Cybersecurity Architecture for Power Electronic Systems",
+        "rating": -1,
+        "keywords": [
+            [
+                "attacks"
+            ]
+        ],
+        "abstract": "Power electronic systems (PES) face significant threats from various data availability and integrity attacks, significantly affecting the performance of communication networks and power system operation. As a result, several attack detection and reconstruction techniques are deployed, which makes it a costly \\& complex cybersecurity operational platform with significant room for incremental extensions for mitigation against future threats. Unlike the said traditional arrangements, our paper introduces a foundational approach by establishing a monolithic cybersecurity architecture (MCA) via incorporating semantic principles into the sampling process for distributed energy resources (DERs). This unified approach concurrently compensates for the intrusion challenges posed by cyber attacks by reconstructing signals using the dynamics of the inner control layer. This reconstruction considers essential semantic attributes, like Priority, Freshness, and Relevance to ensure resilient dynamic performance. Hence, the proposed scheme promises a generalized route to concurrently tackle a global set of cyber attacks in elevating the resilience of PES. Finally, rigorous validation on a modified IEEE 69-bus distribution system and a real-world South California Edison (SCE) 47-bus network, using OPAL-RT under diverse operating conditions, underscores its robustness, model-free design capability, scalability, and adaptability to dynamic cyber graphs and system reconfiguration.",
+        "subjects": [
+            "eess.SY"
+        ],
+        "comment": "This paper has been accepted for publication in IEEE Transactions on Smart Grid"
     },
     {
         "paper id": "2402.13623",
@@ -3341,11 +3435,11 @@
                 "graph"
             ]
         ],
-        "abstract": "Classic symmetry-breaking problems on graphs have gained a lot of attention in models of modern parallel computation. The Adaptive Massively Parallel Computation (AMPC) is a model that captures central challenges in data center computations. Chang et al. [PODC'2019] gave an extremely fast, constant time, algorithm for the $(\u0394+ 1)$-coloring problem, where $\u0394$ is the maximum degree of an input graph of $n$ nodes. The algorithm works in the most restrictive low-space setting, where each machine has $n^\u03b4$ local space for a constant $0 < \u03b4< 1$. In this work, we study the vertex-coloring problem in sparse graphs parameterized by their arboricity $\u03b1$, a standard measure for sparsity. We give deterministic algorithms that in constant, or almost constant, time give $\\text{poly}(\u03b1)$ and $O(\u03b1)$-colorings, where $\u03b1$ can be arbitrarily smaller than $\u0394$. A strong and standard approach to compute arboricity-dependent colorings is through the Nash-Williams forest decomposition, which gives rise to an (acyclic) orientation of the edges such that each node has a small outdegree. Our main technical contribution is giving efficient deterministic algorithms to compute these orientations and showing how to leverage them to find colorings in low-space AMPC. A key technical challenge is that the color of a node may depend on almost all of the other nodes in the graph and these dependencies cannot be stored on a single machine. Nevertheless, our novel and careful exploration technique yields the orientation, and the arboricity-dependent coloring, with a sublinear number of adaptive queries per node.",
+        "abstract": "Classic symmetry-breaking problems on graphs have gained a lot of attention in models of modern parallel computation. The Adaptive Massively Parallel Computation (AMPC) is a model that captures the central challenges in data center computations. Chang et al. [PODC'2019] gave an extremely fast, constant time, algorithm for the $(\u0394+ 1)$-coloring problem, where $\u0394$ is the maximum degree of an input graph of $n$ nodes. The algorithm works in the most restrictive low-space setting, where each machine has $n^\u03b4$ local space for a constant $0 < \u03b4< 1$. In this work, we study the vertex-coloring problem in sparse graphs parameterized by their arboricity $\u03b1$, a standard measure for sparsity. We give deterministic algorithms that in constant, or almost constant, time give $\\text{poly} ~\u03b1$ and $O(\u03b1)$-colorings, where $\u03b1$ can be arbitrarily smaller than $\u0394$. A strong and standard approach to compute arboricity-dependent colorings is through the Nash-Williams forest decomposition, which gives rise to an (acyclic) orientation of the edges such that each node has a small out-degree. Our main technical contribution is giving efficient deterministic algorithms to compute these orientations and showing how to leverage them to find colorings in low-space AMPC. A key technical challenge is that the color of a node may depend on almost all of the other nodes in the graph and these dependencies cannot be stored on a single machine. Nevertheless, our novel and careful exploration technique yields the orientation, and the arboricity-dependent coloring, with a sublinear number of adaptive queries per node.",
         "subjects": [
             "cs.DC"
         ],
-        "comment": null
+        "comment": "ACM Symposium on Principles of Distributed Computing (PODC) 2024"
     },
     {
         "paper id": "2402.13756",
@@ -3386,23 +3480,21 @@
         "comment": "5 figures"
     },
     {
-        "paper id": "2402.13771",
-        "abstract url": "https://arxiv.org/abs/2402.13771",
-        "title": "Mask-up: Investigating Biases in Face Re-identification for Masked Faces",
+        "paper id": "2402.13769",
+        "abstract url": "https://arxiv.org/abs/2402.13769",
+        "title": "General Debiasing for Graph-based Collaborative Filtering via Adversarial Graph Dropout",
         "rating": -1,
         "keywords": [
             [
-                "Face"
-            ],
-            [
-                "cs.CV"
+                "GNNs",
+                "Graph"
             ]
         ],
-        "abstract": "AI based Face Recognition Systems (FRSs) are now widely distributed and deployed as MLaaS solutions all over the world, moreso since the COVID-19 pandemic for tasks ranging from validating individuals' faces while buying SIM cards to surveillance of citizens. Extensive biases have been reported against marginalized groups in these systems and have led to highly discriminatory outcomes. The post-pandemic world has normalized wearing face masks but FRSs have not kept up with the changing times. As a result, these systems are susceptible to mask based face occlusion. In this study, we audit four commercial and nine open-source FRSs for the task of face re-identification between different varieties of masked and unmasked images across five benchmark datasets (total 14,722 images). These simulate a realistic validation/surveillance task as deployed in all major countries around the world. Three of the commercial and five of the open-source FRSs are highly inaccurate; they further perpetuate biases against non-White individuals, with the lowest accuracy being 0%. A survey for the same task with 85 human participants also results in a low accuracy of 40%. Thus a human-in-the-loop moderation in the pipeline does not alleviate the concerns, as has been frequently hypothesized in literature. Our large-scale study shows that developers, lawmakers and users of such services need to rethink the design principles behind FRSs, especially for the task of face re-identification, taking cognizance of observed biases.",
+        "abstract": "Graph neural networks (GNNs) have shown impressive performance in recommender systems, particularly in collaborative filtering (CF). The key lies in aggregating neighborhood information on a user-item interaction graph to enhance user/item representations. However, we have discovered that this aggregation mechanism comes with a drawback, which amplifies biases present in the interaction graph. For instance, a user's interactions with items can be driven by both unbiased true interest and various biased factors like item popularity or exposure. However, the current aggregation approach combines all information, both biased and unbiased, leading to biased representation learning. Consequently, graph-based recommenders can learn distorted views of users/items, hindering the modeling of their true preferences and generalizations. To address this issue, we introduce a novel framework called Adversarial Graph Dropout (AdvDrop). It differentiates between unbiased and biased interactions, enabling unbiased representation learning. For each user/item, AdvDrop employs adversarial learning to split the neighborhood into two views: one with bias-mitigated interactions and the other with bias-aware interactions. After view-specific aggregation, AdvDrop ensures that the bias-mitigated and bias-aware representations remain invariant, shielding them from the influence of bias. We validate AdvDrop's effectiveness on five public datasets that cover both general and specific biases, demonstrating significant improvements. Furthermore, our method exhibits meaningful separation of subgraphs and achieves unbiased representations for graph-based CF models, as revealed by in-depth analysis. Our code is publicly available at https://github.com/Arthurma71/AdvDrop.",
         "subjects": [
-            "cs.CV"
+            "cs.IR"
         ],
-        "comment": "This work has been submitted to the IEEE for possible publication"
+        "comment": "Accepted to WWW 2024"
     },
     {
         "paper id": "2402.13773",
@@ -3713,6 +3805,28 @@
         "comment": null
     },
     {
+        "paper id": "2402.14000",
+        "abstract url": "https://arxiv.org/abs/2402.14000",
+        "title": "Real-time 3D-aware Portrait Editing from a Single Image",
+        "rating": -1,
+        "keywords": [
+            [
+                "3D"
+            ],
+            [
+                "text-to-image"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "This work presents 3DPE, a practical method that can efficiently edit a face image following given prompts, like reference images or text descriptions, in a 3D-aware manner. To this end, a lightweight module is distilled from a 3D portrait generator and a text-to-image model, which provide prior knowledge of face geometry and superior editing capability, respectively. Such a design brings two compelling advantages over existing approaches. First, our system achieves real-time editing with a feedforward network (i.e., ~0.04s per image), over 100x faster than the second competitor. Second, thanks to the powerful priors, our module could focus on the learning of editing-related variations, such that it manages to handle various types of editing simultaneously in the training phase and further supports fast adaptation to user-specified customized types of editing during inference (e.g., with ~5min fine-tuning per style). The code, the model, and the interface will be made publicly available to facilitate future research.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2402.14008",
         "abstract url": "https://arxiv.org/abs/2402.14008",
         "title": "OlympiadBench: A Challenging Benchmark for Promoting AGI with Olympiad-Level Bilingual Multimodal Scientific Problems",
@@ -3883,8 +3997,7 @@
         "keywords": [
             [
                 "Clinical",
-                "facial",
-                "Face"
+                "facial"
             ],
             [
                 "cs.CV"
@@ -4115,7 +4228,8 @@
                 "medical",
                 "Healthcare",
                 "X-ray",
-                "clinical"
+                "clinical",
+                "Radiology"
             ]
         ],
         "abstract": "Recent advances in AI combine large language models (LLMs) with vision encoders that bring forward unprecedented technical capabilities to leverage for a wide range of healthcare applications. Focusing on the domain of radiology, vision-language models (VLMs) achieve good performance results for tasks such as generating radiology findings based on a patient's medical image, or answering visual questions (e.g., 'Where are the nodules in this chest X-ray?'). However, the clinical utility of potential applications of these capabilities is currently underexplored. We engaged in an iterative, multidisciplinary design process to envision clinically relevant VLM interactions, and co-designed four VLM use concepts: Draft Report Generation, Augmented Report Review, Visual Search and Querying, and Patient Imaging History Highlights. We studied these concepts with 13 radiologists and clinicians who assessed the VLM concepts as valuable, yet articulated many design considerations. Reflecting on our findings, we discuss implications for integrating VLM capabilities in radiology, and for healthcare AI more generally.",
@@ -4202,25 +4316,6 @@
             "cs.CL"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2402.14881",
-        "abstract url": "https://arxiv.org/abs/2402.14881",
-        "title": "A Study on the Vulnerability of Test Questions against ChatGPT-based Cheating",
-        "rating": -1,
-        "keywords": [
-            [
-                "medical"
-            ],
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "ChatGPT is a chatbot that can answer text prompts fairly accurately, even performing very well on postgraduate-level questions. Many educators have found that their take-home or remote tests and exams are vulnerable to ChatGPT-based cheating because students may directly use answers provided by tools like ChatGPT. In this paper, we try to provide an answer to an important question: how well ChatGPT can answer test questions and how we can detect whether the questions of a test can be answered correctly by ChatGPT. We generated ChatGPT's responses to the MedMCQA dataset, which contains over 10,000 medical school entrance exam questions. We analyzed the responses and uncovered certain types of questions ChatGPT answers more inaccurately than others. In addition, we have created a basic natural language processing model to single out the most vulnerable questions to ChatGPT in a collection of questions or a sample exam. Our tool can be used by test-makers to avoid ChatGPT-vulnerable test questions.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": "2023 International Conference on Machine Learning and Applications (ICMLA)"
     },
     {
         "paper id": "2403.00790",
@@ -4350,28 +4445,6 @@
         "comment": "It has been presented in the 18. Symposium Energieinnovation (14.-16.02.2024). Further information can be found at: https://www.tugraz.at/events/eninnov2024/home"
     },
     {
-        "paper id": "2402.13777",
-        "abstract url": "https://arxiv.org/abs/2402.13777",
-        "title": "Deep Generative Models for Offline Policy Learning: Tutorial, Survey, and Perspectives on Future Directions",
-        "rating": -1.5,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "Diffusion"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Deep generative models (DGMs) have demonstrated great success across various domains, particularly in generating texts, images, and videos using models trained from offline data. Similarly, data-driven decision-making and robotic control also necessitate learning a generator function from the offline data to serve as the strategy or policy. In this case, applying deep generative models in offline policy learning exhibits great potential, and numerous studies have explored in this direction. However, this field still lacks a comprehensive review and so developments of different branches are relatively independent. Thus, we provide the first systematic review on the applications of deep generative models for offline policy learning. In particular, we cover five mainstream deep generative models, including Variational Auto-Encoders, Generative Adversarial Networks, Normalizing Flows, Transformers, and Diffusion Models, and their applications in both offline reinforcement learning (offline RL) and imitation learning (IL). Offline RL and IL are two main branches of offline policy learning and are widely-adopted techniques for sequential decision-making. Specifically, for each type of DGM-based offline policy learning, we distill its fundamental scheme, categorize related works based on the usage of the DGM, and sort out the development process of algorithms in that field. Subsequent to the main content, we provide in-depth discussions on deep generative models and offline policy learning as a summary, based on which we present our perspectives on future research directions. This work offers a hands-on reference for the research progress in deep generative models for offline policy learning, and aims to inspire improved DGM-based offline RL or IL algorithms. For convenience, we maintain a paper list on https://github.com/LucasCJYSDL/DGMs-for-Offline-Policy-Learning.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": "Added more insights on future directions"
-    },
-    {
         "paper id": "2402.13791",
         "abstract url": "https://arxiv.org/abs/2402.13791",
         "title": "Opening the Black-Box: A Systematic Review on Explainable AI in Remote Sensing",
@@ -4445,25 +4518,6 @@
         "abstract": "Replicability in machine learning (ML) research is increasingly concerning due to the utilization of complex non-deterministic algorithms and the dependence on numerous hyper-parameter choices, such as model architecture and training datasets. Ensuring reproducible and replicable results is crucial for advancing the field, yet often requires significant technical effort to conduct systematic and well-organized experiments that yield robust conclusions. Several tools have been developed to facilitate experiment management and enhance reproducibility; however, they often introduce complexity that hinders adoption within the research community, despite being well-handled in industrial settings. To address the challenge of low adoption, we propose MLXP, an open-source, simple, and lightweight experiment management tool based on Python, available at https://github.com/inria-thoth/mlxp . MLXP streamlines the experimental process with minimal practitioner overhead while ensuring a high level of reproducibility.",
         "subjects": [
             "cs.LG"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2402.13846",
-        "abstract url": "https://arxiv.org/abs/2402.13846",
-        "title": "Large Language Models are Advanced Anonymizers",
-        "rating": -1.5,
-        "keywords": [
-            [
-                "face"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "Recent work in privacy research on large language models has shown that they achieve near human-level performance at inferring personal data from real-world online texts. With consistently increasing model capabilities, existing text anonymization methods are currently lacking behind regulatory requirements and adversarial threats. This raises the question of how individuals can effectively protect their personal data in sharing online texts. In this work, we take two steps to answer this question: We first present a new setting for evaluating anonymizations in the face of adversarial LLMs inferences, allowing for a natural measurement of anonymization performance while remedying some of the shortcomings of previous metrics. We then present our LLM-based adversarial anonymization framework leveraging the strong inferential capabilities of LLMs to inform our anonymization procedure. In our experimental evaluation, we show on real-world and synthetic online texts how adversarial anonymization outperforms current industry-grade anonymizers both in terms of the resulting utility and privacy.",
-        "subjects": [
-            "cs.AI"
         ],
         "comment": null
     },
@@ -4607,21 +4661,21 @@
     {
         "paper id": "2402.14081",
         "abstract url": "https://arxiv.org/abs/2402.14081",
-        "title": "Robust Learning of Noisy Time Series Collections Using Stochastic Process Models with Motion Codes",
+        "title": "Motion Code: Robust Time series Classification and Forecasting via Sparse Variational Multi-Stochastic Processes Learning",
         "rating": -1.5,
         "keywords": [
             [
-                "forecasting"
+                "Forecasting"
             ],
             [
                 "cs.LG"
             ]
         ],
-        "abstract": "While time series classification and forecasting problems have been extensively studied, the cases of noisy time series data with arbitrary time sequence lengths have remained challenging. Each time series instance can be thought of as a sample realization of a noisy dynamical model, which is characterized by a continuous stochastic process. For many applications, the data are mixed and consist of several types of noisy time series sequences modeled by multiple stochastic processes, making the forecasting and classification tasks even more challenging. Instead of regressing data naively and individually to each time series type, we take a latent variable model approach using a mixtured Gaussian processes with learned spectral kernels. More specifically, we auto-assign each type of noisy time series data a signature vector called its motion code. Then, conditioned on each assigned motion code, we infer a sparse approximation of the corresponding time series using the concept of the most informative timestamps. Our unmixing classification approach involves maximizing the likelihood across all the mixed noisy time series sequences of varying lengths. This stochastic approach allows us to learn not only within a single type of noisy time series data but also across many underlying stochastic processes, giving us a way to learn multiple dynamical models in an integrated and robust manner. The different learned latent stochastic models allow us to generate specific sub-type forecasting. We provide several quantitative comparisons demonstrating the performance of our approach.",
+        "abstract": "Despite being extensively studied, time series classification and forecasting on noisy data remain highly difficult. The main challenges lie in finding suitable mathematical concepts to describe time series and effectively separating noise from the true signals. Instead of treating time series as a static vector or a data sequence as often seen in previous methods, we introduce a novel framework that considers each time series, not necessarily of fixed length, as a sample realization of a continuous-time stochastic process. Such mathematical model explicitly captures the data dependence across several timestamps and detects the hidden time-dependent signals from noise. However, since the underlying data is often composed of several distinct dynamics, modeling using a single stochastic process is not sufficient. To handle such settings, we first assign each dynamics a signature vector. We then propose the abstract concept of the most informative timestamps to infer a sparse approximation of the individual dynamics based on their assigned vectors. The final model, referred to as Motion Code, contains parameters that can fully capture different underlying dynamics in an integrated manner. This allows unmixing classification and generation of specific sub-type forecasting simultaneously. Extensive experiments on sensors and devices noisy time series data demonstrate Motion Code's competitiveness against time series classification and forecasting benchmarks.",
         "subjects": [
             "cs.LG"
         ],
-        "comment": "17 pages, 2 figures, 3 tables"
+        "comment": "20 pages, 5 figures, 4 tables"
     },
     {
         "paper id": "2402.14102",
@@ -4693,6 +4747,7 @@
                 "robot"
             ],
             [
+                "Workshop",
                 "AAAI"
             ]
         ],
@@ -4943,7 +4998,6 @@
                 "3D"
             ],
             [
-                "simultaneous localization and mapping",
                 "SLAM"
             ]
         ],
@@ -5010,26 +5064,6 @@
             "cs.CV"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2402.13769",
-        "abstract url": "https://arxiv.org/abs/2402.13769",
-        "title": "General Debiasing for Graph-based Collaborative Filtering via Adversarial Graph Dropout",
-        "rating": -2,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "GNNs",
-                "Graph"
-            ]
-        ],
-        "abstract": "Graph neural networks (GNNs) have shown impressive performance in recommender systems, particularly in collaborative filtering (CF). The key lies in aggregating neighborhood information on a user-item interaction graph to enhance user/item representations. However, we have discovered that this aggregation mechanism comes with a drawback, which amplifies biases present in the interaction graph. For instance, a user's interactions with items can be driven by both unbiased true interest and various biased factors like item popularity or exposure. However, the current aggregation approach combines all information, both biased and unbiased, leading to biased representation learning. Consequently, graph-based recommenders can learn distorted views of users/items, hindering the modeling of their true preferences and generalizations. To address this issue, we introduce a novel framework called Adversarial Graph Dropout (AdvDrop). It differentiates between unbiased and biased interactions, enabling unbiased representation learning. For each user/item, AdvDrop employs adversarial learning to split the neighborhood into two views: one with bias-mitigated interactions and the other with bias-aware interactions. After view-specific aggregation, AdvDrop ensures that the bias-mitigated and bias-aware representations remain invariant, shielding them from the influence of bias. We validate AdvDrop's effectiveness on five public datasets that cover both general and specific biases, demonstrating significant improvements. Furthermore, our method exhibits meaningful separation of subgraphs and achieves unbiased representations for graph-based CF models, as revealed by in-depth analysis. Our code is publicly available at https://github.com/Arthurma71/AdvDrop.",
-        "subjects": [
-            "cs.IR"
-        ],
-        "comment": "Accepted to WWW 2024"
     },
     {
         "paper id": "2402.13804",
@@ -5206,20 +5240,26 @@
         "comment": null
     },
     {
-        "paper id": "2402.14005",
-        "abstract url": "https://arxiv.org/abs/2402.14005",
-        "title": "Information Elicitation in Agency Games",
+        "paper id": "2402.14007",
+        "abstract url": "https://arxiv.org/abs/2402.14007",
+        "title": "Can Watermarks Survive Translation? On the Cross-lingual Consistency of Text Watermark for Large Language Models",
         "rating": -2,
         "keywords": [
             [
-                "face"
+                "Attack"
+            ],
+            [
+                "Watermark"
+            ],
+            [
+                "cs.CL"
             ]
         ],
-        "abstract": "Rapid progress in scalable, commoditized tools for data collection and data processing has made it possible for firms and policymakers to employ ever more complex metrics as guides for decision-making. These developments have highlighted a prevailing challenge -- deciding *which* metrics to compute. In particular, a firm's ability to compute a wider range of existing metrics does not address the problem of *unknown unknowns*, which reflects informational limitations on the part of the firm. To guide the choice of metrics in the face of this informational problem, we turn to the evaluated agents themselves, who may have more information than a principal about how to measure outcomes effectively. We model this interaction as a simple agency game, where we ask: *When does an agent have an incentive to reveal the observability of a cost-correlated variable to the principal?* There are two effects: better information reduces the agent's information rents but also makes some projects go forward that otherwise would fail. We show that the agent prefers to reveal information that exposes a strong enough differentiation between high and low costs. Expanding the agent's action space to include the ability to *garble* their information, we show that the agent often prefers to garble over full revelation. Still, giving the agent the ability to garble can lead to higher total welfare. Our model has analogies with price discrimination, and we leverage some of these synergies to analyze total welfare.",
+        "abstract": "Text watermarking technology aims to tag and identify content produced by large language models (LLMs) to prevent misuse. In this study, we introduce the concept of ''cross-lingual consistency'' in text watermarking, which assesses the ability of text watermarks to maintain their effectiveness after being translated into other languages. Preliminary empirical results from two LLMs and three watermarking methods reveal that current text watermarking technologies lack consistency when texts are translated into various languages. Based on this observation, we propose a Cross-lingual Watermark Removal Attack (CWRA) to bypass watermarking by first obtaining a response from an LLM in a pivot language, which is then translated into the target language. CWRA can effectively remove watermarks by reducing the Area Under the Curve (AUC) from 0.95 to 0.67 without performance loss. Furthermore, we analyze two key factors that contribute to the cross-lingual consistency in text watermarking and propose a defense method that increases the AUC from 0.67 to 0.88 under CWRA.",
         "subjects": [
-            "cs.GT"
+            "cs.CL"
         ],
-        "comment": null
+        "comment": "Under review"
     },
     {
         "paper id": "2402.14128",
@@ -5255,6 +5295,22 @@
             "physics.geo-ph"
         ],
         "comment": "10 paged, 10 figures, 2 tables"
+    },
+    {
+        "paper id": "2402.14213",
+        "abstract url": "https://arxiv.org/abs/2402.14213",
+        "title": "Contrastive Learning of Shared Spatiotemporal EEG Representations Across Individuals for Naturalistic Neuroscience",
+        "rating": -2,
+        "keywords": [
+            [
+                "EEG"
+            ]
+        ],
+        "abstract": "Neural representations induced by naturalistic stimuli offer insights into how humans respond to peripheral stimuli in daily life. The key to understanding the general neural mechanisms underlying naturalistic stimuli processing involves aligning neural activities across individuals and extracting inter-subject shared neural representations. Targeting the Electroencephalogram (EEG) technique, known for its rich spatial and temporal information, this study presents a general framework for Contrastive Learning of Shared SpatioTemporal EEG Representations across individuals (CL-SSTER). Harnessing the representational capabilities of contrastive learning, CL-SSTER utilizes a neural network to maximize the similarity of EEG representations across individuals for identical stimuli, contrasting with those for varied stimuli. The network employed spatial and temporal convolutions to simultaneously learn the spatial and temporal patterns inherent in EEG. The versatility of CL-SSTER was demonstrated on three EEG datasets, including a synthetic dataset, a speech audio EEG dataset, and an emotional video EEG dataset. CL-SSTER attained the highest inter-subject correlation (ISC) values compared to the state-of-the-art ISC methods. The latent representations generated by CL-SSTER exhibited reliable spatiotemporal EEG patterns, which can be explained by specific aspects of the stimuli. CL-SSTER serves as an interpretable and scalable foundational framework for the identification of inter-subject shared neural representations in the realm of naturalistic neuroscience.",
+        "subjects": [
+            "q-bio.NC"
+        ],
+        "comment": "52 pages, 14 figures"
     },
     {
         "paper id": "2402.14230",
@@ -5309,20 +5365,45 @@
         "comment": "10 pages,12 figures"
     },
     {
-        "paper id": "2403.05568",
-        "abstract url": "https://arxiv.org/abs/2403.05568",
-        "title": "Revolutionizing Mental Health Care through LangChain: A Journey with a Large Language Model",
+        "paper id": "2402.14281",
+        "abstract url": "https://arxiv.org/abs/2402.14281",
+        "title": "A Landmark-Aware Visual Navigation Dataset",
         "rating": -2,
         "keywords": [
             [
-                "Health"
+                "trajectory"
+            ],
+            [
+                "Navigation"
+            ],
+            [
+                "graph"
+            ],
+            [
+                "cs.CV"
             ]
         ],
-        "abstract": "Mental health challenges are on the rise in our modern society, and the imperative to address mental disorders, especially regarding anxiety, depression, and suicidal thoughts, underscores the need for effective interventions. This paper delves into the application of recent advancements in pretrained contextualized language models to introduce MindGuide, an innovative chatbot serving as a mental health assistant for individuals seeking guidance and support in these critical areas. MindGuide leverages the capabilities of LangChain and its ChatModels, specifically ChatOpenAI, as the bedrock of its reasoning engine. The system incorporates key features such as LangChain's ChatPrompt Template, HumanMessage Prompt Template, ConversationBufferMemory, and LLMChain, creating an advanced solution for early detection and comprehensive support within the field of mental health. Additionally, the paper discusses the implementation of Streamlit to enhance the user experience and interaction with the chatbot. This novel approach holds great promise for proactive mental health intervention and assistance.",
+        "abstract": "Map representation learned by expert demonstrations has shown promising research value. However, recent advancements in the visual navigation field face challenges due to the lack of human datasets in the real world for efficient supervised representation learning of the environments. We present a Landmark-Aware Visual Navigation (LAVN) dataset to allow for supervised learning of human-centric exploration policies and map building. We collect RGB observation and human point-click pairs as a human annotator explores virtual and real-world environments with the goal of full coverage exploration of the space. The human annotators also provide distinct landmark examples along each trajectory, which we intuit will simplify the task of map or graph building and localization. These human point-clicks serve as direct supervision for waypoint prediction when learning to explore in environments. Our dataset covers a wide spectrum of scenes, including rooms in indoor environments, as well as walkways outdoors. Dataset is available at DOI: 10.5281/zenodo.10608067.",
         "subjects": [
-            "cs.HC"
+            "cs.CV"
         ],
-        "comment": "2024 IEEE 14th Annual Computing and Communication Workshop and Conference (CCWC)"
+        "comment": null
+    },
+    {
+        "paper id": "2402.14883",
+        "abstract url": "https://arxiv.org/abs/2402.14883",
+        "title": "Double-I Watermark: Protecting Model Copyright for LLM Fine-tuning",
+        "rating": -2,
+        "keywords": [
+            [
+                "Watermark"
+            ]
+        ],
+        "abstract": "To support various applications, business owners often seek the customized models that are obtained by fine-tuning a pre-trained LLM through the API provided by LLM owners or cloud servers. However, this process carries a substantial risk of model misuse, potentially resulting in severe economic consequences for business owners. Thus, safeguarding the copyright of these customized models during LLM fine-tuning has become an urgent practical requirement, but there are limited existing solutions to provide such protection. To tackle this pressing issue, we propose a novel watermarking approach named \"Double-I watermark\". Specifically, based on the instruct-tuning data, two types of backdoor data paradigms are introduced with trigger in the instruction and the input, respectively. By leveraging LLM's learning capability to incorporate customized backdoor samples into the dataset, the proposed approach effectively injects specific watermarking information into the customized model during fine-tuning, which makes it easy to inject and verify watermarks in commercial scenarios. We evaluate the proposed \"Double-I watermark\" under various fine-tuning methods, demonstrating its harmlessness, robustness, uniqueness, imperceptibility, and validity through both theoretical analysis and experimental verification.",
+        "subjects": [
+            "cs.CR"
+        ],
+        "comment": null
     },
     {
         "paper id": "2402.13779",
@@ -5334,6 +5415,7 @@
                 "graph"
             ],
             [
+                "chemistry",
                 "Chemical"
             ],
             [
@@ -5370,28 +5452,6 @@
             "cs.AI"
         ],
         "comment": "19 pages main text, 17 pages Appendix (excluding references)"
-    },
-    {
-        "paper id": "2402.14015",
-        "abstract url": "https://arxiv.org/abs/2402.14015",
-        "title": "Corrective Machine Unlearning",
-        "rating": -2.5,
-        "keywords": [
-            [
-                "Unlearning"
-            ],
-            [
-                "face"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Machine Learning models increasingly face data integrity challenges due to the use of large-scale training datasets drawn from the internet. We study what model developers can do if they detect that some data was manipulated or incorrect. Such manipulated data can cause adverse effects like vulnerability to backdoored samples, systematic biases, and in general, reduced accuracy on certain input domains. Often, all manipulated training samples are not known, and only a small, representative subset of the affected data is flagged. We formalize \"Corrective Machine Unlearning\" as the problem of mitigating the impact of data affected by unknown manipulations on a trained model, possibly knowing only a subset of impacted samples. We demonstrate that the problem of corrective unlearning has significantly different requirements from traditional privacy-oriented unlearning. We find most existing unlearning methods, including the gold-standard retraining-from-scratch, require most of the manipulated data to be identified for effective corrective unlearning. However, one approach, SSD, achieves limited success in unlearning adverse effects with just a small portion of the manipulated samples, showing the tractability of this setting. We hope our work spurs research towards developing better methods for corrective unlearning and offers practitioners a new strategy to handle data integrity challenges arising from web-scale training.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": "17 pages, 7 figures"
     },
     {
         "paper id": "2402.14049",
@@ -5467,6 +5527,25 @@
         "comment": "Code and Data released at https://github.com/pkunlp-icler/PCA-EVAL. Leaderboard at: https://docs.qq.com/sheet/DVUd4WUpGRHRqUnNV. This article supersedes its workshop version arxiv: 2310.02071. arXiv admin note: text overlap with arXiv:2310.02071"
     },
     {
+        "paper id": "2403.05568",
+        "abstract url": "https://arxiv.org/abs/2403.05568",
+        "title": "Revolutionizing Mental Health Care through LangChain: A Journey with a Large Language Model",
+        "rating": -2.5,
+        "keywords": [
+            [
+                "Health"
+            ],
+            [
+                "Workshop"
+            ]
+        ],
+        "abstract": "Mental health challenges are on the rise in our modern society, and the imperative to address mental disorders, especially regarding anxiety, depression, and suicidal thoughts, underscores the need for effective interventions. This paper delves into the application of recent advancements in pretrained contextualized language models to introduce MindGuide, an innovative chatbot serving as a mental health assistant for individuals seeking guidance and support in these critical areas. MindGuide leverages the capabilities of LangChain and its ChatModels, specifically ChatOpenAI, as the bedrock of its reasoning engine. The system incorporates key features such as LangChain's ChatPrompt Template, HumanMessage Prompt Template, ConversationBufferMemory, and LLMChain, creating an advanced solution for early detection and comprehensive support within the field of mental health. Additionally, the paper discusses the implementation of Streamlit to enhance the user experience and interaction with the chatbot. This novel approach holds great promise for proactive mental health intervention and assistance.",
+        "subjects": [
+            "cs.HC"
+        ],
+        "comment": "2024 IEEE 14th Annual Computing and Communication Workshop and Conference (CCWC)"
+    },
+    {
         "paper id": "2403.08820",
         "abstract url": "https://arxiv.org/abs/2403.08820",
         "title": "Diet-ODIN: A Novel Framework for Opioid Misuse Detection with Interpretable Dietary Patterns",
@@ -5489,23 +5568,29 @@
         "comment": null
     },
     {
-        "paper id": "2402.13617",
-        "abstract url": "https://arxiv.org/abs/2402.13617",
-        "title": "A Monolithic Cybersecurity Architecture for Power Electronic Systems",
+        "paper id": "2402.13629",
+        "abstract url": "https://arxiv.org/abs/2402.13629",
+        "title": "Adversarial Purification and Fine-tuning for Robust UDC Image Restoration",
         "rating": -3,
         "keywords": [
+            [
+                "diffusion"
+            ],
             [
                 "attacks"
             ],
             [
-                "face"
+                "Image Restoration"
+            ],
+            [
+                "eess.IV"
             ]
         ],
-        "abstract": "Power electronic systems (PES) face significant threats from various data availability and integrity attacks, significantly affecting the performance of communication networks and power system operation. As a result, several attack detection and reconstruction techniques are deployed, which makes it a costly \\& complex cybersecurity operational platform with significant room for incremental extensions for mitigation against future threats. Unlike the said traditional arrangements, our paper introduces a foundational approach by establishing a monolithic cybersecurity architecture (MCA) via incorporating semantic principles into the sampling process for distributed energy resources (DERs). This unified approach concurrently compensates for the intrusion challenges posed by cyber attacks by reconstructing signals using the dynamics of the inner control layer. This reconstruction considers essential semantic attributes, like Priority, Freshness, and Relevance to ensure resilient dynamic performance. Hence, the proposed scheme promises a generalized route to concurrently tackle a global set of cyber attacks in elevating the resilience of PES. Finally, rigorous validation on a modified IEEE 69-bus distribution system and a real-world South California Edison (SCE) 47-bus network, using OPAL-RT under diverse operating conditions, underscores its robustness, model-free design capability, scalability, and adaptability to dynamic cyber graphs and system reconfiguration.",
+        "abstract": "This study delves into the enhancement of Under-Display Camera (UDC) image restoration models, focusing on their robustness against adversarial attacks. Despite its innovative approach to seamless display integration, UDC technology faces unique image degradation challenges exacerbated by the susceptibility to adversarial perturbations. Our research initially conducts an in-depth robustness evaluation of deep-learning-based UDC image restoration models by employing several white-box and black-box attacking methods. This evaluation is pivotal in understanding the vulnerabilities of current UDC image restoration techniques. Following the assessment, we introduce a defense framework integrating adversarial purification with subsequent fine-tuning processes. First, our approach employs diffusion-based adversarial purification, effectively neutralizing adversarial perturbations. Then, we apply the fine-tuning methodologies to refine the image restoration models further, ensuring that the quality and fidelity of the restored images are maintained. The effectiveness of our proposed approach is validated through extensive experiments, showing marked improvements in resilience against typical adversarial attacks.",
         "subjects": [
-            "eess.SY"
+            "eess.IV"
         ],
-        "comment": "This paper has been accepted for publication in IEEE Transactions on Smart Grid"
+        "comment": null
     },
     {
         "paper id": "2402.13634",
@@ -5559,8 +5644,7 @@
                 "3D"
             ],
             [
-                "Facial",
-                "face"
+                "Facial"
             ]
         ],
         "abstract": "Animating virtual characters has always been a fundamental research problem in virtual reality (VR). Facial animations play a crucial role as they effectively convey emotions and attitudes of virtual humans. However, creating such facial animations can be challenging, as current methods often involve utilization of expensive motion capture devices or significant investments of time and effort from human animators in tuning animation parameters. In this paper, we propose a holistic solution to automatically animate virtual human faces. In our solution, a deep learning model was first trained to retarget the facial expression from input face images to virtual human faces by estimating the blendshape coefficients. This method offers the flexibility of generating animations with characters of different appearances and blendshape topologies. Second, a practical toolkit was developed using Unity 3D, making it compatible with the most popular VR applications. The toolkit accepts both image and video as input to animate the target virtual human faces and enables users to manipulate the animation results. Furthermore, inspired by the spirit of Human-in-the-loop (HITL), we leveraged user feedback to further improve the performance of the model and toolkit, thereby increasing the customization properties to suit user preferences. The whole solution, for which we will make the code public, has the potential to accelerate the generation of facial animations for use in VR applications.",
@@ -5691,31 +5775,6 @@
             "cs.IR"
         ],
         "comment": "12 pages, 5 figures, accepted by The Web Conference 2024"
-    },
-    {
-        "paper id": "2402.14000",
-        "abstract url": "https://arxiv.org/abs/2402.14000",
-        "title": "Real-time 3D-aware Portrait Editing from a Single Image",
-        "rating": -3,
-        "keywords": [
-            [
-                "3D"
-            ],
-            [
-                "text-to-image"
-            ],
-            [
-                "face"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "This work presents 3DPE, a practical method that can efficiently edit a face image following given prompts, like reference images or text descriptions, in a 3D-aware manner. To this end, a lightweight module is distilled from a 3D portrait generator and a text-to-image model, which provide prior knowledge of face geometry and superior editing capability, respectively. Such a design brings two compelling advantages over existing approaches. First, our system achieves real-time editing with a feedforward network (i.e., ~0.04s per image), over 100x faster than the second competitor. Second, thanks to the powerful priors, our module could focus on the learning of editing-related variations, such that it manages to handle various types of editing simultaneously in the training phase and further supports fast adaptation to user-specified customized types of editing during inference (e.g., with ~5min fine-tuning per style). The code, the model, and the interface will be made publicly available to facilitate future research.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
     },
     {
         "paper id": "2402.14044",
@@ -5853,8 +5912,7 @@
         "rating": -3.5,
         "keywords": [
             [
-                "health",
-                "face"
+                "health"
             ],
             [
                 "recommendation"
@@ -5892,34 +5950,6 @@
         "abstract": "Preservation of private user data is of paramount importance for high Quality of Experience (QoE) and acceptability, particularly with services treating sensitive data, such as IT-based health services. Whereas anonymization techniques were shown to be prone to data re-identification, synthetic data generation has gradually replaced anonymization since it is relatively less time and resource-consuming and more robust to data leakage. Generative Adversarial Networks (GANs) have been used for generating synthetic datasets, especially GAN frameworks adhering to the differential privacy phenomena. This research compares state-of-the-art GAN-based models for synthetic data generation to generate time-series synthetic medical records of dementia patients which can be distributed without privacy concerns. Predictive modeling, autocorrelation, and distribution analysis are used to assess the Quality of Generating (QoG) of the generated data. The privacy preservation of the respective models is assessed by applying membership inference attacks to determine potential data leakage risks. Our experiments indicate the superiority of the privacy-preserving GAN (PPGAN) model over other models regarding privacy preservation while maintaining an acceptable level of QoG. The presented results can support better data protection for medical use cases in the future.",
         "subjects": [
             "cs.LG"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2402.13629",
-        "abstract url": "https://arxiv.org/abs/2402.13629",
-        "title": "Adversarial Purification and Fine-tuning for Robust UDC Image Restoration",
-        "rating": -4,
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "diffusion"
-            ],
-            [
-                "attacks"
-            ],
-            [
-                "Image Restoration"
-            ],
-            [
-                "eess.IV"
-            ]
-        ],
-        "abstract": "This study delves into the enhancement of Under-Display Camera (UDC) image restoration models, focusing on their robustness against adversarial attacks. Despite its innovative approach to seamless display integration, UDC technology faces unique image degradation challenges exacerbated by the susceptibility to adversarial perturbations. Our research initially conducts an in-depth robustness evaluation of deep-learning-based UDC image restoration models by employing several white-box and black-box attacking methods. This evaluation is pivotal in understanding the vulnerabilities of current UDC image restoration techniques. Following the assessment, we introduce a defense framework integrating adversarial purification with subsequent fine-tuning processes. First, our approach employs diffusion-based adversarial purification, effectively neutralizing adversarial perturbations. Then, we apply the fine-tuning methodologies to refine the image restoration models further, ensuring that the quality and fidelity of the restored images are maintained. The effectiveness of our proposed approach is validated through extensive experiments, showing marked improvements in resilience against typical adversarial attacks.",
-        "subjects": [
-            "eess.IV"
         ],
         "comment": null
     },
@@ -5999,34 +6029,6 @@
             "cs.RO"
         ],
         "comment": "Code to be released at: https://github.com/MIT-SPARK/Khronos"
-    },
-    {
-        "paper id": "2402.14281",
-        "abstract url": "https://arxiv.org/abs/2402.14281",
-        "title": "A Landmark-Aware Visual Navigation Dataset",
-        "rating": -4,
-        "keywords": [
-            [
-                "trajectory"
-            ],
-            [
-                "Navigation"
-            ],
-            [
-                "graph"
-            ],
-            [
-                "face"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Map representation learned by expert demonstrations has shown promising research value. However, recent advancements in the visual navigation field face challenges due to the lack of human datasets in the real world for efficient supervised representation learning of the environments. We present a Landmark-Aware Visual Navigation (LAVN) dataset to allow for supervised learning of human-centric exploration policies and map building. We collect RGB observation and human point-click pairs as a human annotator explores virtual and real-world environments with the goal of full coverage exploration of the space. The human annotators also provide distinct landmark examples along each trajectory, which we intuit will simplify the task of map or graph building and localization. These human point-clicks serve as direct supervision for waypoint prediction when learning to explore in environments. Our dataset covers a wide spectrum of scenes, including rooms in indoor environments, as well as walkways outdoors. Dataset is available at DOI: 10.5281/zenodo.10608067.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
     },
     {
         "paper id": "2402.19237",
@@ -6407,7 +6409,7 @@
         "subjects": [
             "cs.MS"
         ],
-        "comment": "Minor fixes, moved applications to main part, changed to single-column layout"
+        "comment": "Fix broken reference, add R. Akers as author for contribution to tritium benchmark"
     },
     {
         "paper id": "2402.13772",
@@ -6622,6 +6624,18 @@
         "abstract": "For a large class of feature maps we provide a tight asymptotic characterisation of the test error associated with learning the readout layer, in the high-dimensional limit where the input dimension, hidden layer widths, and number of training samples are proportionally large. This characterization is formulated in terms of the population covariance of the features. Our work is partially motivated by the problem of learning with Gaussian rainbow neural networks, namely deep non-linear fully-connected networks with random but structured weights, whose row-wise covariances are further allowed to depend on the weights of previous layers. For such networks we also derive a closed-form formula for the feature covariance in terms of the weight matrices. We further find that in some cases our results can capture feature maps learned by deep, finite-width neural networks trained under gradient descent.",
         "subjects": [
             "stat.ML"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2402.14005",
+        "abstract url": "https://arxiv.org/abs/2402.14005",
+        "title": "Information Elicitation in Agency Games",
+        "rating": -10,
+        "keywords": [],
+        "abstract": "Rapid progress in scalable, commoditized tools for data collection and data processing has made it possible for firms and policymakers to employ ever more complex metrics as guides for decision-making. These developments have highlighted a prevailing challenge -- deciding *which* metrics to compute. In particular, a firm's ability to compute a wider range of existing metrics does not address the problem of *unknown unknowns*, which reflects informational limitations on the part of the firm. To guide the choice of metrics in the face of this informational problem, we turn to the evaluated agents themselves, who may have more information than a principal about how to measure outcomes effectively. We model this interaction as a simple agency game, where we ask: *When does an agent have an incentive to reveal the observability of a cost-correlated variable to the principal?* There are two effects: better information reduces the agent's information rents but also makes some projects go forward that otherwise would fail. We show that the agent prefers to reveal information that exposes a strong enough differentiation between high and low costs. Expanding the agent's action space to include the ability to *garble* their information, we show that the agent often prefers to garble over full revelation. Still, giving the agent the ability to garble can lead to higher total welfare. Our model has analogies with price discrimination, and we leverage some of these synergies to analyze total welfare.",
+        "subjects": [
+            "cs.GT"
         ],
         "comment": null
     },
@@ -6854,18 +6868,6 @@
         "comment": "30 pages"
     },
     {
-        "paper id": "2402.14213",
-        "abstract url": "https://arxiv.org/abs/2402.14213",
-        "title": "Contrastive Learning of Shared Spatiotemporal EEG Representations Across Individuals for Naturalistic Neuroscience",
-        "rating": -10,
-        "keywords": [],
-        "abstract": "Neural representations induced by naturalistic stimuli offer insights into how humans respond to peripheral stimuli in daily life. The key to understanding the general neural mechanisms underlying naturalistic stimuli processing involves aligning neural activities across individuals and extracting inter-subject shared neural representations. Targeting the Electroencephalogram (EEG) technique, known for its rich spatial and temporal information, this study presents a general framework for Contrastive Learning of Shared SpatioTemporal EEG Representations across individuals (CL-SSTER). Harnessing the representational capabilities of contrastive learning, CL-SSTER utilizes a neural network to maximize the similarity of EEG representations across individuals for identical stimuli, contrasting with those for varied stimuli. The network employed spatial and temporal convolutions to simultaneously learn the spatial and temporal patterns inherent in EEG. The versatility of CL-SSTER was demonstrated on three EEG datasets, including a synthetic dataset, a speech audio EEG dataset, and an emotional video EEG dataset. CL-SSTER attained the highest inter-subject correlation (ISC) values compared to the state-of-the-art ISC methods. The latent representations generated by CL-SSTER exhibited reliable spatiotemporal EEG patterns, which can be explained by specific aspects of the stimuli. CL-SSTER serves as an interpretable and scalable foundational framework for the identification of inter-subject shared neural representations in the realm of naturalistic neuroscience.",
-        "subjects": [
-            "q-bio.NC"
-        ],
-        "comment": "52 pages, 14 figures"
-    },
-    {
         "paper id": "2402.14229",
         "abstract url": "https://arxiv.org/abs/2402.14229",
         "title": "Sample-Efficient Linear Regression with Self-Selection Bias",
@@ -6972,18 +6974,6 @@
             "physics.ao-ph"
         ],
         "comment": "6 pages, 3 figures"
-    },
-    {
-        "paper id": "2402.14883",
-        "abstract url": "https://arxiv.org/abs/2402.14883",
-        "title": "Double-I Watermark: Protecting Model Copyright for LLM Fine-tuning",
-        "rating": -10,
-        "keywords": [],
-        "abstract": "To support various applications, business owners often seek the customized models that are obtained by fine-tuning a pre-trained LLM through the API provided by LLM owners or cloud servers. However, this process carries a substantial risk of model misuse, potentially resulting in severe economic consequences for business owners. Thus, safeguarding the copyright of these customized models during LLM fine-tuning has become an urgent practical requirement, but there are limited existing solutions to provide such protection. To tackle this pressing issue, we propose a novel watermarking approach named \"Double-I watermark\". Specifically, based on the instruct-tuning data, two types of backdoor data paradigms are introduced with trigger in the instruction and the input, respectively. By leveraging LLM's learning capability to incorporate customized backdoor samples into the dataset, the proposed approach effectively injects specific watermarking information into the customized model during fine-tuning, which makes it easy to inject and verify watermarks in commercial scenarios. We evaluate the proposed \"Double-I watermark\" under various fine-tuning methods, demonstrating its harmlessness, robustness, uniqueness, imperceptibility, and validity through both theoretical analysis and experimental verification.",
-        "subjects": [
-            "cs.CR"
-        ],
-        "comment": null
     },
     {
         "paper id": "2402.17776",
