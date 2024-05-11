@@ -76,6 +76,7 @@ def parse(tag, rater):
     abstractUrl = idTag["href"]
     title = tag.findChild("p", class_ = "title is-5 mathjax").text.strip()
     subjectTags = tag.findChildren("span", class_ = "tag is-small is-link tooltip is-tooltip-top")
+    subjectTags += tag.findChildren("span", class_ = "tag is-small is-grey tooltip is-tooltip-top")
     subjects = [t.text.strip() for t in subjectTags]
     abstract = tag.findChild("span", class_ = "abstract-full has-text-grey-dark mathjax")
     abstract = " ".join(abstract.text.strip().split()).replace(" \u25b3 Less", "")

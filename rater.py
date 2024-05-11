@@ -94,7 +94,7 @@ class Rater:
         
         for rating in sorted(ratingDict.keys()):
             for keyword in ratingDict[rating]:
-                if keyword in content:
+                if ((keyword in content) and (rating > finalRating)):
                     finalRating = rating
                     keywords.append(keyword)
         
@@ -133,7 +133,7 @@ class Rater:
             cmtRating, cmtKeywords = 0, []
 
         keywords = cntKeywords + sbjKeywords + cmtKeywords
-        rating = cntRating + sbjRating + cmtRating + (-10 if (len(keywords) == 0) else 0)
+        rating = (cntRating + sbjRating + cmtRating) if (len(keywords) != 0) else -10
         
         return rating, keywords
 
