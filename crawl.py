@@ -10,6 +10,8 @@ from rater import rater
 
 def getDates():
     parser = argparse.ArgumentParser()
+    parser.add_argument("--refresh", "-r", action = "store_true", required = False,
+                        help = "refresh the ratings without crawling")
     parser.add_argument("--lazy", "-l", action = "store_true", required = False,
                         help = "start from the previous result to today")
     parser.add_argument("--start", "-s", type = str, default = None, required = False,
@@ -22,6 +24,9 @@ def getDates():
     oneDay = timedelta(days = 1)
     start = datetime.today() - oneDay
     end = datetime.today()
+
+    if (arg.refresh):
+        return []
 
     if (arg.lazy and os.path.isdir("results")):
         start = sorted(os.listdir("results"))[-1].replace(".json", "")
@@ -82,7 +87,7 @@ def parse(tag, rater):
         "paper id": paperId,
         "abstract url": abstractUrl,
         "title": title,
-        "rating": rating,
+        "rating": str(rating).replace(".0", ""),
         "keywords": keywords,
         "abstract": abstract,
         "subjects": subjects,
@@ -92,8 +97,51 @@ def parse(tag, rater):
     return result
 
 
+def refresh():
+    metadata = {}
+
+    for file in sorted(os.listdir("results")):
+        print(f"refresh {file}")
+        date = file.replace(".json", "")
+        newResults = []
+        stat = {}
+
+        with open(os.path.join("results", file), "r") as f:
+            results = json.load(f)
+        
+        for result in results:
+            title = result["title"]
+            subjects = result["subjects"]
+            abstract = result["abstract"]
+            comment = result["comment"]
+            rating, keywords = rater(title, subjects, abstract, comment)
+            rating = str(rating).replace(".0", "")
+            result["rating"] = rating
+            result["keywords"] = keywords
+            newResults.append(result)
+            stat[rating] = stat.get(rating, 0) + 1
+
+        newResults = sorted(newResults, key = lambda x: (-float(x["rating"]), x["paper id"]))
+        tmp = [("total", len(results))] + [(k, v) for (k, v) in sorted(stat.items(), key = lambda x: -float(x[0]))]
+        metadata[date] = dict(tmp)
+
+        with open(os.path.join("results", file), "w") as f:
+            json.dump(newResults, f, indent = 4)
+
+    metadata = {
+        k: v for (k, v) in sorted(metadata.items(), key = lambda x: -int(x[0].replace("-", "")))
+    }
+    
+    with open("metadata.json", "w") as f:
+        json.dump(metadata, f, indent = 4)
+
+
 if (__name__ == "__main__"):
     dates = getDates()
+
+    if (len(dates) == 0):
+        refresh()
+        exit()
 
     with open("metadata.json", "r") as f:
         metadata = json.load(f)
@@ -118,8 +166,8 @@ if (__name__ == "__main__"):
             print(f"There are no papers from {fromDate} to {toDate} now. (skipped)")
             continue
 
-        results = sorted(results, key = lambda x: (-x["rating"], x["paper id"]))
-        tmp = [("total", total)] + [(k, v) for (k, v) in sorted(stat.items(), key = lambda x: -x[0])]
+        results = sorted(results, key = lambda x: (-float(x["rating"]), x["paper id"]))
+        tmp = [("total", total)] + [(k, v) for (k, v) in sorted(stat.items(), key = lambda x: -float(x[0]))]
         metadata[fromDate] = dict(tmp)
 
         with open(f"results/{fromDate}.json", "w") as f:
