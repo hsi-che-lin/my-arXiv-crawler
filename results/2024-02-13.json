@@ -73,6 +73,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -137,7 +138,9 @@
             ],
             [
                 "cs.AI",
-                "cs.CV"
+                "cs.LG",
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "The advancement of Large Vision-Language Models (LVLMs) has increasingly highlighted the critical issue of their tendency to hallucinate non-existing objects in the images. To address this issue, previous works focused on using specially curated datasets or powerful LLMs (e.g., GPT-3.5) to rectify the outputs of LVLMs. However, these approaches require either expensive training/fine-tuning or API access to advanced LLMs to correct the model's output post-generation. In this paper, we tackle this challenge by introducing a framework called Mitigating hallucinAtion via classifieR-Free guIdaNcE (MARINE), which is both training-free and API-free, and can effectively and efficiently reduce object hallucinations during the generation process. Specifically, MARINE enriches the visual context of LVLMs by integrating existing open-source vision models, and employs classifier-free guidance to incorporate the additional object grounding features to improve the precision of LVLMs' generations. Through comprehensive evaluations across $6$ popular LVLMs with diverse evaluation metrics, we demonstrate the effectiveness of MARINE, which even outperforms existing fine-tuning-based methods. Remarkably, it not only reduces hallucinations but also improves the detailedness of LVLMs' generations, as assessed by GPT-4V.",
@@ -159,7 +162,8 @@
                 "vision-language"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "When LLMs perform zero-shot inference, they typically use a prompt with a task specification, and generate a completion. However, there is no work to explore the possibility of the reverse - going from completion to task specification. In this paper, we employ both directions to perform cycle-supervised learning entirely in-context. Our goal is to create a forward map f : X -> Y (e.g. image -> generated caption), coupled with a backward map g : Y -> X (e.g. caption -> generated image) to construct a cycle-consistency \"loss\" (formulated as an update to the prompt) to enforce g(f(X)) ~= X. The technique, called CyclePrompt, uses cycle-consistency as a free supervisory signal to iteratively craft the prompt. Importantly, CyclePrompt reinforces model performance without expensive fine-tuning, without training data, and without the complexity of external environments (e.g. compilers, APIs). We demonstrate CyclePrompt in two domains: code generation and image captioning. Our results on the HumanEval coding benchmark put us in first place on the leaderboard among models that do not rely on extra training data or usage of external environments, and third overall. Compared to the GPT4 baseline, we improve accuracy from 80.5% to 87.2%. In the vision-language space, we generate detailed image captions which outperform baseline zero-shot GPT4V captions, when tested against natural (VQAv2) and diagrammatic (FigureQA) visual question-answering benchmarks. To the best of our knowledge, this is the first use of self-supervised learning for prompting.",
@@ -215,6 +219,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -249,7 +254,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Noise removal in the standard RGB (sRGB) space remains a challenging task, in that the noise statistics of real-world images can be different in R, G and B channels. In fact, the green channel usually has twice the sampling rate in raw data and a higher signal-to-noise ratio than red/blue ones. However, the green channel prior (GCP) is often understated or ignored in color image denoising since many existing approaches mainly focus on modeling the relationship among image patches. In this paper, we propose a simple and effective one step GCP-based image denoising (GCP-ID) method, which aims to exploit the GCP for denoising in the sRGB space by integrating it into the classic nonlocal transform domain denoising framework. Briefly, we first take advantage of the green channel to guide the search of similar patches, which improves the patch search quality and encourages sparsity in the transform domain. Then we reformulate RGB patches into RGGB arrays to explicitly characterize the density of green samples. The block circulant representation is utilized to capture the cross-channel correlation and the channel redundancy. Experiments on both synthetic and real-world datasets demonstrate the competitive performance of the proposed GCP-ID method for the color image and video denoising tasks. The code is available at github.com/ZhaomingKong/GCP-ID.",
@@ -316,7 +322,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "Voice Activity Detection (VAD) and Overlapped Speech Detection (OSD) are key pre-processing tasks for speaker diarization. In the meeting context, it is often easier to capture speech with a distant device. This consideration however leads to severe performance degradation. We study a unified supervised learning framework to solve distant multi-microphone joint VAD and OSD (VAD+OSD). This paper investigates various multi-channel VAD+OSD front-ends that weight and combine incoming channels. We propose three algorithms based on the Self-Attention Channel Combinator (SACC), previously proposed in the literature. Experiments conducted on the AMI meeting corpus exhibit that channel combination approaches bring significant VAD+OSD improvements in the distant speech scenario. Specifically, we explore the use of learned complex combination weights and demonstrate the benefits of such an approach in terms of explainability. Channel combination-based VAD+OSD systems are evaluated on the final back-end task, i.e. speaker diarization, and show significant improvements. Finally, since multi-channel systems are trained given a fixed array configuration, they may fail in generalizing to other array set-ups, e.g. mismatched number of microphones. A channel-number invariant loss is proposed to learn a unique feature representation regardless of the number of available microphones. The evaluation conducted on mismatched array configurations highlights the robustness of this training strategy.",
@@ -351,7 +358,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ],
             [
                 "ICLR"
@@ -589,6 +597,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -623,7 +632,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "Signal processing in the time-frequency plane has a long history and remains a field of methodological innovation. For instance, detection and denoising based on the zeros of the spectrogram have been proposed since 2015, contrasting with a long history of focusing on larger values of the spectrogram. Yet, unlike neighboring fields like optimization and machine learning, time-frequency signal processing lacks widely-adopted benchmarking tools. In this work, we contribute an open-source, Python-based toolbox termed MCSM-Benchs for benchmarking multi-component signal analysis methods, and we demonstrate our toolbox on three time-frequency benchmarks. First, we compare different methods for signal detection based on the zeros of the spectrogram, including unexplored variations of previously proposed detection tests. Second, we compare zero-based denoising methods to both classical and novel methods based on large values and ridges of the spectrogram. Finally, we compare the denoising performance of these methods against typical spectrogram thresholding strategies, in terms of post-processing artifacts commonly referred to as musical noise. At a low level, the obtained results provide new insight on the assessed approaches, and in particular research directions to further develop zero-based methods. At a higher level, our benchmarks exemplify the benefits of using a public, collaborative, common framework for benchmarking.",
@@ -676,7 +686,8 @@
         "keywords": [
             [
                 "cs.LG",
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "A multimodal large language model (MLLM) agent can receive instructions, capture images, retrieve histories from memory, and decide which tools to use. Nonetheless, red-teaming efforts have revealed that adversarial images/prompts can jailbreak an MLLM and cause unaligned behaviors. In this work, we report an even more severe safety issue in multi-agent environments, referred to as infectious jailbreak. It entails the adversary simply jailbreaking a single agent, and without any further intervention from the adversary, (almost) all agents will become infected exponentially fast and exhibit harmful behaviors. To validate the feasibility of infectious jailbreak, we simulate multi-agent environments containing up to one million LLaVA-1.5 agents, and employ randomized pair-wise chat as a proof-of-concept instantiation for multi-agent interaction. Our results show that feeding an (infectious) adversarial image into the memory of any randomly chosen agent is sufficient to achieve infectious jailbreak. Finally, we derive a simple principle for determining whether a defense mechanism can provably restrain the spread of infectious jailbreak, but how to design a practical defense that meets this principle remains an open question to investigate. Our project page is available at https://sail-sg.github.io/Agent-Smith/.",
@@ -892,7 +903,9 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.CL"
+                "cs.CL",
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "This paper reports our work on building up a Cantonese Speech-to-Text (STT) system with a syllable based acoustic model. This is a part of an effort in building a STT system to aid dyslexic students who have cognitive deficiency in writing skills but have no problem expressing their ideas through speech. For Cantonese speech recognition, the basic unit of acoustic models can either be the conventional Initial-Final (IF) syllables, or the Onset-Nucleus-Coda (ONC) syllables where finals are further split into nucleus and coda to reflect the intra-syllable variations in Cantonese. By using the Kaldi toolkit, our system is trained using the stochastic gradient descent optimization model with the aid of GPUs for the hybrid Deep Neural Network and Hidden Markov Model (DNN-HMM) with and without I-vector based speaker adaptive training technique. The input features of the same Gaussian Mixture Model with speaker adaptive training (GMM-SAT) to DNN are used in all cases. Experiments show that the ONC-based syllable acoustic modeling with I-vector based DNN-HMM achieves the best performance with the word error rate (WER) of 9.66% and the real time factor (RTF) of 1.38812.",
@@ -955,7 +968,9 @@
             ],
             [
                 "cs.AI",
-                "cs.CL"
+                "cs.CL",
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "In this paper, we focus on solving one of the most important tasks in the field of speech processing, i.e., automatic speech recognition (ASR), with speech foundation encoders and large language models (LLM). Recent works have complex designs such as compressing the output temporally for the speech encoder, tackling modal alignment for the projector, and utilizing parameter-efficient fine-tuning for the LLM. We found that delicate designs are not necessary, while an embarrassingly simple composition of off-the-shelf speech encoder, LLM, and the only trainable linear projector is competent for the ASR task. To be more specific, we benchmark and explore various combinations of LLMs and speech encoders, leading to the optimal LLM-based ASR system, which we call SLAM-ASR. The proposed SLAM-ASR provides a clean setup and little task-specific design, where only the linear projector is trained. To the best of our knowledge, SLAM-ASR achieves the best performance on the Librispeech benchmark among LLM-based ASR models and even outperforms the latest LLM-based audio-universal model trained on massive pair data. Finally, we explore the capability emergence of LLM-based ASR in the process of modal alignment. We hope that our study can facilitate the research on extending LLM with cross-modality capacity and shed light on the LLM-based ASR community.",
@@ -1041,7 +1056,9 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.CL"
+                "cs.CL",
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "Non-autoregressive automatic speech recognition (NASR) models have gained attention due to their parallelism and fast inference. The encoder-based NASR, e.g. connectionist temporal classification (CTC), can be initialized from the speech foundation models (SFM) but does not account for any dependencies among intermediate tokens. The encoder-decoder-based NASR, like CTC alignment-based single-step non-autoregressive transformer (CASS-NAT), can mitigate the dependency problem but is not able to efficiently integrate SFM. Inspired by the success of recent work of speech-text joint pre-training with a shared transformer encoder, we propose a new encoder-based NASR, UniEnc-CASSNAT, to combine the advantages of CTC and CASS-NAT. UniEnc-CASSNAT consists of only an encoder as the major module, which can be the SFM. The encoder plays the role of both the CASS-NAT encoder and decoder by two forward passes. The first pass of the encoder accepts the speech signal as input, while the concatenation of the speech signal and the token-level acoustic embedding is used as the input for the second pass. Examined on the Librispeech 100h, MyST, and Aishell1 datasets, the proposed UniEnc-CASSNAT achieves state-of-the-art NASR results and is better or comparable to CASS-NAT with only an encoder and hence, fewer model parameters. Our codes are publicly available.",
@@ -1059,7 +1076,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "Sound field reconstruction (SFR) augments the information of a sound field captured by a microphone array. Conventional SFR methods using basis function decomposition are straightforward and computationally efficient, but may require more microphones than needed to measure the sound field. Recent studies show that pure data-driven and learning-based methods are promising in some SFR tasks, but they are usually computationally heavy and may fail to reconstruct a physically valid sound field. This paper proposes a compact acoustics-informed neural network (AINN) method for SFR, whereby the Helmholtz equation is exploited to regularize the neural network. As opposed to pure data-driven approaches that solely rely on measured sound pressures, the integration of the Helmholtz equation improves robustness of the neural network against variations during the measurement processes and prompts the generation of physically valid reconstructions. The AINN is designed to be compact, and is able to predict not only the sound pressures but also sound pressure gradients within a spatial region of interest based on measured sound pressures along the boundary. Numerical experiments with acoustic transfer functions measured in different environments demonstrate the superiority of the AINN method over the traditional cylinder harmonic decomposition and the singular value decomposition methods.",
@@ -1095,6 +1113,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -1114,7 +1133,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "Since the first speech recognition systems were built more than 30 years ago, improvement in voice technology has enabled applications such as smart assistants and automated customer support. However, conversation intelligence of the future requires recognizing free-flowing multi-party conversations, which is a crucial and challenging component that still remains unsolved. In this dissertation, we focus on this problem of speaker-attributed multi-talker speech recognition, and propose two perspectives which result from its probabilistic formulation. In the modular perspective, we build a pipeline of sub-tasks involving speaker diarization, target speaker extraction, and speech recognition. Our first contribution is a method to perform overlap-aware diarization by reformulating spectral clustering as a constrained optimization problem. We also describe an algorithm to ensemble diarization outputs, either to combine overlap-aware systems or to perform multi-channel diarization by late fusion. Once speaker segments are identified, we robustly extract single-speaker utterances from the mixture using a GPU-accelerated implementation of guided source separation, which allows us to use an off-the-shelf ASR system to obtain speaker-attributed transcripts. Since the modular approach suffers from error propagation, we propose an alternate \"end-to-end\" perspective on the problem. For this, we describe the Streaming Unmixing and Recognition Transducer (SURT). We show how to train SURT models efficiently by carefully designing the network architecture, objective functions, and mixture simulation techniques. Finally, we add an auxiliary speaker branch to enable joint prediction of speaker labels synchronized with the speech tokens. We demonstrate that training on synthetic mixtures and adapting with real data helps these models transfer well for streaming transcription of real meeting sessions.",
@@ -1166,6 +1186,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -1257,7 +1278,8 @@
                 "GAN"
             ],
             [
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ],
             [
                 "ICASSP"
@@ -1277,7 +1299,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "It is well known that neural networks with many more parameters than training examples do not overfit. Implicit regularization phenomena, which are still not well understood, occur during optimization and 'good' networks are favored. Thus the number of parameters is not an adequate measure of complexity if we do not consider all possible networks but only the 'good' ones. To better understand which networks are favored during optimization, we study the geometry of the output set as parameters vary. When the inputs are fixed, we prove that the dimension of this set changes and that the local dimension, called batch functional dimension, is almost surely determined by the activation patterns in the hidden layers. We prove that the batch functional dimension is invariant to the symmetries of the network parameterization: neuron permutations and positive rescalings. Empirically, we establish that the batch functional dimension decreases during optimization. As a consequence, optimization leads to parameters with low batch functional dimensions. We call this phenomenon geometry-induced implicit regularization.The batch functional dimension depends on both the network parameters and inputs. To understand the impact of the inputs, we study, for fixed parameters, the largest attainable batch functional dimension when the inputs vary. We prove that this quantity, called computable full functional dimension, is also invariant to the symmetries of the network's parameterization, and is determined by the achievable activation patterns. We also provide a sampling theorem, showing a fast convergence of the estimation of the computable full functional dimension for a random input of increasing size. Empirically we find that the computable full functional dimension remains close to the number of parameters, which is related to the notion of local identifiability. This differs from the observed values for the batch functional dimension computed on training inputs and test inputs. The latter are influenced by geometry-induced implicit regularization.",
@@ -1297,7 +1320,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Counterfactual explanations provide a popular method for analyzing the predictions of black-box systems, and they can offer the opportunity for computational recourse by suggesting actionable changes on how to change the input to obtain a different (i.e. more favorable) system output. However, recent work highlighted their vulnerability to different types of manipulations. This work studies the vulnerability of counterfactual explanations to data poisoning. We formalize data poisoning in the context of counterfactual explanations for increasing the cost of recourse on three different levels: locally for a single instance, or a sub-group of instances, or globally for all instances. We demonstrate that state-of-the-art counterfactual generation methods \\& toolboxes are vulnerable to such data poisoning.",
@@ -1403,7 +1427,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Miscalibration in deep learning refers to there is a discrepancy between the predicted confidence and performance. This problem usually arises due to the overfitting problem, which is characterized by learning everything presented in the training set, resulting in overconfident predictions during testing. Existing methods typically address overfitting and mitigate the miscalibration by adding a maximum-entropy regularizer to the objective function. The objective can be understood as seeking a model that fits the ground-truth labels by increasing the confidence while also maximizing the entropy of predicted probabilities by decreasing the confidence. However, previous methods lack clear guidance on confidence adjustment, leading to conflicting objectives (increasing but also decreasing confidence). Therefore, we introduce a method called Dynamic Regularization (DReg), which aims to learn what should be learned during training thereby circumventing the confidence adjusting trade-off. At a high level, DReg aims to obtain a more reliable model capable of acknowledging what it knows and does not know. Specifically, DReg effectively fits the labels for in-distribution samples (samples that should be learned) while applying regularization dynamically to samples beyond model capabilities (e.g., outliers), thereby obtaining a robust calibrated model especially on the samples beyond model capabilities. Both theoretical and empirical analyses sufficiently demonstrate the superiority of DReg compared with previous methods.",
@@ -1556,7 +1581,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Cellular reprogramming can be used for both the prevention and cure of different diseases. However, the efficiency of discovering reprogramming strategies with classical wet-lab experiments is hindered by lengthy time commitments and high costs. In this study, we develop a novel computational framework based on deep reinforcement learning that facilitates the identification of reprogramming strategies. For this aim, we formulate a control problem in the context of cellular reprogramming for the frameworks of BNs and PBNs under the asynchronous update mode. Furthermore, we introduce the notion of a pseudo-attractor and a procedure for identification of pseudo-attractor state during training. Finally, we devise a computational framework for solving the control problem, which we test on a number of different models.",
@@ -1698,7 +1724,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "This paper contributes a new approach for distributional reinforcement learning which elucidates a clean separation of transition structure and reward in the learning process. Analogous to how the successor representation (SR) describes the expected consequences of behaving according to a given policy, our distributional successor measure (SM) describes the distributional consequences of this behaviour. We formulate the distributional SM as a distribution over distributions and provide theory connecting it with distributional and model-based reinforcement learning. Moreover, we propose an algorithm that learns the distributional SM from data by minimizing a two-level maximum mean discrepancy. Key to our method are a number of algorithmic techniques that are independently valuable for learning generative models of state. As an illustration of the usefulness of the distributional SM, we show that it enables zero-shot risk-sensitive policy evaluation in a way that was not previously possible.",
@@ -1734,7 +1761,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "The recent rapid progress in (self) supervised learning models is in large part predicted by empirical scaling laws: a model's performance scales proportionally to its size. Analogous scaling laws remain elusive for reinforcement learning domains, however, where increasing the parameter count of a model often hurts its final performance. In this paper, we demonstrate that incorporating Mixture-of-Expert (MoE) modules, and in particular Soft MoEs (Puigcerver et al., 2023), into value-based networks results in more parameter-scalable models, evidenced by substantial performance increases across a variety of training regimes and model sizes. This work thus provides strong empirical evidence towards developing scaling laws for reinforcement learning.",
@@ -2083,7 +2111,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "The inverse reinforcement learning approach to imitation learning is a double-edged sword. On the one hand, it can enable learning from a smaller number of expert demonstrations with more robustness to error compounding than behavioral cloning approaches. On the other hand, it requires that the learner repeatedly solve a computationally expensive reinforcement learning (RL) problem. Often, much of this computation is wasted searching over policies very dissimilar to the expert's. In this work, we propose using hybrid RL -- training on a mixture of online and expert data -- to curtail unnecessary exploration. Intuitively, the expert data focuses the learner on good states during training, which reduces the amount of exploration required to compute a strong policy. Notably, such an approach doesn't need the ability to reset the learner to arbitrary states in the environment, a requirement of prior work in efficient inverse RL. More formally, we derive a reduction from inverse RL to expert-competitive RL (rather than globally optimal RL) that allows us to dramatically reduce interaction during the inner policy search loop while maintaining the benefits of the IRL approach. This allows us to derive both model-free and model-based hybrid inverse RL algorithms with strong policy performance guarantees. Empirically, we find that our approaches are significantly more sample efficient than standard inverse RL and several other baselines on a suite of continuous control tasks.",
@@ -2289,7 +2318,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "We study the active few-shot fine-tuning of large neural networks to downstream tasks. We show that few-shot fine-tuning is an instance of a generalization of classical active learning, transductive active learning, and we propose ITL, short for information-based transductive learning, an approach which samples adaptively to maximize the information gained about specified downstream tasks. Under general regularity assumptions, we prove that ITL converges uniformly to the smallest possible uncertainty obtainable from the accessible data. To the best of our knowledge, we are the first to derive generalization bounds of this kind, and they may be of independent interest for active learning. We apply ITL to the few-shot fine-tuning of large neural networks and show that ITL substantially improves upon the state-of-the-art.",
@@ -2306,7 +2336,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "We generalize active learning to address real-world settings where sampling is restricted to an accessible region of the domain, while prediction targets may lie outside this region. To this end, we propose ITL, short for information-based transductive learning, an approach which samples adaptively to maximize the information gained about specified prediction targets. We show, under general regularity assumptions, that ITL converges uniformly to the smallest possible uncertainty obtainable from the accessible data. We demonstrate ITL in two key applications: Few-shot fine-tuning of large neural networks and safe Bayesian optimization, and in both cases, ITL significantly outperforms the state-of-the-art.",
@@ -2342,7 +2373,8 @@
                 "avatar"
             ],
             [
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "Social virtual reality (VR) serves as a vital platform for transgender individuals to explore their identities through avatars and foster personal connections within online communities. However, it presents a challenge: the disconnect between avatar embodiment and voice representation, often leading to misgendering and harassment. Prior research acknowledges this issue but overlooks the potential solution of voice changers. We interviewed 13 transgender and gender-nonconforming users of social VR platforms, focusing on their experiences with and without voice changers. We found that using a voice changer not only reduces voice-related harassment, but also allows them to experience gender euphoria through both hearing their modified voice and the reactions of others to their modified voice, motivating them to pursue voice training and medication to achieve desired voices. Furthermore, we identified the technical barriers to current voice changer technology and potential improvements to alleviate the problems that transgender and gender-nonconforming users face.",
@@ -2405,6 +2437,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -2548,7 +2581,8 @@
             ],
             [
                 "cs.LG",
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "Backdoor attacks are commonly executed by contaminating training data, such that a trigger can activate predetermined harmful effects during the test phase. In this work, we present AnyDoor, a test-time backdoor attack against multimodal large language models (MLLMs), which involves injecting the backdoor into the textual modality using adversarial test images (sharing the same universal perturbation), without requiring access to or modification of the training data. AnyDoor employs similar techniques used in universal adversarial attacks, but distinguishes itself by its ability to decouple the timing of setup and activation of harmful effects. In our experiments, we validate the effectiveness of AnyDoor against popular MLLMs such as LLaVA-1.5, MiniGPT-4, InstructBLIP, and BLIP-2, as well as provide comprehensive ablation studies. Notably, because the backdoor is injected by a universal perturbation, AnyDoor can dynamically change its backdoor trigger prompts/harmful effects, exposing a new challenge for defending against backdoor attacks. Our project page is available at https://sail-sg.github.io/AnyDoor/.",
@@ -2571,7 +2605,8 @@
                 "Federated Learning"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ],
             [
                 "AAAI"
@@ -2636,6 +2671,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -2658,6 +2694,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -2679,7 +2716,8 @@
                 "Diffusion"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ],
             [
                 "CVPR"
@@ -2703,7 +2741,8 @@
             ],
             [
                 "cs.LG",
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "The volume of image repositories continues to grow. Despite the availability of content-based addressing, we still lack a lightweight tool that allows us to discover images of distinct characteristics from a large collection. In this paper, we propose a fast and training-free algorithm for novel image discovery. The key of our algorithm is formulating a collection of images as a perceptual distance-weighted graph, within which our task is to locate the K-densest subgraph that corresponds to a subset of the most unique images. While solving this problem is not just NP-hard but also requires a full computation of the potentially huge distance matrix, we propose to relax it into a K-sparse eigenvector problem that we can efficiently solve using stochastic gradient descent (SGD) without explicitly computing the distance matrix. We compare our algorithm against state-of-the-arts on both synthetic and real datasets, showing that it is considerably faster to run with a smaller memory footprint while able to mine novel images more accurately.",
@@ -2725,7 +2764,8 @@
                 "synthesis"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Over the past years, image generation and manipulation have achieved remarkable progress due to the rapid development of generative AI based on deep learning. Recent studies have devoted significant efforts to address the problem of face image manipulation caused by deepfake techniques. However, the problem of detecting purely synthesized face images has been explored to a lesser extent. In particular, the recent popular Diffusion Models (DMs) have shown remarkable success in image synthesis. Existing detectors struggle to generalize between synthesized images created by different generative models. In this work, a comprehensive benchmark including human face images produced by Generative Adversarial Networks (GANs) and a variety of DMs has been established to evaluate both the generalization ability and robustness of state-of-the-art detectors. Then, the forgery traces introduced by different generative models have been analyzed in the frequency domain to draw various insights. The paper further demonstrates that a detector trained with frequency representation can generalize well to other unseen generative models.",
@@ -2849,7 +2889,8 @@
                 "Diffusion"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Diffusion models have achieved remarkable success in generating high quality image and video data. More recently, they have also been used for image compression with high perceptual quality. In this paper, we present a novel approach to extreme video compression leveraging the predictive power of diffusion-based generative models at the decoder. The conditional diffusion model takes several neural compressed frames and generates subsequent frames. When the reconstruction quality drops below the desired level, new frames are encoded to restart prediction. The entire video is sequentially encoded to achieve a visually pleasing reconstruction, considering perceptual quality metrics such as the learned perceptual image patch similarity (LPIPS) and the Frechet video distance (FVD), at bit rates as low as 0.02 bits per pixel (bpp). Experimental results demonstrate the effectiveness of the proposed scheme compared to standard codecs such as H.264 and H.265 in the low bpp regime. The results showcase the potential of exploiting the temporal relations in video data using generative models. Code is available at: https://github.com/ElesionKyrie/Extreme-Video-Compression-With-Prediction-Using-Pre-trainded-Diffusion-Models-",
@@ -2870,7 +2911,8 @@
                 "Graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Graph neural networks (GNNs) have exhibited remarkable performance under the assumption that test data comes from the same distribution of training data. However, in real-world scenarios, this assumption may not always be valid. Consequently, there is a growing focus on exploring the Out-of-Distribution (OOD) problem in the context of graphs. Most existing efforts have primarily concentrated on improving graph OOD generalization from two \\textbf{model-agnostic} perspectives: data-driven methods and strategy-based learning. However, there has been limited attention dedicated to investigating the impact of well-known \\textbf{GNN model architectures} on graph OOD generalization, which is orthogonal to existing research. In this work, we provide the first comprehensive investigation of OOD generalization on graphs from an architecture perspective, by examining the common building blocks of modern GNNs. Through extensive experiments, we reveal that both the graph self-attention mechanism and the decoupled architecture contribute positively to graph OOD generalization. In contrast, we observe that the linear classification layer tends to compromise graph OOD generalization capability. Furthermore, we provide in-depth theoretical insights and discussions to underpin these discoveries. These insights have empowered us to develop a novel GNN backbone model, DGAT, designed to harness the robust properties of both graph self-attention mechanism and the decoupled architecture. Extensive experimental results demonstrate the effectiveness of our model under graph OOD, exhibiting substantial and consistent enhancements across various training strategies.",
@@ -2912,7 +2954,8 @@
                 "unlearning"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Continual learning is the sequential learning of different tasks by a machine learning model. Continual learning is known to be hindered by catastrophic interference or forgetting, i.e. rapid unlearning of earlier learned tasks when new tasks are learned. Despite their practical success, artificial neural networks (ANNs) are prone to catastrophic interference. This study analyses how gradient descent and overlapping representations between distant input points lead to distal interference and catastrophic interference. Distal interference refers to the phenomenon where training a model on a subset of the domain leads to non-local changes on other subsets of the domain. This study shows that uniformly trainable models without distal interference must be exponentially large. A novel antisymmetric bounded exponential layer B-spline ANN architecture named ABEL-Spline is proposed that can approximate any continuous function, is uniformly trainable, has polynomial computational complexity, and provides some guarantees for distal interference. Experiments are presented to demonstrate the theoretical properties of ABEL-Splines. ABEL-Splines are also evaluated on benchmark regression problems. It is concluded that the weaker distal interference guarantees in ABEL-Splines are insufficient for model-only continual learning. It is conjectured that continual learning with polynomial complexity models requires augmentation of the training data or algorithm.",
@@ -2955,7 +2998,8 @@
                 "text-to-image"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.CY"
             ]
         ],
         "abstract": "The advent of generative artificial intelligence and the widespread adoption of it in society engendered intensive debates about its ethical implications and risks. These risks often differ from those associated with traditional discriminative machine learning. To synthesize the recent discourse and map its normative concepts, we conducted a scoping review on the ethics of generative artificial intelligence, including especially large language models and text-to-image models. Our analysis provides a taxonomy of 378 normative issues in 19 topic areas and ranks them according to their prevalence in the literature. The study offers a comprehensive overview for scholars, practitioners, or policymakers, condensing the ethical debates surrounding fairness, safety, harmful content, hallucinations, privacy, interaction risks, security, alignment, societal impacts, and others. We discuss the results, evaluate imbalances in the literature, and explore unsubstantiated risk scenarios.",
@@ -2996,7 +3040,9 @@
                 "Graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG",
+                "cs.SI"
             ]
         ],
         "abstract": "In the era of widespread social networks, the rapid dissemination of fake news has emerged as a significant threat, inflicting detrimental consequences across various dimensions of people's lives. Machine learning and deep learning approaches have been extensively employed for identifying fake news. However, a significant challenge in identifying fake news is the limited availability of labeled news datasets. Therefore, the One-Class Learning (OCL) approach, utilizing only a small set of labeled data from the interest class, can be a suitable approach to address this challenge. On the other hand, representing data as a graph enables access to diverse content and structural information, and label propagation methods on graphs can be effective in predicting node labels. In this paper, we adopt a graph-based model for data representation and introduce a semi-supervised and one-class approach for fake news detection, called LOSS-GAT. Initially, we employ a two-step label propagation algorithm, utilizing Graph Neural Networks (GNNs) as an initial classifier to categorize news into two groups: interest (fake) and non-interest (real). Subsequently, we enhance the graph structure using structural augmentation techniques. Ultimately, we predict the final labels for all unlabeled data using a GNN that induces randomness within the local neighborhood of nodes through the aggregation function. We evaluate our proposed method on five common datasets and compare the results against a set of baseline models, including both OCL and binary labeled models. The results demonstrate that LOSS-GAT achieves a notable improvement, surpassing 10%, with the advantage of utilizing only a limited set of labeled fake news. Noteworthy, LOSS-GAT even outperforms binary labeled models.",
@@ -3057,7 +3103,8 @@
                 "Graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "We propose a novel Spatio-Temporal Graph Neural Network empowered trend analysis approach (ST-GTrend) to perform fleet-level performance degradation analysis for Photovoltaic (PV) power networks. PV power stations have become an integral component to the global sustainable energy production landscape. Accurately estimating the performance of PV systems is critical to their feasibility as a power generation technology and as a financial asset. One of the most challenging problems in assessing the Levelized Cost of Energy (LCOE) of a PV system is to understand and estimate the long-term Performance Loss Rate (PLR) for large fleets of PV inverters. ST-GTrend integrates spatio-temporal coherence and graph attention to separate PLR as a long-term \"aging\" trend from multiple fluctuation terms in the PV input data. To cope with diverse degradation patterns in timeseries, ST-GTrend adopts a paralleled graph autoencoder array to extract aging and fluctuation terms simultaneously. ST-GTrend imposes flatness and smoothness regularization to ensure the disentanglement between aging and fluctuation. To scale the analysis to large PV systems, we also introduce Para-GTrend, a parallel algorithm to accelerate the training and inference of ST-GTrend. We have evaluated ST-GTrend on three large-scale PV datasets, spanning a time period of 10 years. Our results show that ST-GTrend reduces Mean Absolute Percent Error (MAPE) and Euclidean Distances by 34.74% and 33.66% compared to the SOTA methods. Our results demonstrate that Para-GTrend can speed up ST-GTrend by up to 7.92 times. We further verify the generality and effectiveness of ST-GTrend for trend analysis using financial and economic datasets.",
@@ -3159,7 +3206,8 @@
                 "Robotics"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Foundation models have recently expanded into robotics after excelling in computer vision and natural language processing. The models are accessible in two ways: open-source or paid, closed-source options. Users with access to both face a problem when deciding between effective yet costly closed-source models and free but less powerful open-source alternatives. We call it the model selection problem. Existing supervised-learning methods are impractical due to the high cost of collecting extensive training data from closed-source models. Hence, we focus on the online learning setting where algorithms learn while collecting data, eliminating the need for large pre-collected datasets. We thus formulate a user-centric online model selection problem and propose a novel solution that combines an open-source encoder to output context and an online learning algorithm that processes this context. The encoder distills vast data distributions into low-dimensional features, i.e., the context, without additional training. The online learning algorithm aims to maximize a composite reward that includes model performance, execution time, and costs based on the context extracted from the data. It results in an improved trade-off between selecting open-source and closed-source models compared to non-contextual methods, as validated by our theoretical analysis. Experiments across language-based robotic tasks such as Waymo Open Dataset, ALFRED, and Open X-Embodiment demonstrate real-world applications of the solution. The results show that the solution significantly improves the task success rate by up to 14%.",
@@ -3199,7 +3247,8 @@
                 "Graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "In this paper, we present \"Graph Feature Preprocessor\", a software library for detecting typical money laundering and fraud patterns in financial transaction graphs in real time. These patterns are used to produce a rich set of transaction features for downstream machine learning training and inference tasks such as money laundering detection. We show that our enriched transaction features dramatically improve the prediction accuracy of gradient-boosting-based machine learning models. Our library exploits multicore parallelism, maintains a dynamic in-memory graph, and efficiently mines subgraph patterns in the incoming transaction stream, which enables it to be operated in a streaming manner. We evaluate our library using highly-imbalanced synthetic anti-money laundering (AML) and real-life Ethereum phishing datasets. In these datasets, the proportion of illicit transactions is very small, which makes the learning process challenging. Our solution, which combines our Graph Feature Preprocessor and gradient-boosting-based machine learning models, is able to detect these illicit transactions with higher minority-class F1 scores than standard graph neural networks. In addition, the end-to-end throughput rate of our solution executed on a multicore CPU outperforms the graph neural network baselines executed on a powerful V100 GPU. Overall, the combination of high accuracy, a high throughput rate, and low latency of our solution demonstrates the practical value of our library in real-world applications. Graph Feature Preprocessor has been integrated into IBM mainframe software products, namely \"IBM Cloud Pak for Data on Z\" and \"AI Toolkit for IBM Z and LinuxONE\".",
@@ -3302,7 +3351,8 @@
                 "synthesizing"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "We investigate model assessment and selection in a changing environment, by synthesizing datasets from both the current time period and historical epochs. To tackle unknown and potentially arbitrary temporal distribution shift, we develop an adaptive rolling window approach to estimate the generalization error of a given model. This strategy also facilitates the comparison between any two candidate models by estimating the difference of their generalization errors. We further integrate pairwise comparisons into a single-elimination tournament, achieving near-optimal model selection from a collection of candidates. Theoretical analyses and numerical experiments demonstrate the adaptivity of our proposed methods to the non-stationarity in data.",
@@ -3382,7 +3432,8 @@
                 "Anomaly detection"
             ],
             [
-                "cs.LG"
+                "cs.LG",
+                "cs.CY"
             ]
         ],
         "abstract": "Anomaly detection in sport facilities has gained significant attention due to its potential to promote energy saving and optimizing operational efficiency. In this research article, we investigate the role of machine learning, particularly deep learning, in anomaly detection for sport facilities. We explore the challenges and perspectives of utilizing deep learning methods for this task, aiming to address the drawbacks and limitations of conventional approaches. Our proposed approach involves feature extraction from the data collected in sport facilities. We present a problem formulation using Deep Feedforward Neural Networks (DFNN) and introduce threshold estimation techniques to identify anomalies effectively. Furthermore, we propose methods to reduce false alarms, ensuring the reliability and accuracy of anomaly detection. To evaluate the effectiveness of our approach, we conduct experiments on aquatic center dataset at Qatar University. The results demonstrate the superiority of our deep learning-based method over conventional techniques, highlighting its potential in real-world applications. Typically, 94.33% accuracy and 92.92% F1-score have been achieved using the proposed scheme.",
@@ -3505,7 +3556,8 @@
                 "Graph"
             ],
             [
-                "cs.LG"
+                "cs.LG",
+                "cs.SI"
             ]
         ],
         "abstract": "Graph Neural Networks (GNNs) have demonstrated significant success in learning from graph-structured data across various domains. Despite their great successful, one critical challenge is often overlooked by existing works, i.e., the learning of message propagation that can generalize effectively to underrepresented graph regions. These minority regions often exhibit irregular homophily/heterophily patterns and diverse neighborhood class distributions, resulting in ambiguity. In this work, we investigate the ambiguity problem within GNNs, its impact on representation learning, and the development of richer supervision signals to fight against this problem. We conduct a fine-grained evaluation of GNN, analyzing the existence of ambiguity in different graph regions and its relation with node positions. To disambiguate node embeddings, we propose a novel method, {\\method}, which exploits additional optimization guidance to enhance representation learning, particularly for nodes in ambiguous regions. {\\method} identifies ambiguous nodes based on temporal inconsistency of predictions and introduces a disambiguation regularization by employing contrastive learning in a topology-aware manner. {\\method} promotes discriminativity of node representations and can alleviating semantic mixing caused by message propagation, effectively addressing the ambiguity problem. Empirical results validate the efficiency of {\\method} and highlight its potential to improve GNN performance in underrepresented graph regions.",
@@ -3589,7 +3641,9 @@
                 "graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG",
+                "cs.SI"
             ]
         ],
         "abstract": "Transfer learning aims to enhance performance on a target task by using knowledge from related tasks. However, when the source and target tasks are not closely aligned, it can lead to reduced performance, known as negative transfer. Unlike in image or text data, we find that negative transfer could commonly occur in graph-structured data, even when source and target graphs have semantic similarities. Specifically, we identify that structural differences significantly amplify the dissimilarities in the node embeddings across graphs. To mitigate this, we bring a new insight in this paper: for semantically similar graphs, although structural differences lead to significant distribution shift in node embeddings, their impact on subgraph embeddings could be marginal. Building on this insight, we introduce Subgraph Pooling (SP) by aggregating nodes sampled from a k-hop neighborhood and Subgraph Pooling++ (SP++) by a random walk, to mitigate the impact of graph structural differences on knowledge transfer. We theoretically analyze the role of SP in reducing graph discrepancy and conduct extensive experiments to evaluate its superiority under various settings. The proposed SP methods are effective yet elegant, which can be easily applied on top of any backbone Graph Neural Networks (GNNs). Our code and data are available at: https://github.com/Zehong-Wang/Subgraph-Pooling.",
@@ -3611,7 +3665,9 @@
                 "Graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG",
+                "cs.SI"
             ]
         ],
         "abstract": "Graph Neural Networks (GNNs) have demonstrated effectiveness in various graph learning tasks, yet their reliance on message-passing constraints their deployment in latency-sensitive applications such as financial fraud detection. Recent works have explored distilling knowledge from GNNs to Multi-Layer Perceptrons (MLPs) to accelerate inference. However, this task-specific supervised distillation limits generalization to unseen nodes, which are prevalent in latency-sensitive applications. To this end, we present \\textbf{\\textsc{SimMLP}}, a \\textbf{\\textsc{Sim}}ple yet effective framework for learning \\textbf{\\textsc{MLP}}s on graphs without supervision, to enhance generalization. \\textsc{SimMLP} employs self-supervised alignment between GNNs and MLPs to capture the fine-grained and generalizable correlation between node features and graph structures, and proposes two strategies to alleviate the risk of trivial solutions. Theoretically, we comprehensively analyze \\textsc{SimMLP} to demonstrate its equivalence to GNNs in the optimal case and its generalization capability. Empirically, \\textsc{SimMLP} outperforms state-of-the-art baselines, especially in settings with unseen nodes. In particular, it obtains significant performance gains {\\bf (7$\\sim$26\\%)} over MLPs and inference acceleration over GNNs {\\bf (90$\\sim$126$\\times$)} on large-scale graph datasets. Our codes are available at: \\url{https://github.com/Zehong-Wang/SimMLP}.",
@@ -3774,7 +3830,8 @@
                 "clinical"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "The U-net architecture has significantly impacted deep learning-based segmentation of medical images. Through the integration of long-range skip connections, it facilitated the preservation of high-resolution features. Out-of-distribution data can, however, substantially impede the performance of neural networks. Previous works showed that the trained network layers differ in their susceptibility to this domain shift, e.g., shallow layers are more affected than deeper layers. In this work, we investigate the implications of this observation of layer sensitivity to domain shifts of U-net-style segmentation networks. By copying features of shallow layers to corresponding decoder blocks, these bear the risk of re-introducing domain-specific information. We used a synthetic dataset to model different levels of data distribution shifts and evaluated the impact on downstream segmentation performance. We quantified the inherent domain susceptibility of each network layer, using the Hellinger distance. These experiments confirmed the higher domain susceptibility of earlier network layers. When gradually removing skip connections, a decrease in domain susceptibility of deeper layers could be observed. For downstream segmentation performance, the original U-net outperformed the variant without any skip connections. The best performance, however, was achieved when removing the uppermost skip connection - not only in the presence of domain shifts but also for in-domain test data. We validated our results on three clinical datasets - two histopathology datasets and one magnetic resonance dataset - with performance increases of up to 10% in-domain and 13% cross-domain when removing the uppermost skip connection.",
@@ -3902,7 +3959,8 @@
                 "industrial"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ],
             [
                 "AAAI"
@@ -4010,7 +4068,8 @@
             ],
             [
                 "cs.LG",
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Facial analysis has emerged as a prominent area of research with diverse applications, including cosmetic surgery programs, the beauty industry, photography, and entertainment. Manipulating patient images often necessitates professional image processing software. This study contributes by providing a model that facilitates the detection of blemishes and skin lesions on facial images through a convolutional neural network and machine learning approach. The proposed method offers advantages such as simple architecture, speed and suitability for image processing while avoiding the complexities associated with traditional methods. The model comprises four main steps: area selection, scanning the chosen region, lesion diagnosis, and marking the identified lesion. Raw data for this research were collected from a reputable clinic in Tehran specializing in skincare and beauty services. The dataset includes administrative information, clinical data, and facial and profile images. A total of 2300 patient images were extracted from this raw data. A software tool was developed to crop and label lesions, with input from two treatment experts. In the lesion preparation phase, the selected area was standardized to 50 * 50 pixels. Subsequently, a convolutional neural network model was employed for lesion labeling. The classification model demonstrated high accuracy, with a measure of 0.98 for healthy skin and 0.97 for lesioned skin specificity. Internal validation involved performance indicators and cross-validation, while external validation compared the model's performance indicators with those of the transfer learning method using the Vgg16 deep network model. Compared to existing studies, the results of this research showcase the efficacy and desirability of the proposed model and methodology.",
@@ -4060,6 +4119,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -4215,6 +4275,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "eess.AS"
             ]
         ],
@@ -4459,7 +4520,8 @@
                 "Forecasting"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Multi-step forecasting (MSF) in time-series, the ability to make predictions multiple time steps into the future, is fundamental to almost all temporal domains. To make such forecasts, one must assume the recursive complexity of the temporal dynamics. Such assumptions are referred to as the forecasting strategy used to train a predictive model. Previous work shows that it is not clear which forecasting strategy is optimal a priori to evaluating on unseen data. Furthermore, current approaches to MSF use a single (fixed) forecasting strategy. In this paper, we characterise the instance-level variance of optimal forecasting strategies and propose Dynamic Strategies (DyStrat) for MSF. We experiment using 10 datasets from different scales, domains, and lengths of multi-step horizons. When using a random-forest-based classifier, DyStrat outperforms the best fixed strategy, which is not knowable a priori, 94% of the time, with an average reduction in mean-squared error of 11%. Our approach typically triples the top-1 accuracy compared to current approaches. Notably, we show DyStrat generalises well for any MSF task.",
@@ -4672,7 +4734,8 @@
                 "biological"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Artificial intelligence (AI)-driven methods can vastly improve the historically costly drug design process, with various generative models already in widespread use. Generative models for de novo drug design, in particular, focus on the creation of novel biological compounds entirely from scratch, representing a promising future direction. Rapid development in the field, combined with the inherent complexity of the drug design process, creates a difficult landscape for new researchers to enter. In this survey, we organize de novo drug design into two overarching themes: small molecule and protein generation. Within each theme, we identify a variety of subtasks and applications, highlighting important datasets, benchmarks, and model architectures and comparing the performance of top models. We take a broad approach to AI-driven drug design, allowing for both micro-level comparisons of various methods within each subtask and macro-level observations across different fields. We discuss parallel challenges and approaches between the two applications and highlight future directions for AI-driven de novo drug design as a whole. An organized repository of all covered sources is available at https://github.com/gersteinlab/GenAI4Drug.",
@@ -4736,7 +4799,9 @@
                 "Agricultural"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG",
+                "cs.CY"
             ]
         ],
         "abstract": "This study examines how artificial intelligence (AI), especially Reinforcement Learning (RL), can be used in farming to boost crop yields, fine-tune nitrogen use and watering, and reduce nitrate runoff and greenhouse gases, focusing on Nitrous Oxide (N$_2$O) emissions from soil. Facing climate change and limited agricultural knowledge, we use Partially Observable Markov Decision Processes (POMDPs) with a crop simulator to model AI agents' interactions with farming environments. We apply deep Q-learning with Recurrent Neural Network (RNN)-based Q networks for training agents on optimal actions. Also, we develop Machine Learning (ML) models to predict N$_2$O emissions, integrating these predictions into the simulator. Our research tackles uncertainties in N$_2$O emission estimates with a probabilistic ML approach and climate variability through a stochastic weather model, offering a range of emission outcomes to improve forecast reliability and decision-making. By incorporating climate change effects, we enhance agents' climate adaptability, aiming for resilient agricultural practices. Results show these agents can align crop productivity with environmental concerns by penalizing N$_2$O emissions, adapting effectively to climate shifts like warmer temperatures and less rain. This strategy improves farm management under climate change, highlighting AI's role in sustainable agriculture.",
@@ -5090,7 +5155,8 @@
                 "Quantum"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ],
             [
                 "AAAI"
@@ -5327,7 +5393,9 @@
                 "facial"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG",
+                "cs.CY"
             ]
         ],
         "abstract": "Machine Learning (ML) and 'Artificial Intelligence' ('AI') methods tend to replicate and amplify existing biases and prejudices, as do Robots with AI. For example, robots with facial recognition have failed to identify Black Women as human, while others have categorized people, such as Black Men, as criminals based on appearance alone. A 'culture of modularity' means harms are perceived as 'out of scope', or someone else's responsibility, throughout employment positions in the 'AI supply chain'. Incidents are routine enough (incidentdatabase.ai lists over 2000 examples) to indicate that few organizations are capable of completely respecting peoples' rights; meeting claimed equity, diversity, and inclusion (EDI or DEI) goals; or recognizing and then addressing such failures in their organizations and artifacts. We propose a framework for adapting widely practiced Research and Development (R&D) project management methodologies to build organizational equity capabilities and better integrate known evidence-based best practices. We describe how project teams can organize and operationalize the most promising practices, skill sets, organizational cultures, and methods to detect and address rights-based fairness, equity, accountability, and ethical problems as early as possible when they are often less harmful and easier to mitigate; then monitor for unforeseen incidents to adaptively and constructively address them. Our primary example adapts an Agile development process based on Scrum, one of the most widely adopted approaches to organizing R&D teams. We also discuss limitations of our proposed framework and future research directions.",
@@ -5559,7 +5627,8 @@
                 "Forecasting"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "The exponential growth in scientific publications poses a severe challenge for human researchers. It forces attention to more narrow sub-fields, which makes it challenging to discover new impactful research ideas and collaborations outside one's own field. While there are ways to predict a scientific paper's future citation counts, they need the research to be finished and the paper written, usually assessing impact long after the idea was conceived. Here we show how to predict the impact of onsets of ideas that have never been published by researchers. For that, we developed a large evolving knowledge graph built from more than 21 million scientific papers. It combines a semantic network created from the content of the papers and an impact network created from the historic citations of papers. Using machine learning, we can predict the dynamic of the evolving network into the future with high accuracy, and thereby the impact of new research directions. We envision that the ability to predict the impact of new ideas will be a crucial component of future artificial muses that can inspire new impactful and interesting scientific ideas.",
@@ -5648,6 +5717,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -5840,7 +5910,8 @@
                 "recommendation"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Modern graph neural networks (GNNs) can be sensitive to changes in the input graph structure and node features, potentially resulting in unpredictable behavior and degraded performance. In this work, we introduce a spectral framework known as SAGMAN for examining the stability of GNNs. This framework assesses the distance distortions that arise from the nonlinear mappings of GNNs between the input and output manifolds: when two nearby nodes on the input manifold are mapped (through a GNN model) to two distant ones on the output manifold, it implies a large distance distortion and thus a poor GNN stability. We propose a distance-preserving graph dimension reduction (GDR) approach that utilizes spectral graph embedding and probabilistic graphical models (PGMs) to create low-dimensional input/output graph-based manifolds for meaningful stability analysis. Our empirical evaluations show that SAGMAN effectively assesses the stability of each node when subjected to various edge or feature perturbations, offering a scalable approach for evaluating the stability of GNNs, extending to applications within recommendation systems. Furthermore, we illustrate its utility in downstream tasks, notably in enhancing GNN stability and facilitating adversarial targeted attacks.",

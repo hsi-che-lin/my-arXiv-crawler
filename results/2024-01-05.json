@@ -26,7 +26,8 @@
         "rating": "1.5",
         "keywords": [
             [
-                "cs.CL"
+                "cs.CL",
+                "eess.AS"
             ],
             [
                 "ICASSP"
@@ -49,7 +50,8 @@
                 "Parameter-efficient"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Parameter-efficient tuning (PET) methods such as LoRA, Adapter, and Visual Prompt Tuning (VPT) have found success in enabling adaptation to new domains by tuning small modules within a transformer model. However, the number of domains encountered during test time can be very large, and the data is usually unlabeled. Thus, adaptation to new domains is challenging; it is also impractical to generate customized tuned modules for each such domain. Toward addressing these challenges, this work introduces PLUTO: a Plug-and-pLay modUlar Test-time domain adaptatiOn strategy. We pre-train a large set of modules, each specialized for different source domains, effectively creating a ``module store''. Given a target domain with few-shot unlabeled data, we introduce an unsupervised test-time adaptation (TTA) method to (1) select a sparse subset of relevant modules from this store and (2) create a weighted combination of selected modules without tuning their weights. This plug-and-play nature enables us to harness multiple most-relevant source domains in a single inference call. Comprehensive evaluations demonstrate that PLUTO uniformly outperforms alternative TTA methods and that selecting $\\leq$5 modules suffice to extract most of the benefit. At a high level, our method equips pre-trained transformers with the capability to dynamically adapt to new domains, motivating a new paradigm for efficient and scalable domain adaptation.",
@@ -124,7 +126,8 @@
         "keywords": [
             [
                 "cs.AI",
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "Neuron labeling is an approach to visualize the behaviour and respond of a certain neuron to a certain pattern that activates the neuron. Neuron labeling extract information about the features captured by certain neurons in a deep neural network, one of which uses the encoder-decoder image captioning approach. The encoder used can be a pretrained CNN-based model and the decoder is an RNN-based model for text generation. Previous work, namely MILAN (Mutual Information-guided Linguistic Annotation of Neuron), has tried to visualize the neuron behaviour using modified Show, Attend, and Tell (SAT) model in the encoder, and LSTM added with Bahdanau attention in the decoder. MILAN can show great result on short sequence neuron captioning, but it does not show great result on long sequence neuron captioning, so in this work, we would like to improve the performance of MILAN even more by utilizing different kind of attention mechanism and additionally adding several attention result into one, in order to combine all the advantages from several attention mechanism. Using our compound dataset, we obtained higher BLEU and F1-Score on our proposed model, achieving 17.742 and 0.4811 respectively. At some point where the model converges at the peak, our model obtained BLEU of 21.2262 and BERTScore F1-Score of 0.4870.",
@@ -213,7 +216,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "We conducted a large-scale subjective study of the perceptual quality of User-Generated Mobile Video Content on a set of mobile-originated videos obtained from the Indian social media platform ShareChat. The content viewed by volunteer human subjects under controlled laboratory conditions has the benefit of culturally diversifying the existing corpus of User-Generated Content (UGC) video quality datasets. There is a great need for large and diverse UGC-VQA datasets, given the explosive global growth of the visual internet and social media platforms. This is particularly true in regard to videos obtained by smartphones, especially in rapidly emerging economies like India. ShareChat provides a safe and cultural community oriented space for users to generate and share content in their preferred Indian languages and dialects. Our subjective quality study, which is based on this data, offers a boost of cultural, visual, and language diversification to the video quality research community. We expect that this new data resource will also allow for the development of systems that can predict the perceived visual quality of Indian social media videos, to control scaling and compression protocols for streaming, provide better user recommendations, and guide content analysis and processing. We demonstrate the value of the new data resource by conducting a study of leading blind video quality models on it, including a new model, called MoEVA, which deploys a mixture of experts to predict video quality. Both the new LIVE-ShareChat dataset and sample source code for MoEVA are being made freely available to the research community at https://github.com/sandeep-sm/LIVE-SC",
@@ -272,7 +276,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Deep convolutional neural networks (CNNs) for image denoising can effectively exploit rich hierarchical features and have achieved great success. However, many deep CNN-based denoising models equally utilize the hierarchical features of noisy images without paying attention to the more important and useful features, leading to relatively low performance. To address the issue, we design a new Two-stage Progressive Residual Dense Attention Network (TSP-RDANet) for image denoising, which divides the whole process of denoising into two sub-tasks to remove noise progressively. Two different attention mechanism-based denoising networks are designed for the two sequential sub-tasks: the residual dense attention module (RDAM) is designed for the first stage, and the hybrid dilated residual dense attention module (HDRDAM) is proposed for the second stage. The proposed attention modules are able to learn appropriate local features through dense connection between different convolutional layers, and the irrelevant features can also be suppressed. The two sub-networks are then connected by a long skip connection to retain the shallow feature to enhance the denoising performance. The experiments on seven benchmark datasets have verified that compared with many state-of-the-art methods, the proposed TSP-RDANet can obtain favorable results both on synthetic and real noisy image denoising. The code of our TSP-RDANet is available at https://github.com/WenCongWu/TSP-RDANet.",
@@ -290,6 +295,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.SI",
                 "cs.CV"
             ]
         ],
@@ -310,7 +316,8 @@
         "keywords": [
             [
                 "cs.AI",
-                "cs.CL"
+                "cs.CL",
+                "eess.AS"
             ]
         ],
         "abstract": "In recent years, speech generation has seen remarkable progress, now achieving one-shot generation capability that is often virtually indistinguishable from real human voice. Integrating such advancements in speech generation with large language models might revolutionize a wide range of applications. However, certain applications, such as assistive conversational systems, require natural and conversational speech generation tools that also operate efficiently in real time. Current state-of-the-art models like VALL-E and SoundStorm, powered by hierarchical neural audio codecs, require large neural components and extensive training data to work well. In contrast, MQTTS aims to build more compact conversational TTS models while capitalizing on smaller-scale real-life conversational speech data. However, its autoregressive nature yields high inference latency and thus limits its real-time usage. In order to mitigate the current limitations of the state-of-the-art TTS models while capitalizing on their strengths, in this work we introduce the Pheme model series that 1) offers compact yet high-performing models, 2) allows for parallel speech generation of 3) natural conversational speech, and 4) it can be trained efficiently on smaller-scale conversational data, cutting data demands by more than 10x but still matching the quality of the autoregressive TTS models. We also show that through simple teacher-student distillation we can meet significant improvements in voice quality for single-speaker setups on top of pretrained Pheme checkpoints, relying solely on synthetic speech generated by much larger teacher models. Audio samples and pretrained models are available online.",
@@ -398,6 +405,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -504,6 +512,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -523,7 +532,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ],
             [
                 "ICML"
@@ -616,7 +626,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "Audio scene cartography for real or simulated stereo recordings is presented. This audio scene analysis is performed doing successively: a perceptive 10-subbands analysis, calculation of temporal laws for relative delays and gains between both channels of each subband using a short-time cons\\-tant scene assumption and channels inter-correlation which permit to follow a mobile source in its moves, calculation of global and subbands histograms whose peaks give the incidence information for fixed sources. Audio scenes composed of 2 to 4 fixed sources or with a fixed source and a mobile one have been already successfully tested. Further extensions and applications will be discussed. Audio illustrations of audio scenes, subband analysis and demonstration of real-time stereo recording simulations will be given.Paper 6340 presented at the 118th Convention of the Audio Engineering Society, Barcelona, 2005",
@@ -636,6 +647,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -687,7 +699,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Economic and policy factors are driving the continuous increase in the adoption and usage of electrical vehicles (EVs). However, despite being a cleaner alternative to combustion engine vehicles, EVs have negative impacts on the lifespan of microgrid equipment and energy balance due to increased power demand and the timing of their usage. In our view grid management should leverage on EVs scheduling flexibility to support local network balancing through active participation in demand response programs. In this paper, we propose a model-free solution, leveraging Deep Q-Learning to schedule the charging and discharging activities of EVs within a microgrid to align with a target energy profile provided by the distribution system operator. We adapted the Bellman Equation to assess the value of a state based on specific rewards for EV scheduling actions and used a neural network to estimate Q-values for available actions and the epsilon-greedy algorithm to balance exploitation and exploration to meet the target energy profile. The results are promising showing that the proposed solution can effectively schedule the EVs charging and discharging actions to align with the target profile with a Person coefficient of 0.99, handling effective EVs scheduling situations that involve dynamicity given by the e-mobility features, relying only on data with no knowledge of EVs and microgrid dynamics.",
@@ -875,7 +888,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "sEMG pattern recognition algorithms have been explored extensively in decoding movement intent, yet are known to be vulnerable to changing recording conditions, exhibiting significant drops in performance across subjects, and even across sessions. Multi-channel surface EMG, also referred to as high-density sEMG (HD-sEMG) systems, have been used to improve performance with the information collected through the use of additional electrodes. However, a lack of robustness is ever present due to limited datasets and the difficulties in addressing sources of variability, such as electrode placement. In this study, we propose training on a collection of input channel subsets and augmenting our training distribution with data from different electrode locations, simultaneously targeting electrode shift and reducing input dimensionality. Our method increases robustness against electrode shift and results in significantly higher intersession performance across subjects and classification algorithms.",
@@ -955,7 +969,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Knowing who follows whom and what patterns they are following are crucial steps to understand collective behaviors (e.g. a group of human, a school of fish, or a stock market). Time series is one of resources that can be used to get insight regarding following relations. However, the concept of following patterns or motifs and the solution to find them in time series are not obvious. In this work, we formalize a concept of following motifs between two time series and present a framework to infer following patterns between two time series. The framework utilizes one of efficient and scalable methods to retrieve motifs from time series called the Matrix Profile Method. We compare our proposed framework with several baselines. The framework performs better than baselines in the simulation datasets. In the dataset of sound recording, the framework is able to retrieve the following motifs within a pair of time series that two singers sing following each other. In the cryptocurrency dataset, the framework is capable of capturing the following motifs within a pair of time series from two digital currencies, which implies that the values of one currency follow the values of another currency patterns. Our framework can be utilized in any field of time series to get insight regarding following patterns between time series.",
@@ -1093,7 +1108,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "We present CRUXEval (Code Reasoning, Understanding, and eXecution Evaluation), a benchmark consisting of 800 Python functions (3-13 lines). Each function comes with an input-output pair, leading to two natural tasks: input prediction and output prediction. First, we propose a generic recipe for generating our execution benchmark which can be used to create future variation of the benchmark. Second, we evaluate twenty code models on our benchmark and discover that many recent high-scoring models on HumanEval do not show the same improvements on our benchmark. Third, we show that simple CoT and fine-tuning schemes can improve performance on our benchmark but remain far from solving it. The best setup, GPT-4 with chain of thought (CoT), achieves a pass@1 of 75% and 81% on input and output prediction, respectively. In contrast, Code Llama 34B achieves a pass@1 of 50% and 46% on input and output prediction, highlighting the gap between open and closed source models. As no model is close to acing CRUXEval, we provide examples of consistent GPT-4 failures on simple programs as a lens into its code reasoning capabilities and areas for improvement.",
@@ -1132,7 +1148,8 @@
             ],
             [
                 "cs.LG",
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ],
             [
                 "ICASSP"
@@ -1258,7 +1275,8 @@
             ],
             [
                 "cs.AI",
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "Far-field speech recognition is a challenging task that conventionally uses signal processing beamforming to attack noise and interference problem. But the performance has been found usually limited due to heavy reliance on environmental assumption. In this paper, we propose a unified multichannel far-field speech recognition system that combines the neural beamforming and transformer-based Listen, Spell, Attend (LAS) speech recognition system, which extends the end-to-end speech recognition system further to include speech enhancement. Such framework is then jointly trained to optimize the final objective of interest. Specifically, factored complex linear projection (fCLP) has been adopted to form the neural beamforming. Several pooling strategies to combine look directions are then compared in order to find the optimal approach. Moreover, information of the source direction is also integrated in the beamforming to explore the usefulness of source direction as a prior, which is usually available especially in multi-modality scenario. Experiments on different microphone array geometry are conducted to evaluate the robustness against spacing variance of microphone array. Large in-house databases are used to evaluate the effectiveness of the proposed framework and the proposed method achieve 19.26\\% improvement when compared with a strong baseline.",
@@ -1301,7 +1319,8 @@
                 "graph"
             ],
             [
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "In addressing the challenge of interpretability and generalizability of artificial music intelligence, this paper introduces a novel symbolic representation that amalgamates both explicit and implicit musical information across diverse traditions and granularities. Utilizing a hierarchical and-or graph representation, the model employs nodes and edges to encapsulate a broad spectrum of musical elements, including structures, textures, rhythms, and harmonies. This hierarchical approach expands the representability across various scales of music. This representation serves as the foundation for an energy-based model, uniquely tailored to learn musical concepts through a flexible algorithm framework relying on the minimax entropy principle. Utilizing an adapted Metropolis-Hastings sampling technique, the model enables fine-grained control over music generation. A comprehensive empirical evaluation, contrasting this novel approach with existing methodologies, manifests considerable advancements in interpretability and controllability. This study marks a substantial contribution to the fields of music analysis, composition, and computational musicology.",
@@ -1323,7 +1342,8 @@
                 "Graph"
             ],
             [
-                "cs.LG"
+                "cs.LG",
+                "cs.SI"
             ],
             [
                 "AAAI"
@@ -1369,7 +1389,8 @@
                 "Federated Learning"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ],
             [
                 "ICASSP"
@@ -1502,7 +1523,8 @@
                 "Graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ],
             [
                 "AAAI"
@@ -1526,7 +1548,8 @@
                 "attacks"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "The deployment of multimodal large language models (MLLMs) has brought forth a unique vulnerability: susceptibility to malicious attacks through visual inputs. We delve into the novel challenge of defending MLLMs against such attacks. We discovered that images act as a \"foreign language\" that is not considered during alignment, which can make MLLMs prone to producing harmful responses. Unfortunately, unlike the discrete tokens considered in text-based LLMs, the continuous nature of image signals presents significant alignment challenges, which poses difficulty to thoroughly cover the possible scenarios. This vulnerability is exacerbated by the fact that open-source MLLMs are predominantly fine-tuned on limited image-text pairs that is much less than the extensive text-based pretraining corpus, which makes the MLLMs more prone to catastrophic forgetting of their original abilities during explicit alignment tuning. To tackle these challenges, we introduce MLLM-Protector, a plug-and-play strategy combining a lightweight harm detector and a response detoxifier. The harm detector's role is to identify potentially harmful outputs from the MLLM, while the detoxifier corrects these outputs to ensure the response stipulates to the safety standards. This approach effectively mitigates the risks posed by malicious visual inputs without compromising the model's overall performance. Our results demonstrate that MLLM-Protector offers a robust solution to a previously unaddressed aspect of MLLM security.",
@@ -1587,7 +1610,8 @@
                 "Diffusion"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Diffusion-based generative methods have proven effective in modeling trajectories with offline datasets. However, they often face computational challenges and can falter in generalization, especially in capturing temporal abstractions for long-horizon tasks. To overcome this, we introduce the Hierarchical Diffuser, a simple, fast, yet surprisingly effective planning method combining the advantages of hierarchical and diffusion-based planning. Our model adopts a \"jumpy\" planning strategy at the higher level, which allows it to have a larger receptive field but at a lower computational cost -- a crucial factor for diffusion-based planning methods, as we have empirically verified. Additionally, the jumpy sub-goals guide our low-level planner, facilitating a fine-tuning stage and further improving our approach's effectiveness. We conducted empirical evaluations on standard offline reinforcement learning benchmarks, demonstrating our method's superior performance and efficiency in terms of training and planning speed compared to the non-hierarchical Diffuser as well as other hierarchical planning methods. Moreover, we explore our model's generalization capability, particularly on how our method improves generalization capabilities on compositional out-of-distribution tasks.",
@@ -1647,7 +1671,8 @@
                 "Graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "This paper focuses on learning representation on the whole graph level in an unsupervised manner. Learning graph-level representation plays an important role in a variety of real-world issues such as molecule property prediction, protein structure feature extraction, and social network analysis. The mainstream method is utilizing contrastive learning to facilitate graph feature extraction, known as Graph Contrastive Learning (GCL). GCL, although effective, suffers from some complications in contrastive learning, such as the effect of false negative pairs. Moreover, augmentation strategies in GCL are weakly adaptive to diverse graph datasets. Motivated by these problems, we propose a novel framework called Structure Knowledge Refinement (SKR) which uses data structure to determine the probability of whether a pair is positive or negative. Meanwhile, we propose an augmentation strategy that naturally preserves the semantic meaning of the original data and is compatible with our SKR framework. Furthermore, we illustrate the effectiveness of our SKR framework through intuition and experiments. The experimental results on the tasks of graph-level classification demonstrate that our SKR framework is superior to most state-of-the-art baselines.",
@@ -1774,7 +1799,8 @@
                 "graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Concepts abound in mathematics and its applications. They vary greatly between subject areas, and new ones are introduced in each mathematical paper or application. A formal theory builds a hierarchy of definitions, theorems and proofs that reference each other. When an AI agent is proving a new theorem, most of the mathematical concepts and lemmas relevant to that theorem may have never been seen during training. This is especially true in the Coq proof assistant, which has a diverse library of Coq projects, each with its own definitions, lemmas, and even custom tactic procedures used to prove those lemmas. It is essential for agents to incorporate such new information into their knowledge base on the fly. We work towards this goal by utilizing a new, large-scale, graph-based dataset for machine learning in Coq. We leverage a faithful graph-representation of Coq terms that induces a directed graph of dependencies between definitions to create a novel graph neural network, Graph2Tac (G2T), that takes into account not only the current goal, but also the entire hierarchy of definitions that led to the current goal. G2T is an online model that is deeply integrated into the users' workflow and can adapt in real time to new Coq projects and their definitions. It complements well with other online models that learn in real time from new proof scripts. Our novel definition embedding task, which is trained to compute representations of mathematical concepts not seen during training, boosts the performance of the neural network to rival state-of-the-art k-nearest neighbor predictors.",
@@ -1896,7 +1922,8 @@
                 "Attack"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "As deep neural networks and the datasets used to train them get larger, the default approach to integrating them into research and commercial projects is to download a pre-trained model and fine tune it. But these models can have uncertain provenance, opening up the possibility that they embed hidden malicious behavior such as trojans or backdoors, where small changes to an input (triggers) can cause the model to produce incorrect outputs (e.g., to misclassify). This paper introduces a novel approach to backdoor detection that uses two tensor decomposition methods applied to network activations. This has a number of advantages relative to existing detection methods, including the ability to analyze multiple models at the same time, working across a wide variety of network architectures, making no assumptions about the nature of triggers used to alter network behavior, and being computationally efficient. We provide a detailed description of the detection pipeline along with results on models trained on the MNIST digit dataset, CIFAR-10 dataset, and two difficult datasets from NIST's TrojAI competition. These results show that our method detects backdoored networks more accurately and efficiently than current state-of-the-art methods.",
@@ -1978,7 +2005,8 @@
                 "Diffusion"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ],
             [
                 "AAAI"
@@ -2025,7 +2053,8 @@
             ],
             [
                 "cs.LG",
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Synthetic Aperture Radar (SAR) images are commonly utilized in military applications for automatic target recognition (ATR). Machine learning (ML) methods, such as Convolutional Neural Networks (CNN) and Graph Neural Networks (GNN), are frequently used to identify ground-based objects, including battle tanks, personnel carriers, and missile launchers. Determining the vehicle class, such as the BRDM2 tank, BMP2 tank, BTR60 tank, and BTR70 tank, is crucial, as it can help determine whether the target object is an ally or an enemy. While the ML algorithm provides feedback on the recognized target, the final decision is left to the commanding officers. Therefore, providing detailed information alongside the identified target can significantly impact their actions. This detailed information includes the SAR image features that contributed to the classification, the classification confidence, and the probability of the identified object being classified as a different object type or class. We propose a GNN-based ATR framework that provides the final classified class and outputs the detailed information mentioned above. This is the first study to provide a detailed analysis of the classification class, making final decisions more straightforward. Moreover, our GNN framework achieves an overall accuracy of 99.2\\% when evaluated on the MSTAR dataset, improving over previous state-of-the-art GNN methods.",
@@ -2292,7 +2321,8 @@
                 "clinical"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Deep learning models for medical image analysis easily suffer from distribution shifts caused by dataset artifacts bias, camera variations, differences in the imaging station, etc., leading to unreliable diagnoses in real-world clinical settings. Domain generalization (DG) methods, which aim to train models on multiple domains to perform well on unseen domains, offer a promising direction to solve the problem. However, existing DG methods assume domain labels of each image are available and accurate, which is typically feasible for only a limited number of medical datasets. To address these challenges, we propose a novel DG framework for medical image classification without relying on domain labels, called Prompt-driven Latent Domain Generalization (PLDG). PLDG consists of unsupervised domain discovery and prompt learning. This framework first discovers pseudo domain labels by clustering the bias-associated style features, then leverages collaborative domain prompts to guide a Vision Transformer to learn knowledge from discovered diverse domains. To facilitate cross-domain knowledge learning between different prompts, we introduce a domain prompt generator that enables knowledge sharing between domain prompts and a shared prompt. A domain mixup strategy is additionally employed for more flexible decision margins and mitigates the risk of incorrect domain assignments. Extensive experiments on three medical image classification tasks and one debiasing task demonstrate that our method can achieve comparable or even superior performance than conventional DG algorithms without relying on domain labels. Our code will be publicly available upon the paper is accepted.",
@@ -2403,7 +2433,8 @@
                 "attacks"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Adversarial attacks can readily disrupt the image classification system, revealing the vulnerability of DNN-based recognition tasks. While existing adversarial perturbations are primarily applied to uncompressed images or compressed images by the traditional image compression method, i.e., JPEG, limited studies have investigated the robustness of models for image classification in the context of DNN-based image compression. With the rapid evolution of advanced image compression, DNN-based learned image compression has emerged as the promising approach for transmitting images in many security-critical applications, such as cloud-based face recognition and autonomous driving, due to its superior performance over traditional compression. Therefore, there is a pressing need to fully investigate the robustness of a classification system post-processed by learned image compression. To bridge this research gap, we explore the adversarial attack on a new pipeline that targets image classification models that utilize learned image compressors as pre-processing modules. Furthermore, to enhance the transferability of perturbations across various quality levels and architectures of learned image compression models, we introduce a saliency score-based sampling method to enable the fast generation of transferable perturbation. Extensive experiments with popular attack methods demonstrate the enhanced transferability of our proposed method when attacking images that have been post-processed with different learned image compression models.",
@@ -2427,7 +2458,8 @@
                 "radar"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Speckle noise poses a significant challenge in maintaining the quality of synthetic aperture radar (SAR) images, so SAR despeckling techniques have drawn increasing attention. Despite the tremendous advancements of deep learning in fixed-scale SAR image despeckling, these methods still struggle to deal with large-scale SAR images. To address this problem, this paper introduces a novel despeckling approach termed Region Denoising Diffusion Probabilistic Model (R-DDPM) based on generative models. R-DDPM enables versatile despeckling of SAR images across various scales, accomplished within a single training session. Moreover, The artifacts in the fused SAR images can be avoided effectively with the utilization of region-guided inverse sampling. Experiments of our proposed R-DDPM on Sentinel-1 data demonstrates superior performance to existing methods.",
@@ -2496,7 +2528,8 @@
                 "Medical"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ],
             [
                 "ICASSP"
@@ -2544,7 +2577,8 @@
                 "Attacks"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Among the most insidious attacks on Reinforcement Learning (RL) solutions are training-time attacks (TTAs) that create loopholes and backdoors in the learned behaviour. Not limited to a simple disruption, constructive TTAs (C-TTAs) are now available, where the attacker forces a specific, target behaviour upon a training RL agent (victim). However, even state-of-the-art C-TTAs focus on target behaviours that could be naturally adopted by the victim if not for a particular feature of the environment dynamics, which C-TTAs exploit. In this work, we show that a C-TTA is possible even when the target behaviour is un-adoptable due to both environment dynamics as well as non-optimality with respect to the victim objective(s). To find efficient attacks in this context, we develop a specialised flavour of the DDPG algorithm, which we term gammaDDPG, that learns this stronger version of C-TTA. gammaDDPG dynamically alters the attack policy planning horizon based on the victim's current behaviour. This improves effort distribution throughout the attack timeline and reduces the effect of uncertainty the attacker has about the victim. To demonstrate the features of our method and better relate the results to prior research, we borrow a 3D grid domain from a state-of-the-art C-TTA for our experiments. Code is available at \"bit.ly/github-rb-gDDPG\".",
@@ -2567,7 +2601,8 @@
                 "Clinical"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Background: Type 2 diabetes (T2D) is a prevalent chronic disease with a significant risk of serious health complications and negative impacts on the quality of life. Given the impact of individual characteristics and lifestyle on the treatment plan and patient outcomes, it is crucial to develop precise and personalized management strategies. Artificial intelligence (AI) provides great promise in combining patterns from various data sources with nurses' expertise to achieve optimal care. Methods: This is a 6-month ancillary study among T2D patients (n = 20, age = 57 +- 10). Participants were randomly assigned to an intervention (AI, n=10) group to receive daily AI-generated individualized feedback or a control group without receiving the daily feedback (non-AI, n=10) in the last three months. The study developed an online nurse-in-the-loop predictive control (ONLC) model that utilizes a predictive digital twin (PDT). The PDT was developed using a transfer-learning-based Artificial Neural Network. The PDT was trained on participants self-monitoring data (weight, food logs, physical activity, glucose) from the first three months, and the online control algorithm applied particle swarm optimization to identify impactful behavioral changes for maintaining the patient's glucose and weight levels for the next three months. The ONLC provided the intervention group with individualized feedback and recommendations via text messages. The PDT was re-trained weekly to improve its performance. Findings: The trained ONLC model achieved >=80% prediction accuracy across all patients while the model was tuned online. Participants in the intervention group exhibited a trend of improved daily steps and stable or improved total caloric and total carb intake as recommended.",
@@ -2591,7 +2626,8 @@
                 "attack"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Graph Neural Networks (GNNs) are a class of deep learning models capable of processing graph-structured data, and they have demonstrated significant performance in a variety of real-world applications. Recent studies have found that GNN models are vulnerable to backdoor attacks. When specific patterns (called backdoor triggers, e.g., subgraphs, nodes, etc.) appear in the input data, the backdoor embedded in the GNN models is activated, which misclassifies the input data into the target class label specified by the attacker, whereas when there are no backdoor triggers in the input, the backdoor embedded in the GNN models is not activated, and the models work normally. Backdoor attacks are highly stealthy and expose GNN models to serious security risks. Currently, research on backdoor attacks against GNNs mainly focus on tasks such as graph classification and node classification, and backdoor attacks against link prediction tasks are rarely studied. In this paper, we propose a backdoor attack against the link prediction tasks based on GNNs and reveal the existence of such security vulnerability in GNN models, which make the backdoored GNN models to incorrectly predict unlinked two nodes as having a link relationship when a trigger appear. The method uses a single node as the trigger and poison selected node pairs in the training graph, and then the backdoor will be embedded in the GNN models through the training process. In the inference stage, the backdoor in the GNN models can be activated by simply linking the trigger node to the two end nodes of the unlinked node pairs in the input data, causing the GNN models to produce incorrect link prediction results for the target node pairs.",
@@ -2612,7 +2648,8 @@
                 "forecast"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Weather station data is a valuable resource for climate prediction, however, its reliability can be limited in remote locations. To compound the issue, making local predictions often relies on sensor data that may not be accessible for a new, previously unmonitored location. In response to these challenges, we propose a novel zero-shot learning approach designed to forecast various climate measurements at new and unmonitored locations. Our method surpasses conventional weather forecasting techniques in predicting microclimate variables by leveraging knowledge extracted from other geographic locations.",
@@ -2653,7 +2690,8 @@
                 "Survival"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "A core challenge in survival analysis is to model the distribution of censored time-to-event data, where the event of interest may be a death, failure, or occurrence of a specific event. Previous studies have showed that ranking and maximum likelihood estimation (MLE)loss functions are widely-used for survival analysis. However, ranking loss only focus on the ranking of survival time and does not consider potential effect of samples for exact survival time values. Furthermore, the MLE is unbounded and easily subject to outliers (e.g., censored data), which may cause poor performance of modeling. To handle the complexities of learning process and exploit valuable survival time values, we propose a time-adaptive coordinate loss function, TripleSurv, to achieve adaptive adjustments by introducing the differences in the survival time between sample pairs into the ranking, which can encourage the model to quantitatively rank relative risk of pairs, ultimately enhancing the accuracy of predictions. Most importantly, the TripleSurv is proficient in quantifying the relative risk between samples by ranking ordering of pairs, and consider the time interval as a trade-off to calibrate the robustness of model over sample distribution. Our TripleSurv is evaluated on three real-world survival datasets and a public synthetic dataset. The results show that our method outperforms the state-of-the-art methods and exhibits good model performance and robustness on modeling various sophisticated data distributions with different censor rates. Our code will be available upon acceptance.",
@@ -2674,7 +2712,8 @@
                 "Physics"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Physics-informed neural network (PINN) is a data-driven solver for partial and ordinary differential equations(ODEs/PDEs). It provides a unified framework to address both forward and inverse problems. However, the complexity of the objective function often leads to training failures. This issue is particularly prominent when solving high-frequency and multi-scale problems. We proposed using transfer learning to boost the robustness and convergence of training PINN, starting training from low-frequency problems and gradually approaching high-frequency problems. Through two case studies, we discovered that transfer learning can effectively train PINN to approximate solutions from low-frequency problems to high-frequency problems without increasing network parameters. Furthermore, it requires fewer data points and less training time. We elaborately described our training strategy, including optimizer selection, and suggested guidelines for using transfer learning to train neural networks for solving more complex problems.",
@@ -2715,7 +2754,9 @@
                 "forecast"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG",
+                "cs.CY"
             ]
         ],
         "abstract": "In the largest survey of its kind, 2,778 researchers who had published in top-tier artificial intelligence (AI) venues gave predictions on the pace of AI progress and the nature and impacts of advanced AI systems The aggregate forecasts give at least a 50% chance of AI systems achieving several milestones by 2028, including autonomously constructing a payment processing site from scratch, creating a song indistinguishable from a new song by a popular musician, and autonomously downloading and fine-tuning a large language model. If science continues undisrupted, the chance of unaided machines outperforming humans in every possible task was estimated at 10% by 2027, and 50% by 2047. The latter estimate is 13 years earlier than that reached in a similar survey we conducted only one year earlier [Grace et al., 2022]. However, the chance of all human occupations becoming fully automatable was forecast to reach 10% by 2037, and 50% as late as 2116 (compared to 2164 in the 2022 survey). Most respondents expressed substantial uncertainty about the long-term value of AI progress: While 68.3% thought good outcomes from superhuman AI are more likely than bad, of these net optimists 48% gave at least a 5% chance of extremely bad outcomes such as human extinction, and 59% of net pessimists gave 5% or more to extremely good outcomes. Between 38% and 51% of respondents gave at least a 10% chance to advanced AI leading to outcomes as bad as human extinction. More than half suggested that \"substantial\" or \"extreme\" concern is warranted about six different AI-related scenarios, including misinformation, authoritarian control, and inequality. There was disagreement about whether faster or slower AI progress would be better for the future of humanity. However, there was broad agreement that research aimed at minimizing potential risks from AI systems ought to be prioritized more.",
@@ -2824,7 +2865,8 @@
                 "healthcare"
             ],
             [
-                "cs.LG"
+                "cs.LG",
+                "cs.CY"
             ]
         ],
         "abstract": "Machine learning methods based on AdaBoost have been widely applied to various classification problems across many mission-critical applications including healthcare, law and finance. However, there is a growing concern about the unfairness and discrimination of data-driven classification models, which is inevitable for classical algorithms including AdaBoost. In order to achieve fair classification, a novel fair AdaBoost (FAB) approach is proposed that is an interpretable fairness-improving variant of AdaBoost. We mainly investigate binary classification problems and focus on the fairness of three different indicators (i.e., accuracy, false positive rate and false negative rate). By utilizing a fairness-aware reweighting technique for base classifiers, the proposed FAB approach can achieve fair classification while maintaining the advantage of AdaBoost with negligible sacrifice of predictive performance. In addition, a hyperparameter is introduced in FAB to show preferences for the fairness-accuracy trade-off. An upper bound for the target loss function that quantifies error rate and unfairness is theoretically derived for FAB, which provides a strict theoretical support for the fairness-improving methods designed for AdaBoost. The effectiveness of the proposed method is demonstrated on three real-world datasets (i.e., Adult, COMPAS and HSLS) with respect to the three fairness indicators. The results are accordant with theoretic analyses, and show that (i) FAB significantly improves classification fairness at a small cost of accuracy compared with AdaBoost; and (ii) FAB outperforms state-of-the-art fair classification methods including equalized odds method, exponentiated gradient method, and disparate mistreatment method in terms of the fairness-accuracy trade-off.",
@@ -3128,7 +3170,8 @@
                 "organ"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Eye morphology varies significantly across the population, especially for the orbit and optic nerve. These variations limit the feasibility and robustness of generalizing population-wise features of eye organs to an unbiased spatial reference. To tackle these limitations, we propose a process for creating high-resolution unbiased eye atlases. First, to restore spatial details from scans with a low through-plane resolution compared to a high in-plane resolution, we apply a deep learning-based super-resolution algorithm. Then, we generate an initial unbiased reference with an iterative metric-based registration using a small portion of subject scans. We register the remaining scans to this template and refine the template using an unsupervised deep probabilistic approach that generates a more expansive deformation field to enhance the organ boundary alignment. We demonstrate this framework using magnetic resonance images across four different MRI tissue contrasts, generating four atlases in separate spatial alignments. For each tissue contrast, we find a significant improvement in the average Dice score across four labeled regions compared to a standard registration framework consisting of rigid, affine, and deformable transformations. These results highlight the effective alignment of eye organs and boundaries using our proposed process. By combining super-resolution preprocessing and deep probabilistic models, we address the challenge of generating an eye atlas to serve as a standardized reference across a largely variable population.",
@@ -3189,7 +3232,8 @@
             ],
             [
                 "cs.AI",
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Handwritten signature verification poses a formidable challenge in biometrics and document authenticity. The objective is to ascertain the authenticity of a provided handwritten signature, distinguishing between genuine and forged ones. This issue has many applications in sectors such as finance, legal documentation, and security. Currently, the field of computer vision and machine learning has made significant progress in the domain of handwritten signature verification. The outcomes, however, may be enhanced depending on the acquired findings, the structure of the datasets, and the used models. Four stages make up our suggested strategy. First, we collected a large dataset of 12600 images from 420 distinct individuals, and each individual has 30 signatures of a certain kind (All authors signatures are genuine). In the subsequent stage, the best features from each image were extracted using a deep learning model named MobileNetV2. During the feature selection step, three selectors neighborhood component analysis (NCA), Chi2, and mutual info (MI) were used to pull out 200, 300, 400, and 500 features, giving a total of 12 feature vectors. Finally, 12 results have been obtained by applying machine learning techniques such as SVM with kernels (rbf, poly, and linear), KNN, DT, Linear Discriminant Analysis, and Naive Bayes. Without employing feature selection techniques, our suggested offline signature verification achieved a classification accuracy of 91.3%, whereas using the NCA feature selection approach with just 300 features it achieved a classification accuracy of 97.7%. High classification accuracy was achieved using the designed and suggested model, which also has the benefit of being a self-organized framework. Consequently, using the optimum minimally chosen features, the proposed method could identify the best model performance and result validation prediction vectors.",
@@ -3214,7 +3258,8 @@
             ],
             [
                 "cs.LG",
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Climate change is intensifying extreme weather events, causing both water scarcity and severe rainfall unpredictability, and posing threats to sustainable development, biodiversity, and access to water and sanitation. This paper aims to provide valuable insights for comprehensive water resource monitoring under diverse meteorological conditions. An extension of the SEN2DWATER dataset is proposed to enhance its capabilities for water basin segmentation. Through the integration of temporally and spatially aligned radar information from Sentinel-1 data with the existing multispectral Sentinel-2 data, a novel multisource and multitemporal dataset is generated. Benchmarking the enhanced dataset involves the application of indices such as the Soil Water Index (SWI) and Normalized Difference Water Index (NDWI), along with an unsupervised Machine Learning (ML) classifier (k-means clustering). Promising results are obtained and potential future developments and applications arising from this research are also explored.",
@@ -3285,7 +3330,8 @@
                 "Forecasting"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "This survey delves into the application of diffusion models in time-series forecasting. Diffusion models are demonstrating state-of-the-art results in various fields of generative AI. The paper includes comprehensive background information on diffusion models, detailing their conditioning methods and reviewing their use in time-series forecasting. The analysis covers 11 specific time-series implementations, the intuition and theory behind them, the effectiveness on different datasets, and a comparison among each other. Key contributions of this work are the thorough exploration of diffusion models' applications in time-series forecasting and a chronologically ordered overview of these models. Additionally, the paper offers an insightful discussion on the current state-of-the-art in this domain and outlines potential future research directions. This serves as a valuable resource for researchers in AI and time-series analysis, offering a clear view of the latest advancements and future potential of diffusion models.",
@@ -3333,7 +3379,8 @@
                 "Recommendation"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "This research paper addresses the critical challenge of diabetic retinopathy (DR), a severe complication of diabetes leading to potential blindness. The proposed methodology leverages transfer learning with convolutional neural networks (CNNs) for automatic DR detection using a single fundus photograph, demonstrating high effectiveness with a quadratic weighted kappa score of 0.92546 in the APTOS 2019 Blindness Detection Competition. The paper reviews existing literature on DR detection, spanning classical computer vision methods to deep learning approaches, particularly focusing on CNNs. It identifies gaps in the research, emphasizing the lack of exploration in integrating pretrained large language models with segmented image inputs for generating recommendations and understanding dynamic interactions within a web application context.Objectives include developing a comprehensive DR detection methodology, exploring model integration, evaluating performance through competition ranking, contributing significantly to DR detection methodologies, and identifying research gaps.The methodology involves data preprocessing, data augmentation, and the use of a U-Net neural network architecture for segmentation. The U-Net model efficiently segments retinal structures, including blood vessels, hard and soft exudates, haemorrhages, microaneurysms, and the optical disc. High evaluation scores in Jaccard, F1, recall, precision, and accuracy underscore the model's potential for enhancing diagnostic capabilities in retinal pathology assessment.The outcomes of this research hold promise for improving patient outcomes through timely diagnosis and intervention in the fight against diabetic retinopathy, marking a significant contribution to the field of medical image analysis.",
@@ -3430,6 +3477,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],

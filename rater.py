@@ -83,8 +83,7 @@ class Rater:
             0.5: [
                 "AAAI", "CVPR", "ECCV", "EMNLP", "ICASSP", "ICCV", "ICLR",
                 "Interspeech", "NeurIPS", "NIPS", "WACV", "ICML"
-            ],
-            -0.5: ["workshop", "Workshop"]
+            ]
         }
 
     
@@ -94,9 +93,10 @@ class Rater:
         
         for rating in sorted(ratingDict.keys()):
             for keyword in ratingDict[rating]:
-                if ((keyword in content) and (rating > finalRating)):
-                    finalRating = rating
+                if (keyword in content):
                     keywords.append(keyword)
+                    if (rating > finalRating):
+                        finalRating = rating
         
         if (len(keywords) > 0): keywords = [keywords]
         

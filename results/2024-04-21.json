@@ -10,6 +10,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -51,7 +52,8 @@
                 "Vision-Language"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "Large Vision-Language Models (LVLMs) suffer from hallucination issues, wherein the models generate plausible-sounding but factually incorrect outputs, undermining their reliability. A comprehensive quantitative evaluation is necessary to identify and understand the extent of hallucinations in these models. However, existing benchmarks are often limited in scope, focusing mainly on object hallucinations. Furthermore, current evaluation methods struggle to effectively address the subtle semantic distinctions between model outputs and reference data, as well as the balance between hallucination and informativeness. To address these issues, we introduce a multi-dimensional benchmark covering objects, attributes, and relations, with challenging images selected based on associative biases. Moreover, we propose an large language model (LLM)-based two-stage evaluation framework that generalizes the popular CHAIR metric and incorporates both faithfulness and coverage into the evaluation. Experiments on 10 established LVLMs demonstrate that our evaluation metric is more comprehensive and better correlated with humans than existing work when evaluating on our challenging human annotated benchmark dataset. Our work also highlights the critical balance between faithfulness and coverage of model outputs, and encourages future works to address hallucinations in LVLMs while keeping their outputs informative.",
@@ -89,7 +91,8 @@
         "rating": "1.5",
         "keywords": [
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ],
             [
                 "CVPR"
@@ -135,7 +138,8 @@
                 "Efficient Fine-Tuning"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "A primary function of back-propagation is to compute both the gradient of hidden representations and parameters for optimization with gradient descent. Training large models requires high computational costs due to their vast parameter sizes. While Parameter-Efficient Fine-Tuning (PEFT) methods aim to train smaller auxiliary models to save computational space, they still present computational overheads, especially in Fine-Tuning as a Service (FTaaS) for numerous users. We introduce Collaborative Adaptation (ColA) with Gradient Learning (GL), a parameter-free, model-agnostic fine-tuning approach that decouples the computation of the gradient of hidden representations and parameters. In comparison to PEFT methods, ColA facilitates more cost-effective FTaaS by offloading the computation of the gradient to low-cost devices. We also provide a theoretical analysis of ColA and experimentally demonstrate that ColA can perform on par or better than existing PEFT methods on various benchmarks.",
@@ -185,7 +189,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "This study investigates the application of single vector hydrophones in underwater acoustic signal processing for Direction of Arrival (DOA) estimation. Addressing the limitations of traditional DOA estimation methods in multi-source environments and under noise interference, this research proposes a Vector Signal Reconstruction (VSR) technique. This technique transforms the covariance matrix of single vector hydrophone signals into a Toeplitz structure suitable for gridless sparse methods through complex calculations and vector signal reconstruction. Furthermore, two sparse DOA estimation algorithms based on vector signal reconstruction are introduced. Theoretical analysis and simulation experiments demonstrate that the proposed algorithms significantly improve the accuracy and resolution of DOA estimation in multi-source signals and low Signal-to-Noise Ratio (SNR) environments compared to traditional algorithms. The contribution of this study lies in providing an effective new method for DOA estimation with single vector hydrophones in complex environments, introducing new research directions and solutions in the field of vector hydrophone signal processing.",
@@ -202,7 +207,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "Word embedding has become an essential means for text-based information retrieval. Typically, word embeddings are learned from large quantities of general and unstructured text data. However, in the domain of music, the word embedding may have difficulty understanding musical contexts or recognizing music-related entities like artists and tracks. To address this issue, we propose a new approach called Musical Word Embedding (MWE), which involves learning from various types of texts, including both everyday and music-related vocabulary. We integrate MWE into an audio-word joint representation framework for tagging and retrieving music, using words like tag, artist, and track that have different levels of musical specificity. Our experiments show that using a more specific musical word like track results in better retrieval performance, while using a less specific term like tag leads to better tagging performance. To balance this compromise, we suggest multi-prototype training that uses words with different levels of musical specificity jointly. We evaluate both word embedding and audio-word joint embedding on four tasks (tag rank prediction, music tagging, query-by-tag, and query-by-track) across two datasets (Million Song Dataset and MTG-Jamendo). Our findings show that the suggested MWE is more efficient and robust than the conventional word embedding.",
@@ -307,7 +313,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "Temporal sentence grounding involves the retrieval of a video moment with a natural language query. Many existing works directly incorporate the given video and temporally localized query for temporal grounding, overlooking the inherent domain gap between different modalities. In this paper, we utilize pseudo-query features containing extensive temporally global textual knowledge sourced from the same video-query pair, to enhance the bridging of domain gaps and attain a heightened level of similarity between multi-modal features. Specifically, we propose a Pseudo-query Intermediary Network (PIN) to achieve an improved alignment of visual and comprehensive pseudo-query features within the feature space through contrastive learning. Subsequently, we utilize learnable prompts to encapsulate the knowledge of pseudo-queries, propagating them into the textual encoder and multi-modal fusion module, further enhancing the feature alignment between visual and language for better temporal grounding. Extensive experiments conducted on the Charades-STA and ActivityNet-Captions datasets demonstrate the effectiveness of our method.",
@@ -380,6 +387,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -399,7 +407,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Multiple complex degradations are coupled in low-quality video faces in the real world. Therefore, blind video face restoration is a highly challenging ill-posed problem, requiring not only hallucinating high-fidelity details but also enhancing temporal coherence across diverse pose variations. Restoring each frame independently in a naive manner inevitably introduces temporal incoherence and artifacts from pose changes and keypoint localization errors. To address this, we propose the first blind video face restoration approach with a novel parsing-guided temporal-coherent transformer (PGTFormer) without pre-alignment. PGTFormer leverages semantic parsing guidance to select optimal face priors for generating temporally coherent artifact-free results. Specifically, we pre-train a temporal-spatial vector quantized auto-encoder on high-quality video face datasets to extract expressive context-rich priors. Then, the temporal parse-guided codebook predictor (TPCP) restores faces in different poses based on face parsing context cues without performing face pre-alignment. This strategy reduces artifacts and mitigates jitter caused by cumulative errors from face pre-alignment. Finally, the temporal fidelity regulator (TFR) enhances fidelity through temporal feature interaction and improves video temporal consistency. Extensive experiments on face videos show that our method outperforms previous face restoration baselines. The code will be released on \\href{https://github.com/kepengxu/PGTFormer}{https://github.com/kepengxu/PGTFormer}.",
@@ -591,6 +600,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -616,7 +626,8 @@
             ],
             [
                 "cs.AI",
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "Metric learning minimizes the gap between similar (positive) pairs of data points and increases the separation of dissimilar (negative) pairs, aiming at capturing the underlying data structure and enhancing the performance of tasks like audio-visual cross-modal retrieval (AV-CMR). Recent works employ sampling methods to select impactful data points from the embedding space during training. However, the model training fails to fully explore the space due to the scarcity of training data points, resulting in an incomplete representation of the overall positive and negative distributions. In this paper, we propose an innovative Anchor-aware Deep Metric Learning (AADML) method to address this challenge by uncovering the underlying correlations among existing data points, which enhances the quality of the shared embedding space. Specifically, our method establishes a correlation graph-based manifold structure by considering the dependencies between each sample as the anchor and its semantically similar samples. Through dynamic weighting of the correlations within this underlying manifold structure using an attention-driven mechanism, Anchor Awareness (AA) scores are obtained for each anchor. These AA scores serve as data proxies to compute relative distances in metric learning approaches. Extensive experiments conducted on two audio-visual benchmark datasets demonstrate the effectiveness of our proposed AADML method, significantly surpassing state-of-the-art models. Furthermore, we investigate the integration of AA proxies with various metric learning methods, further highlighting the efficacy of our approach.",
@@ -707,6 +718,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -725,7 +737,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "Visual Commonsense Reasoning (VCR) is a cognitive task, challenging models to answer visual questions requiring human commonsense, and to provide rationales explaining why the answers are correct. With emergence of Large Language Models (LLMs), it is natural and imperative to explore their applicability to VCR. However, VCR task demands more external knowledge to tackle its challenging questions, necessitating special designs to activate LLMs' commonsense reasoning abilities. Also, most existing Multimodal LLMs adopted an abstraction of entire input image, which makes it difficult to comprehend VCR's unique co-reference tags between image regions and text, posing challenges for fine-grained alignment. To address these issues, we propose EventLens that leverages Event-Aware Pretraining and Cross-modal Linking and EnhanceS VCR. First, by emulating the cognitive process of human reasoning, an Event-Aware Pretraining auxiliary task is introduced to better activate LLM's global comprehension of intricate scenarios. Second, during fine-tuning, we further utilize reference tags to bridge RoI features with texts, while preserving both modality semantics. Finally, we use instruct-style prompts to narrow the gap between pretraining and fine-tuning, and task-specific adapters to better integrate LLM's inherent knowledge with new commonsense. Experimental results show the effectiveness of our proposed auxiliary task and fine-grained linking strategy.",
@@ -958,7 +971,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Most existing temporal point process models are characterized by conditional intensity function. These models often require numerical approximation methods for likelihood evaluation, which potentially hurts their performance. By directly modelling the integral of the intensity function, i.e., the cumulative hazard function (CHF), the likelihood can be evaluated accurately, making it a promising approach. However, existing CHF-based methods are not well-defined, i.e., the mathematical constraints of CHF are not completely satisfied, leading to untrustworthy results. For multivariate temporal point process, most existing methods model intensity (or density, etc.) functions for each variate, limiting the scalability. In this paper, we explore using neural networks to model a flexible but well-defined CHF and learning the multivariate temporal point process with low parameter complexity. Experimental results on six datasets show that the proposed model achieves the state-of-the-art performance on data fitting and event prediction tasks while having significantly fewer parameters and memory usage than the strong competitors. The source code and data can be obtained from https://github.com/lbq8942/NPP.",
@@ -1034,7 +1048,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.CY"
             ]
         ],
         "abstract": "Autonomous and intelligent systems (AIS) facilitate a wide range of beneficial applications across a variety of different domains. However, technical characteristics such as unpredictability and lack of transparency, as well as potential unintended consequences, pose considerable challenges to the current governance infrastructure. Furthermore, the speed of development and deployment of applications outpaces the ability of existing governance institutions to put in place effective ethical-legal oversight. New approaches for agile, distributed and multilevel governance are needed. This work presents a practical framework for multilevel governance of AIS. The framework enables mapping actors onto six levels of decision-making including the international, national and organizational levels. Furthermore, it offers the ability to identify and evolve existing tools or create new tools for guiding the behavior of actors within the levels. Governance mechanisms enable actors to shape and enforce regulations and other tools, which when complemented with good practices contribute to effective and comprehensive governance.",
@@ -1069,7 +1084,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Counterfactual Explanations (CEs) have emerged as a major paradigm in explainable AI research, providing recourse recommendations for users affected by the decisions of machine learning models. However, when slight changes occur in the parameters of the underlying model, CEs found by existing methods often become invalid for the updated models. The literature lacks a way to certify deterministic robustness guarantees for CEs under model changes, in that existing methods to improve CEs' robustness are heuristic, and the robustness performances are evaluated empirically using only a limited number of retrained models. To bridge this gap, we propose a novel interval abstraction technique for parametric machine learning models, which allows us to obtain provable robustness guarantees of CEs under the possibly infinite set of plausible model changes $\u0394$. We formalise our robustness notion as the $\u0394$-robustness for CEs, in both binary and multi-class classification settings. We formulate procedures to verify $\u0394$-robustness based on Mixed Integer Linear Programming, using which we further propose two algorithms to generate CEs that are $\u0394$-robust. In an extensive empirical study, we demonstrate how our approach can be used in practice by discussing two strategies for determining the appropriate hyperparameter in our method, and we quantitatively benchmark the CEs generated by eleven methods, highlighting the effectiveness of our algorithms in finding robust CEs.",
@@ -1141,7 +1157,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.SI"
             ]
         ],
         "abstract": "In the ever-evolving landscape of social network advertising, the volume and accuracy of data play a critical role in the performance of predictive models. However, the development of robust predictive algorithms is often hampered by the limited size and potential bias present in real-world datasets. This study presents and explores a generative augmentation framework of social network advertising data. Our framework explores three generative models for data augmentation - Generative Adversarial Networks (GANs), Variational Autoencoders (VAEs), and Gaussian Mixture Models (GMMs) - to enrich data availability and diversity in the context of social network advertising analytics effectiveness. By performing synthetic extensions of the feature space, we find that through data augmentation, the performance of various classifiers has been quantitatively improved. Furthermore, we compare the relative performance gains brought by each data augmentation technique, providing insights for practitioners to select appropriate techniques to enhance model performance. This paper contributes to the literature by showing that synthetic data augmentation alleviates the limitations imposed by small or imbalanced datasets in the field of social network advertising. At the same time, this article also provides a comparative perspective on the practicality of different data augmentation methods, thereby guiding practitioners to choose appropriate techniques to enhance model performance.",
@@ -1332,7 +1349,8 @@
                 "depth"
             ],
             [
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "Recent research has successfully adapted vision-based convolutional neural network (CNN) architectures for audio recognition tasks using Mel-Spectrograms. However, these CNNs have high computational costs and memory requirements, limiting their deployment on low-end edge devices. Motivated by the success of efficient vision models like InceptionNeXt and ConvNeXt, we propose AudioRepInceptionNeXt, a single-stream architecture. Its basic building block breaks down the parallel multi-branch depth-wise convolutions with descending scales of k x k kernels into a cascade of two multi-branch depth-wise convolutions. The first multi-branch consists of parallel multi-scale 1 x k depth-wise convolutional layers followed by a similar multi-branch employing parallel multi-scale k x 1 depth-wise convolutional layers. This reduces computational and memory footprint while separating time and frequency processing of Mel-Spectrograms. The large kernels capture global frequencies and long activities, while small kernels get local frequencies and short activities. We also reparameterize the multi-branch design during inference to further boost speed without losing accuracy. Experiments show that AudioRepInceptionNeXt reduces parameters and computations by 50%+ and improves inference speed 1.28x over state-of-the-art CNNs like the Slow-Fast while maintaining comparable accuracy. It also learns robustly across a variety of audio recognition tasks. Codes are available at https://github.com/StevenLauHKHK/AudioRepInceptionNeXt.",
@@ -1373,7 +1391,8 @@
             ],
             [
                 "cs.AI",
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "This study explores innovative methods for improving Visual Question Answering (VQA) using Generative Adversarial Networks (GANs), autoencoders, and attention mechanisms. Leveraging a balanced VQA dataset, we investigate three distinct strategies. Firstly, GAN-based approaches aim to generate answer embeddings conditioned on image and question inputs, showing potential but struggling with more complex tasks. Secondly, autoencoder-based techniques focus on learning optimal embeddings for questions and images, achieving comparable results with GAN due to better ability on complex questions. Lastly, attention mechanisms, incorporating Multimodal Compact Bilinear pooling (MCB), address language priors and attention modeling, albeit with a complexity-performance trade-off. This study underscores the challenges and opportunities in VQA and suggests avenues for future research, including alternative GAN formulations and attentional mechanisms.",
@@ -1484,7 +1503,8 @@
             ],
             [
                 "cs.LG",
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Imaging modalities such as Computed Tomography (CT) and Positron Emission Tomography (PET) are key in cancer detection, inspiring Deep Neural Networks (DNN) models that merge these scans for tumor segmentation. When both CT and PET scans are available, it is common to combine them as two channels of the input to the segmentation model. However, this method requires both scan types during training and inference, posing a challenge due to the limited availability of PET scans, thereby sometimes limiting the process to CT scans only. Hence, there is a need to develop a flexible DNN architecture that can be trained/updated using only CT scans but can effectively utilize PET scans when they become available. In this work, we propose a parameter-efficient multi-modal adaptation (PEMMA) framework for lightweight upgrading of a transformer-based segmentation model trained only on CT scans to also incorporate PET scans. The benefits of the proposed approach are two-fold. Firstly, we leverage the inherent modularity of the transformer architecture and perform low-rank adaptation (LoRA) of the attention weights to achieve parameter-efficient adaptation. Secondly, since the PEMMA framework attempts to minimize cross modal entanglement, it is possible to subsequently update the combined model using only one modality, without causing catastrophic forgetting of the other modality. Our proposed method achieves comparable results with the performance of early fusion techniques with just 8% of the trainable parameters, especially with a remarkable +28% improvement on the average dice score on PET scans when trained on a single modality.",
@@ -1527,7 +1547,8 @@
                 "attack"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "With the digital imagery landscape rapidly evolving, image stocks and AI-generated image marketplaces have become central to visual media. Traditional stock images now exist alongside innovative platforms that trade in prompts for AI-generated visuals, driven by sophisticated APIs like DALL-E 3 and Midjourney. This paper studies the possibility of employing multi-modal models with enhanced visual understanding to mimic the outputs of these platforms, introducing an original attack strategy. Our method leverages fine-tuned CLIP models, a multi-label classifier, and the descriptive capabilities of GPT-4V to create prompts that generate images similar to those available in marketplaces and from premium stock image providers, yet at a markedly lower expense. In presenting this strategy, we aim to spotlight a new class of economic and security considerations within the realm of digital imagery. Our findings, supported by both automated metrics and human assessment, reveal that comparable visual content can be produced for a fraction of the prevailing market prices ($0.23 - $0.27 per image), emphasizing the need for awareness and strategic discussions about the integrity of digital media in an increasingly AI-integrated landscape. Our work also contributes to the field by assembling a dataset consisting of approximately 19 million prompt-image pairs generated by the popular Midjourney platform, which we plan to release publicly.",
@@ -1569,7 +1590,8 @@
                 "Robot"
             ],
             [
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "Current research in robotic sounds generally focuses on either masking the consequential sound produced by the robot or on sonifying data about the robot to create a synthetic robot sound. We propose to capture, modify, and utilise rather than mask the sounds that robots are already producing. In short, this approach relies on capturing a robot's sounds, processing them according to contextual information (e.g., collaborators' proximity or particular work sequences), and playing back the modified sound. Previous research indicates the usefulness of non-semantic, and even mechanical, sounds as a communication tool for conveying robotic affect and function. Adding to this, this paper presents a novel approach which makes two key contributions: (1) a technique for real-time capture and processing of consequential robot sounds, and (2) an approach to explore these sounds through direct human-robot interaction. Drawing on methodologies from design, human-robot interaction, and creative practice, the resulting 'Robotic Blended Sonification' is a concept which transforms the consequential robot sounds into a creative material that can be explored artistically and within application-based studies.",
@@ -1652,7 +1674,8 @@
                 "health"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Lateral flow tests (LFTs) enable rapid, low-cost testing for health conditions including Covid, pregnancy, HIV, and malaria. Automated readers of LFT results can yield many benefits including empowering blind people to independently learn about their health and accelerating data entry for large-scale monitoring (e.g., for pandemics such as Covid) by using only a single photograph per LFT test. Accordingly, we explore the abilities of modern foundation vision language models (VLMs) in interpreting such tests. To enable this analysis, we first create a new labeled dataset with hierarchical segmentations of each LFT test and its nested test result window. We call this dataset LFT-Grounding. Next, we benchmark eight modern VLMs in zero-shot settings for analyzing these images. We demonstrate that current VLMs frequently fail to correctly identify the type of LFT test, interpret the test results, locate the nested result window of the LFT tests, and recognize LFT tests when they partially obfuscated. To facilitate community-wide progress towards automated LFT reading, we publicly release our dataset at https://iamstuti.github.io/lft_grounding_foundation_models/.",
@@ -1673,7 +1696,8 @@
             ],
             [
                 "cs.AI",
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "Embodied Instruction Following (EIF) is the task of executing natural language instructions by navigating and interacting with objects in 3D environments. One of the primary challenges in EIF is compositional task planning, which is often addressed with supervised or in-context learning with labeled data. To this end, we introduce the Socratic Planner, the first zero-shot planning method that infers without the need for any training data. Socratic Planner first decomposes the instructions into substructural information of the task through self-questioning and answering, translating it into a high-level plan, i.e., a sequence of subgoals. Subgoals are executed sequentially, with our visually grounded re-planning mechanism adjusting plans dynamically through a dense visual feedback. We also introduce an evaluation metric of high-level plans, RelaxedHLP, for a more comprehensive evaluation. Experiments demonstrate the effectiveness of the Socratic Planner, achieving competitive performance on both zero-shot and few-shot task planning in the ALFRED benchmark, particularly excelling in tasks requiring higher-dimensional inference. Additionally, a precise adjustments in the plan were achieved by incorporating environmental visual information.",
@@ -1696,6 +1720,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -1745,7 +1770,8 @@
                 "Graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Graph Neural Networks have demonstrated great success in various fields of multimedia. However, the distribution shift between the training and test data challenges the effectiveness of GNNs. To mitigate this challenge, Test-Time Training (TTT) has been proposed as a promising approach. Traditional TTT methods require a demanding unsupervised training strategy to capture the information from test to benefit the main task. Inspired by the great annotation ability of Large Language Models (LLMs) on Text-Attributed Graphs (TAGs), we propose to enhance the test-time training on graphs with LLMs as annotators. In this paper, we design a novel Test-Time Training pipeline, LLMTTT, which conducts the test-time adaptation under the annotations by LLMs on a carefully-selected node set. Specifically, LLMTTT introduces a hybrid active node selection strategy that considers not only node diversity and representativeness, but also prediction signals from the pre-trained model. Given annotations from LLMs, a two-stage training strategy is designed to tailor the test-time model with the limited and noisy labels. A theoretical analysis ensures the validity of our method and extensive experiments demonstrate that the proposed LLMTTT can achieve a significant performance improvement compared to existing Out-of-Distribution (OOD) generalization methods.",
@@ -1765,7 +1791,8 @@
                 "Unlearning"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Machine unlearning aims to enable models to forget specific data instances when receiving deletion requests. Current research centres on efficient unlearning to erase the influence of data from the model and neglects the subsequent impacts on the remaining data. Consequently, existing unlearning algorithms degrade the model's performance after unlearning, known as \\textit{over-unlearning}. This paper addresses this critical yet under-explored issue by introducing machine \\underline{U}nlearning via \\underline{N}ull \\underline{S}pace \\underline{C}alibration (UNSC), which can accurately unlearn target samples without over-unlearning. On the contrary, by calibrating the decision space during unlearning, UNSC can significantly improve the model's performance on the remaining samples. In particular, our approach hinges on confining the unlearning process to a specified null space tailored to the remaining samples, which is augmented by strategically pseudo-labeling the unlearning samples. Comparative analyses against several established baselines affirm the superiority of our approach. Code is released at this \\href{https://github.com/HQC-ML/Machine-Unlearning-via-Null-Space-Calibration}{URL}.",
@@ -1804,7 +1831,8 @@
                 "Graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "The existing definitions of graph convolution, either from spatial or spectral perspectives, are inflexible and not unified. Defining a general convolution operator in the graph domain is challenging due to the lack of canonical coordinates, the presence of irregular structures, and the properties of graph symmetries. In this work, we propose a novel graph convolution framework by parameterizing the kernels as continuous functions of pseudo-coordinates derived via graph positional encoding. We name this Continuous Kernel Graph Convolution (CKGConv). Theoretically, we demonstrate that CKGConv is flexible and expressive. CKGConv encompasses many existing graph convolutions, and exhibits the same expressiveness as graph transformers in terms of distinguishing non-isomorphic graphs. Empirically, we show that CKGConv-based Networks outperform existing graph convolutional networks and perform comparably to the best graph transformers across a variety of graph datasets.",
@@ -1844,7 +1872,8 @@
                 "Graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Graph neural networks (GNNs) have revolutionized the field of machine learning on non-Euclidean data such as graphs and networks. GNNs effectively implement node representation learning through neighborhood aggregation and achieve impressive results in many graph-related tasks. However, most neighborhood aggregation approaches are summation-based, which can be problematic as they may not be sufficiently expressive to encode informative graph structures. Furthermore, though the graph pooling module is also of vital importance for graph learning, especially for the task of graph classification, research on graph down-sampling mechanisms is rather limited. To address the above challenges, we propose a concatenation-based graph convolution mechanism that injectively updates node representations to maximize the discriminative power in distinguishing non-isomorphic subgraphs. In addition, we design a novel graph pooling module, called WL-SortPool, to learn important subgraph patterns in a deep-learning manner. WL-SortPool layer-wise sorts node representations (i.e. continuous WL colors) to separately learn the relative importance of subtrees with different depths for the purpose of classification, thus better characterizing the complex graph topology and rich information encoded in the graph. We propose a novel Subgraph Pattern GNN (SPGNN) architecture that incorporates these enhancements. We test the proposed SPGNN architecture on many graph classification benchmarks. Experimental results show that our method can achieve highly competitive results with state-of-the-art graph kernels and other GNN approaches.",
@@ -1906,7 +1935,8 @@
                 "Autonomous Driving"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Recently,smart roadside infrastructure (SRI) has demonstrated the potential of achieving fully autonomous driving systems. To explore the potential of infrastructure-assisted autonomous driving, this paper presents the design and deployment of Soar, the first end-to-end SRI system specifically designed to support autonomous driving systems. Soar consists of both software and hardware components carefully designed to overcome various system and physical challenges. Soar can leverage the existing operational infrastructure like street lampposts for a lower barrier of adoption. Soar adopts a new communication architecture that comprises a bi-directional multi-hop I2I network and a downlink I2V broadcast service, which are designed based on off-the-shelf 802.11ac interfaces in an integrated manner. Soar also features a hierarchical DL task management framework to achieve desirable load balancing among nodes and enable them to collaborate efficiently to run multiple data-intensive autonomous driving applications. We deployed a total of 18 Soar nodes on existing lampposts on campus, which have been operational for over two years. Our real-world evaluation shows that Soar can support a diverse set of autonomous driving applications and achieve desirable real-time performance and high communication reliability. Our findings and experiences in this work offer key insights into the development and deployment of next-generation smart roadside infrastructure and autonomous driving systems.",
@@ -1950,7 +1980,8 @@
                 "Federated Learning"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Federated learning (FL) enables collaborative learning across multiple clients. In most FL work, all clients train a single learning task. However, the recent proliferation of FL applications may increasingly require multiple FL tasks to be trained simultaneously, sharing clients' computing and communication resources, which we call Multiple-Model Federated Learning (MMFL). Current MMFL algorithms use naive average-based client-task allocation schemes that can lead to unfair performance when FL tasks have heterogeneous difficulty levels, e.g., tasks with larger models may need more rounds and data to train. Just as naively allocating resources to generic computing jobs with heterogeneous resource needs can lead to unfair outcomes, naive allocation of clients to FL tasks can lead to unfairness, with some tasks having excessively long training times, or lower converged accuracies. Furthermore, in the FL setting, since clients are typically not paid for their training effort, we face a further challenge that some clients may not even be willing to train some tasks, e.g., due to high computational costs, which may exacerbate unfairness in training outcomes across tasks. We address both challenges by firstly designing FedFairMMFL, a difficulty-aware algorithm that dynamically allocates clients to tasks in each training round. We provide guarantees on airness and FedFairMMFL's convergence rate. We then propose a novel auction design that incentivizes clients to train multiple tasks, so as to fairly distribute clients' training efforts across the tasks. We show how our fairness-based learning and incentive mechanisms impact training convergence and finally evaluate our algorithm with multiple sets of learning tasks on real world datasets.",
@@ -1970,7 +2001,8 @@
                 "anomaly detection"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Predictive Maintenance applications are increasingly complex, with interactions between many components. Black box models are popular approaches based on deep learning techniques due to their predictive accuracy. This paper proposes a neural-symbolic architecture that uses an online rule-learning algorithm to explain when the black box model predicts failures. The proposed system solves two problems in parallel: anomaly detection and explanation of the anomaly. For the first problem, we use an unsupervised state of the art autoencoder. For the second problem, we train a rule learning system that learns a mapping from the input features to the autoencoder reconstruction error. Both systems run online and in parallel. The autoencoder signals an alarm for the examples with a reconstruction error that exceeds a threshold. The causes of the signal alarm are hard for humans to understand because they result from a non linear combination of sensor data. The rule that triggers that example describes the relationship between the input features and the autoencoder reconstruction error. The rule explains the failure signal by indicating which sensors contribute to the alarm and allowing the identification of the component involved in the failure. The system can present global explanations for the black box model and local explanations for why the black box model predicts a failure. We evaluate the proposed system in a real-world case study of Metro do Porto and provide explanations that illustrate its benefits.",
@@ -2152,7 +2184,8 @@
                 "Vehicle"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Vehicle license plate recognition is a crucial task in intelligent traffic management systems. However, the challenge of achieving accurate recognition persists due to motion blur from fast-moving vehicles. Despite the widespread use of image synthesis approaches in existing deblurring and recognition algorithms, their effectiveness in real-world scenarios remains unproven. To address this, we introduce the first large-scale license plate deblurring dataset named License Plate Blur (LPBlur), captured by a dual-camera system and processed through a post-processing pipeline to avoid misalignment issues. Then, we propose a License Plate Deblurring Generative Adversarial Network (LPDGAN) to tackle the license plate deblurring: 1) a Feature Fusion Module to integrate multi-scale latent codes; 2) a Text Reconstruction Module to restore structure through textual modality; 3) a Partition Discriminator Module to enhance the model's perception of details in each letter. Extensive experiments validate the reliability of the LPBlur dataset for both model training and testing, showcasing that our proposed model outperforms other state-of-the-art motion deblurring methods in realistic license plate deblurring scenarios. The dataset and code are available at https://github.com/haoyGONG/LPDGAN.",
@@ -2268,7 +2301,8 @@
                 "health"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Photovoltaic (PV) systems allow us to tap into all abundant solar energy, however they require regular maintenance for high efficiency and to prevent degradation. Traditional manual health check, using Electroluminescence (EL) imaging, is expensive and logistically challenging making automated defect detection essential. Current automation approaches require extensive manual expert labeling, which is time-consuming, expensive, and prone to errors. We propose PV-S3 (Photovoltaic-Semi Supervised Segmentation), a Semi-Supervised Learning approach for semantic segmentation of defects in EL images that reduces reliance on extensive labeling. PV-S3 is a Deep learning model trained using a few labeled images along with numerous unlabeled images. We introduce a novel Semi Cross-Entropy loss function to train PV-S3 which addresses the challenges specific to automated PV defect detection, such as diverse defect types and class imbalance. We evaluate PV-S3 on multiple datasets and demonstrate its effectiveness and adaptability. With merely 20% labeled samples, we achieve an absolute improvement of 9.7% in IoU, 29.9% in Precision, 12.75% in Recall, and 20.42% in F1-Score over prior state-of-the-art supervised method (which uses 100% labeled samples) on UCF-EL dataset (largest dataset available for semantic segmentation of EL images) showing improvement in performance while reducing the annotation costs by 80%.",
@@ -2311,6 +2345,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -2377,6 +2412,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -2419,7 +2455,8 @@
                 "Tumor"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Binary breast cancer tumor segmentation with Magnetic Resonance Imaging (MRI) data is typically trained and evaluated on private medical data, which makes comparing deep learning approaches difficult. We propose a benchmark (BC-MRI-SEG) for binary breast cancer tumor segmentation based on publicly available MRI datasets. The benchmark consists of four datasets in total, where two datasets are used for supervised training and evaluation, and two are used for zero-shot evaluation. Additionally we compare state-of-the-art (SOTA) approaches on our benchmark and provide an exhaustive list of available public breast cancer MRI datasets. The source code has been made available at https://irulenot.github.io/BC_MRI_SEG_Benchmark.",
@@ -2605,7 +2642,8 @@
                 "Image Restoration"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ],
             [
                 "CVPR"
@@ -2861,7 +2899,8 @@
                 "industrial"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Despite considerable progress being achieved in point cloud geometry compression, there still remains a challenge in effectively compressing large-scale scenes with sparse surfaces. Another key challenge lies in reducing decoding latency, a crucial requirement in real-world application. In this paper, we propose Pointsoup, an efficient learning-based geometry codec that attains high-performance and extremely low-decoding-latency simultaneously. Inspired by conventional Trisoup codec, a point model-based strategy is devised to characterize local surfaces. Specifically, skin features are embedded from local windows via an attention-based encoder, and dilated windows are introduced as cross-scale priors to infer the distribution of quantized features in parallel. During decoding, features undergo fast refinement, followed by a folding-based point generator that reconstructs point coordinates with fairly fast speed. Experiments show that Pointsoup achieves state-of-the-art performance on multiple benchmarks with significantly lower decoding complexity, i.e., up to 90$\\sim$160$\\times$ faster than the G-PCCv23 Trisoup decoder on a comparatively low-end platform (e.g., one RTX 2080Ti). Furthermore, it offers variable-rate control with a single neural model (2.9MB), which is attractive for industrial practitioners.",
@@ -3133,7 +3172,8 @@
                 "Healthcare"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Synthetic data generation offers a promising solution to enhance the usefulness of Electronic Healthcare Records (EHR) by generating realistic de-identified data. However, the existing literature primarily focuses on the quality of synthetic health data, neglecting the crucial aspect of fairness in downstream predictions. Consequently, models trained on synthetic EHR have faced criticism for producing biased outcomes in target tasks. These biases can arise from either spurious correlations between features or the failure of models to accurately represent sub-groups. To address these concerns, we present Bias-transforming Generative Adversarial Networks (Bt-GAN), a GAN-based synthetic data generator specifically designed for the healthcare domain. In order to tackle spurious correlations (i), we propose an information-constrained Data Generation Process that enables the generator to learn a fair deterministic transformation based on a well-defined notion of algorithmic fairness. To overcome the challenge of capturing exact sub-group representations (ii), we incentivize the generator to preserve sub-group densities through score-based weighted sampling. This approach compels the generator to learn from underrepresented regions of the data manifold. We conduct extensive experiments using the MIMIC-III database. Our results demonstrate that Bt-GAN achieves SOTA accuracy while significantly improving fairness and minimizing bias amplification. We also perform an in-depth explainability analysis to provide additional evidence supporting the validity of our study. In conclusion, our research introduces a novel and professional approach to addressing the limitations of synthetic data generation in the healthcare domain. By incorporating fairness considerations and leveraging advanced techniques such as GANs, we pave the way for more reliable and unbiased predictions in healthcare applications.",
@@ -3182,7 +3222,8 @@
                 "EEG"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Automated emotion recognition using electroencephalogram (EEG) signals has gained substantial attention. Although deep learning approaches exhibit strong performance, they often suffer from vulnerabilities to various perturbations, like environmental noise and adversarial attacks. In this paper, we propose an Inception feature generator and two-sided perturbation (INC-TSP) approach to enhance emotion recognition in brain-computer interfaces. INC-TSP integrates the Inception module for EEG data analysis and employs two-sided perturbation (TSP) as a defensive mechanism against input perturbations. TSP introduces worst-case perturbations to the model's weights and inputs, reinforcing the model's elasticity against adversarial attacks. The proposed approach addresses the challenge of maintaining accurate emotion recognition in the presence of input uncertainties. We validate INC-TSP in a subject-independent three-class emotion recognition scenario, demonstrating robust performance.",
@@ -3331,7 +3372,8 @@
                 "Industrial"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Over the past decade, deep learning helped solve manipulation problems across all domains of robotics. At the same time, industrial robots continue to be programmed overwhelmingly using traditional program representations and interfaces. This paper undertakes an analysis of this \"AI adoption gap\" from an industry practitioner's perspective. In response, we propose the BANSAI approach (Bridging the AI Adoption Gap via Neurosymbolic AI). It systematically leverages principles of neurosymbolic AI to establish data-driven, subsymbolic program synthesis and optimization in modern industrial robot programming workflow. BANSAI conceptually unites several lines of prior research and proposes a path toward practical, real-world validation.",

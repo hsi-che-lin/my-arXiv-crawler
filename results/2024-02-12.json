@@ -53,7 +53,9 @@
             ],
             [
                 "cs.AI",
-                "cs.CV"
+                "cs.LG",
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "Visually-conditioned language models (VLMs) have seen growing adoption in applications such as visual dialogue, scene understanding, and robotic task planning; adoption that has fueled a wealth of new models such as LLaVa, InstructBLIP, and PaLI-3. Despite the volume of new releases, key design decisions around image preprocessing, architecture, and optimization are under-explored, making it challenging to understand what factors account for model performance $-$ a challenge further complicated by the lack of objective, consistent evaluations. To address these gaps, we first compile a suite of standardized evaluations spanning visual question answering, object localization from language, and targeted challenge sets that probe properties such as hallucination; evaluations that provide calibrated, fine-grained insight into a VLM's capabilities. Second, we rigorously investigate VLMs along key design axes, including pretrained visual representations and quantifying the tradeoffs of using base vs. instruct-tuned language models, amongst others. We couple our analysis with three resource contributions: (1) a unified framework for evaluating VLMs, (2) optimized, flexible code for VLM training, and (3) checkpoints for all models, including a family of VLMs at the 7-13B scale that strictly outperform InstructBLIP and LLaVa v1.5, the state-of-the-art in open-source VLMs.",
@@ -195,6 +197,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -266,6 +269,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -320,7 +324,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "In the realm of audio-language pre-training (ALP), the challenge of achieving cross-modal alignment is significant. Moreover, the integration of audio inputs with diverse distributions and task variations poses challenges in developing generic audio-language models. In this study, we introduce MINT, a novel ALP framework boosting audio-language models through multi-target pre-training and instruction tuning. MINT leverages the strength of frozen pre-trained audio encoders and large language models (LLMs) to improve audio-language pre-training, enabling effective transferablility to both audio-text understanding and generation tasks. To address the modality gap, we propose Bridge-Net, a lightweight trainable module that enhances cross-modality alignment and the model's ability to follow instructions for a variety of audio-text tasks. Bridge-Net is pivotal within MINT, initially enhancing audio-language representation learning through a multi-target pre-training approach. Subsequently, Bridge-Net further boosts audio-to-language generative learning by integrating a frozen language model with instruction tuning. This integration empowers MINT to extract features in a flexible and effective manner, specifically tailored to the provided instructions for diverse tasks. Experimental results demonstrate that MINT attains superior performance across various audio-language understanding and generation tasks, highlighting its robust generalization capabilities even in zero-shot scenarios.",
@@ -338,6 +343,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.CY",
                 "cs.CL"
             ]
         ],
@@ -425,6 +431,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -443,7 +450,9 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.CV"
+                "cs.CV",
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "State-of-the-art end-to-end Optical Music Recognition (OMR) has, to date, primarily been carried out using monophonic transcription techniques to handle complex score layouts, such as polyphony, often by resorting to simplifications or specific adaptations. Despite their efficacy, these approaches imply challenges related to scalability and limitations. This paper presents the Sheet Music Transformer, the first end-to-end OMR model designed to transcribe complex musical scores without relying solely on monophonic strategies. Our model employs a Transformer-based image-to-sequence framework that predicts score transcriptions in a standard digital music encoding format from input images. Our model has been tested on two polyphonic music datasets and has proven capable of handling these intricate music structures effectively. The experimental outcomes not only indicate the competence of the model, but also show that it is better than the state-of-the-art methods, thus contributing to advancements in end-to-end OMR transcription.",
@@ -461,7 +470,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "Extraction of predominant pitch from polyphonic audio is one of the fundamental tasks in the field of music information retrieval and computational musicology. To accomplish this task using machine learning, a large amount of labeled audio data is required to train the model. However, a classical model pre-trained on data from one domain (source), e.g., songs of a particular singer or genre, may not perform comparatively well in extracting melody from other domains (target). The performance of such models can be boosted by adapting the model using very little annotated data from the target domain. In this work, we propose an efficient interactive melody adaptation method. Our method selects the regions in the target audio that require human annotation using a confidence criterion based on normalized true class probability. The annotations are used by the model to adapt itself to the target domain using meta-learning. Our method also provides a novel meta-learning approach that handles class imbalance, i.e., a few representative samples from a few classes are available for adaptation in the target domain. Experimental results show that the proposed method outperforms other adaptive melody extraction baselines. The proposed method is model-agnostic and hence can be applied to other non-adaptive melody extraction models to boost their performance. Also, we released a Hindustani Alankaar and Raga (HAR) dataset containing 523 audio files of about 6.86 hours of duration intended for singing melody extraction tasks.",
@@ -497,6 +507,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -620,7 +631,9 @@
         "keywords": [
             [
                 "cs.LG",
-                "cs.CL"
+                "cs.CL",
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "Recently, instruction-following audio-language models have received broad attention for human-audio interaction. However, the absence of benchmarks capable of evaluating audio-centric interaction capabilities has impeded advancements in this field. Previous models primarily focus on assessing different fundamental tasks, such as Automatic Speech Recognition (ASR), and lack an assessment of the open-ended generative capabilities centered around audio. Thus, it is challenging to track the progression in the Large Audio-Language Models (LALMs) domain and to provide guidance for future improvement. In this paper, we introduce AIR-Bench (\\textbf{A}udio \\textbf{I}nst\\textbf{R}uction \\textbf{Bench}mark), the first benchmark designed to evaluate the ability of LALMs to understand various types of audio signals (including human speech, natural sounds, and music), and furthermore, to interact with humans in the textual format. AIR-Bench encompasses two dimensions: \\textit{foundation} and \\textit{chat} benchmarks. The former consists of 19 tasks with approximately 19k single-choice questions, intending to inspect the basic single-task ability of LALMs. The latter one contains 2k instances of open-ended question-and-answer data, directly assessing the comprehension of the model on complex audio and its capacity to follow instructions. Both benchmarks require the model to generate hypotheses directly. We design a unified framework that leverages advanced language models, such as GPT-4, to evaluate the scores of generated hypotheses given the meta-information of the audio. Experimental results demonstrate a high level of consistency between GPT-4-based evaluation and human evaluation. By revealing the limitations of existing LALMs through evaluation results, AIR-Bench can provide insights into the direction of future research.",
@@ -658,7 +671,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "In mixed-initiative conversational search systems, clarifying questions are used to help users who struggle to express their intentions in a single query. These questions aim to uncover user's information needs and resolve query ambiguities. We hypothesize that in scenarios where multimodal information is pertinent, the clarification process can be improved by using non-textual information. Therefore, we propose to add images to clarifying questions and formulate the novel task of asking multimodal clarifying questions in open-domain, mixed-initiative conversational search systems. To facilitate research into this task, we collect a dataset named Melon that contains over 4k multimodal clarifying questions, enriched with over 14k images. We also propose a multimodal query clarification model named Marto and adopt a prompt-based, generative fine-tuning strategy to perform the training of different stages with different prompts. Several analyses are conducted to understand the importance of multimodal contents during the query clarification phase. Experimental results indicate that the addition of images leads to significant improvements of up to 90% in retrieval performance when selecting the relevant images. Extensive analyses are also performed to show the superiority of Marto compared with discriminative baselines in terms of effectiveness and efficiency.",
@@ -676,6 +690,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -815,6 +830,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -904,6 +920,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -931,7 +948,8 @@
             ],
             [
                 "cs.LG",
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "Vision language models (VLMs) have shown impressive capabilities across a variety of tasks, from logical reasoning to visual understanding. This opens the door to richer interaction with the world, for example robotic control. However, VLMs produce only textual outputs, while robotic control and other spatial tasks require outputting continuous coordinates, actions, or trajectories. How can we enable VLMs to handle such settings without fine-tuning on task-specific data? In this paper, we propose a novel visual prompting approach for VLMs that we call Prompting with Iterative Visual Optimization (PIVOT), which casts tasks as iterative visual question answering. In each iteration, the image is annotated with a visual representation of proposals that the VLM can refer to (e.g., candidate robot actions, localizations, or trajectories). The VLM then selects the best ones for the task. These proposals are iteratively refined, allowing the VLM to eventually zero in on the best available answer. We investigate PIVOT on real-world robotic navigation, real-world manipulation from images, instruction following in simulation, and additional spatial inference tasks such as localization. We find, perhaps surprisingly, that our approach enables zero-shot control of robotic systems without any robot training data, navigation in a variety of environments, and other capabilities. Although current performance is far from perfect, our work highlights potentials and limitations of this new regime and shows a promising approach for Internet-Scale VLMs in robotic and spatial reasoning domains. Website: pivot-prompt.github.io and HuggingFace: https://huggingface.co/spaces/pivot-prompt/pivot-prompt-demo.",
@@ -951,6 +969,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -1021,7 +1040,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "The performance of an imaging system is limited by optical aberrations, which cause blurriness in the resulting image. Digital correction techniques, such as deconvolution, have limited ability to correct the blur, since some spatial frequencies in the scene are not measured adequately (i.e., 'zeros' of the system transfer function). We prove that the addition of a random mask to an imaging system removes its dependence on aberrations, reducing the likelihood of zeros in the transfer function and consequently decreasing the sensitivity to noise during deconvolution. In simulation, we show that this strategy improves image quality over a range of aberration types, aberration strengths, and signal-to-noise ratios.",
@@ -1056,7 +1076,8 @@
         "keywords": [
             [
                 "cs.LG",
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "We introduce Lumos, the first end-to-end multimodal question-answering system with text understanding capabilities. At the core of Lumos is a Scene Text Recognition (STR) component that extracts text from first person point-of-view images, the output of which is used to augment input to a Multimodal Large Language Model (MM-LLM). While building Lumos, we encountered numerous challenges related to STR quality, overall latency, and model inference. In this paper, we delve into those challenges, and discuss the system architecture, design choices, and modeling techniques employed to overcome these obstacles. We also provide a comprehensive evaluation for each component, showcasing high quality and efficiency.",
@@ -1145,7 +1166,8 @@
         "keywords": [
             [
                 "cs.LG",
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "This research paper addresses the challenge of modality mismatch in multimodal learning, where the modalities available during inference differ from those available at training. We propose the Text-centric Alignment for Multi-Modality Learning (TAMML) approach, an innovative method that utilizes Large Language Models (LLMs) with in-context learning and foundation models to enhance the generalizability of multimodal systems under these conditions. By leveraging the unique properties of text as a unified semantic space, TAMML demonstrates significant improvements in handling unseen, diverse, and unpredictable modality combinations. TAMML not only adapts to varying modalities but also maintains robust performance, showcasing the potential of foundation models in overcoming the limitations of traditional fixed-modality frameworks in embedding representations. This study contributes to the field by offering a flexible, effective solution for real-world applications where modality availability is dynamic and uncertain.",
@@ -1164,7 +1186,8 @@
         "keywords": [
             [
                 "cs.LG",
-                "cs.CL"
+                "cs.CL",
+                "eess.AS"
             ]
         ],
         "abstract": "We introduce a text-to-speech (TTS) model called BASE TTS, which stands for $\\textbf{B}$ig $\\textbf{A}$daptive $\\textbf{S}$treamable TTS with $\\textbf{E}$mergent abilities. BASE TTS is the largest TTS model to-date, trained on 100K hours of public domain speech data, achieving a new state-of-the-art in speech naturalness. It deploys a 1-billion-parameter autoregressive Transformer that converts raw texts into discrete codes (\"speechcodes\") followed by a convolution-based decoder which converts these speechcodes into waveforms in an incremental, streamable manner. Further, our speechcodes are built using a novel speech tokenization technique that features speaker ID disentanglement and compression with byte-pair encoding. Echoing the widely-reported \"emergent abilities\" of large language models when trained on increasing volume of data, we show that BASE TTS variants built with 10K+ hours and 500M+ parameters begin to demonstrate natural prosody on textually complex sentences. We design and share a specialized dataset to measure these emergent abilities for text-to-speech. We showcase state-of-the-art naturalness of BASE TTS by evaluating against baselines that include publicly available large-scale text-to-speech systems: YourTTS, Bark and TortoiseTTS. Audio samples generated by the model can be heard at https://amazon-ltts-paper.com/.",
@@ -1201,6 +1224,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -1256,7 +1280,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "Pretrained language models are long known to be subpar in capturing sentence and document-level semantics. Though heavily investigated, transferring perturbation-based methods from unsupervised visual representation learning to NLP remains an unsolved problem. This is largely due to the discreteness of subword units brought by tokenization of language models, limiting small perturbations of inputs to form semantics-preserved positive pairs. In this work, we conceptualize the learning of sentence-level textual semantics as a visual representation learning process. Drawing from cognitive and linguistic sciences, we introduce an unsupervised visual sentence representation learning framework, employing visually-grounded text perturbation methods like typos and word order shuffling, resonating with human cognitive patterns, and enabling perturbation to texts to be perceived as continuous. Our approach is further bolstered by large-scale unsupervised topical alignment training and natural language inference supervision, achieving comparable performance in semantic textual similarity (STS) to existing state-of-the-art NLP methods. Additionally, we unveil our method's inherent zero-shot cross-lingual transferability and a unique leapfrogging pattern across languages during iterative training. To our knowledge, this is the first representation learning method devoid of traditional language models for understanding sentence and document semantics, marking a stride closer to human-like textual comprehension. Our code is available at https://github.com/gowitheflow-1998/Pixel-Linguist",
@@ -1306,6 +1331,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -1325,6 +1351,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -1344,7 +1371,9 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG",
+                "cs.CY"
             ],
             [
                 "ICML"
@@ -1400,7 +1429,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Reinforcement learning (RL) has shown its strength in challenging sequential decision-making problems. The reward function in RL is crucial to the learning performance, as it serves as a measure of the task completion degree. In real-world problems, the rewards are predominantly human-designed, which requires laborious tuning, and is easily affected by human cognitive biases. To achieve automatic auxiliary reward generation, we propose a novel representation learning approach that can measure the ``transition distance'' between states. Building upon these representations, we introduce an auxiliary reward generation technique for both single-task and skill-chaining scenarios without the need for human knowledge. The proposed approach is evaluated in a wide range of manipulation tasks. The experiment results demonstrate the effectiveness of measuring the transition distance between states and the induced improvement by auxiliary rewards, which not only promotes better learning efficiency but also increases convergent stability.",
@@ -1433,7 +1463,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "We study how to learn the optimal tax design to maximize the efficiency in nonatomic congestion games. It is known that self-interested behavior among the players can damage the system's efficiency. Tax mechanisms is a common method to alleviate this issue and induce socially optimal behavior. In this work, we take the initial step for learning the optimal tax that can minimize the social cost with \\emph{equilibrium feedback}, i.e., the tax designer can only observe the equilibrium state under the enforced tax. Existing algorithms are not applicable due to the exponentially large tax function space, nonexistence of the gradient, and nonconvexity of the objective. To tackle these challenges, our algorithm leverages several novel components: (1) piece-wise linear tax to approximate the optimal tax; (2) an extra linear term to guarantee a strongly convex potential function; (3) efficient subroutine to find the ``boundary'' tax. The algorithm can find an $\u03b5$-optimal tax with $O(\u03b2F^2/\u03b5)$ sample complexity, where $\u03b2$ is the smoothness of the cost function and $F$ is the number of facilities.",
@@ -1543,7 +1574,9 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG",
+                "cs.CY"
             ]
         ],
         "abstract": "The value-loading problem is a significant challenge for researchers aiming to create artificial intelligence (AI) systems that align with human values and preferences. This problem requires a method to define and regulate safe and optimal limits of AI behaviors. In this work, we propose HALO (Hormetic ALignment via Opponent processes), a regulatory paradigm that uses hormetic analysis to regulate the behavioral patterns of AI. Behavioral hormesis is a phenomenon where low frequencies of a behavior have beneficial effects, while high frequencies are harmful. By modeling behaviors as allostatic opponent processes, we can use either Behavioral Frequency Response Analysis (BFRA) or Behavioral Count Response Analysis (BCRA) to quantify the hormetic limits of repeatable behaviors. We demonstrate how HALO can solve the 'paperclip maximizer' scenario, a thought experiment where an unregulated AI tasked with making paperclips could end up converting all matter in the universe into paperclips. Our approach may be used to help create an evolving database of 'values' based on the hedonic calculus of repeatable behaviors with decreasing marginal utility. This positions HALO as a promising solution for the value-loading problem, which involves embedding human-aligned values into an AI system, and the weak-to-strong generalization problem, which explores whether weak models can supervise stronger models as they become more intelligent. Hence, HALO opens several research avenues that may lead to the development of a computational value system that allows an AI algorithm to learn whether the decisions it makes are right or wrong.",
@@ -1847,7 +1880,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "In the field of online sequential decision-making, we address the problem with delays utilizing the framework of online convex optimization (OCO), where the feedback of a decision can arrive with an unknown delay. Unlike previous research that is limited to Euclidean norm and gradient information, we propose three families of delayed algorithms based on approximate solutions to handle different types of received feedback. Our proposed algorithms are versatile and applicable to universal norms. Specifically, we introduce a family of Follow the Delayed Regularized Leader algorithms for feedback with full information on the loss function, a family of Delayed Mirror Descent algorithms for feedback with gradient information on the loss function and a family of Simplified Delayed Mirror Descent algorithms for feedback with the value information of the loss function's gradients at corresponding decision points. For each type of algorithm, we provide corresponding regret bounds under cases of general convexity and relative strong convexity, respectively. We also demonstrate the efficiency of each algorithm under different norms through concrete examples. Furthermore, our theoretical results are consistent with the current best bounds when degenerated to standard settings.",
@@ -1864,7 +1898,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "In the era of proliferation of large language and image generation models, the phenomenon of \"model collapse\" refers to the situation whereby as a model is trained recursively on data generated from previous generations of itself over time, its performance degrades until the model eventually becomes completely useless, i.e the model collapses. In this work, we study this phenomenon in the setting of high-dimensional regression and obtain analytic formulae which quantitatively outline this phenomenon in a broad range of regimes. In the special case of polynomial decaying spectral and source conditions, we obtain modified scaling laws which exhibit new crossover phenomena from fast to slow rates. We also propose a simple strategy based on adaptive regularization to mitigate model collapse. Our theoretical results are validated with experiments.",
@@ -2089,7 +2124,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.SI"
             ]
         ],
         "abstract": "A major threat to the peer-review systems of computer science conferences is the existence of \"collusion rings\" between reviewers. In such collusion rings, reviewers who have also submitted their own papers to the conference work together to manipulate the conference's paper assignment, with the aim of being assigned to review each other's papers. The most straightforward way that colluding reviewers can manipulate the paper assignment is by indicating their interest in each other's papers through strategic paper bidding. One potential approach to solve this important problem would be to detect the colluding reviewers from their manipulated bids, after which the conference can take appropriate action. While prior work has developed effective techniques to detect other kinds of fraud, no research has yet established that detecting collusion rings is even possible. In this work, we tackle the question of whether it is feasible to detect collusion rings from the paper bidding. To answer this question, we conduct empirical analysis of two realistic conference bidding datasets, including evaluations of existing algorithms for fraud detection in other applications. We find that collusion rings can achieve considerable success at manipulating the paper assignment while remaining hidden from detection: for example, in one dataset, undetected colluders are able to achieve assignment to up to 30% of the papers authored by other colluders. In addition, when 10 colluders bid on all of each other's papers, no detection algorithm outputs a group of reviewers with more than 31% overlap with the true colluders. These results suggest that collusion cannot be effectively detected from the bidding using popular existing tools, demonstrating the need to develop more complex detection algorithms as well as those that leverage additional metadata (e.g., reviewer-paper text-similarity scores).",
@@ -2125,7 +2161,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "In modern machine learning, models can often fit training data in numerous ways, some of which perform well on unseen (test) data, while others do not. Remarkably, in such cases gradient descent frequently exhibits an implicit bias that leads to excellent performance on unseen data. This implicit bias was extensively studied in supervised learning, but is far less understood in optimal control (reinforcement learning). There, learning a controller applied to a system via gradient descent is known as policy gradient, and a question of prime importance is the extent to which a learned controller extrapolates to unseen initial states. This paper theoretically studies the implicit bias of policy gradient in terms of extrapolation to unseen initial states. Focusing on the fundamental Linear Quadratic Regulator (LQR) problem, we establish that the extent of extrapolation depends on the degree of exploration induced by the system when commencing from initial states included in training. Experiments corroborate our theory, and demonstrate its conclusions on problems beyond LQR, where systems are non-linear and controllers are neural networks. We hypothesize that real-world optimal control may be greatly improved by developing methods for informed selection of initial states to train on.",
@@ -2160,7 +2197,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Distributed decision-making in multi-agent systems presents difficult challenges for interactive behavior learning in both cooperative and competitive systems. To mitigate this complexity, MAIDRL presents a semi-centralized Dense Reinforcement Learning algorithm enhanced by agent influence maps (AIMs), for learning effective multi-agent control on StarCraft Multi-Agent Challenge (SMAC) scenarios. In this paper, we extend the DenseNet in MAIDRL and introduce semi-centralized Multi-Agent Dense-CNN Reinforcement Learning, MAIDCRL, by incorporating convolutional layers into the deep model architecture, and evaluate the performance on both homogeneous and heterogeneous scenarios. The results show that the CNN-enabled MAIDCRL significantly improved the learning performance and achieved a faster learning rate compared to the existing MAIDRL, especially on more complicated heterogeneous SMAC scenarios. We further investigate the stability and robustness of our model. The statistics reflect that our model not only achieves higher winning rate in all the given scenarios but also boosts the agent's learning process in fine-grained decision-making.",
@@ -2177,7 +2215,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Motivated by the factorization inherent in the original fast multipole method and the improved fast Gauss transform we introduce a factorable form of attention that operates efficiently in high dimensions. This approach reduces the computational and memory complexity of the attention mechanism in transformers from $O(N^2)$ to $O(N)$. In comparison to previous attempts, our work presents a linearly scaled attention mechanism that maintains the full representation of the attention matrix without compromising on sparsification and incorporates the all-to-all relationship between tokens. We explore the properties of our new attention metric and conduct tests in various standard settings. Results indicate that our attention mechanism has a robust performance and holds significant promise for diverse applications where self-attention is used.",
@@ -2195,7 +2234,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Developing agents that can leverage planning abilities during their decision and learning processes is critical to the advancement of Artificial Intelligence. Recent works have demonstrated the effectiveness of combining tree-based search methods and self-play learning mechanisms. Yet, these methods typically face scaling challenges due to the sequential nature of their search. While practical engineering solutions can partly overcome this, they still demand extensive computational resources, which hinders their applicability. In this paper, we introduce SMX, a model-based planning algorithm that utilises scalable Sequential Monte Carlo methods to create an effective self-learning mechanism. Grounded in the theoretical framework of control as inference, SMX benefits from robust theoretical underpinnings. Its sampling-based search approach makes it adaptable to environments with both discrete and continuous action spaces. Furthermore, SMX allows for high parallelisation and can run on hardware accelerators to optimise computing efficiency. SMX demonstrates a statistically significant improvement in performance compared to AlphaZero, as well as demonstrating its performance as an improvement operator for a model-free policy, matching or exceeding top model-free methods across both continuous and discrete environments.",
@@ -2249,7 +2289,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Large Language Model (LLM) assistants, such as ChatGPT, have emerged as potential alternatives to search methods for helping users navigate complex, feature-rich software. LLMs use vast training data from domain-specific texts, software manuals, and code repositories to mimic human-like interactions, offering tailored assistance, including step-by-step instructions. In this work, we investigated LLM-generated software guidance through a within-subject experiment with 16 participants and follow-up interviews. We compared a baseline LLM assistant with an LLM optimized for particular software contexts, SoftAIBot, which also offered guidelines for constructing appropriate prompts. We assessed task completion, perceived accuracy, relevance, and trust. Surprisingly, although SoftAIBot outperformed the baseline LLM, our results revealed no significant difference in LLM usage and user perceptions with or without prompt guidelines and the integration of domain context. Most users struggled to understand how the prompt's text related to the LLM's responses and often followed the LLM's suggestions verbatim, even if they were incorrect. This resulted in difficulties when using the LLM's advice for software tasks, leading to low task completion rates. Our detailed analysis also revealed that users remained unaware of inaccuracies in the LLM's responses, indicating a gap between their lack of software expertise and their ability to evaluate the LLM's assistance. With the growing push for designing domain-specific LLM assistants, we emphasize the importance of incorporating explainable, context-aware cues into LLMs to help users understand prompt-based interactions, identify biases, and maximize the utility of LLM assistants.",
@@ -2283,7 +2324,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Most reinforcement learning algorithms with formal regret guarantees assume all mistakes are reversible and rely on essentially trying all possible options. This approach leads to poor outcomes when some mistakes are irreparable or even catastrophic. We propose a variant of the contextual bandit problem where the goal is to minimize the chance of catastrophe. Specifically, we assume that the payoff each round represents the chance of avoiding catastrophe that round, and try to maximize the product of payoffs (the overall chance of avoiding catastrophe). To give the agent some chance of success, we allow a limited number of queries to a mentor and assume a Lipschitz continuous payoff function. We present an algorithm whose regret and rate of querying the mentor both approach 0 as the time horizon grows, assuming a continuous 1D state space and a relatively \"simple\" payoff function. We also provide a matching lower bound: without the simplicity assumption: any algorithm either constantly asks for help or is nearly guaranteed to cause catastrophe. Finally, we identify the key obstacle to generalizing our algorithm to a multi-dimensional state space.",
@@ -2474,7 +2516,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Scripted agents have predominantly won the five previous iterations of the IEEE microRTS ($\u03bc$RTS) competitions hosted at CIG and CoG. Despite Deep Reinforcement Learning (DRL) algorithms making significant strides in real-time strategy (RTS) games, their adoption in this primarily academic competition has been limited due to the considerable training resources required and the complexity inherent in creating and debugging such agents. RAISocketAI is the first DRL agent to win the IEEE microRTS competition. In a benchmark without performance constraints, RAISocketAI regularly defeated the two prior competition winners. This first competition-winning DRL submission can be a benchmark for future microRTS competitions and a starting point for future DRL research. Iteratively fine-tuning the base policy and transfer learning to specific maps were critical to RAISocketAI's winning performance. These strategies can be used to economically train future DRL agents. Further work in Imitation Learning using Behavior Cloning and fine-tuning these models with DRL has proven promising as an efficient way to bootstrap models with demonstrated, competitive behaviors.",
@@ -2540,7 +2583,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.CY"
             ]
         ],
         "abstract": "Artificial intelligence (AI) advances and the rapid adoption of generative AI tools like ChatGPT present new opportunities and challenges for higher education. While substantial literature discusses AI in higher education, there is a lack of a systemic approach that captures a holistic view of the AI transformation of higher education institutions (HEIs). To fill this gap, this article, taking a complex systems approach, develops a causal loop diagram (CLD) to map the causal feedback mechanisms of AI transformation in a typical HEI. Our model accounts for the forces that drive the AI transformation and the consequences of the AI transformation on value creation in a typical HEI. The article identifies and analyzes several reinforcing and balancing feedback loops, showing how, motivated by AI technology advances, the HEI invests in AI to improve student learning, research, and administration. The HEI must take measures to deal with academic integrity problems and adapt to changes in available jobs due to AI, emphasizing AI-complementary skills for its students. However, HEIs face a competitive threat and several policy traps that may lead to decline. HEI leaders need to become systems thinkers to manage the complexity of the AI transformation and benefit from the AI feedback loops while avoiding the associated pitfalls. We also discuss long-term scenarios, the notion of HEIs influencing the direction of AI, and directions for future research on AI transformation.",
@@ -2591,7 +2635,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "We introduce a set of gradient-flow-guided adaptive importance sampling (IS) transformations to stabilize Monte-Carlo approximations of point-wise leave one out cross-validated (LOO) predictions for Bayesian classification models. One can leverage this methodology for assessing model generalizability by for instance computing a LOO analogue to the AIC or computing LOO ROC/PRC curves and derived metrics like the AUROC and AUPRC. By the calculus of variations and gradient flow, we derive two simple nonlinear single-step transformations that utilize gradient information to shift a model's pre-trained full-data posterior closer to the target LOO posterior predictive distributions. In doing so, the transformations stabilize importance weights. Because the transformations involve the gradient of the likelihood function, the resulting Monte Carlo integral depends on Jacobian determinants with respect to the model Hessian. We derive closed-form exact formulae for these Jacobian determinants in the cases of logistic regression and shallow ReLU-activated artificial neural networks, and provide a simple approximation that sidesteps the need to compute full Hessian matrices and their spectra. We test the methodology on an $n\\ll p$ dataset that is known to produce unstable LOO IS weights.",
@@ -2611,7 +2656,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "How can individuals exchange information to learn from each other despite their privacy needs and security concerns? For example, consider individuals deliberating a contentious topic and being concerned about divulging their private experiences. Preserving individual privacy and enabling efficient social learning are both important desiderata but seem fundamentally at odds with each other and very hard to reconcile. We do so by controlling information leakage using rigorous statistical guarantees that are based on differential privacy (DP). Our agents use log-linear rules to update their beliefs after communicating with their neighbors. Adding DP randomization noise to beliefs provides communicating agents with plausible deniability with regard to their private information and their network neighborhoods. We consider two learning environments one for distributed maximum-likelihood estimation given a finite number of private signals and another for online learning from an infinite, intermittent signal stream. Noisy information aggregation in the finite case leads to interesting tradeoffs between rejecting low-quality states and making sure all high-quality states are accepted in the algorithm output. Our results flesh out the nature of the trade-offs in both cases between the quality of the group decision outcomes, learning accuracy, communication cost, and the level of privacy protections that the agents are afforded.",
@@ -2631,7 +2677,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "What are the root causes of hallucinations in large language models (LLMs)? We use Communication Complexity to prove that the Transformer layer is incapable of composing functions (e.g., identify a grandparent of a person in a genealogy) if the domains of the functions are large enough; we show through examples that this inability is already empirically present when the domains are quite small. We also point out that several mathematical tasks that are at the core of the so-called compositional tasks thought to be hard for LLMs are unlikely to be solvable by Transformers, for large enough instances and assuming that certain well accepted conjectures in the field of Computational Complexity are true.",
@@ -2682,7 +2729,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Multi-Agent Reinforcement Learning (MARL) algorithms are widely adopted in tackling complex tasks that require collaboration and competition among agents in dynamic Multi-Agent Systems (MAS). However, learning such tasks from scratch is arduous and may not always be feasible, particularly for MASs with a large number of interactive agents due to the extensive sample complexity. Therefore, reusing knowledge gained from past experiences or other agents could efficiently accelerate the learning process and upscale MARL algorithms. In this study, we introduce a novel framework that enables transfer learning for MARL through unifying various state spaces into fixed-size inputs that allow one unified deep-learning policy viable in different scenarios within a MAS. We evaluated our approach in a range of scenarios within the StarCraft Multi-Agent Challenge (SMAC) environment, and the findings show significant enhancements in multi-agent learning performance using maneuvering skills learned from other scenarios compared to agents learning from scratch. Furthermore, we adopted Curriculum Transfer Learning (CTL), enabling our deep learning policy to progressively acquire knowledge and skills across pre-designed homogeneous learning scenarios organized by difficulty levels. This process promotes inter- and intra-agent knowledge transfer, leading to high multi-agent learning performance in more complicated heterogeneous scenarios.",
@@ -2716,7 +2764,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Compound-Protein Interaction (CPI) prediction aims to predict the pattern and strength of compound-protein interactions for rational drug discovery. Existing deep learning-based methods utilize only the single modality of protein sequences or structures and lack the co-modeling of the joint distribution of the two modalities, which may lead to significant performance drops in complex real-world scenarios due to various factors, e.g., modality missing and domain shifting. More importantly, these methods only model protein sequences and structures at a single fixed scale, neglecting more fine-grained multi-scale information, such as those embedded in key protein fragments. In this paper, we propose a novel multi-scale Protein Sequence-structure Contrasting framework for CPI prediction (PSC-CPI), which captures the dependencies between protein sequences and structures through both intra-modality and cross-modality contrasting. We further apply length-variable protein augmentation to allow contrasting to be performed at different scales, from the amino acid level to the sequence level. Finally, in order to more fairly evaluate the model generalizability, we split the test data into four settings based on whether compounds and proteins have been observed during the training stage. Extensive experiments have shown that PSC-CPI generalizes well in all four settings, particularly in the more challenging ``Unseen-Both\" setting, where neither compounds nor proteins have been observed during training. Furthermore, even when encountering a situation of modality missing, i.e., inference with only single-modality protein data, PSC-CPI still exhibits comparable or even better performance than previous approaches.",
@@ -2767,7 +2816,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Data cleansing aims to improve model performance by removing a set of harmful instances from the training dataset. Data Shapley is a common theoretically guaranteed method to evaluate the contribution of each instance to model performance; however, it requires training on all subsets of the training data, which is computationally expensive. In this paper, we propose an iterativemethod to fast identify a subset of instances with low data Shapley values by using the thresholding bandit algorithm. We provide a theoretical guarantee that the proposed method can accurately select harmful instances if a sufficiently large number of iterations is conducted. Empirical evaluation using various models and datasets demonstrated that the proposed method efficiently improved the computational speed while maintaining the model performance.",
@@ -2885,7 +2935,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.CY"
             ]
         ],
         "abstract": "The advent of Generative AI (GenAI) in education presents a transformative approach to traditional teaching methodologies, which often overlook the diverse needs of individual students. This study introduces a GenAI tool, based on advanced natural language processing, designed as a digital assistant for educators, enabling the creation of customized lesson plans. The tool utilizes an innovative feature termed 'interactive mega-prompt,' a comprehensive query system that allows educators to input detailed classroom specifics such as student demographics, learning objectives, and preferred teaching styles. This input is then processed by the GenAI to generate tailored lesson plans. To evaluate the tool's effectiveness, a comprehensive methodology incorporating both quantitative (i.e., % of time savings) and qualitative (i.e., user satisfaction) criteria was implemented, spanning various subjects and educational levels, with continuous feedback collected from educators through a structured evaluation form. Preliminary results show that educators find the GenAI-generated lesson plans effective, significantly reducing lesson planning time and enhancing the learning experience by accommodating diverse student needs. This AI-driven approach signifies a paradigm shift in education, suggesting its potential applicability in broader educational contexts, including special education needs (SEN), where individualized attention and specific learning aids are paramount",
@@ -2949,7 +3000,8 @@
                 "Super-resolution"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Super-resolution (SR) is an ill-posed inverse problem with a large set of feasible solutions that are consistent with a given low-resolution image. Various deterministic algorithms aim to find a single solution that balances fidelity and perceptual quality; however, this trade-off often causes visual artifacts that bring ambiguity in information-centric applications. On the other hand, diffusion models (DMs) excel in generating a diverse set of feasible SR images that span the solution space. The challenge is then how to determine the most likely solution among this set in a trustworthy manner. We observe that quantitative measures, such as PSNR, LPIPS, DISTS, are not reliable indicators to resolve ambiguous cases. To this effect, we propose employing human feedback, where we ask human subjects to select a small number of likely samples and we ensemble the averages of selected samples. This strategy leverages the high-quality image generation capabilities of DMs, while recognizing the importance of obtaining a single trustworthy solution, especially in use cases, such as identification of specific digits or letters, where generating multiple feasible solutions may not lead to a reliable outcome. Experimental results demonstrate that our proposed strategy provides more trustworthy solutions when compared to state-of-the art SR methods.",
@@ -2969,7 +3021,8 @@
                 "graph"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Recovery of signals with elements defined on the nodes of a graph, from compressive measurements is an important problem, which can arise in various domains such as sensor networks, image reconstruction and group testing. In some scenarios, the graph may not be accurately known, and there may exist a few edge additions or deletions relative to a ground truth graph. Such perturbations, even if small in number, significantly affect the Graph Fourier Transform (GFT). This impedes recovery of signals which may have sparse representations in the GFT bases of the ground truth graph. We present an algorithm which simultaneously recovers the signal from the compressive measurements and also corrects the graph perturbations. We analyze some important theoretical properties of the algorithm. Our approach to correction for graph perturbations is based on model selection techniques such as cross-validation in compressed sensing. We validate our algorithm on signals which have a sparse representation in the GFT bases of many commonly used graphs in the network science literature. An application to compressive image reconstruction is also presented, where graph perturbations are modeled as undesirable graph edges linking pixels with significant intensity difference. In all experiments, our algorithm clearly outperforms baseline techniques which either ignore the perturbations or use first order approximations to the perturbations in the GFT bases.",
@@ -3033,6 +3086,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -3077,6 +3131,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -3138,7 +3193,8 @@
                 "graph"
             ],
             [
-                "cs.LG"
+                "cs.LG",
+                "cs.SI"
             ],
             [
                 "ICLR"
@@ -3347,7 +3403,8 @@
                 "graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "As network security receives widespread attention, encrypted traffic classification has become the current research focus. However, existing methods conduct traffic classification without sufficiently considering the common characteristics between data samples, leading to suboptimal performance. Moreover, they train the packet-level and flow-level classification tasks independently, which is redundant because the packet representations learned in the packet-level task can be exploited by the flow-level task. Therefore, in this paper, we propose an effective model named a Contrastive Learning Enhanced Temporal Fusion Encoder (CLE-TFE). In particular, we utilize supervised contrastive learning to enhance the packet-level and flow-level representations and perform graph data augmentation on the byte-level traffic graph so that the fine-grained semantic-invariant characteristics between bytes can be captured through contrastive learning. We also propose cross-level multi-task learning, which simultaneously accomplishes the packet-level and flow-level classification tasks in the same model with one training. Further experiments show that CLE-TFE achieves the best overall performance on the two tasks, while its computational overhead (i.e., floating point operations, FLOPs) is only about 1/14 of the pre-trained model (e.g., ET-BERT). We release the code at https://github.com/ViktorAxelsen/CLE-TFE",
@@ -3492,7 +3549,8 @@
                 "attacks"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Deep Neural Nets (DNNs) learn latent representations induced by their downstream task, objective function, and other parameters. The quality of the learned representations impacts the DNN's generalization ability and the coherence of the emerging latent space. The Information Bottleneck (IB) provides a hypothetically optimal framework for data modeling, yet it is often intractable. Recent efforts combined DNNs with the IB by applying VAE-inspired variational methods to approximate bounds on mutual information, resulting in improved robustness to adversarial attacks. This work introduces a new and tighter variational bound for the IB, improving performance of previous IB-inspired DNNs. These advancements strengthen the case for the IB and its variational approximations as a data modeling framework, and provide a simple method to significantly enhance the adversarial robustness of classifier DNNs.",
@@ -3613,7 +3671,8 @@
                 "Graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Graph Neural Networks (GNNs) can be trained to detect communities within a graph by learning from the duality of feature and connectivity information. Currently, the common approach for optimisation of GNNs is to use comparisons to ground-truth for hyperparameter tuning and model selection. In this work, we show that nodes can be clustered into communities with GNNs by solely optimising for modularity, without any comparison to ground-truth. Although modularity is a graph partitioning quality metric, we show that this can be used to optimise GNNs that also encode features without a drop in performance. We take it a step further and also study whether the unsupervised metric performance can predict ground-truth performance. To investigate why modularity can be used to optimise GNNs, we design synthetic experiments that show the limitations of this approach. The synthetic graphs are created to highlight current capabilities in distinct, random and zero information space partitions in attributed graphs. We conclude that modularity can be used for hyperparameter optimisation and model selection on real-world datasets as well as being a suitable proxy for predicting ground-truth performance, however, GNNs fail to balance the information duality when the spaces contain conflicting signals.",
@@ -3653,7 +3712,8 @@
                 "depth"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "We describe the emergence of a Convolution Bottleneck (CBN) structure in CNNs, where the network uses its first few layers to transform the input representation into a representation that is supported only along a few frequencies and channels, before using the last few layers to map back to the outputs. We define the CBN rank, which describes the number and type of frequencies that are kept inside the bottleneck, and partially prove that the parameter norm required to represent a function $f$ scales as depth times the CBN rank $f$. We also show that the parameter norm depends at next order on the regularity of $f$. We show that any network with almost optimal parameter norm will exhibit a CBN structure in both the weights and - under the assumption that the network is stable under large learning rate - the activations, which motivates the common practice of down-sampling; and we verify that the CBN results still hold with down-sampling. Finally we use the CBN structure to interpret the functions learned by CNNs on a number of tasks.",
@@ -3674,7 +3734,8 @@
                 "Graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Generative self-supervised learning on graphs, particularly graph masked autoencoders, has emerged as a popular learning paradigm and demonstrated its efficacy in handling non-Euclidean data. However, several remaining issues limit the capability of existing methods: 1) the disregard of uneven node significance in masking, 2) the underutilization of holistic graph information, 3) the ignorance of semantic knowledge in the representation space due to the exclusive use of reconstruction loss in the output space, and 4) the unstable reconstructions caused by the large volume of masked contents. In light of this, we propose UGMAE, a unified framework for graph masked autoencoders to address these issues from the perspectives of adaptivity, integrity, complementarity, and consistency. Specifically, we first develop an adaptive feature mask generator to account for the unique significance of nodes and sample informative masks (adaptivity). We then design a ranking-based structure reconstruction objective joint with feature reconstruction to capture holistic graph information and emphasize the topological proximity between neighbors (integrity). After that, we present a bootstrapping-based similarity module to encode the high-level semantic knowledge in the representation space, complementary to the low-level reconstruction in the output space (complementarity). Finally, we build a consistency assurance module to provide reconstruction objectives with extra stabilized consistency targets (consistency). Extensive experiments demonstrate that UGMAE outperforms both contrastive and generative state-of-the-art baselines on several tasks across multiple datasets.",
@@ -3793,7 +3854,8 @@
                 "Synthesis"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "We present an approach using Monte Carlo Tree Search (MCTS) to guide Large Language Models (LLMs) to generate verified programs in Dafny, Lean and Coq. Our method, which we call VMCTS, leverages the verifier inside the search algorithm by checking partial programs at each step. In combination with the LLM prior, the verifier feedback raises the synthesis capabilities of open source models. On a set of five verified programming problems, we find that in four problems where the base model cannot solve the question even when re-sampling solutions for one hour, VMCTS can solve the problems within 6 minutes. The base model with VMCTS is even competitive with ChatGPT4 augmented with plugins and multiple re-tries on these problems. Our code and benchmarks are available at https://github.com/namin/llm-verified-with-monte-carlo-tree-search .",
@@ -3817,7 +3879,8 @@
                 "Graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Graph Neural Networks (GNNs) have empowered the advance in graph-structured data analysis. Recently, the rise of Large Language Models (LLMs) like GPT-4 has heralded a new era in deep learning. However, their application to graph data poses distinct challenges due to the inherent difficulty of translating graph structures to language. To this end, we introduce the Large Language and Graph Assistant (LLaGA), an innovative model that effectively integrates LLM capabilities to handle the complexities of graph-structured data. LLaGA retains the general-purpose nature of LLMs while adapting graph data into a format compatible with LLM input. LLaGA achieves this by reorganizing graph nodes to structure-aware sequences and then mapping these into the token embedding space through a versatile projector. LLaGA excels in versatility, generalizability and interpretability, allowing it to perform consistently well across different datasets and tasks, extend its ability to unseen datasets or tasks, and provide explanations for graphs. Our extensive experiments across popular graph benchmarks show that LLaGA delivers outstanding performance across four datasets and three tasks using one single model, surpassing state-of-the-art graph models in both supervised and zero-shot scenarios. Our code is available at \\url{https://github.com/VITA-Group/LLaGA}.",
@@ -3856,7 +3919,8 @@
                 "graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Learning positional information of nodes in a graph is important for link prediction tasks. We propose a representation of positional information using representative nodes called landmarks. A small number of nodes with high degree centrality are selected as landmarks, which serve as reference points for the nodes' positions. We justify this selection strategy for well-known random graph models and derive closed-form bounds on the average path lengths involving landmarks. In a model for power-law graphs, we prove that landmarks provide asymptotically exact information on inter-node distances. We apply theoretical insights to practical networks and propose Hierarchical Position embedding with Landmarks and Clustering (HPLC). HPLC combines landmark selection and graph clustering, where the graph is partitioned into densely connected clusters in which nodes with the highest degree are selected as landmarks. HPLC leverages the positional information of nodes based on landmarks at various levels of hierarchy such as nodes' distances to landmarks, inter-landmark distances and hierarchical grouping of clusters. Experiments show that HPLC achieves state-of-the-art performances of link prediction on various datasets in terms of HIT@K, MRR, and AUC. The code is available at \\url{https://github.com/kmswin1/HPLC}.",
@@ -4053,6 +4117,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -4115,7 +4180,8 @@
             ],
             [
                 "cs.AI",
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "COVID-19 has affected more than 223 countries worldwide and in the Post-COVID Era, there is a pressing need for non-invasive, low-cost, and highly scalable solutions to detect COVID-19. We develop a deep learning model to identify COVID-19 from voice recording data. The novelty of this work is in the development of deep learning models for COVID-19 identification from only voice recordings. We use the Cambridge COVID-19 Sound database which contains 893 speech samples, crowd-sourced from 4352 participants via a COVID-19 Sounds app. Voice features including Mel-spectrograms and Mel-frequency cepstral coefficients (MFCC) and CNN Encoder features are extracted. Based on the voice data, we develop deep learning classification models to detect COVID-19 cases. These models include Long Short-Term Memory (LSTM) and Convolutional Neural Network (CNN) and Hidden-Unit BERT (HuBERT). We compare their predictive power to baseline machine learning models. HuBERT achieves the highest accuracy of 86\\% and the highest AUC of 0.93. The results achieved with the proposed models suggest promising results in COVID-19 diagnosis from voice recordings when compared to the results obtained from the state-of-the-art.",
@@ -4193,7 +4259,9 @@
                 "clinical"
             ],
             [
-                "cs.CL"
+                "cs.CL",
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "In the rapidly evolving landscape of medical documentation, transcribing clinical dialogues accurately is increasingly paramount. This study explores the potential of Large Language Models (LLMs) to enhance the accuracy of Automatic Speech Recognition (ASR) systems in medical transcription. Utilizing the PriMock57 dataset, which encompasses a diverse range of primary care consultations, we apply advanced LLMs to refine ASR-generated transcripts. Our research is multifaceted, focusing on improvements in general Word Error Rate (WER), Medical Concept WER (MC-WER) for the accurate transcription of essential medical terms, and speaker diarization accuracy. Additionally, we assess the role of LLM post-processing in improving semantic textual similarity, thereby preserving the contextual integrity of clinical dialogues. Through a series of experiments, we compare the efficacy of zero-shot and Chain-of-Thought (CoT) prompting techniques in enhancing diarization and correction accuracy. Our findings demonstrate that LLMs, particularly through CoT prompting, not only improve the diarization accuracy of existing ASR systems but also achieve state-of-the-art performance in this domain. This improvement extends to more accurately capturing medical concepts and enhancing the overall semantic coherence of the transcribed dialogues. These findings illustrate the dual role of LLMs in augmenting ASR outputs and independently excelling in transcription tasks, holding significant promise for transforming medical ASR systems and leading to more accurate and reliable patient records in healthcare settings.",
@@ -4322,7 +4390,8 @@
                 "tumor"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Segmentations are crucial in medical imaging to obtain morphological, volumetric, and radiomics biomarkers. Manual segmentation is accurate but not feasible in the radiologist's clinical workflow, while automatic segmentation generally obtains sub-par performance. We therefore developed a minimally interactive deep learning-based segmentation method for soft-tissue tumors (STTs) on CT and MRI. The method requires the user to click six points near the tumor's extreme boundaries. These six points are transformed into a distance map and serve, with the image, as input for a Convolutional Neural Network. For training and validation, a multicenter dataset containing 514 patients and nine STT types in seven anatomical locations was used, resulting in a Dice Similarity Coefficient (DSC) of 0.85$\\pm$0.11 (mean $\\pm$ standard deviation (SD)) for CT and 0.84$\\pm$0.12 for T1-weighted MRI, when compared to manual segmentations made by expert radiologists. Next, the method was externally validated on a dataset including five unseen STT phenotypes in extremities, achieving 0.81$\\pm$0.08 for CT, 0.84$\\pm$0.09 for T1-weighted MRI, and 0.88\\pm0.08 for previously unseen T2-weighted fat-saturated (FS) MRI. In conclusion, our minimally interactive segmentation method effectively segments different types of STTs on CT and MRI, with robust generalization to previously unseen phenotypes and imaging modalities.",
@@ -4407,6 +4476,8 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
+                "cs.CY",
                 "cs.CL"
             ]
         ],
@@ -4611,6 +4682,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "eess.IV"
             ]
         ],
@@ -4738,7 +4810,8 @@
             ],
             [
                 "cs.LG",
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Reconstruction of magnetic resonance imaging (MRI) data has been positively affected by deep learning. A key challenge remains: to improve generalisation to distribution shifts between the training and testing data. Most approaches aim to address this via inductive design or data augmentation. However, they can be affected by misleading data, e.g. random noise, and cases where the inference stage data do not match assumptions in the modelled shifts. In this work, by employing a conditional hyperparameter network, we eliminate the need of augmentation, yet maintain robust performance under various levels of Gaussian noise. We demonstrate that our model withstands various input noise levels while producing high-definition reconstructions during the test stage. Moreover, we present a hyperparameter sampling strategy that accelerates the convergence of training. Our proposed method achieves the highest accuracy and image quality in all settings compared to baseline methods.",
@@ -4762,6 +4835,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -4829,7 +4903,8 @@
                 "graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Causal inference from observational data has recently found many applications in machine learning. While sound and complete algorithms exist to compute causal effects, many of these algorithms require explicit access to conditional likelihoods over the observational distribution, which is difficult to estimate in the high-dimensional regime, such as with images. To alleviate this issue, researchers have approached the problem by simulating causal relations with neural models and obtained impressive results. However, none of these existing approaches can be applied to generic scenarios such as causal graphs on image data with latent confounders, or obtain conditional interventional samples. In this paper, we show that any identifiable causal effect given an arbitrary causal graph can be computed through push-forward computations of conditional generative models. Based on this result, we devise a diffusion-based approach to sample from any (conditional) interventional distribution on image data. To showcase our algorithm's performance, we conduct experiments on a Colored MNIST dataset having both the treatment ($X$) and the target variables ($Y$) as images and obtain interventional samples from $P(y|do(x))$. As an application of our algorithm, we evaluate two large conditional generative models that are pre-trained on the CelebA dataset by analyzing the strength of spurious correlations and the level of disentanglement they achieve.",
@@ -4895,7 +4970,8 @@
                 "forecasting"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "In this study, we examine the fluctuation in the value of the Great Britain Pound (GBP). We focus particularly on its relationship with the United States Dollar (USD) and the Euro (EUR) currency pairs. Utilizing data from June 15, 2018, to June 15, 2023, we apply various mathematical models to assess their effectiveness in predicting the 20-day variation in the pairs' daily returns. Our analysis involves the implementation of Exponentially Weighted Moving Average (EWMA), Generalized Autoregressive Conditional Heteroskedasticity (GARCH) models, and Implied Volatility (IV) models. To evaluate their performance, we compare the accuracy of their predictions using Root Mean Square Error (RMSE) and Mean Absolute Error (MAE) metrics. We delve into the intricacies of GARCH models, examining their statistical characteristics when applied to the provided dataset. Our findings suggest the existence of asymmetric returns in the EUR/GBP pair, while such evidence is inconclusive for the GBP/USD pair. Additionally, we observe that GARCH-type models better fit the data when assuming residuals follow a standard t-distribution rather than a standard normal distribution. Furthermore, we investigate the efficacy of different forecasting techniques within GARCH-type models. Comparing rolling window forecasts to expanding window forecasts, we find no definitive superiority in either approach across the tested scenarios. Our experiments reveal that for the GBP/USD pair, the most accurate volatility forecasts stem from the utilization of GARCH models employing a rolling window methodology. Conversely, for the EUR/GBP pair, optimal forecasts are derived from GARCH models and Ordinary Least Squares (OLS) models incorporating the annualized implied volatility of the exchange rate as an independent variable.",
@@ -4937,7 +5013,8 @@
                 "Physics"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "The Fokker-Planck (FP) equation is a foundational PDE in stochastic processes. However, curse of dimensionality (CoD) poses challenge when dealing with high-dimensional FP PDEs. Although Monte Carlo and vanilla Physics-Informed Neural Networks (PINNs) have shown the potential to tackle CoD, both methods exhibit numerical errors in high dimensions when dealing with the probability density function (PDF) associated with Brownian motion. The point-wise PDF values tend to decrease exponentially as dimension increases, surpassing the precision of numerical simulations and resulting in substantial errors. Moreover, due to its massive sampling, Monte Carlo fails to offer fast sampling. Modeling the logarithm likelihood (LL) via vanilla PINNs transforms the FP equation into a difficult HJB equation, whose error grows rapidly with dimension. To this end, we propose a novel approach utilizing a score-based solver to fit the score function in SDEs. The score function, defined as the gradient of the LL, plays a fundamental role in inferring LL and PDF and enables fast SDE sampling. Three fitting methods, Score Matching (SM), Sliced SM (SSM), and Score-PINN, are introduced. The proposed score-based SDE solver operates in two stages: first, employing SM, SSM, or Score-PINN to acquire the score; and second, solving the LL via an ODE using the obtained score. Comparative evaluations across these methods showcase varying trade-offs. The proposed method is evaluated across diverse SDEs, including anisotropic OU processes, geometric Brownian, and Brownian with varying eigenspace. We also test various distributions, including Gaussian, Log-normal, Laplace, and Cauchy. The numerical results demonstrate the score-based SDE solver's stability, speed, and performance across different settings, solidifying its potential as a solution to CoD for high-dimensional FP equations.",
@@ -5067,7 +5144,8 @@
                 "Forecasting"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "We present General Time Transformer (GTT), an encoder-only style foundation model for zero-shot multivariate time series forecasting. GTT is pretrained on a large dataset of 200M high-quality time series samples spanning diverse domains. In our proposed framework, the task of multivariate time series forecasting is formulated as a channel-wise next curve shape prediction problem, where each time series sample is represented as a sequence of non-overlapping curve shapes with a unified numerical magnitude. GTT is trained to predict the next curve shape based on a window of past curve shapes in a channel-wise manner. Experimental results demonstrate that GTT exhibits superior zero-shot multivariate forecasting capabilities on unseen time series datasets, even surpassing state-of-the-art supervised baselines. Additionally, we investigate the impact of varying GTT model parameters and training dataset scales, observing that the scaling law also holds in the context of zero-shot multivariate time series forecasting.",
@@ -5153,7 +5231,8 @@
                 "Graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Stepwise inference protocols, such as scratchpads and chain-of-thought, help language models solve complex problems by decomposing them into a sequence of simpler subproblems. Despite the significant gain in performance achieved via these protocols, the underlying mechanisms of stepwise inference have remained elusive. To address this, we propose to study autoregressive Transformer models on a synthetic task that embodies the multi-step nature of problems where stepwise inference is generally most useful. Specifically, we define a graph navigation problem wherein a model is tasked with traversing a path from a start to a goal node on the graph. Despite is simplicity, we find we can empirically reproduce and analyze several phenomena observed at scale: (i) the stepwise inference reasoning gap, the cause of which we find in the structure of the training data; (ii) a diversity-accuracy tradeoff in model generations as sampling temperature varies; (iii) a simplicity bias in the model's output; and (iv) compositional generalization and a primacy bias with in-context exemplars. Overall, our work introduces a grounded, synthetic framework for studying stepwise inference and offers mechanistic hypotheses that can lay the foundation for a deeper understanding of this phenomenon.",
@@ -5325,7 +5404,8 @@
                 "DNA"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Although DNA foundation models have advanced the understanding of genomes, they still face significant challenges in the limited scale and diversity of genomic data. This limitation starkly contrasts with the success of natural language foundation models, which thrive on substantially larger scales. Furthermore, genome understanding involves numerous downstream genome annotation tasks with inherent data heterogeneity, thereby necessitating more efficient and robust fine-tuning methods tailored for genomics. Here, we present \\textsc{Lingo}: \\textsc{L}anguage prefix f\\textsc{In}e-tuning for \\textsc{G}en\\textsc{O}mes. Unlike DNA foundation models, \\textsc{Lingo} strategically leverages natural language foundation models' contextual cues, recalibrating their linguistic knowledge to genomic sequences. \\textsc{Lingo} further accommodates numerous, heterogeneous downstream fine-tune tasks by an adaptive rank sampling method that prunes and stochastically reintroduces pruned singular vectors within small computational budgets. Adaptive rank sampling outperformed existing fine-tuning methods on all benchmarked 14 genome understanding tasks, while requiring fewer than 2\\% of trainable parameters as genomic-specific adapters. Impressively, applying these adapters on natural language foundation models matched or even exceeded the performance of DNA foundation models. \\textsc{Lingo} presents a new paradigm of efficient and scalable genome understanding via genomic-specific adapters on language models.",
@@ -5409,7 +5489,8 @@
                 "robot"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "To realize effective large-scale, real-world robotic applications, we must evaluate how well our robot policies adapt to changes in environmental conditions. Unfortunately, a majority of studies evaluate robot performance in environments closely resembling or even identical to the training setup. We present THE COLOSSEUM, a novel simulation benchmark, with 20 diverse manipulation tasks, that enables systematical evaluation of models across 12 axes of environmental perturbations. These perturbations include changes in color, texture, and size of objects, table-tops, and backgrounds; we also vary lighting, distractors, and camera pose. Using THE COLOSSEUM, we compare 4 state-of-the-art manipulation models to reveal that their success rate degrades between 30-50% across these perturbation factors. When multiple perturbations are applied in unison, the success rate degrades $\\geq$75%. We identify that changing the number of distractor objects, target object color, or lighting conditions are the perturbations that reduce model performance the most. To verify the ecological validity of our results, we show that our results in simulation are correlated ($\\bar{R}^2 = 0.614$) to similar perturbations in real-world experiments. We open source code for others to use THE COLOSSEUM, and also release code to 3D print the objects used to replicate the real-world perturbations. Ultimately, we hope that THE COLOSSEUM will serve as a benchmark to identify modeling decisions that systematically improve generalization for manipulation. See https://robot-colosseum.github.io/ for more details.",
@@ -5449,7 +5530,9 @@
                 "forecasting"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG",
+                "cs.SI"
             ]
         ],
         "abstract": "Sentiment analysis can be used for stock market prediction. However, existing research has not studied the impact of a user's financial background on sentiment-based forecasting of the stock market using artificial neural networks. In this work, a novel combination of neural networks is used for the assessment of sentiment-based stock market prediction, based on the financial background of the population that generated the sentiment. The state-of-the-art language processing model Bidirectional Encoder Representations from Transformers (BERT) is used to classify the sentiment and a Long-Short Term Memory (LSTM) model is used for time-series based stock market prediction. For evaluation, the Weibo social networking platform is used as a sentiment data collection source. Weibo users (and their comments respectively) are divided into Authorized Financial Advisor (AFA) and Unauthorized Financial Advisor (UFA) groups according to their background information, as collected by Weibo. The Hong Kong Hang Seng index is used to extract historical stock market change data. The results indicate that stock market prediction learned from the AFA group users is 39.67% more precise than that learned from the UFA group users and shows the highest accuracy (87%) when compared to existing approaches.",
@@ -5935,7 +6018,8 @@
                 "clinical"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Multi-parametric MRI of the body is routinely acquired for the identification of abnormalities and diagnosis of diseases. However, a standard naming convention for the MRI protocols and associated sequences does not exist due to wide variations in imaging practice at institutions and myriad MRI scanners from various manufacturers being used for imaging. The intensity distributions of MRI sequences differ widely as a result, and there also exists information conflicts related to the sequence type in the DICOM headers. At present, clinician oversight is necessary to ensure that the correct sequence is being read and used for diagnosis. This poses a challenge when specific series need to be considered for building a cohort for a large clinical study or for developing AI algorithms. In order to reduce clinician oversight and ensure the validity of the DICOM headers, we propose an automated method to classify the 3D MRI sequence acquired at the levels of the chest, abdomen, and pelvis. In our pilot work, our 3D DenseNet-121 model achieved an F1 score of 99.5% at differentiating 5 common MRI sequences obtained by three Siemens scanners (Aera, Verio, Biograph mMR). To the best of our knowledge, we are the first to develop an automated method for the 3D classification of MRI sequences in the chest, abdomen, and pelvis, and our work has outperformed the previous state-of-the-art MRI series classifiers.",
@@ -6011,7 +6095,8 @@
                 "cancer"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Pheochromocytomas and Paragangliomas (PPGLs) are rare adrenal and extra-adrenal tumors which have the potential to metastasize. For the management of patients with PPGLs, CT is the preferred modality of choice for precise localization and estimation of their progression. However, due to the myriad variations in size, morphology, and appearance of the tumors in different anatomical regions, radiologists are posed with the challenge of accurate detection of PPGLs. Since clinicians also need to routinely measure their size and track their changes over time across patient visits, manual demarcation of PPGLs is quite a time-consuming and cumbersome process. To ameliorate the manual effort spent for this task, we propose an automated method to detect PPGLs in CT studies via a proxy segmentation task. As only weak annotations for PPGLs in the form of prospectively marked 2D bounding boxes on an axial slice were available, we extended these 2D boxes into weak 3D annotations and trained a 3D full-resolution nnUNet model to directly segment PPGLs. We evaluated our approach on a dataset consisting of chest-abdomen-pelvis CTs of 255 patients with confirmed PPGLs. We obtained a precision of 70% and sensitivity of 64.1% with our proposed approach when tested on 53 CT studies. Our findings highlight the promising nature of detecting PPGLs via segmentation, and furthers the state-of-the-art in this exciting yet challenging area of rare cancer management.",
@@ -6153,7 +6238,8 @@
                 "bioinformatics"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Graph learning is crucial in the fields of bioinformatics, social networks, and chemicals. Although high-order graphlets, such as cycles, are critical to achieving an informative graph representation for node classification, edge prediction, and graph recognition, modeling high-order topological characteristics poses significant computational challenges, restricting its widespread applications in machine learning. To address this limitation, we introduce the concept of \\textit{message detouring} to hierarchically characterize cycle representation throughout the entire graph, which capitalizes on the contrast between the shortest and longest pathways within a range of local topologies associated with each graph node. The topological feature representations derived from our message detouring landscape demonstrate comparable expressive power to high-order \\textit{Weisfeiler-Lehman} (WL) tests but much less computational demands. In addition to the integration with graph kernel and message passing neural networks, we present a novel message detouring neural network, which uses Transformer backbone to integrate cycle representations across nodes and edges. Aside from theoretical results, experimental results on expressiveness, graph classification, and node classification show message detouring can significantly outperform current counterpart approaches on various benchmark datasets.",
@@ -6261,7 +6347,8 @@
                 "clinical"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Diffusion and Poisson flow models have demonstrated remarkable success for a wide range of generative tasks. Nevertheless, their iterative nature results in computationally expensive sampling and the number of function evaluations (NFE) required can be orders of magnitude larger than for single-step methods. Consistency models are a recent class of deep generative models which enable single-step sampling of high quality data without the need for adversarial training. In this paper, we introduce a novel image denoising technique which combines the flexibility afforded in Poisson flow generative models (PFGM)++ with the, high quality, single step sampling of consistency models. The proposed method first learns a trajectory between a noise distribution and the posterior distribution of interest by training PFGM++ in a supervised fashion. These pre-trained PFGM++ are subsequently \"distilled\" into Poisson flow consistency models (PFCM) via an updated version of consistency distillation. We call this approach posterior sampling Poisson flow consistency models (PS-PFCM). Our results indicate that the added flexibility of tuning the hyperparameter D, the dimensionality of the augmentation variables in PFGM++, allows us to outperform consistency models, a current state-of-the-art diffusion-style model with NFE=1 on clinical low-dose CT images. Notably, PFCM is in itself a novel family of deep generative models and we provide initial results on the CIFAR-10 dataset.",

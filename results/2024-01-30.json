@@ -9,7 +9,8 @@
                 "parameter-efficient"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Integrating information from multiple modalities enhances the robustness of scene perception systems in autonomous vehicles, providing a more comprehensive and reliable sensory framework. However, the modality incompleteness in multi-modal segmentation remains under-explored. In this work, we establish a task called Modality-Incomplete Scene Segmentation (MISS), which encompasses both system-level modality absence and sensor-level modality errors. To avoid the predominant modality reliance in multi-modal fusion, we introduce a Missing-aware Modal Switch (MMS) strategy to proactively manage missing modalities during training. Utilizing bit-level batch-wise sampling enhances the model's performance in both complete and incomplete testing scenarios. Furthermore, we introduce the Fourier Prompt Tuning (FPT) method to incorporate representative spectral information into a limited number of learnable prompts that maintain robustness against all MISS scenarios. Akin to fine-tuning effects but with fewer tunable parameters (1.1%). Extensive experiments prove the efficacy of our proposed approach, showcasing an improvement of 5.84% mIoU over the prior state-of-the-art parameter-efficient methods in modality missing. The source code is publicly available at https://github.com/RuipingL/MISS.",
@@ -32,7 +33,9 @@
             ],
             [
                 "cs.AI",
-                "cs.CV"
+                "cs.LG",
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "Current large vision-language models (VLMs) often encounter challenges such as insufficient capabilities of a single visual component and excessively long visual tokens. These issues can limit the model's effectiveness in accurately interpreting complex visual information and over-lengthy contextual information. Addressing these challenges is crucial for enhancing the performance and applicability of VLMs. This paper proposes the use of ensemble experts technique to synergizes the capabilities of individual visual encoders, including those skilled in image-text matching, OCR, image segmentation, etc. This technique introduces a fusion network to unify the processing of outputs from different visual experts, while bridging the gap between image encoders and pre-trained LLMs. In addition, we explore different positional encoding schemes to alleviate the waste of positional encoding caused by lengthy image feature sequences, effectively addressing the issue of position overflow and length limitations. For instance, in our implementation, this technique significantly reduces the positional occupancy in models like SAM, from a substantial 4096 to a more efficient and manageable 64 or even down to 1. Experimental results demonstrate that VLMs with multiple experts exhibit consistently superior performance over isolated visual encoders and mark a significant performance boost as more experts are integrated. We have open-sourced the training code used in this report. All of these resources can be found on our project website.",
@@ -201,7 +204,8 @@
         "keywords": [
             [
                 "cs.LG",
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ],
             [
                 "ICASSP"
@@ -298,7 +302,8 @@
         "keywords": [
             [
                 "cs.LG",
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "This article motivates, describes, and presents the PBSCSR dataset for studying composer style recognition of piano sheet music. Our overarching goal was to create a dataset for studying composer style recognition that is \"as accessible as MNIST and as challenging as ImageNet\". To achieve this goal, we use a previously proposed feature representation of sheet music called a bootleg score, which encodes the position of noteheads relative to the staff lines. Using this representation, we sample fixed-length bootleg score fragments from piano sheet music images on IMSLP. The dataset itself contains 40,000 62x64 bootleg score images for a 9-way classification task, 100,000 62x64 bootleg score images for a 100-way classification task, and 29,310 unlabeled variable-length bootleg score images for pretraining. The labeled data is presented in a form that mirrors MNIST images, in order to make it extremely easy to visualize, manipulate, and train models in an efficient manner. Additionally, we include relevant metadata to allow access to the underlying raw sheet music images and other related data on IMSLP. We describe several research tasks that could be studied with the dataset, including variations of composer style recognition in a few-shot or zero-shot setting. For tasks that have previously proposed models, we release code and baseline results for future works to compare against. We also discuss open research questions that the PBSCSR data is especially well suited to facilitate research on and areas of fruitful exploration in future work.",
@@ -332,7 +337,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "While subjective assessments have been the gold standard for evaluating speech generation, there is a growing need for objective metrics that are highly correlated with human subjective judgments due to their cost efficiency. This paper proposes reference-aware automatic evaluation methods for speech generation inspired by evaluation metrics in natural language processing. The proposed SpeechBERTScore computes the BERTScore for self-supervised dense speech features of the generated and reference speech, which can have different sequential lengths. We also propose SpeechBLEU and SpeechTokenDistance, which are computed on speech discrete tokens. The evaluations on synthesized speech show that our method correlates better with human subjective ratings than mel cepstral distortion and a recent mean opinion score prediction model. Also, they are effective in noisy speech evaluation and have cross-lingual applicability.",
@@ -367,7 +373,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "Localizing linearly moving sound sources using microphone arrays is particularly challenging as the transient nature of the signal leads to relatively short observation periods. Commonly, a moving focus is used and most methods operate at least partially in the time domain. In contrast, here an inverse source localization algorithm for mono-frequent uniformly moving sources that acts entirely in the frequency domain is presented. For this, a 2.5D approach is utilized and a transfer function between sources and a microphone grid is derived. By solving a least squares problem using the data at the microphone grid, the unknown source distribution in the moving frame can be determined. For that the measured time signals need to be transformed into the frequency domain using a windowed discrete Fourier transform (DFT), which leads to effects such as spectral leakage that depends on the length of the time interval and the analysis window used. To include these effects in the numerical model, the calculation of the transfer matrix is modified using the Fourier transform of the analysis window. Currently, this approach is limited to mono-frequent sources as this allows a simplification of the calculation and reduces the computational effort. The least squares problem is solved using a Tikhonov regularization employing an L-curve approach to determine a suitable regularization parameter. As a moving source is considered, the Doppler effect allows to enhance the stability of the system by combining the transfer functions for multiple frequencies in the measured signals. The performance of the approach is validated using simulated data of a moving point source with or without a reflecting ground. Numerical experiments are performed to show the effect of the choice of frequencies in the receiver spectrum, the effect of the DFT, the frequency of the source, and the distance of source and receiver.",
@@ -384,7 +391,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "A robust multichannel speaker diarization and separation system is proposed by exploiting the spatio-temporal activity of the speakers. The system is realized in a hybrid architecture that combines the array signal processing units and the deep learning units. For speaker diarization, a spatial coherence matrix across time frames is computed based on the whitened relative transfer functions (wRTFs) of the microphone array. This serves as a robust feature for subsequent machine learning without the need for prior knowledge of the array configuration. A computationally efficient Spatial Activity-driven Speaker Diarization network (SASDnet) is constructed to estimate the speaker activity directly from the spatial coherence matrix. For speaker separation, we propose the Global and Local Activity-driven Speaker Extraction network (GLASEnet) to separate speaker signals via speaker-specific global and local spatial activity functions. The local spatial activity functions depend on the coherence between the wRTFs of each time-frequency bin and the target speaker-dominant bins. The global spatial activity functions are computed from the global spatial coherence functions based on frequency-averaged local spatial activity functions. Experimental results have demonstrated superior speaker, diarization, counting, and separation performance achieved by the proposed system with low computational complexity compared to the pre-selected baselines.",
@@ -623,7 +631,9 @@
         "keywords": [
             [
                 "cs.AI",
-                "cs.SD"
+                "cs.LG",
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "Singing voice conversion (SVC) automates song covers by converting one singer's singing voice into another target singer's singing voice with the original lyrics and melody. However, it raises serious concerns about copyright and civil right infringements to multiple entities. This work proposes SongBsAb, the first proactive approach to mitigate unauthorized SVC-based illegal song covers. SongBsAb introduces human-imperceptible perturbations to singing voices before releasing them, so that when they are used, the generation process of SVC will be interfered, resulting in unexpected singing voices. SongBsAb features a dual prevention effect by causing both (singer) identity disruption and lyric disruption, namely, the SVC-covered singing voice neither imitates the target singer nor preserves the original lyrics. To improve the imperceptibility of perturbations, we refine a psychoacoustic model-based loss with the backing track as an additional masker, a unique accompanying element for singing voices compared to ordinary speech voices. To enhance the transferability, we propose to utilize a frame-level interaction reduction-based loss. We demonstrate the prevention effectiveness, utility, and robustness of SongBsAb on three SVC models and two datasets using both objective and human study-based subjective metrics. Our work fosters an emerging research direction for mitigating illegal automated song covers.",
@@ -645,6 +655,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -717,6 +728,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -801,7 +813,8 @@
         "keywords": [
             [
                 "cs.AI",
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "This paper introduces ESPnet-SPK, a toolkit designed with several objectives for training speaker embedding extractors. First, we provide an open-source platform for researchers in the speaker recognition community to effortlessly build models. We provide several models, ranging from x-vector to recent SKA-TDNN. Through the modularized architecture design, variants can be developed easily. We also aspire to bridge developed models with other domains, facilitating the broad research community to effortlessly incorporate state-of-the-art embedding extractors. Pre-trained embedding extractors can be accessed in an off-the-shelf manner and we demonstrate the toolkit's versatility by showcasing its integration with two tasks. Another goal is to integrate with diverse self-supervised learning features. We release a reproducible recipe that achieves an equal error rate of 0.39% on the Vox1-O evaluation protocol using WavLM-Large with ECAPA-TDNN.",
@@ -819,7 +832,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "We propose the structure and color based learned image codec (SLIC) in which the task of compression is split into that of luminance and chrominance. The deep learning model is built with a novel multi-scale architecture for Y and UV channels in the encoder, where the features from various stages are combined to obtain the latent representation. An autoregressive context model is employed for backward adaptation and a hyperprior block for forward adaptation. Various experiments are carried out to study and analyze the performance of the proposed model, and to compare it with other image codecs. We also illustrate the advantages of our method through the visualization of channel impulse responses, latent channels and various ablation studies. The model achieves Bj\u00f8ntegaard delta bitrate gains of 7.5% and 4.66% in terms of MS-SSIM and CIEDE2000 metrics with respect to other state-of-the-art reference codecs.",
@@ -924,6 +938,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -993,6 +1008,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -1116,6 +1132,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -1152,6 +1169,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -1171,7 +1189,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ],
             [
                 "AAAI"
@@ -1210,7 +1229,10 @@
         "keywords": [
             [
                 "cs.AI",
-                "cs.CL"
+                "cs.LG",
+                "cs.CL",
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "YouTube faces a global crisis with the dissemination of false information and hate speech. To counter these issues, YouTube has implemented strict rules against uploading content that includes false information or promotes hate speech. While numerous studies have been conducted to reduce offensive English-language content, there's a significant lack of research on Sinhala content. This study aims to address the aforementioned gap by proposing a solution to minimize the spread of violence and misinformation in Sinhala YouTube videos. The approach involves developing a rating system that assesses whether a video contains false information by comparing the title and description with the audio content and evaluating whether the video includes hate speech. The methodology encompasses several steps, including audio extraction using the Pytube library, audio transcription via the fine-tuned Whisper model, hate speech detection employing the distilroberta-base model and a text classification LSTM model, and text summarization through the fine-tuned BART-Large- XSUM model. Notably, the Whisper model achieved a 48.99\\% word error rate, while the distilroberta-base model demonstrated an F1 score of 0.856 and a recall value of 0.861 in comparison to the LSTM model, which exhibited signs of overfitting.",
@@ -1231,6 +1253,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.CY",
                 "cs.CL"
             ]
         ],
@@ -1249,7 +1272,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.CY"
             ],
             [
                 "ICML"
@@ -1270,6 +1294,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -1289,6 +1314,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -1402,7 +1428,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Executing deep neural networks (DNNs) on edge artificial intelligence (AI) devices enables various autonomous mobile computing applications. However, the memory budget of edge AI devices restricts the number and complexity of DNNs allowed in such applications. Existing solutions, such as model compression or cloud offloading, reduce the memory footprint of DNN inference at the cost of decreased model accuracy or autonomy. To avoid these drawbacks, we divide DNN into blocks and swap them in and out in order, such that large DNNs can execute within a small memory budget. Nevertheless, naive swapping on edge AI devices induces significant delays due to the redundant memory operations in the DNN development ecosystem for edge AI devices. To this end, we develop SwapNet, an efficient DNN block swapping middleware for edge AI devices. We systematically eliminate the unnecessary memory operations during block swapping while retaining compatible with the deep learning frameworks, GPU backends, and hardware architectures of edge AI devices. We further showcase the utility of SwapNet via a multi-DNN scheduling scheme. Evaluations on eleven DNN inference tasks in three applications demonstrate that SwapNet achieves almost the same latency as the case with sufficient memory even when DNNs demand 2.32x to 5.81x memory beyond the available budget. The design of SwapNet also provides novel and feasible insights for deploying large language models (LLMs) on edge AI devices in the future.",
@@ -1420,7 +1447,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Imitation learning is often used in addition to reinforcement learning in environments where reward design is difficult or where the reward is sparse, but it is difficult to be able to imitate well in unknown states from a small amount of expert data and sampling data. Supervised learning methods such as Behavioral Cloning do not require sampling data, but usually suffer from distribution shift. The methods based on reinforcement learning, such as inverse reinforcement learning and Generative Adversarial imitation learning (GAIL), can learn from only a few expert data. However, they often need to interact with the environment. Soft Q imitation learning (SQIL) addressed the problems, and it was shown that it could learn efficiently by combining Behavioral Cloning and soft Q-learning with constant rewards. In order to make this algorithm more robust to distribution shift, we propose more efficient and robust algorithm by adding to this method a reward function based on adversarial inverse reinforcement learning that rewards the agent for performing actions in status similar to the demo. We call this algorithm Discriminator Soft Q Imitation Learning (DSQIL). We evaluated it on MuJoCo environments.",
@@ -1504,7 +1532,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "We developed an artificial intelligence approach to predict the transfer fee of a football player. This model can help clubs make better decisions about which players to buy and sell, which can lead to improved performance and increased club budgets. Having collected data on player performance, transfer fees, and other factors that might affect a player's value, we then used this data to train a machine learning model that can accurately predict a player's impact on the game. We further passed the obtained results as one of the features to the predictor of transfer fees. The model can help clubs identify players who are undervalued and who could be sold for a profit. It can also help clubs avoid overpaying for players. We believe that our model can be a valuable tool for football clubs. It can help them make better decisions about player recruitment and transfers.",
@@ -1538,7 +1567,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.LG"
+                "cs.LG",
+                "cs.CY"
             ]
         ],
         "abstract": "Knowledge Tracing (KT) aims to predict the future performance of students by tracking the development of their knowledge states. Despite all the recent progress made in this field, the application of KT models in education systems is still restricted from the data perspectives: 1) limited access to real life data due to data protection concerns, 2) lack of diversity in public datasets, 3) noises in benchmark datasets such as duplicate records. To resolve these problems, we simulated student data with three statistical strategies based on public datasets and tested their performance on two KT baselines. While we observe only minor performance improvement with additional synthetic data, our work shows that using only synthetic data for training can lead to similar performance as real data.",
@@ -1643,7 +1673,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Causal discovery is the challenging task of inferring causal structure from data. Motivated by Pearl's Causal Hierarchy (PCH), which tells us that passive observations alone are not enough to distinguish correlation from causation, there has been a recent push to incorporate interventions into machine learning research. Reinforcement learning provides a convenient framework for such an active approach to learning. This paper presents CORE, a deep reinforcement learning-based approach for causal discovery and intervention planning. CORE learns to sequentially reconstruct causal graphs from data while learning to perform informative interventions. Our results demonstrate that CORE generalizes to unseen graphs and efficiently uncovers causal structures. Furthermore, CORE scales to larger graphs with up to 10 variables and outperforms existing approaches in structure estimation accuracy and sample efficiency. All relevant code and supplementary material can be found at https://github.com/sa-and/CORE",
@@ -1712,7 +1743,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "This paper presents the results of finetuning large language models (LLMs) for the task of detecting vulnerabilities in source code. We leverage WizardCoder, a recent improvement of the state-of-the-art LLM StarCoder, and adapt it for vulnerability detection through further finetuning. To accelerate training, we modify WizardCoder's training procedure, also we investigate optimal training regimes. For the imbalanced dataset with many more negative examples than positive, we also explore different techniques to improve classification performance. The finetuned WizardCoder model achieves improvement in ROC AUC and F1 measures on balanced and imbalanced vulnerability datasets over CodeBERT-like model, demonstrating the effectiveness of adapting pretrained LLMs for vulnerability detection in source code. The key contributions are finetuning the state-of-the-art code LLM, WizardCoder, increasing its training speed without the performance harm, optimizing the training procedure and regimes, handling class imbalance, and improving performance on difficult vulnerability detection datasets. This demonstrates the potential for transfer learning by finetuning large pretrained language models for specialized source code analysis tasks.",
@@ -1849,7 +1881,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "This paper leverages macroscopic models and multi-source spatiotemporal data collected from automatic traffic counters and probe vehicles to accurately estimate traffic flow and travel time in links where these measurements are unavailable. This problem is critical in transportation planning applications where the sensor coverage is low and the planned interventions have network-wide impacts. The proposed model, named the Macroscopic Traffic Estimator (MaTE), can perform network-wide estimations of traffic flow and travel time only using the set of observed measurements of these quantities. Because MaTE is grounded in macroscopic flow theory, all parameters and variables are interpretable. The estimated traffic flow satisfies fundamental flow conservation constraints and exhibits an increasing monotonic relationship with the estimated travel time. Using logit-based stochastic traffic assignment as the principle for routing flow behavior makes the model fully differentiable with respect to the model parameters. This property facilitates the application of computational graphs to learn parameters from vast amounts of spatiotemporal data. We also integrate neural networks and polynomial kernel functions to capture link flow interactions and enrich the mapping of traffic flows into travel times. MaTE also adds a destination choice model and a trip generation model that uses historical data on the number of trips generated by location. Experiments on synthetic data show that the model can accurately estimate travel time and traffic flow in out-of-sample links. Results obtained using real-world multi-source data from a large-scale transportation network suggest that MaTE outperforms data-driven benchmarks, especially in travel time estimation. The estimated parameters of MaTE are also informative about the hourly change in travel demand and supply characteristics of the transportation network.",
@@ -1883,7 +1916,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.LG"
+                "cs.LG",
+                "cs.CY"
             ]
         ],
         "abstract": "The increased application of machine learning (ML) in sensitive domains requires protecting the training data through privacy frameworks, such as differential privacy (DP). DP requires to specify a uniform privacy level $\\varepsilon$ that expresses the maximum privacy loss that each data point in the entire dataset is willing to tolerate. Yet, in practice, different data points often have different privacy requirements. Having to set one uniform privacy level is usually too restrictive, often forcing a learner to guarantee the stringent privacy requirement, at a large cost to accuracy. To overcome this limitation, we introduce our novel Personalized-DP Output Perturbation method (PDP-OP) that enables to train Ridge regression models with individual per data point privacy levels. We provide rigorous privacy proofs for our PDP-OP as well as accuracy guarantees for the resulting model. This work is the first to provide such theoretical accuracy guarantees when it comes to personalized DP in machine learning, whereas previous work only provided empirical evaluations. We empirically evaluate PDP-OP on synthetic and real datasets and with diverse privacy distributions. We show that by enabling each data point to specify their own privacy requirement, we can significantly improve the privacy-accuracy trade-offs in DP. We also show that PDP-OP outperforms the personalized privacy techniques of Jorgensen et al. (2015).",
@@ -1919,7 +1953,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Although reinforcement learning (RL) can solve many challenging sequential decision making problems, achieving zero-shot transfer across related tasks remains a challenge. The difficulty lies in finding a good representation for the current task so that the agent understands how it relates to previously seen tasks. To achieve zero-shot transfer, we introduce the function encoder, a representation learning algorithm which represents a function as a weighted combination of learned, non-linear basis functions. By using a function encoder to represent the reward function or the transition function, the agent has information on how the current task relates to previously seen tasks via a coherent vector representation. Thus, the agent is able to achieve transfer between related tasks at run time with no additional training. We demonstrate state-of-the-art data efficiency, asymptotic performance, and training stability in three RL fields by augmenting basic RL algorithms with a function encoder task representation.",
@@ -1953,7 +1988,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "This study presents a new approach for estimating confidence in machine learning model predictions, specifically in regression tasks utilizing Earth Observation (EO) data, with a particular focus on mosquito abundance (MA) estimation. We take advantage of a Variational AutoEncoder architecture, to derive a confidence metric by the latent space representations of EO datasets. This methodology is pivotal in establishing a correlation between the Euclidean distance in latent representations and the Absolute Error (AE) in individual MA predictions. Our research focuses on EO datasets from the Veneto region in Italy and the Upper Rhine Valley in Germany, targeting areas significantly affected by mosquito populations. A key finding is a notable correlation of 0.46 between the AE of MA predictions and the proposed confidence metric. This correlation signifies a robust, new metric for quantifying the reliability and enhancing the trustworthiness of the AI model's predictions in the context of both EO data analysis and mosquito abundance studies.",
@@ -1970,7 +2006,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "In continual learning, a learner has to keep learning from the data over its whole life time. A key issue is to decide what knowledge to keep and what knowledge to let go. In a neural network, this can be implemented by using a step-size vector to scale how much gradient samples change network weights. Common algorithms, like RMSProp and Adam, use heuristics, specifically normalization, to adapt this step-size vector. In this paper, we show that those heuristics ignore the effect of their adaptation on the overall objective function, for example by moving the step-size vector away from better step-size vectors. On the other hand, stochastic meta-gradient descent algorithms, like IDBD (Sutton, 1992), explicitly optimize the step-size vector with respect to the overall objective function. On simple problems, we show that IDBD is able to consistently improve step-size vectors, where RMSProp and Adam do not. We explain the differences between the two approaches and their respective limitations. We conclude by suggesting that combining both approaches could be a promising future direction to improve the performance of neural networks in continual learning.",
@@ -2005,7 +2042,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "We present a theoretical analysis of the performance of transformer with softmax attention in in-context learning with linear regression tasks. While the existing literature predominantly focuses on the convergence of transformers with single-/multi-head attention, our research centers on comparing their performance. We conduct an exact theoretical analysis to demonstrate that multi-head attention with a substantial embedding dimension performs better than single-head attention. When the number of in-context examples D increases, the prediction loss using single-/multi-head attention is in O(1/D), and the one for multi-head attention has a smaller multiplicative constant. In addition to the simplest data distribution setting, we consider more scenarios, e.g., noisy labels, local examples, correlated features, and prior knowledge. We observe that, in general, multi-head attention is preferred over single-head attention. Our results verify the effectiveness of the design of multi-head attention in the transformer architecture.",
@@ -2040,7 +2078,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.CY"
             ]
         ],
         "abstract": "Hackathons and software competitions, increasingly pivotal in the software industry, serve as vital catalysts for innovation and skill development for both organizations and students. These platforms enable companies to prototype ideas swiftly, while students gain enriched learning experiences, enhancing their practical skills. Over the years, hackathons have transitioned from mere competitive events to significant educational tools, fusing theoretical knowledge with real-world problem-solving. The integration of hackathons into computer science and software engineering curricula aims to align educational proficiencies within a collaborative context, promoting peer connectivity and enriched learning via industry-academia collaborations. However, the infusion of advanced technologies, notably artificial intelligence (AI), and machine learning, into hackathons is revolutionizing their structure and outcomes. This evolution brings forth both opportunities, like enhanced learning experiences, and challenges, such as ethical concerns. This study delves into the impact of generative AI, examining its influence on student's technological choices based on a case study on the University of Iowa 2023 event. The exploration provides insights into AI's role in hackathons, and its educational implications, and offers a roadmap for the integration of such technologies in future events, ensuring innovation is balanced with ethical and educational considerations.",
@@ -2074,7 +2113,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Explainable AI has brought transparency into complex ML blackboxes, enabling, in particular, to identify which features these models use for their predictions. So far, the question of explaining predictive uncertainty, i.e. why a model 'doubts', has been scarcely studied. Our investigation reveals that predictive uncertainty is dominated by second-order effects, involving single features or product interactions between them. We contribute a new method for explaining predictive uncertainty based on these second-order effects. Computationally, our method reduces to a simple covariance computation over a collection of first-order explanations. Our method is generally applicable, allowing for turning common attribution techniques (LRP, Gradient x Input, etc.) into powerful second-order uncertainty explainers, which we call CovLRP, CovGI, etc. The accuracy of the explanations our method produces is demonstrated through systematic quantitative evaluations, and the overall usefulness of our method is demonstrated via two practical showcases.",
@@ -2092,7 +2132,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "We argue that there is a strong connection between ensemble learning and a delegative voting paradigm -- liquid democracy -- that can be leveraged to reduce ensemble training costs. We present an incremental training procedure that identifies and removes redundant classifiers from an ensemble via delegation mechanisms inspired by liquid democracy. Through both analysis and extensive experiments we show that this process greatly reduces the computational cost of training compared to training a full ensemble. By carefully selecting the underlying delegation mechanism, weight centralization in the classifier population is avoided, leading to higher accuracy than some boosting methods. Furthermore, this work serves as an exemplar of how frameworks from computational social choice literature can be applied to problems in nontraditional domains.",
@@ -2233,7 +2274,8 @@
             ],
             [
                 "cs.LG",
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ],
             [
                 "ICASSP"
@@ -2401,6 +2443,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -2665,7 +2708,8 @@
                 "Synthesis"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "To leverage LLMs for visual synthesis, traditional methods convert raster image information into discrete grid tokens through specialized visual modules, while disrupting the model's ability to capture the true semantic representation of visual scenes. This paper posits that an alternative representation of images, vector graphics, can effectively surmount this limitation by enabling a more natural and semantically coherent segmentation of the image information. Thus, we introduce StrokeNUWA, a pioneering work exploring a better visual representation ''stroke tokens'' on vector graphics, which is inherently visual semantics rich, naturally compatible with LLMs, and highly compressed. Equipped with stroke tokens, StrokeNUWA can significantly surpass traditional LLM-based and optimization-based methods across various metrics in the vector graphic generation task. Besides, StrokeNUWA achieves up to a 94x speedup in inference over the speed of prior methods with an exceptional SVG code compression ratio of 6.9%.",
@@ -2805,7 +2849,9 @@
             ],
             [
                 "cs.AI",
-                "cs.CV"
+                "cs.LG",
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "Despite advances in AI alignment, language models (LM) remain vulnerable to adversarial attacks or jailbreaking, in which adversaries modify input prompts to induce harmful behavior. While some defenses have been proposed, they focus on narrow threat models and fall short of a strong defense, which we posit should be effective, universal, and practical. To achieve this, we propose the first adversarial objective for defending LMs against jailbreaking attacks and an algorithm, robust prompt optimization (RPO), that uses gradient-based token optimization to enforce harmless outputs. This results in an easily accessible suffix that significantly improves robustness to both jailbreaks seen during optimization and unknown, held-out jailbreaks, reducing the attack success rate on Starling-7B from 84% to 8.66% across 20 jailbreaks. In addition, we find that RPO has a minor effect on benign use, is successful under adaptive attacks, and can transfer to black-box models, reducing the success rate of the strongest attack on GPT-4, GUARD, from 92% to 6%.",
@@ -2828,6 +2874,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -2850,6 +2897,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -2911,6 +2959,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -2935,6 +2984,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -2959,7 +3009,9 @@
             ],
             [
                 "cs.AI",
-                "cs.SD"
+                "cs.LG",
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "The advent of Large Models marks a new era in machine learning, significantly outperforming smaller models by leveraging vast datasets to capture and synthesize complex patterns. Despite these advancements, the exploration into scaling, especially in the audio generation domain, remains limited, with previous efforts didn't extend into the high-fidelity (HiFi) 44.1kHz domain and suffering from both spectral discontinuities and blurriness in the high-frequency domain, alongside a lack of robustness against out-of-domain data. These limitations restrict the applicability of models to diverse use cases, including music and singing generation. Our work introduces Enhanced Various Audio Generation via Scalable Generative Adversarial Networks (EVA-GAN), yields significant improvements over previous state-of-the-art in spectral and high-frequency reconstruction and robustness in out-of-domain data performance, enabling the generation of HiFi audios by employing an extensive dataset of 36,000 hours of 44.1kHz audio, a context-aware module, a Human-In-The-Loop artifact measurement toolkit, and expands the model to approximately 200 million parameters. Demonstrations of our work are available at https://double-blind-eva-gan.cc.",
@@ -3003,7 +3055,8 @@
                 "Diffusion"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Dynamical behaviors of complex interacting systems, including brain activities, financial price movements, and physical collective phenomena, are associated with underlying interactions between the system's components. The issue of uncovering interaction relations in such systems using observable dynamics is called relational inference. In this study, we propose a Diffusion model for Relational Inference (DiffRI), inspired by a self-supervised method for probabilistic time series imputation. DiffRI learns to infer the probability of the presence of connections between components through conditional diffusion modeling. Experiments on both simulated and quasi-real datasets show that DiffRI is highly competent compared with other state-of-the-art models in discovering ground truth interactions in an unsupervised manner. Our code will be made public soon.",
@@ -3063,7 +3116,9 @@
                 "Graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG",
+                "cs.SI"
             ]
         ],
         "abstract": "Graph neural networks (GNNs) have achieved remarkable performance on graph-structured data. However, GNNs may inherit prejudice from the training data and make discriminatory predictions based on sensitive attributes, such as gender and race. Recently, there has been an increasing interest in ensuring fairness on GNNs, but all of them are under the assumption that the training and testing data are under the same distribution, i.e., training data and testing data are from the same graph. Will graph fairness performance decrease under distribution shifts? How does distribution shifts affect graph fairness learning? All these open questions are largely unexplored from a theoretical perspective. To answer these questions, we first theoretically identify the factors that determine bias on a graph. Subsequently, we explore the factors influencing fairness on testing graphs, with a noteworthy factor being the representation distances of certain groups between the training and testing graph. Motivated by our theoretical analysis, we propose our framework FatraGNN. Specifically, to guarantee fairness performance on unknown testing graphs, we propose a graph generator to produce numerous graphs with significant bias and under different distributions. Then we minimize the representation distances for each certain group between the training graph and generated graphs. This empowers our model to achieve high classification and fairness performance even on generated graphs with significant bias, thereby effectively handling unknown testing graphs. Experiments on real-world and semi-synthetic datasets demonstrate the effectiveness of our model in terms of both accuracy and fairness.",
@@ -3208,7 +3263,9 @@
                 "graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG",
+                "cs.SI"
             ]
         ],
         "abstract": "GNNs are widely used to solve various tasks including node classification and link prediction. Most of the GNN architectures assume the initial embedding to be random or generated from popular distributions. These initial embeddings require multiple layers of transformation to converge into a meaningful latent representation. While number of layers allow accumulation of larger neighbourhood of a node it also introduce the problem of over-smoothing. In addition, GNNs are inept at representing structural information. For example, the output embedding of a node does not capture its triangles participation. In this paper, we presented a novel feature extraction methodology GraphViz2Vec that can capture the structural information of a node's local neighbourhood to create meaningful initial embeddings for a GNN model. These initial embeddings helps existing models achieve state-of-the-art results in various classification tasks. Further, these initial embeddings help the model to produce desired results with only two layers which in turn reduce the problem of over-smoothing. The initial encoding of a node is obtained from an image classification model trained on multiple energy diagrams of its local neighbourhood. These energy diagrams are generated with the induced sub-graph of the nodes traversed by multiple random walks. The generated encodings increase the performance of existing models on classification tasks (with a mean increase of $4.65\\%$ and $2.58\\%$ for the node and link classification tasks, respectively), with some models achieving state-of-the-art results.",
@@ -3254,7 +3311,8 @@
                 "Graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Time Series Supplier Allocation (TSSA) poses a complex NP-hard challenge, aimed at refining future order dispatching strategies to satisfy order demands with maximum supply efficiency fully. Traditionally derived from financial portfolio management, the Black-Litterman (BL) model offers a new perspective for the TSSA scenario by balancing expected returns against insufficient supply risks. However, its application within TSSA is constrained by the reliance on manually constructed perspective matrices and spatio-temporal market dynamics, coupled with the absence of supervisory signals and data unreliability inherent to supplier information. To solve these limitations, we introduce the pioneering Deep Black-Litterman Model (DBLM), which innovatively adapts the BL model from financial roots to supply chain context. Leveraging the Spatio-Temporal Graph Neural Networks (STGNNS), DBLM automatically generates future perspective matrices for TSSA, by integrating spatio-temporal dependency. Moreover, a novel Spearman rank correlation distinctively supervises our approach to address the lack of supervisory signals, specifically designed to navigate through the complexities of supplier risks and interactions. This is further enhanced by a masking mechanism aimed at counteracting the biases from unreliable data, thereby improving the model's precision and reliability. Extensive experimentation on two datasets unequivocally demonstrates DBLM's enhanced performance in TSSA, setting new standards for the field. Our findings and methodology are made available for community access and further development.",
@@ -3274,7 +3332,8 @@
                 "EEG"
             ],
             [
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ],
             [
                 "ICASSP"
@@ -3297,7 +3356,8 @@
                 "graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.SI"
             ]
         ],
         "abstract": "When auditing a redistricting plan, a persuasive method is to compare the plan with an ensemble of neutrally drawn redistricting plans. Ensembles are generated via algorithms that sample distributions on balanced graph partitions. To audit the partisan difference between the ensemble and a given plan, one must ensure that the non-partisan criteria are matched so that we may conclude that partisan differences come from bias rather than, for example, levels of compactness or differences in community preservation. Certain sampling algorithms allow one to explicitly state the policy-based probability distribution on plans, however, these algorithms have shown poor mixing times for large graphs (i.e. redistricting spaces) for all but a few specialized measures. In this work, we generate a multiscale parallel tempering approach that makes local moves at each scale. The local moves allow us to adopt a wide variety of policy-based measures. We examine our method in the state of Connecticut and succeed at achieving fast mixing on a policy-based distribution that has never before been sampled at this scale. Our algorithm shows promise to expand to a significantly wider class of measures that will (i) allow for more principled and situation-based comparisons and (ii) probe for the typical partisan impact that policy can have on redistricting.",
@@ -3634,7 +3694,8 @@
                 "cardiac"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "The low-rank plus sparse (L+S) decomposition model has enabled better reconstruction of dynamic magnetic resonance imaging (dMRI) with separation into background (L) and dynamic (S) component. However, use of low-rank prior alone may not fully explain the slow variations or smoothness of the background part at the local scale. In this paper, we propose a smoothness-regularized L+S (SR-L+S) model for dMRI reconstruction from highly undersampled k-t-space data. We exploit joint low-rank and smooth priors on the background component of dMRI to better capture both its global and local temporal correlated structures. Extending the L+S formulation, the low-rank property is encoded by the nuclear norm, while the smoothness by a general \\ell_{p}-norm penalty on the local differences of the columns of L. The additional smoothness regularizer can promote piecewise local consistency between neighboring frames. By smoothing out the noise and dynamic activities, it allows accurate recovery of the background part, and subsequently more robust dMRI reconstruction. Extensive experiments on multi-coil cardiac and synthetic data shows that the SR-L+S model outp",
@@ -3692,7 +3753,8 @@
                 "Super-Resolution"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Multi-image super-resolution (MISR) allows to increase the spatial resolution of a low-resolution (LR) acquisition by combining multiple images carrying complementary information in the form of sub-pixel offsets in the scene sampling, and can be significantly more effective than its single-image counterpart. Its main difficulty lies in accurately registering and fusing the multi-image information. Currently studied settings, such as burst photography, typically involve assumptions of small geometric disparity between the LR images and rely on optical flow for image registration. We study a MISR method that can increase the resolution of sets of images acquired with arbitrary, and potentially wildly different, camera positions and orientations, generalizing the currently studied MISR settings. Our proposed model, called EpiMISR, moves away from optical flow and explicitly uses the epipolar geometry of the acquisition process, together with transformer-based processing of radiance feature fields to substantially improve over state-of-the-art MISR methods in presence of large disparities in the LR images.",
@@ -3828,7 +3890,8 @@
                 "disease"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Purpose: To develop a method for automated segmentation of hypothalamus subregions informed by ultra-high resolution ex vivo magnetic resonance images (MRI), which generalizes across MRI sequences and resolutions without retraining. Materials and Methods: We trained our deep learning method, H-synEx, with synthetic images derived from label maps built from ultra-high resolution ex vivo MRI scans, which enables finer-grained manual segmentation when compared with 1mm isometric in vivo images. We validated this retrospective study using 1535 in vivo images from six datasets and six MRI sequences. The quantitative evaluation used the Dice Coefficient (DC) and Average Hausdorff distance (AVD). Statistical analysis compared hypothalamic subregion volumes in controls, Alzheimer's disease (AD), and behavioral variant frontotemporal dementia (bvFTD) subjects using the area under the curve (AUC) and Wilcoxon rank sum test. Results: H-SynEx can segment the hypothalamus across various MRI sequences, encompassing FLAIR sequences with significant slice spacing (5mm). Using hypothalamic volumes on T1w images to distinguish control from AD and bvFTD patients, we observed AUC values of 0.74 and 0.79 respectively. Additionally, AUC=0.66 was found for volume variation on FLAIR scans when comparing control and non-patients. Conclusion: Our results show that H-SynEx successfully leverages information from ultra-high resolution scans to segment in vivo from different MRI sequences such as T1w, T2w, PD, qT1, FA, and FLAIR. We also found that our automated segmentation was able to discriminate controls versus patients on FLAIR images with 5mm spacing. H-SynEx is openly available at https://github.com/liviamarodrigues/hsynex.",
@@ -4048,6 +4111,8 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
+                "cs.SI",
                 "cs.CL"
             ]
         ],
@@ -4217,6 +4282,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -4254,7 +4320,8 @@
                 "Forecasting"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ],
             [
                 "ICLR"
@@ -4277,7 +4344,8 @@
                 "MRI"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Magnetic Resonance Imaging with tagging (tMRI) has long been utilized for quantifying tissue motion and strain during deformation. However, a phenomenon known as tag fading, a gradual decrease in tag visibility over time, often complicates post-processing. The first contribution of this study is to model tag fading by considering the interplay between $T_1$ relaxation and the repeated application of radio frequency (RF) pulses during serial imaging sequences. This is a factor that has been overlooked in prior research on tMRI post-processing. Further, we have observed an emerging trend of utilizing raw tagged MRI within a deep learning-based (DL) registration framework for motion estimation. In this work, we evaluate and analyze the impact of commonly used image similarity objectives in training DL registrations on raw tMRI. This is then compared with the Harmonic Phase-based approach, a traditional approach which is claimed to be robust to tag fading. Our findings, derived from both simulated images and an actual phantom scan, reveal the limitations of various similarity losses in raw tMRI and emphasize caution in registration tasks where image intensity changes over time.",
@@ -4361,6 +4429,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -4383,6 +4452,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -4405,7 +4475,8 @@
                 "psychological"
             ],
             [
-                "cs.LG"
+                "cs.LG",
+                "cs.CY"
             ]
         ],
         "abstract": "Powered by the increasing predictive capabilities of machine learning algorithms, artificial intelligence (AI) systems have begun to be used to overrule human mistakes in many settings. We provide the first field evidence this AI oversight carries psychological costs that can impact human decision-making. We investigate one of the highest visibility settings in which AI oversight has occurred: the Hawk-Eye review of umpires in top tennis tournaments. We find that umpires lowered their overall mistake rate after the introduction of Hawk-Eye review, in line with rational inattention given psychological costs of being overruled by AI. We also find that umpires increased the rate at which they called balls in, which produced a shift from making Type II errors (calling a ball out when in) to Type I errors (calling a ball in when out). We structurally estimate the psychological costs of being overruled by AI using a model of rational inattentive umpires, and our results suggest that because of these costs, umpires cared twice as much about Type II errors under AI oversight.",
@@ -4466,7 +4537,8 @@
                 "forecasting"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Modeling time series data remains a pervasive issue as the temporal dimension is inherent to numerous domains. Despite significant strides in time series forecasting, high noise-to-signal ratio, non-normality, non-stationarity, and lack of data continue challenging practitioners. In response, we leverage a simple representation augmentation technique to overcome these challenges. Our augmented representation acts as a statistical-space prior encoded at each time step. In response, we name our method Statistical-space Augmented Representation (SSAR). The underlying high-dimensional data-generating process inspires our representation augmentation. We rigorously examine the empirical generalization performance on two data sets with two downstream temporal learning algorithms. Our approach significantly beats all five up-to-date baselines. Moreover, the highly modular nature of our approach can easily be applied to various settings. Lastly, fully-fledged theoretical perspectives are available throughout the writing for a clear and rigorous understanding.",
@@ -4736,7 +4808,8 @@
                 "watermarking"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.CY"
             ]
         ],
         "abstract": "This paper presents a theoretical analysis and practical approach to the moral responsibilities when developing AI systems for non-military applications that may nonetheless be used for conflict applications. We argue that AI represents a form of crossover technology that is different from previous historical examples of dual- or multi-use technology as it has a multiplicative effect across other technologies. As a result, existing analyses of ethical responsibilities around dual-use technologies do not necessarily work for AI systems. We instead argue that stakeholders involved in the AI system lifecycle are morally responsible for uses of their systems that are reasonably foreseeable. The core idea is that an agent's moral responsibility for some action is not necessarily determined by their intentions alone; we must also consider what the agent could reasonably have foreseen to be potential outcomes of their action, such as the potential use of a system in conflict even when it is not designed for that. In particular, we contend that it is reasonably foreseeable that: (1) civilian AI systems will be applied to active conflict, including conflict support activities, (2) the use of civilian AI systems in conflict will impact applications of the law of armed conflict, and (3) crossover AI technology will be applied to conflicts that fall short of armed conflict. Given these reasonably foreseeably outcomes, we present three technically feasible actions that developers of civilian AIs can take to potentially mitigate their moral responsibility: (a) establishing systematic approaches to multi-perspective capability testing, (b) integrating digital watermarking in model weight matrices, and (c) utilizing monitoring and reporting mechanisms for conflict-related AI applications.",
@@ -4757,7 +4830,8 @@
                 "EEG"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Fatigue detection is of paramount importance in enhancing safety, productivity, and well-being across diverse domains, including transportation, healthcare, and industry. This scientific paper presents a comprehensive investigation into the application of machine learning algorithms for the detection of physiological fatigue using Electroencephalogram (EEG) signals. The primary objective of this study was to assess the efficacy of various algorithms in predicting an individual's level of fatigue based on EEG data.",
@@ -5472,7 +5546,8 @@
                 "Healthcare"
             ],
             [
-                "cs.LG"
+                "cs.LG",
+                "cs.CY"
             ]
         ],
         "abstract": "The adoption of machine-learning-enabled systems in the healthcare domain is on the rise. While the use of ML in healthcare has several benefits, it also expands the threat surface of medical systems. We show that the use of ML in medical systems, particularly connected systems that involve interfacing the ML engine with multiple peripheral devices, has security risks that might cause life-threatening damage to a patient's health in case of adversarial interventions. These new risks arise due to security vulnerabilities in the peripheral devices and communication channels. We present a case study where we demonstrate an attack on an ML-enabled blood glucose monitoring system by introducing adversarial data points during inference. We show that an adversary can achieve this by exploiting a known vulnerability in the Bluetooth communication channel connecting the glucose meter with the ML-enabled app. We further show that state-of-the-art risk assessment techniques are not adequate for identifying and assessing these new risks. Our study highlights the need for novel risk analysis methods for analyzing the security of AI-enabled connected health devices.",
@@ -5520,7 +5595,8 @@
                 "biomedical"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Graph contrastive learning (GCL) has emerged as a state-of-the-art strategy for learning representations of diverse graphs including social and biomedical networks. GCL widely uses stochastic graph topology augmentation, such as uniform node dropping, to generate augmented graphs. However, such stochastic augmentations may severely damage the intrinsic properties of a graph and deteriorate the following representation learning process. We argue that incorporating an awareness of cohesive subgraphs during the graph augmentation and learning processes has the potential to enhance GCL performance. To this end, we propose a novel unified framework called CTAug, to seamlessly integrate cohesion awareness into various existing GCL mechanisms. In particular, CTAug comprises two specialized modules: topology augmentation enhancement and graph learning enhancement. The former module generates augmented graphs that carefully preserve cohesion properties, while the latter module bolsters the graph encoder's ability to discern subgraph patterns. Theoretical analysis shows that CTAug can strictly improve existing GCL mechanisms. Empirical experiments verify that CTAug can achieve state-of-the-art performance for graph representation learning, especially for graphs with high degrees. The code is available at https://doi.org/10.5281/zenodo.10594093, or https://github.com/wuyucheng2002/CTAug.",
@@ -5851,7 +5927,8 @@
                 "Tumor"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Head and neck (H&N) cancers are among the most prevalent types of cancer worldwide, and [18F]F-FDG PET/CT is widely used for H&N cancer management. Recently, the diffusion model has demonstrated remarkable performance in various image-generation tasks. In this work, we proposed a 3D diffusion model to accurately perform H&N tumor segmentation from 3D PET and CT volumes. The 3D diffusion model was developed considering the 3D nature of PET and CT images acquired. During the reverse process, the model utilized a 3D UNet structure and took the concatenation of PET, CT, and Gaussian noise volumes as the network input to generate the tumor mask. Experiments based on the HECKTOR challenge dataset were conducted to evaluate the effectiveness of the proposed diffusion model. Several state-of-the-art techniques based on U-Net and Transformer structures were adopted as the reference methods. Benefits of employing both PET and CT as the network input as well as further extending the diffusion model from 2D to 3D were investigated based on various quantitative metrics and the uncertainty maps generated. Results showed that the proposed 3D diffusion model could generate more accurate segmentation results compared with other methods. Compared to the diffusion model in 2D format, the proposed 3D model yielded superior results. Our experiments also highlighted the advantage of utilizing dual-modality PET and CT data over only single-modality data for H&N tumor segmentation.",
@@ -5897,7 +5974,8 @@
                 "physics"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Neutrinos can undergo fast flavor conversions (FFCs) within extremely dense astrophysical environments such as core-collapse supernovae (CCSNe) and neutron star mergers (NSMs). In this study, we explore FFCs in a \\emph{multi-energy} neutrino gas, revealing that when the FFC growth rate significantly exceeds that of the vacuum Hamiltonian, all neutrinos (regardless of energy) share a common survival probability dictated by the energy-integrated neutrino spectrum. We then employ physics-informed neural networks (PINNs) to predict the asymptotic outcomes of FFCs within such a multi-energy neutrino gas. These predictions are based on the first two moments of neutrino angular distributions for each energy bin, typically available in state-of-the-art CCSN and NSM simulations. Our PINNs achieve errors as low as $\\lesssim6\\%$ and $\\lesssim 18\\%$ for predicting the number of neutrinos in the electron channel and the relative absolute error in the neutrino moments, respectively.",
@@ -5921,7 +5999,8 @@
                 "chemistry"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "State of health (SOH) is a crucial indicator for assessing the degradation level of batteries that cannot be measured directly but requires estimation. Accurate SOH estimation enhances detection, control, and feedback for Li-ion batteries, allowing for safe and efficient energy management and guiding the development of new-generation batteries. Despite the significant progress in data-driven SOH estimation, the time and resource-consuming degradation experiments for generating lifelong training data pose a challenge in establishing one large model capable of handling diverse types of Li-ion batteries, e.g., cross-chemistry, cross-manufacturer, and cross-capacity. Hence, this paper utilizes the strong generalization capability of large language model (LLM) to proposes a novel framework for adaptable SOH estimation across diverse batteries. To match the real scenario where unlabeled data sequentially arrives in use with distribution shifts, the proposed model is modified by a test-time training technique to ensure estimation accuracy even at the battery's end of life. The validation results demonstrate that the proposed framework achieves state-of-the-art accuracy on four widely recognized datasets collected from 62 batteries. Furthermore, we analyze the theoretical challenges of cross-battery estimation and provide a quantitative explanation of the effectiveness of our method.",

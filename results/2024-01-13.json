@@ -28,7 +28,8 @@
         "rating": "1.5",
         "keywords": [
             [
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ],
             [
                 "NeurIPS"
@@ -53,7 +54,8 @@
                 "efficient finetuning"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Finetuning large language models (LLMs) has been empirically effective on a variety of downstream tasks. Existing approaches to finetuning an LLM either focus on parameter-efficient finetuning, which only updates a small number of trainable parameters, or attempt to reduce the memory footprint during the training phase of the finetuning. Typically, the memory footprint during finetuning stems from three contributors: model weights, optimizer states, and intermediate activations. However, existing works still require considerable memory and none can simultaneously mitigate memory footprint for all three sources. In this paper, we present Quantized Side Tuing (QST), which enables memory-efficient and fast finetuning of LLMs by operating through a dual-stage process. First, QST quantizes an LLM's model weights into 4-bit to reduce the memory footprint of the LLM's original weights; QST also introduces a side network separated from the LLM, which utilizes the hidden states of the LLM to make task-specific predictions. Using a separate side network avoids performing backpropagation through the LLM, thus reducing the memory requirement of the intermediate activations. Furthermore, QST leverages several low-rank adaptors and gradient-free downsample modules to significantly reduce the trainable parameters, so as to save the memory footprint of the optimizer states. Experiments show that QST can reduce the total memory footprint by up to 2.3 $\\times$ and speed up the finetuning process by up to 3 $\\times$ while achieving competent performance compared with the state-of-the-art. When it comes to full finetuning, QST can reduce the total memory footprint up to 7 $\\times$.",
@@ -283,6 +285,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.CY",
                 "cs.CL"
             ]
         ],
@@ -337,7 +340,8 @@
         "keywords": [
             [
                 "cs.LG",
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "We propose an end-to-end learned image compression codec wherein the analysis transform is jointly trained with an object classification task. This study affirms that the compressed latent representation can predict human perceptual distance judgments with an accuracy comparable to a custom-tailored DNN-based quality metric. We further investigate various neural encoders and demonstrate the effectiveness of employing the analysis transform as a perceptual loss network for image tasks beyond quality judgments. Our experiments show that the off-the-shelf neural encoder proves proficient in perceptual modeling without needing an additional VGG network. We expect this research to serve as a valuable reference developing of a semantic-aware and coding-efficient neural encoder.",
@@ -478,7 +482,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Learning with noisy labels can significantly hinder the generalization performance of deep neural networks (DNNs). Existing approaches address this issue through loss correction or example selection methods. However, these methods often rely on the model's predictions obtained from the softmax function, which can be over-confident and unreliable. In this study, we identify the translation invariance of the softmax function as the underlying cause of this problem and propose the \\textit{Dirichlet-based Prediction Calibration} (DPC) method as a solution. Our method introduces a calibrated softmax function that breaks the translation invariance by incorporating a suitable constant in the exponent term, enabling more reliable model predictions. To ensure stable model training, we leverage a Dirichlet distribution to assign probabilities to predicted labels and introduce a novel evidence deep learning (EDL) loss. The proposed loss function encourages positive and sufficiently large logits for the given label, while penalizing negative and small logits for other labels, leading to more distinct logits and facilitating better example selection based on a large-margin criterion. Through extensive experiments on diverse benchmark datasets, we demonstrate that DPC achieves state-of-the-art performance. The code is available at https://github.com/chenchenzong/DPC.",
@@ -544,7 +549,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "We identify and exactly solve the learning dynamics of a one-hidden-layer linear model at any finite width whose limits exhibit both the kernel phase and the feature learning phase. We analyze the phase diagram of this model in different limits of common hyperparameters including width, layer-wise learning rates, scale of output, and scale of initialization. Our solution identifies three novel prototype mechanisms of feature learning: (1) learning by alignment, (2) learning by disalignment, and (3) learning by rescaling. In sharp contrast, none of these mechanisms is present in the kernel regime of the model. We empirically demonstrate that these discoveries also appear in deep nonlinear networks in real tasks.",
@@ -614,7 +620,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Neural networks (NNs) can achieved high performance in various fields such as computer vision, and natural language processing. However, deploying NNs in resource-constrained safety-critical systems has challenges due to uncertainty in the prediction caused by out-of-distribution data, and hardware non-idealities. To address the challenges of deploying NNs in resource-constrained safety-critical systems, this paper summarizes the (4th year) PhD thesis work that explores scalable and efficient methods for uncertainty estimation and reduction in deep learning, with a focus on Computation-in-Memory (CIM) using emerging resistive non-volatile memories. We tackle the inherent uncertainties arising from out-of-distribution inputs and hardware non-idealities, crucial in maintaining functional safety in automated decision-making systems. Our approach encompasses problem-aware training algorithms, novel NN topologies, and hardware co-design solutions, including dropout-based \\emph{binary} Bayesian Neural Networks leveraging spintronic devices and variational inference techniques. These innovations significantly enhance OOD data detection, inference accuracy, and energy efficiency, thereby contributing to the reliability and robustness of NN implementations.",
@@ -631,7 +638,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.LG"
+                "cs.LG",
+                "cs.CY"
             ]
         ],
         "abstract": "We study the compatibility between the optimal statistical parity solutions and individual fairness. While individual fairness seeks to treat similar individuals similarly, optimal statistical parity aims to provide similar treatment to individuals who share relative similarity within their respective sensitive groups. The two fairness perspectives, while both desirable from a fairness perspective, often come into conflict in applications. Our goal in this work is to analyze the existence of this conflict and its potential solution. In particular, we establish sufficient (sharp) conditions for the compatibility between the optimal (post-processing) statistical parity $L^2$ learning and the ($K$-Lipschitz or $(\u03b5,\u03b4)$) individual fairness requirements. Furthermore, when there exists a conflict between the two, we first relax the former to the Pareto frontier (or equivalently the optimal trade-off) between $L^2$ error and statistical disparity, and then analyze the compatibility between the frontier and the individual fairness requirements. Our analysis identifies regions along the Pareto frontier that satisfy individual fairness requirements. (Lastly, we provide individual fairness guarantees for the composition of a trained model and the optimal post-processing step so that one can determine the compatibility of the post-processed model.) This provides practitioners with a valuable approach to attain Pareto optimality for statistical parity while adhering to the constraints of individual fairness.",
@@ -650,7 +658,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.LG"
+                "cs.LG",
+                "cs.CY"
             ]
         ],
         "abstract": "In an era characterized by the pervasive integration of artificial intelligence into decision-making processes across diverse industries, the demand for trust has never been more pronounced. This thesis embarks on a comprehensive exploration of bias and fairness, with a particular emphasis on their ramifications within the banking sector, where AI-driven decisions bear substantial societal consequences. In this context, the seamless integration of fairness, explainability, and human oversight is of utmost importance, culminating in the establishment of what is commonly referred to as \"Responsible AI\". This emphasizes the critical nature of addressing biases within the development of a corporate culture that aligns seamlessly with both AI regulations and universal human rights standards, particularly in the realm of automated decision-making systems. Nowadays, embedding ethical principles into the development, training, and deployment of AI models is crucial for compliance with forthcoming European regulations and for promoting societal good. This thesis is structured around three fundamental pillars: understanding bias, mitigating bias, and accounting for bias. These contributions are validated through their practical application in real-world scenarios, in collaboration with Intesa Sanpaolo. This collaborative effort not only contributes to our understanding of fairness but also provides practical tools for the responsible implementation of AI-based decision-making systems. In line with open-source principles, we have released Bias On Demand and FairView as accessible Python packages, further promoting progress in the field of AI fairness.",
@@ -732,6 +741,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -814,7 +824,8 @@
                 "Vehicle"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Neural solvers based on attention mechanism have demonstrated remarkable effectiveness in solving vehicle routing problems. However, in the generalization process from small scale to large scale, we find a phenomenon of the dispersion of attention scores in existing neural solvers, which leads to poor performance. To address this issue, this paper proposes a distance-aware attention reshaping method, assisting neural solvers in solving large-scale vehicle routing problems. Specifically, without the need for additional training, we utilize the Euclidean distance information between current nodes to adjust attention scores. This enables a neural solver trained on small-scale instances to make rational choices when solving a large-scale problem. Experimental results show that the proposed method significantly outperforms existing state-of-the-art neural solvers on the large-scale CVRPLib dataset.",
@@ -834,7 +845,8 @@
                 "Graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Dynamic graphs (DG) describe dynamic interactions between entities in many practical scenarios. Most existing DG representation learning models combine graph convolutional network and sequence neural network, which model spatial-temporal dependencies through two different types of neural networks. However, this hybrid design cannot well capture the spatial-temporal continuity of a DG. In this paper, we propose a tensor graph convolutional network to learn DG representations in one convolution framework based on the tensor product with the following two-fold ideas: a) representing the information of DG by tensor form; b) adopting tensor product to design a tensor graph convolutional network modeling spatial-temporal feature simultaneously. Experiments on real-world DG datasets demonstrate that our model obtains state-of-the-art performance.",
@@ -1018,7 +1030,8 @@
                 "clinical"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Since 2019, the global dissemination of the Coronavirus and its novel strains has resulted in a surge of new infections. The use of X-ray and computed tomography (CT) imaging techniques is critical in diagnosing and managing COVID-19. Incorporating artificial intelligence (AI) into the field of medical imaging is a powerful combination that can provide valuable support to healthcare professionals.This paper focuses on the methodological approach of using machine learning (ML) to enhance medical imaging for COVID-19 diagnosis.For example, deep learning can accurately distinguish lesions from other parts of the lung without human intervention in a matter of minutes.Moreover, ML can enhance performance efficiency by assisting radiologists in making more precise clinical decisions, such as detecting and distinguishing Covid-19 from different respiratory infections and segmenting infections in CT and X-ray images, even when the lesions have varying sizes and shapes.This article critically assesses machine learning methodologies utilized for the segmentation, classification, and detection of Covid-19 within CT and X-ray images, which are commonly employed tools in clinical and hospital settings to represent the lung in various aspects and extensive detail.There is a widespread expectation that this technology will continue to hold a central position within the healthcare sector, driving further progress in the management of the pandemic.",
@@ -1081,7 +1094,8 @@
             ],
             [
                 "cs.LG",
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Effective crack detection is pivotal for the structural health monitoring and inspection of buildings. This task presents a formidable challenge to computer vision techniques due to the inherently subtle nature of cracks, which often exhibit low-level features that can be easily confounded with background textures, foreign objects, or irregularities in construction. Furthermore, the presence of issues like non-uniform lighting and construction irregularities poses significant hurdles for autonomous crack detection during building inspection and monitoring. Convolutional neural networks (CNNs) have emerged as a promising framework for crack detection, offering high levels of accuracy and precision. Additionally, the ability to adapt pre-trained networks through transfer learning provides a valuable tool for users, eliminating the need for an in-depth understanding of algorithm intricacies. Nevertheless, it is imperative to acknowledge the limitations and considerations when deploying CNNs, particularly in contexts where the outcomes carry immense significance, such as crack detection in buildings. In this paper, our approach to surface crack detection involves the utilization of various deep-learning models. Specifically, we employ fine-tuning techniques on pre-trained deep learning architectures: VGG19, ResNet50, Inception V3, and EfficientNetV2. These models are chosen for their established performance and versatility in image analysis tasks. We compare deep learning models using precision, recall, and F1 scores.",
@@ -1274,7 +1288,8 @@
                 "Quantum"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Quantum computing offers efficient encapsulation of high-dimensional states. In this work, we propose a novel quantum reinforcement learning approach that combines the Advantage Actor-Critic algorithm with variational quantum circuits by substituting parts of the classical components. This approach addresses reinforcement learning's scalability concerns while maintaining high performance. We empirically test multiple quantum Advantage Actor-Critic configurations with the well known Cart Pole environment to evaluate our approach in control tasks with continuous state spaces. Our results indicate that the hybrid strategy of using either a quantum actor or quantum critic with classical post-processing yields a substantial performance increase compared to pure classical and pure quantum variants with similar parameter counts. They further reveal the limits of current quantum approaches due to the hardware constraints of noisy intermediate-scale quantum computers, suggesting further research to scale hybrid approaches for larger and more complex control tasks.",
@@ -1314,7 +1329,8 @@
                 "forecasting"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "We address the challenge of learning safe and robust decision policies in presence of uncertainty in context of the real scientific problem of adaptive resource oversubscription to enhance resource efficiency while ensuring safety against resource congestion risk. Traditional supervised prediction or forecasting models are ineffective in learning adaptive policies whereas standard online optimization or reinforcement learning is difficult to deploy on real systems. Offline methods such as imitation learning (IL) are ideal since we can directly leverage historical resource usage telemetry. But, the underlying aleatoric uncertainty in such telemetry is a critical bottleneck. We solve this with our proposed novel chance-constrained imitation learning framework, which ensures implicit safety against uncertainty in a principled manner via a combination of stochastic (chance) constraints on resource congestion risk and ensemble value functions. This leads to substantial ($\\approx 3-4\\times$) improvement in resource efficiency and safety in many oversubscription scenarios, including resource management in cloud services.",
@@ -1439,7 +1455,8 @@
                 "clinical"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Accurate automated extraction of brain vessel centerlines from CTA images plays an important role in diagnosis and therapy of cerebrovascular diseases, such as stroke. However, this task remains challenging due to the complex cerebrovascular structure, the varying imaging quality, and vessel pathology effects. In this paper, we consider automatic lumen segmentation generation without additional annotation effort by physicians and more effective use of the generated lumen segmentation for improved centerline extraction performance. We propose an automated framework for brain vessel centerline extraction from CTA images. The framework consists of four major components: (1) pre-processing approaches that register CTA images with a CT atlas and divide these images into input patches, (2) lumen segmentation generation from annotated vessel centerlines using graph cuts and robust kernel regression, (3) a dual-branch topology-aware UNet (DTUNet) that can effectively utilize the annotated vessel centerlines and the generated lumen segmentation through a topology-aware loss (TAL) and its dual-branch design, and (4) post-processing approaches that skeletonize the predicted lumen segmentation. Extensive experiments on a multi-center dataset demonstrate that the proposed framework outperforms state-of-the-art methods in terms of average symmetric centerline distance (ASCD) and overlap (OV). Subgroup analyses further suggest that the proposed framework holds promise in clinical applications for stroke treatment. Code is publicly available at https://github.com/Liusj-gh/DTUNet.",
@@ -1524,7 +1541,8 @@
             ],
             [
                 "cs.AI",
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Recent efforts have witnessed remarkable progress in Satellite Video Super-Resolution (SVSR). However, most SVSR methods usually assume the degradation is fixed and known, e.g., bicubic downsampling, which makes them vulnerable in real-world scenes with multiple and unknown degradations. To alleviate this issue, blind SR has thus become a research hotspot. Nevertheless, existing approaches are mainly engaged in blur kernel estimation while losing sight of another critical aspect for VSR tasks: temporal compensation, especially compensating for blurry and smooth pixels with vital sharpness from severely degraded satellite videos. Therefore, this paper proposes a practical Blind SVSR algorithm (BSVSR) to explore more sharp cues by considering the pixel-wise blur levels in a coarse-to-fine manner. Specifically, we employed multi-scale deformable convolution to coarsely aggregate the temporal redundancy into adjacent frames by window-slid progressive fusion. Then the adjacent features are finely merged into mid-feature using deformable attention, which measures the blur levels of pixels and assigns more weights to the informative pixels, thus inspiring the representation of sharpness. Moreover, we devise a pyramid spatial transformation module to adjust the solution space of sharp mid-feature, resulting in flexible feature adaptation in multi-level domains. Quantitative and qualitative evaluations on both simulated and real-world satellite videos demonstrate that our BSVSR performs favorably against state-of-the-art non-blind and blind SR models. Code will be available at https://github.com/XY-boy/Blind-Satellite-VSR",
@@ -1718,6 +1736,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -1766,7 +1785,8 @@
                 "clinical"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Quantitative analysis of pseudo-diffusion in diffusion-weighted magnetic resonance imaging (DWI) data shows potential for assessing fetal lung maturation and generating valuable imaging biomarkers. Yet, the clinical utility of DWI data is hindered by unavoidable fetal motion during acquisition. We present IVIM-morph, a self-supervised deep neural network model for motion-corrected quantitative analysis of DWI data using the Intra-voxel Incoherent Motion (IVIM) model. IVIM-morph combines two sub-networks, a registration sub-network, and an IVIM model fitting sub-network, enabling simultaneous estimation of IVIM model parameters and motion. To promote physically plausible image registration, we introduce a biophysically informed loss function that effectively balances registration and model-fitting quality. We validated the efficacy of IVIM-morph by establishing a correlation between the predicted IVIM model parameters of the lung and gestational age (GA) using fetal DWI data of 39 subjects. IVIM-morph exhibited a notably improved correlation with gestational age (GA) when performing in-vivo quantitative analysis of fetal lung DWI data during the canalicular phase. IVIM-morph shows potential in developing valuable biomarkers for non-invasive assessment of fetal lung maturity with DWI data. Moreover, its adaptability opens the door to potential applications in other clinical contexts where motion compensation is essential for quantitative DWI analysis. The IVIM-morph code is readily available at: https://github.com/TechnionComputationalMRILab/qDWI-Morph.",

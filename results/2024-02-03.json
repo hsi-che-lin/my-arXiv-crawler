@@ -79,7 +79,9 @@
                 "Audio-Visual"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "How to effectively interact audio with vision has garnered considerable interest within the multi-modality research field. Recently, a novel audio-visual segmentation (AVS) task has been proposed, aiming to segment the sounding objects in video frames under the guidance of audio cues. However, most existing AVS methods are hindered by a modality imbalance where the visual features tend to dominate those of the audio modality, due to a unidirectional and insufficient integration of audio cues. This imbalance skews the feature representation towards the visual aspect, impeding the learning of joint audio-visual representations and potentially causing segmentation inaccuracies. To address this issue, we propose AVSAC. Our approach features a Bidirectional Audio-Visual Decoder (BAVD) with integrated bidirectional bridges, enhancing audio cues and fostering continuous interplay between audio and visual modalities. This bidirectional interaction narrows the modality imbalance, facilitating more effective learning of integrated audio-visual representations. Additionally, we present a strategy for audio-visual frame-wise synchrony as fine-grained guidance of BAVD. This strategy enhances the share of auditory components in visual features, contributing to a more balanced audio-visual representation learning. Extensive experiments show that our method attains new benchmarks in AVS performance.",
@@ -100,7 +102,8 @@
                 "visual-language"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "In recent years, data selection has emerged as a core issue for large-scale visual-language model pretraining, especially on noisy web-curated datasets. One widely adopted strategy assigns quality scores such as CLIP similarity for each sample and retains the data pairs with the highest scores. However, these approaches are agnostic of data distribution and always fail to select the most informative samples. To solve this problem, we propose a simple yet theoretically principled metric named Variance Alignment Score (VAS), which has the form $\\langle \u03a3_{\\text{test}}, \u03a3_i\\rangle$. Here, $\u03a3_{\\text{test}}$ represents the target (cross-)covariance matrix we aim to align, potentially based on prior knowledge, while $\u03a3_i$ denotes the tensor product of single or multi-modal representations for the $i$-th sample. We further design a new data selection method that maximizes the total VAS. We provide theoretical analysis in a simplified setting to demonstrate the theoretical advantage of VAS over random or other existing data selection. Experimentally, applying VAS and CLIP scores together can outperform baselines by a margin of $1.3\\%$ average on 38 evaluation sets for noisy dataset DataComp and $2.5\\%$ on VTAB for high-quality dataset CC12M. Additionally, our ablation study also shows visual features are better than text for calculating VAS, and the related classical experimental design methods may fail under this context.",
@@ -120,7 +123,8 @@
                 "training efficiency"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "This paper addresses the challenge of optimizing meta-parameters (i.e., hyperparameters) in machine learning algorithms, a critical factor influencing training efficiency and model performance. Moving away from the computationally expensive traditional meta-parameter search methods, we introduce MetaOptimize framework that dynamically adjusts meta-parameters, particularly step sizes (also known as learning rates), during training. More specifically, MetaOptimize can wrap around any first-order optimization algorithm, tuning step sizes on the fly to minimize a specific form of regret that accounts for long-term effect of step sizes on training, through a discounted sum of future losses. We also introduce low complexity variants of MetaOptimize that, in conjunction with its adaptability to multiple optimization algorithms, demonstrate performance competitive to those of best hand-crafted learning rate schedules across various machine learning applications.",
@@ -172,6 +176,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.CY",
                 "cs.CL"
             ]
         ],
@@ -307,6 +312,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -380,6 +386,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -433,7 +440,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Artificial Intelligence Generated Content (AIGC) is leading a new technical revolution for the acquisition of digital content and impelling the progress of visual compression towards competitive performance gains and diverse functionalities over traditional codecs. This paper provides a thorough review on the recent advances of generative visual compression, illustrating great potentials and promising applications in ultra-low bitrate communication, user-specified reconstruction/filtering, and intelligent machine analysis. In particular, we review the visual data compression methodologies with deep generative models, and summarize how compact representation and high-fidelity reconstruction could be actualized via generative techniques. In addition, we generalize related generative compression technologies for machine vision and intelligent analytics. Finally, we discuss the fundamental challenges on generative visual compression techniques and envision their future research directions.",
@@ -554,7 +562,8 @@
         "keywords": [
             [
                 "cs.LG",
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Anomalous crack region detection is a typical binary semantic segmentation task, which aims to detect pixels representing cracks on pavement surface images automatically by algorithms. Although existing deep learning-based methods have achieved outcoming results on specific public pavement datasets, the performance would deteriorate dramatically on imbalanced datasets. The input datasets used in such tasks suffer from severely between-class imbalanced problems, hence, it is a core challenge to obtain a robust performance on diverse pavement datasets with generic deep learning models. To address this problem, in this work, we propose a deep learning framework based on conditional Generative Adversarial Networks (cGANs) for the anomalous crack region detection tasks at the pixel level. In particular, the proposed framework containing a cGANs and a novel auxiliary network is developed to enhance and stabilize the generator's performance under two alternative training stages, when estimating a multiscale probability feature map from heterogeneous and imbalanced inputs iteratively. Moreover, several attention mechanisms and entropy strategies are incorporated into the cGANs architecture and the auxiliary network separately to mitigate further the performance deterioration of model training on severely imbalanced datasets. We implement extensive experiments on six accessible pavement datasets. The experimental results from both visual and quantitative evaluation show that the proposed framework can achieve state-of-the-art results on these datasets efficiently and robustly without acceleration of computation complexity.",
@@ -573,6 +582,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -612,6 +622,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -630,7 +641,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.CL"
+                "cs.CL",
+                "eess.AS"
             ]
         ],
         "abstract": "While massively multilingual speech models like wav2vec 2.0 XLSR-128 can be directly fine-tuned for automatic speech recognition (ASR), downstream performance can still be relatively poor on languages that are under-represented in the pre-training data. Continued pre-training on 70-200 hours of untranscribed speech in these languages can help -- but what about languages without that much recorded data? For such cases, we show that supplementing the target language with data from a similar, higher-resource 'donor' language can help. For example, continued pre-training on only 10 hours of low-resource Punjabi supplemented with 60 hours of donor Hindi is almost as good as continued pretraining on 70 hours of Punjabi. By contrast, sourcing data from less similar donors like Bengali does not improve ASR performance. To inform donor language selection, we propose a novel similarity metric based on the sequence distribution of induced acoustic units: the Acoustic Token Distribution Similarity (ATDS). Across a set of typologically different target languages (Punjabi, Galician, Iban, Setswana), we show that the ATDS between the target language and its candidate donors precisely predicts target language ASR performance.",
@@ -648,6 +660,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -738,7 +751,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ],
             [
                 "AAAI"
@@ -782,6 +796,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -872,7 +887,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "This paper explores the realm of infinite horizon average reward Constrained Markov Decision Processes (CMDP). To the best of our knowledge, this work is the first to delve into the regret and constraint violation analysis of average reward CMDPs with a general policy parametrization. To address this challenge, we propose a primal dual based policy gradient algorithm that adeptly manages the constraints while ensuring a low regret guarantee toward achieving a global optimal policy. In particular, we demonstrate that our proposed algorithm achieves $\\tilde{\\mathcal{O}}({T}^{4/5})$ objective regret and $\\tilde{\\mathcal{O}}({T}^{4/5})$ constraint violation bounds.",
@@ -988,7 +1004,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Exploration in decentralized cooperative multi-agent reinforcement learning faces two challenges. One is that the novelty of global states is unavailable, while the novelty of local observations is biased. The other is how agents can explore in a coordinated way. To address these challenges, we propose MACE, a simple yet effective multi-agent coordinated exploration method. By communicating only local novelty, agents can take into account other agents' local novelty to approximate the global novelty. Further, we newly introduce weighted mutual information to measure the influence of one agent's action on other agents' accumulated novelty. We convert it as an intrinsic reward in hindsight to encourage agents to exert more influence on other agents' exploration and boost coordinated exploration. Empirically, we show that MACE achieves superior performance in three multi-agent environments with sparse rewards.",
@@ -1061,7 +1078,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "In achieving effective emergency response, the timely acquisition of environmental information, seamless command data transmission, and prompt decision-making are crucial. This necessitates the establishment of a resilient emergency communication dedicated network, capable of providing communication and sensing services even in the absence of basic infrastructure. In this paper, we propose an Emergency Network with Sensing, Communication, Computation, Caching, and Intelligence (E-SC3I). The framework incorporates mechanisms for emergency computing, caching, integrated communication and sensing, and intelligence empowerment. E-SC3I ensures rapid access to a large user base, reliable data transmission over unstable links, and dynamic network deployment in a changing environment. However, these advantages come at the cost of significant computation overhead. Therefore, we specifically concentrate on emergency computing and propose an adaptive collaborative inference method (ACIM) based on hierarchical reinforcement learning. Experimental results demonstrate our method's ability to achieve rapid inference of AI models with constrained computational and communication resources.",
@@ -1097,7 +1115,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Generative Flow Networks (GFlowNets) are a family of probabilistic generative models that learn to sample compositional objects proportional to their rewards. One big challenge of GFlowNets is training them effectively when dealing with long time horizons and sparse rewards. To address this, we propose Evolution guided generative flow networks (EGFN), a simple but powerful augmentation to the GFlowNets training using Evolutionary algorithms (EA). Our method can work on top of any GFlowNets training objective, by training a set of agent parameters using EA, storing the resulting trajectories in the prioritized replay buffer, and training the GFlowNets agent using the stored trajectories. We present a thorough investigation over a wide range of toy and real-world benchmark tasks showing the effectiveness of our method in handling long trajectories and sparse rewards.",
@@ -1155,7 +1174,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.CY"
             ]
         ],
         "abstract": "In the last 5 years, the availability of large audio datasets in African countries has opened unlimited opportunities to build machine intelligence (MI) technologies that are closer to the people and speak, learn, understand, and do businesses in local languages, including for those who cannot read and write. Unfortunately, these audio datasets are not fully exploited by current MI tools, leaving several Africans out of MI business opportunities. Additionally, many state-of-the-art MI models are not culture-aware, and the ethics of their adoption indexes are questionable. The lack thereof is a major drawback in many applications in Africa. This paper summarizes recent developments in machine intelligence in Africa from a multi-layer multiscale and culture-aware ethics perspective, showcasing MI use cases in 54 African countries through 400 articles on MI research, industry, government actions, as well as uses in art, music, the informal economy, and small businesses in Africa. The survey also opens discussions on the reliability of MI rankings and indexes in the African continent as well as algorithmic definitions of unclear terms used in MI.",
@@ -1434,7 +1454,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Std $Q$-target is a conservative, actor-critic, ensemble, $Q$-learning-based algorithm, which is based on a single key $Q$-formula: $Q$-networks standard deviation, which is an \"uncertainty penalty\", and, serves as a minimalistic solution to the problem of overestimation bias. We implement SQT on top of TD3/TD7 code and test it against the state-of-the-art (SOTA) actor-critic algorithms, DDPG, TD3 and TD7 on seven popular MuJoCo and Bullet tasks. Our results demonstrate SQT's $Q$-target formula superiority over TD3's $Q$-target formula as a conservative solution to overestimation bias in RL, while SQT shows a clear performance advantage on a wide margin over DDPG, TD3, and TD7 on all tasks.",
@@ -1451,7 +1472,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "MinMaxMin $Q$-learning is a novel optimistic Actor-Critic algorithm that addresses the problem of overestimation bias ($Q$-estimations are overestimating the real $Q$-values) inherent in conservative RL algorithms. Its core formula relies on the disagreement among $Q$-networks in the form of the min-batch MaxMin $Q$-networks distance which is added to the $Q$-target and used as the priority experience replay sampling-rule. We implement MinMaxMin on top of TD3 and TD7, subjecting it to rigorous testing against state-of-the-art continuous-space algorithms-DDPG, TD3, and TD7-across popular MuJoCo and Bullet environments. The results show a consistent performance improvement of MinMaxMin over DDPG, TD3, and TD7 across all tested tasks.",
@@ -1610,6 +1632,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -1632,6 +1655,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -1695,7 +1719,8 @@
             ],
             [
                 "cs.LG",
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "This paper focuses on jailbreaking attacks against multi-modal large language models (MLLMs), seeking to elicit MLLMs to generate objectionable responses to harmful user queries. A maximum likelihood-based algorithm is proposed to find an \\emph{image Jailbreaking Prompt} (imgJP), enabling jailbreaks against MLLMs across multiple unseen prompts and images (i.e., data-universal property). Our approach exhibits strong model-transferability, as the generated imgJP can be transferred to jailbreak various models, including MiniGPT-v2, LLaVA, InstructBLIP, and mPLUG-Owl2, in a black-box manner. Moreover, we reveal a connection between MLLM-jailbreaks and LLM-jailbreaks. As a result, we introduce a construction-based method to harness our approach for LLM-jailbreaks, demonstrating greater efficiency than current state-of-the-art methods. The code is available here. \\textbf{Warning: some content generated by language models may be offensive to some readers.}",
@@ -1738,6 +1763,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -1865,7 +1891,8 @@
                 "graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.SI"
             ]
         ],
         "abstract": "$\\mathbb{X}$ (formerly Twitter) is a prominent online social media platform that plays an important role in sharing information making the content generated on this platform a valuable source of information. Ensuring trust on $\\mathbb{X}$ is essential to determine the user credibility and prevents issues across various domains. While assigning credibility to $\\mathbb{X}$ users and classifying them as trusted or untrusted is commonly carried out using traditional machine learning models, there is limited exploration about the use of One-Class Classification (OCC) models for this purpose. In this study, we use various OCC models for $\\mathbb{X}$ user classification. Additionally, we propose using a subspace-learning-based approach that simultaneously optimizes both the subspace and data description for OCC. We also introduce a novel regularization term for Subspace Support Vector Data Description (SSVDD), expressing data concentration in a lower-dimensional subspace that captures diverse graph structures. Experimental results show superior performance of the introduced regularization term for SSVDD compared to baseline models and state-of-the-art techniques for $\\mathbb{X}$ user classification.",
@@ -1904,7 +1931,9 @@
                 "Graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG",
+                "cs.SI"
             ]
         ],
         "abstract": "This work proposes DyExpert, a dynamic graph model for cross-domain link prediction. It can explicitly model historical evolving processes to learn the evolution pattern of a specific downstream graph and subsequently make pattern-specific link predictions. DyExpert adopts a decode-only transformer and is capable of efficiently parallel training and inference by \\textit{conditioned link generation} that integrates both evolution modeling and link prediction. DyExpert is trained by extensive dynamic graphs across diverse domains, comprising 6M dynamic edges. Extensive experiments on eight untrained graphs demonstrate that DyExpert achieves state-of-the-art performance in cross-domain link prediction. Compared to the advanced baseline under the same setting, DyExpert achieves an average of 11.40% improvement Average Precision across eight graphs. More impressive, it surpasses the fully supervised performance of 8 advanced baselines on 6 untrained graphs.",
@@ -2029,7 +2058,8 @@
                 "Federated Learning"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Federated learning (FL), as a type of distributed machine learning, is capable of significantly preserving client's private data from being shared among different parties. Nevertheless, private information can still be divulged by analyzing uploaded parameter weights from clients. In this report, we showcase our empirical benchmark of the effect of the number of clients and the addition of differential privacy (DP) mechanisms on the performance of the model on different types of data. Our results show that non-i.i.d and small datasets have the highest decrease in performance in a distributed and differentially private setting.",
@@ -2050,7 +2080,8 @@
                 "Federated Learning"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Federated Learning (FL) is a privacy-preserving distributed learning approach that is rapidly developing in an era where privacy protection is increasingly valued. It is this rapid development trend, along with the continuous emergence of new demands for FL in the real world, that prompts us to focus on a very important problem: Federated Learning with New Knowledge. The primary challenge here is to effectively incorporate various new knowledge into existing FL systems and evolve these systems to reduce costs, extend their lifespan, and facilitate sustainable development. In this paper, we systematically define the main sources of new knowledge in FL, including new features, tasks, models, and algorithms. For each source, we thoroughly analyze and discuss how to incorporate new knowledge into existing FL systems and examine the impact of the form and timing of new knowledge arrival on the incorporation process. Furthermore, we comprehensively discuss the potential future directions for FL with new knowledge, considering a variety of factors such as scenario setups, efficiency, and security. There is also a continuously updating repository for this topic: https://github.com/conditionWang/FLNK.",
@@ -2071,7 +2102,8 @@
                 "Graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Machine learning on graphs, especially using graph neural networks (GNNs), has seen a surge in interest due to the wide availability of graph data across a broad spectrum of disciplines, from life to social and engineering sciences. Despite their practical success, our theoretical understanding of the properties of GNNs remains highly incomplete. Recent theoretical advancements primarily focus on elucidating the coarse-grained expressive power of GNNs, predominantly employing combinatorial techniques. However, these studies do not perfectly align with practice, particularly in understanding the generalization behavior of GNNs when trained with stochastic first-order optimization techniques. In this position paper, we argue that the graph machine learning community needs to shift its attention to developing a more balanced theory of graph machine learning, focusing on a more thorough understanding of the interplay of expressive power, generalization, and optimization.",
@@ -2240,7 +2272,8 @@
             ],
             [
                 "cs.LG",
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Crop classification using remote sensing data has emerged as a prominent research area in recent decades. Studies have demonstrated that fusing SAR and optical images can significantly enhance the accuracy of classification. However, a major challenge in this field is the limited availability of training data, which adversely affects the performance of classifiers. In agricultural regions, the dominant crops typically consist of one or two specific types, while other crops are scarce. Consequently, when collecting training samples to create a map of agricultural products, there is an abundance of samples from the dominant crops, forming the majority classes. Conversely, samples from other crops are scarce, representing the minority classes. Addressing this issue requires overcoming several challenges and weaknesses associated with traditional data generation methods. These methods have been employed to tackle the imbalanced nature of the training data. Nevertheless, they still face limitations in effectively handling the minority classes. Overall, the issue of inadequate training data, particularly for minority classes, remains a hurdle that traditional methods struggle to overcome. In this research, We explore the effectiveness of conditional tabular generative adversarial network (CTGAN) as a synthetic data generation method based on a deep learning network, in addressing the challenge of limited training data for minority classes in crop classification using the fusion of SAR-optical data. Our findings demonstrate that the proposed method generates synthetic data with higher quality that can significantly increase the number of samples for minority classes leading to better performance of crop classifiers.",
@@ -2330,7 +2363,8 @@
                 "disease"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "The aim of this paper was the detection of pathologies through respiratory sounds. The ICBHI (International Conference on Biomedical and Health Informatics) Benchmark was used. This dataset is composed of 920 sounds of which 810 are of chronic diseases, 75 of non-chronic diseases and only 35 of healthy individuals. As more than 88% of the samples of the dataset are from the same class (Chronic), the use of a Variational Convolutional Autoencoder was proposed to generate new labeled data and other well known oversampling techniques after determining that the dataset classes are unbalanced. Once the preprocessing step was carried out, a Convolutional Neural Network (CNN) was used to classify the respiratory sounds into healthy, chronic, and non-chronic disease. In addition, we carried out a more challenging classification trying to distinguish between the different types of pathologies or healthy: URTI, COPD, Bronchiectasis, Pneumonia, and Bronchiolitis. We achieved results up to 0.993 F-Score in the three-label classification and 0.990 F-Score in the more challenging six-class classification.",
@@ -2351,7 +2385,8 @@
             ],
             [
                 "cs.LG",
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "In this work, a sentiment analysis method that is capable of accepting audio of any length, without being fixed a priori, is proposed. Mel spectrogram and Mel Frequency Cepstral Coefficients are used as audio description methods and a Fully Convolutional Neural Network architecture is proposed as a classifier. The results have been validated using three well known datasets: EMODB, RAVDESS, and TESS. The results obtained were promising, outperforming the state-of-the-art methods. Also, thanks to the fact that the proposed method admits audios of any size, it allows a sentiment analysis to be made in near real time, which is very interesting for a wide range of fields such as call centers, medical consultations, or financial brokers.",
@@ -2375,7 +2410,8 @@
             ],
             [
                 "cs.LG",
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Background and objective: Diabetes is a chronic pathology which is affecting more and more people over the years. It gives rise to a large number of deaths each year. Furthermore, many people living with the disease do not realize the seriousness of their health status early enough. Late diagnosis brings about numerous health problems and a large number of deaths each year so the development of methods for the early diagnosis of this pathology is essential. Methods: In this paper, a pipeline based on deep learning techniques is proposed to predict diabetic people. It includes data augmentation using a variational autoencoder (VAE), feature augmentation using an sparse autoencoder (SAE) and a convolutional neural network for classification. Pima Indians Diabetes Database, which takes into account information on the patients such as the number of pregnancies, glucose or insulin level, blood pressure or age, has been evaluated. Results: A 92.31% of accuracy was obtained when CNN classifier is trained jointly the SAE for featuring augmentation over a well balanced dataset. This means an increment of 3.17% of accuracy with respect the state-of-the-art. Conclusions: Using a full deep learning pipeline for data preprocessing and classification has demonstrate to be very promising in the diabetes detection field outperforming the state-of-the-art proposals.",
@@ -2561,7 +2597,8 @@
             ],
             [
                 "cs.LG",
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Initial weighting is significant in deep neural networks because the random selection of weights produces different outputs and increases the probability of overfitting and underfitting. On the other hand, vector-based approaches to extract vector features need rich vectors for more accurate classification. The InceptionCapsule approach is presented to alleviate these two problems. This approach uses transfer learning and the Inception-ResNet model to avoid random selection of weights, which takes initial weights from ImageNet. It also uses the output of Inception middle layers to generate rich vectors. Extracted vectors are given to a capsule network for learning, which is equipped with an attention technique. Kvasir data and BUSI with the GT dataset were used to evaluate this approach. This model was able to achieve 97.62 accuracies in 5-class classification and also achieved 94.30 accuracies in 8-class classification on Kvasir. In the BUSI with GT dataset, the proposed approach achieved accuracy=98.88, Precision=95.34, and F1-score=93.74, which are acceptable results compared to other approaches in the literature.",
@@ -2701,7 +2738,8 @@
                 "IoT"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Applications in the Internet of Things (IoT) utilize machine learning to analyze sensor-generated data. However, a major challenge lies in the lack of targeted intelligence in current sensing systems, leading to vast data generation and increased computational and communication costs. To address this challenge, we propose a novel sensing module to equip sensing frameworks with intelligent data transmission capabilities by integrating a highly efficient machine learning model placed near the sensor. This model provides prompt feedback for the sensing system to transmit only valuable data while discarding irrelevant information by regulating the frequency of data transmission. The near-sensor model is quantized and optimized for real-time sensor control. To enhance the framework's performance, the training process is customized and a \"lazy\" sensor deactivation strategy utilizing temporal information is introduced. The suggested method is orthogonal to other IoT frameworks and can be considered as a plugin for selective data transmission. The framework is implemented, encompassing both software and hardware components. The experiments demonstrate that the framework utilizing the suggested module achieves over 85% system efficiency in terms of energy consumption and storage, with negligible impact on performance. This methodology has the potential to significantly reduce data output from sensors, benefiting a wide range of IoT applications.",
@@ -2725,7 +2763,8 @@
                 "graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Deep graph models (e.g., graph neural networks and graph transformers) have become important techniques for leveraging knowledge across various types of graphs. Yet, the scaling properties of deep graph models have not been systematically investigated, casting doubt on the feasibility of achieving large graph models through enlarging the model and dataset sizes. In this work, we delve into neural scaling laws on graphs from both model and data perspectives. We first verify the validity of such laws on graphs, establishing formulations to describe the scaling behaviors. For model scaling, we investigate the phenomenon of scaling law collapse and identify overfitting as the potential reason. Moreover, we reveal that the model depth of deep graph models can impact the model scaling behaviors, which differ from observations in other domains such as CV and NLP. For data scaling, we suggest that the number of graphs can not effectively metric the graph data volume in scaling law since the sizes of different graphs are highly irregular. Instead, we reform the data scaling law with the number of edges as the metric to address the irregular graph sizes. We further demonstrate the reformed law offers a unified view of the data scaling behaviors for various fundamental graph tasks including node classification, link prediction, and graph classification. This work provides valuable insights into neural scaling laws on graphs, which can serve as an essential step toward large graph models.",
@@ -2828,7 +2867,8 @@
                 "grammar"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "The automatic generation of visualizations is an old task that, through the years, has shown more and more interest from the research and practitioner communities. Recently, large language models (LLM) have become an interesting option for supporting generative tasks related to visualization, demonstrating initial promising results. At the same time, several pitfalls, like the multiple ways of instructing an LLM to generate the desired result, the different perspectives leading the generation (code-based, image-based, grammar-based), and the presence of hallucinations even for the visualization generation task, make their usage less affordable than expected. Following similar initiatives for benchmarking LLMs, this paper copes with the problem of modeling the evaluation of a generated visualization through an LLM. We propose a theoretical evaluation stack, EvaLLM, that decomposes the evaluation effort in its atomic components, characterizes their nature, and provides an overview of how to implement and interpret them. We also designed and implemented an evaluation platform that provides a benchmarking resource for the visualization generation task. The platform supports automatic and manual scoring conducted by multiple assessors to support a fine-grained and semantic evaluation based on the EvaLLM stack. Two case studies on GPT3.5-turbo with Code Interpreter and Llama2-70-b models show the benefits of EvaLLM and illustrate interesting results on the current state-of-the-art LLM-generated visualizations.",
@@ -2869,7 +2909,8 @@
                 "health"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.SI"
             ]
         ],
         "abstract": "The use of social network theory and methods of analysis have been applied to different domains in recent years, including public health. The complete procedure for carrying out a social network analysis (SNA) is a time-consuming task that entails a series of steps in which the expert in social network analysis could make mistakes. This research presents a multi-domain knowledge model capable of automatically gathering data and carrying out different social network analyses in different domains, without errors and obtaining the same conclusions that an expert in SNA would obtain. The model is represented in an ontology called OntoSNAQA, which is made up of classes, properties and rules representing the domains of People, Questionnaires and Social Network Analysis. Besides the ontology itself, different rules are represented by SWRL and SPARQL queries. A Knowledge Based System was created using OntoSNAQA and applied to a real case study in order to show the advantages of the approach. Finally, the results of an SNA analysis obtained through the model were compared to those obtained from some of the most widely used SNA applications: UCINET, Pajek, Cytoscape and Gephi, to test and confirm the validity of the model.",
@@ -2948,7 +2989,8 @@
                 "industrial"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Uplift modeling, vital in online marketing, seeks to accurately measure the impact of various strategies, such as coupons or discounts, on different users by predicting the Individual Treatment Effect (ITE). In an e-commerce setting, user behavior follows a defined sequential chain, including impression, click, and conversion. Marketing strategies exert varied uplift effects at each stage within this chain, impacting metrics like click-through and conversion rate. Despite its utility, existing research has neglected to consider the inter-task across all stages impacts within a specific treatment and has insufficiently utilized the treatment information, potentially introducing substantial bias into subsequent marketing decisions. We identify these two issues as the chain-bias problem and the treatment-unadaptive problem. This paper introduces the Entire Chain UPlift method with context-enhanced learning (ECUP), devised to tackle these issues. ECUP consists of two primary components: 1) the Entire Chain-Enhanced Network, which utilizes user behavior patterns to estimate ITE throughout the entire chain space, models the various impacts of treatments on each task, and integrates task prior information to enhance context awareness across all stages, capturing the impact of treatment on different tasks, and 2) the Treatment-Enhanced Network, which facilitates fine-grained treatment modeling through bit-level feature interactions, thereby enabling adaptive feature adjustment. Extensive experiments on public and industrial datasets validate ECUPs effectiveness. Moreover, ECUP has been deployed on the Meituan food delivery platform, serving millions of daily active users, with the related dataset released for future research.",
@@ -2970,7 +3012,8 @@
                 "healthcare"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "In high-stakes systems such as healthcare, it is critical to understand the causal reasons behind unusual events, such as sudden changes in patient's health. Unveiling the causal reasons helps with quick diagnoses and precise treatment planning. In this paper, we propose an automated method for uncovering \"if-then\" logic rules to explain observational events. We introduce temporal point processes to model the events of interest, and discover the set of latent rules to explain the occurrence of events. To achieve this, we employ an Expectation-Maximization (EM) algorithm. In the E-step, we calculate the likelihood of each event being explained by each discovered rule. In the M-step, we update both the rule set and model parameters to enhance the likelihood function's lower bound. Notably, we optimize the rule set in a differential manner. Our approach demonstrates accurate performance in both discovering rules and identifying root causes. We showcase its promising results using synthetic and real healthcare datasets.",
@@ -3526,7 +3569,8 @@
                 "forecast"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Event prediction aims to forecast the time and type of a future event based on a historical event sequence. Despite its significance, several challenges exist, including the irregularity of time intervals between consecutive events, the existence of cycles, periodicity, and multi-scale event interactions, as well as the high computational costs for long event sequences. Existing neural temporal point processes (TPPs) methods do not capture the multi-scale nature of event interactions, which is common in many real-world applications such as clinical event data. To address these issues, we propose the cross-temporal-scale transformer (XTSFormer), designed specifically for irregularly timed event data. Our model comprises two vital components: a novel Feature-based Cycle-aware Time Positional Encoding (FCPE) that adeptly captures the cyclical nature of time, and a hierarchical multi-scale temporal attention mechanism. These scales are determined by a bottom-up clustering algorithm. Extensive experiments on several real-world datasets show that our XTSFormer outperforms several baseline methods in prediction performance.",

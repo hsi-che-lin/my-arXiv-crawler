@@ -12,7 +12,9 @@
                 "audio-visual"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "This paper explores sentence-level Multilingual Visual Speech Recognition with a single model for the first time. As the massive multilingual modeling of visual data requires huge computational costs, we propose a novel strategy, processing with visual speech units. Motivated by the recent success of the audio speech unit, the proposed visual speech unit is obtained by discretizing the visual speech features extracted from the self-supervised visual speech model. To correctly capture multilingual visual speech, we first train the self-supervised visual speech model on 5,512 hours of multilingual audio-visual data. Through analysis, we verify that the visual speech units mainly contain viseme information while suppressing non-linguistic information. By using the visual speech units as the inputs of our system, we pre-train the model to predict corresponding text outputs on massive multilingual data constructed by merging several VSR databases. As both the inputs and outputs are discrete, we can greatly improve the training efficiency compared to the standard VSR training. Specifically, the input data size is reduced to 0.016% of the original video inputs. In order to complement the insufficient visual information in speech recognition, we apply curriculum learning where the inputs of the system begin with audio-visual speech units and gradually change to visual speech units. After pre-training, the model is finetuned on continuous features. We set new state-of-the-art multilingual VSR performances by achieving comparable performances to the previous language-specific VSR models, with a single trained model.",
@@ -34,6 +36,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -116,7 +119,8 @@
             ],
             [
                 "cs.AI",
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "Lately, researchers in artificial intelligence have been really interested in how language and vision come together, giving rise to the development of multimodal models that aim to seamlessly integrate textual and visual information. Multimodal models, an extension of Large Language Models (LLMs), have exhibited remarkable capabilities in addressing a diverse array of tasks, ranging from image captioning and visual question answering (VQA) to visual grounding. While these models have showcased significant advancements, challenges persist in accurately interpreting images and answering the question, a common occurrence in real-world scenarios. This paper introduces a novel approach to enhance the multimodal capabilities of existing models. In response to the limitations observed in current Vision Language Models (VLMs) and Multimodal Large Language Models (MLLMs), our proposed model Veagle, incorporates a unique mechanism inspired by the successes and insights of previous works. Veagle leverages a dynamic mechanism to project encoded visual information directly into the language model. This dynamic approach allows for a more nuanced understanding of intricate details present in visual contexts. To validate the effectiveness of Veagle, we conduct comprehensive experiments on benchmark datasets, emphasizing tasks such as visual question answering and image understanding. Our results indicate a improvement of 5-6 \\% in performance, with Veagle outperforming existing models by a notable margin. The outcomes underscore the model's versatility and applicability beyond traditional benchmarks.",
@@ -136,7 +140,8 @@
         "keywords": [
             [
                 "cs.LG",
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ],
             [
                 "ICASSP"
@@ -274,7 +279,8 @@
         "rating": "1.5",
         "keywords": [
             [
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ],
             [
                 "ICASSP"
@@ -316,7 +322,10 @@
         "keywords": [
             [
                 "cs.AI",
-                "cs.CL"
+                "cs.LG",
+                "cs.CL",
+                "cs.SD",
+                "eess.AS"
             ],
             [
                 "ICLR"
@@ -339,7 +348,9 @@
         "rating": "1.5",
         "keywords": [
             [
-                "cs.CL"
+                "cs.CL",
+                "cs.SD",
+                "eess.AS"
             ],
             [
                 "ICASSP"
@@ -360,7 +371,9 @@
         "rating": "1.5",
         "keywords": [
             [
-                "cs.CL"
+                "cs.CL",
+                "cs.SD",
+                "eess.AS"
             ],
             [
                 "ICASSP"
@@ -382,6 +395,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ],
             [
@@ -492,7 +506,10 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.CV"
+                "cs.CV",
+                "cs.CL",
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "Large audio-video language models can generate descriptions for both video and audio. However, they sometimes ignore audio content, producing audio descriptions solely reliant on visual information. This paper refers to this as audio hallucinations and analyzes them in large audio-video language models. We gather 1,000 sentences by inquiring about audio information and annotate them whether they contain hallucinations. If a sentence is hallucinated, we also categorize the type of hallucination. The results reveal that 332 sentences are hallucinated with distinct trends observed in nouns and verbs for each hallucination type. Based on this, we tackle a task of audio hallucination classification using pre-trained audio-text models in the zero-shot and fine-tuning settings. Our experimental results reveal that the zero-shot models achieve higher performance (52.2% in F1) than the random (40.3%) and the fine-tuning models achieve 87.9%, outperforming the zero-shot models.",
@@ -544,7 +561,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ],
             [
                 "ICLR"
@@ -688,6 +706,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -723,7 +742,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ],
             [
                 "ICLR"
@@ -878,7 +898,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "The increasing demand for intelligent systems capable of interpreting and reasoning about visual content requires the development of Large Multi-Modal Models (LMMs) that are not only accurate but also have explicit reasoning capabilities. This paper presents a novel approach to imbue an LMM with the ability to conduct explicit reasoning based on visual content and textual instructions. We introduce a system that can ask a question to acquire necessary knowledge, thereby enhancing the robustness and explicability of the reasoning process. Our method comprises the development of a novel dataset generated by a Large Language Model (LLM), designed to promote chain-of-thought reasoning combined with a question-asking mechanism. We designed an LMM, which has high capabilities on region awareness to address the intricate requirements of image-text alignment. The model undergoes a three-stage training phase, starting with large-scale image-text alignment using a large-scale datasets, followed by instruction tuning, and fine-tuning with a focus on chain-of-thought reasoning. The results demonstrate a stride toward a more robust, accurate, and interpretable LMM, capable of reasoning explicitly and seeking information proactively when confronted with ambiguous visual input.",
@@ -911,7 +932,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.CL"
+                "cs.CL",
+                "eess.AS"
             ]
         ],
         "abstract": "Speech disfluency modeling is the bottleneck for both speech therapy and language learning. However, there is no effective AI solution to systematically tackle this problem. We solidify the concept of disfluent speech and disfluent speech modeling. We then present Hierarchical Unconstrained Disfluency Modeling (H-UDM) approach, the hierarchical extension of UDM that addresses both disfluency transcription and detection to eliminate the need for extensive manual annotation. Our experimental findings serve as clear evidence of the effectiveness and reliability of the methods we have introduced, encompassing both transcription and detection tasks.",
@@ -929,6 +951,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.CY",
                 "cs.CL"
             ]
         ],
@@ -1125,6 +1148,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -1193,7 +1217,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "Developing generative models for interleaved image-text data has both research and practical value. It requires models to understand the interleaved sequences and subsequently generate images and text. However, existing attempts are limited by the issue that the fixed number of visual tokens cannot efficiently capture image details, which is particularly problematic in the multi-image scenarios. To address this, this paper presents MM-Interleaved, an end-to-end generative model for interleaved image-text data. It introduces a multi-scale and multi-image feature synchronizer module, allowing direct access to fine-grained image features in the previous context during the generation process. MM-Interleaved is end-to-end pre-trained on both paired and interleaved image-text corpora. It is further enhanced through a supervised fine-tuning phase, wherein the model improves its ability to follow complex multi-modal instructions. Experiments demonstrate the versatility of MM-Interleaved in recognizing visual details following multi-modal instructions and generating consistent images following both textual and visual conditions. Code and models are available at \\url{https://github.com/OpenGVLab/MM-Interleaved}.",
@@ -1247,6 +1272,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -1299,6 +1325,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -1435,7 +1462,10 @@
         "keywords": [
             [
                 "cs.AI",
-                "cs.CL"
+                "cs.LG",
+                "cs.CL",
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "The use of low-rank adaptation (LoRA) with frozen pretrained language models (PLMs) has become increasing popular as a mainstream, resource-efficient modeling approach for memory-constrained hardware. In this study, we first explore how to enhance model performance by introducing various LoRA training strategies, achieving relative word error rate reductions of 3.50\\% on the public Librispeech dataset and of 3.67\\% on an internal dataset in the messaging domain. To further characterize the stability of LoRA-based second-pass speech recognition models, we examine robustness against input perturbations. These perturbations are rooted in homophone replacements and a novel metric called N-best Perturbation-based Rescoring Robustness (NPRR), both designed to measure the relative degradation in the performance of rescoring models. Our experimental results indicate that while advanced variants of LoRA, such as dynamic rank-allocated LoRA, lead to performance degradation in $1$-best perturbation, they alleviate the degradation in $N$-best perturbation. This finding is in comparison to fully-tuned models and vanilla LoRA tuning baselines, suggesting that a comprehensive selection is needed when using LoRA-based adaptation for compute-cost savings and robust language modeling.",
@@ -1473,6 +1503,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -1589,7 +1620,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "In the field of scientific computing, many problem-solving approaches tend to focus only on the process and final outcome, even in AI for science, there is a lack of deep multimodal information mining behind the data, missing a multimodal framework akin to that in the image-text domain. In this paper, we take Symbolic Regression(SR) as our focal point and, drawing inspiration from the BLIP model in the image-text domain, propose a scientific computing multimodal framework based on Function Images (Funcimg) and Operation Tree Sequence (OTS), named Bootstrapping OTS-Funcimg Pre-training Model (Botfip). In SR experiments, we validate the advantages of Botfip in low-complexity SR problems, showcasing its potential. As a MED framework, Botfip holds promise for future applications in a broader range of scientific computing problems.",
@@ -1607,7 +1639,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Machine learning models often deteriorate in their performance when they are used to predict the outcomes over data on which they were not trained. These scenarios can often arise in real world when the distribution of data changes gradually or abruptly due to major events like a pandemic. There have been many attempts in machine learning research to come up with techniques that are resilient to such Concept drifts. However, there is no principled framework to identify the drivers behind the drift in model performance. In this paper, we propose a novel framework - DBShap that uses Shapley values to identify the main contributors of the drift and quantify their respective contributions. The proposed framework not only quantifies the importance of individual features in driving the drift but also includes the change in the underlying relation between the input and output as a possible driver. The explanation provided by DBShap can be used to understand the root cause behind the drift and use it to make the model resilient to the drift.",
@@ -1671,7 +1704,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.LG"
+                "cs.LG",
+                "cs.CY"
             ]
         ],
         "abstract": "Online content platforms commonly use engagement-based optimization when making recommendations. This encourages content creators to invest in quality, but also rewards gaming tricks such as clickbait. To understand the total impact on the content landscape, we study a game between content creators competing on the basis of engagement metrics and analyze the equilibrium decisions about investment in quality and gaming. First, we show the content created at equilibrium exhibits a positive correlation between quality and gaming, and we empirically validate this finding on a Twitter dataset. Using the equilibrium structure of the content landscape, we then examine the downstream performance of engagement-based optimization along several axes. Perhaps counterintuitively, the average quality of content consumed by users can decrease at equilibrium as gaming tricks become more costly for content creators to employ. Moreover, engagement-based optimization can perform worse in terms of user utility than a baseline with random recommendations, and engagement-based optimization is also suboptimal in terms of realized engagement relative to quality-based optimization. Altogether, our results highlight the need to consider content creator incentives when evaluating a platform's choice of optimization metric.",
@@ -1909,7 +1943,9 @@
                 "Federated Learning"
             ],
             [
-                "cs.CL"
+                "cs.CL",
+                "cs.SD",
+                "eess.AS"
             ],
             [
                 "ICASSP"
@@ -1990,7 +2026,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "This paper addresses trust issues created from the ubiquity of black box algorithms and surrogate explainers in Explainable Intrusion Detection Systems (X-IDS). While Explainable Artificial Intelligence (XAI) aims to enhance transparency, black box surrogate explainers, such as Local Interpretable Model-Agnostic Explanation (LIME) and SHapley Additive exPlanation (SHAP), are difficult to trust. The black box nature of these surrogate explainers makes the process behind explanation generation opaque and difficult to understand. To avoid this problem, one can use transparent white box algorithms such as Rule Extraction (RE). There are three types of RE algorithms: pedagogical, decompositional, and eclectic. Pedagogical methods offer fast but untrustworthy white-box explanations, while decompositional RE provides trustworthy explanations with poor scalability. This work explores eclectic rule extraction, which strikes a balance between scalability and trustworthiness. By combining techniques from pedagogical and decompositional approaches, eclectic rule extraction leverages the advantages of both, while mitigating some of their drawbacks. The proposed Hybrid X-IDS architecture features eclectic RE as a white box surrogate explainer for black box Deep Neural Networks (DNN). The presented eclectic RE algorithm extracts human-readable rules from hidden layers, facilitating explainable and trustworthy rulesets. Evaluations on UNSW-NB15 and CIC-IDS-2017 datasets demonstrate the algorithm's ability to generate rulesets with 99.9% accuracy, mimicking DNN outputs. The contributions of this work include the hybrid X-IDS architecture, the eclectic rule extraction algorithm applicable to intrusion detection datasets, and a thorough analysis of performance and explainability, demonstrating the trade-offs involved in rule extraction speed and accuracy.",
@@ -2008,7 +2045,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Emergence, a global property of complex adaptive systems (CASs) constituted by interactive agents, is prevalent in real-world dynamic systems, e.g., network-level traffic congestions. Detecting its formation and evaporation helps to monitor the state of a system, allowing to issue a warning signal for harmful emergent phenomena. Since there is no centralized controller of CAS, detecting emergence based on each agent's local observation is desirable but challenging. Existing works are unable to capture emergence-related spatial patterns, and fail to model the nonlinear relationships among agents. This paper proposes a hierarchical framework with spatio-temporal consistency learning to solve these two problems by learning the system representation and agent representations, respectively. Especially, spatio-temporal encoders are tailored to capture agents' nonlinear relationships and the system's complex evolution. Representations of the agents and the system are learned by preserving the intrinsic spatio-temporal consistency in a self-supervised manner. Our method achieves more accurate detection than traditional methods and deep learning methods on three datasets with well-known yet hard-to-detect emergent behaviors. Notably, our hierarchical framework is generic, which can employ other deep learning methods for agent-level and system-level detection.",
@@ -2043,7 +2081,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Deep learning still has drawbacks in terms of trustworthiness, which describes a comprehensible, fair, safe, and reliable method. To mitigate the potential risk of AI, clear obligations associated to trustworthiness have been proposed via regulatory guidelines, e.g., in the European AI Act. Therefore, a central question is to what extent trustworthy deep learning can be realized. Establishing the described properties constituting trustworthiness requires that the factors influencing an algorithmic computation can be retraced, i.e., the algorithmic implementation is transparent. Motivated by the observation that the current evolution of deep learning models necessitates a change in computing technology, we derive a mathematical framework which enables us to analyze whether a transparent implementation in a computing model is feasible. We exemplarily apply our trustworthiness framework to analyze deep learning approaches for inverse problems in digital and analog computing models represented by Turing and Blum-Shub-Smale Machines, respectively. Based on previous results, we find that Blum-Shub-Smale Machines have the potential to establish trustworthy solvers for inverse problems under fairly general conditions, whereas Turing machines cannot guarantee trustworthiness to the same degree.",
@@ -2148,7 +2187,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Neural networks often suffer from catastrophic interference (CI): performance on previously learned tasks drops off significantly when learning a new task. This contrasts strongly with humans, who can sequentially learn new tasks without appreciably forgetting previous tasks. Prior work has explored various techniques for mitigating CI such as regularization, rehearsal, generative replay, and distillation methods. The current work takes a different approach, one guided by cognitive science research showing that in naturalistic environments, the probability of encountering a task decreases as a power-law of the time since it was last performed. We argue that a realistic evaluation of techniques for the mitigation of CI should be performed in simulated naturalistic learning environments. Thus, we evaluate the extent of mitigation of CI when training simple rehearsal-based methods in power-law environments similar to the ones humans face. Our work explores this novel rehearsal-based approach for a domain-incremental task: learning permutations in the MNIST task. We compare our rehearsal environment with other baselines to show its efficacy in promoting continual learning. Additionally, we investigate whether this environment shows forward facilitation, i.e., faster learning of later tasks. Next, we explore the robustness of our learning environment to the number of tasks, model size, and amount of data rehearsed after each task. Notably, our results show that the performance is comparable or superior to that of models trained using popular regularization methods and also to rehearsals in non-power-law environments. The benefits of this training paradigm include simplicity and the lack of a need for extra neural circuitry. In addition, because our method is orthogonal to other methods, future research can combine training in power-law environments with other continual learning mechanisms.",
@@ -2256,7 +2296,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.CY"
             ]
         ],
         "abstract": "The paper discusses what is needed to address the limitations of current LLM-centered AI systems. The paper argues that incorporating insights from human cognition and psychology, as embodied by a computational cognitive architecture, can help develop systems that are more capable, more reliable, and more human-like. It emphasizes the importance of the dual-process architecture and the hybrid neuro-symbolic approach in addressing the limitations of current LLMs. In the opposite direction, the paper also highlights the need for an overhaul of computational cognitive architectures to better reflect advances in AI and computing technology. Overall, the paper advocates for a multidisciplinary, mutually beneficial approach towards developing better models both for AI and for understanding the human mind.",
@@ -2294,7 +2335,8 @@
             ],
             [
                 "cs.LG",
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ],
             [
                 "ICASSP"
@@ -2333,7 +2375,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.CY"
             ]
         ],
         "abstract": "Agreement Technologies refer to a novel paradigm for the construction of distributed intelligent systems, where autonomous software agents negotiate to reach agreements on behalf of their human users. Smart Cities are a key application domain for Agreement Technologies. While several proofs of concept and prototypes exist, such systems are still far from ready for being deployed in the real-world. In this paper we focus on a novel method for managing elements of smart road infrastructures of the future, namely the case of auction-based road intersections. We show that, even though the key technological elements for such methods are already available, there are multiple non-technical issues that need to be tackled before they can be applied in practice. For this purpose, we analyse legal and ethical implications of auction-based road intersections in the context of international regulations and from the standpoint of the Spanish legislation. From this exercise, we extract a set of required modifications, of both technical and legal nature, which need to be addressed so as to pave the way for the potential real-world deployment of such systems in a future that may not be too far away.",
@@ -2486,7 +2529,9 @@
                 "facial"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "Audio-visual speech recognition (AVSR) is a multimodal extension of automatic speech recognition (ASR), using video as a complement to audio. In AVSR, considerable efforts have been directed at datasets for facial features such as lip-readings, while they often fall short in evaluating the image comprehension capabilities in broader contexts. In this paper, we construct SlideAVSR, an AVSR dataset using scientific paper explanation videos. SlideAVSR provides a new benchmark where models transcribe speech utterances with texts on the slides on the presentation recordings. As technical terminologies that are frequent in paper explanations are notoriously challenging to transcribe without reference texts, our SlideAVSR dataset spotlights a new aspect of AVSR problems. As a simple yet effective baseline, we propose DocWhisper, an AVSR model that can refer to textual information from slides, and confirm its effectiveness on SlideAVSR.",
@@ -2550,6 +2595,7 @@
             ],
             [
                 "cs.AI",
+                "cs.CY",
                 "cs.CL"
             ]
         ],
@@ -2782,6 +2828,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -2902,7 +2949,8 @@
                 "3D"
             ],
             [
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "Room geometry inference (RGI) aims at estimating room shapes from measured room impulse responses (RIRs) and has received lots of attention for its importance in environment-aware audio rendering and virtual acoustic representation of a real venue. A lot of estimation models utilizing time difference of arrival (TDoA) or time of arrival (ToA) information in RIRs have been proposed. However, an estimation model should be able to handle more general features and complex relations between reflections to cope with various room shapes and uncertainties such as the unknown number of walls. In this study, we propose a deep neural network that can estimate various room shapes without prior assumptions on the shape or number of walls. The proposed model consists of three sub-networks: a feature extractor, parameter estimation, and evaluation networks, which extract key features from RIRs, estimate parameters, and evaluate the confidence of estimated parameters, respectively. The network is trained by about 40,000 RIRs simulated in rooms of different shapes using a single source and spherical microphone array and tested for rooms of unseen shapes and dimensions. The proposed algorithm achieves almost perfect accuracy in finding the true number of walls and shows negligible errors in room shapes.",
@@ -2947,7 +2995,9 @@
                 "graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG",
+                "cs.SI"
             ]
         ],
         "abstract": "Graphs are structured data that models complex relations between real-world entities. Heterophilous graphs, where linked nodes are prone to be with different labels or dissimilar features, have recently attracted significant attention and found many applications. Meanwhile, increasing efforts have been made to advance learning from heterophilous graphs. Although there exist surveys on the relevant topic, they focus on heterophilous GNNs, which are only sub-topics of heterophilous graph learning. In this survey, we comprehensively overview existing works on learning from graphs with heterophily.First, we collect over 180 publications and introduce the development of this field. Then, we systematically categorize existing methods based on a hierarchical taxonomy including learning strategies, model architectures and practical applications. Finally, we discuss the primary challenges of existing studies and highlight promising avenues for future research.More publication details and corresponding open-source codes can be accessed and will be continuously updated at our repositories:https://github.com/gongchenghua/Awesome-Survey-Graphs-with-Heterophily.",
@@ -2987,7 +3037,8 @@
                 "vehicle"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "The classical path planners, such as sampling-based path planners, can provide probabilistic completeness guarantees in the sense that the probability that the planner fails to return a solution if one exists, decays to zero as the number of samples approaches infinity. However, finding a near-optimal feasible solution in a given period is challenging in many applications such as the autonomous vehicle. To achieve an end-to-end near-optimal path planner, we first divide the path planning problem into two subproblems, which are path space segmentation and waypoints generation in the given path's space. We further propose a two-stage neural network named Path Planning Network (PPNet) each stage solves one of the subproblems abovementioned. Moreover, we propose a novel efficient data generation method for path planning named EDaGe-PP. EDaGe-PP can generate data with continuous-curvature paths with analytical expression while satisfying the clearance requirement. The results show the total computation time of generating random 2D path planning data is less than 1/33 and the success rate of PPNet trained by the dataset that is generated by EDaGe-PP is about 2 times compared to other methods. We validate PPNet against state-of-the-art path planning methods. The results show that PPNet can find a near-optimal solution in 15.3ms, which is much shorter than the state-of-the-art path planners.",
@@ -3008,7 +3059,8 @@
                 "federated learning"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Edge caching is a promising solution for next-generation networks by empowering caching units in small-cell base stations (SBSs), which allows user equipments (UEs) to fetch users' requested contents that have been pre-cached in SBSs. It is crucial for SBSs to predict accurate popular contents through learning while protecting users' personal information. Traditional federated learning (FL) can protect users' privacy but the data discrepancies among UEs can lead to a degradation in model quality. Therefore, it is necessary to train personalized local models for each UE to predict popular contents accurately. In addition, the cached contents can be shared among adjacent SBSs in next-generation networks, thus caching predicted popular contents in different SBSs may affect the cost to fetch contents. Hence, it is critical to determine where the popular contents are cached cooperatively. To address these issues, we propose a cooperative edge caching scheme based on elastic federated and multi-agent deep reinforcement learning (CEFMR) to optimize the cost in the network. We first propose an elastic FL algorithm to train the personalized model for each UE, where adversarial autoencoder (AAE) model is adopted for training to improve the prediction accuracy, then {a popular} content prediction algorithm is proposed to predict the popular contents for each SBS based on the trained AAE model. Finally, we propose a multi-agent deep reinforcement learning (MADRL) based algorithm to decide where the predicted popular contents are collaboratively cached among SBSs. Our experimental results demonstrate the superiority of our proposed scheme to existing baseline caching schemes.",
@@ -3049,7 +3101,8 @@
                 "Graph"
             ],
             [
-                "cs.LG"
+                "cs.LG",
+                "cs.SI"
             ]
         ],
         "abstract": "Graph Neural Networks (GNNs) have shown considerable effectiveness in a variety of graph learning tasks, particularly those based on the message-passing approach in recent years. However, their performance is often constrained by a limited receptive field, a challenge that becomes more acute in the presence of sparse graphs. In light of the power series, which possesses infinite expansion capabilities, we propose a novel Graph Power Filter Neural Network (GPFN) that enhances node classification by employing a power series graph filter to augment the receptive field. Concretely, our GPFN designs a new way to build a graph filter with an infinite receptive field based on the convergence power series, which can be analyzed in the spectral and spatial domains. Besides, we theoretically prove that our GPFN is a general framework that can integrate any power series and capture long-range dependencies. Finally, experimental results on three datasets demonstrate the superiority of our GPFN over state-of-the-art baselines.",
@@ -3089,7 +3142,8 @@
                 "Federated Learning"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Federated learning are inherently hampered by data heterogeneity: non-iid distributed training data over local clients. We propose a novel model training approach for federated learning, FLex&Chill, which exploits the Logit Chilling method. Through extensive evaluations, we demonstrate that, in the presence of non-iid data characteristics inherent in federated learning systems, this approach can expedite model convergence and improve inference accuracy. Quantitatively, from our experiments, we observe up to 6X improvement in the global federated learning model convergence time, and up to 3.37% improvement in inference accuracy.",
@@ -3109,7 +3163,8 @@
                 "Graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Graph learning architectures based on the k-dimensional Weisfeiler-Leman (k-WL) hierarchy offer a theoretically well-understood expressive power. However, such architectures often fail to deliver solid predictive performance on real-world tasks, limiting their practical impact. In contrast, global attention-based models such as graph transformers demonstrate strong performance in practice, but comparing their expressive power with the k-WL hierarchy remains challenging, particularly since these architectures rely on positional or structural encodings for their expressivity and predictive performance. To address this, we show that the recently proposed Edge Transformer, a global attention model operating on node pairs instead of nodes, has at least 3-WL expressive power. Empirically, we demonstrate that the Edge Transformer surpasses other theoretically aligned architectures regarding predictive performance while not relying on positional or structural encodings.",
@@ -3149,7 +3204,8 @@
                 "autonomous driving"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "We propose LangProp, a framework for iteratively optimizing code generated by large language models (LLMs), in both supervised and reinforcement learning settings. While LLMs can generate sensible coding solutions zero-shot, they are often sub-optimal. Especially for code generation tasks, it is likely that the initial code will fail on certain edge cases. LangProp automatically evaluates the code performance on a dataset of input-output pairs, catches any exceptions, and feeds the results back to the LLM in the training loop, so that the LLM can iteratively improve the code it generates. By adopting a metric- and data-driven training paradigm for this code optimization procedure, one could easily adapt findings from traditional machine learning techniques such as imitation learning, DAgger, and reinforcement learning. We show LangProp's applicability to general domains such as Sudoku and CartPole, as well as demonstrate the first proof of concept of automated code optimization for autonomous driving in CARLA. We show that LangProp can generate interpretable and transparent policies that can be verified and improved in a metric- and data-driven way. Our code is available at https://github.com/shuishida/LangProp.",
@@ -3252,7 +3308,8 @@
                 "Graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Few-shot node classification poses a significant challenge for Graph Neural Networks (GNNs) due to insufficient supervision and potential distribution shifts between labeled and unlabeled nodes. Self-training has emerged as a widely popular framework to leverage the abundance of unlabeled data, which expands the training set by assigning pseudo-labels to selected unlabeled nodes. Efforts have been made to develop various selection strategies based on confidence, information gain, etc. However, none of these methods takes into account the distribution shift between the training and testing node sets. The pseudo-labeling step may amplify this shift and even introduce new ones, hindering the effectiveness of self-training. Therefore, in this work, we explore the potential of explicitly bridging the distribution shift between the expanded training set and test set during self-training. To this end, we propose a novel Distribution-Consistent Graph Self-Training (DC-GST) framework to identify pseudo-labeled nodes that are both informative and capable of redeeming the distribution discrepancy and formulate it as a differentiable optimization task. A distribution-shift-aware edge predictor is further adopted to augment the graph and increase the model's generalizability in assigning pseudo labels. We evaluate our proposed method on four publicly available benchmark datasets and extensive experiments demonstrate that our framework consistently outperforms state-of-the-art baselines.",
@@ -3292,7 +3349,8 @@
                 "Graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Many real-world problems can be efficiently modeled as Mixed Integer Programs (MIPs) and solved with the Branch-and-Bound method. Prior work has shown the existence of MIP backdoors, small sets of variables such that prioritizing branching on them when possible leads to faster running times. However, finding high-quality backdoors that improve running times remains an open question. Previous work learns to estimate the relative solver speed of randomly sampled backdoors through ranking and then decide whether to use it. In this paper, we utilize the Monte-Carlo tree search method to collect backdoors for training, rather than relying on random sampling, and adapt a contrastive learning framework to train a Graph Attention Network model to predict backdoors. Our method, evaluated on four common MIP problem domains, demonstrates performance improvements over both Gurobi and previous models.",
@@ -3378,7 +3436,8 @@
                 "Graph"
             ],
             [
-                "cs.LG"
+                "cs.LG",
+                "cs.SI"
             ]
         ],
         "abstract": "Graph condensation has emerged as an intriguing technique to provide Graph Neural Networks for large-scale graphs with a more compact yet informative small graph to save the expensive costs of large-scale graph learning. Despite the promising results achieved, previous graph condensation methods often employ an entangled condensation strategy that involves condensing nodes and edges simultaneously, leading to substantial GPU memory demands. This entangled strategy has considerably impeded the scalability of graph condensation, impairing its capability to condense extremely large-scale graphs and produce condensed graphs with high fidelity. Therefore, this paper presents Disentangled Condensation for large-scale graphs, abbreviated as DisCo, to provide scalable graph condensation for graphs of varying sizes. At the heart of DisCo are two complementary components, namely node and edge condensation modules, that realize the condensation of nodes and edges in a disentangled manner. In the node condensation module, we focus on synthesizing condensed nodes that exhibit a similar node feature distribution to original nodes using a pre-trained node classification model while incorporating class centroid alignment and anchor attachment regularizers. After node condensation, in the edge condensation module, we preserve the topology structure by transferring the link prediction model of the original graph to the condensed nodes, generating the corresponding condensed edges. Based on the disentangled strategy, the proposed DisCo can successfully scale up to the ogbn-papers100M graph with over 100 million nodes and 1 billion edges with flexible reduction rates. Extensive experiments on five common datasets further demonstrate that the proposed DisCo yields results superior to state-of-the-art counterparts by a significant margin. The source code is available at https://github.com/BangHonor/DisCo.",
@@ -3398,7 +3457,8 @@
                 "Robot"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "This early-stage research work aims to improve online human-robot imitation by translating sequences of joint positions from the domain of human motions to a domain of motions achievable by a given robot, thus constrained by its embodiment. Leveraging the generalization capabilities of deep learning methods, we address this problem by proposing an encoder-decoder neural network model performing domain-to-domain translation. In order to train such a model, one could use pairs of associated robot and human motions. Though, such paired data is extremely rare in practice, and tedious to collect. Therefore, we turn towards deep learning methods for unpaired domain-to-domain translation, that we adapt in order to perform human-robot imitation.",
@@ -3499,7 +3559,8 @@
             ],
             [
                 "cs.LG",
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "A standard treatment protocol for breast cancer entails administering neoadjuvant therapy followed by surgical removal of the tumor and surrounding tissue. Pathologists typically rely on cabinet X-ray radiographs, known as Faxitron, to examine the excised breast tissue and diagnose the extent of residual disease. However, accurately determining the location, size, and focality of residual cancer can be challenging, and incorrect assessments can lead to clinical consequences. The utilization of automated methods can improve the histopathology process, allowing pathologists to choose regions for sampling more effectively and precisely. Despite the recognized necessity, there are currently no such methods available. Training such automated detection models require accurate ground truth labels on ex-vivo radiology images, which can be acquired through registering Faxitron and histopathology images and mapping the extent of cancer from histopathology to x-ray images. This study introduces a deep learning-based image registration approach trained on mono-modal synthetic image pairs. The models were trained using data from 50 women who received neoadjuvant chemotherapy and underwent surgery. The results demonstrate that our method is faster and yields significantly lower average landmark error ($2.1\\pm1.96$ mm) over the state-of-the-art iterative ($4.43\\pm4.1$ mm) and deep learning ($4.02\\pm3.15$ mm) approaches. Improved performance of our approach in integrating radiology and pathology information facilitates generating large datasets, which allows training models for more accurate breast cancer detection.",
@@ -3537,7 +3598,8 @@
             ],
             [
                 "cs.AI",
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "In medical imaging, scans often reveal objects with varied contrasts but consistent internal intensities or textures. This characteristic enables the use of low-frequency approximations for tasks such as segmentation and deformation field estimation. Yet, integrating this concept into neural network architectures for medical image analysis remains underexplored. In this paper, we propose the Slicer Network, a novel architecture designed to leverage these traits. Comprising an encoder utilizing models like vision transformers for feature extraction and a slicer employing a learnable bilateral grid, the Slicer Network strategically refines and upsamples feature maps via a splatting-blurring-slicing process. This introduces an edge-preserving low-frequency approximation for the network outcome, effectively enlarging the effective receptive field. The enhancement not only reduces computational complexity but also boosts overall performance. Experiments across different medical imaging applications, including unsupervised and keypoints-based image registration and lesion segmentation, have verified the Slicer Network's improved accuracy and efficiency.",
@@ -3575,7 +3637,10 @@
             ],
             [
                 "cs.AI",
-                "cs.CL"
+                "cs.LG",
+                "cs.CL",
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "One of the interests of modern poultry farming is the vocalization of laying hens which contain very useful information on health behavior. This information is used as health and well-being indicators that help breeders better monitor laying hens, which involves early detection of problems for rapid and more effective intervention. In this work, we focus on the sound analysis for the recognition of the types of calls of the laying hens in order to propose a robust system of characterization of their behavior for a better monitoring. To do this, we first collected and annotated laying hen call signals, then designed an optimal acoustic characterization based on the combination of time and frequency domain features. We then used these features to build the multi-label classification models based on recurrent neural network to assign a semantic class to the vocalization that characterize the laying hen behavior. The results show an overall performance with our model based on the combination of time and frequency domain features that obtained the highest F1-score (F1=92.75) with a gain of 17% on the models using the frequency domain features and of 8% on the compared approaches from the litterature.",
@@ -3663,7 +3728,8 @@
             ],
             [
                 "cs.LG",
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Medical imaging refers to the technologies and methods utilized to view the human body and its inside, in order to diagnose, monitor, or even treat medical disorders. This paper aims to explore the application of deep learning techniques in the semantic segmentation of Cardiac short-axis MRI (Magnetic Resonance Imaging) images, aiming to enhance the diagnosis, monitoring, and treatment of medical disorders related to the heart. The focus centers on implementing various architectures that are derivatives of U-Net, to effectively isolate specific parts of the heart for comprehensive anatomical and functional analysis. Through a combination of images, graphs, and quantitative metrics, the efficacy of the models and their predictions are showcased. Additionally, this paper addresses encountered challenges and outline strategies for future improvements. This abstract provides a concise overview of the efforts in utilizing deep learning for cardiac image segmentation, emphasizing both the accomplishments and areas for further refinement.",
@@ -3685,7 +3751,9 @@
             ],
             [
                 "cs.LG",
-                "cs.CV"
+                "cs.CV",
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "Honey bees pollinate about one-third of the world's food supply, but bee colonies have alarmingly declined by nearly 40% over the past decade due to several factors, including pesticides and pests. Traditional methods for monitoring beehives, such as human inspection, are subjective, disruptive, and time-consuming. To overcome these limitations, artificial intelligence has been used to assess beehive health. However, previous studies have lacked an end-to-end solution and primarily relied on data from a single source, either bee images or sounds. This study introduces a comprehensive system consisting of bee object detection and health evaluation. Additionally, it utilized a combination of visual and audio signals to analyze bee behaviors. An Attention-based Multimodal Neural Network (AMNN) was developed to adaptively focus on key features from each type of signal for accurate bee health assessment. The AMNN achieved an overall accuracy of 92.61%, surpassing eight existing single-signal Convolutional Neural Networks and Recurrent Neural Networks. It outperformed the best image-based model by 32.51% and the top sound-based model by 13.98% while maintaining efficient processing times. Furthermore, it improved prediction robustness, attaining an F1-score higher than 90% across all four evaluated health conditions. The study also shows that audio signals are more reliable than images for assessing bee health. By seamlessly integrating AMNN with image and sound data in a comprehensive bee health monitoring system, this approach provides a more efficient and non-invasive solution for the early detection of bee diseases and the preservation of bee colonies.",
@@ -3822,7 +3890,8 @@
                 "retinal"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Optical coherence tomography (OCT) suffers from speckle noise, causing the deterioration of image quality, especially in high-resolution modalities like visible light OCT (vis-OCT). The potential of conventional supervised deep learning denoising methods is limited by the difficulty of obtaining clean data. Here, we proposed an innovative self-supervised strategy called Sub2Full (S2F) for OCT despeckling without clean data. This approach works by acquiring two repeated B-scans, splitting the spectrum of the first repeat as a low-resolution input, and utilizing the full spectrum of the second repeat as the high-resolution target. The proposed method was validated on vis-OCT retinal images visualizing sublaminar structures in outer retina and demonstrated superior performance over conventional Noise2Noise and Noise2Void schemes. The code is available at https://github.com/PittOCT/Sub2Full-OCT-Denoising.",
@@ -3944,6 +4013,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -4005,7 +4075,8 @@
             ],
             [
                 "cs.LG",
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Deep learning has demonstrated remarkable achievements in medical image segmentation. However, prevailing deep learning models struggle with poor generalization due to (i) intra-class variations, where the same class appears differently in different samples, and (ii) inter-class independence, resulting in difficulties capturing intricate relationships between distinct objects, leading to higher false negative cases. This paper presents a novel approach that synergies spatial and spectral representations to enhance domain-generalized medical image segmentation. We introduce the innovative Spectral Correlation Coefficient objective to improve the model's capacity to capture middle-order features and contextual long-range dependencies. This objective complements traditional spatial objectives by incorporating valuable spectral information. Extensive experiments reveal that optimizing this objective with existing architectures like UNet and TransUNet significantly enhances generalization, interpretability, and noise robustness, producing more confident predictions. For instance, in cardiac segmentation, we observe a 0.81 pp and 1.63 pp (pp = percentage point) improvement in DSC over UNet and TransUNet, respectively. Our interpretability study demonstrates that, in most tasks, objectives optimized with UNet outperform even TransUNet by introducing global contextual information alongside local details. These findings underscore the versatility and effectiveness of our proposed method across diverse imaging modalities and medical domains.",
@@ -4046,7 +4117,8 @@
             ],
             [
                 "cs.LG",
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Segmenting organs in CT scan images is a necessary process for multiple downstream medical image analysis tasks. Currently, manual CT scan segmentation by radiologists is prevalent, especially for organs like the pancreas, which requires a high level of domain expertise for reliable segmentation due to factors like small organ size, occlusion, and varying shapes. When resorting to automated pancreas segmentation, these factors translate to limited reliable labeled data to train effective segmentation models. Consequently, the performance of contemporary pancreas segmentation models is still not within acceptable ranges. To improve that, we propose M3BUNet, a fusion of MobileNet and U-Net neural networks, equipped with a novel Mean-Max (MM) attention that operates in two stages to gradually segment pancreas CT images from coarse to fine with mask guidance for object detection. This approach empowers the network to surpass segmentation performance achieved by similar network architectures and achieve results that are on par with complex state-of-the-art methods, all while maintaining a low parameter count. Additionally, we introduce external contour segmentation as a preprocessing step for the coarse stage to assist in the segmentation process through image standardization. For the fine segmentation stage, we found that applying a wavelet decomposition filter to create multi-input images enhances pancreas segmentation performance. We extensively evaluate our approach on the widely known NIH pancreas dataset and MSD pancreas dataset. Our approach demonstrates a considerable performance improvement, achieving an average Dice Similarity Coefficient (DSC) value of up to 89.53% and an Intersection Over Union (IOU) score of up to 81.16 for the NIH pancreas dataset, and 88.60% DSC and 79.90% IOU for the MSD Pancreas dataset.",
@@ -4163,6 +4235,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -4207,7 +4280,8 @@
                 "attacks"
             ],
             [
-                "cs.LG"
+                "cs.LG",
+                "cs.SI"
             ]
         ],
         "abstract": "Despite the tremendous success of graph neural networks in learning relational data, it has been widely investigated that graph neural networks are vulnerable to structural attacks on homophilic graphs. Motivated by this, a surge of robust models is crafted to enhance the adversarial robustness of graph neural networks on homophilic graphs. However, the vulnerability based on heterophilic graphs remains a mystery to us. To bridge this gap, in this paper, we start to explore the vulnerability of graph neural networks on heterophilic graphs and theoretically prove that the update of the negative classification loss is negatively correlated with the pairwise similarities based on the powered aggregated neighbor features. This theoretical proof explains the empirical observations that the graph attacker tends to connect dissimilar node pairs based on the similarities of neighbor features instead of ego features both on homophilic and heterophilic graphs. In this way, we novelly introduce a novel robust model termed NSPGNN which incorporates a dual-kNN graphs pipeline to supervise the neighbor similarity-guided propagation. This propagation utilizes the low-pass filter to smooth the features of node pairs along the positive kNN graphs and the high-pass filter to discriminate the features of node pairs along the negative kNN graphs. Extensive experiments on both homophilic and heterophilic graphs validate the universal robustness of NSPGNN compared to the state-of-the-art methods.",
@@ -4351,7 +4425,8 @@
                 "UAV"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Real-time high-resolution wind predictions are beneficial for various applications including safe manned and unmanned aviation. Current weather models require too much compute and lack the necessary predictive capabilities as they are valid only at the scale of multiple kilometers and hours - much lower spatial and temporal resolutions than these applications require. Our work, for the first time, demonstrates the ability to predict low-altitude wind in real-time on limited-compute devices, from only sparse measurement data. We train a neural network, WindSeer, using only synthetic data from computational fluid dynamics simulations and show that it can successfully predict real wind fields over terrain with known topography from just a few noisy and spatially clustered wind measurements. WindSeer can generate accurate predictions at different resolutions and domain sizes on previously unseen topography without retraining. We demonstrate that the model successfully predicts historical wind data collected by weather stations and wind measured onboard drones.",
@@ -4503,7 +4578,8 @@
                 "recommendation"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "To ensure the fairness and trustworthiness of machine learning (ML) systems, recent legislative initiatives and relevant research in the ML community have pointed out the need to document the data used to train ML models. Besides, data-sharing practices in many scientific domains have evolved in recent years for reproducibility purposes. In this sense, the adoption of these practices by academic institutions has encouraged researchers to publish their data and technical documentation in peer-reviewed publications such as data papers. In this study, we analyze how this scientific data documentation meets the needs of the ML community and regulatory bodies for its use in ML technologies. We examine a sample of 4041 data papers of different domains, assessing their completeness and coverage of the requested dimensions, and trends in recent years, putting special emphasis on the most and least documented dimensions. As a result, we propose a set of recommendation guidelines for data creators and scientific data publishers to increase their data's preparedness for its transparent and fairer use in ML technologies.",
@@ -4574,7 +4650,8 @@
                 "Federated Learning"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "The usage of federated learning (FL) in Vehicular Ad hoc Networks (VANET) has garnered significant interest in research due to the advantages of reducing transmission overhead and protecting user privacy by communicating local dataset gradients instead of raw data. However, implementing FL in VANETs faces challenges, including limited communication resources, high vehicle mobility, and the statistical diversity of data distributions. In order to tackle these issues, this paper introduces a novel framework for hierarchical federated learning (HFL) over multi-hop clustering-based VANET. The proposed method utilizes a weighted combination of the average relative speed and cosine similarity of FL model parameters as a clustering metric to consider both data diversity and high vehicle mobility. This metric ensures convergence with minimum changes in cluster heads while tackling the complexities associated with non-independent and identically distributed (non-IID) data scenarios. Additionally, the framework includes a novel mechanism to manage seamless transitions of cluster heads (CHs), followed by transferring the most recent FL model parameter to the designated CH. Furthermore, the proposed approach considers the option of merging CHs, aiming to reduce their count and, consequently, mitigate associated overhead. Through extensive simulations, the proposed hierarchical federated learning over clustered VANET has been demonstrated to improve accuracy and convergence time significantly while maintaining an acceptable level of packet overhead compared to previously proposed clustering algorithms and non-clustered VANET.",
@@ -4707,7 +4784,9 @@
                 "recommendation"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG",
+                "cs.CY"
             ]
         ],
         "abstract": "This paper addresses the importance of Knowledge Structure (KS) and Knowledge Tracing (KT) in improving the recommendation of educational content in intelligent tutoring systems. The KS represents the relations between different Knowledge Components (KCs), while KT predicts a learner's success based on her past history. The contribution of this research includes proposing a KT model that incorporates the KS as a learnable parameter, enabling the discovery of the underlying KS from learner trajectories. The quality of the uncovered KS is assessed by using it to recommend content and evaluating the recommendation algorithm with simulated students.",
@@ -4992,7 +5071,8 @@
                 "X-Ray"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Medical image datasets are essential for training models used in computer-aided diagnosis, treatment planning, and medical research. However, some challenges are associated with these datasets, including variability in data distribution, data scarcity, and transfer learning issues when using models pre-trained from generic images. This work studies the effect of these challenges at the intra- and inter-domain level in few-shot learning scenarios with severe data imbalance. For this, we propose a methodology based on Siamese neural networks in which a series of techniques are integrated to mitigate the effects of data scarcity and distribution imbalance. Specifically, different initialization and data augmentation methods are analyzed, and four adaptations to Siamese networks of solutions to deal with imbalanced data are introduced, including data balancing and weighted loss, both separately and combined, and with a different balance of pairing ratios. Moreover, we also assess the inference process considering four classifiers, namely Histogram, $k$NN, SVM, and Random Forest. Evaluation is performed on three chest X-ray datasets with annotated cases of both positive and negative COVID-19 diagnoses. The accuracy of each technique proposed for the Siamese architecture is analyzed separately and their results are compared to those obtained using equivalent methods on a state-of-the-art CNN. We conclude that the introduced techniques offer promising improvements over the baseline in almost all cases, and that the selection of the technique may vary depending on the amount of data available and the level of imbalance.",
@@ -5273,7 +5353,8 @@
                 "Recommendation"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "In the one-class recommendation problem, it's required to make recommendations basing on users' implicit feedback, which is inferred from their action and inaction. Existing works obtain representations of users and items by encoding positive and negative interactions observed from training data. However, these efforts assume that all positive signals from implicit feedback reflect a fixed preference intensity, which is not realistic. Consequently, representations learned with these methods usually fail to capture informative entity features that reflect various preference intensities. In this paper, we propose a multi-tasking framework taking various preference intensities of each signal from implicit feedback into consideration. Representations of entities are required to satisfy the objective of each subtask simultaneously, making them more robust and generalizable. Furthermore, we incorporate attentive graph convolutional layers to explore high-order relationships in the user-item bipartite graph and dynamically capture the latent tendencies of users toward the items they interact with. Experimental results show that our method performs better than state-of-the-art methods by a large margin on three large-scale real-world benchmark datasets.",

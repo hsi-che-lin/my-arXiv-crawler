@@ -13,7 +13,8 @@
             ],
             [
                 "cs.AI",
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "Existing pedestrian attribute recognition (PAR) algorithms are mainly developed based on a static image, however, the performance is unreliable in challenging scenarios, such as heavy occlusion, motion blur, etc. In this work, we propose to understand human attributes using video frames that can fully use temporal information by fine-tuning a pre-trained multi-modal foundation model efficiently. Specifically, we formulate the video-based PAR as a vision-language fusion problem and adopt a pre-trained foundation model CLIP to extract the visual features. More importantly, we propose a novel spatiotemporal side-tuning strategy to achieve parameter-efficient optimization of the pre-trained vision foundation model. To better utilize the semantic information, we take the full attribute list that needs to be recognized as another input and transform the attribute words/phrases into the corresponding sentence via split, expand, and prompt operations. Then, the text encoder of CLIP is utilized for embedding processed attribute descriptions. The averaged visual tokens and text tokens are concatenated and fed into a fusion Transformer for multi-modal interactive learning. The enhanced tokens will be fed into a classification head for pedestrian attribute prediction. Extensive experiments on two large-scale video-based PAR datasets fully validated the effectiveness of our proposed framework. The source code of this paper is available at https://github.com/Event-AHU/OpenPAR.",
@@ -32,6 +33,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ],
             [
@@ -106,7 +108,9 @@
         "keywords": [
             [
                 "cs.LG",
-                "cs.CL"
+                "cs.CL",
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "Contrastive language-audio pretraining~(CLAP) has been developed to align the representations of audio and language, achieving remarkable performance in retrieval and classification tasks. However, current CLAP struggles to capture temporal information within audio and text features, presenting substantial limitations for tasks such as audio retrieval and generation. To address this gap, we introduce T-CLAP, a temporal-enhanced CLAP model. We use Large Language Models~(LLMs) and mixed-up strategies to generate temporal-contrastive captions for audio clips from extensive audio-text datasets. Subsequently, a new temporal-focused contrastive loss is designed to fine-tune the CLAP model by incorporating these synthetic data. We conduct comprehensive experiments and analysis in multiple downstream tasks. T-CLAP shows improved capability in capturing the temporal relationship of sound events and outperforms state-of-the-art models by a significant margin.",
@@ -177,7 +181,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "We propose a speech enhancement system for multitrack audio. The system will minimize auditory masking while allowing one to hear multiple simultaneous speakers. The system can be used in multiple communication scenarios e.g., teleconferencing, invoice gaming, and live streaming. The ITU-R BS.1387 Perceptual Evaluation of Audio Quality (PEAQ) model is used to evaluate the amount of masking in the audio signals. Different audio effects e.g., level balance, equalization, dynamic range compression, and spatialization are applied via an iterative Harmony searching algorithm that aims to minimize the masking. In the subjective listening test, the designed system can compete with mixes by professional sound engineers and outperforms mixes by existing auto-mixing systems.",
@@ -397,7 +402,9 @@
         "keywords": [
             [
                 "cs.LG",
-                "cs.CL"
+                "cs.CL",
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "Neural Machine Translation (NMT) is the task of translating a text from one language to another with the use of a trained neural network. Several existing works aim at incorporating external information into NMT models to improve or control predicted translations (e.g. sentiment, politeness, gender). In this work, we propose to improve translation quality by adding another external source of information: the automatically recognized emotion in the voice. This work is motivated by the assumption that each emotion is associated with a specific lexicon that can overlap between emotions. Our proposed method follows a two-stage procedure. At first, we select a state-of-the-art Speech Emotion Recognition (SER) model to predict dimensional emotion values from all input audio in the dataset. Then, we use these predicted emotions as source tokens added at the beginning of input texts to train our NMT model. We show that integrating emotion information, especially arousal, into NMT systems leads to better translations.",
@@ -451,7 +458,9 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.CL"
+                "cs.CL",
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "Automatic Speech Understanding (ASU) aims at human-like speech interpretation, providing nuanced intent, emotion, sentiment, and content understanding from speech and language (text) content conveyed in speech. Typically, training a robust ASU model relies heavily on acquiring large-scale, high-quality speech and associated transcriptions. However, it is often challenging to collect or use speech data for training ASU due to concerns such as privacy. To approach this setting of enabling ASU when speech (audio) modality is missing, we propose TI-ASU, using a pre-trained text-to-speech model to impute the missing speech. We report extensive experiments evaluating TI-ASU on various missing scales, both multi- and single-modality settings, and the use of LLMs. Our findings show that TI-ASU yields substantial benefits to improve ASU in scenarios where even up to 95% of training speech is missing. Moreover, we show that TI-ASU is adaptive to dropout training, improving model robustness in addressing missing speech during inference.",
@@ -470,6 +479,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.SI",
                 "cs.CL"
             ]
         ],
@@ -809,7 +819,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Artificial intelligence is currently a dominant force in shaping various aspects of the world. Machine learning is a sub-field in artificial intelligence. Feature scaling is one of the data pre-processing techniques that improves the performance of machine learning algorithms. The traditional feature scaling techniques are unsupervised where they do not have influence of the dependent variable in the scaling process. In this paper, we have presented a novel feature scaling technique named DTization that employs decision tree and robust scaler for supervised feature scaling. The proposed method utilizes decision tree to measure the feature importance and based on the importance, different features get scaled differently with the robust scaler algorithm. The proposed method has been extensively evaluated on ten classification and regression datasets on various evaluation matrices and the results show a noteworthy performance improvement compared to the traditional feature scaling methods.",
@@ -1090,6 +1101,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -1197,7 +1209,8 @@
                 "Synthesis"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "This paper presents the joint reference frame synthesis (RFS) and post-processing filter enhancement (PFE) for Versatile Video Coding (VVC), aiming to explore the combination of different neural network-based video coding (NNVC) tools to better utilize the hierarchical bi-directional coding structure of VVC. Both RFS and PFE utilize the Space-Time Enhancement Network (STENet), which receives two input frames with artifacts and produces two enhanced frames with suppressed artifacts, along with an intermediate synthesized frame. STENet comprises two pipelines, the synthesis pipeline and the enhancement pipeline, tailored for different purposes. During RFS, two reconstructed frames are sent into STENet's synthesis pipeline to synthesize a virtual reference frame, similar to the current to-be-coded frame. The synthesized frame serves as an additional reference frame inserted into the reference picture list (RPL). During PFE, two reconstructed frames are fed into STENet's enhancement pipeline to alleviate their artifacts and distortions, resulting in enhanced frames with reduced artifacts and distortions. To reduce inference complexity, we propose joint inference of RFS and PFE (JISE), achieved through a single execution of STENet. Integrated into the VVC reference software VTM-15.0, RFS, PFE, and JISE are coordinated within a novel Space-Time Enhancement Window (STEW) under Random Access (RA) configuration. The proposed method could achieve -7.34%/-17.21%/-16.65% PSNR-based BD-rate on average for three components under RA configuration.",
@@ -1217,7 +1230,8 @@
                 "Federated Learning"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Federated learning ensures the privacy of clients by conducting distributed training on individual client devices and sharing only the model weights with a central server. However, in real-world scenarios, the heterogeneity of data among clients necessitates appropriate personalization methods. In this paper, we aim to address this heterogeneity using a form of parameter decoupling known as representation learning. Representation learning divides deep learning models into 'base' and 'head' components. The base component, capturing common features across all clients, is shared with the server, while the head component, capturing unique features specific to individual clients, remains local. We propose a new representation learning-based approach that suggests decoupling the entire deep learning model into more densely divided parts with the application of suitable scheduling methods, which can benefit not only data heterogeneity but also class heterogeneity. In this paper, we compare and analyze two layer scheduling approaches, namely forward (\\textit{Vanilla}) and backward (\\textit{Anti}), in the context of data and class heterogeneity among clients. Our experimental results show that the proposed algorithm, when compared to existing personalized federated learning algorithms, achieves increased accuracy, especially under challenging conditions, while reducing computation costs.",
@@ -1239,7 +1253,8 @@
                 "vehicle"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Driving in an off-road environment is challenging for autonomous vehicles due to the complex and varied terrain. To ensure stable and efficient travel, the vehicle requires consideration and balancing of environmental factors, such as undulations, roughness, and obstacles, to generate optimal trajectories that can adapt to changing scenarios. However, traditional motion planners often utilize a fixed cost function for trajectory optimization, making it difficult to adapt to different driving strategies in challenging irregular terrains and uncommon scenarios. To address these issues, we propose an adaptive motion planner based on human-like cognition and cost evaluation for off-road driving. First, we construct a multi-layer map describing different features of off-road terrains, including terrain elevation, roughness, obstacle, and artificial potential field map. Subsequently, we employ a CNN-LSTM network to learn the trajectories planned by human drivers in various off-road scenarios. Then, based on human-like generated trajectories in different environments, we design a primitive-based trajectory planner that aims to mimic human trajectories and cost weight selection, generating trajectories that are consistent with the dynamics of off-road vehicles. Finally, we compute optimal cost weights and select and extend behavioral primitives to generate highly adaptive, stable, and efficient trajectories. We validate the effectiveness of the proposed method through experiments in a desert off-road environment with complex terrain and varying road conditions. The experimental results show that the proposed human-like motion planner has excellent adaptability to different off-road conditions. It shows real-time operation, greater stability, and more human-like planning ability in diverse and challenging scenarios.",
@@ -1322,7 +1337,8 @@
                 "vehicle"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Emerging data-driven approaches, such as deep reinforcement learning (DRL), aim at on-the-field learning of powertrain control policies that optimize fuel economy and other performance metrics. Indeed, they have shown great potential in this regard for individual vehicles on specific routes or drive cycles. However, for fleets of vehicles that must service a distribution of routes, DRL approaches struggle with learning stability issues that result in high variances and challenge their practical deployment. In this paper, we present a novel framework for shared learning among a fleet of vehicles through the use of a distilled group policy as the knowledge sharing mechanism for the policy learning computations at each vehicle. We detail the mathematical formulation that makes this possible. Several scenarios are considered to analyze the functionality, performance, and computational scalability of the framework with fleet size. Comparisons of the cumulative performance of fleets using our proposed shared learning approach with a baseline of individual learning agents and another state-of-the-art approach with a centralized learner show clear advantages to our approach. For example, we find a fleet average asymptotic improvement of 8.5 percent in fuel economy compared to the baseline while also improving on the metrics of acceleration error and shifting frequency for fleets serving a distribution of suburban routes. Furthermore, we include demonstrative results that show how the framework reduces variance within a fleet and also how it helps individual agents adapt better to new routes.",
@@ -1343,7 +1359,8 @@
                 "Federated Learning"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "To deal with heterogeneity resulting from label distribution skew and data scarcity in distributed machine learning scenarios, this paper proposes a novel Personalized Federated Learning (PFL) algorithm, named Federated Contrastive Representation Learning (FedCRL). FedCRL introduces contrastive representation learning (CRL) on shared representations to facilitate knowledge acquisition of clients. Specifically, both local model parameters and averaged values of local representations are considered as shareable information to the server, both of which are then aggregated globally. CRL is applied between local representations and global representations to regularize personalized training by drawing similar representations closer and separating dissimilar ones, thereby enhancing local models with external knowledge and avoiding being harmed by label distribution skew. Additionally, FedCRL adopts local aggregation between each local model and the global model to tackle data scarcity. A loss-wise weighting mechanism is introduced to guide the local aggregation using each local model's contrastive loss to coordinate the global model involvement in each client, thus helping clients with scarce data. Our simulations demonstrate FedCRL's effectiveness in mitigating label heterogeneity by achieving accuracy improvements over existing methods on datasets with varying degrees of label heterogeneity.",
@@ -1481,7 +1498,8 @@
                 "biometric"
             ],
             [
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "When decisions are made and when personal data is treated by automated processes, there is an expectation of fairness -- that members of different demographic groups receive equitable treatment. This expectation applies to biometric systems such as automatic speaker verification (ASV). We present a comparison of three candidate fairness metrics and extend previous work performed for face recognition, by examining differential performance across a range of different ASV operating points. Results show that the Gini Aggregation Rate for Biometric Equitability (GARBE) is the only one which meets three functional fairness measure criteria. Furthermore, a comprehensive evaluation of the fairness and verification performance of five state-of-the-art ASV systems is also presented. Our findings reveal a nuanced trade-off between fairness and verification accuracy underscoring the complex interplay between system design, demographic inclusiveness, and verification reliability.",
@@ -1615,7 +1633,8 @@
                 "clinical"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Background: Using artificial intelligence (AI) techniques for computational medical image analysis has shown promising results. However, colored images are often not readily available for AI analysis because of different coloring thresholds used across centers and physicians as well as the removal of clinical annotations. We aimed to develop an open-source tool that can adapt different color thresholds of HSV-colored medical images and remove annotations with a simple click. Materials and Methods: We built a function using MATLAB and used multi-center international shear wave elastography data (NCT 02638935) to test the function. We provide step-by-step instructions with accompanying code lines. Results: We demonstrate that the newly developed pre-processing function successfully removed letters and adapted different color thresholds of HSV-colored medical images. Conclusion: We developed an open-source tool for removing letters and adapting different color thresholds in HSV-colored medical images. We hope this contributes to advancing medical image processing for developing robust computational imaging algorithms using diverse multi-center big data. The open-source Matlab tool is available at https://github.com/cailiemed/image-threshold-adapting.",
@@ -1677,7 +1696,8 @@
                 "satellite"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Accurate and timely mapping of flood extent from high-resolution satellite imagery plays a crucial role in disaster management such as damage assessment and relief activities. However, current state-of-the-art solutions are based on U-Net, which can-not segment the flood pixels accurately due to the ambiguous pixels (e.g., tree canopies, clouds) that prevent a direct judgement from only the spectral features. Thanks to the digital elevation model (DEM) data readily available from sources such as United States Geological Survey (USGS), this work explores the use of an elevation map to improve flood extent mapping. We propose, EvaNet, an elevation-guided segmentation model based on the encoder-decoder architecture with two novel techniques: (1) a loss function encoding the physical law of gravity that if a location is flooded (resp. dry), then its adjacent locations with a lower (resp. higher) elevation must also be flooded (resp. dry); (2) a new (de)convolution operation that integrates the elevation map by a location sensitive gating mechanism to regulate how much spectral features flow through adjacent layers. Extensive experiments show that EvaNet significantly outperforms the U-Net baselines, and works as a perfect drop-in replacement for U-Net in existing solutions to flood extent mapping.",
@@ -1700,7 +1720,9 @@
             ],
             [
                 "cs.AI",
-                "cs.CV"
+                "cs.LG",
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Existing X-ray based pre-trained vision models are usually conducted on a relatively small-scale dataset (less than 500k samples) with limited resolution (e.g., 224 $\\times$ 224). However, the key to the success of self-supervised pre-training large models lies in massive training data, and maintaining high resolution in the field of X-ray images is the guarantee of effective solutions to difficult miscellaneous diseases. In this paper, we address these issues by proposing the first high-definition (1280 $\\times$ 1280) X-ray based pre-trained foundation vision model on our newly collected large-scale dataset which contains more than 1 million X-ray images. Our model follows the masked auto-encoder framework which takes the tokens after mask processing (with a high rate) is used as input, and the masked image patches are reconstructed by the Transformer encoder-decoder network. More importantly, we introduce a novel context-aware masking strategy that utilizes the chest contour as a boundary for adaptive masking operations. We validate the effectiveness of our model on two downstream tasks, including X-ray report generation and disease recognition. Extensive experiments demonstrate that our pre-trained medical foundation vision model achieves comparable or even new state-of-the-art performance on downstream benchmark datasets. The source code and pre-trained models of this paper will be released on https://github.com/Event-AHU/Medical_Image_Analysis.",
@@ -1741,7 +1763,8 @@
             ],
             [
                 "cs.AI",
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "In the era of the Internet of Things (IoT), objects connect through a dynamic network, empowered by technologies like 5G, enabling real-time data sharing. However, smart objects, notably autonomous vehicles, face challenges in critical local computations due to limited resources. Lightweight AI models offer a solution but struggle with diverse data distributions. To address this limitation, we propose a novel Multi-Stream Cellular Test-Time Adaptation (MSC-TTA) setup where models adapt on the fly to a dynamic environment divided into cells. Then, we propose a real-time adaptive student-teacher method that leverages the multiple streams available in each cell to quickly adapt to changing data distributions. We validate our methodology in the context of autonomous vehicles navigating across cells defined based on location and weather conditions. To facilitate future benchmarking, we release a new multi-stream large-scale synthetic semantic segmentation dataset, called DADE, and show that our multi-stream approach outperforms a single-stream baseline. We believe that our work will open research opportunities in the IoT and 5G eras, offering solutions for real-time model adaptation.",
@@ -1785,7 +1808,8 @@
                 "Attacks"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ],
             [
                 "ICLR"
@@ -1856,6 +1880,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -1877,7 +1902,8 @@
                 "health"
             ],
             [
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "Audio signals can reveal intimate details about a person's life, including their conversations, health status, emotions, location, and personal preferences. Unauthorized access or misuse of this information can have profound personal and social implications. In an era increasingly populated by devices capable of audio recording, safeguarding user privacy is a critical obligation. This work studies the ethical and privacy concerns in current audio classification systems. We discuss the challenges and research directions in designing privacy-preserving audio sensing systems. We propose privacy-preserving audio features that can be used to classify wide range of audio classes, while being privacy preserving.",
@@ -2046,7 +2072,8 @@
                 "physics"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Recent work has shown the promise of applying deep learning to enhance software processing of radio frequency (RF) signals. In parallel, hardware developments with quantum RF sensors based on Rydberg atoms are breaking longstanding barriers in frequency range, resolution, and sensitivity. In this paper, we describe our implementations of quantum-ready machine learning approaches for RF signal classification. Our primary objective is latency: while deep learning offers a more powerful computational paradigm, it also traditionally incurs latency overheads that hinder wider scale deployment. Our work spans three axes. (1) A novel continuous wavelet transform (CWT) based recurrent neural network (RNN) architecture that enables flexible online classification of RF signals on-the-fly with reduced sampling time. (2) Low-latency inference techniques for both GPU and CPU that span over 100x reductions in inference time, enabling real-time operation with sub-millisecond inference. (3) Quantum-readiness validated through application of our models to physics-based simulation of Rydberg atom QRF sensors. Altogether, our work bridges towards next-generation RF sensors that use quantum technology to surpass previous physical limits, paired with latency-optimized AI/ML software that is suitable for real-time deployment.",
@@ -2277,7 +2304,8 @@
                 "watermarking"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "AI-generated content has accelerated the topic of media synthesis, particularly Deepfake, which can manipulate our portraits for positive or malicious purposes. Before releasing these threatening face images, one promising forensics solution is the injection of robust watermarks to track their own provenance. However, we argue that current watermarking models, originally devised for genuine images, may harm the deployed Deepfake detectors when directly applied to forged images, since the watermarks are prone to overlap with the forgery signals used for detection. To bridge this gap, we thus propose AdvMark, on behalf of proactive forensics, to exploit the adversarial vulnerability of passive detectors for good. Specifically, AdvMark serves as a plug-and-play procedure for fine-tuning any robust watermarking into adversarial watermarking, to enhance the forensic detectability of watermarked images; meanwhile, the watermarks can still be extracted for provenance tracking. Extensive experiments demonstrate the effectiveness of the proposed AdvMark, leveraging robust watermarking to fool Deepfake detectors, which can help improve the accuracy of downstream Deepfake detection without tuning the in-the-wild detectors. We believe this work will shed some light on the harmless proactive forensics against Deepfake.",
@@ -2476,7 +2504,9 @@
             ],
             [
                 "cs.AI",
-                "cs.CV"
+                "cs.LG",
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "The MEDIQA-M3G 2024 challenge necessitates novel solutions for Multilingual & Multimodal Medical Answer Generation in dermatology (wai Yim et al., 2024a). This paper addresses the limitations of traditional methods by proposing a weakly supervised learning approach for open-ended medical question-answering (QA). Our system leverages readily available MEDIQA-M3G images via a VGG16-CNN-SVM model, enabling multilingual (English, Chinese, Spanish) learning of informative skin condition representations. Using pre-trained QA models, we further bridge the gap between visual and textual information through multimodal fusion. This approach tackles complex, open-ended questions even without predefined answer choices. We empower the generation of comprehensive answers by feeding the ViT-CLIP model with multiple responses alongside images. This work advances medical QA research, paving the way for clinical decision support systems and ultimately improving healthcare delivery.",
@@ -2548,7 +2578,8 @@
                 "disease"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Interpretable machine learning has emerged as central in leveraging artificial intelligence within high-stakes domains such as healthcare, where understanding the rationale behind model predictions is as critical as achieving high predictive accuracy. In this context, feature selection assumes a pivotal role in enhancing model interpretability by identifying the most important input features in black-box models. While random forests are frequently used in biomedicine for their remarkable performance on tabular datasets, the accuracy gained from aggregating decision trees comes at the expense of interpretability. Consequently, feature selection for enhancing interpretability in random forests has been extensively explored in supervised settings. However, its investigation in the unsupervised regime remains notably limited. To address this gap, the study introduces novel methods to construct feature graphs from unsupervised random forests and feature selection strategies to derive effective feature combinations from these graphs. Feature graphs are constructed for the entire dataset as well as individual clusters leveraging the parent-child node splits within the trees, such that feature centrality captures their relevance to the clustering task, while edge weights reflect the discriminating power of feature pairs. Graph-based feature selection methods are extensively evaluated on synthetic and benchmark datasets both in terms of their ability to reduce dimensionality while improving clustering performance, as well as to enhance model interpretability. An application on omics data for disease subtyping identifies the top features for each cluster, showcasing the potential of the proposed approach to enhance interpretability in clustering analyses and its utility in a real-world biomedical application.",
@@ -2596,7 +2627,8 @@
                 "diagnosis"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Multimodal fusion focuses on integrating information from multiple modalities with the goal of more accurate prediction, which has achieved remarkable progress in a wide range of scenarios, including autonomous driving and medical diagnosis. However, the reliability of multimodal fusion remains largely unexplored especially under low-quality data settings. This paper surveys the common challenges and recent advances of multimodal fusion in the wild and presents them in a comprehensive taxonomy. From a data-centric view, we identify four main challenges that are faced by multimodal fusion on low-quality data, namely (1) noisy multimodal data that are contaminated with heterogeneous noises, (2) incomplete multimodal data that some modalities are missing, (3) imbalanced multimodal data that the qualities or properties of different modalities are significantly different and (4) quality-varying multimodal data that the quality of each modality dynamically changes with respect to different samples. This new taxonomy will enable researchers to understand the state of the field and identify several potential directions. We also provide discussion for the open problems in this field together with interesting future research directions.",
@@ -2681,7 +2713,8 @@
             ],
             [
                 "cs.AI",
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Limited-angle and sparse-view computed tomography (LACT and SVCT) are crucial for expanding the scope of X-ray CT applications. However, they face challenges due to incomplete data acquisition, resulting in diverse artifacts in the reconstructed CT images. Emerging implicit neural representation (INR) techniques, such as NeRF, NeAT, and NeRP, have shown promise in under-determined CT imaging reconstruction tasks. However, the unsupervised nature of INR architecture imposes limited constraints on the solution space, particularly for the highly ill-posed reconstruction task posed by LACT and ultra-SVCT. In this study, we introduce the Diffusion Prior Driven Neural Representation (DPER), an advanced unsupervised framework designed to address the exceptionally ill-posed CT reconstruction inverse problems. DPER adopts the Half Quadratic Splitting (HQS) algorithm to decompose the inverse problem into data fidelity and distribution prior sub-problems. The two sub-problems are respectively addressed by INR reconstruction scheme and pre-trained score-based diffusion model. This combination initially preserves the implicit image local consistency prior from INR. Additionally, it effectively augments the feasibility of the solution space for the inverse problem through the generative diffusion model, resulting in increased stability and precision in the solutions. We conduct comprehensive experiments to evaluate the performance of DPER on LACT and ultra-SVCT reconstruction with two public datasets (AAPM and LIDC). The results show that our method outperforms the state-of-the-art reconstruction methods on in-domain datasets, while achieving significant performance improvements on out-of-domain datasets.",
@@ -2841,7 +2874,9 @@
                 "Forecasting"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG",
+                "cs.SI"
             ]
         ],
         "abstract": "Modeling the dynamics of interacting entities using an evolving graph is an essential problem in fields such as financial networks and e-commerce. Traditional approaches focus primarily on pairwise interactions, limiting their ability to capture the complexity of real-world interactions involving multiple entities and their intricate relationship structures. This work addresses the problem of forecasting higher-order interaction events in multi-relational recursive hypergraphs. This is done using a dynamic graph representation learning framework that can capture complex relationships involving multiple entities. The proposed model, \\textit{Relational Recursive Hyperedge Temporal Point Process} (RRHyperTPP) uses an encoder that learns a dynamic node representation based on the historical interaction patterns and then a hyperedge link prediction based decoder to model the event's occurrence. These learned representations are then used for downstream tasks involving forecasting the type and time of interactions. The main challenge in learning from hyperedge events is that the number of possible hyperedges grows exponentially with the number of nodes in the network. This will make the computation of negative log-likelihood of the temporal point process expensive, as the calculation of survival function requires a summation over all possible hyperedges. In our work, we use noise contrastive estimation to learn the parameters of our model, and we have experimentally shown that our models perform better than previous state-of-the-art methods for interaction forecasting.",

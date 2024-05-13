@@ -9,7 +9,8 @@
                 "vision language"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "Transformer-based vision models typically tokenize images into fixed-size square patches as input units, which lacks the adaptability to image content and overlooks the inherent pixel grouping structure. Inspired by the subword tokenization widely adopted in language models, we propose an image tokenizer at a subobject level, where the subobjects are represented by semantically meaningful image segments obtained by segmentation models (e.g., segment anything models). To implement a learning system based on subobject tokenization, we first introduced a Direct Segment Anything Model (DirectSAM) that efficiently produces comprehensive segmentation of subobjects, then embed subobjects into compact latent vectors and fed them into a large language model for vision language learning. Empirical results demonstrated that our subobject-level tokenization significantly facilitates efficient learning of translating images into object and attribute descriptions compared to the traditional patch-level tokenization. Codes and models are open-sourced at https://github.com/ChenDelong1999/subobjects.",
@@ -114,7 +115,8 @@
                 "VLMs"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "In pursuit of more inclusive Vision-Language Models (VLMs), this study introduces a Large Multilingual Multimodal Model called PALO. PALO offers visual reasoning capabilities in 10 major languages, including English, Chinese, Hindi, Spanish, French, Arabic, Bengali, Russian, Urdu, and Japanese, that span a total of ~5B people (65% of the world population). Our approach involves a semi-automated translation approach to adapt the multimodal instruction dataset from English to the target languages using a fine-tuned Large Language Model, thereby ensuring high linguistic fidelity while allowing scalability due to minimal manual effort. The incorporation of diverse instruction sets helps us boost overall performance across multiple languages especially those that are underrepresented like Hindi, Arabic, Bengali, and Urdu. The resulting models are trained across three scales (1.7B, 7B and 13B parameters) to show the generalization and scalability where we observe substantial improvements compared to strong baselines. We also propose the first multilingual multimodal benchmark for the forthcoming approaches to evaluate their vision-language reasoning capabilities across languages. Code: https://github.com/mbzuai-oryx/PALO.",
@@ -135,7 +137,8 @@
                 "VLMs"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "Recent years have witnessed a significant increase in the performance of Vision and Language tasks. Foundational Vision-Language Models (VLMs), such as CLIP, have been leveraged in multiple settings and demonstrated remarkable performance across several tasks. Such models excel at object-centric recognition yet learn text representations that seem invariant to word order, failing to compose known concepts in novel ways. However, no evidence exists that any VLM, including large-scale single-stream models such as GPT-4V, identifies compositions successfully. In this paper, we introduce a framework to significantly improve the ability of existing models to encode compositional language, with over 10% absolute improvement on compositionality benchmarks, while maintaining or improving the performance on standard object-recognition and retrieval benchmarks. Our code and pre-trained models are publicly available at https://github.com/netflix/clove.",
@@ -198,7 +201,8 @@
             ],
             [
                 "cs.AI",
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "Recently, interpreting complex charts with logical reasoning have emerged as challenges due to the development of vision-language models. A prior state-of-the-art (SOTA) model, Deplot, has presented an end-to-end method that leverages the vision-language model to convert charts into table format utilizing Large Language Models (LLMs) for reasoning. However, unlike natural images, charts contain a mix of essential and irrelevant information required for chart reasoning, and we discover that this characteristic can lower the performance of chart-to-table extraction. In this paper, we introduce SIMPLOT, a method designed to extract only the elements necessary for chart reasoning. The proposed method involves two steps: 1) training to mimic a simple plot that contains only the essential information from a complex chart for table extraction, followed by 2) performing reasoning based on the table. Our model enables accurate chart reasoning without the need for additional annotations or datasets, and its effectiveness is demonstrated through various experiments. Furthermore, we propose a novel prompt addressing the shortcoming of recent SOTA model, ignoring visual attributes such as color. Our source code is available at https://github.com/sangwu99/Simplot.",
@@ -303,6 +307,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ],
             [
@@ -532,7 +537,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ],
             [
                 "AAAI"
@@ -959,7 +965,9 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.CL"
+                "cs.CL",
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "We often verbally express emotions in a multifaceted manner, they may vary in their intensities and may be expressed not just as a single but as a mixture of emotions. This wide spectrum of emotions is well-studied in the structural model of emotions, which represents variety of emotions as derivative products of primary emotions with varying degrees of intensity. In this paper, we propose an emotional text-to-speech design to simulate a wider spectrum of emotions grounded on the structural model. Our proposed design, Daisy-TTS, incorporates a prosody encoder to learn emotionally-separable prosody embedding as a proxy for emotion. This emotion representation allows the model to simulate: (1) Primary emotions, as learned from the training samples, (2) Secondary emotions, as a mixture of primary emotions, (3) Intensity-level, by scaling the emotion embedding, and (4) Emotions polarity, by negating the emotion embedding. Through a series of perceptual evaluations, Daisy-TTS demonstrated overall higher emotional speech naturalness and emotion perceiveability compared to the baseline.",
@@ -1043,7 +1051,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "Large Multimodal Models (LMMs) often suffer from multimodal hallucinations, wherein they may create content that is not present in the visual inputs. In this paper, we explore a new angle of this issue: overly detailed training data hinders the model's ability to timely terminate generation, leading to continued outputs beyond visual perception limits. By investigating how the model decides to terminate generation with EOS, the special end-of-sentence token, we find that the model assesses the completeness of the entire sequence by comparing the generated text with the image. This observation suggests that the model possesses an inherent potential of making proper EOS decisions based on its visual perception to avoid overly lengthy outputs. To take advantage of such potential, we explore two methods to mitigate multimodal hallucinations: a training objective that enables the model to reduce hallucinations by learning from regular instruction data, and a data filtering strategy to prevent harmful training data from exacerbating model hallucinations. Both methods significantly improve the hallucination performance of LMMs, without requiring any additional data or knowledge.",
@@ -1061,6 +1070,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -1081,6 +1091,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -1324,6 +1335,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -1379,6 +1391,8 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
+                "cs.CY",
                 "cs.CL"
             ]
         ],
@@ -1524,6 +1538,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -1543,7 +1558,9 @@
         "keywords": [
             [
                 "cs.AI",
-                "cs.CV"
+                "cs.LG",
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "Recent advancements in Large Multimodal Models (LMMs) have shown promising results in mathematical reasoning within visual contexts, with models approaching human-level performance on existing benchmarks such as MathVista. However, we observe significant limitations in the diversity of questions and breadth of subjects covered by these benchmarks. To address this issue, we present the MATH-Vision (MATH-V) dataset, a meticulously curated collection of 3,040 high-quality mathematical problems with visual contexts sourced from real math competitions. Spanning 16 distinct mathematical disciplines and graded across 5 levels of difficulty, our dataset provides a comprehensive and diverse set of challenges for evaluating the mathematical reasoning abilities of LMMs. Through extensive experimentation, we unveil a notable performance gap between current LMMs and human performance on MATH-V, underscoring the imperative for further advancements in LMMs. Moreover, our detailed categorization allows for a thorough error analysis of LMMs, offering valuable insights to guide future research and development. The project is available at https://mathvision-cuhk.github.io",
@@ -1598,6 +1615,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -1653,6 +1671,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -1690,6 +1709,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -1709,6 +1729,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -1746,6 +1767,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -1838,6 +1860,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -1857,6 +1880,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -1895,6 +1919,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -1932,7 +1957,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "Current visual question answering (VQA) models tend to be trained and evaluated on image-question pairs in isolation. However, the questions people ask are dependent on their informational needs and prior knowledge about the image content. To evaluate how situating images within naturalistic contexts shapes visual questions, we introduce CommVQA, a VQA dataset consisting of images, image descriptions, real-world communicative scenarios where the image might appear (e.g., a travel website), and follow-up questions and answers conditioned on the scenario. We show that CommVQA poses a challenge for current models. Providing contextual information to VQA models improves performance broadly, highlighting the relevance of situating systems within a communicative scenario.",
@@ -1968,6 +1994,7 @@
         "keywords": [
             [
                 "cs.LG",
+                "cs.CY",
                 "cs.CL"
             ]
         ],
@@ -1986,7 +2013,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ],
             [
                 "AAAI"
@@ -2044,6 +2072,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -2097,6 +2126,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -2188,6 +2218,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -2227,6 +2258,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -2283,7 +2315,9 @@
         "keywords": [
             [
                 "cs.AI",
-                "cs.SD"
+                "cs.LG",
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "Sentiment analysis is a continuously explored area of text processing that deals with the computational analysis of opinions, sentiments, and subjectivity of text. However, this idea is not limited to text and speech, in fact, it could be applied to other modalities. In reality, humans do not express themselves in text as deeply as they do in music. The ability of a computational model to interpret musical emotions is largely unexplored and could have implications and uses in therapy and musical queuing. In this paper, two individual tasks are addressed. This study seeks to (1) predict the emotion of a musical clip over time and (2) determine the next emotion value after the music in a time series to ensure seamless transitions. Utilizing data from the Emotions in Music Database, which contains clips of songs selected from the Free Music Archive annotated with levels of valence and arousal as reported on Russel's circumplex model of affect by multiple volunteers, models are trained for both tasks. Overall, the performance of these models reflected that they were able to perform the tasks they were designed for effectively and accurately.",
@@ -2405,7 +2439,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "The existing work on the distributed training of machine learning (ML) models has consistently overlooked the distribution of the achieved learning quality, focusing instead on its average value. This leads to a poor dependability}of the resulting ML models, whose performance may be much worse than expected. We fill this gap by proposing DepL, a framework for dependable learning orchestration, able to make high-quality, efficient decisions on (i) the data to leverage for learning, (ii) the models to use and when to switch among them, and (iii) the clusters of nodes, and the resources thereof, to exploit. For concreteness, we consider as possible available models a full DNN and its compressed versions. Unlike previous studies, DepL guarantees that a target learning quality is reached with a target probability, while keeping the training cost at a minimum. We prove that DepL has constant competitive ratio and polynomial complexity, and show that it outperforms the state-of-the-art by over 27% and closely matches the optimum.",
@@ -2504,7 +2539,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "This paper considers the hidden-action model of the principal-agent problem, in which a principal incentivizes an agent to work on a project using a contract. We investigate whether contracts with bounded payments are learnable and approximately optimal. Our main results are two learning algorithms that can find a nearly optimal bounded contract using a polynomial number of queries, under two standard assumptions in the literature: a costlier action for the agent leads to a better outcome distribution for the principal, and the agent's cost/effort has diminishing returns. Our polynomial query complexity upper bound shows that standard assumptions are sufficient for achieving an exponential improvement upon the known lower bound for general instances. Unlike the existing algorithms, which relied on discretizing the contract space, our algorithms directly learn the underlying outcome distributions. As for the approximate optimality of bounded contracts, we find that they could be far from optimal in terms of multiplicative or additive approximation, but satisfy a notion of mixed approximation.",
@@ -2562,7 +2598,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "The varying significance of distinct primitive behaviors during the policy learning process has been overlooked by prior model-free RL algorithms. Leveraging this insight, we explore the causal relationship between different action dimensions and rewards to evaluate the significance of various primitive behaviors during training. We introduce a causality-aware entropy term that effectively identifies and prioritizes actions with high potential impacts for efficient exploration. Furthermore, to prevent excessive focus on specific primitive behaviors, we analyze the gradient dormancy phenomenon and introduce a dormancy-guided reset mechanism to further enhance the efficacy of our method. Our proposed algorithm, ACE: Off-policy Actor-critic with Causality-aware Entropy regularization, demonstrates a substantial performance advantage across 29 diverse continuous control tasks spanning 7 domains compared to model-free RL baselines, which underscores the effectiveness, versatility, and efficient sample efficiency of our approach. Benchmark results and videos are available at https://ace-rl.github.io/.",
@@ -2664,7 +2701,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Although adversarial training has been the state-of-the-art approach to defend against adversarial examples (AEs), they suffer from a robustness-accuracy trade-off. In this work, we revisit representation-based invariance regularization to learn discriminative yet adversarially invariant representations, aiming to mitigate this trade-off. We empirically identify two key issues hindering invariance regularization: (1) a \"gradient conflict\" between invariance loss and classification objectives, indicating the existence of \"collapsing solutions,\" and (2) the mixture distribution problem arising from diverged distributions of clean and adversarial inputs. To address these issues, we propose Asymmetrically Representation-regularized Adversarial Training (AR-AT), which incorporates a stop-gradient operation and a pre-dictor in the invariance loss to avoid \"collapsing solutions,\" inspired by a recent non-contrastive self-supervised learning approach, and a split-BatchNorm (BN) structure to resolve the mixture distribution problem. Our method significantly improves the robustness-accuracy trade-off by learning adversarially invariant representations without sacrificing discriminative power. Furthermore, we discuss the relevance of our findings to knowledge-distillation-based defense methods, contributing to a deeper understanding of their relative successes.",
@@ -2681,7 +2719,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "In interactive systems, actions are often correlated, presenting an opportunity for more sample-efficient off-policy evaluation (OPE) and learning (OPL) in large action spaces. We introduce a unified Bayesian framework to capture these correlations through structured and informative priors. In this framework, we propose sDM, a generic Bayesian approach designed for OPE and OPL, grounded in both algorithmic and theoretical foundations. Notably, sDM leverages action correlations without compromising computational efficiency. Moreover, inspired by online Bayesian bandits, we introduce Bayesian metrics that assess the average performance of algorithms across multiple problem instances, deviating from the conventional worst-case assessments. We analyze sDM in OPE and OPL, highlighting the benefits of leveraging action correlations. Empirical evidence showcases the strong performance of sDM.",
@@ -2720,7 +2759,8 @@
             ],
             [
                 "cs.LG",
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ],
             [
                 "ICASSP"
@@ -2742,7 +2782,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "We study off-policy evaluation (OPE) in partially observable environments with complex observations, with the goal of developing estimators whose guarantee avoids exponential dependence on the horizon. While such estimators exist for MDPs and POMDPs can be converted to history-based MDPs, their estimation errors depend on the state-density ratio for MDPs which becomes history ratios after conversion, an exponential object. Recently, Uehara et al. (2022) proposed future-dependent value functions as a promising framework to address this issue, where the guarantee for memoryless policies depends on the density ratio over the latent state space. However, it also depends on the boundedness of the future-dependent value function and other related quantities, which we show could be exponential-in-length and thus erasing the advantage of the method. In this paper, we discover novel coverage assumptions tailored to the structure of POMDPs, such as outcome coverage and belief coverage. These assumptions not only enable polynomial bounds on the aforementioned quantities, but also lead to the discovery of new algorithms with complementary properties.",
@@ -2760,7 +2801,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "A problem of incorporating the expert rules into machine learning models for extending the concept-based learning is formulated in the paper. It is proposed how to combine logical rules and neural networks predicting the concept probabilities. The first idea behind the combination is to form constraints for a joint probability distribution over all combinations of concept values to satisfy the expert rules. The second idea is to represent a feasible set of probability distributions in the form of a convex polytope and to use its vertices or faces. We provide several approaches for solving the stated problem and for training neural networks which guarantee that the output probabilities of concepts would not violate the expert rules. The solution of the problem can be viewed as a way for combining the inductive and deductive learning. Expert rules are used in a broader sense when any logical function that connects concepts and class labels or just concepts with each other can be regarded as a rule. This feature significantly expands the class of the proposed results. Numerical examples illustrate the approaches. The code of proposed algorithms is publicly available.",
@@ -2811,7 +2853,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Most leading implementations of black-box variational inference (BBVI) are based on optimizing a stochastic evidence lower bound (ELBO). But such approaches to BBVI often converge slowly due to the high variance of their gradient estimates. In this work, we propose batch and match (BaM), an alternative approach to BBVI based on a score-based divergence. Notably, this score-based divergence can be optimized by a closed-form proximal update for Gaussian variational families with full covariance matrices. We analyze the convergence of BaM when the target distribution is Gaussian, and we prove that in the limit of infinite batch size the variational parameter updates converge exponentially quickly to the target mean and covariance. We also evaluate the performance of BaM on Gaussian and non-Gaussian target distributions that arise from posterior inference in hierarchical and deep generative models. In these experiments, we find that BaM typically converges in fewer (and sometimes significantly fewer) gradient evaluations than leading implementations of BBVI based on ELBO maximization.",
@@ -2830,7 +2873,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "The purpose of this paper is to look into how central notions in statistical learning theory, such as realisability, generalise under the assumption that train and test distribution are issued from the same credal set, i.e., a convex set of probability distributions. This can be considered as a first step towards a more general treatment of statistical learning under epistemic uncertainty.",
@@ -2865,7 +2909,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Manual optimization of traffic light cycles is a complex and time-consuming task, necessitating the development of automated solutions. In this paper, we propose the application of reinforcement learning to optimize traffic light cycles in real-time. We present a case study using the Simulation Urban Mobility simulator to train a Deep Q-Network algorithm. The experimental results showed 44.16% decrease in the average number of Emergency stops, showing the potential of our approach to reduce traffic congestion and improve traffic flow. Furthermore, we discuss avenues for future research and enhancements to the reinforcement learning model.",
@@ -2886,6 +2931,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ],
             [
@@ -2924,7 +2970,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "The recent increase in renewable energy penetration at the distribution level introduces a multi-directional power flow that outdated traditional fault location techniques. To this extent, the development of new methods is needed to ensure fast and accurate fault localization and, hence, strengthen power system reliability. This paper proposes a data-driven ground fault location method for the power distribution system. An 11-bus 20 kV power system is modeled in Matlab/Simulink to simulate ground faults. The faults are generated at different locations and under various system operational states. Time-domain faulted three-phase voltages at the system substation are then analyzed with discrete wavelet transform. Statistical quantities of the processed data are eventually used to train an Artificial Neural Network (ANN) to find a mapping between computed voltage features and faults. Specifically, three ANNs allow the prediction of faulted phase, faulted branch, and fault distance from the system substation separately. According to the results, the method shows good potential, with a total relative error of 0,4% for fault distance prediction. The method is applied to datasets with unknown system states to test robustness.",
@@ -3030,7 +3077,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.CY"
             ]
         ],
         "abstract": "The growing availability of generative AI technologies such as large language models (LLMs) has significant implications for creative work. This paper explores twofold aspects of integrating LLMs into the creative process - the divergence stage of idea generation, and the convergence stage of evaluation and selection of ideas. We devised a collaborative group-AI Brainwriting ideation framework, which incorporated an LLM as an enhancement into the group ideation process, and evaluated the idea generation process and the resulted solution space. To assess the potential of using LLMs in the idea evaluation process, we design an evaluation engine and compared it to idea ratings assigned by three expert and six novice evaluators. Our findings suggest that integrating LLM in Brainwriting could enhance both the ideation process and its outcome. We also provide evidence that LLMs can support idea evaluation. We conclude by discussing implications for HCI education and practice.",
@@ -3101,7 +3149,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.CY"
             ]
         ],
         "abstract": "This study investigates the acceptability of different artificial intelligence (AI) applications in education from a multi-stakeholder perspective, including students, teachers, and parents. Acknowledging the transformative potential of AI in education, it addresses concerns related to data privacy, AI agency, transparency, explainability and the ethical deployment of AI. Through a vignette methodology, participants were presented with four scenarios where AI's agency, transparency, explainability, and privacy were manipulated. After each scenario, participants completed a survey that captured their perceptions of AI's global utility, individual usefulness, justice, confidence, risk, and intention to use each scenario's AI if available. The data collection comprising a final sample of 1198 multi-stakeholder participants was distributed through a partner institution and social media campaigns and focused on individual responses to four AI use cases. A mediation analysis of the data indicated that acceptance and trust in AI varies significantly across stakeholder groups. We found that the key mediators between high and low levels of AI's agency, transparency, and explainability, as well as the intention to use the different educational AI, included perceived global utility, justice, and confidence. The study highlights that the acceptance of AI in education is a nuanced and multifaceted issue that requires careful consideration of specific AI applications and their characteristics, in addition to the diverse stakeholders' perceptions.",
@@ -3450,7 +3499,8 @@
             ],
             [
                 "cs.AI",
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "Rapid progress in high-level task planning and code generation for open-world robot manipulation has been witnessed in Embodied AI. However, previous studies put much effort into general common sense reasoning and task planning capabilities of large-scale language or multi-modal models, relatively little effort on ensuring the deployability of generated code on real robots, and other fundamental components of autonomous robot systems including robot perception, motion planning, and control. To bridge this ``ideal-to-real'' gap, this paper presents \\textbf{RobotScript}, a platform for 1) a deployable robot manipulation pipeline powered by code generation; and 2) a code generation benchmark for robot manipulation tasks in free-form natural language. The RobotScript platform addresses this gap by emphasizing the unified interface with both simulation and real robots, based on abstraction from the Robot Operating System (ROS), ensuring syntax compliance and simulation validation with Gazebo. We demonstrate the adaptability of our code generation framework across multiple robot embodiments, including the Franka and UR5 robot arms, and multiple grippers. Additionally, our benchmark assesses reasoning abilities for physical space and constraints, highlighting the differences between GPT-3.5, GPT-4, and Gemini in handling complex physical interactions. Finally, we present a thorough evaluation on the whole system, exploring how each module in the pipeline: code generation, perception, motion planning, and even object geometric properties, impact the overall performance of the system.",
@@ -3494,6 +3544,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -3565,6 +3616,8 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
+                "cs.CY",
                 "cs.CV"
             ]
         ],
@@ -3588,6 +3641,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -3756,6 +3810,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -3779,6 +3834,8 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
+                "cs.CY",
                 "cs.CL"
             ]
         ],
@@ -3821,7 +3878,8 @@
                 "graph"
             ],
             [
-                "cs.LG"
+                "cs.LG",
+                "cs.SI"
             ]
         ],
         "abstract": "Identifying frequent subgraphs, also called network motifs, is crucial in analyzing and predicting properties of real-world networks. However, finding large commonly-occurring motifs remains a challenging problem not only due to its NP-hard subroutine of subgraph counting, but also the exponential growth of the number of possible subgraphs patterns. Here we present Subgraph Pattern Miner (SPMiner), a novel neural approach for approximately finding frequent subgraphs in a large target graph. SPMiner combines graph neural networks, order embedding space, and an efficient search strategy to identify network subgraph patterns that appear most frequently in the target graph. SPMiner first decomposes the target graph into many overlapping subgraphs and then encodes each subgraph into an order embedding space. SPMiner then uses a monotonic walk in the order embedding space to identify frequent motifs. Compared to existing approaches and possible neural alternatives, SPMiner is more accurate, faster, and more scalable. For 5- and 6-node motifs, we show that SPMiner can almost perfectly identify the most frequent motifs while being 100x faster than exact enumeration methods. In addition, SPMiner can also reliably identify frequent 10-node motifs, which is well beyond the size limit of exact enumeration approaches. And last, we show that SPMiner can find large up to 20 node motifs with 10-100x higher frequency than those found by current approximate methods.",
@@ -3861,7 +3919,8 @@
                 "robotics"
             ],
             [
-                "cs.SI"
+                "cs.SI",
+                "cs.CY"
             ]
         ],
         "abstract": "From fake accounts on social media and generative-AI bots such as ChatGPT to high-frequency trading algorithms on financial markets and self-driving vehicles on the streets, robots, bots, and algorithms are proliferating and permeating our communication channels, social interactions, economic transactions, and transportation arteries. Networks of multiple interdependent and interacting humans and autonomous machines constitute complex adaptive social systems where the collective outcomes cannot be simply deduced from either human or machine behavior alone. Under this paradigm, we review recent experimental, theoretical, and observational research from across a range of disciplines - robotics, human-computer interaction, web science, complexity science, computational social science, finance, economics, political science, social psychology, and sociology. We identify general dynamics and patterns in situations of competition, coordination, cooperation, contagion, and collective decision-making, and contextualize them in four prominent existing human-machine communities: high-frequency trading markets, the social media platform formerly known as Twitter, the open-collaboration encyclopedia Wikipedia, and the news aggregation and discussion community Reddit. We conclude with suggestions for the research, design, and governance of human-machine social systems, which are necessary to reduce misinformation, prevent financial crashes, improve road safety, overcome labor market disruptions, and enable a better human future.",
@@ -3969,7 +4028,8 @@
                 "trajectory"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Earthwork-related locations (ERLs), such as construction sites, earth dumping ground, and concrete mixing stations, are major sources of urban dust pollution (particulate matters). The effective management of ERLs is crucial and requires timely and efficient tracking of these locations throughout the city. This work aims to identify and classify urban ERLs using GPS trajectory data of over 16,000 construction waste hauling trucks (CWHTs), as well as 58 urban features encompassing geographic, land cover, POI and transport dimensions. We compare several machine learning models and examine the impact of various spatial-temporal features on classification performance using real-world data in Chengdu, China. The results demonstrate that 77.8% classification accuracy can be achieved with a limited number of features. This classification framework was implemented in the Alpha MAPS system in Chengdu, which has successfully identified 724 construction cites/earth dumping ground, 48 concrete mixing stations, and 80 truck parking locations in the city during December 2023, which has enabled local authority to effectively manage urban dust pollution at low personnel costs.",
@@ -3990,7 +4050,8 @@
                 "Graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Credit card fraud poses a significant threat to the economy. While Graph Neural Network (GNN)-based fraud detection methods perform well, they often overlook the causal effect of a node's local structure on predictions. This paper introduces a novel method for credit card fraud detection, the \\textbf{\\underline{Ca}}usal \\textbf{\\underline{T}}emporal \\textbf{\\underline{G}}raph \\textbf{\\underline{N}}eural \\textbf{N}etwork (CaT-GNN), which leverages causal invariant learning to reveal inherent correlations within transaction data. By decomposing the problem into discovery and intervention phases, CaT-GNN identifies causal nodes within the transaction graph and applies a causal mixup strategy to enhance the model's robustness and interpretability. CaT-GNN consists of two key components: Causal-Inspector and Causal-Intervener. The Causal-Inspector utilizes attention weights in the temporal attention mechanism to identify causal and environment nodes without introducing additional parameters. Subsequently, the Causal-Intervener performs a causal mixup enhancement on environment nodes based on the set of nodes. Evaluated on three datasets, including a private financial dataset and two public datasets, CaT-GNN demonstrates superior performance over existing state-of-the-art methods. Our findings highlight the potential of integrating causal reasoning with graph neural networks to improve fraud detection capabilities in financial transactions.",
@@ -4032,7 +4093,8 @@
                 "depth"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Despite the widespread adoption of prompting, prompt tuning and prefix-tuning of transformer models, our theoretical understanding of these fine-tuning methods remains limited. A key question is whether one can arbitrarily modify the behavior of pretrained model by prompting or prefix-tuning it. Formally, whether prompting and prefix-tuning a pretrained model can universally approximate sequence-to-sequence functions. This paper answers in the affirmative and demonstrates that much smaller pretrained models than previously thought can be universal approximators when prefixed. In fact, the attention mechanism is uniquely suited for universal approximation with prefix-tuning a single attention head being sufficient to approximate any continuous function. Moreover, any sequence-to-sequence function can be approximated by prefixing a transformer with depth linear in the sequence length. Beyond these density-type results, we also offer Jackson-type bounds on the length of the prefix needed to approximate a function to a desired precision.",
@@ -4053,7 +4115,8 @@
                 "graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Bayesian causal inference, i.e., inferring a posterior over causal models for the use in downstream causal reasoning tasks, poses a hard computational inference problem that is little explored in literature. In this work, we combine techniques from order-based MCMC structure learning with recent advances in gradient-based graph learning into an effective Bayesian causal inference framework. Specifically, we decompose the problem of inferring the causal structure into (i) inferring a topological order over variables and (ii) inferring the parent sets for each variable. When limiting the number of parents per variable, we can exactly marginalise over the parent sets in polynomial time. We further use Gaussian processes to model the unknown causal mechanisms, which also allows their exact marginalisation. This introduces a Rao-Blackwellization scheme, where all components are eliminated from the model, except for the causal order, for which we learn a distribution via gradient-based optimisation. The combination of Rao-Blackwellization with our sequential inference procedure for causal orders yields state-of-the-art on linear and non-linear additive noise benchmarks with scale-free and Erdos-Renyi graph structures.",
@@ -4079,6 +4142,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ],
             [
@@ -4131,7 +4195,8 @@
                 "federated learning"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "This research investigates the enhancement of knowledge distillation (KD) processes in pre-trained models, an emerging field in knowledge transfer with significant implications for distributed training and federated learning environments. These environments benefit from reduced communication demands and accommodate various model architectures. Despite the adoption of numerous KD approaches for transferring knowledge among pre-trained models, a comprehensive understanding of KD's application in these scenarios is lacking. Our study conducts an extensive comparison of multiple KD techniques, including standard KD, tuned KD (via optimized temperature and weight parameters), deep mutual learning, and data partitioning KD. We assess these methods across various data distribution strategies to identify the most effective contexts for each. Through detailed examination of hyperparameter tuning, informed by extensive grid search evaluations, we pinpoint when adjustments are crucial to enhance model performance. This paper sheds light on optimal hyperparameter settings for distinct data partitioning scenarios and investigates KD's role in improving federated learning by minimizing communication rounds and expediting the training process. By filling a notable void in current research, our findings serve as a practical framework for leveraging KD in pre-trained models within collaborative and federated learning frameworks.",
@@ -4172,7 +4237,9 @@
                 "federated learning"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG",
+                "cs.CY"
             ]
         ],
         "abstract": "Current approaches to group fairness in federated learning assume the existence of predefined and labeled sensitive groups during training. However, due to factors ranging from emerging regulations to dynamics and location-dependency of protected groups, this assumption may be unsuitable in many real-world scenarios. In this work, we propose a new approach to guarantee group fairness that does not rely on any predefined definition of sensitive groups or additional labels. Our objective allows the federation to learn a Pareto efficient global model ensuring worst-case group fairness and it enables, via a single hyper-parameter, trade-offs between fairness and utility, subject only to a group size constraint. This implies that any sufficiently large subset of the population is guaranteed to receive at least a minimum level of utility performance from the model. The proposed objective encompasses existing approaches as special cases, such as empirical risk minimization and subgroup robustness objectives from centralized machine learning. We provide an algorithm to solve this problem in federation that enjoys convergence and excess risk guarantees. Our empirical results indicate that the proposed approach can effectively improve the worst-performing group that may be present without unnecessarily hurting the average performance, exhibits superior or comparable performance to relevant baselines, and achieves a large set of solutions with different fairness-utility trade-offs.",
@@ -4438,7 +4505,8 @@
                 "clinical"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Vascular segmentation represents a crucial clinical task, yet its automation remains challenging. Because of the recent strides in deep learning, vesselness filters, which can significantly aid the learning process, have been overlooked. This study introduces an innovative filter fusion method crafted to amplify the effectiveness of vessel segmentation models. Our investigation seeks to establish the merits of a filter-based learning approach through a comparative analysis. Specifically, we contrast the performance of a U-Net model trained on CT images with an identical U-Net configuration trained on vesselness hyper-volumes using matching parameters. Our findings, based on two vascular datasets, highlight improved segmentations, especially for small vessels, when the model's learning is exposed to vessel-enhanced inputs.",
@@ -4651,6 +4719,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -4739,7 +4808,8 @@
                 "disease"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Tuberculosis (TB) remains a significant global health challenge, with pediatric cases posing a major concern. The World Health Organization (WHO) advocates for chest X-rays (CXRs) for TB screening. However, visual interpretation by radiologists can be subjective, time-consuming and prone to error, especially in pediatric TB. Artificial intelligence (AI)-driven computer-aided detection (CAD) tools, especially those utilizing deep learning, show promise in enhancing lung disease detection. However, challenges include data scarcity and lack of generalizability. In this context, we propose a novel self-supervised paradigm leveraging Vision Transformers (ViT) for improved TB detection in CXR, enabling zero-shot pediatric TB detection. We demonstrate improvements in TB detection performance ($\\sim$12.7% and $\\sim$13.4% top AUC/AUPR gains in adults and children, respectively) when conducting self-supervised pre-training when compared to fully-supervised (i.e., non pre-trained) ViT models, achieving top performances of 0.959 AUC and 0.962 AUPR in adult TB detection, and 0.697 AUC and 0.607 AUPR in zero-shot pediatric TB detection. As a result, this work demonstrates that self-supervised learning on adult CXRs effectively extends to challenging downstream tasks such as pediatric TB detection, where data are scarce.",
@@ -4803,6 +4873,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -4842,6 +4913,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "eess.IV"
             ]
         ],
@@ -4864,7 +4936,8 @@
             ],
             [
                 "cs.LG",
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "In this paper we study the variations in human brain activity when listening to real and fake audio. Our preliminary results suggest that the representations learned by a state-of-the-art deepfake audio detection algorithm, do not exhibit clear distinct patterns between real and fake audio. In contrast, human brain activity, as measured by EEG, displays distinct patterns when individuals are exposed to fake versus real audio. This preliminary evidence enables future research directions in areas such as deepfake audio detection.",
@@ -4904,6 +4977,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -5045,7 +5119,8 @@
             ],
             [
                 "cs.LG",
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Chest X-Ray (CXR) is a widely used clinical imaging modality and has a pivotal role in the diagnosis and prognosis of various lung and heart related conditions. Conventional automated clinical diagnostic tool design strategies relying on radiology reads and supervised learning, entail the cumbersome requirement of high quality annotated training data. To address this challenge, self-supervised pre-training has proven to outperform supervised pre-training in numerous downstream vision tasks, representing a significant breakthrough in the field. However, medical imaging pre-training significantly differs from pre-training with natural images (e.g., ImageNet) due to unique attributes of clinical images. In this context, we introduce Diverse Concept Modeling (DiCoM), a novel self-supervised training paradigm that leverages a student teacher framework for learning diverse concepts and hence effective representation of the CXR data. Hence, expanding beyond merely modeling a single primary label within an image, instead, effectively harnessing the information from all the concepts inherent in the CXR. The pre-trained model is subsequently fine-tuned to address diverse domain-specific tasks. Our proposed paradigm consistently demonstrates robust performance across multiple downstream tasks on multiple datasets, highlighting the success and generalizability of the pre-training strategy. To establish the efficacy of our methods we analyze both the power of learned representations and the speed of convergence (SoC) of our models. For diverse data and tasks, DiCoM is able to achieve in most cases better results compared to other state-of-the-art pre-training strategies. This when combined with the higher SoC and generalization capabilities positions DiCoM to be established as a foundation model for CXRs, a widely used imaging modality.",
@@ -5095,7 +5170,8 @@
             ],
             [
                 "cs.AI",
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "It is of paramount importance to enhance medical practices, given how important it is to protect human life. Medical therapy can be accelerated by automating patient prediction using machine learning techniques. To double the efficiency of classifiers, several preprocessing strategies must be adopted for their crucial duty in this field. Feature selection (FS) is one tool that has been used frequently to modify data and enhance classification outcomes by lowering the dimensionality of datasets. Excluded features are those that have a poor correlation coefficient with the label class, that is, they have no meaningful correlation with classification and do not indicate where the instance belongs. Along with the recurring features, which show a strong association with the remainder of the features. Contrarily, the model being produced during training is harmed, and the classifier is misled by their presence. This causes overfitting and increases algorithm complexity and processing time. These are used in exploration to allow solutions to be found more thoroughly and in relation to a chosen solution than at random. TLSO, PLSO, and LLSO stand for Tournament Logarithmic Snake Optimizer, Proportional Logarithmic Snake Optimizer, and Linear Order Logarithmic Snake Optimizer, respectively. A number of 22 reference medical datasets were used in experiments. The findings indicate that, among 86 % of the datasets, TLSO attained the best accuracy, and among 82 % of the datasets, the best feature reduction. In terms of the standard deviation, the TLSO also attained noteworthy reliability and stability. On the basis of running duration, it is, nonetheless, quite effective.",
@@ -5374,7 +5450,8 @@
                 "graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Complex logical query answering is a challenging task in knowledge graphs (KGs) that has been widely studied. The ability to perform complex logical reasoning is essential and supports various graph reasoning-based downstream tasks, such as search engines. Recent approaches are proposed to represent KG entities and logical queries into embedding vectors and find answers to logical queries from the KGs. However, existing proposed methods mainly focus on querying a single KG and cannot be applied to multiple graphs. In addition, directly sharing KGs with sensitive information may incur privacy risks, making it impractical to share and construct an aggregated KG for reasoning to retrieve query answers. Thus, it remains unknown how to answer queries on multi-source KGs. An entity can be involved in various knowledge graphs and reasoning on multiple KGs and answering complex queries on multi-source KGs is important in discovering knowledge cross graphs. Fortunately, federated learning is utilized in knowledge graphs to collaboratively learn representations with privacy preserved. Federated knowledge graph embeddings enrich the relations in knowledge graphs to improve the representation quality. However, these methods only focus on one-hop relations and cannot perform complex reasoning tasks. In this paper, we apply federated learning to complex query-answering tasks to reason over multi-source knowledge graphs while preserving privacy. We propose a Federated Complex Query Answering framework (FedCQA), to reason over multi-source KGs avoiding sensitive raw data transmission to protect privacy. We conduct extensive experiments on three real-world datasets and evaluate retrieval performance on various types of complex queries.",
@@ -5460,7 +5537,8 @@
                 "forecasting"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "We present Clifford-Steerable Convolutional Neural Networks (CS-CNNs), a novel class of $\\mathrm{E}(p, q)$-equivariant CNNs. CS-CNNs process multivector fields on pseudo-Euclidean spaces $\\mathbb{R}^{p,q}$. They cover, for instance, $\\mathrm{E}(3)$-equivariance on $\\mathbb{R}^3$ and Poincar\u00e9-equivariance on Minkowski spacetime $\\mathbb{R}^{1,3}$. Our approach is based on an implicit parametrization of $\\mathrm{O}(p,q)$-steerable kernels via Clifford group equivariant neural networks. We significantly and consistently outperform baseline methods on fluid dynamics as well as relativistic electrodynamics forecasting tasks.",
@@ -5483,7 +5561,8 @@
                 "navigation"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "In this work, we explore a data-driven learning-based approach to learning the kinodynamic model of a small autonomous vehicle, and observe the effect it has on motion planning, specifically autonomous drifting. When executing a motion plan in the real world, there are numerous causes for error, and what is planned is often not what is executed on the actual car. Learning a kinodynamic planner based off of inertial measurements and executed commands can help us learn the world state. In our case, we look towards the realm of drifting; it is a complex maneuver that requires a smooth enough surface, high enough speed, and a drastic change in velocity. We attempt to learn the kinodynamic model for these drifting maneuvers, and attempt to tighten the slip of the car. Our approach is able to learn a kinodynamic model for high-speed circular navigation, and is able to avoid obstacles on an autonomous drift at high speed by correcting an executed curvature for loose drifts. We seek to adjust our kinodynamic model for success in tighter drifts in future work.",
@@ -5641,7 +5720,8 @@
                 "Robot"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "We present Dynamics-Guided Diffusion Model, a data-driven framework for generating manipulator geometry designs for a given manipulation task. Instead of training different design models for each task, our approach employs a learned dynamics network shared across tasks. For a new manipulation task, we first decompose it into a collection of individual motion targets which we call target interaction profile, where each individual motion can be modeled by the shared dynamics network. The design objective constructed from the target and predicted interaction profiles provides a gradient to guide the refinement of finger geometry for the task. This refinement process is executed as a classifier-guided diffusion process, where the design objective acts as the classifier guidance. We evaluate our framework on various manipulation tasks, under the sensor-less setting using only an open-loop parallel jaw motion. Our generated designs outperform optimization-based and unguided diffusion baselines relatively by 31.5% and 45.3% on average manipulation success rate. With the ability to generate a design within 0.8 seconds, our framework could facilitate rapid design iteration and enhance the adoption of data-driven approaches for robotic mechanism design.",
@@ -5774,7 +5854,8 @@
             ],
             [
                 "cs.LG",
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Epicardial adipose tissue (EAT) is a type of visceral fat that can secrete large amounts of adipokines to affect the myocardium and coronary arteries. EAT volume and density can be used as independent risk markers measurement of volume by noninvasive magnetic resonance images is the best method of assessing EAT. However, segmenting EAT is challenging due to the low contrast between EAT and pericardial effusion and the presence of motion artifacts. we propose a novel feature latent space multilevel supervision network (SPDNet) with uncertainty-driven and adversarial calibration learning to enhance segmentation for more accurate EAT volume estimation. The network first addresses the blurring of EAT edges due to the medical images in the open medical environments with low quality or out-of-distribution by modeling the uncertainty as a Gaussian distribution in the feature latent space, which using its Bayesian estimation as a regularization constraint to optimize SwinUNETR. Second, an adversarial training strategy is introduced to calibrate the segmentation feature map and consider the multi-scale feature differences between the uncertainty-guided predictive segmentation and the ground truth segmentation, synthesizing the multi-scale adversarial loss directly improves the ability to discriminate the similarity between organizations. Experiments on both the cardiac public MRI dataset (ACDC) and the real-world clinical cohort EAT dataset show that the proposed network outperforms mainstream models, validating that uncertainty-driven and adversarial calibration learning can be used to provide additional information for modeling multi-scale ambiguities.",
@@ -5870,7 +5951,8 @@
             ],
             [
                 "cs.LG",
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Existing free-energy guided No-Reference Image Quality Assessment (NR-IQA) methods still suffer from finding a balance between learning feature information at the pixel level of the image and capturing high-level feature information and the efficient utilization of the obtained high-level feature information remains a challenge. As a novel class of state-of-the-art (SOTA) generative model, the diffusion model exhibits the capability to model intricate relationships, enabling a comprehensive understanding of images and possessing a better learning of both high-level and low-level visual features. In view of these, we pioneer the exploration of the diffusion model into the domain of NR-IQA. Firstly, we devise a new diffusion restoration network that leverages the produced enhanced image and noise-containing images, incorporating nonlinear features obtained during the denoising process of the diffusion model, as high-level visual information. Secondly, two visual evaluation branches are designed to comprehensively analyze the obtained high-level feature information. These include the visual compensation guidance branch, grounded in the transformer architecture and noise embedding strategy, and the visual difference analysis branch, built on the ResNet architecture and the residual transposed attention block. Extensive experiments are conducted on seven public NR-IQA datasets, and the results demonstrate that the proposed model outperforms SOTA methods for NR-IQA.",
@@ -6127,7 +6209,8 @@
                 "forecasting"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ],
             [
                 "ICLR"
@@ -6179,7 +6262,8 @@
                 "Psychological"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.CY"
             ]
         ],
         "abstract": "Leveraging the synergy between causal knowledge graphs and a large language model (LLM), our study introduces a groundbreaking approach for computational hypothesis generation in psychology. We analyzed 43,312 psychology articles using a LLM to extract causal relation pairs. This analysis produced a specialized causal graph for psychology. Applying link prediction algorithms, we generated 130 potential psychological hypotheses focusing on `well-being', then compared them against research ideas conceived by doctoral scholars and those produced solely by the LLM. Interestingly, our combined approach of a LLM and causal graphs mirrored the expert-level insights in terms of novelty, clearly surpassing the LLM-only hypotheses (t(59) = 3.34, p=0.007 and t(59) = 4.32, p<0.001, respectively). This alignment was further corroborated using deep semantic analysis. Our results show that combining LLM with machine learning techniques such as causal knowledge graphs can revolutionize automated discovery in psychology, extracting novel insights from the extensive literature. This work stands at the crossroads of psychology and artificial intelligence, championing a new enriched paradigm for data-driven hypothesis generation in psychological research.",
@@ -6253,7 +6337,8 @@
                 "Physics"
             ],
             [
-                "cs.LG"
+                "cs.LG",
+                "cs.SI"
             ]
         ],
         "abstract": "In the past years, Graph Neural Networks (GNNs) have become the `de facto' standard in various deep learning domains, thanks to their flexibility in modeling real-world phenomena represented as graphs. However, the message-passing mechanism of GNNs faces challenges in learnability and expressivity, hindering high performance on heterophilic graphs, where adjacent nodes frequently have different labels. Most existing solutions addressing these challenges are primarily confined to specific benchmarks focused on node classification tasks. This narrow focus restricts the potential impact that link prediction under heterophily could offer in several applications, including recommender systems. For example, in social networks, two users may be connected for some latent reason, making it challenging to predict such connections in advance. Physics-Inspired GNNs such as GRAFF provided a significant contribution to enhance node classification performance under heterophily, thanks to the adoption of physics biases in the message-passing. Drawing inspiration from these findings, we advocate that the methodology employed by GRAFF can improve link prediction performance as well. To further explore this hypothesis, we introduce GRAFF-LP, an extension of GRAFF to link prediction. We evaluate its efficacy within a recent collection of heterophilic graphs, establishing a new benchmark for link prediction under heterophily. Our approach surpasses previous methods, in most of the datasets, showcasing a strong flexibility in different contexts, and achieving relative AUROC improvements of up to 26.7%.",
@@ -6277,7 +6362,8 @@
                 "Health"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Efforts to reduce maternal mortality rate, a key UN Sustainable Development target (SDG Target 3.1), rely largely on preventative care programs to spread critical health information to high-risk populations. These programs face two important challenges: efficiently allocating limited health resources to large beneficiary populations, and adapting to evolving policy priorities. While prior works in restless multi-armed bandit (RMAB) demonstrated success in public health allocation tasks, they lack flexibility to adapt to evolving policy priorities. Concurrently, Large Language Models (LLMs) have emerged as adept, automated planners in various domains, including robotic control and navigation. In this paper, we propose DLM: a Decision Language Model for RMABs. To enable dynamic fine-tuning of RMAB policies for challenging public health settings using human-language commands, we propose using LLMs as automated planners to (1) interpret human policy preference prompts, (2) propose code reward functions for a multi-agent RL environment for RMABs, and (3) iterate on the generated reward using feedback from RMAB simulations to effectively adapt policy outcomes. In collaboration with ARMMAN, an India-based public health organization promoting preventative care for pregnant mothers, we conduct a simulation study, showing DLM can dynamically shape policy outcomes using only human language commands as input.",
@@ -6395,7 +6481,8 @@
             ],
             [
                 "cs.LG",
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Reliable methods for the neurodevelopmental assessment of infants are essential for early detection of medical issues that may need prompt interventions. Spontaneous motor activity, or `kinetics', is shown to provide a powerful surrogate measure of upcoming neurodevelopment. However, its assessment is by and large qualitative and subjective, focusing on visually identified, age-specific gestures. Here, we follow an alternative approach, predicting infants' neurodevelopmental maturation based on data-driven evaluation of individual motor patterns. We utilize 3D video recordings of infants processed with pose-estimation to extract spatio-temporal series of anatomical landmarks, and apply adaptive graph convolutional networks to predict the actual age. We show that our data-driven approach achieves improvement over traditional machine learning baselines based on manually engineered features.",
@@ -6807,7 +6894,8 @@
                 "physics"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ],
             [
                 "ICLR"

@@ -10,6 +10,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ],
             [
@@ -164,7 +165,8 @@
         "rating": "1.5",
         "keywords": [
             [
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ],
             [
                 "ICASSP"
@@ -257,7 +259,8 @@
         "keywords": [
             [
                 "cs.AI",
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "Set-of-Mark (SoM) Prompting unleashes the visual grounding capability of GPT-4V, by enabling the model to associate visual objects with tags inserted on the image. These tags, marked with alphanumerics, can be indexed via text tokens for easy reference. Despite the extraordinary performance from GPT-4V, we observe that other Multimodal Large Language Models (MLLMs) struggle to understand these visual tags. To promote the learning of SoM prompting for open-source models, we propose a new learning paradigm: \"list items one by one,\" which asks the model to enumerate and describe all visual tags placed on the image following the alphanumeric orders of tags. By integrating our curated dataset with other visual instruction tuning datasets, we are able to equip existing MLLMs with the SoM prompting ability. Furthermore, we evaluate our finetuned SoM models on five MLLM benchmarks. We find that this new dataset, even in a relatively small size (10k-30k images with tags), significantly enhances visual reasoning capabilities and reduces hallucinations for MLLMs. Perhaps surprisingly, these improvements persist even when the visual tags are omitted from input images during inference. This suggests the potential of \"list items one by one\" as a new paradigm for training MLLMs, which strengthens the object-text alignment through the use of visual tags in the training stage. Finally, we conduct analyses by probing trained models to understand the working mechanism of SoM. Our code and data are available at \\url{https://github.com/zzxslp/SoM-LLaVA}.",
@@ -351,7 +354,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.CL"
+                "cs.CL",
+                "eess.AS"
             ]
         ],
         "abstract": "Scale has opened new frontiers in natural language processing, but at a high cost. In response, by learning to only activate a subset of parameters in training and inference, Mixture-of-Experts (MoE) have been proposed as an energy efficient path to even larger and more capable language models and this shift towards a new generation of foundation models is gaining momentum, particularly within the field of Automatic Speech Recognition (ASR). Recent works that incorporating MoE into ASR models have complex designs such as routing frames via supplementary embedding network, improving multilingual ability for the experts, and utilizing dedicated auxiliary losses for either expert load balancing or specific language handling. We found that delicate designs are not necessary, while an embarrassingly simple substitution of MoE layers for all Feed-Forward Network (FFN) layers is competent for the ASR task. To be more specific, we benchmark our proposed model on a large scale inner-source dataset (160k hours), the results show that we can scale our baseline Conformer (Dense-225M) to its MoE counterparts (MoE-1B) and achieve Dense-1B level Word Error Rate (WER) while maintaining a Dense-225M level Real Time Factor (RTF). Furthermore, by applying Unified 2-pass framework with bidirectional attention decoders (U2++), we achieve the streaming and non-streaming decoding modes in a single MoE based model, which we call U2++ MoE. We hope that our study can facilitate the research on scaling speech foundation models without sacrificing deployment efficiency.",
@@ -519,7 +523,8 @@
         "keywords": [
             [
                 "cs.AI",
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "This paper is concerned with automatic continuous speech recognition using trainable systems. The aim of this work is to build acoustic models for spoken Swedish. This is done employing hidden Markov models and using the SpeechDat database to train their parameters. Acoustic modeling has been worked out at a phonetic level, allowing general speech recognition applications, even though a simplified task (digits and natural number recognition) has been considered for model evaluation. Different kinds of phone models have been tested, including context independent models and two variations of context dependent models. Furthermore many experiments have been done with bigram language models to tune some of the system parameters. System performance over various speaker subsets with different sex, age and dialect has also been examined. Results are compared to previous similar studies showing a remarkable improvement.",
@@ -689,7 +694,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ],
             [
                 "ICLR"
@@ -763,6 +769,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -781,7 +788,9 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.CL"
+                "cs.CL",
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "Word error rate (WER) is a metric used to evaluate the quality of transcriptions produced by Automatic Speech Recognition (ASR) systems. In many applications, it is of interest to estimate WER given a pair of a speech utterance and a transcript. Previous work on WER estimation focused on building models that are trained with a specific ASR system in mind (referred to as ASR system-dependent). These are also domain-dependent and inflexible in real-world applications. In this paper, a hypothesis generation method for ASR System-Independent WER estimation (SIWE) is proposed. In contrast to prior work, the WER estimators are trained using data that simulates ASR system output. Hypotheses are generated using phonetically similar or linguistically more likely alternative words. In WER estimation experiments, the proposed method reaches a similar performance to ASR system-dependent WER estimators on in-domain data and achieves state-of-the-art performance on out-of-domain data. On the out-of-domain data, the SIWE model outperformed the baseline estimators in root mean square error and Pearson correlation coefficient by relative 17.58% and 18.21%, respectively, on Switchboard and CALLHOME. The performance was further improved when the WER of the training set was close to the WER of the evaluation dataset.",
@@ -816,7 +825,8 @@
         "keywords": [
             [
                 "cs.LG",
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "While originally developed for continuous control problems, Proximal Policy Optimization (PPO) has emerged as the work-horse of a variety of reinforcement learning (RL) applications including the fine-tuning of generative models. Unfortunately, PPO requires multiple heuristics to enable stable convergence (e.g. value networks, clipping) and is notorious for its sensitivity to the precise implementation of these components. In response, we take a step back and ask what a minimalist RL algorithm for the era of generative models would look like. We propose REBEL, an algorithm that cleanly reduces the problem of policy optimization to regressing the relative rewards via a direct policy parameterization between two completions to a prompt, enabling strikingly lightweight implementation. In theory, we prove that fundamental RL algorithms like Natural Policy Gradient can be seen as variants of REBEL, which allows us to match the strongest known theoretical guarantees in terms of convergence and sample complexity in the RL literature. REBEL can also cleanly incorporate offline data and handle the intransitive preferences we frequently see in practice. Empirically, we find that REBEL provides a unified approach to language modeling and image generation with stronger or similar performance as PPO and DPO, all while being simpler to implement and more computationally tractable than PPO.",
@@ -851,6 +861,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -886,6 +897,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -987,6 +999,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -1006,7 +1019,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "With the advent of virtual reality technology, omnidirectional image (ODI) rescaling techniques are increasingly embraced for reducing transmitted and stored file sizes while preserving high image quality. Despite this progress, current ODI rescaling methods predominantly focus on enhancing the quality of images in equirectangular projection (ERP) format, which overlooks the fact that the content viewed on head mounted displays (HMDs) is actually a rendered viewport instead of an ERP image. In this work, we emphasize that focusing solely on ERP quality results in inferior viewport visual experiences for users. Thus, we propose ResVR, which is the first comprehensive framework for the joint Rescaling and Viewport Rendering of ODIs. ResVR allows obtaining LR ERP images for transmission while rendering high-quality viewports for users to watch on HMDs. In our ResVR, a novel discrete pixel sampling strategy is developed to tackle the complex mapping between the viewport and ERP, enabling end-to-end training of ResVR pipeline. Furthermore, a spherical pixel shape representation technique is innovatively derived from spherical differentiation to significantly improve the visual quality of rendered viewports. Extensive experiments demonstrate that our ResVR outperforms existing methods in viewport rendering tasks across different fields of view, resolutions, and view directions while keeping a low transmission overhead.",
@@ -1042,6 +1056,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -1060,7 +1075,9 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.CL"
+                "cs.CL",
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "In human-computer interaction, it is crucial for agents to respond to human by understanding their emotions. Unraveling the causes of emotions is more challenging. A new task named Multimodal Emotion-Cause Pair Extraction in Conversations is responsible for recognizing emotion and identifying causal expressions. In this study, we propose a multi-stage framework to generate emotion and extract the emotion causal pairs given the target emotion. In the first stage, Llama-2-based InstructERC is utilized to extract the emotion category of each utterance in a conversation. After emotion recognition, a two-stream attention model is employed to extract the emotion causal pairs given the target emotion for subtask 2 while MuTEC is employed to extract causal span for subtask 1. Our approach achieved first place for both of the two subtasks in the competition.",
@@ -1079,6 +1096,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -1098,6 +1116,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -1183,7 +1202,8 @@
         "keywords": [
             [
                 "cs.LG",
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "We present COCOLA (Coherence-Oriented Contrastive Learning for Audio), a contrastive learning method for musical audio representations that captures the harmonic and rhythmic coherence between samples. Our method operates at the level of stems (or their combinations) composing music tracks and allows the objective evaluation of compositional models for music in the task of accompaniment generation. We also introduce a new baseline for compositional music generation called CompoNet, based on ControlNet, generalizing the tasks of MSDM, and quantify it against the latter using COCOLA. We release all models trained on public datasets containing separate stems (MUSDB18-HQ, MoisesDB, Slakh2100, and CocoChorales).",
@@ -1219,7 +1239,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "Increasingly, phonetic research utilizes data collected from participants who record themselves on readily available devices. Though such recordings are convenient, their suitability for acoustic analysis remains an open question, especially regarding how the individual methods affect acoustic measures over time. We used Quantile Generalized Additive Mixed Models (QGAMMs) to analyze measures of F0, intensity, and the first and second formants, comparing files recorded using a laboratory-standard recording method (Zoom H6 Recorder with an external microphone), to three remote recording methods, (1) the Awesome Voice Recorder application on a smartphone (AVR), (2) the Zoom meeting application with default settings (Zoom-default), and (3) the Zoom meeting application with the \"Turn on Original Sound\" setting (Zoom-raw). A linear temporal alignment issue was observed for the Zoom methods over the course of the long, recording session files. However, the difference was not significant for utterance-length files. F0 was reliably measured using all methods. Intensity and formants presented non-linear differences across methods that could not be corrected for simply. Overall, the AVR files were most similar to the H6's, and so AVR is deemed to be a more reliable recording method than either Zoom-default or Zoom-raw.",
@@ -1254,6 +1275,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -1393,6 +1415,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -1467,7 +1490,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Offline reinforcement learning (RL) algorithms are applied to learn performant, well-generalizing policies when provided with a static dataset of interactions. Many recent approaches to offline RL have seen substantial success, but with one key caveat: they demand substantial per-dataset hyperparameter tuning to achieve reported performance, which requires policy rollouts in the environment to evaluate; this can rapidly become cumbersome. Furthermore, substantial tuning requirements can hamper the adoption of these algorithms in practical domains. In this paper, we present TD3 with Behavioral Supervisor Tuning (TD3-BST), an algorithm that trains an uncertainty model and uses it to guide the policy to select actions within the dataset support. TD3-BST can learn more effective policies from offline datasets compared to previous methods and achieves the best performance across challenging benchmarks without requiring per-dataset tuning.",
@@ -1575,7 +1599,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Model-free reinforcement learning methods lack an inherent mechanism to impose behavioural constraints on the trained policies. While certain extensions exist, they remain limited to specific types of constraints, such as value constraints with additional reward signals or visitation density constraints. In this work we try to unify these existing techniques and bridge the gap with classical optimization and control theory, using a generic primal-dual framework for value-based and actor-critic reinforcement learning methods. The obtained dual formulations turn out to be especially useful for imposing additional constraints on the learned policy, as an intrinsic relationship between such dual constraints (or regularization terms) and reward modifications in the primal is reveiled. Furthermore, using this framework, we are able to introduce some novel types of constraints, allowing to impose bounds on the policy's action density or on costs associated with transitions between consecutive states and actions. From the adjusted primal-dual optimization problems, a practical algorithm is derived that supports various combinations of policy constraints that are automatically handled throughout training using trainable reward modifications. The resulting $\\texttt{DualCRL}$ method is examined in more detail and evaluated under different (combinations of) constraints on two interpretable environments. The results highlight the efficacy of the method, which ultimately provides the designer of such systems with a versatile toolbox of possible policy constraints.",
@@ -1596,7 +1621,8 @@
                 "Super-Resolution"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ],
             [
                 "CVPR"
@@ -1700,7 +1726,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.CY"
             ]
         ],
         "abstract": "Explainable AI (xAI) methods are important for establishing trust in using black-box models. However, recent criticism has mounted against current xAI methods that they disagree, are necessarily false, and can be manipulated, which has started to undermine the deployment of black-box models. Rudin (2019) goes so far as to say that we should stop using black-box models altogether in high-stakes cases because xAI explanations \"must be wrong\". However, strict fidelity to the truth is historically not a desideratum in science. Idealizations -- the intentional distortions introduced to scientific theories and models -- are commonplace in the natural sciences and are seen as a successful scientific tool. Thus, it is not falsehood qua falsehood that is the issue. In this paper, I outline the need for xAI research to engage in idealization evaluation. Drawing on the use of idealizations in the natural sciences and philosophy of science, I introduce a novel framework for evaluating whether xAI methods engage in successful idealizations or deceptive explanations (SIDEs). SIDEs evaluates whether the limitations of xAI methods, and the distortions that they introduce, can be part of a successful idealization or are indeed deceptive distortions as critics suggest. I discuss the role that existing research can play in idealization evaluation and where innovation is necessary. Through a qualitative analysis we find that leading feature importance methods and counterfactual explanations are subject to idealization failure and suggest remedies for ameliorating idealization failure.",
@@ -1773,7 +1800,9 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG",
+                "cs.CY"
             ]
         ],
         "abstract": "Recent successes in Generative Artificial Intelligence (GenAI) have led to new technologies capable of generating high-quality code, natural language, and images. The next step is to integrate GenAI technology into products, a task typically conducted by software developers. Such product development always comes with a certain risk of liability. Within this article, we want to shed light on the current state of two such risks: data protection and copyright. Both aspects are crucial for GenAI. This technology deals with data for both model training and generated output. We summarize key aspects regarding our current knowledge that every software developer involved in product development using GenAI should be aware of to avoid critical mistakes that may expose them to liability claims.",
@@ -1809,7 +1838,9 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG",
+                "cs.CY"
             ]
         ],
         "abstract": "Reinforcing or even exacerbating societal biases and inequalities will increase significantly as generative AI increasingly produces useful artifacts, from text to images and beyond, for the real world. We address these issues by formally characterizing the notion of fairness for generative AI as a basis for monitoring and enforcing fairness. We define two levels of fairness using the notion of infinite sequences of abstractions of AI-generated artifacts such as text or images. The first is the fairness demonstrated on the generated sequences, which is evaluated only on the outputs while agnostic to the prompts and models used. The second is the inherent fairness of the generative AI model, which requires that fairness be manifested when input prompts are neutral, that is, they do not explicitly instruct the generative AI to produce a particular type of output. We also study relative intersectional fairness to counteract the combinatorial explosion of fairness when considering multiple categories together with lazy fairness enforcement. Finally, fairness monitoring and enforcement are tested against some current generative AI models.",
@@ -1887,7 +1918,8 @@
                 "vehicle"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "This paper presents a novel learning approach for Dubins Traveling Salesman Problems(DTSP) with Neighborhood (DTSPN) to quickly produce a tour of a non-holonomic vehicle passing through neighborhoods of given task points. The method involves two learning phases: initially, a model-free reinforcement learning approach leverages privileged information to distill knowledge from expert trajectories generated by the LinKernighan heuristic (LKH) algorithm. Subsequently, a supervised learning phase trains an adaptation network to solve problems independently of privileged information. Before the first learning phase, a parameter initialization technique using the demonstration data was also devised to enhance training efficiency. The proposed learning method produces a solution about 50 times faster than LKH and substantially outperforms other imitation learning and RL with demonstration schemes, most of which fail to sense all the task points.",
@@ -1982,7 +2014,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "This paper investigates three different parameterizations of asymmetric uniform quantization for quantization-aware training: (1) scale and offset, (2) minimum and maximum, and (3) beta and gamma. We perform a comprehensive comparative analysis of these parameterizations' influence on quantization-aware training, using both controlled experiments and real-world large language models. Our particular focus is on their changing behavior in response to critical training hyperparameters, bit width and learning rate. Based on our investigation, we propose best practices to stabilize and accelerate quantization-aware training with learnable asymmetric quantization ranges.",
@@ -2086,7 +2119,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "When faced with accomplishing a task, human experts exhibit intentional behavior. Their unique intents shape their plans and decisions, resulting in experts demonstrating diverse behaviors to accomplish the same task. Due to the uncertainties encountered in the real world and their bounded rationality, experts sometimes adjust their intents, which in turn influences their behaviors during task execution. This paper introduces IDIL, a novel imitation learning algorithm to mimic these diverse intent-driven behaviors of experts. Iteratively, our approach estimates expert intent from heterogeneous demonstrations and then uses it to learn an intent-aware model of their behavior. Unlike contemporary approaches, IDIL is capable of addressing sequential tasks with high-dimensional state representations, while sidestepping the complexities and drawbacks associated with adversarial training (a mainstay of related techniques). Our empirical results suggest that the models generated by IDIL either match or surpass those produced by recent imitation learning benchmarks in metrics of task performance. Moreover, as it creates a generative model, IDIL demonstrates superior performance in intent inference metrics, crucial for human-agent interactions, and aptly captures a broad spectrum of expert behaviors.",
@@ -2324,7 +2358,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.SI"
             ]
         ],
         "abstract": "With our work, we contribute towards a qualitative analysis of the discourse on controversies in online news media. For this, we employ Formal Concept Analysis and the economics of conventions to derive conceptual controversy maps. In our experiments, we analyze two maps from different news journals with methods from ordinal data science. We show how these methods can be used to assess the diversity, complexity and potential bias of controversies. In addition to that, we discuss how the diagrams of concept lattices can be used to navigate between news articles.",
@@ -2341,7 +2376,9 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.LG"
+                "cs.LG",
+                "cs.SI",
+                "cs.CY"
             ]
         ],
         "abstract": "Social media platforms can quickly disseminate STEM content to diverse audiences, but their operation can be mysterious. We used open-source machine learning methods such as clustering, regression, and sentiment analysis to analyze over 1000 videos and metrics thereof from 6 social media STEM creators. Our data provide insights into how audiences generate interest signals(likes, bookmarks, comments, shares), on the correlation of various signals with views, and suggest that content from newer creators is disseminated differently. We also share insights on how to optimize dissemination by analyzing data available exclusively to content creators as well as via sentiment analysis of comments.",
@@ -2410,7 +2447,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "In this paper, we propose a novel design for AI-native goal-oriented communications, exploiting transformer neural networks under dynamic inference constraints on bandwidth and computation. Transformers have become the standard architecture for pretraining large-scale vision and text models, and preliminary results have shown promising performance also in deep joint source-channel coding (JSCC). Here, we consider a dynamic model where communication happens over a channel with variable latency and bandwidth constraints. Leveraging recent works on conditional computation, we exploit the structure of the transformer blocks and the multihead attention operator to design a trainable semantic token selection mechanism that learns to select relevant tokens (e.g., image patches) from the input signal. This is done dynamically, on a per-input basis, with a rate that can be chosen as an additional input by the user. We show that our model improves over state-of-the-art token selection mechanisms, exhibiting high accuracy for a wide range of latency and bandwidth constraints, without the need for deploying multiple architectures tailored to each constraint. Last, but not least, the proposed token selection mechanism helps extract powerful semantics that are easy to understand and explain, paving the way for interpretable-by-design models for the next generation of AI-native communication systems.",
@@ -2812,7 +2850,8 @@
                 "robot"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ],
             [
                 "ICLR"
@@ -2856,7 +2895,8 @@
             ],
             [
                 "cs.AI",
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "Physically realistic materials are pivotal in augmenting the realism of 3D assets across various applications and lighting conditions. However, existing 3D assets and generative models often lack authentic material properties. Manual assignment of materials using graphic software is a tedious and time-consuming task. In this paper, we exploit advancements in Multimodal Large Language Models (MLLMs), particularly GPT-4V, to present a novel approach, Make-it-Real: 1) We demonstrate that GPT-4V can effectively recognize and describe materials, allowing the construction of a detailed material library. 2) Utilizing a combination of visual cues and hierarchical text prompts, GPT-4V precisely identifies and aligns materials with the corresponding components of 3D objects. 3) The correctly matched materials are then meticulously applied as reference for the new SVBRDF material generation according to the original diffuse map, significantly enhancing their visual authenticity. Make-it-Real offers a streamlined integration into the 3D content creation workflow, showcasing its utility as an essential tool for developers of 3D assets.",
@@ -3045,7 +3085,10 @@
             ],
             [
                 "cs.AI",
-                "cs.CV"
+                "cs.LG",
+                "cs.CV",
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "Generating audio from a video's visual context has multiple practical applications in improving how we interact with audio-visual media - for example, enhancing CCTV footage analysis, restoring historical videos (e.g., silent movies), and improving video generation models. We propose a novel method to generate audio from video using a sequence-to-sequence model, improving on prior work that used CNNs and WaveNet and faced sound diversity and generalization challenges. Our approach employs a 3D Vector Quantized Variational Autoencoder (VQ-VAE) to capture the video's spatial and temporal structures, decoding with a custom audio decoder for a broader range of sounds. Trained on the Youtube8M dataset segment, focusing on specific domains, our model aims to enhance applications like CCTV footage analysis, silent movie restoration, and video generation models.",
@@ -3069,6 +3112,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -3091,6 +3135,8 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
+                "cs.SI",
                 "cs.CL"
             ]
         ],
@@ -3178,7 +3224,8 @@
             ],
             [
                 "cs.LG",
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ],
             [
                 "AAAI"
@@ -3325,7 +3372,8 @@
                 "trajectory"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "We improve the accuracy of Guidance & Control Networks (G&CNETs), trained to represent the optimal control policies of a time-optimal transfer and a mass-optimal landing, respectively. In both cases we leverage the dynamics of the spacecraft, described by Ordinary Differential Equations which incorporate a neural network on their right-hand side (Neural ODEs). Since the neural dynamics is differentiable, the ODEs sensitivities to the network parameters can be computed using the variational equations, thereby allowing to update the G&CNET parameters based on the observed dynamics. We start with a straightforward regression task, training the G&CNETs on datasets of optimal trajectories using behavioural cloning. These networks are then refined using the Neural ODE sensitivities by minimizing the error between the final states and the target states. We demonstrate that for the orbital transfer, the final error to the target can be reduced by 99% on a single trajectory and by 70% on a batch of 500 trajectories. For the landing problem the reduction in error is around 98-99% (position) and 40-44% (velocity). This step significantly enhances the accuracy of G&CNETs, which instills greater confidence in their reliability for operational use. We also compare our results to the popular Dataset Aggregation method (DaGGER) and allude to the strengths and weaknesses of both methods.",
@@ -3407,7 +3455,8 @@
                 "Diffusion"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.SI"
             ]
         ],
         "abstract": "In recent years, there has been increasing interest in network diffusion models and related problems. The most popular of these are the independent cascade and linear threshold models. Much of the recent experimental work done on these models requires a large number of simulations conducted on large graphs, a computationally expensive task suited for low-level languages. However, many researchers prefer the use of higher-level languages (such as Python) for their flexibility and shorter development times. Moreover, in many research tasks, these simulations are the most computationally intensive task, so it would be desirable to have a library for these with an interface to a high-level language with the performance of a low-level language. To fill this niche, we introduce CyNetDiff, a Python library with components written in Cython to provide improved performance for these computationally intensive diffusion tasks.",
@@ -3515,7 +3564,8 @@
             ],
             [
                 "cs.AI",
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Automatic retinal layer segmentation with medical images, such as optical coherence tomography (OCT) images, serves as an important tool for diagnosing ophthalmic diseases. However, it is challenging to achieve accurate segmentation due to low contrast and blood flow noises presented in the images. In addition, the algorithm should be light-weight to be deployed for practical clinical applications. Therefore, it is desired to design a light-weight network with high performance for retinal layer segmentation. In this paper, we propose LightReSeg for retinal layer segmentation which can be applied to OCT images. Specifically, our approach follows an encoder-decoder structure, where the encoder part employs multi-scale feature extraction and a Transformer block for fully exploiting the semantic information of feature maps at all scales and making the features have better global reasoning capabilities, while the decoder part, we design a multi-scale asymmetric attention (MAA) module for preserving the semantic information at each encoder scale. The experiments show that our approach achieves a better segmentation performance compared to the current state-of-the-art method TransUnet with 105.7M parameters on both our collected dataset and two other public datasets, with only 3.3M parameters.",
@@ -3716,7 +3766,9 @@
             ],
             [
                 "cs.AI",
-                "cs.SD"
+                "cs.LG",
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "Machine learning has the potential to revolutionize passive acoustic monitoring (PAM) for ecological assessments. However, high annotation and compute costs limit the field's efficacy. Generalizable pretrained networks can overcome these costs, but high-quality pretraining requires vast annotated libraries, limiting its current applicability primarily to bird taxa. Here, we identify the optimum pretraining strategy for a data-deficient domain using coral reef bioacoustics. We assemble ReefSet, a large annotated library of reef sounds, though modest compared to bird libraries at 2% of the sample count. Through testing few-shot transfer learning performance, we observe that pretraining on bird audio provides notably superior generalizability compared to pretraining on ReefSet or unrelated audio alone. However, our key findings show that cross-domain mixing which leverages bird, reef and unrelated audio during pretraining maximizes reef generalizability. SurfPerch, our pretrained network, provides a strong foundation for automated analysis of marine PAM data with minimal annotation and compute costs.",
@@ -3949,6 +4001,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -4078,7 +4131,9 @@
             ],
             [
                 "cs.AI",
-                "cs.CV"
+                "cs.LG",
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Detection of malignant lesions on mammography images is extremely important for early breast cancer diagnosis. In clinical practice, images are acquired from two different angles, and radiologists can fully utilize information from both views, simultaneously locating the same lesion. However, for automatic detection approaches such information fusion remains a challenge. In this paper, we propose a new model called MAMM-Net, which allows the processing of both mammography views simultaneously by sharing information not only on an object level, as seen in existing works, but also on a feature level. MAMM-Net's key component is the Fusion Layer, based on deformable attention and designed to increase detection precision while keeping high recall. Our experiments show superior performance on the public DDSM dataset compared to the previous state-of-the-art model, while introducing new helpful features such as lesion annotation on pixel-level and classification of lesions malignancy.",
@@ -4278,6 +4333,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "eess.IV"
             ]
         ],
@@ -4445,7 +4501,8 @@
                 "disease"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Identifying peri-pancreatic edema is a pivotal indicator for identifying disease progression and prognosis, emphasizing the critical need for accurate detection and assessment in pancreatitis diagnosis and management. This study \\textit{introduces a novel CT dataset sourced from 255 patients with pancreatic diseases, featuring annotated pancreas segmentation masks and corresponding diagnostic labels for peri-pancreatic edema condition}. With the novel dataset, we first evaluate the efficacy of the \\textit{LinTransUNet} model, a linear Transformer based segmentation algorithm, to segment the pancreas accurately from CT imaging data. Then, we use segmented pancreas regions with two distinctive machine learning classifiers to identify existence of peri-pancreatic edema: deep learning-based models and a radiomics-based eXtreme Gradient Boosting (XGBoost). The LinTransUNet achieved promising results, with a dice coefficient of 80.85\\%, and mIoU of 68.73\\%. Among the nine benchmarked classification models for peri-pancreatic edema detection, \\textit{Swin-Tiny} transformer model demonstrated the highest recall of $98.85 \\pm 0.42$ and precision of $98.38\\pm 0.17$. Comparatively, the radiomics-based XGBoost model achieved an accuracy of $79.61\\pm4.04$ and recall of $91.05\\pm3.28$, showcasing its potential as a supplementary diagnostic tool given its rapid processing speed and reduced training time. Our code is available \\url{https://github.com/NUBagciLab/Peri-Pancreatic-Edema-Detection}.",
@@ -4519,7 +4576,8 @@
                 "X-ray"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "This paper investigates the use of deep learning approaches to estimate the femur caput-collum-diaphyseal (CCD) angle from X-ray images. The CCD angle is an important measurement in the diagnosis of hip problems, and correct prediction can help in the planning of surgical procedures. Manual measurement of this angle, on the other hand, can be time-intensive and vulnerable to inter-observer variability. In this paper, we present a deep-learning algorithm that can reliably estimate the femur CCD angle from X-ray images. To train and test the performance of our model, we employed an X-ray image dataset with associated femur CCD angle measurements. Furthermore, we built a prototype to display the resulting predictions and to allow the user to interact with the predictions. As this is happening in a sterile setting during surgery, we expanded our interface to the possibility of being used only by voice commands. Our results show that our deep learning model predicts the femur CCD angle on X-ray images with great accuracy, with a mean absolute error of 4.3 degrees on the left femur and 4.9 degrees on the right femur on the test dataset. Our results suggest that deep learning has the potential to give a more efficient and accurate technique for predicting the femur CCD angle, which might have substantial therapeutic implications for the diagnosis and management of hip problems.",
@@ -4556,7 +4614,8 @@
                 "cardiac"
             ],
             [
-                "cs.SD"
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "To reduce the need for skilled clinicians in heart sound interpretation, recent studies on automating cardiac auscultation have explored deep learning approaches. However, despite the demands for large data for deep learning, the size of the heart sound datasets is limited, and no pre-trained model is available. On the contrary, many pre-trained models for general audio tasks are available as general-purpose audio representations. This study explores the potential of general-purpose audio representations pre-trained on large-scale datasets for transfer learning in heart murmur detection. Experiments on the CirCor DigiScope heart sound dataset show that the recent self-supervised learning Masked Modeling Duo (M2D) outperforms previous methods with the results of a weighted accuracy of 0.832 and an unweighted average recall of 0.713. Experiments further confirm improved performance by ensembling M2D with other models. These results demonstrate the effectiveness of general-purpose audio representation in processing heart sounds and open the way for further applications. Our code is available online which runs on a 24 GB consumer GPU at https://github.com/nttcslab/m2d/tree/master/app/circor",
@@ -4600,6 +4659,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "eess.IV"
             ]
         ],
@@ -4656,6 +4716,8 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
+                "cs.SI",
                 "cs.CL"
             ]
         ],
@@ -4681,6 +4743,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -4728,7 +4791,8 @@
                 "autonomous driving"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Generative AI (GAI) can enhance the cognitive, reasoning, and planning capabilities of intelligent modules in the Internet of Vehicles (IoV) by synthesizing augmented datasets, completing sensor data, and making sequential decisions. In addition, the mixture of experts (MoE) can enable the distributed and collaborative execution of AI models without performance degradation between connected vehicles. In this survey, we explore the integration of MoE and GAI to enable Artificial General Intelligence in IoV, which can enable the realization of full autonomy for IoV with minimal human supervision and applicability in a wide range of mobility scenarios, including environment monitoring, traffic management, and autonomous driving. In particular, we present the fundamentals of GAI, MoE, and their interplay applications in IoV. Furthermore, we discuss the potential integration of MoE and GAI in IoV, including distributed perception and monitoring, collaborative decision-making and planning, and generative modeling and simulation. Finally, we present several potential research directions for facilitating the integration.",
@@ -4775,7 +4839,8 @@
                 "Anomaly Detection"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Unsupervised graph anomaly detection aims at identifying rare patterns that deviate from the majority in a graph without the aid of labels, which is important for a variety of real-world applications. Recent advances have utilized Graph Neural Networks (GNNs) to learn effective node representations by aggregating information from neighborhoods. This is motivated by the hypothesis that nodes in the graph tend to exhibit consistent behaviors with their neighborhoods. However, such consistency can be disrupted by graph anomalies in multiple ways. Most existing methods directly employ GNNs to learn representations, disregarding the negative impact of graph anomalies on GNNs, resulting in sub-optimal node representations and anomaly detection performance. While a few recent approaches have redesigned GNNs for graph anomaly detection under semi-supervised label guidance, how to address the adverse effects of graph anomalies on GNNs in unsupervised scenarios and learn effective representations for anomaly detection are still under-explored. To bridge this gap, in this paper, we propose a simple yet effective framework for Guarding Graph Neural Networks for Unsupervised Graph Anomaly Detection (G3AD). Specifically, G3AD introduces two auxiliary networks along with correlation constraints to guard the GNNs from inconsistent information encoding. Furthermore, G3AD introduces an adaptive caching module to guard the GNNs from solely reconstructing the observed data that contains anomalies. Extensive experiments demonstrate that our proposed G3AD can outperform seventeen state-of-the-art methods on both synthetic and real-world datasets.",
@@ -4921,7 +4986,8 @@
                 "diagnosis"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Robustness to out-of-distribution (OOD) samples is crucial for safely deploying machine learning models in the open world. Recent works have focused on designing scoring functions to quantify OOD uncertainty. Setting appropriate thresholds for these scoring functions for OOD detection is challenging as OOD samples are often unavailable up front. Typically, thresholds are set to achieve a desired true positive rate (TPR), e.g., $95\\%$ TPR. However, this can lead to very high false positive rates (FPR), ranging from 60 to 96\\%, as observed in the Open-OOD benchmark. In safety-critical real-life applications, e.g., medical diagnosis, controlling the FPR is essential when dealing with various OOD samples dynamically. To address these challenges, we propose a mathematically grounded OOD detection framework that leverages expert feedback to \\emph{safely} update the threshold on the fly. We provide theoretical results showing that it is guaranteed to meet the FPR constraint at all times while minimizing the use of human feedback. Another key feature of our framework is that it can work with any scoring function for OOD uncertainty quantification. Empirical evaluation of our system on synthetic and benchmark OOD datasets shows that our method can maintain FPR at most $5\\%$ while maximizing TPR.",
@@ -4942,7 +5008,8 @@
                 "medical"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.CY"
             ]
         ],
         "abstract": "The pervasive integration of Artificial Intelligence (AI) has introduced complex challenges in the responsibility and accountability in the event of incidents involving AI-enabled systems. The interconnectivity of these systems, ethical concerns of AI-induced incidents, coupled with uncertainties in AI technology and the absence of corresponding regulations, have made traditional responsibility attribution challenging. To this end, this work proposes a Computational Reflective Equilibrium (CRE) approach to establish a coherent and ethically acceptable responsibility attribution framework for all stakeholders. The computational approach provides a structured analysis that overcomes the limitations of conceptual approaches in dealing with dynamic and multifaceted scenarios, showcasing the framework's explainability, coherence, and adaptivity properties in the responsibility attribution process. We examine the pivotal role of the initial activation level associated with claims in equilibrium computation. Using an AI-assisted medical decision-support system as a case study, we illustrate how different initializations lead to diverse responsibility distributions. The framework offers valuable insights into accountability in AI-induced incidents, facilitating the development of a sustainable and resilient system through continuous monitoring, revision, and reflection.",
@@ -5106,7 +5173,8 @@
                 "Satellite"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Satellite imaging generally presents a trade-off between the frequency of acquisitions and the spatial resolution of the images. Super-resolution is often advanced as a way to get the best of both worlds. In this work, we investigate multi-image super-resolution of satellite image time series, i.e. how multiple images of the same area acquired at different dates can help reconstruct a higher resolution observation. In particular, we extend state-of-the-art deep single and multi-image super-resolution algorithms, such as SRDiff and HighRes-net, to deal with irregularly sampled Sentinel-2 time series. We introduce BreizhSR, a new dataset for 4x super-resolution of Sentinel-2 time series using very high-resolution SPOT-6 imagery of Brittany, a French region. We show that using multiple images significantly improves super-resolution performance, and that a well-designed temporal positional encoding allows us to perform super-resolution for different times of the series. In addition, we observe a trade-off between spectral fidelity and perceptual quality of the reconstructed HR images, questioning future directions for super-resolution of Earth Observation data.",
@@ -5348,7 +5416,8 @@
                 "Cardiac"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "We propose a novel multi-stage trans-dimensional architecture for multi-view cardiac image segmentation. Our method exploits the relationship between long-axis (2D) and short-axis (3D) magnetic resonance (MR) images to perform a sequential 3D-to-2D-to-3D segmentation, segmenting the long-axis and short-axis images. In the first stage, 3D segmentation is performed using the short-axis image, and the prediction is transformed to the long-axis view and used as a segmentation prior in the next stage. In the second step, the heart region is localized and cropped around the segmentation prior using a Heart Localization and Cropping (HLC) module, focusing the subsequent model on the heart region of the image, where a 2D segmentation is performed. Similarly, we transform the long-axis prediction to the short-axis view, localize and crop the heart region and again perform a 3D segmentation to refine the initial short-axis segmentation. We evaluate our proposed method on the Multi-Disease, Multi-View & Multi-Center Right Ventricular Segmentation in Cardiac MRI (M&Ms-2) dataset, where our method outperforms state-of-the-art methods in segmenting cardiac regions of interest in both short-axis and long-axis images. The pre-trained models, source code, and implementation details will be publicly available.",
@@ -5606,7 +5675,8 @@
                 "health"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Recent advancements in AI have significantly transformed medical imaging, particularly in angiography, by enhancing diagnostic precision and patient care. However existing works are limited in analyzing the aorta and iliac arteries, above all for vascular anomaly detection and characterization. To close this gap, we propose Dr-SAM, a comprehensive multi-stage framework for vessel segmentation, diameter estimation, and anomaly analysis aiming to examine the peripheral vessels through angiography images. For segmentation we introduce a customized positive/negative point selection mechanism applied on top of the Segment Anything Model (SAM), specifically for medical (Angiography) images. Then we propose a morphological approach to determine the vessel diameters followed by our histogram-driven anomaly detection approach. Moreover, we introduce a new benchmark dataset for the comprehensive analysis of peripheral vessel angiography images which we hope can boost the upcoming research in this direction leading to enhanced diagnostic precision and ultimately better health outcomes for individuals facing vascular issues.",
@@ -5709,7 +5779,8 @@
                 "Quantum"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "With the rapid advancement of Quantum Machine Learning (QML), the critical need to enhance security measures against adversarial attacks and protect QML models becomes increasingly evident. In this work, we outline the connection between quantum noise channels and differential privacy (DP), by constructing a family of noise channels which are inherently $\u03b5$-DP: $(\u03b1, \u03b3)$-channels. Through this approach, we successfully replicate the $\u03b5$-DP bounds observed for depolarizing and random rotation channels, thereby affirming the broad generality of our framework. Additionally, we use a semi-definite program to construct an optimally robust channel. In a small-scale experimental evaluation, we demonstrate the benefits of using our optimal noise channel over depolarizing noise, particularly in enhancing adversarial accuracy. Moreover, we assess how the variables $\u03b1$ and $\u03b3$ affect the certifiable robustness and investigate how different encoding methods impact the classifier's robustness.",
@@ -5756,7 +5827,8 @@
                 "chemistry"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Beyond improving trust and validating model fairness, xAI practices also have the potential to recover valuable scientific insights in application domains where little to no prior human intuition exists. To that end, we propose a method to extract global concept explanations from the predictions of graph neural networks to develop a deeper understanding of the tasks underlying structure-property relationships. We identify concept explanations as dense clusters in the self-explaining Megan models subgraph latent space. For each concept, we optimize a representative prototype graph and optionally use GPT-4 to provide hypotheses about why each structure has a certain effect on the prediction. We conduct computational experiments on synthetic and real-world graph property prediction tasks. For the synthetic tasks we find that our method correctly reproduces the structural rules by which they were created. For real-world molecular property regression and classification tasks, we find that our method rediscovers established rules of thumb. More specifically, our results for molecular mutagenicity prediction indicate more fine-grained resolution of structural details than existing explainability methods, consistent with previous results from chemistry literature. Overall, our results show promising capability to extract the underlying structure-property relationships for complex graph property prediction tasks.",
@@ -6084,7 +6156,8 @@
                 "chemical"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Modeling non-stationary data is a challenging problem in the field of continual learning, and data distribution shifts may result in negative consequences on the performance of a machine learning model. Classic learning tools are often vulnerable to perturbations of the input covariates, and are sensitive to outliers and noise, and some tools are based on rigid algebraic assumptions. Distribution shifts are frequently occurring due to changes in raw materials for production, seasonality, a different user base, or even adversarial attacks. Therefore, there is a need for more effective distribution shift detection techniques. In this work, we propose a continual learning framework for monitoring and detecting distribution changes. We explore the problem in a latent space generated by a bio-inspired self-organizing clustering and statistical aspects of the latent space. In particular, we investigate the projections made by two topology-preserving maps: the Self-Organizing Map and the Scale Invariant Map. Our method can be applied in both a supervised and an unsupervised context. We construct the assessment of changes in the data distribution as a comparison of Gaussian signals, making the proposed method fast and robust. We compare it to other unsupervised techniques, specifically Principal Component Analysis (PCA) and Kernel-PCA. Our comparison involves conducting experiments using sequences of images (based on MNIST and injected shifts with adversarial samples), chemical sensor measurements, and the environmental variable related to ozone levels. The empirical study reveals the potential of the proposed approach.",

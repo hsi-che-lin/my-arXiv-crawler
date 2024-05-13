@@ -88,7 +88,9 @@
             ],
             [
                 "cs.AI",
-                "cs.CV"
+                "cs.LG",
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "Recent advancements in the vision-language model have shown notable generalization in vision-language tasks after visual instruction tuning. However, bridging the gap between the pre-trained vision encoder and the large language models becomes the whole network's bottleneck. To improve cross-modality alignment, existing works usually consider more visual instruction data covering a broader range of vision tasks to fine-tune the model for question-answering, which are costly to obtain. However, the image contains rich contextual information that has been largely under-explored. This paper first attempts to harness this overlooked context within visual instruction data, training the model to self-supervised `learning' how to ask high-quality questions. In this way, we introduce a novel framework named SQ-LLaVA: Self-Questioning for Large Vision-Language Assistant. SQ-LLaVA exhibits proficiency in generating flexible and meaningful image-related questions while analyzing the visual clue and prior language knowledge, signifying an advanced level of generalized visual understanding. Moreover, fine-tuning SQ-LLaVA on higher-quality instruction data shows a consistent performance improvement compared with traditional visual-instruction tuning methods. This improvement highlights the efficacy of self-questioning techniques in achieving a deeper and more nuanced comprehension of visual content across various contexts.",
@@ -248,7 +250,8 @@
                 "GPU memory"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "The proliferation of extensive neural network architectures, particularly deep learning models, presents a challenge in terms of resource-intensive training. GPU memory constraints have become a notable bottleneck in training such sizable models. Existing strategies, including data parallelism, model parallelism, pipeline parallelism, and fully sharded data parallelism, offer partial solutions. Model parallelism, in particular, enables the distribution of the entire model across multiple GPUs, yet the ensuing data communication between these partitions slows down training. Additionally, the substantial memory overhead required to store auxiliary parameters on each GPU compounds computational demands. Instead of using the entire model for training, this study advocates partitioning the model across GPUs and generating synthetic intermediate labels to train individual segments. These labels, produced through a random process, mitigate memory overhead and computational load. This approach results in a more efficient training process that minimizes data communication while maintaining model accuracy. To validate this method, a 6-layer fully connected neural network is partitioned into two parts and its performance is assessed on the extended MNIST dataset. Experimental results indicate that the proposed approach achieves similar testing accuracies to conventional training methods, while significantly reducing memory and computational requirements. This work contributes to mitigating the resource-intensive nature of training large neural networks, paving the way for more efficient deep learning model development.",
@@ -323,6 +326,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -573,6 +577,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -693,7 +698,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "Two approaches have emerged to input images into large language models (LLMs). The first is to caption images into natural language. The second is to map image feature embeddings into the domain of the LLM and pass the mapped embeddings directly to the LLM. The majority of recent few-shot multimodal work reports performance using architectures that employ variations of one of these two approaches. But they overlook an important comparison between them. We design a controlled and focused experiment to compare these two approaches to few-shot visual question answering (VQA) with LLMs. Our findings indicate that for Flan-T5 XL, a 3B parameter LLM, connecting visual embeddings directly to the LLM embedding space does not guarantee improved performance over using image captions. In the zero-shot regime, we find using textual image captions is better. In the few-shot regimes, how the in-context examples are selected determines which is better.",
@@ -747,6 +753,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -801,7 +808,8 @@
         "rating": "1",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ],
             [
                 "ICLR"
@@ -979,6 +987,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.SI",
                 "cs.CL"
             ]
         ],
@@ -1016,6 +1025,7 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -1071,7 +1081,9 @@
         "keywords": [
             [
                 "cs.AI",
-                "cs.CV"
+                "cs.LG",
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Despite living in a multi-sensory world, most AI models are limited to textual and visual understanding of human motion and behavior. In fact, full situational awareness of human motion could best be understood through a combination of sensors. In this survey we investigate how knowledge can be transferred and utilized amongst modalities for Human Activity/Action Recognition (HAR), i.e. cross-modality transfer learning. We motivate the importance and potential of IMU data and its applicability in cross-modality learning as well as the importance of studying the HAR problem. We categorize HAR related tasks by time and abstractness and then compare various types of multimodal HAR datasets. We also distinguish and expound on many related but inconsistently used terms in the literature, such as transfer learning, domain adaptation, representation learning, sensor fusion, and multimodal learning, and describe how cross-modal learning fits with all these concepts. We then review the literature in IMU-based cross-modal transfer for HAR. The two main approaches for cross-modal transfer are instance-based transfer, where instances of one modality are mapped to another (e.g. knowledge is transferred in the input space), or feature-based transfer, where the model relates the modalities in an intermediate latent space (e.g. knowledge is transferred in the feature space). Finally, we discuss future research directions and applications in cross-modal HAR.",
@@ -1092,6 +1104,8 @@
         "keywords": [
             [
                 "cs.AI",
+                "cs.LG",
+                "cs.SI",
                 "cs.CL"
             ]
         ],
@@ -1212,7 +1226,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Reviewing the previous work of diversity Rein-forcement Learning,diversity is often obtained via an augmented loss function,which requires a balance between reward and diversity.Generally,diversity optimization algorithms use Multi-armed Bandits algorithms to select the coefficient in the pre-defined space. However, the dynamic distribution of reward signals for MABs or the conflict between quality and diversity limits the performance of these methods. We introduce the Phasic Diversity Optimization (PDO) algorithm, a Population-Based Training framework that separates reward and diversity training into distinct phases instead of optimizing a multi-objective function. In the auxiliary phase, agents with poor performance diversified via determinants will not replace the better agents in the archive. The decoupling of reward and diversity allows us to use an aggressive diversity optimization in the auxiliary phase without performance degradation. Furthermore, we construct a dogfight scenario for aerial agents to demonstrate the practicality of the PDO algorithm. We introduce two implementations of PDO archive and conduct tests in the newly proposed adversarial dogfight and MuJoCo simulations. The results show that our proposed algorithm achieves better performance than baselines.",
@@ -1251,6 +1266,8 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
+                "cs.CY",
                 "cs.CV"
             ],
             [
@@ -1293,7 +1310,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "This work advances randomized exploration in reinforcement learning (RL) with function approximation modeled by linear mixture MDPs. We establish the first prior-dependent Bayesian regret bound for RL with function approximation; and refine the Bayesian regret analysis for posterior sampling reinforcement learning (PSRL), presenting an upper bound of ${\\mathcal{O}}(d\\sqrt{H^3 T \\log T})$, where $d$ represents the dimensionality of the transition kernel, $H$ the planning horizon, and $T$ the total number of interactions. This signifies a methodological enhancement by optimizing the $\\mathcal{O}(\\sqrt{\\log T})$ factor over the previous benchmark (Osband and Van Roy, 2014) specified to linear mixture MDPs. Our approach, leveraging a value-targeted model learning perspective, introduces a decoupling argument and a variance reduction technique, moving beyond traditional analyses reliant on confidence sets and concentration inequalities to formalize Bayesian regret bounds more effectively.",
@@ -1434,7 +1452,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "We address in this paper Reinforcement Learning (RL) among agents that are grouped into teams such that there is cooperation within each team but general-sum (non-zero sum) competition across different teams. To develop an RL method that provably achieves a Nash equilibrium, we focus on a linear-quadratic structure. Moreover, to tackle the non-stationarity induced by multi-agent interactions in the finite population setting, we consider the case where the number of agents within each team is infinite, i.e., the mean-field setting. This results in a General-Sum LQ Mean-Field Type Game (GS-MFTGs). We characterize the Nash equilibrium (NE) of the GS-MFTG, under a standard invertibility condition. This MFTG NE is then shown to be $\\mathcal{O}(1/M)$-NE for the finite population game where $M$ is a lower bound on the number of agents in each team. These structural results motivate an algorithm called Multi-player Receding-horizon Natural Policy Gradient (MRPG), where each team minimizes its cumulative cost independently in a receding-horizon manner. Despite the non-convexity of the problem, we establish that the resulting algorithm converges to a global NE through a novel problem decomposition into sub-problems using backward recursive discrete-time Hamilton-Jacobi-Isaacs (HJI) equations, in which independent natural policy gradient is shown to exhibit linear convergence under time-independent diagonal dominance. Experiments illuminate the merits of this approach in practice.",
@@ -1470,7 +1489,9 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG",
+                "cs.CY"
             ]
         ],
         "abstract": "Feature selection is a critical component in predictive analytics that significantly affects the prediction accuracy and interpretability of models. Intrinsic methods for feature selection are built directly into model learning, providing a fast and attractive option for large amounts of data. Machine learning algorithms, such as penalized regression models (e.g., lasso) are the most common choice when it comes to in-built feature selection. However, they fail to capture non-linear relationships, which ultimately affects their ability to predict outcomes in intricate datasets. In this paper, we propose IGANN Sparse, a novel machine learning model from the family of generalized additive models, which promotes sparsity through a non-linear feature selection process during training. This ensures interpretability through improved model sparsity without sacrificing predictive performance. Moreover, IGANN Sparse serves as an exploratory tool for information systems researchers to unveil important non-linear relationships in domains that are characterized by complex patterns. Our ongoing research is directed at a thorough evaluation of the IGANN Sparse model, including user studies that allow to assess how well users of the model can benefit from the reduced number of features. This will allow for a deeper understanding of the interactions between linear vs. non-linear modeling, number of selected features, and predictive performance.",
@@ -1530,7 +1551,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Modern approach to artificial intelligence (AI) aims to design algorithms that learn directly from data. This approach has achieved impressive results and has contributed significantly to the progress of AI, particularly in the sphere of supervised deep learning. It has also simplified the design of machine learning systems as the learning process is highly automated. However, not all data processing tasks in conventional deep learning pipelines have been automated. In most cases data has to be manually collected, preprocessed and further extended through data augmentation before they can be effective for training. Recently, special techniques for automating these tasks have emerged. The automation of data processing tasks is driven by the need to utilize large volumes of complex, heterogeneous data for machine learning and big data applications. Today, end-to-end automated data processing systems based on automated machine learning (AutoML) techniques are capable of taking raw data and transforming them into useful features for Big Data tasks by automating all intermediate processing stages. In this work, we present a thorough review of approaches for automating data processing tasks in deep learning pipelines, including automated data preprocessing--e.g., data cleaning, labeling, missing data imputation, and categorical data encoding--as well as data augmentation (including synthetic data generation using generative AI methods) and feature engineering--specifically, automated feature extraction, feature construction and feature selection. In addition to automating specific data processing tasks, we discuss the use of AutoML methods and tools to simultaneously optimize all stages of the machine learning pipeline.",
@@ -1548,7 +1570,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.CY"
             ]
         ],
         "abstract": "The rapid advancement of generative Artificial Intelligence (AI) technologies, particularly Generative Pre-trained Transformer (GPT) models such as ChatGPT, has the potential to significantly impact cybersecurity. In this study, we investigated the impact of GPTs, specifically ChatGPT, on tertiary education in cybersecurity, and provided recommendations for universities to adapt their curricula to meet the evolving needs of the industry. Our research highlighted the importance of understanding the alignment between GPT's ``mental model'' and human cognition, as well as the enhancement of GPT capabilities to human skills based on Bloom's taxonomy. By analyzing current educational practices and the alignment of curricula with industry requirements, we concluded that universities providing practical degrees like cybersecurity should align closely with industry demand and embrace the inevitable generative AI revolution, while applying stringent ethics oversight to safeguard responsible GPT usage. We proposed a set of recommendations focused on updating university curricula, promoting agility within universities, fostering collaboration between academia, industry, and policymakers, and evaluating and assessing educational outcomes.",
@@ -1677,7 +1700,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Brain-Computer interfaces (BCIs) are typically designed to be lightweight and responsive in real-time to provide users timely feedback. Classical feature engineering is computationally efficient but has low accuracy, whereas the recent neural networks (DNNs) improve accuracy but are computationally expensive and incur high latency. As a promising alternative, the low-dimensional computing (LDC) classifier based on vector symbolic architecture (VSA), achieves small model size yet higher accuracy than classical feature engineering methods. However, its accuracy still lags behind that of modern DNNs, making it challenging to process complex brain signals. To improve the accuracy of a small model, knowledge distillation is a popular method. However, maintaining a constant level of distillation between the teacher and student models may not be the best way for a growing student during its progressive learning stages. In this work, we propose a simple scheduled knowledge distillation method based on curriculum data order to enable the student to gradually build knowledge from the teacher model, controlled by an $\u03b1$ scheduler. Meanwhile, we employ the LDC/VSA as the student model to enhance the on-device inference efficiency for tiny BCI devices that demand low latency. The empirical results have demonstrated that our approach achieves better tradeoff between accuracy and hardware efficiency compared to other methods.",
@@ -1711,7 +1735,8 @@
         "rating": "0.5",
         "keywords": [
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.CY"
             ]
         ],
         "abstract": "Generative AI has ushered in the ability to generate content that closely mimics human contributions, introducing an unprecedented threat: Deployed en masse, these models can be used to manipulate public opinion and distort perceptions, resulting in a decline in trust towards digital platforms. This study contributes to marketing literature and practice in three ways. First, it demonstrates the proficiency of AI in fabricating disinformative user-generated content (UGC) that mimics the form of authentic content. Second, it quantifies the disruptive impact of such UGC on marketing research, highlighting the susceptibility of analytics frameworks to even minimal levels of disinformation. Third, it proposes and evaluates advanced detection frameworks, revealing that standard techniques are insufficient for filtering out AI-generated disinformation. We advocate for a comprehensive approach to safeguarding marketing research that integrates advanced algorithmic solutions, enhanced human oversight, and a reevaluation of regulatory and ethical frameworks. Our study seeks to serve as a catalyst, providing a foundation for future research and policy-making aimed at navigating the intricate challenges at the nexus of technology, ethics, and marketing.",
@@ -1765,7 +1790,10 @@
             ],
             [
                 "cs.AI",
-                "cs.CV"
+                "cs.CY",
+                "cs.CV",
+                "eess.IV",
+                "cs.CL"
             ]
         ],
         "abstract": "Benchmarks of the multilingual capabilities of text-to-image (T2I) models compare generated images prompted in a test language to an expected image distribution over a concept set. One such benchmark, \"Conceptual Coverage Across Languages\" (CoCo-CroLa), assesses the tangible noun inventory of T2I models by prompting them to generate pictures from a concept list translated to seven languages and comparing the output image populations. Unfortunately, we find that this benchmark contains translation errors of varying severity in Spanish, Japanese, and Chinese. We provide corrections for these errors and analyze how impactful they are on the utility and validity of CoCo-CroLa as a benchmark. We reassess multiple baseline T2I models with the revisions, compare the outputs elicited under the new translations to those conditioned on the old, and show that a correction's impactfulness on the image-domain benchmark results can be predicted in the text domain with similarity scores. Our findings will guide the future development of T2I multilinguality metrics by providing analytical tools for practical translation decisions.",
@@ -1867,6 +1895,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CL"
             ]
         ],
@@ -1961,6 +1990,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
@@ -2113,7 +2143,8 @@
                 "Graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Message passing mechanism contributes to the success of GNNs in various applications, but also brings the oversquashing problem. Recent works combat oversquashing by improving the graph spectrums with rewiring techniques, disrupting the structural bias in graphs, and having limited improvement on oversquashing in terms of oversquashing measure. Motivated by unitary RNN, we propose Graph Unitary Message Passing (GUMP) to alleviate oversquashing in GNNs by applying unitary adjacency matrix for message passing. To design GUMP, a transformation is first proposed to make general graphs have unitary adjacency matrix and keep its structural bias. Then, unitary adjacency matrix is obtained with a unitary projection algorithm, which is implemented by utilizing the intrinsic structure of unitary adjacency matrix and allows GUMP to be permutation-equivariant. Experimental results show the effectiveness of GUMP in improving the performance on various graph learning tasks.",
@@ -2133,7 +2164,8 @@
                 "SVM"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Placing applications in mobile edge computing servers presents a complex challenge involving many servers, users, and their requests. Existing algorithms take a long time to solve high-dimensional problems with significant uncertainty scenarios. Therefore, an efficient approach is required to maximize the quality of service while considering all technical constraints. One of these approaches is machine learning, which emulates optimal solutions for application placement in edge servers. Machine learning models are expected to learn how to allocate user requests to servers based on the spatial positions of users and servers. In this study, the problem is formulated as a two-stage stochastic programming. A sufficient amount of training records is generated by varying parameters such as user locations, their request rates, and solving the optimization model. Then, based on the distance features of each user from the available servers and their request rates, machine learning models generate decision variables for the first stage of the stochastic optimization model, which is the user-to-server request allocation, and are employed as independent decision agents that reliably mimic the optimization model. Support Vector Machines (SVM) and Multi-layer Perceptron (MLP) are used in this research to achieve practical decisions from the stochastic optimization models. The performance of each model has shown an execution effectiveness of over 80%. This research aims to provide a more efficient approach for tackling high-dimensional problems and scenarios with uncertainties in mobile edge computing by leveraging machine learning models for optimal decision-making in request allocation to edge servers. These results suggest that machine-learning models can significantly improve solution times compared to conventional approaches.",
@@ -2155,7 +2187,8 @@
                 "Graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Dynamic multi-relational graphs are an expressive relational representation for data enclosing entities and relations of different types, and where relationships are allowed to vary in time. Addressing predictive tasks over such data requires the ability to find structure embeddings that capture the diversity of the relationships involved, as well as their dynamic evolution. In this work, we establish a novel class of challenging tasks for dynamic multi-relational graphs involving out-of-domain link prediction, where the relationship being predicted is not available in the input graph. We then introduce a novel Graph Neural Network model, named GOOD, designed specifically to tackle the out-of-domain generalization problem. GOOD introduces a novel design concept for multi-relation embedding aggregation, based on the idea that good representations are such when it is possible to disentangle the mixing proportions of the different relational embeddings that have produced it. We also propose five benchmarks based on two retail domains, where we show that GOOD can effectively generalize predictions out of known relationship types and achieve state-of-the-art results. Most importantly, we provide insights into problems where out-of-domain prediction might be preferred to an in-domain formulation, that is, where the relationship to be predicted has very few positive examples.",
@@ -2175,7 +2208,8 @@
                 "Graph"
             ],
             [
-                "cs.LG"
+                "cs.LG",
+                "cs.SI"
             ]
         ],
         "abstract": "Our paper addresses the challenge of inferring causal effects in social network data, characterized by complex interdependencies among individuals resulting in challenges such as non-independence of units, interference (where a unit's outcome is affected by neighbors' treatments), and introduction of additional confounding factors from neighboring units. We propose a novel methodology combining graph neural networks and double machine learning, enabling accurate and efficient estimation of direct and peer effects using a single observational social network. Our approach utilizes graph isomorphism networks in conjunction with double machine learning to effectively adjust for network confounders and consistently estimate the desired causal effects. We demonstrate that our estimator is both asymptotically normal and semiparametrically efficient. A comprehensive evaluation against four state-of-the-art baseline methods using three semi-synthetic social network datasets reveals our method's on-par or superior efficacy in precise causal effect estimation. Further, we illustrate the practical application of our method through a case study that investigates the impact of Self-Help Group participation on financial risk tolerance. The results indicate a significant positive direct effect, underscoring the potential of our approach in social network analysis. Additionally, we explore the effects of network sparsity on estimation performance.",
@@ -2281,7 +2315,8 @@
                 "Vehicle"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "With the advent of universal function approximators in the domain of reinforcement learning, the number of practical applications leveraging deep reinforcement learning (DRL) has exploded. Decision-making in automated driving tasks has emerged as a chief application among them, taking the sensor data or the higher-order kinematic variables as the input and providing a discrete choice or continuous control output. However, the black-box nature of the models presents an overwhelming limitation that restricts the real-world deployment of DRL in autonomous vehicles (AVs). Therefore, in this research work, we focus on the interpretability of an attention-based DRL framework. We use a continuous proximal policy optimization-based DRL algorithm as the baseline model and add a multi-head attention framework in an open-source AV simulation environment. We provide some analytical techniques for discussing the interpretability of the trained models in terms of explainability and causality for spatial and temporal correlations. We show that the weights in the first head encode the positions of the neighboring vehicles while the second head focuses on the leader vehicle exclusively. Also, the ego vehicle's action is causally dependent on the vehicles in the target lane spatially and temporally. Through these findings, we reliably show that these techniques can help practitioners decipher the results of the DRL algorithms.",
@@ -2322,7 +2357,8 @@
                 "graph"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Belief Propagation (BP) is a simple probabilistic inference algorithm, consisting of passing messages between nodes of a graph representing a probability distribution. Its analogy with a neural network suggests that it could have far-ranging applications for neuroscience and artificial intelligence. Unfortunately, it is only exact when applied to cycle-free graphs, which restricts the potential of the algorithm. In this paper, we propose Circular Belief Propagation (CBP), an extension of BP which limits the detrimental effects of message reverberation caused by cycles by learning to detect and cancel spurious correlations and belief amplifications. We show in numerical experiments involving binary probabilistic graphs that CBP far outperforms BP and reaches good performance compared to that of previously proposed algorithms.",
@@ -2383,7 +2419,9 @@
                 "bioacoustic"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "cs.SD",
+                "eess.AS"
             ]
         ],
         "abstract": "This paper focuses on few-shot Sound Event Detection (SED), which aims to automatically recognize and classify sound events with limited samples. However, prevailing methods methods in few-shot SED predominantly rely on segment-level predictions, which often providing detailed, fine-grained predictions, particularly for events of brief duration. Although frame-level prediction strategies have been proposed to overcome these limitations, these strategies commonly face difficulties with prediction truncation caused by background noise. To alleviate this issue, we introduces an innovative multitask frame-level SED framework. In addition, we introduce TimeFilterAug, a linear timing mask for data augmentation, to increase the model's robustness and adaptability to diverse acoustic environments. The proposed method achieves a F-score of 63.8%, securing the 1st rank in the few-shot bioacoustic event detection category of the Detection and Classification of Acoustic Scenes and Events Challenge 2023.",
@@ -2493,7 +2531,8 @@
                 "cancer"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Accurate and early detection of breast cancer is essential for successful treatment. This paper introduces a novel deep-learning approach for improved breast cancer classification in histopathological images, a crucial step in diagnosis. Our method hinges on the Dense Residual Dual-Shuffle Attention Network (DRDA-Net), inspired by ShuffleNet's efficient architecture. DRDA-Net achieves exceptional accuracy across various magnification levels on the BreaKHis dataset, a breast cancer histopathology analysis benchmark. However, for real-world deployment, computational efficiency is paramount. We integrate a pre-trained MobileNet model renowned for its lightweight design to address computational. MobileNet ensures fast execution even on devices with limited resources without sacrificing performance. This combined approach offers a promising solution for accurate breast cancer diagnosis, paving the way for faster and more accessible screening procedures.",
@@ -2545,7 +2584,8 @@
                 "Quality Assessment"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "cs.CL"
             ]
         ],
         "abstract": "No-Reference Image Quality Assessment (NR-IQA) focuses on designing methods to measure image quality in alignment with human perception when a high-quality reference image is unavailable. The reliance on annotated Mean Opinion Scores (MOS) in the majority of state-of-the-art NR-IQA approaches limits their scalability and broader applicability to real-world scenarios. To overcome this limitation, we propose QualiCLIP (Quality-aware CLIP), a CLIP-based self-supervised opinion-unaware method that does not require labeled MOS. In particular, we introduce a quality-aware image-text alignment strategy to make CLIP generate representations that correlate with the inherent quality of the images. Starting from pristine images, we synthetically degrade them with increasing levels of intensity. Then, we train CLIP to rank these degraded images based on their similarity to quality-related antonym text prompts, while guaranteeing consistent representations for images with comparable quality. Our method achieves state-of-the-art performance on several datasets with authentic distortions. Moreover, despite not requiring MOS, QualiCLIP outperforms supervised methods when their training dataset differs from the testing one, thus proving to be more suitable for real-world scenarios. Furthermore, our approach demonstrates greater robustness and improved explainability than competing methods. The code and the model are publicly available at https://github.com/miccunifi/QualiCLIP.",
@@ -2683,7 +2723,8 @@
             ],
             [
                 "cs.LG",
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "This study explores the use of deep learning techniques for analyzing lung Computed Tomography (CT) images. Classic deep learning approaches face challenges with varying slice counts and resolutions in CT images, a diversity arising from the utilization of assorted scanning equipment. Typically, predictions are made on single slices which are then combined for a comprehensive outcome. Yet, this method does not incorporate learning features specific to each slice, leading to a compromise in effectiveness. To address these challenges, we propose an advanced Spatial-Slice Feature Learning (SSFL++) framework specifically tailored for CT scans. It aims to filter out out-of-distribution (OOD) data within the entire CT scan, allowing us to select essential spatial-slice features for analysis by reducing data redundancy by 70\\%. Additionally, we introduce a Kernel-Density-based slice Sampling (KDS) method to enhance stability during training and inference phases, thereby accelerating convergence and enhancing overall performance. Remarkably, our experiments reveal that our model achieves promising results with a simple EfficientNet-2D (E2D) model. The effectiveness of our approach is confirmed on the COVID-19-CT-DB datasets provided by the DEF-AI-MIA workshop.",
@@ -2752,7 +2793,8 @@
                 "X-ray"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "The introduction of YOLOv9, the latest version of the You Only Look Once (YOLO) series, has led to its widespread adoption across various scenarios. This paper is the first to apply the YOLOv9 algorithm model to the fracture detection task as computer-assisted diagnosis (CAD) to help radiologists and surgeons to interpret X-ray images. Specifically, this paper trained the model on the GRAZPEDWRI-DX dataset and extended the training set using data augmentation techniques to improve the model performance. Experimental results demonstrate that compared to the mAP 50-95 of the current state-of-the-art (SOTA) model, the YOLOv9 model increased the value from 42.16% to 43.73%, with an improvement of 3.7%. The implementation code is publicly available at https://github.com/RuiyangJu/YOLOv9-Fracture-Detection.",
@@ -3345,6 +3387,7 @@
             ],
             [
                 "cs.AI",
+                "cs.LG",
                 "eess.IV"
             ]
         ],
@@ -3369,7 +3412,8 @@
                 "diffusion"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ],
             [
                 "ICLR"
@@ -3395,7 +3439,9 @@
             ],
             [
                 "cs.AI",
-                "cs.CV"
+                "cs.LG",
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Alzheimer's disease is a progressive neurodegenerative disorder that primarily affects cognitive functions such as memory, thinking, and behavior. In this disease, there is a critical phase, mild cognitive impairment, that is really important to be diagnosed early since some patients with progressive MCI will develop the disease. This study delves into the challenging task of classifying Alzheimer's disease into four distinct groups: control normal (CN), progressive mild cognitive impairment (pMCI), stable mild cognitive impairment (sMCI), and Alzheimer's disease (AD). This classification is based on a thorough examination of PET scan images obtained from the ADNI dataset, which provides a thorough understanding of the disease's progression. Several deep-learning and traditional machine-learning models have been used to detect Alzheimer's disease. In this paper, three deep-learning models, namely VGG16 and AlexNet, and a custom Convolutional neural network (CNN) with 8-fold cross-validation have been used for classification. Finally, an ensemble technique is used to improve the overall result of these models. The results show that using deep-learning models to tell the difference between MCI patients gives an overall average accuracy of 93.13% and an AUC of 94.4%.",
@@ -3553,7 +3599,8 @@
                 "chemical"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Nuclear magnetic resonance (NMR) spectroscopy plays a pivotal role in various scientific fields, offering insights into structural information, electronic properties and dynamic behaviors of molecules. Accurate NMR spectrum prediction efficiently produces candidate molecules, enabling chemists to compare them with actual experimental spectra. This process aids in confirming molecular structures or pinpointing discrepancies, guiding further investigation. Machine Learning (ML) has then emerged as a promising alternative approach for predicting atomic NMR chemical shits of molecules given their structures. Although significant progresses have been made in predicting one-dimensional (1D) NMR, two-dimensional (2D) NMR prediction via ML remains a challenge due to the lack of annotated NMR training datasets. To address this gap, we propose an iterative self-training (IST) approach to train a deep learning model for predicting atomic 2DNMR shifts and assigning peaks in experimental spectra. Our model undergoes an initial pre-training phase employing a Multi-Task Training (MTT) approach, which simultaneously leverages annotated 1D NMR datasets of both $^{1}\\text{H}$ and $^{13}\\text{C}$ spectra to enhance its understanding of NMR spectra. Subsequently, the pre-trained model is utilized to generate pseudo-annotations for unlabelled 2D NMR spectra, which are subsequently used to refine the 2D NMR prediction model. Our approach iterates between annotated unlabelled 2D NMR data and refining our 2D NMR prediction model until convergence. Finally, our model is able to not only accurately predict 2D NMR but also annotate peaks in experimental 2D NMR spectra. Experimental results show that our model is capable of accurately handling medium-sized and large molecules, including polysaccharides, underscoring its effectiveness.",
@@ -3577,7 +3624,8 @@
                 "Quality Assessment"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ],
             [
                 "CVPR"
@@ -3603,7 +3651,8 @@
                 "trajectory"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "A deterministic temporal process can be determined by its trajectory, an element in the product space of (a) initial condition $z_0 \\in \\mathcal{Z}$ and (b) transition function $f: (\\mathcal{Z}, \\mathcal{T}) \\to \\mathcal{Z}$ often influenced by the control of the underlying dynamical system. Existing methods often model the transition function as a differential equation or as a recurrent neural network. Despite their effectiveness in predicting future measurements, few results have successfully established a method for sampling and statistical inference of trajectories using neural networks, partially due to constraints in the parameterization. In this work, we introduce a mechanism to learn the distribution of trajectories by parameterizing the transition function $f$ explicitly as an element in a function space. Our framework allows efficient synthesis of novel trajectories, while also directly providing a convenient tool for inference, i.e., uncertainty estimation, likelihood evaluations and out of distribution detection for abnormal trajectories. These capabilities can have implications for various downstream tasks, e.g., simulation and evaluation for reinforcement learning.",
@@ -3623,7 +3672,8 @@
                 "quantum"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "It has been proposed that random wide neural networks near Gaussian process are quantum field theories around Gaussian fixed points. In this paper, we provide a novel map with which a wide class of quantum mechanical systems can be cast into the form of a neural network with a statistical summation over network parameters. Our simple idea is to use the universal approximation theorem of neural networks to generate arbitrary paths in the Feynman's path integral. The map can be applied to interacting quantum systems / field theories, even away from the Gaussian limit. Our findings bring machine learning closer to the quantum world.",
@@ -3646,7 +3696,8 @@
                 "Recommendation"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Next Point-of-Interests (POIs) recommendation task aims to provide a dynamic ranking of POIs based on users' current check-in trajectories. The recommendation performance of this task is contingent upon a comprehensive understanding of users' personalized behavioral patterns through Location-based Social Networks (LBSNs) data. While prior studies have adeptly captured sequential patterns and transitional relationships within users' check-in trajectories, a noticeable gap persists in devising a mechanism for discerning specialized behavioral patterns during distinct time slots, such as noon, afternoon, or evening. In this paper, we introduce an innovative data structure termed the ``Mobility Tree'', tailored for hierarchically describing users' check-in records. The Mobility Tree encompasses multi-granularity time slot nodes to learn user preferences across varying temporal periods. Meanwhile, we propose the Mobility Tree Network (MTNet), a multitask framework for personalized preference learning based on Mobility Trees. We develop a four-step node interaction operation to propagate feature information from the leaf nodes to the root node. Additionally, we adopt a multitask training strategy to push the model towards learning a robust representation. The comprehensive experimental results demonstrate the superiority of MTNet over ten state-of-the-art next POI recommendation models across three real-world LBSN datasets, substantiating the efficacy of time slot preference learning facilitated by Mobility Tree.",
@@ -3980,7 +4031,8 @@
                 "EEG"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ],
             [
                 "ICLR"
@@ -4053,7 +4105,8 @@
             ],
             [
                 "cs.LG",
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Since the emergence of Covid-19 in late 2019, medical image analysis using artificial intelligence (AI) has emerged as a crucial research area, particularly with the utility of CT-scan imaging for disease diagnosis. This paper contributes to the 4th COV19D competition, focusing on Covid-19 Detection and Covid-19 Domain Adaptation Challenges. Our approach centers on lung segmentation and Covid-19 infection segmentation employing the recent CNN-based segmentation architecture PDAtt-Unet, which simultaneously segments lung regions and infections. Departing from traditional methods, we concatenate the input slice (grayscale) with segmented lung and infection, generating three input channels akin to color channels. Additionally, we employ three 3D CNN backbones Customized Hybrid-DeCoVNet, along with pretrained 3D-Resnet-18 and 3D-Resnet-50 models to train Covid-19 recognition for both challenges. Furthermore, we explore ensemble approaches and testing augmentation to enhance performance. Comparison with baseline results underscores the substantial efficiency of our approach, with a significant margin in terms of F1-score (14 %). This study advances the field by presenting a comprehensive methodology for accurate Covid-19 detection and adaptation, leveraging cutting-edge AI techniques in medical image analysis.",
@@ -4079,7 +4132,8 @@
                 "tumor"
             ],
             [
-                "cs.CV"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
         "abstract": "Hematoxylin and Eosin (H&E) staining is the most commonly used for disease diagnosis and tumor recurrence tracking. Hematoxylin excels at highlighting nuclei, whereas eosin stains the cytoplasm. However, H&E stain lacks details for differentiating different types of cells relevant to identifying the grade of the disease or response to specific treatment variations. Pathologists require special immunohistochemical (IHC) stains that highlight different cell types. These stains help in accurately identifying different regions of disease growth and their interactions with the cell's microenvironment. The advent of deep learning models has made Image-to-Image (I2I) translation a key research area, reducing the need for expensive physical staining processes. Pix2Pix and CycleGAN are still the most commonly used methods for virtual staining applications. However, both suffer from hallucinations or staining irregularities when H&E stain has less discriminate information about the underlying cells IHC needs to highlight (e.g.,CD3 lymphocytes). Diffusion models are currently the state-of-the-art models for image generation and conditional generation tasks. However, they require extensive and diverse datasets (millions of samples) to converge, which is less feasible for virtual staining applications.Inspired by the success of multitask deep learning models for limited dataset size, we propose StainDiffuser, a novel multitask dual diffusion architecture for virtual staining that converges under a limited training budget. StainDiffuser trains two diffusion processes simultaneously: (a) generation of cell-specific IHC stain from H&E and (b) H&E-based cell segmentation using coarse segmentation only during training. Our results show that StainDiffuser produces high-quality results for easier (CK8/18,epithelial marker) and difficult stains(CD3, Lymphocytes).",
@@ -4262,7 +4316,9 @@
             ],
             [
                 "cs.AI",
-                "cs.CV"
+                "cs.CV",
+                "eess.IV",
+                "eess.AS"
             ]
         ],
         "abstract": "Automatic speech recognition (ASR) plays a pivotal role in our daily lives, offering utility not only for interacting with machines but also for facilitating communication for individuals with either partial or profound hearing impairments. The process involves receiving the speech signal in analogue form, followed by various signal processing algorithms to make it compatible with devices of limited capacity, such as cochlear implants (CIs). Unfortunately, these implants, equipped with a finite number of electrodes, often result in speech distortion during synthesis. Despite efforts by researchers to enhance received speech quality using various state-of-the-art signal processing techniques, challenges persist, especially in scenarios involving multiple sources of speech, environmental noise, and other circumstances. The advent of new artificial intelligence (AI) methods has ushered in cutting-edge strategies to address the limitations and difficulties associated with traditional signal processing techniques dedicated to CIs. This review aims to comprehensively review advancements in CI-based ASR and speech enhancement, among other related aspects. The primary objective is to provide a thorough overview of metrics and datasets, exploring the capabilities of AI algorithms in this biomedical field, summarizing and commenting on the best results obtained. Additionally, the review will delve into potential applications and suggest future directions to bridge existing research gaps in this domain.",
@@ -4288,7 +4344,8 @@
                 "physics"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Score-based diffusion models have proven effective in image generation and have gained widespread usage; however, the underlying factors contributing to the performance disparity between stochastic and deterministic (i.e., the probability flow ODEs) sampling schemes remain unclear. We introduce a novel formulation of diffusion models using Feynman's path integral, which is a formulation originally developed for quantum physics. We find this formulation providing comprehensive descriptions of score-based generative models, and demonstrate the derivation of backward stochastic differential equations and loss functions.The formulation accommodates an interpolating parameter connecting stochastic and deterministic sampling schemes, and we identify this parameter as a counterpart of Planck's constant in quantum physics. This analogy enables us to apply the Wentzel-Kramers-Brillouin (WKB) expansion, a well-established technique in quantum physics, for evaluating the negative log-likelihood to assess the performance disparity between stochastic and deterministic sampling schemes.",
@@ -4547,7 +4604,8 @@
                 "industrial"
             ],
             [
-                "cs.AI"
+                "cs.AI",
+                "cs.LG"
             ]
         ],
         "abstract": "Zero-shot fault diagnosis (ZSFD) is capable of identifying unseen faults via predicting fault attributes labeled by human experts. We first recognize the demand of ZSFD to deal with continuous changes in industrial processes, i.e., the model's ability to adapt to new fault categories and attributes while avoiding forgetting the diagnosis ability learned previously. To overcome the issue that the existing ZSFD paradigm cannot learn from evolving streams of training data in industrial scenarios, the incremental ZSFD (IZSFD) paradigm is proposed for the first time, which incorporates category increment and attribute increment for both traditional ZSFD and generalized ZSFD paradigms. To achieve IZSFD, we present a broad-deep mixed anti-forgetting framework (BDMAFF) that aims to learn from new fault categories and attributes. To tackle the issue of forgetting, BDMAFF effectively accumulates previously acquired knowledge from two perspectives: features and attribute prototypes. The feature memory is established through a deep generative model that employs anti-forgetting training strategies, ensuring the generation quality of historical categories is supervised and maintained. The diagnosis model SEEs the UNSEEN faults with the help of generated samples from the generative model. The attribute prototype memory is established through a diagnosis model inspired by the broad learning system. Unlike traditional incremental learning algorithms, BDMAFF introduces a memory-driven iterative update strategy for the diagnosis model, which allows the model to learn new faults and attributes without requiring the storage of all historical training samples. The effectiveness of the proposed method is verified by a real hydraulic system and the Tennessee-Eastman benchmark process.",
