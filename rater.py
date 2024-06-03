@@ -31,7 +31,7 @@ class Rater:
             -2: [
                 [r"bio\S*", "medical", "health", "healthcare", "surgical",
                  "surgery", "survival", "diagnosi(s|ng)", "f?MRI", "CT", "eeg",
-                 "whole slide", "X-ray", "cancer", "disease", "skin lesions",
+                 "whole[- ]slide", "X-ray", "cancer", "disease", "skin lesions",
                  "sign language", "clinical", "facial", "cardiac", "tumor",
                  "endoscopic", "psychological", "pathological", "retinal?",
                  "red blood cells", "organ", "DNA", "radiology", "physiological"],

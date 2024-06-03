@@ -2,7 +2,7 @@ import json
 import os
 import re
 
-keywords = r"astronomy"
+keywords = r""
 allFind = []
 
 for result in sorted(os.listdir("results")):
