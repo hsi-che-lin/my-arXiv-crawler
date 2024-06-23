@@ -70,7 +70,7 @@ class Rater:
                 ["attacks?"],
             ],
             1: [
-                ["(parameters?|meory|time|training)[ -]?(efficient|efficiency)",
+                ["(parameters?|memory|time|training)[ -]?(efficient|efficiency)",
                  "PEFT", "efficient fine-?tun(e|ing)", "GPU memory"],
                 ["(vision|visual)[ -]language", "VLMs?"],
                 ["audio[ -](vision|visual)"],
