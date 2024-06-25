@@ -78,6 +78,7 @@
         "rating": "2",
         "keywords": [
             [
+                "Memory Efficient",
                 "PEFT"
             ],
             [
@@ -185,7 +186,7 @@
         "rating": "2",
         "keywords": [
             [
-                "parameter-efficient",
+                "Memory-Efficient",
                 "efficient fine-tuning"
             ],
             [
@@ -268,6 +269,27 @@
             "cs.AI"
         ],
         "comment": "Work in progress. Code is available at \\url{https://github.com/hustvl/ViG}"
+    },
+    {
+        "paper id": "2405.18628",
+        "abstract url": "https://arxiv.org/abs/2405.18628",
+        "title": "Hardware-Aware Parallel Prompt Decoding for Memory-Efficient Acceleration of LLM Inference",
+        "rating": "2",
+        "keywords": [
+            [
+                "Memory-Efficient"
+            ],
+            [
+                "cs.LG",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "The auto-regressive decoding of Large Language Models (LLMs) results in significant overheads in their hardware performance. While recent research has investigated various speculative decoding techniques for multi-token generation, these efforts have primarily focused on improving processing speed such as throughput. Crucially, they often neglect other metrics essential for real-life deployments, such as memory consumption and training cost. To overcome these limitations, we propose a novel parallel prompt decoding that requires only $0.0002$% trainable parameters, enabling efficient training on a single A100-40GB GPU in just 16 hours. Inspired by the human natural language generation process, $PPD$ approximates outputs generated at future timesteps in parallel by using multiple prompt tokens. This approach partially recovers the missing conditional dependency information necessary for multi-token generation, resulting in up to a 28% higher acceptance rate for long-range predictions. Furthermore, we present a hardware-aware dynamic sparse tree technique that adaptively optimizes this decoding scheme to fully leverage the computational capacities on different GPUs. Through extensive experiments across LLMs ranging from MobileLlama to Vicuna-13B on a wide range of benchmarks, our approach demonstrates up to 2.49$\\times$ speedup and maintains a minimal runtime memory overhead of just $0.0004$%. More importantly, our parallel prompt decoding can serve as an orthogonal optimization for synergistic integration with existing speculative decoding, showing up to $1.22\\times$ further speed improvement. Our code is available at https://github.com/hmarkc/parallel-prompt-decoding.",
+        "subjects": [
+            "cs.LG",
+            "cs.CL"
+        ],
+        "comment": "The code for this implementation is available at https://github.com/hmarkc/parallel-prompt-decoding"
     },
     {
         "paper id": "2405.18654",
@@ -369,6 +391,27 @@
             "cs.CV"
         ],
         "comment": "Accepted at ICML 2024. Code available at: https://github.com/pakoromilas/DHEL-KCL.git"
+    },
+    {
+        "paper id": "2405.18144",
+        "abstract url": "https://arxiv.org/abs/2405.18144",
+        "title": "4-bit Shampoo for Memory-Efficient Network Training",
+        "rating": "1.5",
+        "keywords": [
+            [
+                "Memory-Efficient"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Second-order optimizers, maintaining a matrix termed a preconditioner, are superior to first-order optimizers in both theory and practice. The states forming the preconditioner and its inverse root restrict the maximum size of models trained by second-order optimizers. To address this, compressing 32-bit optimizer states to lower bitwidths has shown promise in reducing memory usage. However, current approaches only pertain to first-order optimizers. In this paper, we propose the first 4-bit second-order optimizers, exemplified by 4-bit Shampoo, maintaining performance similar to that of 32-bit ones. We show that quantizing the eigenvector matrix of the preconditioner in 4-bit Shampoo is remarkably better than quantizing the preconditioner itself both theoretically and experimentally. By rectifying the orthogonality of the quantized eigenvector matrix, we enhance the approximation of the preconditioner's eigenvector matrix, which also benefits the computation of its inverse 4-th root. Besides, we find that linear square quantization slightly outperforms dynamic tree quantization when quantizing second-order optimizer states. Evaluation on various networks for image classification demonstrates that our 4-bit Shampoo achieves comparable test accuracy to its 32-bit counterpart while being more memory-efficient. The source code will be made available.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI"
+        ],
+        "comment": null
     },
     {
         "paper id": "2405.18148",
@@ -546,6 +589,31 @@
             "cs.CV"
         ],
         "comment": "4 pages, 4 figures"
+    },
+    {
+        "paper id": "2405.17873",
+        "abstract url": "https://arxiv.org/abs/2405.17873",
+        "title": "MixDQ: Memory-Efficient Few-Step Text-to-Image Diffusion Models with Metric-Decoupled Mixed Precision Quantization",
+        "rating": "1",
+        "keywords": [
+            [
+                "Memory-Efficient"
+            ],
+            [
+                "Diffusion",
+                "Text-to-Image"
+            ],
+            [
+                "cs.AI",
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Diffusion models have achieved significant visual generation quality. However, their significant computational and memory costs pose challenge for their application on resource-constrained mobile devices or even desktop GPUs. Recent few-step diffusion models reduces the inference time by reducing the denoising steps. However, their memory consumptions are still excessive. The Post Training Quantization (PTQ) replaces high bit-width FP representation with low-bit integer values (INT4/8) , which is an effective and efficient technique to reduce the memory cost. However, when applying to few-step diffusion models, existing quantization methods face challenges in preserving both the image quality and text alignment. To address this issue, we propose an mixed-precision quantization framework - MixDQ. Firstly, We design specialized BOS-aware quantization method for highly sensitive text embedding quantization. Then, we conduct metric-decoupled sensitivity analysis to measure the sensitivity of each layer. Finally, we develop an integer-programming-based method to conduct bit-width allocation. While existing quantization methods fall short at W8A8, MixDQ could achieve W8A8 without performance loss, and W4A8 with negligible visual degradation. Compared with FP16, we achieve 3-4x reduction in model size and memory cost, and 1.45x latency speedup.",
+        "subjects": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "comment": "Project Page: https://a-suozhang.xyz/mixdq.github.io/"
     },
     {
         "paper id": "2405.17893",
@@ -1103,6 +1171,26 @@
         "comment": "8 pages, 10 figures"
     },
     {
+        "paper id": "2405.18172",
+        "abstract url": "https://arxiv.org/abs/2405.18172",
+        "title": "AnyFit: Controllable Virtual Try-on for Any Combination of Attire Across Any Scenario",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.AI",
+                "cs.LG",
+                "cs.CV"
+            ]
+        ],
+        "abstract": "While image-based virtual try-on has made significant strides, emerging approaches still fall short of delivering high-fidelity and robust fitting images across various scenarios, as their models suffer from issues of ill-fitted garment styles and quality degrading during the training process, not to mention the lack of support for various combinations of attire. Therefore, we first propose a lightweight, scalable, operator known as Hydra Block for attire combinations. This is achieved through a parallel attention mechanism that facilitates the feature injection of multiple garments from conditionally encoded branches into the main network. Secondly, to significantly enhance the model's robustness and expressiveness in real-world scenarios, we evolve its potential across diverse settings by synthesizing the residuals of multiple models, as well as implementing a mask region boost strategy to overcome the instability caused by information leakage in existing models. Equipped with the above design, AnyFit surpasses all baselines on high-resolution benchmarks and real-world data by a large gap, excelling in producing well-fitting garments replete with photorealistic and rich details. Furthermore, AnyFit's impressive performance on high-fidelity virtual try-ons in any scenario from any image, paves a new path for future research within the fashion community.",
+        "subjects": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "comment": "Project website: https://colorful-liyu.github.io/anyfit-page/"
+    },
+    {
         "paper id": "2405.18193",
         "abstract url": "https://arxiv.org/abs/2405.18193",
         "title": "In-Context Symmetries: Self-Supervised Learning through Contextual World Models",
@@ -1139,6 +1227,33 @@
             "cs.LG"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2405.18213",
+        "abstract url": "https://arxiv.org/abs/2405.18213",
+        "title": "NeRAF: 3D Scene Infused Neural Radiance and Acoustic Fields",
+        "rating": "1",
+        "keywords": [
+            [
+                "audio-visual"
+            ],
+            [
+                "3D",
+                "radiance fields"
+            ],
+            [
+                "cs.CV",
+                "cs.SD",
+                "eess.AS"
+            ]
+        ],
+        "abstract": "Sound plays a major role in human perception, providing essential scene information alongside vision for understanding our environment. Despite progress in neural implicit representations, learning acoustics that match a visual scene is still challenging. We propose NeRAF, a method that jointly learns acoustic and radiance fields. NeRAF is designed as a Nerfstudio module for convenient access to realistic audio-visual generation. It synthesizes both novel views and spatialized audio at new positions, leveraging radiance field capabilities to condition the acoustic field with 3D scene information. At inference, each modality can be rendered independently and at spatially separated positions, providing greater versatility. We demonstrate the advantages of our method on the SoundSpaces dataset. NeRAF achieves substantial performance improvements over previous works while being more data-efficient. Furthermore, NeRAF enhances novel view synthesis of complex scenes trained with sparse data through cross-modal learning.",
+        "subjects": [
+            "cs.SD",
+            "cs.CV",
+            "eess.AS"
+        ],
+        "comment": "Project Page: https://amandinebtto.github.io/NeRAF"
     },
     {
         "paper id": "2405.18217",
@@ -1192,6 +1307,26 @@
             "cs.AI"
         ],
         "comment": "62 pages, 5 figures. Under review"
+    },
+    {
+        "paper id": "2405.18258",
+        "abstract url": "https://arxiv.org/abs/2405.18258",
+        "title": "Text-only Synthesis for Image Captioning",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.AI",
+                "cs.CV",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "From paired image-text training to text-only training for image captioning, the pursuit of relaxing the requirements for high-cost and large-scale annotation of good quality data remains consistent. In this paper, we propose Text-only Synthesis for Image Captioning (ToCa), which further advances this relaxation with fewer human labor and less computing time. Specifically, we deconstruct caption text into structures and lexical words, which serve as the fundamental components of the caption. By combining different structures and lexical words as inputs to the large language model, massive captions that contain various patterns of lexical words are generated. This method not only approaches the target domain but also surpasses it by generating new captions, thereby enhancing the zero-shot generalization ability of the model. Considering the different levels of data access in the real world, we define three synthesis scenarios: cross-domain synthesis, in-domain synthesis, and data-efficient synthesis. Experiments in these scenarios demonstrate the generalizability, transferability and practicability of ToCa with a nearly 5 CIDEr improvement for zero-shot cross-domain captioning and a maximum increase of over 20 CIDEr for data-efficient captioning.",
+        "subjects": [
+            "cs.CV",
+            "cs.AI",
+            "cs.CL"
+        ],
+        "comment": null
     },
     {
         "paper id": "2405.18299",
@@ -1363,6 +1498,26 @@
         "comment": null
     },
     {
+        "paper id": "2405.18369",
+        "abstract url": "https://arxiv.org/abs/2405.18369",
+        "title": "PromptWizard: Task-Aware Agent-driven Prompt Optimization Framework",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.AI",
+                "cs.LG",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Large language models (LLMs) have revolutionized AI across diverse domains, showcasing remarkable capabilities. Central to their success is the concept of prompting, which guides model output generation. However, manual prompt engineering is labor-intensive and domain-specific, necessitating automated solutions. This paper introduces PromptWizard, a novel framework leveraging LLMs to iteratively synthesize and refine prompts tailored to specific tasks. Unlike existing approaches, PromptWizard optimizes both prompt instructions and in-context examples, maximizing model performance. The framework iteratively refines prompts by mutating instructions and incorporating negative examples to deepen understanding and ensure diversity. It further enhances both instructions and examples with the aid of a critic, synthesizing new instructions and examples enriched with detailed reasoning steps for optimal performance. PromptWizard offers several key features and capabilities, including computational efficiency compared to state-of-the-art approaches, adaptability to scenarios with varying amounts of training data, and effectiveness with smaller LLMs. Rigorous evaluation across 35 tasks on 8 datasets demonstrates PromptWizard's superiority over existing prompt strategies, showcasing its efficacy and scalability in prompt optimization.",
+        "subjects": [
+            "cs.CL",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.18375",
         "abstract url": "https://arxiv.org/abs/2405.18375",
         "title": "Thai Winograd Schemas: A Benchmark for Thai Commonsense Reasoning",
@@ -1436,6 +1591,25 @@
             "cs.LG"
         ],
         "comment": "22 pages, 15 figures"
+    },
+    {
+        "paper id": "2405.18418",
+        "abstract url": "https://arxiv.org/abs/2405.18418",
+        "title": "Hierarchical World Models as Visual Whole-Body Humanoid Controllers",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.LG",
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Whole-body control for humanoids is challenging due to the high-dimensional nature of the problem, coupled with the inherent instability of a bipedal morphology. Learning from visual observations further exacerbates this difficulty. In this work, we explore highly data-driven approaches to visual whole-body humanoid control based on reinforcement learning, without any simplifying assumptions, reward design, or skill primitives. Specifically, we propose a hierarchical world model in which a high-level agent generates commands based on visual observations for a low-level agent to execute, both of which are trained with rewards. Our approach produces highly performant control policies in 8 tasks with a simulated 56-DoF humanoid, while synthesizing motions that are broadly preferred by humans. Code and videos: https://nicklashansen.com/rlpuppeteer",
+        "subjects": [
+            "cs.LG",
+            "cs.CV",
+            "cs.RO"
+        ],
+        "comment": "Code and videos at https://nicklashansen.com/rlpuppeteer"
     },
     {
         "paper id": "2405.18433",
@@ -1628,24 +1802,6 @@
             "cs.LG"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2405.18628",
-        "abstract url": "https://arxiv.org/abs/2405.18628",
-        "title": "Hardware-Aware Parallel Prompt Decoding for Memory-Efficient Acceleration of LLM Inference",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.LG",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "The auto-regressive decoding of Large Language Models (LLMs) results in significant overheads in their hardware performance. While recent research has investigated various speculative decoding techniques for multi-token generation, these efforts have primarily focused on improving processing speed such as throughput. Crucially, they often neglect other metrics essential for real-life deployments, such as memory consumption and training cost. To overcome these limitations, we propose a novel parallel prompt decoding that requires only $0.0002$% trainable parameters, enabling efficient training on a single A100-40GB GPU in just 16 hours. Inspired by the human natural language generation process, $PPD$ approximates outputs generated at future timesteps in parallel by using multiple prompt tokens. This approach partially recovers the missing conditional dependency information necessary for multi-token generation, resulting in up to a 28% higher acceptance rate for long-range predictions. Furthermore, we present a hardware-aware dynamic sparse tree technique that adaptively optimizes this decoding scheme to fully leverage the computational capacities on different GPUs. Through extensive experiments across LLMs ranging from MobileLlama to Vicuna-13B on a wide range of benchmarks, our approach demonstrates up to 2.49$\\times$ speedup and maintains a minimal runtime memory overhead of just $0.0004$%. More importantly, our parallel prompt decoding can serve as an orthogonal optimization for synergistic integration with existing speculative decoding, showing up to $1.22\\times$ further speed improvement. Our code is available at https://github.com/hmarkc/parallel-prompt-decoding.",
-        "subjects": [
-            "cs.LG",
-            "cs.CL"
-        ],
-        "comment": "The code for this implementation is available at https://github.com/hmarkc/parallel-prompt-decoding"
     },
     {
         "paper id": "2405.18634",
@@ -2259,6 +2415,22 @@
         "comment": "European Control Conference (ECC) 2024, Code: https://github.com/DeanBrandner/ECC24_TR_improved_QN_PO_for_MPC_in_RL"
     },
     {
+        "paper id": "2405.18016",
+        "abstract url": "https://arxiv.org/abs/2405.18016",
+        "title": "On Creativity and Open-Endedness",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "Artificial Life (ALife) as an interdisciplinary field draws inspiration and influence from a variety of perspectives. Scientific progress crucially depends, then, on concerted efforts to invite cross-disciplinary dialogue. The goal of this paper is to revitalize discussions of potential connections between the fields of Computational Creativity (CC) and ALife, focusing specifically on the concept of Open-Endedness (OE); the primary goal of CC is to endow artificial systems with creativity, and ALife has dedicated much research effort into studying and synthesizing OE and artificial innovation. However, despite the close proximity of these concepts, their use so far remains confined to their respective communities, and their relationship is largely unclear. We provide historical context for research in both domains, and review the limited work connecting research on creativity and OE explicitly. We then highlight specific questions to be considered, with the eventual goals of (i) decreasing conceptual ambiguity by highlighting similarities and differences between the concepts of OE, (ii) identifying synergy effects of a research agenda that encompasses both OE and creativity, and (iii) establishing a dialogue between ALife and CC research.",
+        "subjects": [
+            "cs.AI"
+        ],
+        "comment": "9 pages, accepted for publication in the proceedings of the 2024 International Conference for Artificial Life, Copenhagen, Denmark"
+    },
+    {
         "paper id": "2405.18031",
         "abstract url": "https://arxiv.org/abs/2405.18031",
         "title": "Lower Bounds and Optimal Algorithms for Non-Smooth Convex Decentralized Optimization over Time-Varying Networks",
@@ -2537,24 +2709,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.18144",
-        "abstract url": "https://arxiv.org/abs/2405.18144",
-        "title": "4-bit Shampoo for Memory-Efficient Network Training",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Second-order optimizers, maintaining a matrix termed a preconditioner, are superior to first-order optimizers in both theory and practice. The states forming the preconditioner and its inverse root restrict the maximum size of models trained by second-order optimizers. To address this, compressing 32-bit optimizer states to lower bitwidths has shown promise in reducing memory usage. However, current approaches only pertain to first-order optimizers. In this paper, we propose the first 4-bit second-order optimizers, exemplified by 4-bit Shampoo, maintaining performance similar to that of 32-bit ones. We show that quantizing the eigenvector matrix of the preconditioner in 4-bit Shampoo is remarkably better than quantizing the preconditioner itself both theoretically and experimentally. By rectifying the orthogonality of the quantized eigenvector matrix, we enhance the approximation of the preconditioner's eigenvector matrix, which also benefits the computation of its inverse 4-th root. Besides, we find that linear square quantization slightly outperforms dynamic tree quantization when quantizing second-order optimizer states. Evaluation on various networks for image classification demonstrates that our 4-bit Shampoo achieves comparable test accuracy to its 32-bit counterpart while being more memory-efficient. The source code will be made available.",
-        "subjects": [
-            "cs.LG",
-            "cs.AI"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2405.18161",
         "abstract url": "https://arxiv.org/abs/2405.18161",
         "title": "Back to the Drawing Board for Fair Representation Learning",
@@ -2569,23 +2723,6 @@
         "subjects": [
             "cs.LG",
             "cs.AI"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2405.18176",
-        "abstract url": "https://arxiv.org/abs/2405.18176",
-        "title": "SEMF: Supervised Expectation-Maximization Framework for Predicting Intervals",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "This work introduces the Supervised Expectation-Maximization Framework (SEMF), a versatile and model-agnostic framework that generates prediction intervals for datasets with complete or missing data. SEMF extends the Expectation-Maximization (EM) algorithm, traditionally used in unsupervised learning, to a supervised context, enabling it to extract latent representations for uncertainty estimation. The framework demonstrates robustness through extensive empirical evaluation across 11 tabular datasets, achieving$\\unicode{x2013}$in some cases$\\unicode{x2013}$narrower normalized prediction intervals and higher coverage than traditional quantile regression methods. Furthermore, SEMF integrates seamlessly with existing machine learning algorithms, such as gradient-boosted trees and neural networks, exemplifying its usefulness for real-world applications. The experimental results highlight SEMF's potential to advance state-of-the-art techniques in uncertainty quantification.",
-        "subjects": [
-            "stat.ML",
-            "cs.LG"
         ],
         "comment": null
     },
@@ -3033,6 +3170,23 @@
         "comment": "Advances in Approximate Bayesian Inference 2024"
     },
     {
+        "paper id": "2405.18339",
+        "abstract url": "https://arxiv.org/abs/2405.18339",
+        "title": "What characteristics define disinformation and fake news?: review of taxonomies and definitions",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "cs.CY"
+            ]
+        ],
+        "abstract": "What characteristics define disinformation and fake news? To address this research question, this Technical Note provides a comprehensive analysis of disinformation and fake news, synthesizing 46 definitions and highlighting four key points addressing their fundamental characteristics. Adopting the Prisma 2020 method, five search sets with the Boolean operator AND were selected in both Portuguese and English, which were applied across four databases, resulting in 237 reviewed articles. Following a meticulous analysis, relevant articles were identified and included, while duplicates and inaccessible documents were excluded. It points to disinformation as information that is totally or partially false, crafted by a sender with the aim of misleading, with opportunistic content designed to manipulate reality, being amplified by individual characteristics of the receiver in their interpretation and by contextual factors in which they are embedded. This Technical Note seeks to contribute to an understanding of the phenomenon of disinformation that includes the contextual dimension, obtaining as fundamental elements of analysis: I.) Sender; II.) Content; III.) Receiver; and IV.) Environment.",
+        "subjects": [
+            "cs.CY",
+            "cs.IT"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.18347",
         "abstract url": "https://arxiv.org/abs/2405.18347",
         "title": "Dataset Growth",
@@ -3169,26 +3323,6 @@
             "physics.optics"
         ],
         "comment": "17 pages, 5 figures"
-    },
-    {
-        "paper id": "2405.18459",
-        "abstract url": "https://arxiv.org/abs/2405.18459",
-        "title": "Probing the Information Theoretical Roots of Spatial Dependence Measures",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Intuitively, there is a relation between measures of spatial dependence and information theoretical measures of entropy. For instance, we can provide an intuition of why spatial data is special by stating that, on average, spatial data samples contain less than expected information. Similarly, spatial data, e.g., remotely sensed imagery, that is easy to compress is also likely to show significant spatial autocorrelation. Formulating our (highly specific) core concepts of spatial information theory in the widely used language of information theory opens new perspectives on their differences and similarities and also fosters cross-disciplinary collaboration, e.g., with the broader AI/ML communities. Interestingly, however, this intuitive relation is challenging to formalize and generalize, leading prior work to rely mostly on experimental results, e.g., for describing landscape patterns. In this work, we will explore the information theoretical roots of spatial autocorrelation, more specifically Moran's I, through the lens of self-information (also known as surprisal) and provide both formal proofs and experiments.",
-        "subjects": [
-            "cs.IT",
-            "cs.AI",
-            "cs.LG",
-            "stat.ME"
-        ],
-        "comment": "COSIT-2024 Conference Proceedings"
     },
     {
         "paper id": "2405.18499",
@@ -3629,24 +3763,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.18698",
-        "abstract url": "https://arxiv.org/abs/2405.18698",
-        "title": "Spectral-Risk Safe Reinforcement Learning with Convergence Guarantees",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "The field of risk-constrained reinforcement learning (RCRL) has been developed to effectively reduce the likelihood of worst-case scenarios by explicitly handling risk-measure-based constraints. However, the nonlinearity of risk measures makes it challenging to achieve convergence and optimality. To overcome the difficulties posed by the nonlinearity, we propose a spectral risk measure-constrained RL algorithm, spectral-risk-constrained policy optimization (SRCPO), a bilevel optimization approach that utilizes the duality of spectral risk measures. In the bilevel optimization structure, the outer problem involves optimizing dual variables derived from the risk measures, while the inner problem involves finding an optimal policy given these dual variables. The proposed method, to the best of our knowledge, is the first to guarantee convergence to an optimum in the tabular setting. Furthermore, the proposed method has been evaluated on continuous control tasks and showed the best performance among other RCRL algorithms satisfying the constraints.",
-        "subjects": [
-            "cs.LG",
-            "cs.AI"
-        ],
-        "comment": "26 pages"
-    },
-    {
         "paper id": "2405.18710",
         "abstract url": "https://arxiv.org/abs/2405.18710",
         "title": "To FP8 and Back Again: Quantifying the Effects of Reducing Precision on LLM Training Stability",
@@ -3663,6 +3779,29 @@
             "cs.AI"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2405.18715",
+        "abstract url": "https://arxiv.org/abs/2405.18715",
+        "title": "NeRF On-the-go: Exploiting Uncertainty for Distractor-free NeRFs in the Wild",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "NeRF",
+                "Radiance Fields"
+            ],
+            [
+                "cs.CV"
+            ],
+            [
+                "CVPR"
+            ]
+        ],
+        "abstract": "Neural Radiance Fields (NeRFs) have shown remarkable success in synthesizing photorealistic views from multi-view images of static scenes, but face challenges in dynamic, real-world environments with distractors like moving objects, shadows, and lighting changes. Existing methods manage controlled environments and low occlusion ratios but fall short in render quality, especially under high occlusion scenarios. In this paper, we introduce NeRF On-the-go, a simple yet effective approach that enables the robust synthesis of novel views in complex, in-the-wild scenes from only casually captured image sequences. Delving into uncertainty, our method not only efficiently eliminates distractors, even when they are predominant in captures, but also achieves a notably faster convergence speed. Through comprehensive experiments on various scenes, our method demonstrates a significant improvement over state-of-the-art techniques. This advancement opens new avenues for NeRF in diverse and dynamic real-world applications.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "CVPR 2024, first two authors contributed equally. Project Page: https://nerf-on-the-go.github.io"
     },
     {
         "paper id": "2405.18724",
@@ -3907,28 +4046,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.17873",
-        "abstract url": "https://arxiv.org/abs/2405.17873",
-        "title": "MixDQ: Memory-Efficient Few-Step Text-to-Image Diffusion Models with Metric-Decoupled Mixed Precision Quantization",
-        "rating": "0",
-        "keywords": [
-            [
-                "Diffusion",
-                "Text-to-Image"
-            ],
-            [
-                "cs.AI",
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Diffusion models have achieved significant visual generation quality. However, their significant computational and memory costs pose challenge for their application on resource-constrained mobile devices or even desktop GPUs. Recent few-step diffusion models reduces the inference time by reducing the denoising steps. However, their memory consumptions are still excessive. The Post Training Quantization (PTQ) replaces high bit-width FP representation with low-bit integer values (INT4/8) , which is an effective and efficient technique to reduce the memory cost. However, when applying to few-step diffusion models, existing quantization methods face challenges in preserving both the image quality and text alignment. To address this issue, we propose an mixed-precision quantization framework - MixDQ. Firstly, We design specialized BOS-aware quantization method for highly sensitive text embedding quantization. Then, we conduct metric-decoupled sensitivity analysis to measure the sensitivity of each layer. Finally, we develop an integer-programming-based method to conduct bit-width allocation. While existing quantization methods fall short at W8A8, MixDQ could achieve W8A8 without performance loss, and W4A8 with negligible visual degradation. Compared with FP16, we achieve 3-4x reduction in model size and memory cost, and 1.45x latency speedup.",
-        "subjects": [
-            "cs.CV",
-            "cs.AI"
-        ],
-        "comment": "Project Page: https://a-suozhang.xyz/mixdq.github.io/"
-    },
-    {
         "paper id": "2405.17876",
         "abstract url": "https://arxiv.org/abs/2405.17876",
         "title": "Decentralized Directed Collaboration for Personalized Federated Learning",
@@ -4001,6 +4118,28 @@
         "comment": "Accepted at ICML 2024"
     },
     {
+        "paper id": "2405.17891",
+        "abstract url": "https://arxiv.org/abs/2405.17891",
+        "title": "A Refined 3D Gaussian Representation for High-Quality Dynamic Scene Reconstruction",
+        "rating": "0",
+        "keywords": [
+            [
+                "3D",
+                "Gaussian Splatting",
+                "NeRF",
+                "Radiance Fields"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "In recent years, Neural Radiance Fields (NeRF) has revolutionized three-dimensional (3D) reconstruction with its implicit representation. Building upon NeRF, 3D Gaussian Splatting (3D-GS) has departed from the implicit representation of neural networks and instead directly represents scenes as point clouds with Gaussian-shaped distributions. While this shift has notably elevated the rendering quality and speed of radiance fields but inevitably led to a significant increase in memory usage. Additionally, effectively rendering dynamic scenes in 3D-GS has emerged as a pressing challenge. To address these concerns, this paper purposes a refined 3D Gaussian representation for high-quality dynamic scene reconstruction. Firstly, we use a deformable multi-layer perceptron (MLP) network to capture the dynamic offset of Gaussian points and express the color features of points through hash encoding and a tiny MLP to reduce storage requirements. Subsequently, we introduce a learnable denoising mask coupled with denoising loss to eliminate noise points from the scene, thereby further compressing 3D Gaussian model. Finally, motion noise of points is mitigated through static constraints and motion consistency constraints. Experimental results demonstrate that our method surpasses existing approaches in rendering quality and speed, while significantly reducing the memory usage associated with 3D-GS, making it highly suitable for various tasks such as novel view synthesis, and dynamic mapping.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.17929",
         "abstract url": "https://arxiv.org/abs/2405.17929",
         "title": "Towards Unified Robustness Against Both Backdoor and Adversarial Attacks",
@@ -4037,6 +4176,27 @@
             "cs.CV"
         ],
         "comment": "Project page: https://doubiiu.github.io/projects/ToonCrafter/"
+    },
+    {
+        "paper id": "2405.17958",
+        "abstract url": "https://arxiv.org/abs/2405.17958",
+        "title": "FreeSplat: Generalizable 3D Gaussian Splatting Towards Free-View Synthesis of Indoor Scenes",
+        "rating": "0",
+        "keywords": [
+            [
+                "3D",
+                "Gaussian Splatting",
+                "depth"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Empowering 3D Gaussian Splatting with generalization ability is appealing. However, existing generalizable 3D Gaussian Splatting methods are largely confined to narrow-range interpolation between stereo images due to their heavy backbones, thus lacking the ability to accurately localize 3D Gaussian and support free-view synthesis across wide view range. In this paper, we present a novel framework FreeSplat that is capable of reconstructing geometrically consistent 3D scenes from long sequence input towards free-view synthesis.Specifically, we firstly introduce Low-cost Cross-View Aggregation achieved by constructing adaptive cost volumes among nearby views and aggregating features using a multi-scale structure. Subsequently, we present the Pixel-wise Triplet Fusion to eliminate redundancy of 3D Gaussians in overlapping view regions and to aggregate features observed across multiple views. Additionally, we propose a simple but effective free-view training strategy that ensures robust view synthesis across broader view range regardless of the number of views. Our empirical results demonstrate state-of-the-art novel view synthesis peformances in both novel view rendered color maps quality and depth maps accuracy across different numbers of input views. We also show that FreeSplat performs inference more efficiently and can effectively reduce redundant Gaussians, offering the possibility of feed-forward large scene reconstruction without depth priors.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
     },
     {
         "paper id": "2405.17965",
@@ -4142,20 +4302,21 @@
         "comment": null
     },
     {
-        "paper id": "2405.18071",
-        "abstract url": "https://arxiv.org/abs/2405.18071",
-        "title": "Text Modality Oriented Image Feature Extraction for Detecting Diffusion-based DeepFake",
+        "paper id": "2405.18033",
+        "abstract url": "https://arxiv.org/abs/2405.18033",
+        "title": "RT-GS2: Real-Time Generalizable Semantic Segmentation for 3D Gaussian Representations of Radiance Fields",
         "rating": "0",
         "keywords": [
             [
-                "Diffusion",
-                "text-to-image"
+                "3D",
+                "Gaussian Splatting",
+                "Radiance Fields"
             ],
             [
                 "cs.CV"
             ]
         ],
-        "abstract": "The widespread use of diffusion methods enables the creation of highly realistic images on demand, thereby posing significant risks to the integrity and safety of online information and highlighting the necessity of DeepFake detection. Our analysis of features extracted by traditional image encoders reveals that both low-level and high-level features offer distinct advantages in identifying DeepFake images produced by various diffusion methods. Inspired by this finding, we aim to develop an effective representation that captures both low-level and high-level features to detect diffusion-based DeepFakes. To address the problem, we propose a text modality-oriented feature extraction method, termed TOFE. Specifically, for a given target image, the representation we discovered is a corresponding text embedding that can guide the generation of the target image with a specific text-to-image model. Experiments conducted across ten diffusion types demonstrate the efficacy of our proposed method.",
+        "abstract": "Gaussian Splatting has revolutionized the world of novel view synthesis by achieving high rendering performance in real-time. Recently, studies have focused on enriching these 3D representations with semantic information for downstream tasks. In this paper, we introduce RT-GS2, the first generalizable semantic segmentation method employing Gaussian Splatting. While existing Gaussian Splatting-based approaches rely on scene-specific training, RT-GS2 demonstrates the ability to generalize to unseen scenes. Our method adopts a new approach by first extracting view-independent 3D Gaussian features in a self-supervised manner, followed by a novel View-Dependent / View-Independent (VDVI) feature fusion to enhance semantic consistency over different views. Extensive experimentation on three different datasets showcases RT-GS2's superiority over the state-of-the-art methods in semantic segmentation quality, exemplified by a 8.01% increase in mIoU on the Replica dataset. Moreover, our method achieves real-time performance of 27.03 FPS, marking an astonishing 901 times speedup compared to existing approaches. This work represents a significant advancement in the field by introducing, to the best of our knowledge, the first real-time generalizable semantic segmentation method for 3D Gaussian representations of radiance fields.",
         "subjects": [
             "cs.CV"
         ],
@@ -4200,59 +4361,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.18172",
-        "abstract url": "https://arxiv.org/abs/2405.18172",
-        "title": "AnyFit: Controllable Virtual Try-on for Any Combination of Attire Across Any Scenario",
-        "rating": "0",
-        "keywords": [
-            [
-                "synthesizing"
-            ],
-            [
-                "cs.AI",
-                "cs.LG",
-                "cs.CV"
-            ]
-        ],
-        "abstract": "While image-based virtual try-on has made significant strides, emerging approaches still fall short of delivering high-fidelity and robust fitting images across various scenarios, as their models suffer from issues of ill-fitted garment styles and quality degrading during the training process, not to mention the lack of support for various combinations of attire. Therefore, we first propose a lightweight, scalable, operator known as Hydra Block for attire combinations. This is achieved through a parallel attention mechanism that facilitates the feature injection of multiple garments from conditionally encoded branches into the main network. Secondly, to significantly enhance the model's robustness and expressiveness in real-world scenarios, we evolve its potential across diverse settings by synthesizing the residuals of multiple models, as well as implementing a mask region boost strategy to overcome the instability caused by information leakage in existing models. Equipped with the above design, AnyFit surpasses all baselines on high-resolution benchmarks and real-world data by a large gap, excelling in producing well-fitting garments replete with photorealistic and rich details. Furthermore, AnyFit's impressive performance on high-fidelity virtual try-ons in any scenario from any image, paves a new path for future research within the fashion community.",
-        "subjects": [
-            "cs.CV",
-            "cs.AI",
-            "cs.LG"
-        ],
-        "comment": "Project website: https://colorful-liyu.github.io/anyfit-page/"
-    },
-    {
-        "paper id": "2405.18213",
-        "abstract url": "https://arxiv.org/abs/2405.18213",
-        "title": "NeRAF: 3D Scene Infused Neural Radiance and Acoustic Fields",
-        "rating": "0",
-        "keywords": [
-            [
-                "audio-visual"
-            ],
-            [
-                "3D",
-                "radiance fields"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV",
-                "cs.SD",
-                "eess.AS"
-            ]
-        ],
-        "abstract": "Sound plays a major role in human perception, providing essential scene information alongside vision for understanding our environment. Despite progress in neural implicit representations, learning acoustics that match a visual scene is still challenging. We propose NeRAF, a method that jointly learns acoustic and radiance fields. NeRAF is designed as a Nerfstudio module for convenient access to realistic audio-visual generation. It synthesizes both novel views and spatialized audio at new positions, leveraging radiance field capabilities to condition the acoustic field with 3D scene information. At inference, each modality can be rendered independently and at spatially separated positions, providing greater versatility. We demonstrate the advantages of our method on the SoundSpaces dataset. NeRAF achieves substantial performance improvements over previous works while being more data-efficient. Furthermore, NeRAF enhances novel view synthesis of complex scenes trained with sparse data through cross-modal learning.",
-        "subjects": [
-            "cs.SD",
-            "cs.CV",
-            "eess.AS"
-        ],
-        "comment": "Project Page: https://amandinebtto.github.io/NeRAF"
-    },
-    {
         "paper id": "2405.18236",
         "abstract url": "https://arxiv.org/abs/2405.18236",
         "title": "Position Paper: Think Globally, React Locally -- Bringing Real-time Reference-based Website Phishing Detection on macOS",
@@ -4273,29 +4381,6 @@
             "cs.LG"
         ],
         "comment": "8 pages, 7 figures, 8 tables. Accepted to STAST'24, 14th International Workshop on Socio-Technical Aspects in Security, Affiliated with the 9th IEEE European Symposium on Security and Privacy, https://stast.uni.lu/"
-    },
-    {
-        "paper id": "2405.18258",
-        "abstract url": "https://arxiv.org/abs/2405.18258",
-        "title": "Text-only Synthesis for Image Captioning",
-        "rating": "0",
-        "keywords": [
-            [
-                "Synthesis"
-            ],
-            [
-                "cs.AI",
-                "cs.CV",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "From paired image-text training to text-only training for image captioning, the pursuit of relaxing the requirements for high-cost and large-scale annotation of good quality data remains consistent. In this paper, we propose Text-only Synthesis for Image Captioning (ToCa), which further advances this relaxation with fewer human labor and less computing time. Specifically, we deconstruct caption text into structures and lexical words, which serve as the fundamental components of the caption. By combining different structures and lexical words as inputs to the large language model, massive captions that contain various patterns of lexical words are generated. This method not only approaches the target domain but also surpasses it by generating new captions, thereby enhancing the zero-shot generalization ability of the model. Considering the different levels of data access in the real world, we define three synthesis scenarios: cross-domain synthesis, in-domain synthesis, and data-efficient synthesis. Experiments in these scenarios demonstrate the generalizability, transferability and practicability of ToCa with a nearly 5 CIDEr improvement for zero-shot cross-domain captioning and a maximum increase of over 20 CIDEr for data-efficient captioning.",
-        "subjects": [
-            "cs.CV",
-            "cs.AI",
-            "cs.CL"
-        ],
-        "comment": null
     },
     {
         "paper id": "2405.18295",
@@ -4401,29 +4486,6 @@
         "abstract": "Rapid advancements in Autonomous Driving (AD) tasks turned a significant shift toward end-to-end fashion, particularly in the utilization of vision-language models (VLMs) that integrate robust logical reasoning and cognitive abilities to enable comprehensive end-to-end planning. However, these VLM-based approaches tend to integrate 2D vision tokenizers and a large language model (LLM) for ego-car planning, which lack 3D geometric priors as a cornerstone of reliable planning. Naturally, this observation raises a critical concern: Can a 2D-tokenized LLM accurately perceive the 3D environment? Our evaluation of current VLM-based methods across 3D object detection, vectorized map construction, and environmental caption suggests that the answer is, unfortunately, NO. In other words, 2D-tokenized LLM fails to provide reliable autonomous driving. In response, we introduce DETR-style 3D perceptrons as 3D tokenizers, which connect LLM with a one-layer linear projector. This simple yet elegant strategy, termed Atlas, harnesses the inherent priors of the 3D physical world, enabling it to simultaneously process high-resolution multi-view images and employ spatiotemporal modeling. Despite its simplicity, Atlas demonstrates superior performance in both 3D detection and ego planning tasks on nuScenes dataset, proving that 3D-tokenized LLM is the key to reliable autonomous driving. The code and datasets will be released.",
         "subjects": [
             "cs.CV"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2405.18369",
-        "abstract url": "https://arxiv.org/abs/2405.18369",
-        "title": "PromptWizard: Task-Aware Agent-driven Prompt Optimization Framework",
-        "rating": "0",
-        "keywords": [
-            [
-                "synthesize"
-            ],
-            [
-                "cs.AI",
-                "cs.LG",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Large language models (LLMs) have revolutionized AI across diverse domains, showcasing remarkable capabilities. Central to their success is the concept of prompting, which guides model output generation. However, manual prompt engineering is labor-intensive and domain-specific, necessitating automated solutions. This paper introduces PromptWizard, a novel framework leveraging LLMs to iteratively synthesize and refine prompts tailored to specific tasks. Unlike existing approaches, PromptWizard optimizes both prompt instructions and in-context examples, maximizing model performance. The framework iteratively refines prompts by mutating instructions and incorporating negative examples to deepen understanding and ensure diversity. It further enhances both instructions and examples with the aid of a critic, synthesizing new instructions and examples enriched with detailed reasoning steps for optimal performance. PromptWizard offers several key features and capabilities, including computational efficiency compared to state-of-the-art approaches, adaptability to scenarios with varying amounts of training data, and effectiveness with smaller LLMs. Rigorous evaluation across 35 tasks on 8 datasets demonstrates PromptWizard's superiority over existing prompt strategies, showcasing its efficacy and scalability in prompt optimization.",
-        "subjects": [
-            "cs.CL",
-            "cs.AI",
-            "cs.LG"
         ],
         "comment": null
     },
@@ -4547,28 +4609,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.18418",
-        "abstract url": "https://arxiv.org/abs/2405.18418",
-        "title": "Hierarchical World Models as Visual Whole-Body Humanoid Controllers",
-        "rating": "0",
-        "keywords": [
-            [
-                "synthesizing"
-            ],
-            [
-                "cs.LG",
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Whole-body control for humanoids is challenging due to the high-dimensional nature of the problem, coupled with the inherent instability of a bipedal morphology. Learning from visual observations further exacerbates this difficulty. In this work, we explore highly data-driven approaches to visual whole-body humanoid control based on reinforcement learning, without any simplifying assumptions, reward design, or skill primitives. Specifically, we propose a hierarchical world model in which a high-level agent generates commands based on visual observations for a low-level agent to execute, both of which are trained with rewards. Our approach produces highly performant control policies in 8 tasks with a simulated 56-DoF humanoid, while synthesizing motions that are broadly preferred by humans. Code and videos: https://nicklashansen.com/rlpuppeteer",
-        "subjects": [
-            "cs.LG",
-            "cs.CV",
-            "cs.RO"
-        ],
-        "comment": "Code and videos at https://nicklashansen.com/rlpuppeteer"
-    },
-    {
         "paper id": "2405.18426",
         "abstract url": "https://arxiv.org/abs/2405.18426",
         "title": "GFlow: Recovering 4D World from Monocular Video",
@@ -4625,8 +4665,7 @@
         "rating": "0",
         "keywords": [
             [
-                "diffusion",
-                "Synthesis"
+                "diffusion"
             ],
             [
                 "cs.CV"
@@ -4726,26 +4765,6 @@
             "cs.CL",
             "cs.CR",
             "cs.LG"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2405.18606",
-        "abstract url": "https://arxiv.org/abs/2405.18606",
-        "title": "Track Initialization and Re-Identification for~3D Multi-View Multi-Object Tracking",
-        "rating": "0",
-        "keywords": [
-            [
-                "3D"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "We propose a 3D multi-object tracking (MOT) solution using only 2D detections from monocular cameras, which automatically initiates/terminates tracks as well as resolves track appearance-reappearance and occlusions. Moreover, this approach does not require detector retraining when cameras are reconfigured but only the camera matrices of reconfigured cameras need to be updated. Our approach is based on a Bayesian multi-object formulation that integrates track initiation/termination, re-identification, occlusion handling, and data association into a single Bayes filtering recursion. However, the exact filter that utilizes all these functionalities is numerically intractable due to the exponentially growing number of terms in the (multi-object) filtering density, while existing approximations trade-off some of these functionalities for speed. To this end, we develop a more efficient approximation suitable for online MOT by incorporating object features and kinematics into the measurement model, which improves data association and subsequently reduces the number of terms. Specifically, we exploit the 2D detections and extracted features from multiple cameras to provide a better approximation of the multi-object filtering density to realize the track initiation/termination and re-identification functionalities. Further, incorporating a tractable geometric occlusion model based on 2D projections of 3D objects on the camera planes realizes the occlusion handling functionality of the filter. Evaluation of the proposed solution on challenging datasets demonstrates significant improvements and robustness when camera configurations change on-the-fly, compared to existing multi-view MOT solutions. The source code is publicly available at https://github.com/linh-gist/mv-glmb-ab.",
-        "subjects": [
-            "cs.CV",
-            "cs.IT"
         ],
         "comment": null
     },
@@ -4969,25 +4988,6 @@
             "cs.AI"
         ],
         "comment": "12 pages, 5 figures"
-    },
-    {
-        "paper id": "2405.18016",
-        "abstract url": "https://arxiv.org/abs/2405.18016",
-        "title": "On Creativity and Open-Endedness",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "synthesizing"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "Artificial Life (ALife) as an interdisciplinary field draws inspiration and influence from a variety of perspectives. Scientific progress crucially depends, then, on concerted efforts to invite cross-disciplinary dialogue. The goal of this paper is to revitalize discussions of potential connections between the fields of Computational Creativity (CC) and ALife, focusing specifically on the concept of Open-Endedness (OE); the primary goal of CC is to endow artificial systems with creativity, and ALife has dedicated much research effort into studying and synthesizing OE and artificial innovation. However, despite the close proximity of these concepts, their use so far remains confined to their respective communities, and their relationship is largely unclear. We provide historical context for research in both domains, and review the limited work connecting research on creativity and OE explicitly. We then highlight specific questions to be considered, with the eventual goals of (i) decreasing conceptual ambiguity by highlighting similarities and differences between the concepts of OE, (ii) identifying synergy effects of a research agenda that encompasses both OE and creativity, and (iii) establishing a dialogue between ALife and CC research.",
-        "subjects": [
-            "cs.AI"
-        ],
-        "comment": "9 pages, accepted for publication in the proceedings of the 2024 International Conference for Artificial Life, Copenhagen, Denmark"
     },
     {
         "paper id": "2405.18021",
@@ -5313,26 +5313,6 @@
         "comment": "Accepted at CVPR 2024"
     },
     {
-        "paper id": "2405.18339",
-        "abstract url": "https://arxiv.org/abs/2405.18339",
-        "title": "What characteristics define disinformation and fake news?: review of taxonomies and definitions",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "synthesizing"
-            ],
-            [
-                "cs.CY"
-            ]
-        ],
-        "abstract": "What characteristics define disinformation and fake news? To address this research question, this Technical Note provides a comprehensive analysis of disinformation and fake news, synthesizing 46 definitions and highlighting four key points addressing their fundamental characteristics. Adopting the Prisma 2020 method, five search sets with the Boolean operator AND were selected in both Portuguese and English, which were applied across four databases, resulting in 237 reviewed articles. Following a meticulous analysis, relevant articles were identified and included, while duplicates and inaccessible documents were excluded. It points to disinformation as information that is totally or partially false, crafted by a sender with the aim of misleading, with opportunistic content designed to manipulate reality, being amplified by individual characteristics of the receiver in their interpretation and by contextual factors in which they are embedded. This Technical Note seeks to contribute to an understanding of the phenomenon of disinformation that includes the contextual dimension, obtaining as fundamental elements of analysis: I.) Sender; II.) Content; III.) Receiver; and IV.) Environment.",
-        "subjects": [
-            "cs.CY",
-            "cs.IT"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2405.18373",
         "abstract url": "https://arxiv.org/abs/2405.18373",
         "title": "A Hessian-Aware Stochastic Differential Equation for Modelling SGD",
@@ -5513,32 +5493,6 @@
             "math.OC"
         ],
         "comment": "24 pages, 8 figures"
-    },
-    {
-        "paper id": "2405.18715",
-        "abstract url": "https://arxiv.org/abs/2405.18715",
-        "title": "NeRF On-the-go: Exploiting Uncertainty for Distractor-free NeRFs in the Wild",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "NeRF",
-                "Radiance Fields"
-            ],
-            [
-                "synthesizing"
-            ],
-            [
-                "cs.CV"
-            ],
-            [
-                "CVPR"
-            ]
-        ],
-        "abstract": "Neural Radiance Fields (NeRFs) have shown remarkable success in synthesizing photorealistic views from multi-view images of static scenes, but face challenges in dynamic, real-world environments with distractors like moving objects, shadows, and lighting changes. Existing methods manage controlled environments and low occlusion ratios but fall short in render quality, especially under high occlusion scenarios. In this paper, we introduce NeRF On-the-go, a simple yet effective approach that enables the robust synthesis of novel views in complex, in-the-wild scenes from only casually captured image sequences. Delving into uncertainty, our method not only efficiently eliminates distractors, even when they are predominant in captures, but also achieves a notably faster convergence speed. Through comprehensive experiments on various scenes, our method demonstrates a significant improvement over state-of-the-art techniques. This advancement opens new avenues for NeRF in diverse and dynamic real-world applications.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "CVPR 2024, first two authors contributed equally. Project Page: https://nerf-on-the-go.github.io"
     },
     {
         "paper id": "2405.18729",
@@ -5764,31 +5718,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.17891",
-        "abstract url": "https://arxiv.org/abs/2405.17891",
-        "title": "A Refined 3D Gaussian Representation for High-Quality Dynamic Scene Reconstruction",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting",
-                "NeRF",
-                "Radiance Fields"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "In recent years, Neural Radiance Fields (NeRF) has revolutionized three-dimensional (3D) reconstruction with its implicit representation. Building upon NeRF, 3D Gaussian Splatting (3D-GS) has departed from the implicit representation of neural networks and instead directly represents scenes as point clouds with Gaussian-shaped distributions. While this shift has notably elevated the rendering quality and speed of radiance fields but inevitably led to a significant increase in memory usage. Additionally, effectively rendering dynamic scenes in 3D-GS has emerged as a pressing challenge. To address these concerns, this paper purposes a refined 3D Gaussian representation for high-quality dynamic scene reconstruction. Firstly, we use a deformable multi-layer perceptron (MLP) network to capture the dynamic offset of Gaussian points and express the color features of points through hash encoding and a tiny MLP to reduce storage requirements. Subsequently, we introduce a learnable denoising mask coupled with denoising loss to eliminate noise points from the scene, thereby further compressing 3D Gaussian model. Finally, motion noise of points is mitigated through static constraints and motion consistency constraints. Experimental results demonstrate that our method surpasses existing approaches in rendering quality and speed, while significantly reducing the memory usage associated with 3D-GS, making it highly suitable for various tasks such as novel view synthesis, and dynamic mapping.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2405.17898",
         "abstract url": "https://arxiv.org/abs/2405.17898",
         "title": "FlashST: A Simple and Universal Prompt-Tuning Framework for Traffic Prediction",
@@ -5911,30 +5840,6 @@
             "cs.CC"
         ],
         "comment": "18 pages; 10 figures"
-    },
-    {
-        "paper id": "2405.17958",
-        "abstract url": "https://arxiv.org/abs/2405.17958",
-        "title": "FreeSplat: Generalizable 3D Gaussian Splatting Towards Free-View Synthesis of Indoor Scenes",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting",
-                "depth"
-            ],
-            [
-                "Synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Empowering 3D Gaussian Splatting with generalization ability is appealing. However, existing generalizable 3D Gaussian Splatting methods are largely confined to narrow-range interpolation between stereo images due to their heavy backbones, thus lacking the ability to accurately localize 3D Gaussian and support free-view synthesis across wide view range. In this paper, we present a novel framework FreeSplat that is capable of reconstructing geometrically consistent 3D scenes from long sequence input towards free-view synthesis.Specifically, we firstly introduce Low-cost Cross-View Aggregation achieved by constructing adaptive cost volumes among nearby views and aggregating features using a multi-scale structure. Subsequently, we present the Pixel-wise Triplet Fusion to eliminate redundancy of 3D Gaussians in overlapping view regions and to aggregate features observed across multiple views. Additionally, we propose a simple but effective free-view training strategy that ensures robust view synthesis across broader view range regardless of the number of views. Our empirical results demonstrate state-of-the-art novel view synthesis peformances in both novel view rendered color maps quality and depth maps accuracy across different numbers of input views. We also show that FreeSplat performs inference more efficiently and can effectively reduce redundant Gaussians, offering the possibility of feed-forward large scene reconstruction without depth priors.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
     },
     {
         "paper id": "2405.17969",
@@ -6073,30 +5978,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.18033",
-        "abstract url": "https://arxiv.org/abs/2405.18033",
-        "title": "RT-GS2: Real-Time Generalizable Semantic Segmentation for 3D Gaussian Representations of Radiance Fields",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting",
-                "Radiance Fields"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Gaussian Splatting has revolutionized the world of novel view synthesis by achieving high rendering performance in real-time. Recently, studies have focused on enriching these 3D representations with semantic information for downstream tasks. In this paper, we introduce RT-GS2, the first generalizable semantic segmentation method employing Gaussian Splatting. While existing Gaussian Splatting-based approaches rely on scene-specific training, RT-GS2 demonstrates the ability to generalize to unseen scenes. Our method adopts a new approach by first extracting view-independent 3D Gaussian features in a self-supervised manner, followed by a novel View-Dependent / View-Independent (VDVI) feature fusion to enhance semantic consistency over different views. Extensive experimentation on three different datasets showcases RT-GS2's superiority over the state-of-the-art methods in semantic segmentation quality, exemplified by a 8.01% increase in mIoU on the Replica dataset. Moreover, our method achieves real-time performance of 27.03 FPS, marking an astonishing 901 times speedup compared to existing approaches. This work represents a significant advancement in the field by introducing, to the best of our knowledge, the first real-time generalizable semantic segmentation method for 3D Gaussian representations of radiance fields.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2405.18061",
         "abstract url": "https://arxiv.org/abs/2405.18061",
         "title": "Context is Important in Depressive Language: A Study of the Interaction Between the Sentiments and Linguistic Markers in Reddit Discussions",
@@ -6112,6 +5993,29 @@
         "abstract": "Research exploring linguistic markers in individuals with depression has demonstrated that language usage can serve as an indicator of mental health. This study investigates the impact of discussion topic as context on linguistic markers and emotional expression in depression, using a Reddit dataset to explore interaction effects. Contrary to common findings, our sentiment analysis revealed a broader range of emotional intensity in depressed individuals, with both higher negative and positive sentiments than controls. This pattern was driven by posts containing no emotion words, revealing the limitations of the lexicon based approaches in capturing the full emotional context. We observed several interesting results demonstrating the importance of contextual analyses. For instance, the use of 1st person singular pronouns and words related to anger and sadness correlated with increased positive sentiments, whereas a higher rate of present-focused words was associated with more negative sentiments. Our findings highlight the importance of discussion contexts while interpreting the language used in depression, revealing that the emotional intensity and meaning of linguistic markers can vary based on the topic of discussion.",
         "subjects": [
             "cs.CL"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2405.18071",
+        "abstract url": "https://arxiv.org/abs/2405.18071",
+        "title": "Text Modality Oriented Image Feature Extraction for Detecting Diffusion-based DeepFake",
+        "rating": "-1",
+        "keywords": [
+            [
+                "Diffusion",
+                "text-to-image"
+            ],
+            [
+                "DeepFake"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "The widespread use of diffusion methods enables the creation of highly realistic images on demand, thereby posing significant risks to the integrity and safety of online information and highlighting the necessity of DeepFake detection. Our analysis of features extracted by traditional image encoders reveals that both low-level and high-level features offer distinct advantages in identifying DeepFake images produced by various diffusion methods. Inspired by this finding, we aim to develop an effective representation that captures both low-level and high-level features to detect diffusion-based DeepFakes. To address the problem, we propose a text modality-oriented feature extraction method, termed TOFE. Specifically, for a given target image, the representation we discovered is a corresponding text embedding that can guide the generation of the target image with a specific text-to-image model. Experiments conducted across ten diffusion types demonstrate the efficacy of our proposed method.",
+        "subjects": [
+            "cs.CV"
         ],
         "comment": null
     },
@@ -6147,8 +6051,7 @@
                 "Gaussian Splatting"
             ],
             [
-                "diffusion",
-                "synthesizing"
+                "diffusion"
             ],
             [
                 "cs.CV"
@@ -6175,6 +6078,23 @@
             "cs.CG"
         ],
         "comment": "27 pages"
+    },
+    {
+        "paper id": "2405.18142",
+        "abstract url": "https://arxiv.org/abs/2405.18142",
+        "title": "Data-Driven Distributionally Robust System Level Synthesis",
+        "rating": "-1",
+        "keywords": [
+            [
+                "trajectory"
+            ]
+        ],
+        "abstract": "We present a novel approach for the control of uncertain, linear time-invariant systems, which are perturbed by potentially unbounded, additive disturbances. We propose a \\emph{doubly robust} data-driven state-feedback controller to ensure reliable performance against both model mismatch and disturbance distribution uncertainty. Our controller, which leverages the System Level Synthesis parameterization, is designed as the solution to a distributionally robust finite-horizon optimal control problem. The goal is to minimize a cost function while satisfying constraints against the worst-case realization of the uncertainty, which is quantified using distributional ambiguity sets. The latter are defined as balls in the Wasserstein metric centered on the predictive empirical distribution computed from a set of collected trajectory data. By harnessing techniques from robust control and distributionally robust optimization, we characterize the distributional shift between the predictive and the actual closed-loop distributions, and highlight its dependency on the model mismatch and the uncertainty about the disturbance distribution. We also provide bounds on the number of samples required to achieve a desired confidence level and propose a tractable approximate formulation for the doubly robust data-driven controller. To demonstrate the effectiveness of our approach, we present a numerical example showcasing the performance of the proposed algorithm.",
+        "subjects": [
+            "math.OC",
+            "eess.SY"
+        ],
+        "comment": "12 pages, 3 figures"
     },
     {
         "paper id": "2405.18163",
@@ -6315,6 +6235,25 @@
             "cs.RO"
         ],
         "comment": "16 pages, 18 figures"
+    },
+    {
+        "paper id": "2405.18251",
+        "abstract url": "https://arxiv.org/abs/2405.18251",
+        "title": "Sensor-Based Distributionally Robust Control for Safe Robot Navigation in Dynamic Environments",
+        "rating": "-1",
+        "keywords": [
+            [
+                "Robot",
+                "Navigation"
+            ]
+        ],
+        "abstract": "We introduce a novel method for safe mobile robot navigation in dynamic, unknown environments, utilizing onboard sensing to impose safety constraints without the need for accurate map reconstruction. Traditional methods typically rely on detailed map information to synthesize safe stabilizing controls for mobile robots, which can be computationally demanding and less effective, particularly in dynamic operational conditions. By leveraging recent advances in distributionally robust optimization, we develop a distributionally robust control barrier function (DR-CBF) constraint that directly processes range sensor data to impose safety constraints. Coupling this with a control Lyapunov function (CLF) for path tracking, we demonstrate that our CLF-DR-CBF control synthesis method achieves safe, efficient, and robust navigation in uncertain dynamic environments. We demonstrate the effectiveness of our approach in simulated and real autonomous robot navigation experiments, marking a substantial advancement in real-time safety guarantees for mobile robots.",
+        "subjects": [
+            "cs.RO",
+            "eess.SY",
+            "math.OC"
+        ],
+        "comment": "Submitted to the International Journal of Robotics Research (IJRR). Project page: https://existentialrobotics.org/DR_Safe_Navigation_Webpage"
     },
     {
         "paper id": "2405.18324",
@@ -6762,6 +6701,29 @@
         "comment": "7 pages, 8 figures"
     },
     {
+        "paper id": "2405.18606",
+        "abstract url": "https://arxiv.org/abs/2405.18606",
+        "title": "Track Initialization and Re-Identification for~3D Multi-View Multi-Object Tracking",
+        "rating": "-1",
+        "keywords": [
+            [
+                "3D"
+            ],
+            [
+                "Re-Identification"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "We propose a 3D multi-object tracking (MOT) solution using only 2D detections from monocular cameras, which automatically initiates/terminates tracks as well as resolves track appearance-reappearance and occlusions. Moreover, this approach does not require detector retraining when cameras are reconfigured but only the camera matrices of reconfigured cameras need to be updated. Our approach is based on a Bayesian multi-object formulation that integrates track initiation/termination, re-identification, occlusion handling, and data association into a single Bayes filtering recursion. However, the exact filter that utilizes all these functionalities is numerically intractable due to the exponentially growing number of terms in the (multi-object) filtering density, while existing approximations trade-off some of these functionalities for speed. To this end, we develop a more efficient approximation suitable for online MOT by incorporating object features and kinematics into the measurement model, which improves data association and subsequently reduces the number of terms. Specifically, we exploit the 2D detections and extracted features from multiple cameras to provide a better approximation of the multi-object filtering density to realize the track initiation/termination and re-identification functionalities. Further, incorporating a tractable geometric occlusion model based on 2D projections of 3D objects on the camera planes realizes the occlusion handling functionality of the filter. Evaluation of the proposed solution on challenging datasets demonstrates significant improvements and robustness when camera configurations change on-the-fly, compared to existing multi-view MOT solutions. The source code is publicly available at https://github.com/linh-gist/mv-glmb-ab.",
+        "subjects": [
+            "cs.CV",
+            "cs.IT"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.18609",
         "abstract url": "https://arxiv.org/abs/2405.18609",
         "title": "Actuators \u00c0 La Mode: Modal Actuations for Soft Body Locomotion",
@@ -6850,8 +6812,7 @@
                 "3D"
             ],
             [
-                "diffusion",
-                "Synthesis"
+                "diffusion"
             ],
             [
                 "cs.CV"
@@ -7283,6 +7244,26 @@
         "comment": null
     },
     {
+        "paper id": "2405.18176",
+        "abstract url": "https://arxiv.org/abs/2405.18176",
+        "title": "SEMF: Supervised Expectation-Maximization Framework for Predicting Intervals",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "tabular"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "This work introduces the Supervised Expectation-Maximization Framework (SEMF), a versatile and model-agnostic framework that generates prediction intervals for datasets with complete or missing data. SEMF extends the Expectation-Maximization (EM) algorithm, traditionally used in unsupervised learning, to a supervised context, enabling it to extract latent representations for uncertainty estimation. The framework demonstrates robustness through extensive empirical evaluation across 11 tabular datasets, achieving$\\unicode{x2013}$in some cases$\\unicode{x2013}$narrower normalized prediction intervals and higher coverage than traditional quantile regression methods. Furthermore, SEMF integrates seamlessly with existing machine learning algorithms, such as gradient-boosted trees and neural networks, exemplifying its usefulness for real-world applications. The experimental results highlight SEMF's potential to advance state-of-the-art techniques in uncertainty quantification.",
+        "subjects": [
+            "stat.ML",
+            "cs.LG"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.18289",
         "abstract url": "https://arxiv.org/abs/2405.18289",
         "title": "Highway Reinforcement Learning",
@@ -7346,6 +7327,29 @@
             "astro-ph.IM"
         ],
         "comment": "Accepted to the 40th Conference on Uncertainty in Artificial Intelligence (UAI 2024)"
+    },
+    {
+        "paper id": "2405.18459",
+        "abstract url": "https://arxiv.org/abs/2405.18459",
+        "title": "Probing the Information Theoretical Roots of Spatial Dependence Measures",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "remotely sensed"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Intuitively, there is a relation between measures of spatial dependence and information theoretical measures of entropy. For instance, we can provide an intuition of why spatial data is special by stating that, on average, spatial data samples contain less than expected information. Similarly, spatial data, e.g., remotely sensed imagery, that is easy to compress is also likely to show significant spatial autocorrelation. Formulating our (highly specific) core concepts of spatial information theory in the widely used language of information theory opens new perspectives on their differences and similarities and also fosters cross-disciplinary collaboration, e.g., with the broader AI/ML communities. Interestingly, however, this intuitive relation is challenging to formalize and generalize, leading prior work to rely mostly on experimental results, e.g., for describing landscape patterns. In this work, we will explore the information theoretical roots of spatial autocorrelation, more specifically Moran's I, through the lens of self-information (also known as surprisal) and provide both formal proofs and experiments.",
+        "subjects": [
+            "cs.IT",
+            "cs.AI",
+            "cs.LG",
+            "stat.ME"
+        ],
+        "comment": "COSIT-2024 Conference Proceedings"
     },
     {
         "paper id": "2405.18471",
@@ -7528,6 +7532,27 @@
             "cs.CR"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2405.18698",
+        "abstract url": "https://arxiv.org/abs/2405.18698",
+        "title": "Spectral-Risk Safe Reinforcement Learning with Convergence Guarantees",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "tabular"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "The field of risk-constrained reinforcement learning (RCRL) has been developed to effectively reduce the likelihood of worst-case scenarios by explicitly handling risk-measure-based constraints. However, the nonlinearity of risk measures makes it challenging to achieve convergence and optimality. To overcome the difficulties posed by the nonlinearity, we propose a spectral risk measure-constrained RL algorithm, spectral-risk-constrained policy optimization (SRCPO), a bilevel optimization approach that utilizes the duality of spectral risk measures. In the bilevel optimization structure, the outer problem involves optimizing dual variables derived from the risk measures, while the inner problem involves finding an optimal policy given these dual variables. The proposed method, to the best of our knowledge, is the first to guarantee convergence to an optimum in the tabular setting. Furthermore, the proposed method has been evaluated on continuous control tasks and showed the best performance among other RCRL algorithms satisfying the constraints.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI"
+        ],
+        "comment": "26 pages"
     },
     {
         "paper id": "2405.18707",
@@ -7795,6 +7820,29 @@
         "comment": null
     },
     {
+        "paper id": "2405.18133",
+        "abstract url": "https://arxiv.org/abs/2405.18133",
+        "title": "A Grid-Free Fluid Solver based on Gaussian Spatial Representation",
+        "rating": "-2",
+        "keywords": [
+            [
+                "memory-efficient"
+            ],
+            [
+                "3D",
+                "Gaussian Splatting"
+            ],
+            [
+                "physics"
+            ]
+        ],
+        "abstract": "We present a grid-free fluid solver featuring a novel Gaussian representation. Drawing inspiration from the expressive capabilities of 3D Gaussian Splatting in multi-view image reconstruction, we model the continuous flow velocity as a weighted sum of multiple Gaussian functions. Leveraging this representation, we derive differential operators for the field and implement a time-dependent PDE solver using the traditional operator splitting method. Compared to implicit neural representations as another continuous spatial representation with increasing attention, our method with flexible 3D Gaussians presents enhanced accuracy on vorticity preservation. Moreover, we apply physics-driven strategies to accelerate the optimization-based time integration of Gaussian functions. This temporal evolution surpasses previous work based on implicit neural representation with reduced computational time and memory. Although not surpassing the quality of state-of-the-art Eulerian methods in fluid simulation, experiments and ablation studies indicate the potential of our memory-efficient representation. With enriched spatial information, our method exhibits a distinctive perspective combining the advantages of Eulerian and Lagrangian approaches.",
+        "subjects": [
+            "cs.GR"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.18135",
         "abstract url": "https://arxiv.org/abs/2405.18135",
         "title": "Bringing Rust to Safety-Critical Systems in Space",
@@ -7809,26 +7857,6 @@
             "cs.CR"
         ],
         "comment": "IEEE Security for Space Systems (3S) 2024"
-    },
-    {
-        "paper id": "2405.18142",
-        "abstract url": "https://arxiv.org/abs/2405.18142",
-        "title": "Data-Driven Distributionally Robust System Level Synthesis",
-        "rating": "-2",
-        "keywords": [
-            [
-                "Synthesis"
-            ],
-            [
-                "trajectory"
-            ]
-        ],
-        "abstract": "We present a novel approach for the control of uncertain, linear time-invariant systems, which are perturbed by potentially unbounded, additive disturbances. We propose a \\emph{doubly robust} data-driven state-feedback controller to ensure reliable performance against both model mismatch and disturbance distribution uncertainty. Our controller, which leverages the System Level Synthesis parameterization, is designed as the solution to a distributionally robust finite-horizon optimal control problem. The goal is to minimize a cost function while satisfying constraints against the worst-case realization of the uncertainty, which is quantified using distributional ambiguity sets. The latter are defined as balls in the Wasserstein metric centered on the predictive empirical distribution computed from a set of collected trajectory data. By harnessing techniques from robust control and distributionally robust optimization, we characterize the distributional shift between the predictive and the actual closed-loop distributions, and highlight its dependency on the model mismatch and the uncertainty about the disturbance distribution. We also provide bounds on the number of samples required to achieve a desired confidence level and propose a tractable approximate formulation for the doubly robust data-driven controller. To demonstrate the effectiveness of our approach, we present a numerical example showcasing the performance of the proposed algorithm.",
-        "subjects": [
-            "math.OC",
-            "eess.SY"
-        ],
-        "comment": "12 pages, 3 figures"
     },
     {
         "paper id": "2405.18155",
@@ -7893,28 +7921,6 @@
             "cs.LG"
         ],
         "comment": "Robotics: Science and Systems (RSS) 2024. Videos are available on our project webpage at https://vv19.github.io/render-and-diffuse/"
-    },
-    {
-        "paper id": "2405.18251",
-        "abstract url": "https://arxiv.org/abs/2405.18251",
-        "title": "Sensor-Based Distributionally Robust Control for Safe Robot Navigation in Dynamic Environments",
-        "rating": "-2",
-        "keywords": [
-            [
-                "synthesize"
-            ],
-            [
-                "Robot",
-                "Navigation"
-            ]
-        ],
-        "abstract": "We introduce a novel method for safe mobile robot navigation in dynamic, unknown environments, utilizing onboard sensing to impose safety constraints without the need for accurate map reconstruction. Traditional methods typically rely on detailed map information to synthesize safe stabilizing controls for mobile robots, which can be computationally demanding and less effective, particularly in dynamic operational conditions. By leveraging recent advances in distributionally robust optimization, we develop a distributionally robust control barrier function (DR-CBF) constraint that directly processes range sensor data to impose safety constraints. Coupling this with a control Lyapunov function (CLF) for path tracking, we demonstrate that our CLF-DR-CBF control synthesis method achieves safe, efficient, and robust navigation in uncertain dynamic environments. We demonstrate the effectiveness of our approach in simulated and real autonomous robot navigation experiments, marking a substantial advancement in real-time safety guarantees for mobile robots.",
-        "subjects": [
-            "cs.RO",
-            "eess.SY",
-            "math.OC"
-        ],
-        "comment": "Submitted to the International Journal of Robotics Research (IJRR). Project page: https://existentialrobotics.org/DR_Safe_Navigation_Webpage"
     },
     {
         "paper id": "2405.18261",
@@ -8026,6 +8032,24 @@
         "comment": "Accepted to Medical Image Analysis"
     },
     {
+        "paper id": "2405.18371",
+        "abstract url": "https://arxiv.org/abs/2405.18371",
+        "title": "ML-QLS: Multilevel Quantum Layout Synthesis",
+        "rating": "-2",
+        "keywords": [
+            [
+                "Quantum"
+            ]
+        ],
+        "abstract": "Quantum Layout Synthesis (QLS) plays a crucial role in optimizing quantum circuit execution on physical quantum devices. As we enter the era where quantum computers have hundreds of qubits, we are faced with scalability issues using optimal approaches and degrading heuristic methods' performance due to the lack of global optimization. To this end, we introduce a hybrid design that obtains the much improved solution for the heuristic method utilizing the multilevel framework, which is an effective methodology to solve large-scale problems in VLSI design. In this paper, we present ML-QLS, the first multilevel quantum layout tool with a scalable refinement operation integrated with novel cost functions and clustering strategies. Our clustering provides valuable insights into generating a proper problem approximation for quantum circuits and devices. Our experimental results demonstrate that ML-QLS can scale up to problems involving hundreds of qubits and achieve a remarkable 52% performance improvement over leading heuristic QLS tools for large circuits, which underscores the effectiveness of multilevel frameworks in quantum applications.",
+        "subjects": [
+            "quant-ph",
+            "cs.AR",
+            "cs.DC"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.18383",
         "abstract url": "https://arxiv.org/abs/2405.18383",
         "title": "Brain Tumor Segmentation (BraTS) Challenge 2024: Meningioma Radiotherapy Planning Automated Segmentation",
@@ -8120,35 +8144,6 @@
             "eess.IV"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2405.18507",
-        "abstract url": "https://arxiv.org/abs/2405.18507",
-        "title": "Injecting Hierarchical Biological Priors into Graph Neural Networks for Flow Cytometry Prediction",
-        "rating": "-2",
-        "keywords": [
-            [
-                "GNNs",
-                "Graph"
-            ],
-            [
-                "Biological"
-            ],
-            [
-                "cs.AI",
-                "cs.LG"
-            ],
-            [
-                "ICML"
-            ]
-        ],
-        "abstract": "In the complex landscape of hematologic samples such as peripheral blood or bone marrow derived from flow cytometry (FC) data, cell-level prediction presents profound challenges. This work explores injecting hierarchical prior knowledge into graph neural networks (GNNs) for single-cell multi-class classification of tabular cellular data. By representing the data as graphs and encoding hierarchical relationships between classes, we propose our hierarchical plug-in method to be applied to several GNN models, namely, FCHC-GNN, and effectively designed to capture neighborhood information crucial for single-cell FC domain. Extensive experiments on our cohort of 19 distinct patients, demonstrate that incorporating hierarchical biological constraints boosts performance significantly across multiple metrics compared to baseline GNNs without such priors. The proposed approach highlights the importance of structured inductive biases for gaining improved generalization in complex biological prediction tasks.",
-        "subjects": [
-            "cs.LG",
-            "cs.AI",
-            "q-bio.QM"
-        ],
-        "comment": "14 pages, ICML Conference Workshop 2024. arXiv admin note: text overlap with arXiv:2402.18610"
     },
     {
         "paper id": "2405.18566",
@@ -8691,26 +8686,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.18133",
-        "abstract url": "https://arxiv.org/abs/2405.18133",
-        "title": "A Grid-Free Fluid Solver based on Gaussian Spatial Representation",
-        "rating": "-3",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting"
-            ],
-            [
-                "physics"
-            ]
-        ],
-        "abstract": "We present a grid-free fluid solver featuring a novel Gaussian representation. Drawing inspiration from the expressive capabilities of 3D Gaussian Splatting in multi-view image reconstruction, we model the continuous flow velocity as a weighted sum of multiple Gaussian functions. Leveraging this representation, we derive differential operators for the field and implement a time-dependent PDE solver using the traditional operator splitting method. Compared to implicit neural representations as another continuous spatial representation with increasing attention, our method with flexible 3D Gaussians presents enhanced accuracy on vorticity preservation. Moreover, we apply physics-driven strategies to accelerate the optimization-based time integration of Gaussian functions. This temporal evolution surpasses previous work based on implicit neural representation with reduced computational time and memory. Although not surpassing the quality of state-of-the-art Eulerian methods in fluid simulation, experiments and ablation studies indicate the potential of our memory-efficient representation. With enriched spatial information, our method exhibits a distinctive perspective combining the advantages of Eulerian and Lagrangian approaches.",
-        "subjects": [
-            "cs.GR"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2405.18156",
         "abstract url": "https://arxiv.org/abs/2405.18156",
         "title": "VividPose: Advancing Stable Video Diffusion for Realistic Human Image Animation",
@@ -8791,27 +8766,6 @@
         "abstract": "Existing micro-video recommendation models exploit the interactions between users and micro-videos and/or multi-modal information of micro-videos to predict the next micro-video a user will watch, ignoring the information related to vloggers, i.e., the producers of micro-videos. However, in micro-video scenarios, vloggers play a significant role in user-video interactions, since vloggers generally focus on specific topics and users tend to follow the vloggers they are interested in. Therefore, in the paper, we propose a vlogger-augmented graph neural network model VA-GNN, which takes the effect of vloggers into consideration. Specifically, we construct a tripartite graph with users, micro-videos, and vloggers as nodes, capturing user preferences from different views, i.e., the video-view and the vlogger-view. Moreover, we conduct cross-view contrastive learning to keep the consistency between node embeddings from the two different views. Besides, when predicting the next user-video interaction, we adaptively combine the user preferences for a video itself and its vlogger. We conduct extensive experiments on two real-world datasets. The experimental results show that VA-GNN outperforms multiple existing GNN-based recommendation models.",
         "subjects": [
             "cs.IR"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2405.18371",
-        "abstract url": "https://arxiv.org/abs/2405.18371",
-        "title": "ML-QLS: Multilevel Quantum Layout Synthesis",
-        "rating": "-3",
-        "keywords": [
-            [
-                "Synthesis"
-            ],
-            [
-                "Quantum"
-            ]
-        ],
-        "abstract": "Quantum Layout Synthesis (QLS) plays a crucial role in optimizing quantum circuit execution on physical quantum devices. As we enter the era where quantum computers have hundreds of qubits, we are faced with scalability issues using optimal approaches and degrading heuristic methods' performance due to the lack of global optimization. To this end, we introduce a hybrid design that obtains the much improved solution for the heuristic method utilizing the multilevel framework, which is an effective methodology to solve large-scale problems in VLSI design. In this paper, we present ML-QLS, the first multilevel quantum layout tool with a scalable refinement operation integrated with novel cost functions and clustering strategies. Our clustering provides valuable insights into generating a proper problem approximation for quantum circuits and devices. Our experimental results demonstrate that ML-QLS can scale up to problems involving hundreds of qubits and achieve a remarkable 52% performance improvement over leading heuristic QLS tools for large circuits, which underscores the effectiveness of multilevel frameworks in quantum applications.",
-        "subjects": [
-            "quant-ph",
-            "cs.AR",
-            "cs.DC"
         ],
         "comment": null
     },
@@ -9046,6 +9000,38 @@
             "cs.NE"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2405.18507",
+        "abstract url": "https://arxiv.org/abs/2405.18507",
+        "title": "Injecting Hierarchical Biological Priors into Graph Neural Networks for Flow Cytometry Prediction",
+        "rating": "-4",
+        "keywords": [
+            [
+                "GNNs",
+                "Graph"
+            ],
+            [
+                "Biological"
+            ],
+            [
+                "tabular"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ],
+            [
+                "ICML"
+            ]
+        ],
+        "abstract": "In the complex landscape of hematologic samples such as peripheral blood or bone marrow derived from flow cytometry (FC) data, cell-level prediction presents profound challenges. This work explores injecting hierarchical prior knowledge into graph neural networks (GNNs) for single-cell multi-class classification of tabular cellular data. By representing the data as graphs and encoding hierarchical relationships between classes, we propose our hierarchical plug-in method to be applied to several GNN models, namely, FCHC-GNN, and effectively designed to capture neighborhood information crucial for single-cell FC domain. Extensive experiments on our cohort of 19 distinct patients, demonstrate that incorporating hierarchical biological constraints boosts performance significantly across multiple metrics compared to baseline GNNs without such priors. The proposed approach highlights the importance of structured inductive biases for gaining improved generalization in complex biological prediction tasks.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI",
+            "q-bio.QM"
+        ],
+        "comment": "14 pages, ICML Conference Workshop 2024. arXiv admin note: text overlap with arXiv:2402.18610"
     },
     {
         "paper id": "2405.18515",

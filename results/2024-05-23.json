@@ -197,6 +197,27 @@
         "comment": null
     },
     {
+        "paper id": "2405.14734",
+        "abstract url": "https://arxiv.org/abs/2405.14734",
+        "title": "SimPO: Simple Preference Optimization with a Reference-Free Reward",
+        "rating": "2",
+        "keywords": [
+            [
+                "memory efficient"
+            ],
+            [
+                "cs.LG",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Direct Preference Optimization (DPO) is a widely used offline preference optimization algorithm that reparameterizes reward functions in reinforcement learning from human feedback (RLHF) to enhance simplicity and training stability. In this work, we propose SimPO, a simpler yet more effective approach. The effectiveness of SimPO is attributed to a key design: using the average log probability of a sequence as the implicit reward. This reward formulation better aligns with model generation and eliminates the need for a reference model, making it more compute and memory efficient. Additionally, we introduce a target reward margin to the Bradley-Terry objective to encourage a larger margin between the winning and losing responses, further enhancing the algorithm's performance. We compare SimPO to DPO and its latest variants across various state-of-the-art training setups, including both base and instruction-tuned models like Mistral and Llama3. We evaluated on extensive instruction-following benchmarks, including AlpacaEval 2, MT-Bench, and the recent challenging Arena-Hard benchmark. Our results demonstrate that SimPO consistently and significantly outperforms existing approaches without substantially increasing response length. Specifically, SimPO outperforms DPO by up to 6.4 points on AlpacaEval 2 and by up to 7.5 points on Arena-Hard. Our top-performing model, built on Llama3-8B-Instruct, achieves a remarkable 44.7 length-controlled win rate on AlpacaEval 2 -- surpassing Claude 3 Opus on the leaderboard, and a 33.8 win rate on Arena-Hard -- making it the strongest 8B open-source model.",
+        "subjects": [
+            "cs.CL",
+            "cs.LG"
+        ],
+        "comment": "Code: https://github.com/princeton-nlp/SimPO"
+    },
+    {
         "paper id": "2405.14737",
         "abstract url": "https://arxiv.org/abs/2405.14737",
         "title": "CLIPScope: Enhancing Zero-Shot OOD Detection with Bayesian Scoring",
@@ -276,6 +297,27 @@
             "cs.LG",
             "cs.AI",
             "cs.CL"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2405.15012",
+        "abstract url": "https://arxiv.org/abs/2405.15012",
+        "title": "Extracting Prompts by Inverting LLM Outputs",
+        "rating": "2",
+        "keywords": [
+            [
+                "memory efficiency"
+            ],
+            [
+                "cs.LG",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "We consider the problem of language model inversion: given outputs of a language model, we seek to extract the prompt that generated these outputs. We develop a new black-box method, output2prompt, that learns to extract prompts without access to the model's logits and without adversarial or jailbreaking queries. In contrast to previous work, output2prompt only needs outputs of normal user queries. To improve memory efficiency, output2prompt employs a new sparse encoding techique. We measure the efficacy of output2prompt on a variety of user and system prompts and demonstrate zero-shot transferability across different LLMs.",
+        "subjects": [
+            "cs.CL",
+            "cs.LG"
         ],
         "comment": null
     },
@@ -539,6 +581,29 @@
         "comment": null
     },
     {
+        "paper id": "2405.14205",
+        "abstract url": "https://arxiv.org/abs/2405.14205",
+        "title": "Agent Planning with World Knowledge Model",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.AI",
+                "cs.LG",
+                "cs.CV",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Recent endeavors towards directly using large language models (LLMs) as agent models to execute interactive planning tasks have shown commendable results. Despite their achievements, however, they still struggle with brainless trial-and-error in global planning and generating hallucinatory actions in local planning due to their poor understanding of the ''real'' physical world. Imitating humans' mental world knowledge model which provides global prior knowledge before the task and maintains local dynamic knowledge during the task, in this paper, we introduce parametric World Knowledge Model (WKM) to facilitate agent planning. Concretely, we steer the agent model to self-synthesize knowledge from both expert and sampled trajectories. Then we develop WKM, providing prior task knowledge to guide the global planning and dynamic state knowledge to assist the local planning. Experimental results on three complex real-world simulated datasets with three state-of-the-art open-source LLMs, Mistral-7B, Gemma-7B, and Llama-3-8B, demonstrate that our method can achieve superior performance compared to various strong baselines. Besides, we analyze to illustrate that our WKM can effectively alleviate the blind trial-and-error and hallucinatory action issues, providing strong support for the agent's understanding of the world. Other interesting findings include: 1) our instance-level task knowledge can generalize better to unseen tasks, 2) weak WKM can guide strong agent model planning, and 3) unified WKM training has promising potential for further development. Code will be available at https://github.com/zjunlp/WKM.",
+        "subjects": [
+            "cs.CL",
+            "cs.AI",
+            "cs.CV",
+            "cs.LG",
+            "cs.MA"
+        ],
+        "comment": "Work in progress"
+    },
+    {
         "paper id": "2405.14211",
         "abstract url": "https://arxiv.org/abs/2405.14211",
         "title": "ChronosLex: Time-aware Incremental Training for Temporal Generalization of Legal Classification Tasks",
@@ -602,8 +667,7 @@
                 "time efficiency"
             ],
             [
-                "Diffusion",
-                "Synthesis"
+                "Diffusion"
             ],
             [
                 "cs.CV"
@@ -614,6 +678,22 @@
             "cs.CV"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2405.14231",
+        "abstract url": "https://arxiv.org/abs/2405.14231",
+        "title": "From Role-Play to Drama-Interaction: An LLM Solution",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Drama is a form of storytelling inspired by human creativity, proceeding with a predefined storyline, carrying emotions and thoughts. This paper introduces \\emph{LLM-based interactive drama}, which endows traditional drama with an unprecedented immersion, where a person is allowed to walk into it and interact with the characters and scenes. We define this new artistic genre by 6 essential elements-plot, character, thought, diction, spectacle and interaction-and study the entire pipeline to forge a backbone \\emph{drama LLM} to drive the playing process, which is challenged by limited drama resources, uncontrollable narrative development, and complicated instruction following. We propose \\emph{Narrative Chain} to offer finer control over the narrative progression during interaction with players; \\emph{Auto-Drama} to synthesize drama scripts given arbitrary stories; \\emph{Sparse Instruction Tuning} to allow the model to follow sophisticated instructions. We manually craft 3 scripts, \\emph{Detective Conan}, \\emph{Harry Potter}, \\emph{Romeo and Juliet}, and design a 5-dimension principle to evaluate the drama LLM comprehensively.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": "Accepted by ACL 2024 Findings"
     },
     {
         "paper id": "2405.14233",
@@ -850,6 +930,24 @@
             "cs.CV"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2405.14365",
+        "abstract url": "https://arxiv.org/abs/2405.14365",
+        "title": "JiuZhang3.0: Efficiently Improving Mathematical Reasoning by Training Small Data Synthesis Models",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.AI",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Mathematical reasoning is an important capability of large language models~(LLMs) for real-world applications. To enhance this capability, existing work either collects large-scale math-related texts for pre-training, or relies on stronger LLMs (\\eg GPT-4) to synthesize massive math problems. Both types of work generally lead to large costs in training or synthesis. To reduce the cost, based on open-source available texts, we propose an efficient way that trains a small LLM for math problem synthesis, to efficiently generate sufficient high-quality pre-training data. To achieve it, we create a dataset using GPT-4 to distill its data synthesis capability into the small LLM. Concretely, we craft a set of prompts based on human education stages to guide GPT-4, to synthesize problems covering diverse math knowledge and difficulty levels. Besides, we adopt the gradient-based influence estimation method to select the most valuable math-related texts. The both are fed into GPT-4 for creating the knowledge distillation dataset to train the small LLM. We leverage it to synthesize 6 million math problems for pre-training our JiuZhang3.0 model, which only needs to invoke GPT-4 API 9.3k times and pre-train on 4.6B data. Experimental results have shown that JiuZhang3.0 achieves state-of-the-art performance on several mathematical reasoning datasets, under both natural language reasoning and tool manipulation settings. Our code and data will be publicly released in \\url{https://github.com/RUCAIBox/JiuZhang3.0}.",
+        "subjects": [
+            "cs.CL",
+            "cs.AI"
+        ],
+        "comment": "28 pages, SOTA math LLM using Well-trained Data Synthesis LLM"
     },
     {
         "paper id": "2405.14379",
@@ -1299,24 +1397,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.14535",
-        "abstract url": "https://arxiv.org/abs/2405.14535",
-        "title": "Exploring Alignment in Shared Cross-lingual Spaces",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Despite their remarkable ability to capture linguistic nuances across diverse languages, questions persist regarding the degree of alignment between languages in multilingual embeddings. Drawing inspiration from research on high-dimensional representations in neural language models, we employ clustering to uncover latent concepts within multilingual models. Our analysis focuses on quantifying the \\textit{alignment} and \\textit{overlap} of these concepts across various languages within the latent space. To this end, we introduce two metrics \\CA{} and \\CO{} aimed at quantifying these aspects, enabling a deeper exploration of multilingual embeddings. Our study encompasses three multilingual models (\\texttt{mT5}, \\texttt{mBERT}, and \\texttt{XLM-R}) and three downstream tasks (Machine Translation, Named Entity Recognition, and Sentiment Analysis). Key findings from our analysis include: i) deeper layers in the network demonstrate increased cross-lingual \\textit{alignment} due to the presence of language-agnostic concepts, ii) fine-tuning of the models enhances \\textit{alignment} within the latent space, and iii) such task-specific calibration helps in explaining the emergence of zero-shot capabilities in the models.\\footnote{The code is available at \\url{https://github.com/baselmousi/multilingual-latent-concepts}}",
-        "subjects": [
-            "cs.CL",
-            "cs.AI"
-        ],
-        "comment": "ACL 2024"
-    },
-    {
         "paper id": "2405.14555",
         "abstract url": "https://arxiv.org/abs/2405.14555",
         "title": "Subtle Biases Need Subtler Measures: Dual Metrics for Evaluating Representative and Affinity Bias in Large Language Models",
@@ -1528,42 +1608,6 @@
         "comment": "Technical Report"
     },
     {
-        "paper id": "2405.14730",
-        "abstract url": "https://arxiv.org/abs/2405.14730",
-        "title": "Embedding Compression for Efficient Re-Identification",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.LG",
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Real world re-identfication (ReID) algorithms aim to map new observations of an object to previously recorded instances. These systems are often constrained by quantity and size of the stored embeddings. To combat this scaling problem, we attempt to shrink the size of these vectors by using a variety of compression techniques. In this paper, we benchmark quantization-aware-training along with three different dimension reduction methods: iterative structured pruning, slicing the embeddings at initialize, and using low rank embeddings. We find that ReID embeddings can be compressed by up to 96x with minimal drop in performance. This implies that modern re-identification paradigms do not fully leverage the high dimensional latent space, opening up further research to increase the capabilities of these systems.",
-        "subjects": [
-            "cs.CV",
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2405.14734",
-        "abstract url": "https://arxiv.org/abs/2405.14734",
-        "title": "SimPO: Simple Preference Optimization with a Reference-Free Reward",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.LG",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Direct Preference Optimization (DPO) is a widely used offline preference optimization algorithm that reparameterizes reward functions in reinforcement learning from human feedback (RLHF) to enhance simplicity and training stability. In this work, we propose SimPO, a simpler yet more effective approach. The effectiveness of SimPO is attributed to a key design: using the average log probability of a sequence as the implicit reward. This reward formulation better aligns with model generation and eliminates the need for a reference model, making it more compute and memory efficient. Additionally, we introduce a target reward margin to the Bradley-Terry objective to encourage a larger margin between the winning and losing responses, further enhancing the algorithm's performance. We compare SimPO to DPO and its latest variants across various state-of-the-art training setups, including both base and instruction-tuned models like Mistral and Llama3. We evaluated on extensive instruction-following benchmarks, including AlpacaEval 2, MT-Bench, and the recent challenging Arena-Hard benchmark. Our results demonstrate that SimPO consistently and significantly outperforms existing approaches without substantially increasing response length. Specifically, SimPO outperforms DPO by up to 6.4 points on AlpacaEval 2 and by up to 7.5 points on Arena-Hard. Our top-performing model, built on Llama3-8B-Instruct, achieves a remarkable 44.7 length-controlled win rate on AlpacaEval 2 -- surpassing Claude 3 Opus on the leaderboard, and a 33.8 win rate on Arena-Hard -- making it the strongest 8B open-source model.",
-        "subjects": [
-            "cs.CL",
-            "cs.LG"
-        ],
-        "comment": "Code: https://github.com/princeton-nlp/SimPO"
-    },
-    {
         "paper id": "2405.14736",
         "abstract url": "https://arxiv.org/abs/2405.14736",
         "title": "GIFT: Unlocking Full Potential of Labels in Distilled Dataset at Near-zero Cost",
@@ -1648,6 +1692,25 @@
         "abstract": "We introduce SEA-RAFT, a more simple, efficient, and accurate RAFT for optical flow. Compared with RAFT, SEA-RAFT is trained with a new loss (mixture of Laplace). It directly regresses an initial flow for faster convergence in iterative refinements and introduces rigid-motion pre-training to improve generalization. SEA-RAFT achieves state-of-the-art accuracy on the Spring benchmark with a 3.69 endpoint-error (EPE) and a 0.36 1-pixel outlier rate (1px), representing 22.9% and 17.8% error reduction from best published results. In addition, SEA-RAFT obtains the best cross-dataset generalization on KITTI and Spring. With its high efficiency, SEA-RAFT operates at least 2.3x faster than existing methods while maintaining competitive performance. The code is publicly available at https://github.com/princeton-vl/SEA-RAFT.",
         "subjects": [
             "cs.CV"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2405.14796",
+        "abstract url": "https://arxiv.org/abs/2405.14796",
+        "title": "Generative Plant Growth Simulation from Sequence-Informed Environmental Conditions",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.AI",
+                "cs.CV"
+            ]
+        ],
+        "abstract": "A plant growth simulation can be characterized as a reconstructed visual representation of a plant or plant system. The phenotypic characteristics and plant structures are controlled by the scene environment and other contextual attributes. Considering the temporal dependencies and compounding effects of various factors on growth trajectories, we formulate a probabilistic approach to the simulation task by solving a frame synthesis and pattern recognition problem. We introduce a sequence-informed plant growth simulation framework (SI-PGS) that employs a conditional generative model to implicitly learn a distribution of possible plant representations within a dynamic scene from a fusion of low dimensional temporal sensor and context data. Methods such as controlled latent sampling and recurrent output connections are used to improve coherence in the plant structures between frames of predictions. In this work, we demonstrate that SI-PGS is able to capture temporal dependencies and continuously generate realistic frames of plant growth.",
+        "subjects": [
+            "cs.CV",
+            "cs.AI",
+            "q-bio.QM"
         ],
         "comment": null
     },
@@ -1904,24 +1967,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.15012",
-        "abstract url": "https://arxiv.org/abs/2405.15012",
-        "title": "Extracting Prompts by Inverting LLM Outputs",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.LG",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "We consider the problem of language model inversion: given outputs of a language model, we seek to extract the prompt that generated these outputs. We develop a new black-box method, output2prompt, that learns to extract prompts without access to the model's logits and without adversarial or jailbreaking queries. In contrast to previous work, output2prompt only needs outputs of normal user queries. To improve memory efficiency, output2prompt employs a new sparse encoding techique. We measure the efficacy of output2prompt on a variety of user and system prompts and demonstrate zero-shot transferability across different LLMs.",
-        "subjects": [
-            "cs.CL",
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2405.15018",
         "abstract url": "https://arxiv.org/abs/2405.15018",
         "title": "What Variables Affect Out-Of-Distribution Generalization in Pretrained Models?",
@@ -2112,6 +2157,22 @@
             "cs.CL"
         ],
         "comment": "code published at https://github.com/CoTErrorRecovery/CoTErrorRecovery"
+    },
+    {
+        "paper id": "2405.15093",
+        "abstract url": "https://arxiv.org/abs/2405.15093",
+        "title": "Real-Time and Accurate: Zero-shot High-Fidelity Singing Voice Conversion with Multi-Condition Flow Synthesis",
+        "rating": "1",
+        "keywords": [
+            [
+                "eess.AS"
+            ]
+        ],
+        "abstract": "Singing voice conversion is to convert the source sing voice into the target sing voice except for the content. Currently, flow-based models can complete the task of voice conversion, but they struggle to effectively extract latent variables in the more rhythmically rich and emotionally expressive task of singing voice conversion, while also facing issues with low efficiency in speech processing. In this paper, we propose a high-fidelity flow-based model based on multi-decoupling feature constraints, which enhances the capture of vocal details by integrating multiple encoders. We also use iSTFT to enhance the speed of speech processing by replacing some layers of the Vocoder. We compare the synthesized singing voice with other models from multiple dimensions, and our proposed model is highly consistent with the current state-of-the-art, with the demo which is available at \\url{https://lazycat1119.github.io/RASVC-demo/}",
+        "subjects": [
+            "eess.AS"
+        ],
+        "comment": "5 pages,4 figures"
     },
     {
         "paper id": "2405.15097",
@@ -2435,6 +2496,23 @@
             "cs.LG"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2405.14173",
+        "abstract url": "https://arxiv.org/abs/2405.14173",
+        "title": "Human-Agent Cooperation in Games under Incomplete Information through Natural Language Communication",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "Developing autonomous agents that can strategize and cooperate with humans under information asymmetry is challenging without effective communication in natural language. We introduce a shared-control game, where two players collectively control a token in alternating turns to achieve a common objective under incomplete information. We formulate a policy synthesis problem for an autonomous agent in this game with a human as the other player. To solve this problem, we propose a communication-based approach comprising a language module and a planning module. The language module translates natural language messages into and from a finite set of flags, a compact representation defined to capture player intents. The planning module leverages these flags to compute a policy using an asymmetric information-set Monte Carlo tree search with flag exchange algorithm we present. We evaluate the effectiveness of this approach in a testbed based on Gnomes at Night, a search-and-find maze board game. Results of human subject experiments show that communication narrows the information gap between players and enhances human-agent cooperation efficiency with fewer turns.",
+        "subjects": [
+            "cs.AI",
+            "cs.HC"
+        ],
+        "comment": "with appendix"
     },
     {
         "paper id": "2405.14178",
@@ -3351,22 +3429,6 @@
         "comment": "47 pages"
     },
     {
-        "paper id": "2405.14655",
-        "abstract url": "https://arxiv.org/abs/2405.14655",
-        "title": "Multi-turn Reinforcement Learning from Preference Human Feedback",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Reinforcement Learning from Human Feedback (RLHF) has become the standard approach for aligning Large Language Models (LLMs) with human preferences, allowing LLMs to demonstrate remarkable abilities in various tasks. Existing methods work by emulating the preferences at the single decision (turn) level, limiting their capabilities in settings that require planning or multi-turn interactions to achieve a long-term goal. In this paper, we address this issue by developing novel methods for Reinforcement Learning (RL) from preference feedback between two full multi-turn conversations. In the tabular setting, we present a novel mirror-descent-based policy optimization algorithm for the general multi-turn preference-based RL problem, and prove its convergence to Nash equilibrium. To evaluate performance, we create a new environment, Education Dialogue, where a teacher agent guides a student in learning a random topic, and show that a deep RL variant of our algorithm outperforms RLHF baselines. Finally, we show that in an environment with explicit rewards, our algorithm recovers the same performance as a reward-based RL baseline, despite relying solely on a weaker preference signal.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2405.14657",
         "abstract url": "https://arxiv.org/abs/2405.14657",
         "title": "Heteroscedastic Preferential Bayesian Optimization with Informative Noise Distributions",
@@ -3701,6 +3763,29 @@
             "cs.DC"
         ],
         "comment": "Accepted at the 41st International Conference on Machine Learning (ICML 2024)"
+    },
+    {
+        "paper id": "2405.14847",
+        "abstract url": "https://arxiv.org/abs/2405.14847",
+        "title": "Neural Directional Encoding for Efficient and Accurate View-Dependent Appearance Modeling",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "NeRF",
+                "radiance fields"
+            ],
+            [
+                "cs.CV"
+            ],
+            [
+                "CVPR"
+            ]
+        ],
+        "abstract": "Novel-view synthesis of specular objects like shiny metals or glossy paints remains a significant challenge. Not only the glossy appearance but also global illumination effects, including reflections of other objects in the environment, are critical components to faithfully reproduce a scene. In this paper, we present Neural Directional Encoding (NDE), a view-dependent appearance encoding of neural radiance fields (NeRF) for rendering specular objects. NDE transfers the concept of feature-grid-based spatial encoding to the angular domain, significantly improving the ability to model high-frequency angular signals. In contrast to previous methods that use encoding functions with only angular input, we additionally cone-trace spatial features to obtain a spatially varying directional encoding, which addresses the challenging interreflection effects. Extensive experiments on both synthetic and real datasets show that a NeRF model with NDE (1) outperforms the state of the art on view synthesis of specular objects, and (2) works with small networks to allow fast (real-time) inference. The project webpage and source code are available at: \\url{https://lwwu2.github.io/nde/}.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Accepted to CVPR 2024"
     },
     {
         "paper id": "2405.14848",
@@ -4634,39 +4719,12 @@
         "comment": null
     },
     {
-        "paper id": "2405.14205",
-        "abstract url": "https://arxiv.org/abs/2405.14205",
-        "title": "Agent Planning with World Knowledge Model",
-        "rating": "0",
-        "keywords": [
-            [
-                "synthesize"
-            ],
-            [
-                "cs.AI",
-                "cs.LG",
-                "cs.CV",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Recent endeavors towards directly using large language models (LLMs) as agent models to execute interactive planning tasks have shown commendable results. Despite their achievements, however, they still struggle with brainless trial-and-error in global planning and generating hallucinatory actions in local planning due to their poor understanding of the ''real'' physical world. Imitating humans' mental world knowledge model which provides global prior knowledge before the task and maintains local dynamic knowledge during the task, in this paper, we introduce parametric World Knowledge Model (WKM) to facilitate agent planning. Concretely, we steer the agent model to self-synthesize knowledge from both expert and sampled trajectories. Then we develop WKM, providing prior task knowledge to guide the global planning and dynamic state knowledge to assist the local planning. Experimental results on three complex real-world simulated datasets with three state-of-the-art open-source LLMs, Mistral-7B, Gemma-7B, and Llama-3-8B, demonstrate that our method can achieve superior performance compared to various strong baselines. Besides, we analyze to illustrate that our WKM can effectively alleviate the blind trial-and-error and hallucinatory action issues, providing strong support for the agent's understanding of the world. Other interesting findings include: 1) our instance-level task knowledge can generalize better to unseen tasks, 2) weak WKM can guide strong agent model planning, and 3) unified WKM training has promising potential for further development. Code will be available at https://github.com/zjunlp/WKM.",
-        "subjects": [
-            "cs.CL",
-            "cs.AI",
-            "cs.CV",
-            "cs.LG",
-            "cs.MA"
-        ],
-        "comment": "Work in progress"
-    },
-    {
         "paper id": "2405.14206",
         "abstract url": "https://arxiv.org/abs/2405.14206",
         "title": "LG-VQ: Language-Guided Codebook Learning",
         "rating": "0",
         "keywords": [
             [
-                "synthesis",
                 "text-to-image"
             ],
             [
@@ -4698,25 +4756,6 @@
             "cs.CL"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2405.14231",
-        "abstract url": "https://arxiv.org/abs/2405.14231",
-        "title": "From Role-Play to Drama-Interaction: An LLM Solution",
-        "rating": "0",
-        "keywords": [
-            [
-                "synthesize"
-            ],
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Drama is a form of storytelling inspired by human creativity, proceeding with a predefined storyline, carrying emotions and thoughts. This paper introduces \\emph{LLM-based interactive drama}, which endows traditional drama with an unprecedented immersion, where a person is allowed to walk into it and interact with the characters and scenes. We define this new artistic genre by 6 essential elements-plot, character, thought, diction, spectacle and interaction-and study the entire pipeline to forge a backbone \\emph{drama LLM} to drive the playing process, which is challenged by limited drama resources, uncontrollable narrative development, and complicated instruction following. We propose \\emph{Narrative Chain} to offer finer control over the narrative progression during interaction with players; \\emph{Auto-Drama} to synthesize drama scripts given arbitrary stories; \\emph{Sparse Instruction Tuning} to allow the model to follow sophisticated instructions. We manually craft 3 scripts, \\emph{Detective Conan}, \\emph{Harry Potter}, \\emph{Romeo and Juliet}, and design a 5-dimension principle to evaluate the drama LLM comprehensively.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": "Accepted by ACL 2024 Findings"
     },
     {
         "paper id": "2405.14250",
@@ -4819,27 +4858,6 @@
             "cs.LG"
         ],
         "comment": "30 pages, ICML'24"
-    },
-    {
-        "paper id": "2405.14365",
-        "abstract url": "https://arxiv.org/abs/2405.14365",
-        "title": "JiuZhang3.0: Efficiently Improving Mathematical Reasoning by Training Small Data Synthesis Models",
-        "rating": "0",
-        "keywords": [
-            [
-                "Synthesis"
-            ],
-            [
-                "cs.AI",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Mathematical reasoning is an important capability of large language models~(LLMs) for real-world applications. To enhance this capability, existing work either collects large-scale math-related texts for pre-training, or relies on stronger LLMs (\\eg GPT-4) to synthesize massive math problems. Both types of work generally lead to large costs in training or synthesis. To reduce the cost, based on open-source available texts, we propose an efficient way that trains a small LLM for math problem synthesis, to efficiently generate sufficient high-quality pre-training data. To achieve it, we create a dataset using GPT-4 to distill its data synthesis capability into the small LLM. Concretely, we craft a set of prompts based on human education stages to guide GPT-4, to synthesize problems covering diverse math knowledge and difficulty levels. Besides, we adopt the gradient-based influence estimation method to select the most valuable math-related texts. The both are fed into GPT-4 for creating the knowledge distillation dataset to train the small LLM. We leverage it to synthesize 6 million math problems for pre-training our JiuZhang3.0 model, which only needs to invoke GPT-4 API 9.3k times and pre-train on 4.6B data. Experimental results have shown that JiuZhang3.0 achieves state-of-the-art performance on several mathematical reasoning datasets, under both natural language reasoning and tool manipulation settings. Our code and data will be publicly released in \\url{https://github.com/RUCAIBox/JiuZhang3.0}.",
-        "subjects": [
-            "cs.CL",
-            "cs.AI"
-        ],
-        "comment": "28 pages, SOTA math LLM using Well-trained Data Synthesis LLM"
     },
     {
         "paper id": "2405.14366",
@@ -5022,8 +5040,7 @@
         "rating": "0",
         "keywords": [
             [
-                "diffusion",
-                "Synthesis"
+                "diffusion"
             ],
             [
                 "cs.AI",
@@ -5053,6 +5070,27 @@
         "abstract": "Current metrics for text-to-image models typically rely on statistical metrics which inadequately represent the real preference of humans. Although recent work attempts to learn these preferences via human annotated images, they reduce the rich tapestry of human preference to a single overall score. However, the preference results vary when humans evaluate images with different aspects. Therefore, to learn the multi-dimensional human preferences, we propose the Multi-dimensional Preference Score (MPS), the first multi-dimensional preference scoring model for the evaluation of text-to-image models. The MPS introduces the preference condition module upon CLIP model to learn these diverse preferences. It is trained based on our Multi-dimensional Human Preference (MHP) Dataset, which comprises 918,315 human preference choices across four dimensions (i.e., aesthetics, semantic alignment, detail quality and overall assessment) on 607,541 images. The images are generated by a wide range of latest text-to-image models. The MPS outperforms existing scoring methods across 3 datasets in 4 dimensions, enabling it a promising metric for evaluating and improving text-to-image generation.",
         "subjects": [
             "cs.CV"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2405.14730",
+        "abstract url": "https://arxiv.org/abs/2405.14730",
+        "title": "Embedding Compression for Efficient Re-Identification",
+        "rating": "0",
+        "keywords": [
+            [
+                "Re-Identification"
+            ],
+            [
+                "cs.LG",
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Real world re-identfication (ReID) algorithms aim to map new observations of an object to previously recorded instances. These systems are often constrained by quantity and size of the stored embeddings. To combat this scaling problem, we attempt to shrink the size of these vectors by using a variety of compression techniques. In this paper, we benchmark quantization-aware-training along with three different dimension reduction methods: iterative structured pruning, slicing the embeddings at initialize, and using low rank embeddings. We find that ReID embeddings can be compressed by up to 96x with minimal drop in performance. This implies that modern re-identification paradigms do not fully leverage the high dimensional latent space, opening up further research to increase the capabilities of these systems.",
+        "subjects": [
+            "cs.CV",
+            "cs.LG"
         ],
         "comment": null
     },
@@ -5145,28 +5183,6 @@
             "cs.LG"
         ],
         "comment": "ICML2024"
-    },
-    {
-        "paper id": "2405.14796",
-        "abstract url": "https://arxiv.org/abs/2405.14796",
-        "title": "Generative Plant Growth Simulation from Sequence-Informed Environmental Conditions",
-        "rating": "0",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.AI",
-                "cs.CV"
-            ]
-        ],
-        "abstract": "A plant growth simulation can be characterized as a reconstructed visual representation of a plant or plant system. The phenotypic characteristics and plant structures are controlled by the scene environment and other contextual attributes. Considering the temporal dependencies and compounding effects of various factors on growth trajectories, we formulate a probabilistic approach to the simulation task by solving a frame synthesis and pattern recognition problem. We introduce a sequence-informed plant growth simulation framework (SI-PGS) that employs a conditional generative model to implicitly learn a distribution of possible plant representations within a dynamic scene from a fusion of low dimensional temporal sensor and context data. Methods such as controlled latent sampling and recurrent output connections are used to improve coherence in the plant structures between frames of predictions. In this work, we demonstrate that SI-PGS is able to capture temporal dependencies and continuously generate realistic frames of plant growth.",
-        "subjects": [
-            "cs.CV",
-            "cs.AI",
-            "q-bio.QM"
-        ],
-        "comment": null
     },
     {
         "paper id": "2405.14800",
@@ -5325,6 +5341,25 @@
         "comment": "Project Page: https://xizaoqu.github.io/moft/"
     },
     {
+        "paper id": "2405.14866",
+        "abstract url": "https://arxiv.org/abs/2405.14866",
+        "title": "Tele-Aloha: A Low-budget and High-authenticity Telepresence System Using Sparse RGB Cameras",
+        "rating": "0",
+        "keywords": [
+            [
+                "Gaussian Splatting"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "In this paper, we present a low-budget and high-authenticity bidirectional telepresence system, Tele-Aloha, targeting peer-to-peer communication scenarios. Compared to previous systems, Tele-Aloha utilizes only four sparse RGB cameras, one consumer-grade GPU, and one autostereoscopic screen to achieve high-resolution (2048x2048), real-time (30 fps), low-latency (less than 150ms) and robust distant communication. As the core of Tele-Aloha, we propose an efficient novel view synthesis algorithm for upper-body. Firstly, we design a cascaded disparity estimator for obtaining a robust geometry cue. Additionally a neural rasterizer via Gaussian Splatting is introduced to project latent features onto target view and to decode them into a reduced resolution. Further, given the high-quality captured data, we leverage weighted blending mechanism to refine the decoded image into the final resolution of 2K. Exploiting world-leading autostereoscopic display and low-latency iris tracking, users are able to experience a strong three-dimensional sense even without any wearable head-mounted display device. Altogether, our telepresence system demonstrates the sense of co-presence in real-life experiments, inspiring the next generation of communication.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Paper accepted by SIGGRAPH 2024. Project page: http://118.178.32.38/c/Tele-Aloha/"
+    },
+    {
         "paper id": "2405.14867",
         "abstract url": "https://arxiv.org/abs/2405.14867",
         "title": "Improved Distribution Matching Distillation for Fast Image Synthesis",
@@ -5333,7 +5368,6 @@
             [
                 "diffusion",
                 "GAN",
-                "Synthesis",
                 "text-to-image"
             ],
             [
@@ -5345,6 +5379,27 @@
             "cs.CV"
         ],
         "comment": "Code, model, and dataset are available at https://tianweiy.github.io/dmd2"
+    },
+    {
+        "paper id": "2405.14871",
+        "abstract url": "https://arxiv.org/abs/2405.14871",
+        "title": "NeRF-Casting: Improved View-Dependent Appearance with Consistent Reflections",
+        "rating": "0",
+        "keywords": [
+            [
+                "NeRF",
+                "Radiance Fields"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Neural Radiance Fields (NeRFs) typically struggle to reconstruct and render highly specular objects, whose appearance varies quickly with changes in viewpoint. Recent works have improved NeRF's ability to render detailed specular appearance of distant environment illumination, but are unable to synthesize consistent reflections of closer content. Moreover, these techniques rely on large computationally-expensive neural networks to model outgoing radiance, which severely limits optimization and rendering speed. We address these issues with an approach based on ray tracing: instead of querying an expensive neural network for the outgoing view-dependent radiance at points along each camera ray, our model casts reflection rays from these points and traces them through the NeRF representation to render feature vectors which are decoded into color using a small inexpensive network. We demonstrate that our model outperforms prior methods for view synthesis of scenes containing shiny objects, and that it is the only existing NeRF method that can synthesize photorealistic specular appearance and reflections in real-world scenes, while requiring comparable optimization time to current state-of-the-art view synthesis models.",
+        "subjects": [
+            "cs.CV",
+            "cs.GR"
+        ],
+        "comment": "Project page: http://nerf-casting.github.io"
     },
     {
         "paper id": "2405.14959",
@@ -5377,8 +5432,7 @@
         "rating": "0",
         "keywords": [
             [
-                "Diffusion",
-                "synthesis"
+                "Diffusion"
             ],
             [
                 "cs.LG",
@@ -5463,25 +5517,6 @@
         "comment": "Camera-Ready version for IJCAI 2024"
     },
     {
-        "paper id": "2405.15093",
-        "abstract url": "https://arxiv.org/abs/2405.15093",
-        "title": "Real-Time and Accurate: Zero-shot High-Fidelity Singing Voice Conversion with Multi-Condition Flow Synthesis",
-        "rating": "0",
-        "keywords": [
-            [
-                "Synthesis"
-            ],
-            [
-                "eess.AS"
-            ]
-        ],
-        "abstract": "Singing voice conversion is to convert the source sing voice into the target sing voice except for the content. Currently, flow-based models can complete the task of voice conversion, but they struggle to effectively extract latent variables in the more rhythmically rich and emotionally expressive task of singing voice conversion, while also facing issues with low efficiency in speech processing. In this paper, we propose a high-fidelity flow-based model based on multi-decoupling feature constraints, which enhances the capture of vocal details by integrating multiple encoders. We also use iSTFT to enhance the speed of speech processing by replacing some layers of the Vocoder. We compare the synthesized singing voice with other models from multiple dimensions, and our proposed model is highly consistent with the current state-of-the-art, with the demo which is available at \\url{https://lazycat1119.github.io/RASVC-demo/}",
-        "subjects": [
-            "eess.AS"
-        ],
-        "comment": "5 pages,4 figures"
-    },
-    {
         "paper id": "2405.15103",
         "abstract url": "https://arxiv.org/abs/2405.15103",
         "title": "The Rarity of Musical Audio Signals Within the Space of Possible Audio Generation",
@@ -5503,6 +5538,28 @@
             "eess.AS"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2405.15118",
+        "abstract url": "https://arxiv.org/abs/2405.15118",
+        "title": "GS-Hider: Hiding Messages into 3D Gaussian Splatting",
+        "rating": "0",
+        "keywords": [
+            [
+                "3D",
+                "Gaussian Splatting",
+                "point cloud",
+                "NeRF"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "3D Gaussian Splatting (3DGS) has already become the emerging research focus in the fields of 3D scene reconstruction and novel view synthesis. Given that training a 3DGS requires a significant amount of time and computational cost, it is crucial to protect the copyright, integrity, and privacy of such 3D assets. Steganography, as a crucial technique for encrypted transmission and copyright protection, has been extensively studied. However, it still lacks profound exploration targeted at 3DGS. Unlike its predecessor NeRF, 3DGS possesses two distinct features: 1) explicit 3D representation; and 2) real-time rendering speeds. These characteristics result in the 3DGS point cloud files being public and transparent, with each Gaussian point having a clear physical significance. Therefore, ensuring the security and fidelity of the original 3D scene while embedding information into the 3DGS point cloud files is an extremely challenging task. To solve the above-mentioned issue, we first propose a steganography framework for 3DGS, dubbed GS-Hider, which can embed 3D scenes and images into original GS point clouds in an invisible manner and accurately extract the hidden messages. Specifically, we design a coupled secured feature attribute to replace the original 3DGS's spherical harmonics coefficients and then use a scene decoder and a message decoder to disentangle the original RGB scene and the hidden message. Extensive experiments demonstrated that the proposed GS-Hider can effectively conceal multimodal messages without compromising rendering quality and possesses exceptional security, robustness, capacity, and flexibility. Our project is available at: https://xuanyuzhang21.github.io/project/gshider.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "3DGS steganography"
     },
     {
         "paper id": "2405.15143",
@@ -5608,14 +5665,33 @@
         "comment": null
     },
     {
+        "paper id": "2405.15196",
+        "abstract url": "https://arxiv.org/abs/2405.15196",
+        "title": "DisC-GS: Discontinuity-aware Gaussian Splatting",
+        "rating": "0",
+        "keywords": [
+            [
+                "3D",
+                "Gaussian Splatting"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Recently, Gaussian Splatting, a method that represents a 3D scene as a collection of Gaussian distributions, has gained significant attention in addressing the task of novel view synthesis. In this paper, we highlight a fundamental limitation of Gaussian Splatting: its inability to accurately render discontinuities and boundaries in images due to the continuous nature of Gaussian distributions. To address this issue, we propose a novel framework enabling Gaussian Splatting to perform discontinuity-aware image rendering. Additionally, we introduce a B\u00e9zier-boundary gradient approximation strategy within our framework to keep the ``differentiability'' of the proposed discontinuity-aware rendering process. Extensive experiments demonstrate the efficacy of our framework.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.15199",
         "abstract url": "https://arxiv.org/abs/2405.15199",
         "title": "ODGEN: Domain-specific Object Detection Data Generation with Diffusion Models",
         "rating": "0",
         "keywords": [
             [
-                "Diffusion",
-                "synthesis"
+                "Diffusion"
             ],
             [
                 "cs.CV"
@@ -5626,26 +5702,6 @@
             "cs.CV"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2405.14173",
-        "abstract url": "https://arxiv.org/abs/2405.14173",
-        "title": "Human-Agent Cooperation in Games under Incomplete Information through Natural Language Communication",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "Developing autonomous agents that can strategize and cooperate with humans under information asymmetry is challenging without effective communication in natural language. We introduce a shared-control game, where two players collectively control a token in alternating turns to achieve a common objective under incomplete information. We formulate a policy synthesis problem for an autonomous agent in this game with a human as the other player. To solve this problem, we propose a communication-based approach comprising a language module and a planning module. The language module translates natural language messages into and from a finite set of flags, a compact representation defined to capture player intents. The planning module leverages these flags to compute a policy using an asymmetric information-set Monte Carlo tree search with flag exchange algorithm we present. We evaluate the effectiveness of this approach in a testbed based on Gnomes at Night, a search-and-find maze board game. Results of human subject experiments show that communication narrows the information gap between players and enhances human-agent cooperation efficiency with fewer turns.",
-        "subjects": [
-            "cs.AI",
-            "cs.HC"
-        ],
-        "comment": "with appendix"
     },
     {
         "paper id": "2405.14176",
@@ -5877,6 +5933,30 @@
         "comment": null
     },
     {
+        "paper id": "2405.14377",
+        "abstract url": "https://arxiv.org/abs/2405.14377",
+        "title": "CoMERA: Computing- and Memory-Efficient Training via Rank-Adaptive Tensor Optimization",
+        "rating": "-0.5",
+        "keywords": [
+            [
+                "Memory-Efficient"
+            ],
+            [
+                "recommendation"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Training large AI models such as deep learning recommendation systems and foundation language (or multi-modal) models costs massive GPUs and computing time. The high training cost has become only affordable to big tech companies, meanwhile also causing increasing concerns about the environmental impact. This paper presents CoMERA, a Computing- and Memory-Efficient training method via Rank-Adaptive tensor optimization. CoMERA achieves end-to-end rank-adaptive tensor-compressed training via a multi-objective optimization formulation, and improves the training to provide both a high compression ratio and excellent accuracy in the training process. Our optimized numerical computation (e.g., optimized tensorized embedding and tensor-vector contractions) and GPU implementation eliminate part of the run-time overhead in the tensorized training on GPU. This leads to, for the first time, $2-3\\times$ speedup per training epoch compared with standard training. CoMERA also outperforms the recent GaLore in terms of both memory and computing efficiency. Specifically, CoMERA is $2\\times$ faster per training epoch and $9\\times$ more memory-efficient than GaLore on a tested six-encoder transformer with single-batch training. With further HPC optimization, CoMERA may significantly reduce the training cost of large language models.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.14449",
         "abstract url": "https://arxiv.org/abs/2405.14449",
         "title": "Adversarial Schr\u00f6dinger Bridge Matching",
@@ -6047,8 +6127,7 @@
         "rating": "-0.5",
         "keywords": [
             [
-                "Diffusion",
-                "synthesizing"
+                "Diffusion"
             ],
             [
                 "cs.AI",
@@ -6143,32 +6222,6 @@
             "cs.LG"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2405.14847",
-        "abstract url": "https://arxiv.org/abs/2405.14847",
-        "title": "Neural Directional Encoding for Efficient and Accurate View-Dependent Appearance Modeling",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "NeRF",
-                "radiance fields"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ],
-            [
-                "CVPR"
-            ]
-        ],
-        "abstract": "Novel-view synthesis of specular objects like shiny metals or glossy paints remains a significant challenge. Not only the glossy appearance but also global illumination effects, including reflections of other objects in the environment, are critical components to faithfully reproduce a scene. In this paper, we present Neural Directional Encoding (NDE), a view-dependent appearance encoding of neural radiance fields (NeRF) for rendering specular objects. NDE transfers the concept of feature-grid-based spatial encoding to the angular domain, significantly improving the ability to model high-frequency angular signals. In contrast to previous methods that use encoding functions with only angular input, we additionally cone-trace spatial features to obtain a spatially varying directional encoding, which addresses the challenging interreflection effects. Extensive experiments on both synthetic and real datasets show that a NeRF model with NDE (1) outperforms the state of the art on view synthesis of specular objects, and (2) works with small networks to allow fast (real-time) inference. The project webpage and source code are available at: \\url{https://lwwu2.github.io/nde/}.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Accepted to CVPR 2024"
     },
     {
         "paper id": "2405.14855",
@@ -6502,6 +6555,27 @@
             "cs.CL"
         ],
         "comment": "6 pages, 4 figures"
+    },
+    {
+        "paper id": "2405.14225",
+        "abstract url": "https://arxiv.org/abs/2405.14225",
+        "title": "ReactXT: Understanding Molecular \"Reaction-ship\" via Reaction-Contextualized Molecule-Text Pretraining",
+        "rating": "-1",
+        "keywords": [
+            [
+                "chemical"
+            ],
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Molecule-text modeling, which aims to facilitate molecule-relevant tasks with a textual interface and textual knowledge, is an emerging research direction. Beyond single molecules, studying reaction-text modeling holds promise for helping the synthesis of new materials and drugs. However, previous works mostly neglect reaction-text modeling: they primarily focus on modeling individual molecule-text pairs or learning chemical reactions without texts in context. Additionally, one key task of reaction-text modeling -- experimental procedure prediction -- is less explored due to the absence of an open-source dataset. The task is to predict step-by-step actions of conducting chemical experiments and is crucial to automating chemical synthesis. To resolve the challenges above, we propose a new pretraining method, ReactXT, for reaction-text modeling, and a new dataset, OpenExp, for experimental procedure prediction. Specifically, ReactXT features three types of input contexts to incrementally pretrain LMs. Each of the three input contexts corresponds to a pretraining task to improve the text-based understanding of either reactions or single molecules. ReactXT demonstrates consistent improvements in experimental procedure prediction and molecule captioning and offers competitive results in retrosynthesis. Our code is available at https://github.com/syr-cn/ReactXT.",
+        "subjects": [
+            "q-bio.QM",
+            "cs.CL",
+            "cs.MM"
+        ],
+        "comment": "ACL 2024 Findings, 9 pages"
     },
     {
         "paper id": "2405.14230",
@@ -6918,6 +6992,27 @@
         "comment": "14 pages, 2 figures"
     },
     {
+        "paper id": "2405.14445",
+        "abstract url": "https://arxiv.org/abs/2405.14445",
+        "title": "Exploring the use of a Large Language Model for data extraction in systematic reviews: a rapid feasibility study",
+        "rating": "-1",
+        "keywords": [
+            [
+                "clinical"
+            ],
+            [
+                "cs.AI",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "This paper describes a rapid feasibility study of using GPT-4, a large language model (LLM), to (semi)automate data extraction in systematic reviews. Despite the recent surge of interest in LLMs there is still a lack of understanding of how to design LLM-based automation tools and how to robustly evaluate their performance. During the 2023 Evidence Synthesis Hackathon we conducted two feasibility studies. Firstly, to automatically extract study characteristics from human clinical, animal, and social science domain studies. We used two studies from each category for prompt-development; and ten for evaluation. Secondly, we used the LLM to predict Participants, Interventions, Controls and Outcomes (PICOs) labelled within 100 abstracts in the EBM-NLP dataset. Overall, results indicated an accuracy of around 80%, with some variability between domains (82% for human clinical, 80% for animal, and 72% for studies of human social sciences). Causal inference methods and study design were the data extraction items with the most errors. In the PICO study, participants and intervention/control showed high accuracy (>80%), outcomes were more challenging. Evaluation was done manually; scoring methods such as BLEU and ROUGE showed limited value. We observed variability in the LLMs predictions and changes in response quality. This paper presents a template for future evaluations of LLMs in the context of data extraction for systematic review automation. Our results show that there might be value in using LLMs, for example as second or third reviewers. However, caution is advised when integrating models such as GPT-4 into tools. Further research on stability and reliability in practical settings is warranted for each type of data that is processed by the LLM.",
+        "subjects": [
+            "cs.CL",
+            "cs.AI"
+        ],
+        "comment": "Conference proceedings, peer-reviewed and presented at the 3rd Workshop on Augmented Intelligence for Technology-Assisted Reviews Systems, Glasgow, 2024"
+    },
+    {
         "paper id": "2405.14455",
         "abstract url": "https://arxiv.org/abs/2405.14455",
         "title": "TIGER: Text-Instructed 3D Gaussian Retrieval and Coherent Editing",
@@ -7080,6 +7175,27 @@
             "cs.CV"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2405.14535",
+        "abstract url": "https://arxiv.org/abs/2405.14535",
+        "title": "Exploring Alignment in Shared Cross-lingual Spaces",
+        "rating": "-1",
+        "keywords": [
+            [
+                "Named Entity Recognition"
+            ],
+            [
+                "cs.AI",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Despite their remarkable ability to capture linguistic nuances across diverse languages, questions persist regarding the degree of alignment between languages in multilingual embeddings. Drawing inspiration from research on high-dimensional representations in neural language models, we employ clustering to uncover latent concepts within multilingual models. Our analysis focuses on quantifying the \\textit{alignment} and \\textit{overlap} of these concepts across various languages within the latent space. To this end, we introduce two metrics \\CA{} and \\CO{} aimed at quantifying these aspects, enabling a deeper exploration of multilingual embeddings. Our study encompasses three multilingual models (\\texttt{mT5}, \\texttt{mBERT}, and \\texttt{XLM-R}) and three downstream tasks (Machine Translation, Named Entity Recognition, and Sentiment Analysis). Key findings from our analysis include: i) deeper layers in the network demonstrate increased cross-lingual \\textit{alignment} due to the presence of language-agnostic concepts, ii) fine-tuning of the models enhances \\textit{alignment} within the latent space, and iii) such task-specific calibration helps in explaining the emergence of zero-shot capabilities in the models.\\footnote{The code is available at \\url{https://github.com/baselmousi/multilingual-latent-concepts}}",
+        "subjects": [
+            "cs.CL",
+            "cs.AI"
+        ],
+        "comment": "ACL 2024"
     },
     {
         "paper id": "2405.14539",
@@ -7286,6 +7402,26 @@
         "comment": "29 pages, 9 figures"
     },
     {
+        "paper id": "2405.14709",
+        "abstract url": "https://arxiv.org/abs/2405.14709",
+        "title": "OpFlowTalker: Realistic and Natural Talking Face Generation via Optical Flow Guidance",
+        "rating": "-1",
+        "keywords": [
+            [
+                "facial"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Creating realistic, natural, and lip-readable talking face videos remains a formidable challenge. Previous research primarily concentrated on generating and aligning single-frame images while overlooking the smoothness of frame-to-frame transitions and temporal dependencies. This often compromised visual quality and effects in practical settings, particularly when handling complex facial data and audio content, which frequently led to semantically incongruent visual illusions. Specifically, synthesized videos commonly featured disorganized lip movements, making them difficult to understand and recognize. To overcome these limitations, this paper introduces the application of optical flow to guide facial image generation, enhancing inter-frame continuity and semantic consistency. We propose \"OpFlowTalker\", a novel approach that utilizes predicted optical flow changes from audio inputs rather than direct image predictions. This method smooths image transitions and aligns changes with semantic content. Moreover, it employs a sequence fusion technique to replace the independent generation of single frames, thus preserving contextual information and maintaining temporal coherence. We also developed an optical flow synchronization module that regulates both full-face and lip movements, optimizing visual synthesis by balancing regional dynamics. Furthermore, we introduce a Visual Text Consistency Score (VTCS) that accurately measures lip-readability in synthesized videos. Extensive empirical evidence validates the effectiveness of our approach.",
+        "subjects": [
+            "cs.CV",
+            "cs.MM"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.14718",
         "abstract url": "https://arxiv.org/abs/2405.14718",
         "title": "StyleX: A Trainable Metric for X-ray Style Distances",
@@ -7424,20 +7560,28 @@
         "comment": null
     },
     {
-        "paper id": "2405.14821",
-        "abstract url": "https://arxiv.org/abs/2405.14821",
-        "title": "Evaluating Vulnerability of Chiplet-Based Systems to Contactless Probing Techniques",
+        "paper id": "2405.14824",
+        "abstract url": "https://arxiv.org/abs/2405.14824",
+        "title": "Camera Relocalization in Shadow-free Neural Radiance Fields",
         "rating": "-1",
         "keywords": [
             [
-                "3D"
+                "NeRF",
+                "Radiance Fields"
+            ],
+            [
+                "robotics"
+            ],
+            [
+                "cs.CV"
             ]
         ],
-        "abstract": "Driven by a need for ever increasing chip performance and inclusion of innovative features, a growing number of semiconductor companies are opting for all-inclusive System-on-Chip (SoC) architectures. Although Moore's Law has been able to keep up with the demand for more complex logic, manufacturing large dies still poses a challenge. Increasingly the solution adopted to minimize the impact of silicon defects on manufacturing yield has been to split a design into multiple smaller dies called chiplets which are then brought together on a silicon interposer. Advanced 2.5D and 3D packaging techniques that enable this kind of integration also promise increased power efficiency and opportunities for heterogeneous integration. However, despite their advantages, chiplets are not without issues. Apart from manufacturing challenges that come with new packaging techniques, disaggregating a design into multiple logically and physically separate dies introduces new threats, including the possibility of tampering with and probing exposed data lines. In this paper we evaluate the exposure of chiplets to probing by applying laser contactless probing techniques to a chiplet-based AMD/Xilinx VU9P FPGA. First, we identify and map interposer wire drivers and show that probing them is easier compared to probing internal nodes. Lastly, we demonstrate that delay-based sensors, which can be used to protect against physical probes, are insufficient to protect against laser probing as the delay change due to laser probing is only 0.792ps even at 100\\% laser power.",
+        "abstract": "Camera relocalization is a crucial problem in computer vision and robotics. Recent advancements in neural radiance fields (NeRFs) have shown promise in synthesizing photo-realistic images. Several works have utilized NeRFs for refining camera poses, but they do not account for lighting changes that can affect scene appearance and shadow regions, causing a degraded pose optimization process. In this paper, we propose a two-staged pipeline that normalizes images with varying lighting and shadow conditions to improve camera relocalization. We implement our scene representation upon a hash-encoded NeRF which significantly boosts up the pose optimization process. To account for the noisy image gradient computing problem in grid-based NeRFs, we further propose a re-devised truncated dynamic low-pass filter (TDLF) and a numerical gradient averaging technique to smoothen the process. Experimental results on several datasets with varying lighting conditions demonstrate that our method achieves state-of-the-art results in camera relocalization under varying lighting conditions. Code and data will be made publicly available.",
         "subjects": [
-            "cs.CR"
+            "cs.CV",
+            "cs.RO"
         ],
-        "comment": null
+        "comment": "Accepted by ICRA 2024. 8 pages, 5 figures, 3 tables. Codes and dataset: https://github.com/hnrna/ShadowfreeNeRF-CameraReloc"
     },
     {
         "paper id": "2405.14828",
@@ -7450,7 +7594,6 @@
             ],
             [
                 "Diffusion",
-                "synthesis",
                 "inpainting",
                 "Text-to-Image"
             ],
@@ -7544,28 +7687,6 @@
         "comment": "23 pages, 9 figures, 12 tables, project page: https://yueyang1996.github.io/knobo/"
     },
     {
-        "paper id": "2405.14866",
-        "abstract url": "https://arxiv.org/abs/2405.14866",
-        "title": "Tele-Aloha: A Low-budget and High-authenticity Telepresence System Using Sparse RGB Cameras",
-        "rating": "-1",
-        "keywords": [
-            [
-                "Gaussian Splatting"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "In this paper, we present a low-budget and high-authenticity bidirectional telepresence system, Tele-Aloha, targeting peer-to-peer communication scenarios. Compared to previous systems, Tele-Aloha utilizes only four sparse RGB cameras, one consumer-grade GPU, and one autostereoscopic screen to achieve high-resolution (2048x2048), real-time (30 fps), low-latency (less than 150ms) and robust distant communication. As the core of Tele-Aloha, we propose an efficient novel view synthesis algorithm for upper-body. Firstly, we design a cascaded disparity estimator for obtaining a robust geometry cue. Additionally a neural rasterizer via Gaussian Splatting is introduced to project latent features onto target view and to decode them into a reduced resolution. Further, given the high-quality captured data, we leverage weighted blending mechanism to refine the decoded image into the final resolution of 2K. Exploiting world-leading autostereoscopic display and low-latency iris tracking, users are able to experience a strong three-dimensional sense even without any wearable head-mounted display device. Altogether, our telepresence system demonstrates the sense of co-presence in real-life experiments, inspiring the next generation of communication.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Paper accepted by SIGGRAPH 2024. Project page: http://118.178.32.38/c/Tele-Aloha/"
-    },
-    {
         "paper id": "2405.14870",
         "abstract url": "https://arxiv.org/abs/2405.14870",
         "title": "An Empirical Study of Training State-of-the-Art LiDAR Segmentation Models",
@@ -7588,30 +7709,6 @@
             "cs.RO"
         ],
         "comment": "Preprint; 17 pages, 4 figures, 7 tables; Code at https://github.com/open-mmlab/mmdetection3d"
-    },
-    {
-        "paper id": "2405.14871",
-        "abstract url": "https://arxiv.org/abs/2405.14871",
-        "title": "NeRF-Casting: Improved View-Dependent Appearance with Consistent Reflections",
-        "rating": "-1",
-        "keywords": [
-            [
-                "NeRF",
-                "Radiance Fields"
-            ],
-            [
-                "synthesize"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Neural Radiance Fields (NeRFs) typically struggle to reconstruct and render highly specular objects, whose appearance varies quickly with changes in viewpoint. Recent works have improved NeRF's ability to render detailed specular appearance of distant environment illumination, but are unable to synthesize consistent reflections of closer content. Moreover, these techniques rely on large computationally-expensive neural networks to model outgoing radiance, which severely limits optimization and rendering speed. We address these issues with an approach based on ray tracing: instead of querying an expensive neural network for the outgoing view-dependent radiance at points along each camera ray, our model casts reflection rays from these points and traces them through the NeRF representation to render feature vectors which are decoded into color using a small inexpensive network. We demonstrate that our model outperforms prior methods for view synthesis of scenes containing shiny objects, and that it is the only existing NeRF method that can synthesize photorealistic specular appearance and reflections in real-world scenes, while requiring comparable optimization time to current state-of-the-art view synthesis models.",
-        "subjects": [
-            "cs.CV",
-            "cs.GR"
-        ],
-        "comment": "Project page: http://nerf-casting.github.io"
     },
     {
         "paper id": "2405.14934",
@@ -8018,31 +8115,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.15118",
-        "abstract url": "https://arxiv.org/abs/2405.15118",
-        "title": "GS-Hider: Hiding Messages into 3D Gaussian Splatting",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting",
-                "point cloud",
-                "NeRF"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "3D Gaussian Splatting (3DGS) has already become the emerging research focus in the fields of 3D scene reconstruction and novel view synthesis. Given that training a 3DGS requires a significant amount of time and computational cost, it is crucial to protect the copyright, integrity, and privacy of such 3D assets. Steganography, as a crucial technique for encrypted transmission and copyright protection, has been extensively studied. However, it still lacks profound exploration targeted at 3DGS. Unlike its predecessor NeRF, 3DGS possesses two distinct features: 1) explicit 3D representation; and 2) real-time rendering speeds. These characteristics result in the 3DGS point cloud files being public and transparent, with each Gaussian point having a clear physical significance. Therefore, ensuring the security and fidelity of the original 3D scene while embedding information into the 3DGS point cloud files is an extremely challenging task. To solve the above-mentioned issue, we first propose a steganography framework for 3DGS, dubbed GS-Hider, which can embed 3D scenes and images into original GS point clouds in an invisible manner and accurately extract the hidden messages. Specifically, we design a coupled secured feature attribute to replace the original 3DGS's spherical harmonics coefficients and then use a scene decoder and a message decoder to disentangle the original RGB scene and the hidden message. Extensive experiments demonstrated that the proposed GS-Hider can effectively conceal multimodal messages without compromising rendering quality and possesses exceptional security, robustness, capacity, and flexibility. Our project is available at: https://xuanyuzhang21.github.io/project/gshider.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "3DGS steganography"
-    },
-    {
         "paper id": "2405.15122",
         "abstract url": "https://arxiv.org/abs/2405.15122",
         "title": "Generalizable and Scalable Multistage Biomedical Concept Normalization Leveraging Large Language Models",
@@ -8154,48 +8226,6 @@
             "cs.RO"
         ],
         "comment": "Accepted by IJCAI2024"
-    },
-    {
-        "paper id": "2405.15173",
-        "abstract url": "https://arxiv.org/abs/2405.15173",
-        "title": "A3:Ambiguous Aberrations Captured via Astray-Learning for Facial Forgery Semantic Sublimation",
-        "rating": "-1",
-        "keywords": [
-            [
-                "Facial"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Prior DeepFake detection methods have faced a core challenge in preserving generalizability and fairness effectively. In this paper, we proposed an approach akin to decoupling and sublimating forgery semantics, named astray-learning. The primary objective of the proposed method is to blend hybrid forgery semantics derived from high-frequency components into authentic imagery, named aberrations. The ambiguity of aberrations is beneficial to reducing the model's bias towards specific semantics. Consequently, it can enhance the model's generalization ability and maintain the detection fairness. All codes for astray-learning are publicly available at https://anonymous.4open.science/r/astray-learning-C49B .",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "19 pages, 9 figures"
-    },
-    {
-        "paper id": "2405.15196",
-        "abstract url": "https://arxiv.org/abs/2405.15196",
-        "title": "DisC-GS: Discontinuity-aware Gaussian Splatting",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Recently, Gaussian Splatting, a method that represents a 3D scene as a collection of Gaussian distributions, has gained significant attention in addressing the task of novel view synthesis. In this paper, we highlight a fundamental limitation of Gaussian Splatting: its inability to accurately render discontinuities and boundaries in images due to the continuous nature of Gaussian distributions. To address this issue, we propose a novel framework enabling Gaussian Splatting to perform discontinuity-aware image rendering. Additionally, we introduce a B\u00e9zier-boundary gradient approximation strategy within our framework to keep the ``differentiability'' of the proposed discontinuity-aware rendering process. Extensive experiments demonstrate the efficacy of our framework.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
     },
     {
         "paper id": "2405.15197",
@@ -8326,6 +8356,28 @@
         "comment": "Learning Engineering Virtual Institute"
     },
     {
+        "paper id": "2405.14203",
+        "abstract url": "https://arxiv.org/abs/2405.14203",
+        "title": "GLaD: Synergizing Molecular Graphs and Language Descriptors for Enhanced Power Conversion Efficiency Prediction in Organic Photovoltaic Devices",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "chemical"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "This paper presents a novel approach for predicting Power Conversion Efficiency (PCE) of Organic Photovoltaic (OPV) devices, called GLaD: synergizing molecular Graphs and Language Descriptors for enhanced PCE prediction. Due to the lack of high-quality experimental data, we collect a dataset consisting of 500 pairs of OPV donor and acceptor molecules along with their corresponding PCE values, which we utilize as the training data for our predictive model. In this low-data regime, GLaD leverages properties learned from large language models (LLMs) pretrained on extensive scientific literature to enrich molecular structural representations, allowing for a multimodal representation of molecules. GLaD achieves precise predictions of PCE, thereby facilitating the synthesis of new OPV molecules with improved efficiency. Furthermore, GLaD showcases versatility, as it applies to a range of molecular property prediction tasks (BBBP, BACE, ClinTox, and SIDER), not limited to those concerning OPV materials. Especially, GLaD proves valuable for tasks in low-data regimes within the chemical space, as it enriches molecular representations by incorporating molecular property descriptions learned from large-scale pretraining. This capability is significant in real-world scientific endeavors like drug and material discovery, where access to comprehensive data is crucial for informed decision-making and efficient exploration of the chemical space.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI",
+            "physics.chem-ph"
+        ],
+        "comment": "In progress"
+    },
+    {
         "paper id": "2405.14252",
         "abstract url": "https://arxiv.org/abs/2405.14252",
         "title": "Time-FFM: Towards LM-Empowered Federated Foundation Model for Time Series Forecasting",
@@ -8399,27 +8451,6 @@
         "abstract": "Physics-informed neural networks (PINNs) have been widely applied to solve partial differential equations (PDEs) by enforcing outputs and gradients of deep models to satisfy target equations. Due to the limitation of numerical computation, PINNs are conventionally optimized on finite selected points. However, since PDEs are usually defined on continuous domains, solely optimizing models on scattered points may be insufficient to obtain an accurate solution for the whole domain. To mitigate this inherent deficiency of the default scatter-point optimization, this paper proposes and theoretically studies a new training paradigm as region optimization. Concretely, we propose to extend the optimization process of PINNs from isolated points to their continuous neighborhood regions, which can theoretically decrease the generalization error, especially for hidden high-order constraints of PDEs. A practical training algorithm, Region Optimized PINN (RoPINN), is seamlessly derived from this new paradigm, which is implemented by a straightforward but effective Monte Carlo sampling method. By calibrating the sampling process into trust regions, RoPINN finely balances sampling efficiency and generalization error. Experimentally, RoPINN consistently boosts the performance of diverse PINNs on a wide range of PDEs without extra backpropagation or gradient calculation.",
         "subjects": [
             "cs.LG"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2405.14377",
-        "abstract url": "https://arxiv.org/abs/2405.14377",
-        "title": "CoMERA: Computing- and Memory-Efficient Training via Rank-Adaptive Tensor Optimization",
-        "rating": "-1.5",
-        "keywords": [
-            [
-                "recommendation"
-            ],
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Training large AI models such as deep learning recommendation systems and foundation language (or multi-modal) models costs massive GPUs and computing time. The high training cost has become only affordable to big tech companies, meanwhile also causing increasing concerns about the environmental impact. This paper presents CoMERA, a Computing- and Memory-Efficient training method via Rank-Adaptive tensor optimization. CoMERA achieves end-to-end rank-adaptive tensor-compressed training via a multi-objective optimization formulation, and improves the training to provide both a high compression ratio and excellent accuracy in the training process. Our optimized numerical computation (e.g., optimized tensorized embedding and tensor-vector contractions) and GPU implementation eliminate part of the run-time overhead in the tensorized training on GPU. This leads to, for the first time, $2-3\\times$ speedup per training epoch compared with standard training. CoMERA also outperforms the recent GaLore in terms of both memory and computing efficiency. Specifically, CoMERA is $2\\times$ faster per training epoch and $9\\times$ more memory-efficient than GaLore on a tested six-encoder transformer with single-batch training. With further HPC optimization, CoMERA may significantly reduce the training cost of large language models.",
-        "subjects": [
-            "cs.LG",
-            "cs.AI"
         ],
         "comment": null
     },
@@ -8614,6 +8645,25 @@
             ]
         ],
         "abstract": "SimSiam is a prominent self-supervised learning method that achieves impressive results in various vision tasks under static environments. However, it has two critical issues: high sensitivity to hyperparameters, especially weight decay, and unsatisfactory performance in online and continual learning, where neuroscientists believe that powerful memory functions are necessary, as in brains. In this paper, we propose PhiNet, inspired by a hippocampal model based on the temporal prediction hypothesis. Unlike SimSiam, which aligns two augmented views of the original image, PhiNet integrates an additional predictor block that estimates the original image representation to imitate the CA1 region in the hippocampus. Moreover, we model the neocortex inspired by the Complementary Learning Systems theory with a momentum encoder block as a slow learner, which works as long-term memory. We demonstrate through analysing the learning dynamics that PhiNet benefits from the additional predictor to prevent the complete collapse of learned representations, a notorious challenge in non-contrastive learning. This dynamics analysis may partially corroborate why this hippocampal model is biologically plausible. Experimental results demonstrate that PhiNet is more robust to weight decay and performs better than SimSiam in memory-intensive tasks like online and continual learning.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2405.14655",
+        "abstract url": "https://arxiv.org/abs/2405.14655",
+        "title": "Multi-turn Reinforcement Learning from Preference Human Feedback",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "tabular"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Reinforcement Learning from Human Feedback (RLHF) has become the standard approach for aligning Large Language Models (LLMs) with human preferences, allowing LLMs to demonstrate remarkable abilities in various tasks. Existing methods work by emulating the preferences at the single decision (turn) level, limiting their capabilities in settings that require planning or multi-turn interactions to achieve a long-term goal. In this paper, we address this issue by developing novel methods for Reinforcement Learning (RL) from preference feedback between two full multi-turn conversations. In the tabular setting, we present a novel mirror-descent-based policy optimization algorithm for the general multi-turn preference-based RL problem, and prove its convergence to Nash equilibrium. To evaluate performance, we create a new environment, Education Dialogue, where a teacher agent guides a student in learning a random topic, and show that a deep RL variant of our algorithm outperforms RLHF baselines. Finally, we show that in an environment with explicit rewards, our algorithm recovers the same performance as a reward-based RL baseline, despite relying solely on a weaker preference signal.",
         "subjects": [
             "cs.LG"
         ],
@@ -9155,6 +9205,27 @@
         "comment": null
     },
     {
+        "paper id": "2405.17468",
+        "abstract url": "https://arxiv.org/abs/2405.17468",
+        "title": "Deep Activity Model: A Generative Approach for Human Mobility Pattern Synthesis",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "health"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Human mobility significantly impacts various aspects of society, including transportation, urban planning, and public health. The increasing availability of diverse mobility data and advancements in deep learning have revolutionized mobility modeling. Existing deep learning models, however, mainly study spatio-temporal patterns using trajectories and often fall short in capturing the underlying semantic interdependency among activities. Moreover, they are also constrained by the data source. These two factors thereby limit their realism and adaptability, respectively. Meanwhile, traditional activity-based models (ABMs) in transportation modeling rely on rigid assumptions and are costly and time-consuming to calibrate, making them difficult to adapt and scale to new regions, especially those regions with limited amount of required conventional travel data. To address these limitations, we develop a novel generative deep learning approach for human mobility modeling and synthesis, using ubiquitous and open-source data. Additionally, the model can be fine-tuned with local data, enabling adaptable and accurate representations of mobility patterns across different regions. The model is evaluated on a nationwide dataset of the United States, where it demonstrates superior performance in generating activity chains that closely follow ground truth distributions. Further tests using state- or city-specific datasets from California, Washington, and Mexico City confirm its transferability. This innovative approach offers substantial potential to advance mobility modeling research, especially in generating human activity chains as input for downstream activity-based mobility simulation models and providing enhanced tools for urban planners and policymakers.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.19356",
         "abstract url": "https://arxiv.org/abs/2405.19356",
         "title": "An LSTM Feature Imitation Network for Hand Movement Recognition from sEMG Signals",
@@ -9255,8 +9326,7 @@
         "keywords": [
             [
                 "Diffusion",
-                "GAN",
-                "synthesis"
+                "GAN"
             ],
             [
                 "quality assessment"
@@ -9272,30 +9342,6 @@
             "cs.CV"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2405.14225",
-        "abstract url": "https://arxiv.org/abs/2405.14225",
-        "title": "ReactXT: Understanding Molecular \"Reaction-ship\" via Reaction-Contextualized Molecule-Text Pretraining",
-        "rating": "-2",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "chemical"
-            ],
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Molecule-text modeling, which aims to facilitate molecule-relevant tasks with a textual interface and textual knowledge, is an emerging research direction. Beyond single molecules, studying reaction-text modeling holds promise for helping the synthesis of new materials and drugs. However, previous works mostly neglect reaction-text modeling: they primarily focus on modeling individual molecule-text pairs or learning chemical reactions without texts in context. Additionally, one key task of reaction-text modeling -- experimental procedure prediction -- is less explored due to the absence of an open-source dataset. The task is to predict step-by-step actions of conducting chemical experiments and is crucial to automating chemical synthesis. To resolve the challenges above, we propose a new pretraining method, ReactXT, for reaction-text modeling, and a new dataset, OpenExp, for experimental procedure prediction. Specifically, ReactXT features three types of input contexts to incrementally pretrain LMs. Each of the three input contexts corresponds to a pretraining task to improve the text-based understanding of either reactions or single molecules. ReactXT demonstrates consistent improvements in experimental procedure prediction and molecule captioning and offers competitive results in retrosynthesis. Our code is available at https://github.com/syr-cn/ReactXT.",
-        "subjects": [
-            "q-bio.QM",
-            "cs.CL",
-            "cs.MM"
-        ],
-        "comment": "ACL 2024 Findings, 9 pages"
     },
     {
         "paper id": "2405.14280",
@@ -9476,28 +9522,21 @@
         "comment": "6 pages, 6 figures"
     },
     {
-        "paper id": "2405.14445",
-        "abstract url": "https://arxiv.org/abs/2405.14445",
-        "title": "Exploring the use of a Large Language Model for data extraction in systematic reviews: a rapid feasibility study",
+        "paper id": "2405.14442",
+        "abstract url": "https://arxiv.org/abs/2405.14442",
+        "title": "Fully parallel implementation of digital memcomputing on FPGA",
         "rating": "-2",
         "keywords": [
             [
-                "Synthesis"
-            ],
-            [
-                "clinical"
-            ],
-            [
-                "cs.AI",
-                "cs.CL"
+                "FPGA"
             ]
         ],
-        "abstract": "This paper describes a rapid feasibility study of using GPT-4, a large language model (LLM), to (semi)automate data extraction in systematic reviews. Despite the recent surge of interest in LLMs there is still a lack of understanding of how to design LLM-based automation tools and how to robustly evaluate their performance. During the 2023 Evidence Synthesis Hackathon we conducted two feasibility studies. Firstly, to automatically extract study characteristics from human clinical, animal, and social science domain studies. We used two studies from each category for prompt-development; and ten for evaluation. Secondly, we used the LLM to predict Participants, Interventions, Controls and Outcomes (PICOs) labelled within 100 abstracts in the EBM-NLP dataset. Overall, results indicated an accuracy of around 80%, with some variability between domains (82% for human clinical, 80% for animal, and 72% for studies of human social sciences). Causal inference methods and study design were the data extraction items with the most errors. In the PICO study, participants and intervention/control showed high accuracy (>80%), outcomes were more challenging. Evaluation was done manually; scoring methods such as BLEU and ROUGE showed limited value. We observed variability in the LLMs predictions and changes in response quality. This paper presents a template for future evaluations of LLMs in the context of data extraction for systematic review automation. Our results show that there might be value in using LLMs, for example as second or third reviewers. However, caution is advised when integrating models such as GPT-4 into tools. Further research on stability and reliability in practical settings is warranted for each type of data that is processed by the LLM.",
+        "abstract": "We present a fully parallel digital memcomputing solver implemented on a field-programmable gate array (FPGA) board. For this purpose, we have designed an FPGA code that solves the ordinary differential equations associated with digital memcomputing in parallel. A feature of the code is the use of only integer-type variables and integer constants to enhance optimization. Consequently, each integration step in our solver is executed in 96~ns. This method was utilized for difficult instances of the Boolean satisfiability (SAT) problem close to a phase transition, involving up to about 150 variables. Our results demonstrate that the parallel implementation reduces the scaling exponent by about 1 compared to a sequential C++ code on a standard computer. Additionally, compared to C++ code, we observed a time-to-solution advantage of about three orders of magnitude. Given the limitations of FPGA resources, the current implementation of digital memcomputing will be especially useful for solving compact but challenging problems.",
         "subjects": [
-            "cs.CL",
-            "cs.AI"
+            "cs.ET",
+            "nlin.CD"
         ],
-        "comment": "Conference proceedings, peer-reviewed and presented at the 3rd Workshop on Augmented Intelligence for Technology-Assisted Reviews Systems, Glasgow, 2024"
+        "comment": null
     },
     {
         "paper id": "2405.14453",
@@ -9647,8 +9686,7 @@
         "rating": "-2",
         "keywords": [
             [
-                "Diffusion",
-                "Synthesis"
+                "Diffusion"
             ],
             [
                 "facial"
@@ -9707,29 +9745,6 @@
         "comment": "RSS Pioneers 2024 Research Statement"
     },
     {
-        "paper id": "2405.14709",
-        "abstract url": "https://arxiv.org/abs/2405.14709",
-        "title": "OpFlowTalker: Realistic and Natural Talking Face Generation via Optical Flow Guidance",
-        "rating": "-2",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "facial"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Creating realistic, natural, and lip-readable talking face videos remains a formidable challenge. Previous research primarily concentrated on generating and aligning single-frame images while overlooking the smoothness of frame-to-frame transitions and temporal dependencies. This often compromised visual quality and effects in practical settings, particularly when handling complex facial data and audio content, which frequently led to semantically incongruent visual illusions. Specifically, synthesized videos commonly featured disorganized lip movements, making them difficult to understand and recognize. To overcome these limitations, this paper introduces the application of optical flow to guide facial image generation, enhancing inter-frame continuity and semantic consistency. We propose \"OpFlowTalker\", a novel approach that utilizes predicted optical flow changes from audio inputs rather than direct image predictions. This method smooths image transitions and aligns changes with semantic content. Moreover, it employs a sequence fusion technique to replace the independent generation of single frames, thus preserving contextual information and maintaining temporal coherence. We also developed an optical flow synchronization module that regulates both full-face and lip movements, optimizing visual synthesis by balancing regional dynamics. Furthermore, we introduce a Visual Text Consistency Score (VTCS) that accurately measures lip-readability in synthesized videos. Extensive empirical evidence validates the effectiveness of our approach.",
-        "subjects": [
-            "cs.CV",
-            "cs.MM"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2405.14720",
         "abstract url": "https://arxiv.org/abs/2405.14720",
         "title": "Convolutional Neural Network Model Observers Discount Signal-like Anatomical Structures During Search in Virtual Digital Breast Tomosynthesis Phantoms",
@@ -9771,33 +9786,6 @@
         "comment": "6 pages, 6 figures, conference"
     },
     {
-        "paper id": "2405.14824",
-        "abstract url": "https://arxiv.org/abs/2405.14824",
-        "title": "Camera Relocalization in Shadow-free Neural Radiance Fields",
-        "rating": "-2",
-        "keywords": [
-            [
-                "NeRF",
-                "Radiance Fields"
-            ],
-            [
-                "synthesizing"
-            ],
-            [
-                "robotics"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Camera relocalization is a crucial problem in computer vision and robotics. Recent advancements in neural radiance fields (NeRFs) have shown promise in synthesizing photo-realistic images. Several works have utilized NeRFs for refining camera poses, but they do not account for lighting changes that can affect scene appearance and shadow regions, causing a degraded pose optimization process. In this paper, we propose a two-staged pipeline that normalizes images with varying lighting and shadow conditions to improve camera relocalization. We implement our scene representation upon a hash-encoded NeRF which significantly boosts up the pose optimization process. To account for the noisy image gradient computing problem in grid-based NeRFs, we further propose a re-devised truncated dynamic low-pass filter (TDLF) and a numerical gradient averaging technique to smoothen the process. Experimental results on several datasets with varying lighting conditions demonstrate that our method achieves state-of-the-art results in camera relocalization under varying lighting conditions. Code and data will be made publicly available.",
-        "subjects": [
-            "cs.CV",
-            "cs.RO"
-        ],
-        "comment": "Accepted by ICRA 2024. 8 pages, 5 figures, 3 tables. Codes and dataset: https://github.com/hnrna/ShadowfreeNeRF-CameraReloc"
-    },
-    {
         "paper id": "2405.14851",
         "abstract url": "https://arxiv.org/abs/2405.14851",
         "title": "Domain Wall Magnetic Tunnel Junction Reliable Integrate and Fire Neuron",
@@ -9825,8 +9813,7 @@
                 "depth"
             ],
             [
-                "diffusion",
-                "Synthesis"
+                "diffusion"
             ],
             [
                 "robotics"
@@ -9878,6 +9865,23 @@
             "eess.SP"
         ],
         "comment": "8 pages, 4 figures, 2 tables, accepted at Eusipco 2024"
+    },
+    {
+        "paper id": "2405.15008",
+        "abstract url": "https://arxiv.org/abs/2405.15008",
+        "title": "An Empirical Study on the Characteristics of Database Access Bugs in Java Applications",
+        "rating": "-2",
+        "keywords": [
+            [
+                "SQL"
+            ]
+        ],
+        "abstract": "Database-backed applications rely on the database access code to interact with the underlying database management systems (DBMSs). Although many prior studies aim at database access issues like SQL anti-patterns or SQL code smells, there is a lack of study of database access bugs during the maintenance of database-backed applications. In this paper, we empirically investigate 423 database access bugs collected from seven large-scale Java open source applications that use relational database management systems (e.g., MySQL or PostgreSQL). We study the characteristics (e.g., occurrence and root causes) of the bugs by manually examining the bug reports and commit histories. We find that the number of reported database and non-database access bugs share a similar trend but their modified files in bug fixing commits are different. Additionally, we generalize categories of the root causes of database access bugs, containing five main categories (SQL queries, Schema, API, Configuration, SQL query result) and 25 unique root causes. We find that the bugs pertaining to SQL queries, Schema, and API cover 84.2% of database access bugs across all studied applications. In particular, SQL queries bug (54%) and API bug (38.7%) are the most frequent issues when using JDBC and Hibernate, respectively. Finally, we provide a discussion on the implications of our findings for developers and researchers.",
+        "subjects": [
+            "cs.SE",
+            "cs.DB"
+        ],
+        "comment": "Accepted by the ACM Transactions on Software Engineering and Methodology (TOSEM)"
     },
     {
         "paper id": "2405.15033",
@@ -9996,6 +10000,31 @@
         "comment": null
     },
     {
+        "paper id": "2405.15125",
+        "abstract url": "https://arxiv.org/abs/2405.15125",
+        "title": "HDR-GS: Efficient High Dynamic Range Novel View Synthesis at 1000x Speed via Gaussian Splatting",
+        "rating": "-2",
+        "keywords": [
+            [
+                "3D",
+                "Gaussian Splatting",
+                "point cloud",
+                "NeRF"
+            ],
+            [
+                "HDR"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "High dynamic range (HDR) novel view synthesis (NVS) aims to create photorealistic images from novel viewpoints using HDR imaging techniques. The rendered HDR images capture a wider range of brightness levels containing more details of the scene than normal low dynamic range (LDR) images. Existing HDR NVS methods are mainly based on NeRF. They suffer from long training time and slow inference speed. In this paper, we propose a new framework, High Dynamic Range Gaussian Splatting (HDR-GS), which can efficiently render novel HDR views and reconstruct LDR images with a user input exposure time. Specifically, we design a Dual Dynamic Range (DDR) Gaussian point cloud model that uses spherical harmonics to fit HDR color and employs an MLP-based tone-mapper to render LDR color. The HDR and LDR colors are then fed into two Parallel Differentiable Rasterization (PDR) processes to reconstruct HDR and LDR views. To establish the data foundation for the research of 3D Gaussian splatting-based methods in HDR NVS, we recalibrate the camera parameters and compute the initial positions for Gaussian point clouds. Experiments demonstrate that our HDR-GS surpasses the state-of-the-art NeRF-based method by 3.84 and 1.91 dB on LDR and HDR NVS while enjoying 1000x inference speed and only requiring 6.3% training time. Code, models, and recalibrated data will be publicly available at https://github.com/caiyuanhao1998/HDR-GS",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "The first 3D Gaussian Splatting-based method for HDR imaging"
+    },
+    {
         "paper id": "2405.15161",
         "abstract url": "https://arxiv.org/abs/2405.15161",
         "title": "Are You Copying My Prompt? Protecting the Copyright of Vision Prompt for VPaaS via Watermark",
@@ -10034,6 +10063,28 @@
             "eess.SY"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2405.15173",
+        "abstract url": "https://arxiv.org/abs/2405.15173",
+        "title": "A3:Ambiguous Aberrations Captured via Astray-Learning for Facial Forgery Semantic Sublimation",
+        "rating": "-2",
+        "keywords": [
+            [
+                "DeepFake"
+            ],
+            [
+                "Facial"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Prior DeepFake detection methods have faced a core challenge in preserving generalizability and fairness effectively. In this paper, we proposed an approach akin to decoupling and sublimating forgery semantics, named astray-learning. The primary objective of the proposed method is to blend hybrid forgery semantics derived from high-frequency components into authentic imagery, named aberrations. The ambiguity of aberrations is beneficial to reducing the model's bias towards specific semantics. Consequently, it can enhance the model's generalization ability and maintain the detection fairness. All codes for astray-learning are publicly available at https://anonymous.4open.science/r/astray-learning-C49B .",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "19 pages, 9 figures"
     },
     {
         "paper id": "2405.15205",
@@ -10081,31 +10132,6 @@
             "cs.CV"
         ],
         "comment": "31 pages, 11 figures, 8 tables"
-    },
-    {
-        "paper id": "2405.14203",
-        "abstract url": "https://arxiv.org/abs/2405.14203",
-        "title": "GLaD: Synergizing Molecular Graphs and Language Descriptors for Enhanced Power Conversion Efficiency Prediction in Organic Photovoltaic Devices",
-        "rating": "-2.5",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "chemical"
-            ],
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "This paper presents a novel approach for predicting Power Conversion Efficiency (PCE) of Organic Photovoltaic (OPV) devices, called GLaD: synergizing molecular Graphs and Language Descriptors for enhanced PCE prediction. Due to the lack of high-quality experimental data, we collect a dataset consisting of 500 pairs of OPV donor and acceptor molecules along with their corresponding PCE values, which we utilize as the training data for our predictive model. In this low-data regime, GLaD leverages properties learned from large language models (LLMs) pretrained on extensive scientific literature to enrich molecular structural representations, allowing for a multimodal representation of molecules. GLaD achieves precise predictions of PCE, thereby facilitating the synthesis of new OPV molecules with improved efficiency. Furthermore, GLaD showcases versatility, as it applies to a range of molecular property prediction tasks (BBBP, BACE, ClinTox, and SIDER), not limited to those concerning OPV materials. Especially, GLaD proves valuable for tasks in low-data regimes within the chemical space, as it enriches molecular representations by incorporating molecular property descriptions learned from large-scale pretraining. This capability is significant in real-world scientific endeavors like drug and material discovery, where access to comprehensive data is crucial for informed decision-making and efficient exploration of the chemical space.",
-        "subjects": [
-            "cs.LG",
-            "cs.AI",
-            "physics.chem-ph"
-        ],
-        "comment": "In progress"
     },
     {
         "paper id": "2405.14307",
@@ -10300,30 +10326,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.17468",
-        "abstract url": "https://arxiv.org/abs/2405.17468",
-        "title": "Deep Activity Model: A Generative Approach for Human Mobility Pattern Synthesis",
-        "rating": "-2.5",
-        "keywords": [
-            [
-                "Synthesis"
-            ],
-            [
-                "health"
-            ],
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Human mobility significantly impacts various aspects of society, including transportation, urban planning, and public health. The increasing availability of diverse mobility data and advancements in deep learning have revolutionized mobility modeling. Existing deep learning models, however, mainly study spatio-temporal patterns using trajectories and often fall short in capturing the underlying semantic interdependency among activities. Moreover, they are also constrained by the data source. These two factors thereby limit their realism and adaptability, respectively. Meanwhile, traditional activity-based models (ABMs) in transportation modeling rely on rigid assumptions and are costly and time-consuming to calibrate, making them difficult to adapt and scale to new regions, especially those regions with limited amount of required conventional travel data. To address these limitations, we develop a novel generative deep learning approach for human mobility modeling and synthesis, using ubiquitous and open-source data. Additionally, the model can be fine-tuned with local data, enabling adaptable and accurate representations of mobility patterns across different regions. The model is evaluated on a nationwide dataset of the United States, where it demonstrates superior performance in generating activity chains that closely follow ground truth distributions. Further tests using state- or city-specific datasets from California, Washington, and Mexico City confirm its transferability. This innovative approach offers substantial potential to advance mobility modeling research, especially in generating human activity chains as input for downstream activity-based mobility simulation models and providing enhanced tools for urban planners and policymakers.",
-        "subjects": [
-            "cs.LG",
-            "cs.AI"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2405.17473",
         "abstract url": "https://arxiv.org/abs/2405.17473",
         "title": "Repeat-Aware Neighbor Sampling for Dynamic Graph Learning",
@@ -10405,7 +10407,8 @@
         "rating": "-3",
         "keywords": [
             [
-                "robotics"
+                "robotics",
+                "Robotic Manipulation"
             ],
             [
                 "physics"
@@ -10553,6 +10556,25 @@
         "comment": null
     },
     {
+        "paper id": "2405.14821",
+        "abstract url": "https://arxiv.org/abs/2405.14821",
+        "title": "Evaluating Vulnerability of Chiplet-Based Systems to Contactless Probing Techniques",
+        "rating": "-3",
+        "keywords": [
+            [
+                "3D"
+            ],
+            [
+                "FPGA"
+            ]
+        ],
+        "abstract": "Driven by a need for ever increasing chip performance and inclusion of innovative features, a growing number of semiconductor companies are opting for all-inclusive System-on-Chip (SoC) architectures. Although Moore's Law has been able to keep up with the demand for more complex logic, manufacturing large dies still poses a challenge. Increasingly the solution adopted to minimize the impact of silicon defects on manufacturing yield has been to split a design into multiple smaller dies called chiplets which are then brought together on a silicon interposer. Advanced 2.5D and 3D packaging techniques that enable this kind of integration also promise increased power efficiency and opportunities for heterogeneous integration. However, despite their advantages, chiplets are not without issues. Apart from manufacturing challenges that come with new packaging techniques, disaggregating a design into multiple logically and physically separate dies introduces new threats, including the possibility of tampering with and probing exposed data lines. In this paper we evaluate the exposure of chiplets to probing by applying laser contactless probing techniques to a chiplet-based AMD/Xilinx VU9P FPGA. First, we identify and map interposer wire drivers and show that probing them is easier compared to probing internal nodes. Lastly, we demonstrate that delay-based sensors, which can be used to protect against physical probes, are insufficient to protect against laser probing as the delay change due to laser probing is only 0.792ps even at 100\\% laser power.",
+        "subjects": [
+            "cs.CR"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.14987",
         "abstract url": "https://arxiv.org/abs/2405.14987",
         "title": "Simultaneous quantum identity authentication scheme utilizing entanglement swapping with secret key preservation",
@@ -10591,34 +10613,6 @@
             "quant-ph"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2405.15125",
-        "abstract url": "https://arxiv.org/abs/2405.15125",
-        "title": "HDR-GS: Efficient High Dynamic Range Novel View Synthesis at 1000x Speed via Gaussian Splatting",
-        "rating": "-3",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting",
-                "point cloud",
-                "NeRF"
-            ],
-            [
-                "Synthesis"
-            ],
-            [
-                "HDR"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "High dynamic range (HDR) novel view synthesis (NVS) aims to create photorealistic images from novel viewpoints using HDR imaging techniques. The rendered HDR images capture a wider range of brightness levels containing more details of the scene than normal low dynamic range (LDR) images. Existing HDR NVS methods are mainly based on NeRF. They suffer from long training time and slow inference speed. In this paper, we propose a new framework, High Dynamic Range Gaussian Splatting (HDR-GS), which can efficiently render novel HDR views and reconstruct LDR images with a user input exposure time. Specifically, we design a Dual Dynamic Range (DDR) Gaussian point cloud model that uses spherical harmonics to fit HDR color and employs an MLP-based tone-mapper to render LDR color. The HDR and LDR colors are then fed into two Parallel Differentiable Rasterization (PDR) processes to reconstruct HDR and LDR views. To establish the data foundation for the research of 3D Gaussian splatting-based methods in HDR NVS, we recalibrate the camera parameters and compute the initial positions for Gaussian point clouds. Experiments demonstrate that our HDR-GS surpasses the state-of-the-art NeRF-based method by 3.84 and 1.91 dB on LDR and HDR NVS while enjoying 1000x inference speed and only requiring 6.3% training time. Code, models, and recalibrated data will be publicly available at https://github.com/caiyuanhao1998/HDR-GS",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "The first 3D Gaussian Splatting-based method for HDR imaging"
     },
     {
         "paper id": "2405.14267",
@@ -11193,19 +11187,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.14442",
-        "abstract url": "https://arxiv.org/abs/2405.14442",
-        "title": "Fully parallel implementation of digital memcomputing on FPGA",
-        "rating": "-10",
-        "keywords": [],
-        "abstract": "We present a fully parallel digital memcomputing solver implemented on a field-programmable gate array (FPGA) board. For this purpose, we have designed an FPGA code that solves the ordinary differential equations associated with digital memcomputing in parallel. A feature of the code is the use of only integer-type variables and integer constants to enhance optimization. Consequently, each integration step in our solver is executed in 96~ns. This method was utilized for difficult instances of the Boolean satisfiability (SAT) problem close to a phase transition, involving up to about 150 variables. Our results demonstrate that the parallel implementation reduces the scaling exponent by about 1 compared to a sequential C++ code on a standard computer. Additionally, compared to C++ code, we observed a time-to-solution advantage of about three orders of magnitude. Given the limitations of FPGA resources, the current implementation of digital memcomputing will be especially useful for solving compact but challenging problems.",
-        "subjects": [
-            "cs.ET",
-            "nlin.CD"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2405.14463",
         "abstract url": "https://arxiv.org/abs/2405.14463",
         "title": "Epistemic EFX Allocations Exist for Monotone Valuations",
@@ -11540,19 +11521,6 @@
             "cs.DC"
         ],
         "comment": "19 pages, 6 figures, submitted to ACM DLT"
-    },
-    {
-        "paper id": "2405.15008",
-        "abstract url": "https://arxiv.org/abs/2405.15008",
-        "title": "An Empirical Study on the Characteristics of Database Access Bugs in Java Applications",
-        "rating": "-10",
-        "keywords": [],
-        "abstract": "Database-backed applications rely on the database access code to interact with the underlying database management systems (DBMSs). Although many prior studies aim at database access issues like SQL anti-patterns or SQL code smells, there is a lack of study of database access bugs during the maintenance of database-backed applications. In this paper, we empirically investigate 423 database access bugs collected from seven large-scale Java open source applications that use relational database management systems (e.g., MySQL or PostgreSQL). We study the characteristics (e.g., occurrence and root causes) of the bugs by manually examining the bug reports and commit histories. We find that the number of reported database and non-database access bugs share a similar trend but their modified files in bug fixing commits are different. Additionally, we generalize categories of the root causes of database access bugs, containing five main categories (SQL queries, Schema, API, Configuration, SQL query result) and 25 unique root causes. We find that the bugs pertaining to SQL queries, Schema, and API cover 84.2% of database access bugs across all studied applications. In particular, SQL queries bug (54%) and API bug (38.7%) are the most frequent issues when using JDBC and Hibernate, respectively. Finally, we provide a discussion on the implications of our findings for developers and researchers.",
-        "subjects": [
-            "cs.SE",
-            "cs.DB"
-        ],
-        "comment": "Accepted by the ACM Transactions on Software Engineering and Methodology (TOSEM)"
     },
     {
         "paper id": "2405.15046",

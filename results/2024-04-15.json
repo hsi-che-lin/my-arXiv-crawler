@@ -1,5 +1,27 @@
 [
     {
+        "paper id": "2404.09504",
+        "abstract url": "https://arxiv.org/abs/2404.09504",
+        "title": "Learning Tracking Representations from Single Point Annotations",
+        "rating": "2.5",
+        "keywords": [
+            [
+                "memory-efficient"
+            ],
+            [
+                "cs.CV"
+            ],
+            [
+                "CVPR"
+            ]
+        ],
+        "abstract": "Existing deep trackers are typically trained with largescale video frames with annotated bounding boxes. However, these bounding boxes are expensive and time-consuming to annotate, in particular for large scale datasets. In this paper, we propose to learn tracking representations from single point annotations (i.e., 4.5x faster to annotate than the traditional bounding box) in a weakly supervised manner. Specifically, we propose a soft contrastive learning (SoCL) framework that incorporates target objectness prior into end-to-end contrastive learning. Our SoCL consists of adaptive positive and negative sample generation, which is memory-efficient and effective for learning tracking representations. We apply the learned representation of SoCL to visual tracking and show that our method can 1) achieve better performance than the fully supervised baseline trained with box annotations under the same annotation time cost; 2) achieve comparable performance of the fully supervised baseline by using the same number of training frames and meanwhile reducing annotation time cost by 78% and total fees by 85%; 3) be robust to annotation noise.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Accept to CVPR2024-L3DIVU"
+    },
+    {
         "paper id": "2404.09632",
         "abstract url": "https://arxiv.org/abs/2404.09632",
         "title": "Bridging Vision and Language Spaces with Assignment Prediction",
@@ -63,6 +85,29 @@
             "cs.CV"
         ],
         "comment": "24 pages, 10 figures, 12 tables"
+    },
+    {
+        "paper id": "2404.09529",
+        "abstract url": "https://arxiv.org/abs/2404.09529",
+        "title": "Prepacking: A Simple Method for Fast Prefilling and Increased Throughput in Large Language Models",
+        "rating": "2",
+        "keywords": [
+            [
+                "memory efficiency"
+            ],
+            [
+                "cs.AI",
+                "cs.LG",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "During inference for transformer-based large language models (LLM), prefilling is the computation of the key-value (KV) cache for input tokens in the prompt prior to autoregressive generation. For longer input prompt lengths, prefilling will incur a significant overhead on decoding time. In this work, we highlight the following pitfall of prefilling: for batches containing high-varying prompt lengths, significant computation is wasted by the standard practice of padding sequences to the maximum length. As LLMs increasingly support longer context lengths, potentially up to 10 million tokens, variations in prompt lengths within a batch become more pronounced. To address this, we propose Prepacking, a simple yet effective method to optimize prefilling computation. To avoid redundant computation on pad tokens, prepacking combines prompts of varying lengths into a sequence and packs multiple sequences into a compact batch using a bin-packing algorithm. It then modifies the attention mask and positional encoding to compute multiple prefilled KV-caches for multiple prompts within a single sequence. On standard curated dataset containing prompts with varying lengths, we obtain a significant speed and memory efficiency improvements as compared to the default padding-based prefilling computation within Huggingface across a range of base model configurations and inference serving scenarios.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI",
+            "cs.CL"
+        ],
+        "comment": "18 pages, code in https://github.com/siyan-zhao/prepacking"
     },
     {
         "paper id": "2404.09872",
@@ -186,31 +231,13 @@
         "comment": "14 pages, 9 figures and 6 tables"
     },
     {
-        "paper id": "2404.09504",
-        "abstract url": "https://arxiv.org/abs/2404.09504",
-        "title": "Learning Tracking Representations from Single Point Annotations",
-        "rating": "1.5",
-        "keywords": [
-            [
-                "cs.CV"
-            ],
-            [
-                "CVPR"
-            ]
-        ],
-        "abstract": "Existing deep trackers are typically trained with largescale video frames with annotated bounding boxes. However, these bounding boxes are expensive and time-consuming to annotate, in particular for large scale datasets. In this paper, we propose to learn tracking representations from single point annotations (i.e., 4.5x faster to annotate than the traditional bounding box) in a weakly supervised manner. Specifically, we propose a soft contrastive learning (SoCL) framework that incorporates target objectness prior into end-to-end contrastive learning. Our SoCL consists of adaptive positive and negative sample generation, which is memory-efficient and effective for learning tracking representations. We apply the learned representation of SoCL to visual tracking and show that our method can 1) achieve better performance than the fully supervised baseline trained with box annotations under the same annotation time cost; 2) achieve comparable performance of the fully supervised baseline by using the same number of training frames and meanwhile reducing annotation time cost by 78% and total fees by 85%; 3) be robust to annotation noise.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Accept to CVPR2024-L3DIVU"
-    },
-    {
         "paper id": "2404.09526",
         "abstract url": "https://arxiv.org/abs/2404.09526",
         "title": "LoongServe: Efficiently Serving Long-context Large Language Models with Elastic Sequence Parallelism",
         "rating": "1.5",
         "keywords": [
             [
+                "memory efficiency",
                 "GPU memory"
             ],
             [
@@ -286,6 +313,27 @@
             "cs.AI"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2404.09884",
+        "abstract url": "https://arxiv.org/abs/2404.09884",
+        "title": "Map-Relative Pose Regression for Visual Re-Localization",
+        "rating": "1.5",
+        "keywords": [
+            [
+                "cs.LG",
+                "cs.CV"
+            ],
+            [
+                "CVPR"
+            ]
+        ],
+        "abstract": "Pose regression networks predict the camera pose of a query image relative to a known environment. Within this family of methods, absolute pose regression (APR) has recently shown promising accuracy in the range of a few centimeters in position error. APR networks encode the scene geometry implicitly in their weights. To achieve high accuracy, they require vast amounts of training data that, realistically, can only be created using novel view synthesis in a days-long process. This process has to be repeated for each new scene again and again. We present a new approach to pose regression, map-relative pose regression (marepo), that satisfies the data hunger of the pose regression network in a scene-agnostic fashion. We condition the pose regressor on a scene-specific map representation such that its pose predictions are relative to the scene map. This allows us to train the pose regressor across hundreds of scenes to learn the generic relation between a scene-specific map representation and the camera pose. Our map-relative pose regressor can be applied to new map representations immediately or after mere minutes of fine-tuning for the highest accuracy. Our approach outperforms previous pose regression methods by far on two public datasets, indoor and outdoor. Code is available: https://nianticlabs.github.io/marepo",
+        "subjects": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "comment": "IEEE / CVF Computer Vision and Pattern Recognition Conference (CVPR) 2024, Highlight Paper"
     },
     {
         "paper id": "2404.09993",
@@ -447,25 +495,6 @@
         "comment": "46 pages, 21 figures and 6 tables"
     },
     {
-        "paper id": "2404.09491",
-        "abstract url": "https://arxiv.org/abs/2404.09491",
-        "title": "Large Language Models Can Automatically Engineer Features for Few-Shot Tabular Learning",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.LG"
-            ],
-            [
-                "ICML"
-            ]
-        ],
-        "abstract": "Large Language Models (LLMs), with their remarkable ability to tackle challenging and unseen reasoning problems, hold immense potential for tabular learning, that is vital for many real-world applications. In this paper, we propose a novel in-context learning framework, FeatLLM, which employs LLMs as feature engineers to produce an input data set that is optimally suited for tabular predictions. The generated features are used to infer class likelihood with a simple downstream machine learning model, such as linear regression and yields high performance few-shot learning. The proposed FeatLLM framework only uses this simple predictive model with the discovered features at inference time. Compared to existing LLM-based approaches, FeatLLM eliminates the need to send queries to the LLM for each sample at inference time. Moreover, it merely requires API-level access to LLMs, and overcomes prompt size limitations. As demonstrated across numerous tabular datasets from a wide range of domains, FeatLLM generates high-quality rules, significantly (10% on average) outperforming alternatives such as TabLLM and STUNT.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": "Accepted to ICML, 2024"
-    },
-    {
         "paper id": "2404.09492",
         "abstract url": "https://arxiv.org/abs/2404.09492",
         "title": "Bridging the Gap between Different Vocabularies for LLM Ensemble",
@@ -482,22 +511,6 @@
         "comment": "Accepted to the main conference of NAACL 2024"
     },
     {
-        "paper id": "2404.09507",
-        "abstract url": "https://arxiv.org/abs/2404.09507",
-        "title": "Clothes-Changing Person Re-Identification with Feasibility-Aware Intermediary Matching",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Current clothes-changing person re-identification (re-id) approaches usually perform retrieval based on clothes-irrelevant features, while neglecting the potential of clothes-relevant features. However, we observe that relying solely on clothes-irrelevant features for clothes-changing re-id is limited, since they often lack adequate identity information and suffer from large intra-class variations. On the contrary, clothes-relevant features can be used to discover same-clothes intermediaries that possess informative identity clues. Based on this observation, we propose a Feasibility-Aware Intermediary Matching (FAIM) framework to additionally utilize clothes-relevant features for retrieval. Firstly, an Intermediary Matching (IM) module is designed to perform an intermediary-assisted matching process. This process involves using clothes-relevant features to find informative intermediates, and then using clothes-irrelevant features of these intermediates to complete the matching. Secondly, in order to reduce the negative effect of low-quality intermediaries, an Intermediary-Based Feasibility Weighting (IBFW) module is designed to evaluate the feasibility of intermediary matching process by assessing the quality of intermediaries. Extensive experiments demonstrate that our method outperforms state-of-the-art methods on several widely-used clothes-changing re-id benchmarks.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2404.09509",
         "abstract url": "https://arxiv.org/abs/2404.09509",
         "title": "Fuse after Align: Improving Face-Voice Association Learning via Multimodal Encoder",
@@ -512,26 +525,6 @@
             "cs.CV"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2404.09529",
-        "abstract url": "https://arxiv.org/abs/2404.09529",
-        "title": "Prepacking: A Simple Method for Fast Prefilling and Increased Throughput in Large Language Models",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.LG",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "During inference for transformer-based large language models (LLM), prefilling is the computation of the key-value (KV) cache for input tokens in the prompt prior to autoregressive generation. For longer input prompt lengths, prefilling will incur a significant overhead on decoding time. In this work, we highlight the following pitfall of prefilling: for batches containing high-varying prompt lengths, significant computation is wasted by the standard practice of padding sequences to the maximum length. As LLMs increasingly support longer context lengths, potentially up to 10 million tokens, variations in prompt lengths within a batch become more pronounced. To address this, we propose Prepacking, a simple yet effective method to optimize prefilling computation. To avoid redundant computation on pad tokens, prepacking combines prompts of varying lengths into a sequence and packs multiple sequences into a compact batch using a bin-packing algorithm. It then modifies the attention mask and positional encoding to compute multiple prefilled KV-caches for multiple prompts within a single sequence. On standard curated dataset containing prompts with varying lengths, we obtain a significant speed and memory efficiency improvements as compared to the default padding-based prefilling computation within Huggingface across a range of base model configurations and inference serving scenarios.",
-        "subjects": [
-            "cs.LG",
-            "cs.AI",
-            "cs.CL"
-        ],
-        "comment": "18 pages, code in https://github.com/siyan-zhao/prepacking"
     },
     {
         "paper id": "2404.09530",
@@ -742,6 +735,22 @@
             ]
         ],
         "abstract": "The highly abstract nature of image aesthetics perception (IAP) poses significant challenge for current multimodal large language models (MLLMs). The lack of human-annotated multi-modality aesthetic data further exacerbates this dilemma, resulting in MLLMs falling short of aesthetics perception capabilities. To address the above challenge, we first introduce a comprehensively annotated Aesthetic Multi-Modality Instruction Tuning (AesMMIT) dataset, which serves as the footstone for building multi-modality aesthetics foundation models. Specifically, to align MLLMs with human aesthetics perception, we construct a corpus-rich aesthetic critique database with 21,904 diverse-sourced images and 88K human natural language feedbacks, which are collected via progressive questions, ranging from coarse-grained aesthetic grades to fine-grained aesthetic descriptions. To ensure that MLLMs can handle diverse queries, we further prompt GPT to refine the aesthetic critiques and assemble the large-scale aesthetic instruction tuning dataset, i.e. AesMMIT, which consists of 409K multi-typed instructions to activate stronger aesthetic capabilities. Based on the AesMMIT database, we fine-tune the open-sourced general foundation models, achieving multi-modality Aesthetic Expert models, dubbed AesExpert. Extensive experiments demonstrate that the proposed AesExpert models deliver significantly better aesthetic perception performances than the state-of-the-art MLLMs, including the most advanced GPT-4V and Gemini-Pro-Vision. Source data will be available at https://github.com/yipoh/AesExpert.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2404.09633",
+        "abstract url": "https://arxiv.org/abs/2404.09633",
+        "title": "In-Context Translation: Towards Unifying Image Recognition, Processing, and Generation",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "We propose In-Context Translation (ICT), a general learning framework to unify visual recognition (e.g., semantic segmentation), low-level image processing (e.g., denoising), and conditional image generation (e.g., edge-to-image synthesis). Thanks to unification, ICT significantly reduces the inherent inductive bias that comes with designing models for specific tasks, and it maximizes mutual enhancement across similar tasks. However, the unification across a large number of tasks is non-trivial due to various data formats and training pipelines. To this end, ICT introduces two designs. Firstly, it standardizes input-output data of different tasks into RGB image pairs, e.g., semantic segmentation data pairs an RGB image with its segmentation mask in the same RGB format. This turns different tasks into a general translation task between two RGB images. Secondly, it standardizes the training of different tasks into a general in-context learning, where \"in-context\" means the input comprises an example input-output pair of the target task and a query image. The learning objective is to generate the \"missing\" data paired with the query. The implicit translation process is thus between the query and the generated image. In experiments, ICT unifies ten vision tasks and showcases impressive performance on their respective benchmarks. Notably, compared to its competitors, e.g., Painter and PromptDiffusion, ICT trained on only 4 RTX 3090 GPUs is shown to be more efficient and less costly in training.",
         "subjects": [
             "cs.CV"
         ],
@@ -1423,24 +1432,6 @@
         "comment": null
     },
     {
-        "paper id": "2404.10150",
-        "abstract url": "https://arxiv.org/abs/2404.10150",
-        "title": "TabSQLify: Enhancing Reasoning Capabilities of LLMs Through Table Decomposition",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Table reasoning is a challenging task that requires understanding both natural language questions and structured tabular data. Large language models (LLMs) have shown impressive capabilities in natural language understanding and generation, but they often struggle with large tables due to their limited input length. In this paper, we propose TabSQLify, a novel method that leverages text-to-SQL generation to decompose tables into smaller and relevant sub-tables, containing only essential information for answering questions or verifying statements, before performing the reasoning task. In our comprehensive evaluation on four challenging datasets, our approach demonstrates comparable or superior performance compared to prevailing methods reliant on full tables as input. Moreover, our method can reduce the input context length significantly, making it more scalable and efficient for large-scale table reasoning applications. Our method performs remarkably well on the WikiTQ benchmark, achieving an accuracy of 64.7%. Additionally, on the TabFact benchmark, it achieves a high accuracy of 79.5%. These results surpass other LLM-based baseline models on gpt-3.5-turbo (chatgpt). TabSQLify can reduce the table size significantly alleviating the computational load on LLMs when handling large tables without compromising performance.",
-        "subjects": [
-            "cs.CL",
-            "cs.DB",
-            "cs.IR"
-        ],
-        "comment": "Accepted to NAACL 2024 (long, main)"
-    },
-    {
         "paper id": "2404.10163",
         "abstract url": "https://arxiv.org/abs/2404.10163",
         "title": "EyeFormer: Predicting Personalized Scanpaths with Transformer-Guided Reinforcement Learning",
@@ -1733,24 +1724,6 @@
             "cs.AI"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2404.13077",
-        "abstract url": "https://arxiv.org/abs/2404.13077",
-        "title": "Improving the Capabilities of Large Language Model Based Marketing Analytics Copilots With Semantic Search And Fine-Tuning",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.LG",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Artificial intelligence (AI) is widely deployed to solve problems related to marketing attribution and budget optimization. However, AI models can be quite complex, and it can be difficult to understand model workings and insights without extensive implementation teams. In principle, recently developed large language models (LLMs), like GPT-4, can be deployed to provide marketing insights, reducing the time and effort required to make critical decisions. In practice, there are substantial challenges that need to be overcome to reliably use such models. We focus on domain-specific question-answering, SQL generation needed for data retrieval, and tabular analysis and show how a combination of semantic search, prompt engineering, and fine-tuning can be applied to dramatically improve the ability of LLMs to execute these tasks accurately. We compare both proprietary models, like GPT-4, and open-source models, like Llama-2-70b, as well as various embedding methods. These models are tested on sample use cases specific to marketing mix modeling and attribution.",
-        "subjects": [
-            "cs.CL",
-            "cs.LG"
-        ],
-        "comment": "16 pages, 5 figures, presented at the 2nd International Conference on NLP & AI (NLPAI 2024)"
     },
     {
         "paper id": "2404.09462",
@@ -2173,30 +2146,6 @@
         "comment": null
     },
     {
-        "paper id": "2404.09884",
-        "abstract url": "https://arxiv.org/abs/2404.09884",
-        "title": "Map-Relative Pose Regression for Visual Re-Localization",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.LG",
-                "cs.CV"
-            ],
-            [
-                "CVPR"
-            ]
-        ],
-        "abstract": "Pose regression networks predict the camera pose of a query image relative to a known environment. Within this family of methods, absolute pose regression (APR) has recently shown promising accuracy in the range of a few centimeters in position error. APR networks encode the scene geometry implicitly in their weights. To achieve high accuracy, they require vast amounts of training data that, realistically, can only be created using novel view synthesis in a days-long process. This process has to be repeated for each new scene again and again. We present a new approach to pose regression, map-relative pose regression (marepo), that satisfies the data hunger of the pose regression network in a scene-agnostic fashion. We condition the pose regressor on a scene-specific map representation such that its pose predictions are relative to the scene map. This allows us to train the pose regressor across hundreds of scenes to learn the generic relation between a scene-specific map representation and the camera pose. Our map-relative pose regressor can be applied to new map representations immediately or after mere minutes of fine-tuning for the highest accuracy. Our approach outperforms previous pose regression methods by far on two public datasets, indoor and outdoor. Code is available: https://nianticlabs.github.io/marepo",
-        "subjects": [
-            "cs.CV",
-            "cs.LG"
-        ],
-        "comment": "IEEE / CVF Computer Vision and Pattern Recognition Conference (CVPR) 2024, Highlight Paper"
-    },
-    {
         "paper id": "2404.09896",
         "abstract url": "https://arxiv.org/abs/2404.09896",
         "title": "Accelerating Ensemble Error Bar Prediction with Single Models Fits",
@@ -2448,6 +2397,24 @@
         "comment": null
     },
     {
+        "paper id": "2404.10187",
+        "abstract url": "https://arxiv.org/abs/2404.10187",
+        "title": "SoK (or SoLK?): On the Quantitative Study of Sociodemographic Factors and Computer Security Behaviors",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "cs.CY"
+            ]
+        ],
+        "abstract": "Researchers are increasingly exploring how gender, culture, and other sociodemographic factors correlate with user computer security and privacy behaviors. To more holistically understand relationships between these factors and behaviors, we make two contributions. First, we broadly survey existing scholarship on sociodemographics and secure behavior (151 papers) before conducting a focused literature review of 47 papers to synthesize what is currently known and identify open questions for future research. Second, by incorporating contemporary social and critical theories, we establish guidelines for future studies of sociodemographic factors and security behaviors that address how to overcome common pitfalls. We present a case study to demonstrate our guidelines in action, at-scale, that conduct a measurement study of the relationships between sociodemographics and de-identified, aggregated log data of security and privacy behaviors among 16,829 users on Facebook across 16 countries. Through these contributions, we position our work as a systemization of a lack of knowledge (SoLK). Overall, we find contradictory results and vast unknowns about how identity shapes security behavior. Through our guidelines and discussion, we chart new directions to more deeply examine how and why sociodemographic factors affect security behaviors.",
+        "subjects": [
+            "cs.CR",
+            "cs.CY",
+            "cs.HC"
+        ],
+        "comment": "20 pages, 1 figure, 8 tables"
+    },
+    {
         "paper id": "2404.10201",
         "abstract url": "https://arxiv.org/abs/2404.10201",
         "title": "Private Vector Mean Estimation in the Shuffle Model: Optimal Rates Require Many Messages",
@@ -2467,6 +2434,22 @@
         "comment": "Fixed author ordering"
     },
     {
+        "paper id": "2404.10206",
+        "abstract url": "https://arxiv.org/abs/2404.10206",
+        "title": "Research and Practice of Delivering Tabletop Exercises",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "cs.CY"
+            ]
+        ],
+        "abstract": "Tabletop exercises are used to train personnel in the efficient mitigation and resolution of incidents. They are applied in practice to support the preparedness of organizations and to highlight inefficient processes. Since tabletop exercises train competencies required in the workplace, they have been introduced into computing courses at universities as an innovation, especially within cybersecurity curricula. To help computing educators adopt this innovative method, we survey academic publications that deal with tabletop exercises. From 140 papers we identified and examined, we selected 14 papers for a detailed review. The results show that the existing research deals predominantly with exercises that follow a linear format and exercises that do not systematically collect data about trainees' learning. Computing education researchers can investigate novel approaches to instruction and assessment in the context of tabletop exercises to maximize the impact of this teaching method. Due to the relatively low number of published papers, the potential for future research is immense. Our review provides researchers, tool developers, and educators with an orientation in the area, a synthesis of trends, and implications for further work.",
+        "subjects": [
+            "cs.CY"
+        ],
+        "comment": "Published in ACM ITiCSE 2024 conference proceedings, see https://doi.org/10.1145/3649217.3653642"
+    },
+    {
         "paper id": "2404.10207",
         "abstract url": "https://arxiv.org/abs/2404.10207",
         "title": "HELLINGER-UCB: A novel algorithm for stochastic multi-armed bandit problem and cold start problem in recommender system",
@@ -2479,24 +2462,6 @@
         "abstract": "In this paper, we study the stochastic multi-armed bandit problem, where the reward is driven by an unknown random variable. We propose a new variant of the Upper Confidence Bound (UCB) algorithm called Hellinger-UCB, which leverages the squared Hellinger distance to build the upper confidence bound. We prove that the Hellinger-UCB reaches the theoretical lower bound. We also show that the Hellinger-UCB has a solid statistical interpretation. We show that Hellinger-UCB is effective in finite time horizons with numerical experiments between Hellinger-UCB and other variants of the UCB algorithm. As a real-world example, we apply the Hellinger-UCB algorithm to solve the cold-start problem for a content recommender system of a financial app. With reasonable assumption, the Hellinger-UCB algorithm has a convenient but important lower latency feature. The online experiment also illustrates that the Hellinger-UCB outperforms both KL-UCB and UCB1 in the sense of a higher click-through rate (CTR).",
         "subjects": [
             "stat.ML",
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2404.10209",
-        "abstract url": "https://arxiv.org/abs/2404.10209",
-        "title": "Demonstration of DB-GPT: Next Generation Data Interaction System Empowered by Large Language Models",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "The recent breakthroughs in large language models (LLMs) are positioned to transition many areas of software. The technologies of interacting with data particularly have an important entanglement with LLMs as efficient and intuitive data interactions are paramount. In this paper, we present DB-GPT, a revolutionary and product-ready Python library that integrates LLMs into traditional data interaction tasks to enhance user experience and accessibility. DB-GPT is designed to understand data interaction tasks described by natural language and provide context-aware responses powered by LLMs, making it an indispensable tool for users ranging from novice to expert. Its system design supports deployment across local, distributed, and cloud environments. Beyond handling basic data interaction tasks like Text-to-SQL with LLMs, it can handle complex tasks like generative data analysis through a Multi-Agents framework and the Agentic Workflow Expression Language (AWEL). The Service-oriented Multi-model Management Framework (SMMF) ensures data privacy and security, enabling users to employ DB-GPT with private LLMs. Additionally, DB-GPT offers a series of product-ready features designed to enable users to integrate DB-GPT within their product environments easily. The code of DB-GPT is available at Github(https://github.com/eosphoros-ai/DB-GPT) which already has over 10.7k stars. Please install DB-GPT for your own usage with the instructions(https://github.com/eosphoros-ai/DB-GPT#install) and watch a 5-minute introduction video on Youtube(https://youtu.be/n_8RI1ENyl4) to further investigate DB-GPT.",
-        "subjects": [
-            "cs.AI",
             "cs.LG"
         ],
         "comment": null
@@ -2653,24 +2618,6 @@
         "comment": null
     },
     {
-        "paper id": "2404.12404",
-        "abstract url": "https://arxiv.org/abs/2404.12404",
-        "title": "Group-wise Prompting for Synthetic Tabular Data Generation using Large Language Models",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Generating realistic synthetic tabular data presents a critical challenge in machine learning. This study introduces a simple yet effective method employing Large Language Models (LLMs) tailored to generate synthetic data, specifically addressing data imbalance problems. We propose a novel group-wise prompting method in CSV-style formatting that leverages the in-context learning capabilities of LLMs to produce data that closely adheres to the specified requirements and characteristics of the target dataset. Moreover, our proposed random word replacement strategy significantly improves the handling of monotonous categorical values, enhancing the accuracy and representativeness of the synthetic data. The effectiveness of our method is extensively validated across eight real-world public datasets, achieving state-of-the-art performance in downstream classification and regression tasks while maintaining inter-feature correlations and improving token efficiency over existing approaches. This advancement significantly contributes to addressing the key challenges of machine learning applications, particularly in the context of tabular data generation and handling class imbalance. The source code for our work is available at: https://github.com/seharanul17/synthetic-tabular-LLM",
-        "subjects": [
-            "cs.LG",
-            "cs.AI"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2404.15204",
         "abstract url": "https://arxiv.org/abs/2404.15204",
         "title": "Towards a high-performance AI compiler with upstream MLIR",
@@ -2794,14 +2741,32 @@
         "comment": null
     },
     {
+        "paper id": "2404.09507",
+        "abstract url": "https://arxiv.org/abs/2404.09507",
+        "title": "Clothes-Changing Person Re-Identification with Feasibility-Aware Intermediary Matching",
+        "rating": "0",
+        "keywords": [
+            [
+                "Re-Identification"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Current clothes-changing person re-identification (re-id) approaches usually perform retrieval based on clothes-irrelevant features, while neglecting the potential of clothes-relevant features. However, we observe that relying solely on clothes-irrelevant features for clothes-changing re-id is limited, since they often lack adequate identity information and suffer from large intra-class variations. On the contrary, clothes-relevant features can be used to discover same-clothes intermediaries that possess informative identity clues. Based on this observation, we propose a Feasibility-Aware Intermediary Matching (FAIM) framework to additionally utilize clothes-relevant features for retrieval. Firstly, an Intermediary Matching (IM) module is designed to perform an intermediary-assisted matching process. This process involves using clothes-relevant features to find informative intermediates, and then using clothes-irrelevant features of these intermediates to complete the matching. Secondly, in order to reduce the negative effect of low-quality intermediaries, an Intermediary-Based Feasibility Weighting (IBFW) module is designed to evaluate the feasibility of intermediary matching process by assessing the quality of intermediaries. Extensive experiments demonstrate that our method outperforms state-of-the-art methods on several widely-used clothes-changing re-id benchmarks.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2404.09512",
         "abstract url": "https://arxiv.org/abs/2404.09512",
         "title": "Magic Clothing: Controllable Garment-Driven Image Synthesis",
         "rating": "0",
         "keywords": [
             [
-                "diffusion",
-                "Synthesis"
+                "diffusion"
             ],
             [
                 "cs.CV"
@@ -2914,25 +2879,6 @@
         "subjects": [
             "cs.CV",
             "cs.LG"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2404.09633",
-        "abstract url": "https://arxiv.org/abs/2404.09633",
-        "title": "In-Context Translation: Towards Unifying Image Recognition, Processing, and Generation",
-        "rating": "0",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "We propose In-Context Translation (ICT), a general learning framework to unify visual recognition (e.g., semantic segmentation), low-level image processing (e.g., denoising), and conditional image generation (e.g., edge-to-image synthesis). Thanks to unification, ICT significantly reduces the inherent inductive bias that comes with designing models for specific tasks, and it maximizes mutual enhancement across similar tasks. However, the unification across a large number of tasks is non-trivial due to various data formats and training pipelines. To this end, ICT introduces two designs. Firstly, it standardizes input-output data of different tasks into RGB image pairs, e.g., semantic segmentation data pairs an RGB image with its segmentation mask in the same RGB format. This turns different tasks into a general translation task between two RGB images. Secondly, it standardizes the training of different tasks into a general in-context learning, where \"in-context\" means the input comprises an example input-output pair of the target task and a query image. The learning objective is to generate the \"missing\" data paired with the query. The implicit translation process is thus between the query and the generated image. In experiments, ICT unifies ten vision tasks and showcases impressive performance on their respective benchmarks. Notably, compared to its competitors, e.g., Painter and PromptDiffusion, ICT trained on only 4 RTX 3090 GPUs is shown to be more efficient and less costly in training.",
-        "subjects": [
-            "cs.CV"
         ],
         "comment": null
     },
@@ -3328,7 +3274,6 @@
         "rating": "0",
         "keywords": [
             [
-                "Synthesis",
                 "Text-to-Image"
             ],
             [
@@ -3520,27 +3465,6 @@
         "comment": "Accepted at the CVPR 2024 Workshop, called \"Efficient Deep Learning for Computer Vision (ECV)\""
     },
     {
-        "paper id": "2404.13074",
-        "abstract url": "https://arxiv.org/abs/2404.13074",
-        "title": "Towards Compositionally Generalizable Semantic Parsing in Large Language Models: A Survey",
-        "rating": "0",
-        "keywords": [
-            [
-                "synthesizing"
-            ],
-            [
-                "cs.AI",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Compositional generalization is the ability of a model to generalize to complex, previously unseen types of combinations of entities from just having seen the primitives. This type of generalization is particularly relevant to the semantic parsing community for applications such as task-oriented dialogue, text-to-SQL parsing, and information retrieval, as they can harbor infinite complexity. Despite the success of large language models (LLMs) in a wide range of NLP tasks, unlocking perfect compositional generalization still remains one of the few last unsolved frontiers. The past few years has seen a surge of interest in works that explore the limitations of, methods to improve, and evaluation metrics for compositional generalization capabilities of LLMs for semantic parsing tasks. In this work, we present a literature survey geared at synthesizing recent advances in analysis, methods, and evaluation schemes to offer a starting point for both practitioners and researchers in this area.",
-        "subjects": [
-            "cs.CL",
-            "cs.AI"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2404.09468",
         "abstract url": "https://arxiv.org/abs/2404.09468",
         "title": "MyGO: Discrete Modality Information as Fine-Grained Tokens for Multi-modal Knowledge Graph Completion",
@@ -3641,26 +3565,6 @@
         "subjects": [
             "cs.SE",
             "cs.AI"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2404.09541",
-        "abstract url": "https://arxiv.org/abs/2404.09541",
-        "title": "Application of the representative measure approach to assess the reliability of decision trees in dealing with unseen vehicle collision data",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "trajectory",
-                "vehicle"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Machine learning algorithms are fundamental components of novel data-informed Artificial Intelligence architecture. In this domain, the imperative role of representative datasets is a cornerstone in shaping the trajectory of artificial intelligence (AI) development. Representative datasets are needed to train machine learning components properly. Proper training has multiple impacts: it reduces the final model's complexity, power, and uncertainties. In this paper, we investigate the reliability of the $\\varepsilon$-representativeness method to assess the dataset similarity from a theoretical perspective for decision trees. We decided to focus on the family of decision trees because it includes a wide variety of models known to be explainable. Thus, in this paper, we provide a result guaranteeing that if two datasets are related by $\\varepsilon$-representativeness, i.e., both of them have points closer than $\\varepsilon$, then the predictions by the classic decision tree are similar. Experimentally, we have also tested that $\\varepsilon$-representativeness presents a significant correlation with the ordering of the feature importance. Moreover, we extend the results experimentally in the context of unseen vehicle collision data for XGboost, a machine-learning component widely adopted for dealing with tabular data.",
-        "subjects": [
-            "cs.LG"
         ],
         "comment": null
     },
@@ -4161,46 +4065,32 @@
         "comment": null
     },
     {
-        "paper id": "2404.10176",
-        "abstract url": "https://arxiv.org/abs/2404.10176",
-        "title": "Multi-objective evolutionary GAN for tabular data synthesis",
+        "paper id": "2404.10156",
+        "abstract url": "https://arxiv.org/abs/2404.10156",
+        "title": "SegFormer3D: an Efficient Transformer for 3D Medical Image Segmentation",
         "rating": "-0.5",
         "keywords": [
             [
-                "GAN",
-                "synthesis"
+                "memory efficient"
             ],
             [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Synthetic data has a key role to play in data sharing by statistical agencies and other generators of statistical data products. Generative Adversarial Networks (GANs), typically applied to image synthesis, are also a promising method for tabular data synthesis. However, there are unique challenges in tabular data compared to images, eg tabular data may contain both continuous and discrete variables and conditional sampling, and, critically, the data should possess high utility and low disclosure risk (the risk of re-identifying a population unit or learning something new about them), providing an opportunity for multi-objective (MO) optimization. Inspired by MO GANs for images, this paper proposes a smart MO evolutionary conditional tabular GAN (SMOE-CTGAN). This approach models conditional synthetic data by applying conditional vectors in training, and uses concepts from MO optimisation to balance disclosure risk against utility. Our results indicate that SMOE-CTGAN is able to discover synthetic datasets with different risk and utility levels for multiple national census datasets. We also find a sweet spot in the early stage of training where a competitive utility and extremely low risk are achieved, by using an Improvement Score. The full code can be downloaded from https://github.com/HuskyNian/SMO\\_EGAN\\_pytorch.",
-        "subjects": [
-            "cs.LG",
-            "cs.NE"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2404.10187",
-        "abstract url": "https://arxiv.org/abs/2404.10187",
-        "title": "SoK (or SoLK?): On the Quantitative Study of Sociodemographic Factors and Computer Security Behaviors",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "synthesize"
+                "3D"
             ],
             [
-                "cs.CY"
+                "Medical"
+            ],
+            [
+                "cs.CV"
+            ],
+            [
+                "CVPR"
             ]
         ],
-        "abstract": "Researchers are increasingly exploring how gender, culture, and other sociodemographic factors correlate with user computer security and privacy behaviors. To more holistically understand relationships between these factors and behaviors, we make two contributions. First, we broadly survey existing scholarship on sociodemographics and secure behavior (151 papers) before conducting a focused literature review of 47 papers to synthesize what is currently known and identify open questions for future research. Second, by incorporating contemporary social and critical theories, we establish guidelines for future studies of sociodemographic factors and security behaviors that address how to overcome common pitfalls. We present a case study to demonstrate our guidelines in action, at-scale, that conduct a measurement study of the relationships between sociodemographics and de-identified, aggregated log data of security and privacy behaviors among 16,829 users on Facebook across 16 countries. Through these contributions, we position our work as a systemization of a lack of knowledge (SoLK). Overall, we find contradictory results and vast unknowns about how identity shapes security behavior. Through our guidelines and discussion, we chart new directions to more deeply examine how and why sociodemographic factors affect security behaviors.",
+        "abstract": "The adoption of Vision Transformers (ViTs) based architectures represents a significant advancement in 3D Medical Image (MI) segmentation, surpassing traditional Convolutional Neural Network (CNN) models by enhancing global contextual understanding. While this paradigm shift has significantly enhanced 3D segmentation performance, state-of-the-art architectures require extremely large and complex architectures with large scale computing resources for training and deployment. Furthermore, in the context of limited datasets, often encountered in medical imaging, larger models can present hurdles in both model generalization and convergence. In response to these challenges and to demonstrate that lightweight models are a valuable area of research in 3D medical imaging, we present SegFormer3D, a hierarchical Transformer that calculates attention across multiscale volumetric features. Additionally, SegFormer3D avoids complex decoders and uses an all-MLP decoder to aggregate local and global attention features to produce highly accurate segmentation masks. The proposed memory efficient Transformer preserves the performance characteristics of a significantly larger model in a compact design. SegFormer3D democratizes deep learning for 3D medical image segmentation by offering a model with 33x less parameters and a 13x reduction in GFLOPS compared to the current state-of-the-art (SOTA). We benchmark SegFormer3D against the current SOTA models on three widely used datasets Synapse, BRaTs, and ACDC, achieving competitive results. Code: https://github.com/OSUPCVLab/SegFormer3D.git",
         "subjects": [
-            "cs.CR",
-            "cs.CY",
-            "cs.HC"
+            "cs.CV"
         ],
-        "comment": "20 pages, 1 figure, 8 tables"
+        "comment": "Accepted at CVPR Workshop 2024"
     },
     {
         "paper id": "2404.10202",
@@ -4222,25 +4112,6 @@
             "cs.AI"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2404.10206",
-        "abstract url": "https://arxiv.org/abs/2404.10206",
-        "title": "Research and Practice of Delivering Tabletop Exercises",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CY"
-            ]
-        ],
-        "abstract": "Tabletop exercises are used to train personnel in the efficient mitigation and resolution of incidents. They are applied in practice to support the preparedness of organizations and to highlight inefficient processes. Since tabletop exercises train competencies required in the workplace, they have been introduced into computing courses at universities as an innovation, especially within cybersecurity curricula. To help computing educators adopt this innovative method, we survey academic publications that deal with tabletop exercises. From 140 papers we identified and examined, we selected 14 papers for a detailed review. The results show that the existing research deals predominantly with exercises that follow a linear format and exercises that do not systematically collect data about trainees' learning. Computing education researchers can investigate novel approaches to instruction and assessment in the context of tabletop exercises to maximize the impact of this teaching method. Due to the relatively low number of published papers, the potential for future research is immense. Our review provides researchers, tool developers, and educators with an orientation in the area, a synthesis of trends, and implications for further work.",
-        "subjects": [
-            "cs.CY"
-        ],
-        "comment": "Published in ACM ITiCSE 2024 conference proceedings, see https://doi.org/10.1145/3649217.3653642"
     },
     {
         "paper id": "2404.10211",
@@ -4421,6 +4292,23 @@
         "comment": "19 pages"
     },
     {
+        "paper id": "2404.09471",
+        "abstract url": "https://arxiv.org/abs/2404.09471",
+        "title": "LightningSimV2: Faster and Scalable Simulation for High-Level Synthesis via Graph Compilation and Optimization",
+        "rating": "-1",
+        "keywords": [
+            [
+                "Graph"
+            ]
+        ],
+        "abstract": "High-Level Synthesis (HLS) enables rapid prototyping of complex hardware designs by translating C or C++ code to low-level RTL code. However, the testing and evaluation of HLS designs still typically rely on slow RTL-level simulators that can take hours to provide feedback, especially for complex designs. A recent work, LightningSim, helps to solve this problem by providing a simulation workflow one to two orders of magnitude faster than RTL simulation. However, it still exhibits inefficiencies due to several types of redundant computation, making it slow for large design simulation and design space exploration. Addressing these inefficiencies, we introduce LightningSimV2, a much faster and scalable simulation tool. LightningSimV2 features three main innovations. First, we perform compile-time static analysis, exploiting the repetitive structures in HLS designs, e.g., loops, to reduce the simulation workload. Second, we propose a novel graph-based simulation approach, with decoupled simulation graph construction step and graph traversal step, significantly reducing repeated computation. Third, benefiting from the decoupled approach, LightningSimV2 can perform incremental stall analysis extremely fast, enabling highly efficient design space exploration of large numbers of complex hardware parameters, e.g., optimal FIFO depths. Moreover, the DSE is well-suited for parallel computing, further improving the DSE efficiency. Compared with LightningSim, LightningSimV2 achieves up to 3.5x speedup in full simulation and up to 577x speed up for incremental DSE. Our code is open-source on GitHub at https://github.com/sharc-lab/LightningSim/tree/v0.2.0.",
+        "subjects": [
+            "cs.PF",
+            "cs.AR"
+        ],
+        "comment": "11 pages, 6 figures. Accepted at FCCM 2024"
+    },
+    {
         "paper id": "2404.09472",
         "abstract url": "https://arxiv.org/abs/2404.09472",
         "title": "Q2A: Querying Implicit Fully Continuous Feature Pyramid to Align Features for Medical Image Segmentation",
@@ -4438,6 +4326,28 @@
             "cs.CV"
         ],
         "comment": "10 pages, 6 figures"
+    },
+    {
+        "paper id": "2404.09491",
+        "abstract url": "https://arxiv.org/abs/2404.09491",
+        "title": "Large Language Models Can Automatically Engineer Features for Few-Shot Tabular Learning",
+        "rating": "-1",
+        "keywords": [
+            [
+                "Tabular"
+            ],
+            [
+                "cs.LG"
+            ],
+            [
+                "ICML"
+            ]
+        ],
+        "abstract": "Large Language Models (LLMs), with their remarkable ability to tackle challenging and unseen reasoning problems, hold immense potential for tabular learning, that is vital for many real-world applications. In this paper, we propose a novel in-context learning framework, FeatLLM, which employs LLMs as feature engineers to produce an input data set that is optimally suited for tabular predictions. The generated features are used to infer class likelihood with a simple downstream machine learning model, such as linear regression and yields high performance few-shot learning. The proposed FeatLLM framework only uses this simple predictive model with the discovered features at inference time. Compared to existing LLM-based approaches, FeatLLM eliminates the need to send queries to the LLM for each sample at inference time. Moreover, it merely requires API-level access to LLMs, and overcomes prompt size limitations. As demonstrated across numerous tabular datasets from a wide range of domains, FeatLLM generates high-quality rules, significantly (10% on average) outperforming alternatives such as TabLLM and STUNT.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": "Accepted to ICML, 2024"
     },
     {
         "paper id": "2404.09500",
@@ -4969,40 +4879,6 @@
         "comment": null
     },
     {
-        "paper id": "2404.09866",
-        "abstract url": "https://arxiv.org/abs/2404.09866",
-        "title": "Reimagining Self-Adaptation in the Age of Large Language Models",
-        "rating": "-1",
-        "keywords": [
-            [
-                "synthesis"
-            ]
-        ],
-        "abstract": "Modern software systems are subjected to various types of uncertainties arising from context, environment, etc. To this end, self-adaptation techniques have been sought out as potential solutions. Although recent advances in self-adaptation through the use of ML techniques have demonstrated promising results, the capabilities are limited by constraints imposed by the ML techniques, such as the need for training samples, the ability to generalize, etc. Recent advancements in Generative AI (GenAI) open up new possibilities as it is trained on massive amounts of data, potentially enabling the interpretation of uncertainties and synthesis of adaptation strategies. In this context, this paper presents a vision for using GenAI, particularly Large Language Models (LLMs), to enhance the effectiveness and efficiency of architectural adaptation. Drawing parallels with human operators, we propose that LLMs can autonomously generate similar, context-sensitive adaptation strategies through its advanced natural language processing capabilities. This method allows software systems to understand their operational state and implement adaptations that align with their architectural requirements and environmental changes. By integrating LLMs into the self-adaptive system architecture, we facilitate nuanced decision-making that mirrors human-like adaptive reasoning. A case study with the SWIM exemplar system provides promising results, indicating that LLMs can potentially handle different adaptation scenarios. Our findings suggest that GenAI has significant potential to improve software systems' dynamic adaptability and resilience.",
-        "subjects": [
-            "cs.SE"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2404.09888",
-        "abstract url": "https://arxiv.org/abs/2404.09888",
-        "title": "Flow-Based Synthesis of Reactive Tests for Discrete Decision-Making Systems with Temporal Logic Specifications",
-        "rating": "-1",
-        "keywords": [
-            [
-                "Synthesis"
-            ]
-        ],
-        "abstract": "Designing tests to evaluate if a given autonomous system satisfies complex specifications is challenging due to the complexity of these systems. This work proposes a flow-based approach for reactive test synthesis from temporal logic specifications, enabling the synthesis of test environments consisting of static and reactive obstacles and dynamic test agents. The temporal logic specifications describe desired test behavior, including system requirements as well as a test objective that is not revealed to the system. The synthesized test strategy places restrictions on system actions in reaction to the system state. The tests are minimally restrictive and accomplish the test objective while ensuring realizability of the system's objective without aiding it (semi-cooperative setting). Automata theory and flow networks are leveraged to formulate a mixed-integer linear program (MILP) to synthesize the test strategy. For a dynamic test agent, the agent strategy is synthesized for a GR(1) specification constructed from the solution of the MILP. If the specification is unrealizable by the dynamics of the test agent, a counterexample-guided approach is used to resolve the MILP until a strategy is found. This flow-based, reactive test synthesis is conducted offline and is agnostic to the system controller. Finally, the resulting test strategy is demonstrated in simulation and experimentally on a pair of quadrupedal robots for a variety of specifications.",
-        "subjects": [
-            "cs.FL",
-            "cs.RO",
-            "eess.SY"
-        ],
-        "comment": "Manuscript"
-    },
-    {
         "paper id": "2404.09905",
         "abstract url": "https://arxiv.org/abs/2404.09905",
         "title": "Quality of Experience Oriented Cross-layer Optimization for Real-time XR Video Transmission",
@@ -5161,7 +5037,6 @@
             ],
             [
                 "Diffusion",
-                "synthesize",
                 "Inpainting"
             ],
             [
@@ -5275,6 +5150,28 @@
             "cs.CV"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2404.10150",
+        "abstract url": "https://arxiv.org/abs/2404.10150",
+        "title": "TabSQLify: Enhancing Reasoning Capabilities of LLMs Through Table Decomposition",
+        "rating": "-1",
+        "keywords": [
+            [
+                "tabular",
+                "SQL"
+            ],
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Table reasoning is a challenging task that requires understanding both natural language questions and structured tabular data. Large language models (LLMs) have shown impressive capabilities in natural language understanding and generation, but they often struggle with large tables due to their limited input length. In this paper, we propose TabSQLify, a novel method that leverages text-to-SQL generation to decompose tables into smaller and relevant sub-tables, containing only essential information for answering questions or verifying statements, before performing the reasoning task. In our comprehensive evaluation on four challenging datasets, our approach demonstrates comparable or superior performance compared to prevailing methods reliant on full tables as input. Moreover, our method can reduce the input context length significantly, making it more scalable and efficient for large-scale table reasoning applications. Our method performs remarkably well on the WikiTQ benchmark, achieving an accuracy of 64.7%. Additionally, on the TabFact benchmark, it achieves a high accuracy of 79.5%. These results surpass other LLM-based baseline models on gpt-3.5-turbo (chatgpt). TabSQLify can reduce the table size significantly alleviating the computational load on LLMs when handling large tables without compromising performance.",
+        "subjects": [
+            "cs.CL",
+            "cs.DB",
+            "cs.IR"
+        ],
+        "comment": "Accepted to NAACL 2024 (long, main)"
     },
     {
         "paper id": "2404.10166",
@@ -5471,6 +5368,49 @@
             "eess.IV"
         ],
         "comment": "11 pages,9 figures"
+    },
+    {
+        "paper id": "2404.13074",
+        "abstract url": "https://arxiv.org/abs/2404.13074",
+        "title": "Towards Compositionally Generalizable Semantic Parsing in Large Language Models: A Survey",
+        "rating": "-1",
+        "keywords": [
+            [
+                "SQL"
+            ],
+            [
+                "cs.AI",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Compositional generalization is the ability of a model to generalize to complex, previously unseen types of combinations of entities from just having seen the primitives. This type of generalization is particularly relevant to the semantic parsing community for applications such as task-oriented dialogue, text-to-SQL parsing, and information retrieval, as they can harbor infinite complexity. Despite the success of large language models (LLMs) in a wide range of NLP tasks, unlocking perfect compositional generalization still remains one of the few last unsolved frontiers. The past few years has seen a surge of interest in works that explore the limitations of, methods to improve, and evaluation metrics for compositional generalization capabilities of LLMs for semantic parsing tasks. In this work, we present a literature survey geared at synthesizing recent advances in analysis, methods, and evaluation schemes to offer a starting point for both practitioners and researchers in this area.",
+        "subjects": [
+            "cs.CL",
+            "cs.AI"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2404.13077",
+        "abstract url": "https://arxiv.org/abs/2404.13077",
+        "title": "Improving the Capabilities of Large Language Model Based Marketing Analytics Copilots With Semantic Search And Fine-Tuning",
+        "rating": "-1",
+        "keywords": [
+            [
+                "tabular",
+                "SQL"
+            ],
+            [
+                "cs.LG",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Artificial intelligence (AI) is widely deployed to solve problems related to marketing attribution and budget optimization. However, AI models can be quite complex, and it can be difficult to understand model workings and insights without extensive implementation teams. In principle, recently developed large language models (LLMs), like GPT-4, can be deployed to provide marketing insights, reducing the time and effort required to make critical decisions. In practice, there are substantial challenges that need to be overcome to reliably use such models. We focus on domain-specific question-answering, SQL generation needed for data retrieval, and tabular analysis and show how a combination of semantic search, prompt engineering, and fine-tuning can be applied to dramatically improve the ability of LLMs to execute these tasks accurately. We compare both proprietary models, like GPT-4, and open-source models, like Llama-2-70b, as well as various embedding methods. These models are tested on sample use cases specific to marketing mix modeling and attribution.",
+        "subjects": [
+            "cs.CL",
+            "cs.LG"
+        ],
+        "comment": "16 pages, 5 figures, presented at the 2nd International Conference on NLP & AI (NLPAI 2024)"
     },
     {
         "paper id": "2404.09510",
@@ -5867,31 +5807,6 @@
         "comment": null
     },
     {
-        "paper id": "2404.10156",
-        "abstract url": "https://arxiv.org/abs/2404.10156",
-        "title": "SegFormer3D: an Efficient Transformer for 3D Medical Image Segmentation",
-        "rating": "-1.5",
-        "keywords": [
-            [
-                "3D"
-            ],
-            [
-                "Medical"
-            ],
-            [
-                "cs.CV"
-            ],
-            [
-                "CVPR"
-            ]
-        ],
-        "abstract": "The adoption of Vision Transformers (ViTs) based architectures represents a significant advancement in 3D Medical Image (MI) segmentation, surpassing traditional Convolutional Neural Network (CNN) models by enhancing global contextual understanding. While this paradigm shift has significantly enhanced 3D segmentation performance, state-of-the-art architectures require extremely large and complex architectures with large scale computing resources for training and deployment. Furthermore, in the context of limited datasets, often encountered in medical imaging, larger models can present hurdles in both model generalization and convergence. In response to these challenges and to demonstrate that lightweight models are a valuable area of research in 3D medical imaging, we present SegFormer3D, a hierarchical Transformer that calculates attention across multiscale volumetric features. Additionally, SegFormer3D avoids complex decoders and uses an all-MLP decoder to aggregate local and global attention features to produce highly accurate segmentation masks. The proposed memory efficient Transformer preserves the performance characteristics of a significantly larger model in a compact design. SegFormer3D democratizes deep learning for 3D medical image segmentation by offering a model with 33x less parameters and a 13x reduction in GFLOPS compared to the current state-of-the-art (SOTA). We benchmark SegFormer3D against the current SOTA models on three widely used datasets Synapse, BRaTs, and ACDC, achieving competitive results. Code: https://github.com/OSUPCVLab/SegFormer3D.git",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Accepted at CVPR Workshop 2024"
-    },
-    {
         "paper id": "2404.10204",
         "abstract url": "https://arxiv.org/abs/2404.10204",
         "title": "The Impact of Machine Learning on Society: An Analysis of Current Trends and Future Implications",
@@ -5911,6 +5826,27 @@
             "cs.LG"
         ],
         "comment": "12 pages"
+    },
+    {
+        "paper id": "2404.10209",
+        "abstract url": "https://arxiv.org/abs/2404.10209",
+        "title": "Demonstration of DB-GPT: Next Generation Data Interaction System Empowered by Large Language Models",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "SQL"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "The recent breakthroughs in large language models (LLMs) are positioned to transition many areas of software. The technologies of interacting with data particularly have an important entanglement with LLMs as efficient and intuitive data interactions are paramount. In this paper, we present DB-GPT, a revolutionary and product-ready Python library that integrates LLMs into traditional data interaction tasks to enhance user experience and accessibility. DB-GPT is designed to understand data interaction tasks described by natural language and provide context-aware responses powered by LLMs, making it an indispensable tool for users ranging from novice to expert. Its system design supports deployment across local, distributed, and cloud environments. Beyond handling basic data interaction tasks like Text-to-SQL with LLMs, it can handle complex tasks like generative data analysis through a Multi-Agents framework and the Agentic Workflow Expression Language (AWEL). The Service-oriented Multi-model Management Framework (SMMF) ensures data privacy and security, enabling users to employ DB-GPT with private LLMs. Additionally, DB-GPT offers a series of product-ready features designed to enable users to integrate DB-GPT within their product environments easily. The code of DB-GPT is available at Github(https://github.com/eosphoros-ai/DB-GPT) which already has over 10.7k stars. Please install DB-GPT for your own usage with the instructions(https://github.com/eosphoros-ai/DB-GPT#install) and watch a 5-minute introduction video on Youtube(https://youtu.be/n_8RI1ENyl4) to further investigate DB-GPT.",
+        "subjects": [
+            "cs.AI",
+            "cs.LG"
+        ],
+        "comment": null
     },
     {
         "paper id": "2404.10261",
@@ -5981,6 +5917,27 @@
         "comment": null
     },
     {
+        "paper id": "2404.12404",
+        "abstract url": "https://arxiv.org/abs/2404.12404",
+        "title": "Group-wise Prompting for Synthetic Tabular Data Generation using Large Language Models",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "Tabular"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Generating realistic synthetic tabular data presents a critical challenge in machine learning. This study introduces a simple yet effective method employing Large Language Models (LLMs) tailored to generate synthetic data, specifically addressing data imbalance problems. We propose a novel group-wise prompting method in CSV-style formatting that leverages the in-context learning capabilities of LLMs to produce data that closely adheres to the specified requirements and characteristics of the target dataset. Moreover, our proposed random word replacement strategy significantly improves the handling of monotonous categorical values, enhancing the accuracy and representativeness of the synthetic data. The effectiveness of our method is extensively validated across eight real-world public datasets, achieving state-of-the-art performance in downstream classification and regression tasks while maintaining inter-feature correlations and improving token efficiency over existing approaches. This advancement significantly contributes to addressing the key challenges of machine learning applications, particularly in the context of tabular data generation and handling class imbalance. The source code for our work is available at: https://github.com/seharanul17/synthetic-tabular-LLM",
+        "subjects": [
+            "cs.LG",
+            "cs.AI"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2404.15192",
         "abstract url": "https://arxiv.org/abs/2404.15192",
         "title": "Measuring Diversity of Game Scenarios",
@@ -5998,26 +5955,6 @@
             "cs.AI"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2404.09471",
-        "abstract url": "https://arxiv.org/abs/2404.09471",
-        "title": "LightningSimV2: Faster and Scalable Simulation for High-Level Synthesis via Graph Compilation and Optimization",
-        "rating": "-2",
-        "keywords": [
-            [
-                "Synthesis"
-            ],
-            [
-                "Graph"
-            ]
-        ],
-        "abstract": "High-Level Synthesis (HLS) enables rapid prototyping of complex hardware designs by translating C or C++ code to low-level RTL code. However, the testing and evaluation of HLS designs still typically rely on slow RTL-level simulators that can take hours to provide feedback, especially for complex designs. A recent work, LightningSim, helps to solve this problem by providing a simulation workflow one to two orders of magnitude faster than RTL simulation. However, it still exhibits inefficiencies due to several types of redundant computation, making it slow for large design simulation and design space exploration. Addressing these inefficiencies, we introduce LightningSimV2, a much faster and scalable simulation tool. LightningSimV2 features three main innovations. First, we perform compile-time static analysis, exploiting the repetitive structures in HLS designs, e.g., loops, to reduce the simulation workload. Second, we propose a novel graph-based simulation approach, with decoupled simulation graph construction step and graph traversal step, significantly reducing repeated computation. Third, benefiting from the decoupled approach, LightningSimV2 can perform incremental stall analysis extremely fast, enabling highly efficient design space exploration of large numbers of complex hardware parameters, e.g., optimal FIFO depths. Moreover, the DSE is well-suited for parallel computing, further improving the DSE efficiency. Compared with LightningSim, LightningSimV2 achieves up to 3.5x speedup in full simulation and up to 577x speed up for incremental DSE. Our code is open-source on GitHub at https://github.com/sharc-lab/LightningSim/tree/v0.2.0.",
-        "subjects": [
-            "cs.PF",
-            "cs.AR"
-        ],
-        "comment": "11 pages, 6 figures. Accepted at FCCM 2024"
     },
     {
         "paper id": "2404.09498",
@@ -6219,6 +6156,23 @@
         "comment": "See website at https://emergentsystemlabstudent.github.io/MultiViewRetrieve/. Submitted to IROS2024"
     },
     {
+        "paper id": "2404.09660",
+        "abstract url": "https://arxiv.org/abs/2404.09660",
+        "title": "OpenAirLink: Reproducible Wireless Channel Emulation using Software Defined Radios",
+        "rating": "-2",
+        "keywords": [
+            [
+                "FPGA"
+            ]
+        ],
+        "abstract": "This paper presents OpenAirLink(OAL), an open-source channel emulator for reproducible testing of wireless scenarios. OAL is implemented on off-the-shelf software-defined radios (SDR) and presents a smaller-scale alternative to expensive commercially available channel emulators. Path loss and propagation delay are the fundamental aspects of emulating a wireless channel. OAL provides a simple method to change these aspects in real-time. The emulator is implemented using a finite impulse response (FIR) filter. The FIR filter is written in Verilog and flashed on the SDRs Field Programmable Gate Array (FPGA). Most processing transpires on the FPGA, so OAL does not require high-performance computing hardware and SDRs. We validate the performance of OAL and demonstrate the utility of such a channel emulation tool using two examples. We believe that open-source channel emulators such as OAL can make reproducible wireless experiments accessible to many researchers in the scientific community.",
+        "subjects": [
+            "cs.NI",
+            "eess.SP"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2404.09666",
         "abstract url": "https://arxiv.org/abs/2404.09666",
         "title": "Deformable MRI Sequence Registration for AI-based Prostate Cancer Diagnosis",
@@ -6411,6 +6365,38 @@
         "comment": null
     },
     {
+        "paper id": "2404.09845",
+        "abstract url": "https://arxiv.org/abs/2404.09845",
+        "title": "Stable Inversion of Piecewise Affine Systems with Application to Feedforward and Iterative Learning Control",
+        "rating": "-2",
+        "keywords": [
+            [
+                "physics"
+            ]
+        ],
+        "abstract": "Model inversion is a fundamental technique in feedforward control. Unstable inverse models present a challenge in that useful feedforward control trajectories cannot be generated by directly propagating them. Stable inversion is a process for generating useful trajectories from unstable inverses by handling their stable and unstable modes separately. Piecewise affine (PWA) systems are a popular framework for modeling complicated dynamics. The primary contributions of this article are closed-form inverse formulas for a general class of PWA models, and stable inversion methods for these models. Both contributions leverage closed-form model representations to prove sufficient conditions for solution existence and uniqueness, and to develop solution computation methods. The result is implementable feedforward control synthesis from PWA models with either stable or unstable inverses. In practice, feedforward control alone may yield substantial tracking errors due to mismatch between the known system model and the unknowable complete system physics. Iterative learning control (ILC) is a technique for achieving robustness to model error in feedforward control. To demonstrate the primary contributions' validity and utility, this article also integrates PWA stable inversion with ILC in simulations based on a physical printhead positioning system.",
+        "subjects": [
+            "eess.SY"
+        ],
+        "comment": "16 pages, 6 figures"
+    },
+    {
+        "paper id": "2404.09854",
+        "abstract url": "https://arxiv.org/abs/2404.09854",
+        "title": "Custom frame synchronization for easy and rapid deployment",
+        "rating": "-2",
+        "keywords": [
+            [
+                "FPGA"
+            ]
+        ],
+        "abstract": "We propose a novel and efficient, custom frame synchronization architecture aimed at rapid deployment on any hardware platform. Frame synchronization is the process of discerning valid data frames from an incoming transmission and in this article it is accomplished by attaching distinctive binary overhead sequences on the frame. These sequences act as markers for the frames and enable the capture of their payload. They have certain properties and can be detected by using only simple hardware constructs like XNOR gates and few-bit adders with adequate accuracy. A low-cost commercial FPGA was used for implementation (NEXYS 4 DDR).",
+        "subjects": [
+            "eess.SP"
+        ],
+        "comment": "5 pages 7 figures. Frame synchronization circuit.Made changes for readability. Results unchanged"
+    },
+    {
         "paper id": "2404.09862",
         "abstract url": "https://arxiv.org/abs/2404.09862",
         "title": "A Uniform Framework for Language Inclusion Problems",
@@ -6434,8 +6420,7 @@
         "rating": "-2",
         "keywords": [
             [
-                "GAN",
-                "Synthesis"
+                "GAN"
             ],
             [
                 "Facial"
@@ -6520,7 +6505,8 @@
         "rating": "-2",
         "keywords": [
             [
-                "industrial"
+                "industrial",
+                "FPGAs"
             ]
         ],
         "abstract": "Deep learning (DL) is becoming the cornerstone of numerous applications both in datacenters and at the edge. Specialized hardware is often necessary to meet the performance requirements of state-of-the-art DL models, but the rapid pace of change in DL models and the wide variety of systems integrating DL make it impossible to create custom computer chips for all but the largest markets. Field-programmable gate arrays (FPGAs) present a unique blend of reprogrammability and direct hardware execution that make them suitable for accelerating DL inference. They offer the ability to customize processing pipelines and memory hierarchies to achieve lower latency and higher energy efficiency compared to general-purpose CPUs and GPUs, at a fraction of the development time and cost of custom chips. Their diverse high-speed IOs also enable directly interfacing the FPGA to the network and/or a variety of external sensors, making them suitable for both datacenter and edge use cases. As DL has become an ever more important workload, FPGA architectures are evolving to enable higher DL performance. In this article, we survey both academic and industrial FPGA architecture enhancements for DL. First, we give a brief introduction on the basics of FPGA architecture and how its components lead to strengths and weaknesses for DL applications. Next, we discuss different styles of DL inference accelerators on FPGA, ranging from model-specific dataflow styles to software-programmable overlay styles. We survey DL-specific enhancements to traditional FPGA building blocks such as logic blocks, arithmetic circuitry, and on-chip memories, as well as new in-fabric DL-specialized blocks for accelerating tensor computations. Finally, we discuss hybrid devices that combine processors and coarse-grained accelerator blocks with FPGA-like interconnect and networks-on-chip, and highlight promising future research directions.",
@@ -6641,8 +6627,7 @@
                 "3D"
             ],
             [
-                "diffusion",
-                "Synthesis"
+                "diffusion"
             ],
             [
                 "physics"
@@ -6719,6 +6704,54 @@
             "cs.CV"
         ],
         "comment": "10 pages, 4 figures, accepted by CVPR 2024"
+    },
+    {
+        "paper id": "2404.09541",
+        "abstract url": "https://arxiv.org/abs/2404.09541",
+        "title": "Application of the representative measure approach to assess the reliability of decision trees in dealing with unseen vehicle collision data",
+        "rating": "-2.5",
+        "keywords": [
+            [
+                "trajectory",
+                "vehicle"
+            ],
+            [
+                "tabular"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Machine learning algorithms are fundamental components of novel data-informed Artificial Intelligence architecture. In this domain, the imperative role of representative datasets is a cornerstone in shaping the trajectory of artificial intelligence (AI) development. Representative datasets are needed to train machine learning components properly. Proper training has multiple impacts: it reduces the final model's complexity, power, and uncertainties. In this paper, we investigate the reliability of the $\\varepsilon$-representativeness method to assess the dataset similarity from a theoretical perspective for decision trees. We decided to focus on the family of decision trees because it includes a wide variety of models known to be explainable. Thus, in this paper, we provide a result guaranteeing that if two datasets are related by $\\varepsilon$-representativeness, i.e., both of them have points closer than $\\varepsilon$, then the predictions by the classic decision tree are similar. Experimentally, we have also tested that $\\varepsilon$-representativeness presents a significant correlation with the ordering of the feature importance. Moreover, we extend the results experimentally in the context of unseen vehicle collision data for XGboost, a machine-learning component widely adopted for dealing with tabular data.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2404.09613",
+        "abstract url": "https://arxiv.org/abs/2404.09613",
+        "title": "Efficient and accurate neural field reconstruction using resistive memory",
+        "rating": "-2.5",
+        "keywords": [
+            [
+                "3D"
+            ],
+            [
+                "medical",
+                "CT"
+            ],
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "Human beings construct perception of space by integrating sparse observations into massively interconnected synapses and neurons, offering a superior parallelism and efficiency. Replicating this capability in AI finds wide applications in medical imaging, AR/VR, and embodied AI, where input data is often sparse and computing resources are limited. However, traditional signal reconstruction methods on digital computers face both software and hardware challenges. On the software front, difficulties arise from storage inefficiencies in conventional explicit signal representation. Hardware obstacles include the von Neumann bottleneck, which limits data transfer between the CPU and memory, and the limitations of CMOS circuits in supporting parallel processing. We propose a systematic approach with software-hardware co-optimizations for signal reconstruction from sparse inputs. Software-wise, we employ neural field to implicitly represent signals via neural networks, which is further compressed using low-rank decomposition and structured pruning. Hardware-wise, we design a resistive memory-based computing-in-memory (CIM) platform, featuring a Gaussian Encoder (GE) and an MLP Processing Engine (PE). The GE harnesses the intrinsic stochasticity of resistive memory for efficient input encoding, while the PE achieves precise weight mapping through a Hardware-Aware Quantization (HAQ) circuit. We demonstrate the system's efficacy on a 40nm 256Kb resistive memory-based in-memory computing macro, achieving huge energy efficiency and parallelism improvements without compromising reconstruction quality in tasks like 3D CT sparse reconstruction, novel view synthesis, and novel view synthesis for dynamic scenes. This work advances the AI-driven signal restoration technology and paves the way for future efficient and robust medical AI and 3D vision applications.",
+        "subjects": [
+            "cs.ET",
+            "cs.AI",
+            "cs.AR"
+        ],
+        "comment": null
     },
     {
         "paper id": "2404.09622",
@@ -6919,6 +6952,29 @@
             "cs.LG",
             "math.PR",
             "stat.ML"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2404.10176",
+        "abstract url": "https://arxiv.org/abs/2404.10176",
+        "title": "Multi-objective evolutionary GAN for tabular data synthesis",
+        "rating": "-2.5",
+        "keywords": [
+            [
+                "GAN"
+            ],
+            [
+                "tabular"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Synthetic data has a key role to play in data sharing by statistical agencies and other generators of statistical data products. Generative Adversarial Networks (GANs), typically applied to image synthesis, are also a promising method for tabular data synthesis. However, there are unique challenges in tabular data compared to images, eg tabular data may contain both continuous and discrete variables and conditional sampling, and, critically, the data should possess high utility and low disclosure risk (the risk of re-identifying a population unit or learning something new about them), providing an opportunity for multi-objective (MO) optimization. Inspired by MO GANs for images, this paper proposes a smart MO evolutionary conditional tabular GAN (SMOE-CTGAN). This approach models conditional synthetic data by applying conditional vectors in training, and uses concepts from MO optimisation to balance disclosure risk against utility. Our results indicate that SMOE-CTGAN is able to discover synthetic datasets with different risk and utility levels for multiple national census datasets. We also find a sweet spot in the early stage of training where a competitive utility and extremely low risk are achieved, by using an Improvement Score. The full code can be downloaded from https://github.com/HuskyNian/SMO\\_EGAN\\_pytorch.",
+        "subjects": [
+            "cs.LG",
+            "cs.NE"
         ],
         "comment": null
     },
@@ -7125,25 +7181,6 @@
         "comment": "7 pages, 8 figures, conference paper, IEEE International Conference on Autonomous Robot Systems and Competitions"
     },
     {
-        "paper id": "2404.09845",
-        "abstract url": "https://arxiv.org/abs/2404.09845",
-        "title": "Stable Inversion of Piecewise Affine Systems with Application to Feedforward and Iterative Learning Control",
-        "rating": "-3",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "physics"
-            ]
-        ],
-        "abstract": "Model inversion is a fundamental technique in feedforward control. Unstable inverse models present a challenge in that useful feedforward control trajectories cannot be generated by directly propagating them. Stable inversion is a process for generating useful trajectories from unstable inverses by handling their stable and unstable modes separately. Piecewise affine (PWA) systems are a popular framework for modeling complicated dynamics. The primary contributions of this article are closed-form inverse formulas for a general class of PWA models, and stable inversion methods for these models. Both contributions leverage closed-form model representations to prove sufficient conditions for solution existence and uniqueness, and to develop solution computation methods. The result is implementable feedforward control synthesis from PWA models with either stable or unstable inverses. In practice, feedforward control alone may yield substantial tracking errors due to mismatch between the known system model and the unknowable complete system physics. Iterative learning control (ILC) is a technique for achieving robustness to model error in feedforward control. To demonstrate the primary contributions' validity and utility, this article also integrates PWA stable inversion with ILC in simulations based on a physical printhead positioning system.",
-        "subjects": [
-            "eess.SY"
-        ],
-        "comment": "16 pages, 6 figures"
-    },
-    {
         "paper id": "2404.09969",
         "abstract url": "https://arxiv.org/abs/2404.09969",
         "title": "Reconstructing classes of 3D FRI signals from sampled tomographic projections at unknown angles",
@@ -7278,34 +7315,6 @@
         "abstract": "Alkaline Water Electrolysis (AWE) is one of the simplest green hydrogen production method using renewable energy. AWE system typically yields process variables that are serially correlated and contaminated by measurement uncertainty. A novel robust dynamic variational Bayesian dictionary learning (RDVDL) monitoring approach is proposed to improve the reliability and safety of AWE operation. RDVDL employs a sparse Bayesian dictionary learning to preserve the dynamic mechanism information of AWE process which allows the easy interpretation of fault detection results. To improve the robustness to measurement uncertainty, a low-rank vector autoregressive (VAR) method is derived to reliably extract the serial correlation from process variables. The effectiveness of the proposed approach is demonstrated with an industrial hydrogen production process, and RDVDL can efficiently detect and diagnose critical AWE faults.",
         "subjects": [
             "cs.LG"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2404.09613",
-        "abstract url": "https://arxiv.org/abs/2404.09613",
-        "title": "Efficient and accurate neural field reconstruction using resistive memory",
-        "rating": "-3.5",
-        "keywords": [
-            [
-                "3D"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "medical",
-                "CT"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "Human beings construct perception of space by integrating sparse observations into massively interconnected synapses and neurons, offering a superior parallelism and efficiency. Replicating this capability in AI finds wide applications in medical imaging, AR/VR, and embodied AI, where input data is often sparse and computing resources are limited. However, traditional signal reconstruction methods on digital computers face both software and hardware challenges. On the software front, difficulties arise from storage inefficiencies in conventional explicit signal representation. Hardware obstacles include the von Neumann bottleneck, which limits data transfer between the CPU and memory, and the limitations of CMOS circuits in supporting parallel processing. We propose a systematic approach with software-hardware co-optimizations for signal reconstruction from sparse inputs. Software-wise, we employ neural field to implicitly represent signals via neural networks, which is further compressed using low-rank decomposition and structured pruning. Hardware-wise, we design a resistive memory-based computing-in-memory (CIM) platform, featuring a Gaussian Encoder (GE) and an MLP Processing Engine (PE). The GE harnesses the intrinsic stochasticity of resistive memory for efficient input encoding, while the PE achieves precise weight mapping through a Hardware-Aware Quantization (HAQ) circuit. We demonstrate the system's efficacy on a 40nm 256Kb resistive memory-based in-memory computing macro, achieving huge energy efficiency and parallelism improvements without compromising reconstruction quality in tasks like 3D CT sparse reconstruction, novel view synthesis, and novel view synthesis for dynamic scenes. This work advances the AI-driven signal restoration technology and paves the way for future efficient and robust medical AI and 3D vision applications.",
-        "subjects": [
-            "cs.ET",
-            "cs.AI",
-            "cs.AR"
         ],
         "comment": null
     },
@@ -7624,19 +7633,6 @@
         "comment": "7 pages, 11 figures"
     },
     {
-        "paper id": "2404.09660",
-        "abstract url": "https://arxiv.org/abs/2404.09660",
-        "title": "OpenAirLink: Reproducible Wireless Channel Emulation using Software Defined Radios",
-        "rating": "-10",
-        "keywords": [],
-        "abstract": "This paper presents OpenAirLink(OAL), an open-source channel emulator for reproducible testing of wireless scenarios. OAL is implemented on off-the-shelf software-defined radios (SDR) and presents a smaller-scale alternative to expensive commercially available channel emulators. Path loss and propagation delay are the fundamental aspects of emulating a wireless channel. OAL provides a simple method to change these aspects in real-time. The emulator is implemented using a finite impulse response (FIR) filter. The FIR filter is written in Verilog and flashed on the SDRs Field Programmable Gate Array (FPGA). Most processing transpires on the FPGA, so OAL does not require high-performance computing hardware and SDRs. We validate the performance of OAL and demonstrate the utility of such a channel emulation tool using two examples. We believe that open-source channel emulators such as OAL can make reproducible wireless experiments accessible to many researchers in the scientific community.",
-        "subjects": [
-            "cs.NI",
-            "eess.SP"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2404.09661",
         "abstract url": "https://arxiv.org/abs/2404.09661",
         "title": "Reconstructing Curves from Sparse Samples on Riemannian Manifolds",
@@ -7801,16 +7797,16 @@
         "comment": null
     },
     {
-        "paper id": "2404.09854",
-        "abstract url": "https://arxiv.org/abs/2404.09854",
-        "title": "Custom frame synchronization for easy and rapid deployment",
+        "paper id": "2404.09866",
+        "abstract url": "https://arxiv.org/abs/2404.09866",
+        "title": "Reimagining Self-Adaptation in the Age of Large Language Models",
         "rating": "-10",
         "keywords": [],
-        "abstract": "We propose a novel and efficient, custom frame synchronization architecture aimed at rapid deployment on any hardware platform. Frame synchronization is the process of discerning valid data frames from an incoming transmission and in this article it is accomplished by attaching distinctive binary overhead sequences on the frame. These sequences act as markers for the frames and enable the capture of their payload. They have certain properties and can be detected by using only simple hardware constructs like XNOR gates and few-bit adders with adequate accuracy. A low-cost commercial FPGA was used for implementation (NEXYS 4 DDR).",
+        "abstract": "Modern software systems are subjected to various types of uncertainties arising from context, environment, etc. To this end, self-adaptation techniques have been sought out as potential solutions. Although recent advances in self-adaptation through the use of ML techniques have demonstrated promising results, the capabilities are limited by constraints imposed by the ML techniques, such as the need for training samples, the ability to generalize, etc. Recent advancements in Generative AI (GenAI) open up new possibilities as it is trained on massive amounts of data, potentially enabling the interpretation of uncertainties and synthesis of adaptation strategies. In this context, this paper presents a vision for using GenAI, particularly Large Language Models (LLMs), to enhance the effectiveness and efficiency of architectural adaptation. Drawing parallels with human operators, we propose that LLMs can autonomously generate similar, context-sensitive adaptation strategies through its advanced natural language processing capabilities. This method allows software systems to understand their operational state and implement adaptations that align with their architectural requirements and environmental changes. By integrating LLMs into the self-adaptive system architecture, we facilitate nuanced decision-making that mirrors human-like adaptive reasoning. A case study with the SWIM exemplar system provides promising results, indicating that LLMs can potentially handle different adaptation scenarios. Our findings suggest that GenAI has significant potential to improve software systems' dynamic adaptability and resilience.",
         "subjects": [
-            "eess.SP"
+            "cs.SE"
         ],
-        "comment": "5 pages 7 figures. Frame synchronization circuit.Made changes for readability. Results unchanged"
+        "comment": null
     },
     {
         "paper id": "2404.09873",
@@ -7838,6 +7834,20 @@
             "math.OC"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2404.09888",
+        "abstract url": "https://arxiv.org/abs/2404.09888",
+        "title": "Flow-Based Synthesis of Reactive Tests for Discrete Decision-Making Systems with Temporal Logic Specifications",
+        "rating": "-10",
+        "keywords": [],
+        "abstract": "Designing tests to evaluate if a given autonomous system satisfies complex specifications is challenging due to the complexity of these systems. This work proposes a flow-based approach for reactive test synthesis from temporal logic specifications, enabling the synthesis of test environments consisting of static and reactive obstacles and dynamic test agents. The temporal logic specifications describe desired test behavior, including system requirements as well as a test objective that is not revealed to the system. The synthesized test strategy places restrictions on system actions in reaction to the system state. The tests are minimally restrictive and accomplish the test objective while ensuring realizability of the system's objective without aiding it (semi-cooperative setting). Automata theory and flow networks are leveraged to formulate a mixed-integer linear program (MILP) to synthesize the test strategy. For a dynamic test agent, the agent strategy is synthesized for a GR(1) specification constructed from the solution of the MILP. If the specification is unrealizable by the dynamics of the test agent, a counterexample-guided approach is used to resolve the MILP until a strategy is found. This flow-based, reactive test synthesis is conducted offline and is agnostic to the system controller. Finally, the resulting test strategy is demonstrated in simulation and experimentally on a pair of quadrupedal robots for a variety of specifications.",
+        "subjects": [
+            "cs.FL",
+            "cs.RO",
+            "eess.SY"
+        ],
+        "comment": "Manuscript"
     },
     {
         "paper id": "2404.09893",

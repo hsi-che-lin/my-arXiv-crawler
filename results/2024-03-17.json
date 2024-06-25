@@ -301,24 +301,6 @@
         "comment": "Accepted to CVPR 2024"
     },
     {
-        "paper id": "2403.11103",
-        "abstract url": "https://arxiv.org/abs/2403.11103",
-        "title": "ProgGen: Generating Named Entity Recognition Datasets Step-by-step with Self-Reflexive Large Language Models",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.LG",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Although Large Language Models (LLMs) exhibit remarkable adaptability across domains, these models often fall short in structured knowledge extraction tasks such as named entity recognition (NER). This paper explores an innovative, cost-efficient strategy to harness LLMs with modest NER capabilities for producing superior NER datasets. Our approach diverges from the basic class-conditional prompts by instructing LLMs to self-reflect on the specific domain, thereby generating domain-relevant attributes (such as category and emotions for movie reviews), which are utilized for creating attribute-rich training data. Furthermore, we preemptively generate entity terms and then develop NER context data around these entities, effectively bypassing the LLMs' challenges with complex structures. Our experiments across both general and niche domains reveal significant performance enhancements over conventional data generation methods while being more cost-effective than existing alternatives.",
-        "subjects": [
-            "cs.CL",
-            "cs.LG"
-        ],
-        "comment": "under review"
-    },
-    {
         "paper id": "2403.11106",
         "abstract url": "https://arxiv.org/abs/2403.11106",
         "title": "Self-Supervised Quantization-Aware Knowledge Distillation",
@@ -369,22 +351,6 @@
             "cs.CL"
         ],
         "comment": "Accepted for: LREC COLING 2024"
-    },
-    {
-        "paper id": "2403.11121",
-        "abstract url": "https://arxiv.org/abs/2403.11121",
-        "title": "A Versatile Framework for Multi-scene Person Re-identification",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Person Re-identification (ReID) has been extensively developed for a decade in order to learn the association of images of the same person across non-overlapping camera views. To overcome significant variations between images across camera views, mountains of variants of ReID models were developed for solving a number of challenges, such as resolution change, clothing change, occlusion, modality change, and so on. Despite the impressive performance of many ReID variants, these variants typically function distinctly and cannot be applied to other challenges. To our best knowledge, there is no versatile ReID model that can handle various ReID challenges at the same time. This work contributes to the first attempt at learning a versatile ReID model to solve such a problem. Our main idea is to form a two-stage prompt-based twin modeling framework called VersReID. Our VersReID firstly leverages the scene label to train a ReID Bank that contains abundant knowledge for handling various scenes, where several groups of scene-specific prompts are used to encode different scene-specific knowledge. In the second stage, we distill a V-Branch model with versatile prompts from the ReID Bank for adaptively solving the ReID of different scenes, eliminating the demand for scene labels during the inference stage. To facilitate training VersReID, we further introduce the multi-scene properties into self-supervised learning of ReID via a multi-scene prioris data augmentation (MPDA) strategy. Through extensive experiments, we demonstrate the success of learning an effective and versatile ReID model for handling ReID tasks under multi-scene conditions without manual assignment of scene labels in the inference stage, including general, low-resolution, clothing change, occlusion, and cross-modality scenes. Codes and models are available at https://github.com/iSEE-Laboratory/VersReID.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "To appear in TPAMI"
     },
     {
         "paper id": "2403.11123",
@@ -706,24 +672,6 @@
         "subjects": [
             "cs.CL",
             "cs.CV"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2403.11322",
-        "abstract url": "https://arxiv.org/abs/2403.11322",
-        "title": "StateFlow: Enhancing LLM Task-Solving through State-Driven Workflows",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "It is a notable trend to use Large Language Models (LLMs) to tackle complex tasks, e.g., tasks that require a sequence of actions and dynamic interaction with tools and external environments. In this paper, we propose StateFlow, a novel LLM-based task-solving paradigm that conceptualizes complex task-solving processes as state machines. In StateFlow, we distinguish between \"process grounding\" (via state and state transitions) and \"sub-task solving\" (through actions within a state), enhancing control and interpretability of the task-solving procedure. A state represents the status of a running process. The transitions between states are controlled by heuristic rules or decisions made by the LLM, allowing for a dynamic and adaptive progression. Upon entering a state, a series of actions is executed, involving not only calling LLMs guided by different prompts, but also the utilization of external tools as needed. Our results show that StateFlow significantly enhances LLMs' efficiency. For instance, StateFlow achieves 13% and 28% higher success rates compared to ReAct in InterCode SQL and ALFWorld benchmark, with 5x and 3x less cost respectively. We also show that StateFlow can be combined with iterative refining methods like Reflexion to further improve performance.",
-        "subjects": [
-            "cs.CL",
-            "cs.AI"
         ],
         "comment": null
     },
@@ -1621,24 +1569,6 @@
         "comment": "CVPR 2024"
     },
     {
-        "paper id": "2403.11472",
-        "abstract url": "https://arxiv.org/abs/2403.11472",
-        "title": "Accelerating String-Key Learned Index Structures via Memoization-based Incremental Training",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Learned indexes use machine learning models to learn the mappings between keys and their corresponding positions in key-value indexes. These indexes use the mapping information as training data. Learned indexes require frequent retrainings of their models to incorporate the changes introduced by update queries. To efficiently retrain the models, existing learned index systems often harness a linear algebraic QR factorization technique that performs matrix decomposition. This factorization approach processes all key-position pairs during each retraining, resulting in compute operations that grow linearly with the total number of keys and their lengths. Consequently, the retrainings create a severe performance bottleneck, especially for variable-length string keys, while the retrainings are crucial for maintaining high prediction accuracy and in turn, ensuring low query service latency. To address this performance problem, we develop an algorithm-hardware co-designed string-key learned index system, dubbed SIA. In designing SIA, we leverage a unique algorithmic property of the matrix decomposition-based training method. Exploiting the property, we develop a memoization-based incremental training scheme, which only requires computation over updated keys, while decomposition results of non-updated keys from previous computations can be reused. We further enhance SIA to offload a portion of this training process to an FPGA accelerator to not only relieve CPU resources for serving index queries (i.e., inference), but also accelerate the training itself. Our evaluation shows that compared to ALEX, LIPP, and SIndex, a state-of-the-art learned index systems, SIA-accelerated learned indexes offer 2.6x and 3.4x higher throughput on the two real-world benchmark suites, YCSB and Twitter cache trace, respectively.",
-        "subjects": [
-            "cs.LG",
-            "cs.AR",
-            "cs.DB"
-        ],
-        "comment": "Accepted at VLDB '24; 12 pages + 2 pages (ref), 18 figures, 2 tables"
-    },
-    {
         "paper id": "2403.11477",
         "abstract url": "https://arxiv.org/abs/2403.11477",
         "title": "Span-Based Optimal Sample Complexity for Weakly Communicating and General Average Reward MDPs",
@@ -1814,7 +1744,6 @@
         "keywords": [
             [
                 "Diffusion",
-                "synthesizing",
                 "image editing"
             ],
             [
@@ -1826,6 +1755,25 @@
             "cs.CV"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2403.11121",
+        "abstract url": "https://arxiv.org/abs/2403.11121",
+        "title": "A Versatile Framework for Multi-scene Person Re-identification",
+        "rating": "0",
+        "keywords": [
+            [
+                "Re-identification"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Person Re-identification (ReID) has been extensively developed for a decade in order to learn the association of images of the same person across non-overlapping camera views. To overcome significant variations between images across camera views, mountains of variants of ReID models were developed for solving a number of challenges, such as resolution change, clothing change, occlusion, modality change, and so on. Despite the impressive performance of many ReID variants, these variants typically function distinctly and cannot be applied to other challenges. To our best knowledge, there is no versatile ReID model that can handle various ReID challenges at the same time. This work contributes to the first attempt at learning a versatile ReID model to solve such a problem. Our main idea is to form a two-stage prompt-based twin modeling framework called VersReID. Our VersReID firstly leverages the scene label to train a ReID Bank that contains abundant knowledge for handling various scenes, where several groups of scene-specific prompts are used to encode different scene-specific knowledge. In the second stage, we distill a V-Branch model with versatile prompts from the ReID Bank for adaptively solving the ReID of different scenes, eliminating the demand for scene labels during the inference stage. To facilitate training VersReID, we further introduce the multi-scene properties into self-supervised learning of ReID via a multi-scene prioris data augmentation (MPDA) strategy. Through extensive experiments, we demonstrate the success of learning an effective and versatile ReID model for handling ReID tasks under multi-scene conditions without manual assignment of scene labels in the inference stage, including general, low-resolution, clothing change, occlusion, and cross-modality scenes. Codes and models are available at https://github.com/iSEE-Laboratory/VersReID.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "To appear in TPAMI"
     },
     {
         "paper id": "2403.11129",
@@ -1843,6 +1791,29 @@
         "abstract": "Document-level Event Causality Identification (DECI) aims to identify causal relations between two events in documents. Recent research tends to use pre-trained language models to generate the event causal relations. Whereas, these methods are prone to the errors of sequential generation due to multiple events in a document. Moreover, the potential structures such as event coreference and related causal chain are neglected. In this paper, we propose a multi-task learning framework to enhance event causality identification with rationale and structure-aware causal question answering. Specifically, the DECI task is transformed into multiple-choice question answering, and the causes and effects of the questioned event are generated with large language models. In addition, we generate the rationales to explain why these events have causal relations. Moreover, we construct an event structure graph, which models the multi-hop potential relations for causal reasoning of the current event. Experiments on two benchmark datasets show the great advantages of our proposed approach compared to the state-of-the-art methods. Moreover, we conduct both quantitative and qualitative analyses, which shed light on why each component of our approach can lead to great improvements.",
         "subjects": [
             "cs.CL"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2403.11134",
+        "abstract url": "https://arxiv.org/abs/2403.11134",
+        "title": "Recent Advances in 3D Gaussian Splatting",
+        "rating": "0",
+        "keywords": [
+            [
+                "3D",
+                "Gaussian Splatting",
+                "NeRF",
+                "Radiance Fields"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "The emergence of 3D Gaussian Splatting (3DGS) has greatly accelerated the rendering speed of novel view synthesis. Unlike neural implicit representations like Neural Radiance Fields (NeRF) that represent a 3D scene with position and viewpoint-conditioned neural networks, 3D Gaussian Splatting utilizes a set of Gaussian ellipsoids to model the scene so that efficient rendering can be accomplished by rasterizing Gaussian ellipsoids into images. Apart from the fast rendering speed, the explicit representation of 3D Gaussian Splatting facilitates editing tasks like dynamic reconstruction, geometry editing, and physical simulation. Considering the rapid change and growing number of works in this field, we present a literature review of recent 3D Gaussian Splatting methods, which can be roughly classified into 3D reconstruction, 3D editing, and other downstream applications by functionality. Traditional point-based rendering methods and the rendering formulation of 3D Gaussian Splatting are also illustrated for a better understanding of this technique. This survey aims to help beginners get into this field quickly and provide experienced researchers with a comprehensive overview, which can stimulate the future development of the 3D Gaussian Splatting representation.",
+        "subjects": [
+            "cs.CV",
+            "cs.GR"
         ],
         "comment": null
     },
@@ -1950,6 +1921,26 @@
         "comment": "The paper is a preprint of a version submitted in ICCIDA 2024. It consists of 10 pages and contains 7 tables"
     },
     {
+        "paper id": "2403.11324",
+        "abstract url": "https://arxiv.org/abs/2403.11324",
+        "title": "GeoGaussian: Geometry-aware Gaussian Splatting for Scene Rendering",
+        "rating": "0",
+        "keywords": [
+            [
+                "3D",
+                "Gaussian Splatting"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "During the Gaussian Splatting optimization process, the scene's geometry can gradually deteriorate if its structure is not deliberately preserved, especially in non-textured regions such as walls, ceilings, and furniture surfaces. This degradation significantly affects the rendering quality of novel views that deviate significantly from the viewpoints in the training data. To mitigate this issue, we propose a novel approach called GeoGaussian. Based on the smoothly connected areas observed from point clouds, this method introduces a novel pipeline to initialize thin Gaussians aligned with the surfaces, where the characteristic can be transferred to new generations through a carefully designed densification strategy. Finally, the pipeline ensures that the scene's geometry and texture are maintained through constrained optimization processes with explicit geometry constraints. Benefiting from the proposed architecture, the generative ability of 3D Gaussians is enhanced, especially in structured regions. Our proposed pipeline achieves state-of-the-art performance in novel view synthesis and geometric reconstruction, as evaluated qualitatively and quantitatively on public datasets.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2403.11367",
         "abstract url": "https://arxiv.org/abs/2403.11367",
         "title": "3DGS-ReLoc: 3D Gaussian Splatting for Map Representation and Visual ReLocalization",
@@ -2043,6 +2034,27 @@
             "cs.CV"
         ],
         "comment": "USTC-AC's paper for Compound Expression (CE) Recognition Challenge in 6th Workshop and Competition on Affective Behavior Analysis in-the-wild (ABAW)"
+    },
+    {
+        "paper id": "2403.11453",
+        "abstract url": "https://arxiv.org/abs/2403.11453",
+        "title": "Bridging 3D Gaussian and Mesh for Freeview Video Rendering",
+        "rating": "0",
+        "keywords": [
+            [
+                "3D",
+                "Gaussian Splatting"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "This is only a preview version of GauMesh. Recently, primitive-based rendering has been proven to achieve convincing results in solving the problem of modeling and rendering the 3D dynamic scene from 2D images. Despite this, in the context of novel view synthesis, each type of primitive has its inherent defects in terms of representation ability. It is difficult to exploit the mesh to depict the fuzzy geometry. Meanwhile, the point-based splatting (e.g. the 3D Gaussian Splatting) method usually produces artifacts or blurry pixels in the area with smooth geometry and sharp textures. As a result, it is difficult, even not impossible, to represent the complex and dynamic scene with a single type of primitive. To this end, we propose a novel approach, GauMesh, to bridge the 3D Gaussian and Mesh for modeling and rendering the dynamic scenes. Given a sequence of tracked mesh as initialization, our goal is to simultaneously optimize the mesh geometry, color texture, opacity maps, a set of 3D Gaussians, and the deformation field. At a specific time, we perform $\u03b1$-blending on the RGB and opacity values based on the merged and re-ordered z-buffers from mesh and 3D Gaussian rasterizations. This produces the final rendering, which is supervised by the ground-truth image. Experiments demonstrate that our approach adapts the appropriate type of primitives to represent the different parts of the dynamic scene and outperforms all the baseline methods in both quantitative and qualitative comparisons without losing render speed.",
+        "subjects": [
+            "cs.GR",
+            "cs.CV"
+        ],
+        "comment": "7 pages"
     },
     {
         "paper id": "2403.11468",
@@ -2153,6 +2165,26 @@
             "cs.AI"
         ],
         "comment": "15 pages, 3 figures"
+    },
+    {
+        "paper id": "2403.11217",
+        "abstract url": "https://arxiv.org/abs/2403.11217",
+        "title": "Research on Personal Credit Risk Assessment Methods Based on Causal Inference",
+        "rating": "-0.5",
+        "keywords": [
+            [
+                "graph"
+            ],
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "The discussion on causality in human history dates back to ancient Greece, yet to this day, there is still no consensus. Fundamentally, this stems from the nature of human cognition, as understanding causality requires abstract tools to transcend the limitations of human cognition. In recent decades, the rapid development of mathematical and computational tools has provided new theoretical and technical means for exploring causality, creating more avenues for investigation. Based on this, this paper introduces a new definition of causality using category theory, proposed by Samuel Eilenberg and Saunders Mac Lane in 1945 to avoid the self-referential contradictions in set theory, notably the Russell paradox. Within this framework, the feasibility of indicator synthesis in causal inference is demonstrated. Due to the limitations in the development of category theory-related technical tools, this paper adopts the widely-used probabilistic causal graph tool proposed by Judea Pearl in 1995 to study the application of causal inference in personal credit risk management. The specific work includes: research on the construction method of causal inference index system, definition of causality and feasibility proof of indicator synthesis causal inference within this framework, application methods of causal graph model and intervention alternative criteria in personal credit risk management, and so on.",
+        "subjects": [
+            "cs.AI",
+            "math.CT"
+        ],
+        "comment": null
     },
     {
         "paper id": "2403.11259",
@@ -2305,6 +2337,27 @@
         "comment": "Published in Transactions on Machine Learning Research (03/2024)"
     },
     {
+        "paper id": "2403.11418",
+        "abstract url": "https://arxiv.org/abs/2403.11418",
+        "title": "Variational Sampling of Temporal Trajectories",
+        "rating": "-0.5",
+        "keywords": [
+            [
+                "trajectory"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "A deterministic temporal process can be determined by its trajectory, an element in the product space of (a) initial condition $z_0 \\in \\mathcal{Z}$ and (b) transition function $f: (\\mathcal{Z}, \\mathcal{T}) \\to \\mathcal{Z}$ often influenced by the control of the underlying dynamical system. Existing methods often model the transition function as a differential equation or as a recurrent neural network. Despite their effectiveness in predicting future measurements, few results have successfully established a method for sampling and statistical inference of trajectories using neural networks, partially due to constraints in the parameterization. In this work, we introduce a mechanism to learn the distribution of trajectories by parameterizing the transition function $f$ explicitly as an element in a function space. Our framework allows efficient synthesis of novel trajectories, while also directly providing a convenient tool for inference, i.e., uncertainty estimation, likelihood evaluations and out of distribution detection for abnormal trajectories. These capabilities can have implications for various downstream tasks, e.g., simulation and evaluation for reinforcement learning.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2403.11432",
         "abstract url": "https://arxiv.org/abs/2403.11432",
         "title": "Demystifying Deep Reinforcement Learning-Based Autonomous Vehicle Decision-Making",
@@ -2433,6 +2486,27 @@
         "comment": "6 pages, 4 figures, conference"
     },
     {
+        "paper id": "2403.11103",
+        "abstract url": "https://arxiv.org/abs/2403.11103",
+        "title": "ProgGen: Generating Named Entity Recognition Datasets Step-by-step with Self-Reflexive Large Language Models",
+        "rating": "-1",
+        "keywords": [
+            [
+                "Named Entity Recognition"
+            ],
+            [
+                "cs.LG",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Although Large Language Models (LLMs) exhibit remarkable adaptability across domains, these models often fall short in structured knowledge extraction tasks such as named entity recognition (NER). This paper explores an innovative, cost-efficient strategy to harness LLMs with modest NER capabilities for producing superior NER datasets. Our approach diverges from the basic class-conditional prompts by instructing LLMs to self-reflect on the specific domain, thereby generating domain-relevant attributes (such as category and emotions for movie reviews), which are utilized for creating attribute-rich training data. Furthermore, we preemptively generate entity terms and then develop NER context data around these entities, effectively bypassing the LLMs' challenges with complex structures. Our experiments across both general and niche domains reveal significant performance enhancements over conventional data generation methods while being more cost-effective than existing alternatives.",
+        "subjects": [
+            "cs.CL",
+            "cs.LG"
+        ],
+        "comment": "under review"
+    },
+    {
         "paper id": "2403.11104",
         "abstract url": "https://arxiv.org/abs/2403.11104",
         "title": "Deep Neural Network NMPC for Computationally Tractable Optimal Power Management of Hybrid Electric Vehicle",
@@ -2491,32 +2565,6 @@
         "abstract": "Recent breakthroughs in Neural Radiance Fields (NeRFs) have sparked significant demand for their integration into real-world 3D applications. However, the varied functionalities required by different 3D applications often necessitate diverse NeRF models with various pipelines, leading to tedious NeRF training for each target task and cumbersome trial-and-error experiments. Drawing inspiration from the generalization capability and adaptability of emerging foundation models, our work aims to develop one general-purpose NeRF for handling diverse 3D tasks. We achieve this by proposing a framework called Omni-Recon, which is capable of (1) generalizable 3D reconstruction and zero-shot multitask scene understanding, and (2) adaptability to diverse downstream 3D applications such as real-time rendering and scene editing. Our key insight is that an image-based rendering pipeline, with accurate geometry and appearance estimation, can lift 2D image features into their 3D counterparts, thus extending widely explored 2D tasks to the 3D world in a generalizable manner. Specifically, our Omni-Recon features a general-purpose NeRF model using image-based rendering with two decoupled branches: one complex transformer-based branch that progressively fuses geometry and appearance features for accurate geometry estimation, and one lightweight branch for predicting blending weights of source views. This design achieves state-of-the-art (SOTA) generalizable 3D surface reconstruction quality with blending weights reusable across diverse tasks for zero-shot multitask scene understanding. In addition, it can enable real-time rendering after baking the complex geometry branch into meshes, swift adaptation to achieve SOTA generalizable 3D understanding performance, and seamless integration with 2D diffusion models for text-guided 3D editing.",
         "subjects": [
             "cs.CV"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2403.11134",
-        "abstract url": "https://arxiv.org/abs/2403.11134",
-        "title": "Recent Advances in 3D Gaussian Splatting",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting",
-                "NeRF",
-                "Radiance Fields"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "The emergence of 3D Gaussian Splatting (3DGS) has greatly accelerated the rendering speed of novel view synthesis. Unlike neural implicit representations like Neural Radiance Fields (NeRF) that represent a 3D scene with position and viewpoint-conditioned neural networks, 3D Gaussian Splatting utilizes a set of Gaussian ellipsoids to model the scene so that efficient rendering can be accomplished by rasterizing Gaussian ellipsoids into images. Apart from the fast rendering speed, the explicit representation of 3D Gaussian Splatting facilitates editing tasks like dynamic reconstruction, geometry editing, and physical simulation. Considering the rapid change and growing number of works in this field, we present a literature review of recent 3D Gaussian Splatting methods, which can be roughly classified into 3D reconstruction, 3D editing, and other downstream applications by functionality. Traditional point-based rendering methods and the rendering formulation of 3D Gaussian Splatting are also illustrated for a better understanding of this technique. This survey aims to help beginners get into this field quickly and provide experienced researchers with a comprehensive overview, which can stimulate the future development of the 3D Gaussian Splatting representation.",
-        "subjects": [
-            "cs.CV",
-            "cs.GR"
         ],
         "comment": null
     },
@@ -2616,6 +2664,26 @@
         "comment": null
     },
     {
+        "paper id": "2403.11192",
+        "abstract url": "https://arxiv.org/abs/2403.11192",
+        "title": "Self-Supervised Video Desmoking for Laparoscopic Surgery",
+        "rating": "-1",
+        "keywords": [
+            [
+                "surgical",
+                "Surgery"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Due to the difficulty of collecting real paired data, most existing desmoking methods train the models by synthesizing smoke, generalizing poorly to real surgical scenarios. Although a few works have explored single-image real-world desmoking in unpaired learning manners, they still encounter challenges in handling dense smoke. In this work, we address these issues together by introducing the self-supervised surgery video desmoking (SelfSVD). On the one hand, we observe that the frame captured before the activation of high-energy devices is generally clear (named pre-smoke frame, PS frame), thus it can serve as supervision for other smoky frames, making real-world self-supervised video desmoking practically feasible. On the other hand, in order to enhance the desmoking performance, we further feed the valuable information from PS frame into models, where a masking strategy and a regularization term are presented to avoid trivial solutions. In addition, we construct a real surgery video dataset for desmoking, which covers a variety of smoky scenes. Extensive experiments on the dataset show that our SelfSVD can remove smoke more effectively and efficiently while recovering more photo-realistic details than the state-of-the-art methods. The dataset, codes, and pre-trained models are available at \\url{https://github.com/ZcsrenlongZ/SelfSVD}.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "28 pages"
+    },
+    {
         "paper id": "2403.11198",
         "abstract url": "https://arxiv.org/abs/2403.11198",
         "title": "Learning-Based Wiping Behavior of Low-Rigidity Robots Considering Various Surface Materials and Task Definitions",
@@ -2657,8 +2725,7 @@
                 "3D"
             ],
             [
-                "Diffusion",
-                "synthesizing"
+                "Diffusion"
             ],
             [
                 "cs.CV"
@@ -2713,6 +2780,27 @@
         "comment": null
     },
     {
+        "paper id": "2403.11227",
+        "abstract url": "https://arxiv.org/abs/2403.11227",
+        "title": "Cheap Ways of Extracting Clinical Markers from Texts",
+        "rating": "-1",
+        "keywords": [
+            [
+                "Clinical"
+            ],
+            [
+                "cs.LG",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "This paper describes the work of the UniBuc Archaeology team for CLPsych's 2024 Shared Task, which involved finding evidence within the text supporting the assigned suicide risk level. Two types of evidence were required: highlights (extracting relevant spans within the text) and summaries (aggregating evidence into a synthesis). Our work focuses on evaluating Large Language Models (LLM) as opposed to an alternative method that is much more memory and resource efficient. The first approach employs a good old-fashioned machine learning (GOML) pipeline consisting of a tf-idf vectorizer with a logistic regression classifier, whose representative features are used to extract relevant highlights. The second, more resource intensive, uses an LLM for generating the summaries and is guided by chain-of-thought to provide sequences of text indicating clinical markers.",
+        "subjects": [
+            "cs.CL",
+            "cs.LG"
+        ],
+        "comment": "https://github.com/nlp-unibuc/clpsych24-task"
+    },
+    {
         "paper id": "2403.11230",
         "abstract url": "https://arxiv.org/abs/2403.11230",
         "title": "Simple 2D Convolutional Neural Network-based Approach for COVID-19 Detection",
@@ -2757,6 +2845,25 @@
             "cs.CV"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2403.11237",
+        "abstract url": "https://arxiv.org/abs/2403.11237",
+        "title": "FORCE: Dataset and Method for Intuitive Physics Guided Human-object Interaction",
+        "rating": "-1",
+        "keywords": [
+            [
+                "Physics"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Interactions between human and objects are influenced not only by the object's pose and shape, but also by physical attributes such as object mass and surface friction. They introduce important motion nuances that are essential for diversity and realism. Despite advancements in recent kinematics-based methods, this aspect has been overlooked. Generating nuanced human motion presents two challenges. First, it is non-trivial to learn from multi-modal human and object information derived from both the physical and non-physical attributes. Second, there exists no dataset capturing nuanced human interactions with objects of varying physical properties, hampering model development. This work addresses the gap by introducing the FORCE model, a kinematic approach for synthesizing diverse, nuanced human-object interactions by modeling physical attributes. Our key insight is that human motion is dictated by the interrelation between the force exerted by the human and the perceived resistance. Guided by a novel intuitive physics encoding, the model captures the interplay between human force and resistance. Experiments also demonstrate incorporating human force facilitates learning multi-class motion. Accompanying our model, we contribute the FORCE dataset. It features diverse, different-styled motion through interactions with varying resistances.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "24 pages, 9 figures"
     },
     {
         "paper id": "2403.11247",
@@ -2851,7 +2958,6 @@
                 "Gaussian Splatting"
             ],
             [
-                "Synthesis",
                 "text-to-image"
             ],
             [
@@ -2931,25 +3037,23 @@
         "comment": null
     },
     {
-        "paper id": "2403.11324",
-        "abstract url": "https://arxiv.org/abs/2403.11324",
-        "title": "GeoGaussian: Geometry-aware Gaussian Splatting for Scene Rendering",
+        "paper id": "2403.11322",
+        "abstract url": "https://arxiv.org/abs/2403.11322",
+        "title": "StateFlow: Enhancing LLM Task-Solving through State-Driven Workflows",
         "rating": "-1",
         "keywords": [
             [
-                "3D",
-                "Gaussian Splatting"
+                "SQL"
             ],
             [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
+                "cs.AI",
+                "cs.CL"
             ]
         ],
-        "abstract": "During the Gaussian Splatting optimization process, the scene's geometry can gradually deteriorate if its structure is not deliberately preserved, especially in non-textured regions such as walls, ceilings, and furniture surfaces. This degradation significantly affects the rendering quality of novel views that deviate significantly from the viewpoints in the training data. To mitigate this issue, we propose a novel approach called GeoGaussian. Based on the smoothly connected areas observed from point clouds, this method introduces a novel pipeline to initialize thin Gaussians aligned with the surfaces, where the characteristic can be transferred to new generations through a carefully designed densification strategy. Finally, the pipeline ensures that the scene's geometry and texture are maintained through constrained optimization processes with explicit geometry constraints. Benefiting from the proposed architecture, the generative ability of 3D Gaussians is enhanced, especially in structured regions. Our proposed pipeline achieves state-of-the-art performance in novel view synthesis and geometric reconstruction, as evaluated qualitatively and quantitatively on public datasets.",
+        "abstract": "It is a notable trend to use Large Language Models (LLMs) to tackle complex tasks, e.g., tasks that require a sequence of actions and dynamic interaction with tools and external environments. In this paper, we propose StateFlow, a novel LLM-based task-solving paradigm that conceptualizes complex task-solving processes as state machines. In StateFlow, we distinguish between \"process grounding\" (via state and state transitions) and \"sub-task solving\" (through actions within a state), enhancing control and interpretability of the task-solving procedure. A state represents the status of a running process. The transitions between states are controlled by heuristic rules or decisions made by the LLM, allowing for a dynamic and adaptive progression. Upon entering a state, a series of actions is executed, involving not only calling LLMs guided by different prompts, but also the utilization of external tools as needed. Our results show that StateFlow significantly enhances LLMs' efficiency. For instance, StateFlow achieves 13% and 28% higher success rates compared to ReAct in InterCode SQL and ALFWorld benchmark, with 5x and 3x less cost respectively. We also show that StateFlow can be combined with iterative refining methods like Reflexion to further improve performance.",
         "subjects": [
-            "cs.CV"
+            "cs.CL",
+            "cs.AI"
         ],
         "comment": null
     },
@@ -3287,30 +3391,6 @@
         "comment": "14 pages, 11 figures"
     },
     {
-        "paper id": "2403.11453",
-        "abstract url": "https://arxiv.org/abs/2403.11453",
-        "title": "Bridging 3D Gaussian and Mesh for Freeview Video Rendering",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "This is only a preview version of GauMesh. Recently, primitive-based rendering has been proven to achieve convincing results in solving the problem of modeling and rendering the 3D dynamic scene from 2D images. Despite this, in the context of novel view synthesis, each type of primitive has its inherent defects in terms of representation ability. It is difficult to exploit the mesh to depict the fuzzy geometry. Meanwhile, the point-based splatting (e.g. the 3D Gaussian Splatting) method usually produces artifacts or blurry pixels in the area with smooth geometry and sharp textures. As a result, it is difficult, even not impossible, to represent the complex and dynamic scene with a single type of primitive. To this end, we propose a novel approach, GauMesh, to bridge the 3D Gaussian and Mesh for modeling and rendering the dynamic scenes. Given a sequence of tracked mesh as initialization, our goal is to simultaneously optimize the mesh geometry, color texture, opacity maps, a set of 3D Gaussians, and the deformation field. At a specific time, we perform $\u03b1$-blending on the RGB and opacity values based on the merged and re-ordered z-buffers from mesh and 3D Gaussian rasterizations. This produces the final rendering, which is supervised by the ground-truth image. Experiments demonstrate that our approach adapts the appropriate type of primitives to represent the different parts of the dynamic scene and outperforms all the baseline methods in both quantitative and qualitative comparisons without losing render speed.",
-        "subjects": [
-            "cs.GR",
-            "cs.CV"
-        ],
-        "comment": "7 pages"
-    },
-    {
         "paper id": "2403.11460",
         "abstract url": "https://arxiv.org/abs/2403.11460",
         "title": "Fed3DGS: Scalable 3D Gaussian Splatting with Federated Learning",
@@ -3334,22 +3414,6 @@
         "comment": "Code: https://github.com/DensoITLab/Fed3DGS"
     },
     {
-        "paper id": "2403.11461",
-        "abstract url": "https://arxiv.org/abs/2403.11461",
-        "title": "VIHE: Virtual In-Hand Eye Transformer for 3D Robotic Manipulation",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D"
-            ]
-        ],
-        "abstract": "In this work, we introduce the Virtual In-Hand Eye Transformer (VIHE), a novel method designed to enhance 3D manipulation capabilities through action-aware view rendering. VIHE autoregressively refines actions in multiple stages by conditioning on rendered views posed from action predictions in the earlier stages. These virtual in-hand views provide a strong inductive bias for effectively recognizing the correct pose for the hand, especially for challenging high-precision tasks such as peg insertion. On 18 manipulation tasks in RLBench simulated environments, VIHE achieves a new state-of-the-art, with a 12% absolute improvement, increasing from 65% to 77% over the existing state-of-the-art model using 100 demonstrations per task. In real-world scenarios, VIHE can learn manipulation tasks with just a handful of demonstrations, highlighting its practical utility. Videos and code implementation can be found at our project site: https://vihe-3d.github.io.",
-        "subjects": [
-            "cs.RO"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2403.11469",
         "abstract url": "https://arxiv.org/abs/2403.11469",
         "title": "Generative Motion Stylization within Canonical Motion Space",
@@ -3359,8 +3423,7 @@
                 "skeleton"
             ],
             [
-                "diffusion",
-                "synthesis"
+                "diffusion"
             ],
             [
                 "cs.CV"
@@ -3541,29 +3604,6 @@
         "comment": "Network and Distributed System Security Symposium (NDSS) 2024"
     },
     {
-        "paper id": "2403.11217",
-        "abstract url": "https://arxiv.org/abs/2403.11217",
-        "title": "Research on Personal Credit Risk Assessment Methods Based on Causal Inference",
-        "rating": "-1.5",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "graph"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "The discussion on causality in human history dates back to ancient Greece, yet to this day, there is still no consensus. Fundamentally, this stems from the nature of human cognition, as understanding causality requires abstract tools to transcend the limitations of human cognition. In recent decades, the rapid development of mathematical and computational tools has provided new theoretical and technical means for exploring causality, creating more avenues for investigation. Based on this, this paper introduces a new definition of causality using category theory, proposed by Samuel Eilenberg and Saunders Mac Lane in 1945 to avoid the self-referential contradictions in set theory, notably the Russell paradox. Within this framework, the feasibility of indicator synthesis in causal inference is demonstrated. Due to the limitations in the development of category theory-related technical tools, this paper adopts the widely-used probabilistic causal graph tool proposed by Judea Pearl in 1995 to study the application of causal inference in personal credit risk management. The specific work includes: research on the construction method of causal inference index system, definition of causality and feasibility proof of indicator synthesis causal inference within this framework, application methods of causal graph model and intervention alternative criteria in personal credit risk management, and so on.",
-        "subjects": [
-            "cs.AI",
-            "math.CT"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2403.11304",
         "abstract url": "https://arxiv.org/abs/2403.11304",
         "title": "Pioneering SE(2)-Equivariant Trajectory Planning for Automated Driving",
@@ -3639,30 +3679,6 @@
         "comment": "accepted by CVPR 2024"
     },
     {
-        "paper id": "2403.11418",
-        "abstract url": "https://arxiv.org/abs/2403.11418",
-        "title": "Variational Sampling of Temporal Trajectories",
-        "rating": "-1.5",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "trajectory"
-            ],
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "A deterministic temporal process can be determined by its trajectory, an element in the product space of (a) initial condition $z_0 \\in \\mathcal{Z}$ and (b) transition function $f: (\\mathcal{Z}, \\mathcal{T}) \\to \\mathcal{Z}$ often influenced by the control of the underlying dynamical system. Existing methods often model the transition function as a differential equation or as a recurrent neural network. Despite their effectiveness in predicting future measurements, few results have successfully established a method for sampling and statistical inference of trajectories using neural networks, partially due to constraints in the parameterization. In this work, we introduce a mechanism to learn the distribution of trajectories by parameterizing the transition function $f$ explicitly as an element in a function space. Our framework allows efficient synthesis of novel trajectories, while also directly providing a convenient tool for inference, i.e., uncertainty estimation, likelihood evaluations and out of distribution detection for abnormal trajectories. These capabilities can have implications for various downstream tasks, e.g., simulation and evaluation for reinforcement learning.",
-        "subjects": [
-            "cs.LG",
-            "cs.AI"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2403.11420",
         "abstract url": "https://arxiv.org/abs/2403.11420",
         "title": "Neural network representation of quantum systems",
@@ -3685,6 +3701,27 @@
             "quant-ph"
         ],
         "comment": "24 pages, 6 figures"
+    },
+    {
+        "paper id": "2403.11472",
+        "abstract url": "https://arxiv.org/abs/2403.11472",
+        "title": "Accelerating String-Key Learned Index Structures via Memoization-based Incremental Training",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "FPGA"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Learned indexes use machine learning models to learn the mappings between keys and their corresponding positions in key-value indexes. These indexes use the mapping information as training data. Learned indexes require frequent retrainings of their models to incorporate the changes introduced by update queries. To efficiently retrain the models, existing learned index systems often harness a linear algebraic QR factorization technique that performs matrix decomposition. This factorization approach processes all key-position pairs during each retraining, resulting in compute operations that grow linearly with the total number of keys and their lengths. Consequently, the retrainings create a severe performance bottleneck, especially for variable-length string keys, while the retrainings are crucial for maintaining high prediction accuracy and in turn, ensuring low query service latency. To address this performance problem, we develop an algorithm-hardware co-designed string-key learned index system, dubbed SIA. In designing SIA, we leverage a unique algorithmic property of the matrix decomposition-based training method. Exploiting the property, we develop a memoization-based incremental training scheme, which only requires computation over updated keys, while decomposition results of non-updated keys from previous computations can be reused. We further enhance SIA to offload a portion of this training process to an FPGA accelerator to not only relieve CPU resources for serving index queries (i.e., inference), but also accelerate the training itself. Our evaluation shows that compared to ALEX, LIPP, and SIndex, a state-of-the-art learned index systems, SIA-accelerated learned indexes offer 2.6x and 3.4x higher throughput on the two real-world benchmark suites, YCSB and Twitter cache trace, respectively.",
+        "subjects": [
+            "cs.LG",
+            "cs.AR",
+            "cs.DB"
+        ],
+        "comment": "Accepted at VLDB '24; 12 pages + 2 pages (ref), 18 figures, 2 tables"
     },
     {
         "paper id": "2403.12100",
@@ -3805,24 +3842,6 @@
         "comment": "This paper has been accepted for publication by IEEE Transactions on Wireless Communications"
     },
     {
-        "paper id": "2403.11110",
-        "abstract url": "https://arxiv.org/abs/2403.11110",
-        "title": "Smart structural health monitoring (SHM) system for on-board localization of defects in pipes using torsional ultrasonic guided waves",
-        "rating": "-2",
-        "keywords": [
-            [
-                "health"
-            ]
-        ],
-        "abstract": "Most reported research for monitoring health of pipelines using ultrasonic guided waves (GW) typically utilize bulky piezoelectric transducer rings and laboratory-grade ultrasonic non-destructive testing (NDT) equipment. Consequently, the translation of these approaches from laboratory settings to field-deployable systems for real-time structural health monitoring (SHM) becomes challenging. In this work, we present an innovative algorithm for damage identification and localization in pipes, implemented on a compact FPGA-based smart GW-SHM system. The custom-designed board, featuring a Xilinx Artix-7 FPGA and front-end electronics, is capable of actuating the PZT thickness shear mode transducers, data acquisition and recording from PZT sensors and generating a damage index (DI) map for localizing the damage on the structure. The algorithm is a variation of the common source method adapted for cylindrical geometry. The utility of the algorithm is demonstrated for detection and localization of defects such as notch and mass loading on a steel pipe, through extensive finite element (FE) method simulations. Experimental results obtained using a C-clamp for applying mass loading on the pipe show good agreement with the FE simulations. The localization error values for experimental data analyzed using C code on a processor implemented on the FPGA are consistent with algorithm results generated on a computer running MATLAB code. The system presented in this study is suitable for a wide range of GW-SHM applications, especially in cost-sensitive scenarios that benefit from on-node signal processing over cloud-based solutions.",
-        "subjects": [
-            "eess.SP",
-            "physics.app-ph",
-            "physics.ins-det"
-        ],
-        "comment": "12 pages, 12 figures, 3 tables"
-    },
-    {
         "paper id": "2403.11122",
         "abstract url": "https://arxiv.org/abs/2403.11122",
         "title": "LERENet: Eliminating Intra-class Differences for Metal Surface Defect Few-shot Semantic Segmentation",
@@ -3859,29 +3878,6 @@
             "cs.IR"
         ],
         "comment": "Accepted by WWW 2024"
-    },
-    {
-        "paper id": "2403.11192",
-        "abstract url": "https://arxiv.org/abs/2403.11192",
-        "title": "Self-Supervised Video Desmoking for Laparoscopic Surgery",
-        "rating": "-2",
-        "keywords": [
-            [
-                "synthesizing"
-            ],
-            [
-                "surgical",
-                "Surgery"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Due to the difficulty of collecting real paired data, most existing desmoking methods train the models by synthesizing smoke, generalizing poorly to real surgical scenarios. Although a few works have explored single-image real-world desmoking in unpaired learning manners, they still encounter challenges in handling dense smoke. In this work, we address these issues together by introducing the self-supervised surgery video desmoking (SelfSVD). On the one hand, we observe that the frame captured before the activation of high-energy devices is generally clear (named pre-smoke frame, PS frame), thus it can serve as supervision for other smoky frames, making real-world self-supervised video desmoking practically feasible. On the other hand, in order to enhance the desmoking performance, we further feed the valuable information from PS frame into models, where a masking strategy and a regularization term are presented to avoid trivial solutions. In addition, we construct a real surgery video dataset for desmoking, which covers a variety of smoky scenes. Extensive experiments on the dataset show that our SelfSVD can remove smoke more effectively and efficiently while recovering more photo-realistic details than the state-of-the-art methods. The dataset, codes, and pre-trained models are available at \\url{https://github.com/ZcsrenlongZ/SelfSVD}.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "28 pages"
     },
     {
         "paper id": "2403.11207",
@@ -3932,30 +3928,6 @@
         "comment": "Full version including appendixes"
     },
     {
-        "paper id": "2403.11227",
-        "abstract url": "https://arxiv.org/abs/2403.11227",
-        "title": "Cheap Ways of Extracting Clinical Markers from Texts",
-        "rating": "-2",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "Clinical"
-            ],
-            [
-                "cs.LG",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "This paper describes the work of the UniBuc Archaeology team for CLPsych's 2024 Shared Task, which involved finding evidence within the text supporting the assigned suicide risk level. Two types of evidence were required: highlights (extracting relevant spans within the text) and summaries (aggregating evidence into a synthesis). Our work focuses on evaluating Large Language Models (LLM) as opposed to an alternative method that is much more memory and resource efficient. The first approach employs a good old-fashioned machine learning (GOML) pipeline consisting of a tf-idf vectorizer with a logistic regression classifier, whose representative features are used to extract relevant highlights. The second, more resource intensive, uses an LLM for generating the summaries and is guided by chain-of-thought to provide sequences of text indicating clinical markers.",
-        "subjects": [
-            "cs.CL",
-            "cs.LG"
-        ],
-        "comment": "https://github.com/nlp-unibuc/clpsych24-task"
-    },
-    {
         "paper id": "2403.11229",
         "abstract url": "https://arxiv.org/abs/2403.11229",
         "title": "Concatenate, Fine-tuning, Re-training: A SAM-enabled Framework for Semi-supervised 3D Medical Image Segmentation",
@@ -3976,28 +3948,6 @@
             "cs.CV"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2403.11237",
-        "abstract url": "https://arxiv.org/abs/2403.11237",
-        "title": "FORCE: Dataset and Method for Intuitive Physics Guided Human-object Interaction",
-        "rating": "-2",
-        "keywords": [
-            [
-                "synthesizing"
-            ],
-            [
-                "Physics"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Interactions between human and objects are influenced not only by the object's pose and shape, but also by physical attributes such as object mass and surface friction. They introduce important motion nuances that are essential for diversity and realism. Despite advancements in recent kinematics-based methods, this aspect has been overlooked. Generating nuanced human motion presents two challenges. First, it is non-trivial to learn from multi-modal human and object information derived from both the physical and non-physical attributes. Second, there exists no dataset capturing nuanced human interactions with objects of varying physical properties, hampering model development. This work addresses the gap by introducing the FORCE model, a kinematic approach for synthesizing diverse, nuanced human-object interactions by modeling physical attributes. Our key insight is that human motion is dictated by the interrelation between the force exerted by the human and the perceived resistance. Guided by a novel intuitive physics encoding, the model captures the interplay between human force and resistance. Experiments also demonstrate incorporating human force facilitates learning multi-class motion. Accompanying our model, we contribute the FORCE dataset. It features diverse, different-styled motion through interactions with varying resistances.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "24 pages, 9 figures"
     },
     {
         "paper id": "2403.11252",
@@ -4183,6 +4133,22 @@
         "comment": null
     },
     {
+        "paper id": "2403.11414",
+        "abstract url": "https://arxiv.org/abs/2403.11414",
+        "title": "Table-Lookup MAC: Scalable Processing of Quantised Neural Networks in FPGA Soft Logic",
+        "rating": "-2",
+        "keywords": [
+            [
+                "FPGA"
+            ]
+        ],
+        "abstract": "Recent advancements in neural network quantisation have yielded remarkable outcomes, with three-bit networks reaching state-of-the-art full-precision accuracy in complex tasks. These achievements present valuable opportunities for accelerating neural networks by computing in reduced precision. Implementing it on FPGAs can take advantage of bit-level reconfigurability, which is not available on conventional CPUs and GPUs. Simultaneously, the high data intensity of neural network processing has inspired computing-in-memory paradigms, including on FPGA platforms. By programming the effects of trained model weights as lookup operations in soft logic, the transfer of weight data from memory units can be avoided, alleviating the memory bottleneck. However, previous methods face poor scalability - the high logic utilisation limiting them to small networks/sub-networks of binary models with low accuracy. In this paper, we introduce Table Lookup Multiply-Accumulate (TLMAC) as a framework to compile and optimise quantised neural networks for scalable lookup-based processing. TLMAC clusters and maps unique groups of weights to lookup-based processing elements, enabling highly parallel computation while taking advantage of parameter redundancy. Further place and route algorithms are proposed to reduce LUT utilisation and routing congestion. We demonstrate that TLMAC significantly improves the scalability of previous related works. Our efficient logic mapping and high degree of reuse enables entire ImageNet-scale quantised models with full-precision accuracy to be implemented using lookup-based computing on one commercially available FPGA.",
+        "subjects": [
+            "cs.AR"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2403.11417",
         "abstract url": "https://arxiv.org/abs/2403.11417",
         "title": "Positioning Using Wireless Networks: Applications, Recent Progress and Future Challenges",
@@ -4302,13 +4268,32 @@
         "comment": null
     },
     {
+        "paper id": "2403.11461",
+        "abstract url": "https://arxiv.org/abs/2403.11461",
+        "title": "VIHE: Virtual In-Hand Eye Transformer for 3D Robotic Manipulation",
+        "rating": "-2",
+        "keywords": [
+            [
+                "3D"
+            ],
+            [
+                "Robotic Manipulation"
+            ]
+        ],
+        "abstract": "In this work, we introduce the Virtual In-Hand Eye Transformer (VIHE), a novel method designed to enhance 3D manipulation capabilities through action-aware view rendering. VIHE autoregressively refines actions in multiple stages by conditioning on rendered views posed from action predictions in the earlier stages. These virtual in-hand views provide a strong inductive bias for effectively recognizing the correct pose for the hand, especially for challenging high-precision tasks such as peg insertion. On 18 manipulation tasks in RLBench simulated environments, VIHE achieves a new state-of-the-art, with a 12% absolute improvement, increasing from 65% to 77% over the existing state-of-the-art model using 100 demonstrations per task. In real-world scenarios, VIHE can learn manipulation tasks with just a handful of demonstrations, highlighting its practical utility. Videos and code implementation can be found at our project site: https://vihe-3d.github.io.",
+        "subjects": [
+            "cs.RO"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2403.15442",
         "abstract url": "https://arxiv.org/abs/2403.15442",
         "title": "Advanced Artificial Intelligence Algorithms in Cochlear Implants: Review of Healthcare Strategies, Challenges, and Perspectives",
         "rating": "-2",
         "keywords": [
             [
-                "synthesis"
+                "speech enhancement"
             ],
             [
                 "biomedical",
@@ -4661,6 +4646,27 @@
             "eess.SY"
         ],
         "comment": "7 pages, Accepted in American Control Conference (ACC) 2024, July 10-12th, Toronto, ON, Canada"
+    },
+    {
+        "paper id": "2403.11110",
+        "abstract url": "https://arxiv.org/abs/2403.11110",
+        "title": "Smart structural health monitoring (SHM) system for on-board localization of defects in pipes using torsional ultrasonic guided waves",
+        "rating": "-4",
+        "keywords": [
+            [
+                "health"
+            ],
+            [
+                "FPGA"
+            ]
+        ],
+        "abstract": "Most reported research for monitoring health of pipelines using ultrasonic guided waves (GW) typically utilize bulky piezoelectric transducer rings and laboratory-grade ultrasonic non-destructive testing (NDT) equipment. Consequently, the translation of these approaches from laboratory settings to field-deployable systems for real-time structural health monitoring (SHM) becomes challenging. In this work, we present an innovative algorithm for damage identification and localization in pipes, implemented on a compact FPGA-based smart GW-SHM system. The custom-designed board, featuring a Xilinx Artix-7 FPGA and front-end electronics, is capable of actuating the PZT thickness shear mode transducers, data acquisition and recording from PZT sensors and generating a damage index (DI) map for localizing the damage on the structure. The algorithm is a variation of the common source method adapted for cylindrical geometry. The utility of the algorithm is demonstrated for detection and localization of defects such as notch and mass loading on a steel pipe, through extensive finite element (FE) method simulations. Experimental results obtained using a C-clamp for applying mass loading on the pipe show good agreement with the FE simulations. The localization error values for experimental data analyzed using C code on a processor implemented on the FPGA are consistent with algorithm results generated on a computer running MATLAB code. The system presented in this study is suitable for a wide range of GW-SHM applications, especially in cost-sensitive scenarios that benefit from on-node signal processing over cloud-based solutions.",
+        "subjects": [
+            "eess.SP",
+            "physics.app-ph",
+            "physics.ins-det"
+        ],
+        "comment": "12 pages, 12 figures, 3 tables"
     },
     {
         "paper id": "2403.11171",
@@ -5096,18 +5102,6 @@
             "cs.RO"
         ],
         "comment": "ICRA 2024"
-    },
-    {
-        "paper id": "2403.11414",
-        "abstract url": "https://arxiv.org/abs/2403.11414",
-        "title": "Table-Lookup MAC: Scalable Processing of Quantised Neural Networks in FPGA Soft Logic",
-        "rating": "-10",
-        "keywords": [],
-        "abstract": "Recent advancements in neural network quantisation have yielded remarkable outcomes, with three-bit networks reaching state-of-the-art full-precision accuracy in complex tasks. These achievements present valuable opportunities for accelerating neural networks by computing in reduced precision. Implementing it on FPGAs can take advantage of bit-level reconfigurability, which is not available on conventional CPUs and GPUs. Simultaneously, the high data intensity of neural network processing has inspired computing-in-memory paradigms, including on FPGA platforms. By programming the effects of trained model weights as lookup operations in soft logic, the transfer of weight data from memory units can be avoided, alleviating the memory bottleneck. However, previous methods face poor scalability - the high logic utilisation limiting them to small networks/sub-networks of binary models with low accuracy. In this paper, we introduce Table Lookup Multiply-Accumulate (TLMAC) as a framework to compile and optimise quantised neural networks for scalable lookup-based processing. TLMAC clusters and maps unique groups of weights to lookup-based processing elements, enabling highly parallel computation while taking advantage of parameter redundancy. Further place and route algorithms are proposed to reduce LUT utilisation and routing congestion. We demonstrate that TLMAC significantly improves the scalability of previous related works. Our efficient logic mapping and high degree of reuse enables entire ImageNet-scale quantised models with full-precision accuracy to be implemented using lookup-based computing on one commercially available FPGA.",
-        "subjects": [
-            "cs.AR"
-        ],
-        "comment": null
     },
     {
         "paper id": "2403.11421",

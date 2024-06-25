@@ -47,7 +47,7 @@
         "rating": "1.5",
         "keywords": [
             [
-                "time efficiency"
+                "memory efficiency"
             ],
             [
                 "cs.LG"
@@ -58,6 +58,25 @@
             "cs.LG"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2405.16466",
+        "abstract url": "https://arxiv.org/abs/2405.16466",
+        "title": "High-Performance Temporal Reversible Spiking Neural Networks with $O(L)$ Training Memory and $O(1)$ Inference Cost",
+        "rating": "1.5",
+        "keywords": [
+            [
+                "memory efficiency"
+            ],
+            [
+                "ICML"
+            ]
+        ],
+        "abstract": "Multi-timestep simulation of brain-inspired Spiking Neural Networks (SNNs) boost memory requirements during training and increase inference energy cost. Current training methods cannot simultaneously solve both training and inference dilemmas. This work proposes a novel Temporal Reversible architecture for SNNs (T-RevSNN) to jointly address the training and inference challenges by altering the forward propagation of SNNs. We turn off the temporal dynamics of most spiking neurons and design multi-level temporal reversible interactions at temporal turn-on spiking neurons, resulting in a $O(L)$ training memory. Combined with the temporal reversible nature, we redesign the input encoding and network organization of SNNs to achieve $O(1)$ inference energy cost. Then, we finely adjust the internal units and residual connections of the basic SNN block to ensure the effectiveness of sparse temporal information interaction. T-RevSNN achieves excellent accuracy on ImageNet, while the memory efficiency, training time acceleration, and inference energy efficiency can be significantly improved by $8.6 \\times$, $2.0 \\times$, and $1.6 \\times$, respectively. This work is expected to break the technical bottleneck of significantly increasing memory cost and training time for large-scale SNNs while maintaining high performance and low inference energy cost. Source code and models are available at: https://github.com/BICLab/T-RevSNN.",
+        "subjects": [
+            "cs.NE"
+        ],
+        "comment": "Accepted by ICML2024"
     },
     {
         "paper id": "2405.16671",
@@ -330,22 +349,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.16600",
-        "abstract url": "https://arxiv.org/abs/2405.16600",
-        "title": "Image-Text-Image Knowledge Transferring for Lifelong Person Re-Identification with Hybrid Clothing States",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "With the continuous expansion of intelligent surveillance networks, lifelong person re-identification (LReID) has received widespread attention, pursuing the need of self-evolution across different domains. However, existing LReID studies accumulate knowledge with the assumption that people would not change their clothes. In this paper, we propose a more practical task, namely lifelong person re-identification with hybrid clothing states (LReID-Hybrid), which takes a series of cloth-changing and cloth-consistent domains into account during lifelong learning. To tackle the challenges of knowledge granularity mismatch and knowledge presentation mismatch that occurred in LReID-Hybrid, we take advantage of the consistency and generalization of the text space, and propose a novel framework, dubbed $Teata$, to effectively align, transfer and accumulate knowledge in an \"image-text-image\" closed loop. Concretely, to achieve effective knowledge transfer, we design a Structured Semantic Prompt (SSP) learning to decompose the text prompt into several structured pairs to distill knowledge from the image space with a unified granularity of text description. Then, we introduce a Knowledge Adaptation and Projection strategy (KAP), which tunes text knowledge via a slow-paced learner to adapt to different tasks without catastrophic forgetting. Extensive experiments demonstrate the superiority of our proposed $Teata$ for LReID-Hybrid as well as on conventional LReID benchmarks over advanced methods.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2405.16605",
         "abstract url": "https://arxiv.org/abs/2405.16605",
         "title": "Demystify Mamba in Vision: A Linear Attention Perspective",
@@ -449,6 +452,27 @@
         "abstract": "Compressing lengthy context is a critical but technically challenging problem. In this paper, we propose a new method called UltraGist, which is distinguished for its high-quality compression of lengthy context due to the innovative design of the compression and learning algorithm. UltraGist brings forth the following important benefits. Firstly, it notably contributes to the flexibility of compression, as it can be effectively learned to support a broad range of context lengths and compression ratios. Secondly, it helps to produce fine-grained compression for the lengthy context, where each small segment of the context is progressively processed on top of a tailored cross-attention mechanism. Thirdly, it makes the training process sample-efficient and thus maximizes the use of training data. Finally, it facilitates the efficient running of compression for dynamic context, as the compression result can be progressively generated and hence incrementally updated. UltraGist is evaluated on a wide variety of tasks associated with lengthy context, such as document QA and summarization, few-shot learning, multi-session conversation, et al. Whilst the existing methods fail to handle these challenging scenarios, our approach is able to preserve a near-lossless compression performance throughout all the evaluations. Our data, model, and code have been released at \\url{https://github.com/namespace-Pt/UltraGist}.",
         "subjects": [
             "cs.CL"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2405.16661",
+        "abstract url": "https://arxiv.org/abs/2405.16661",
+        "title": "RLSF: Reinforcement Learning via Symbolic Feedback",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.AI",
+                "cs.LG",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "In recent years, large language models (LLMs) have had a dramatic impact on various sub-fields of AI, most notably on natural language understanding tasks. However, there is widespread agreement that the logical reasoning capabilities of contemporary LLMs are, at best, fragmentary (i.e., may work well on some problem instances but fail dramatically on others). While traditional LLM fine-tuning approaches (e.g., those that use human feedback) do address this problem to some degree, they suffer from many issues, including unsound black-box reward models, difficulties in collecting preference data, and sparse scalar reward values. To address these challenges, we propose a new training/fine-tuning paradigm we refer to as Reinforcement Learning via Symbolic Feedback (RLSF), which is aimed at enhancing the reasoning capabilities of LLMs. In the RLSF setting, the LLM that is being trained/fine-tuned is considered as the RL agent, while the environment is allowed access to reasoning or domain knowledge tools (e.g., solvers, algebra systems). Crucially, in RLSF, these reasoning tools can provide feedback to the LLMs via poly-sized certificates (e.g., proofs), that characterize errors in the LLM-generated object with respect to some correctness specification. The ability of RLSF-based training/fine-tuning to leverage certificate-generating symbolic tools enables sound fine-grained (token-level) reward signals to LLMs, and thus addresses the limitations of traditional reward models mentioned above. Via extensive evaluations, we show that our RLSF-based fine-tuning of LLMs outperforms traditional approaches on two different applications, namely, program synthesis from natural language pseudo-code to programming language (C++) and solving the Game of 24.",
+        "subjects": [
+            "cs.CL",
+            "cs.AI",
+            "cs.LG",
+            "cs.LO"
         ],
         "comment": null
     },
@@ -622,6 +646,22 @@
         "comment": null
     },
     {
+        "paper id": "2405.16790",
+        "abstract url": "https://arxiv.org/abs/2405.16790",
+        "title": "SCSim: A Realistic Spike Cameras Simulator",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Spike cameras, with their exceptional temporal resolution, are revolutionizing high-speed visual applications. Large-scale synthetic datasets have significantly accelerated the development of these cameras, particularly in reconstruction and optical flow. However, current synthetic datasets for spike cameras lack sophistication. Addressing this gap, we introduce SCSim, a novel and more realistic spike camera simulator with a comprehensive noise model. SCSim is adept at autonomously generating driving scenarios and synthesizing corresponding spike streams. To enhance the fidelity of these streams, we've developed a comprehensive noise model tailored to the unique circuitry of spike cameras. Our evaluations demonstrate that SCSim outperforms existing simulation methods in generating authentic spike streams. Crucially, SCSim simplifies the creation of datasets, thereby greatly advancing spike-based visual tasks like reconstruction. Our project refers to https://github.com/Acnext/SCSim.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Accepted by ICME2024. arXiv admin note: substantial text overlap with arXiv:2304.03129"
+    },
+    {
         "paper id": "2405.16802",
         "abstract url": "https://arxiv.org/abs/2405.16802",
         "title": "AutoCV: Empowering Reasoning with Automated Process Labeling via Confidence Variation",
@@ -673,6 +713,32 @@
         "subjects": [
             "cs.CL",
             "cs.AI"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2405.16807",
+        "abstract url": "https://arxiv.org/abs/2405.16807",
+        "title": "Extreme Compression of Adaptive Neural Images",
+        "rating": "1",
+        "keywords": [
+            [
+                "memory efficiency"
+            ],
+            [
+                "3D"
+            ],
+            [
+                "cs.AI",
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Implicit Neural Representations (INRs) and Neural Fields are a novel paradigm for signal representation, from images and audio to 3D scenes and videos. The fundamental idea is to represent a signal as a continuous and differentiable neural network. This idea offers unprecedented benefits such as continuous resolution and memory efficiency, enabling new compression techniques. However, representing data as neural networks poses new challenges. For instance, given a 2D image as a neural network, how can we further compress such a neural image?. In this work, we present a novel analysis on compressing neural fields, with the focus on images. We also introduce Adaptive Neural Images (ANI), an efficient neural representation that enables adaptation to different inference or transmission requirements. Our proposed method allows to reduce the bits-per-pixel (bpp) of the neural image by 4x, without losing sensitive details or harming fidelity. We achieve this thanks to our successful implementation of 4-bit neural representations. Our work offers a new framework for developing compressed neural fields.",
+        "subjects": [
+            "cs.CV",
+            "cs.AI",
+            "cs.GR",
+            "cs.MM"
         ],
         "comment": null
     },
@@ -749,6 +815,25 @@
         "comment": null
     },
     {
+        "paper id": "2405.16450",
+        "abstract url": "https://arxiv.org/abs/2405.16450",
+        "title": "Synthesizing Programmatic Reinforcement Learning Policies with Large Language Model Guided Search",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Programmatic reinforcement learning (PRL) has been explored for representing policies through programs as a means to achieve interpretability and generalization. Despite promising outcomes, current state-of-the-art PRL methods are hindered by sample inefficiency, necessitating tens of millions of program-environment interactions. To tackle this challenge, we introduce a novel LLM-guided search framework (LLM-GS). Our key insight is to leverage the programming expertise and common sense reasoning of LLMs to enhance the efficiency of assumption-free, random-guessing search methods. We address the challenge of LLMs' inability to generate precise and grammatically correct programs in domain-specific languages (DSLs) by proposing a Pythonic-DSL strategy - an LLM is instructed to initially generate Python codes and then convert them into DSL programs. To further optimize the LLM-generated programs, we develop a search algorithm named Scheduled Hill Climbing, designed to efficiently explore the programmatic search space to consistently improve the programs. Experimental results in the Karel domain demonstrate the superior effectiveness and efficiency of our LLM-GS framework. Extensive ablation studies further verify the critical role of our Pythonic-DSL strategy and Scheduled Hill Climbing algorithm.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI",
+            "cs.PL"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.16455",
         "abstract url": "https://arxiv.org/abs/2405.16455",
         "title": "On the Algorithmic Bias of Aligning Large Language Models with RLHF: Preference Collapse and Matching Regularization",
@@ -783,22 +868,6 @@
             "cs.AI"
         ],
         "comment": "https://kaizhao.net/time-series"
-    },
-    {
-        "paper id": "2405.16466",
-        "abstract url": "https://arxiv.org/abs/2405.16466",
-        "title": "High-Performance Temporal Reversible Spiking Neural Networks with $O(L)$ Training Memory and $O(1)$ Inference Cost",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "ICML"
-            ]
-        ],
-        "abstract": "Multi-timestep simulation of brain-inspired Spiking Neural Networks (SNNs) boost memory requirements during training and increase inference energy cost. Current training methods cannot simultaneously solve both training and inference dilemmas. This work proposes a novel Temporal Reversible architecture for SNNs (T-RevSNN) to jointly address the training and inference challenges by altering the forward propagation of SNNs. We turn off the temporal dynamics of most spiking neurons and design multi-level temporal reversible interactions at temporal turn-on spiking neurons, resulting in a $O(L)$ training memory. Combined with the temporal reversible nature, we redesign the input encoding and network organization of SNNs to achieve $O(1)$ inference energy cost. Then, we finely adjust the internal units and residual connections of the basic SNN block to ensure the effectiveness of sparse temporal information interaction. T-RevSNN achieves excellent accuracy on ImageNet, while the memory efficiency, training time acceleration, and inference energy efficiency can be significantly improved by $8.6 \\times$, $2.0 \\times$, and $1.6 \\times$, respectively. This work is expected to break the technical bottleneck of significantly increasing memory cost and training time for large-scale SNNs while maintaining high performance and low inference energy cost. Source code and models are available at: https://github.com/BICLab/T-RevSNN.",
-        "subjects": [
-            "cs.NE"
-        ],
-        "comment": "Accepted by ICML2024"
     },
     {
         "paper id": "2405.16498",
@@ -1809,6 +1878,25 @@
         "comment": "Accepted by CVPR2024"
     },
     {
+        "paper id": "2405.16600",
+        "abstract url": "https://arxiv.org/abs/2405.16600",
+        "title": "Image-Text-Image Knowledge Transferring for Lifelong Person Re-Identification with Hybrid Clothing States",
+        "rating": "0",
+        "keywords": [
+            [
+                "Re-Identification"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "With the continuous expansion of intelligent surveillance networks, lifelong person re-identification (LReID) has received widespread attention, pursuing the need of self-evolution across different domains. However, existing LReID studies accumulate knowledge with the assumption that people would not change their clothes. In this paper, we propose a more practical task, namely lifelong person re-identification with hybrid clothing states (LReID-Hybrid), which takes a series of cloth-changing and cloth-consistent domains into account during lifelong learning. To tackle the challenges of knowledge granularity mismatch and knowledge presentation mismatch that occurred in LReID-Hybrid, we take advantage of the consistency and generalization of the text space, and propose a novel framework, dubbed $Teata$, to effectively align, transfer and accumulate knowledge in an \"image-text-image\" closed loop. Concretely, to achieve effective knowledge transfer, we design a Structured Semantic Prompt (SSP) learning to decompose the text prompt into several structured pairs to distill knowledge from the image space with a unified granularity of text description. Then, we introduce a Knowledge Adaptation and Projection strategy (KAP), which tunes text knowledge via a slow-paced learner to adapt to different tasks without catastrophic forgetting. Extensive experiments demonstrate the superiority of our proposed $Teata$ for LReID-Hybrid as well as on conventional LReID benchmarks over advanced methods.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.16640",
         "abstract url": "https://arxiv.org/abs/2405.16640",
         "title": "A Survey of Multimodal Large Language Model from A Data-centric Perspective",
@@ -1829,30 +1917,6 @@
             "cs.CL",
             "cs.CV",
             "cs.MM"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2405.16661",
-        "abstract url": "https://arxiv.org/abs/2405.16661",
-        "title": "RLSF: Reinforcement Learning via Symbolic Feedback",
-        "rating": "0",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.AI",
-                "cs.LG",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "In recent years, large language models (LLMs) have had a dramatic impact on various sub-fields of AI, most notably on natural language understanding tasks. However, there is widespread agreement that the logical reasoning capabilities of contemporary LLMs are, at best, fragmentary (i.e., may work well on some problem instances but fail dramatically on others). While traditional LLM fine-tuning approaches (e.g., those that use human feedback) do address this problem to some degree, they suffer from many issues, including unsound black-box reward models, difficulties in collecting preference data, and sparse scalar reward values. To address these challenges, we propose a new training/fine-tuning paradigm we refer to as Reinforcement Learning via Symbolic Feedback (RLSF), which is aimed at enhancing the reasoning capabilities of LLMs. In the RLSF setting, the LLM that is being trained/fine-tuned is considered as the RL agent, while the environment is allowed access to reasoning or domain knowledge tools (e.g., solvers, algebra systems). Crucially, in RLSF, these reasoning tools can provide feedback to the LLMs via poly-sized certificates (e.g., proofs), that characterize errors in the LLM-generated object with respect to some correctness specification. The ability of RLSF-based training/fine-tuning to leverage certificate-generating symbolic tools enables sound fine-grained (token-level) reward signals to LLMs, and thus addresses the limitations of traditional reward models mentioned above. Via extensive evaluations, we show that our RLSF-based fine-tuning of LLMs outperforms traditional approaches on two different applications, namely, program synthesis from natural language pseudo-code to programming language (C++) and solving the Game of 24.",
-        "subjects": [
-            "cs.CL",
-            "cs.AI",
-            "cs.LG",
-            "cs.LO"
         ],
         "comment": null
     },
@@ -1905,8 +1969,7 @@
         "rating": "0",
         "keywords": [
             [
-                "diffusion",
-                "synthesis"
+                "diffusion"
             ],
             [
                 "cs.AI",
@@ -2036,25 +2099,6 @@
         "comment": "The ancillary files include an HTML supplement with interactive visualizations of all experiment results at \"supplement/index.html\". To download the supplement as a single archive, see \"supplement.7z\""
     },
     {
-        "paper id": "2405.16790",
-        "abstract url": "https://arxiv.org/abs/2405.16790",
-        "title": "SCSim: A Realistic Spike Cameras Simulator",
-        "rating": "0",
-        "keywords": [
-            [
-                "synthesizing"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Spike cameras, with their exceptional temporal resolution, are revolutionizing high-speed visual applications. Large-scale synthetic datasets have significantly accelerated the development of these cameras, particularly in reconstruction and optical flow. However, current synthetic datasets for spike cameras lack sophistication. Addressing this gap, we introduce SCSim, a novel and more realistic spike camera simulator with a comprehensive noise model. SCSim is adept at autonomously generating driving scenarios and synthesizing corresponding spike streams. To enhance the fidelity of these streams, we've developed a comprehensive noise model tailored to the unique circuitry of spike cameras. Our evaluations demonstrate that SCSim outperforms existing simulation methods in generating authentic spike streams. Crucially, SCSim simplifies the creation of datasets, thereby greatly advancing spike-based visual tasks like reconstruction. Our project refers to https://github.com/Acnext/SCSim.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Accepted by ICME2024. arXiv admin note: substantial text overlap with arXiv:2304.03129"
-    },
-    {
         "paper id": "2405.16796",
         "abstract url": "https://arxiv.org/abs/2405.16796",
         "title": "DualContrast: Unsupervised Disentangling of Content and Transformations with Implicit Parameterization",
@@ -2117,29 +2161,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.16807",
-        "abstract url": "https://arxiv.org/abs/2405.16807",
-        "title": "Extreme Compression of Adaptive Neural Images",
-        "rating": "0",
-        "keywords": [
-            [
-                "3D"
-            ],
-            [
-                "cs.AI",
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Implicit Neural Representations (INRs) and Neural Fields are a novel paradigm for signal representation, from images and audio to 3D scenes and videos. The fundamental idea is to represent a signal as a continuous and differentiable neural network. This idea offers unprecedented benefits such as continuous resolution and memory efficiency, enabling new compression techniques. However, representing data as neural networks poses new challenges. For instance, given a 2D image as a neural network, how can we further compress such a neural image?. In this work, we present a novel analysis on compressing neural fields, with the focus on images. We also introduce Adaptive Neural Images (ANI), an efficient neural representation that enables adaptation to different inference or transmission requirements. Our proposed method allows to reduce the bits-per-pixel (bpp) of the neural image by 4x, without losing sensitive details or harming fidelity. We achieve this thanks to our successful implementation of 4-bit neural representations. Our work offers a new framework for developing compressed neural fields.",
-        "subjects": [
-            "cs.CV",
-            "cs.AI",
-            "cs.GR",
-            "cs.MM"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2405.16810",
         "abstract url": "https://arxiv.org/abs/2405.16810",
         "title": "Performance evaluation of Reddit Comments using Machine Learning and Natural Language Processing methods in Sentiment Analysis",
@@ -2195,6 +2216,28 @@
             "cs.CV"
         ],
         "comment": "Project page: https://vidu4d-dgs.github.io"
+    },
+    {
+        "paper id": "2405.16829",
+        "abstract url": "https://arxiv.org/abs/2405.16829",
+        "title": "PyGS: Large-scale Scene Representation with Pyramidal 3D Gaussian Splatting",
+        "rating": "0",
+        "keywords": [
+            [
+                "3D",
+                "Gaussian Splatting",
+                "NeRF",
+                "Radiance Fields"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Neural Radiance Fields (NeRFs) have demonstrated remarkable proficiency in synthesizing photorealistic images of large-scale scenes. However, they are often plagued by a loss of fine details and long rendering durations. 3D Gaussian Splatting has recently been introduced as a potent alternative, achieving both high-fidelity visual results and accelerated rendering performance. Nonetheless, scaling 3D Gaussian Splatting is fraught with challenges. Specifically, large-scale scenes grapples with the integration of objects across multiple scales and disparate viewpoints, which often leads to compromised efficacy as the Gaussians need to balance between detail levels. Furthermore, the generation of initialization points via COLMAP from large-scale dataset is both computationally demanding and prone to incomplete reconstructions. To address these challenges, we present Pyramidal 3D Gaussian Splatting (PyGS) with NeRF Initialization. Our approach represent the scene with a hierarchical assembly of Gaussians arranged in a pyramidal fashion. The top level of the pyramid is composed of a few large Gaussians, while each subsequent layer accommodates a denser collection of smaller Gaussians. We effectively initialize these pyramidal Gaussians through sampling a rapidly trained grid-based NeRF at various frequencies. We group these pyramidal Gaussians into clusters and use a compact weighting network to dynamically determine the influence of each pyramid level of each cluster considering camera viewpoint during rendering. Our method achieves a significant performance leap across multiple large-scale datasets and attains a rendering time that is over 400 times faster than current state-of-the-art approaches.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
     },
     {
         "paper id": "2405.16435",
@@ -2258,28 +2301,6 @@
             "cs.LG",
             "math.OC",
             "q-fin.MF"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2405.16450",
-        "abstract url": "https://arxiv.org/abs/2405.16450",
-        "title": "Synthesizing Programmatic Reinforcement Learning Policies with Large Language Model Guided Search",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "Synthesizing"
-            ],
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Programmatic reinforcement learning (PRL) has been explored for representing policies through programs as a means to achieve interpretability and generalization. Despite promising outcomes, current state-of-the-art PRL methods are hindered by sample inefficiency, necessitating tens of millions of program-environment interactions. To tackle this challenge, we introduce a novel LLM-guided search framework (LLM-GS). Our key insight is to leverage the programming expertise and common sense reasoning of LLMs to enhance the efficiency of assumption-free, random-guessing search methods. We address the challenge of LLMs' inability to generate precise and grammatically correct programs in domain-specific languages (DSLs) by proposing a Pythonic-DSL strategy - an LLM is instructed to initially generate Python codes and then convert them into DSL programs. To further optimize the LLM-generated programs, we develop a search algorithm named Scheduled Hill Climbing, designed to efficiently explore the programmatic search space to consistently improve the programs. Experimental results in the Karel domain demonstrate the superior effectiveness and efficiency of our LLM-GS framework. Extensive ablation studies further verify the critical role of our Pythonic-DSL strategy and Scheduled Hill Climbing algorithm.",
-        "subjects": [
-            "cs.LG",
-            "cs.AI",
-            "cs.PL"
         ],
         "comment": null
     },
@@ -2525,28 +2546,6 @@
             "cs.CV"
         ],
         "comment": "7 pages, 9 figures, Proceedings of the 2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops"
-    },
-    {
-        "paper id": "2405.16755",
-        "abstract url": "https://arxiv.org/abs/2405.16755",
-        "title": "CHESS: Contextual Harnessing for Efficient SQL Synthesis",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "Synthesis"
-            ],
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Utilizing large language models (LLMs) for transforming natural language questions into SQL queries (text-to-SQL) is a promising yet challenging approach, particularly when applied to real-world databases with complex and extensive schemas. In particular, effectively incorporating data catalogs and database values for SQL generation remains an obstacle, leading to suboptimal solutions. We address this problem by proposing a new pipeline that effectively retrieves relevant data and context, selects an efficient schema, and synthesizes correct and efficient SQL queries. To increase retrieval precision, our pipeline introduces a hierarchical retrieval method leveraging model-generated keywords, locality-sensitive hashing indexing, and vector databases. Additionally, we have developed an adaptive schema pruning technique that adjusts based on the complexity of the problem and the model's context size. Our approach generalizes to both frontier proprietary models like GPT-4 and open-source models such as Llama-3-70B. Through a series of ablation studies, we demonstrate the effectiveness of each component of our pipeline and its impact on the end-to-end performance. Our method achieves new state-of-the-art performance on the cross-domain challenging BIRD dataset.",
-        "subjects": [
-            "cs.LG",
-            "cs.AI",
-            "cs.DB"
-        ],
-        "comment": null
     },
     {
         "paper id": "2405.16763",
@@ -2825,6 +2824,33 @@
         "comment": null
     },
     {
+        "paper id": "2405.16516",
+        "abstract url": "https://arxiv.org/abs/2405.16516",
+        "title": "Memory-efficient High-resolution OCT Volume Synthesis with Cascaded Amortized Latent Diffusion Models",
+        "rating": "-1",
+        "keywords": [
+            [
+                "Memory-efficient"
+            ],
+            [
+                "Diffusion"
+            ],
+            [
+                "medical"
+            ],
+            [
+                "cs.CV",
+                "eess.IV"
+            ]
+        ],
+        "abstract": "Optical coherence tomography (OCT) image analysis plays an important role in the field of ophthalmology. Current successful analysis models rely on available large datasets, which can be challenging to be obtained for certain tasks. The use of deep generative models to create realistic data emerges as a promising approach. However, due to limitations in hardware resources, it is still difficulty to synthesize high-resolution OCT volumes. In this paper, we introduce a cascaded amortized latent diffusion model (CA-LDM) that can synthesis high-resolution OCT volumes in a memory-efficient way. First, we propose non-holistic autoencoders to efficiently build a bidirectional mapping between high-resolution volume space and low-resolution latent space. In tandem with autoencoders, we propose cascaded diffusion processes to synthesize high-resolution OCT volumes with a global-to-local refinement process, amortizing the memory and computational demands. Experiments on a public high-resolution OCT dataset show that our synthetic data have realistic high-resolution and global features, surpassing the capabilities of existing methods. Moreover, performance gains on two down-stream fine-grained segmentation tasks demonstrate the benefit of the proposed method in training deep learning models for medical imaging tasks. The code is public available at: https://github.com/nicetomeetu21/CA-LDM.",
+        "subjects": [
+            "eess.IV",
+            "cs.CV"
+        ],
+        "comment": "Provisionally accepted for medical image computing and computer-assisted intervention (MICCAI) 2024"
+    },
+    {
         "paper id": "2405.16517",
         "abstract url": "https://arxiv.org/abs/2405.16517",
         "title": "Sp2360: Sparse-view 360 Scene Reconstruction using Cascaded 2D Diffusion Priors",
@@ -2905,22 +2931,6 @@
         "abstract": "The McEliece scheme is a generic frame which allows to use any error correcting code of which there exists an efficient decoding algorithm to design an encryption scheme by hiding the generator matrix code. Similarly, the Niederreiter frame is the dual version of the McEliece scheme, and achieves smaller ciphertexts. We propose a generalization of the McEliece frame and the Niederreiter frame to matrix codes and the MinRank problem, that we apply to Gabidulin matrix codes (Gabidulin rank codes considered as matrix codes). The masking we consider consists in starting from a rank code C, to consider a matrix version of C and to concatenate a certain number of rows and columns to the matrix codes version of the rank code C and then apply to an isometry for matric codes. The security of the schemes relies on the MinRank problem to decrypt a ciphertext, and the structural security of the scheme relies on a new problem EGMC-Indistinguishability problem that we introduce and that we study in detail. The main structural attack that we propose consists in trying to recover the masked linearity over the extension field which is lost during the masking process. Overall, starting from Gabidulin codes we obtain a very appealing tradeoff between the size of ciphertext and the size of the public key. For 128b of security we propose parameters ranging from ciphertext of size 65 B (and public keys of size 98 kB) to ciphertext of size 138B (and public key of size 41 kB). Our new approach permits to achieve better trade-off between ciphertexts and public key than the classical McEliece scheme. Our new approach permits to obtain an alternative scheme to the classic McEliece scheme, to obtain very small ciphertexts, with moreover smaller public keys than in the classic McEliece scheme. For 256 bits of security, we can obtain ciphertext as low as 119B, or public key as low as 87kB.",
         "subjects": [
             "cs.CR"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2405.16543",
-        "abstract url": "https://arxiv.org/abs/2405.16543",
-        "title": "Periodic Scenario Trees: A Novel Framework for Robust Periodic Invariance and Stabilization of Constrained Uncertain Linear Systems",
-        "rating": "-1",
-        "keywords": [
-            [
-                "synthesis"
-            ]
-        ],
-        "abstract": "This work proposes a new a framework for determining robust periodic invariant sets and their associated control laws for constrained uncertain linear systems. Necessary and sufficient conditions for stabilizability by periodic controllers are stated and proven using finite step Lyapunov functions for the unconstrained case. We then introduce a scenario tree interpretation of finite step Lyapunov functions for uncertain systems and show that this interpretation results in useful criteria for the design of robust stabilizing controllers. In particular, novel convex feasibility criteria for the synthesis of simple static controllers and what we call linear interpolating tree periodic controllers with memory are derived. It is proven that for a sufficiently large length of the period, a stabilizing linear interpolating tree periodic controller can always be found using the proposed criterion provided that the uncertain system is stabilizable by such controllers. In this sense, the presented synthesis method is non-conservative. The results are then extended to constrained uncertain linear systems and conditions for controllers that realize robust periodic invariant sets which are less conservative than those that result from the known methods in the literature are derived.",
-        "subjects": [
-            "eess.SY"
         ],
         "comment": null
     },
@@ -3125,8 +3135,7 @@
                 "Gaussian splatting"
             ],
             [
-                "Diffusion",
-                "synthesizing"
+                "Diffusion"
             ],
             [
                 "cs.CV"
@@ -3265,6 +3274,23 @@
         "comment": null
     },
     {
+        "paper id": "2405.16710",
+        "abstract url": "https://arxiv.org/abs/2405.16710",
+        "title": "REX: Designing User-centered Repair and Explanations to Address Robot Failures",
+        "rating": "-1",
+        "keywords": [
+            [
+                "Robot"
+            ]
+        ],
+        "abstract": "Robots in real-world environments continuously engage with multiple users and encounter changes that lead to unexpected conflicts in fulfilling user requests. Recent technical advancements (e.g., large-language models (LLMs), program synthesis) offer various methods for automatically generating repair plans that address such conflicts. In this work, we understand how automated repair and explanations can be designed to improve user experience with robot failures through two user studies. In our first, online study ($n=162$), users expressed increased trust, satisfaction, and utility with the robot performing automated repair and explanations. However, we also identified risk factors -- safety, privacy, and complexity -- that require adaptive repair strategies. The second, in-person study ($n=24$) elucidated distinct repair and explanation strategies depending on the level of risk severity and type. Using a design-based approach, we explore automated repair with explanations as a solution for robots to handle conflicts and failures, complemented by adaptive strategies for risk factors. Finally, we discuss the implications of incorporating such strategies into robot designs to achieve seamless operation among changing user needs and environments.",
+        "subjects": [
+            "cs.RO",
+            "cs.HC"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.16748",
         "abstract url": "https://arxiv.org/abs/2405.16748",
         "title": "Hypergraph Laplacian Eigenmaps and Face Recognition Problems",
@@ -3348,31 +3374,6 @@
             "cs.AI"
         ],
         "comment": "Project Page: https://unifyediting.github.io/"
-    },
-    {
-        "paper id": "2405.16829",
-        "abstract url": "https://arxiv.org/abs/2405.16829",
-        "title": "PyGS: Large-scale Scene Representation with Pyramidal 3D Gaussian Splatting",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting",
-                "NeRF",
-                "Radiance Fields"
-            ],
-            [
-                "synthesizing"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Neural Radiance Fields (NeRFs) have demonstrated remarkable proficiency in synthesizing photorealistic images of large-scale scenes. However, they are often plagued by a loss of fine details and long rendering durations. 3D Gaussian Splatting has recently been introduced as a potent alternative, achieving both high-fidelity visual results and accelerated rendering performance. Nonetheless, scaling 3D Gaussian Splatting is fraught with challenges. Specifically, large-scale scenes grapples with the integration of objects across multiple scales and disparate viewpoints, which often leads to compromised efficacy as the Gaussians need to balance between detail levels. Furthermore, the generation of initialization points via COLMAP from large-scale dataset is both computationally demanding and prone to incomplete reconstructions. To address these challenges, we present Pyramidal 3D Gaussian Splatting (PyGS) with NeRF Initialization. Our approach represent the scene with a hierarchical assembly of Gaussians arranged in a pyramidal fashion. The top level of the pyramid is composed of a few large Gaussians, while each subsequent layer accommodates a denser collection of smaller Gaussians. We effectively initialize these pyramidal Gaussians through sampling a rapidly trained grid-based NeRF at various frequencies. We group these pyramidal Gaussians into clusters and use a compact weighting network to dynamically determine the influence of each pyramid level of each cluster considering camera viewpoint during rendering. Our method achieves a significant performance leap across multiple large-scale datasets and attains a rendering time that is over 400 times faster than current state-of-the-art approaches.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
     },
     {
         "paper id": "2405.16440",
@@ -3525,6 +3526,28 @@
         "subjects": [
             "cs.HC",
             "cs.AI"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2405.16755",
+        "abstract url": "https://arxiv.org/abs/2405.16755",
+        "title": "CHESS: Contextual Harnessing for Efficient SQL Synthesis",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "SQL"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Utilizing large language models (LLMs) for transforming natural language questions into SQL queries (text-to-SQL) is a promising yet challenging approach, particularly when applied to real-world databases with complex and extensive schemas. In particular, effectively incorporating data catalogs and database values for SQL generation remains an obstacle, leading to suboptimal solutions. We address this problem by proposing a new pipeline that effectively retrieves relevant data and context, selects an efficient schema, and synthesizes correct and efficient SQL queries. To increase retrieval precision, our pipeline introduces a hierarchical retrieval method leveraging model-generated keywords, locality-sensitive hashing indexing, and vector databases. Additionally, we have developed an adaptive schema pruning technique that adjusts based on the complexity of the problem and the model's context size. Our approach generalizes to both frontier proprietary models like GPT-4 and open-source models such as Llama-3-70B. Through a series of ablation studies, we demonstrate the effectiveness of each component of our pipeline and its impact on the end-to-end performance. Our method achieves new state-of-the-art performance on the cross-domain challenging BIRD dataset.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI",
+            "cs.DB"
         ],
         "comment": null
     },
@@ -3725,53 +3748,6 @@
         "comment": "13 pages, 7 figures, to be published in IEEE Wireless Communications Letters"
     },
     {
-        "paper id": "2405.16516",
-        "abstract url": "https://arxiv.org/abs/2405.16516",
-        "title": "Memory-efficient High-resolution OCT Volume Synthesis with Cascaded Amortized Latent Diffusion Models",
-        "rating": "-2",
-        "keywords": [
-            [
-                "Diffusion",
-                "Synthesis"
-            ],
-            [
-                "medical"
-            ],
-            [
-                "cs.CV",
-                "eess.IV"
-            ]
-        ],
-        "abstract": "Optical coherence tomography (OCT) image analysis plays an important role in the field of ophthalmology. Current successful analysis models rely on available large datasets, which can be challenging to be obtained for certain tasks. The use of deep generative models to create realistic data emerges as a promising approach. However, due to limitations in hardware resources, it is still difficulty to synthesize high-resolution OCT volumes. In this paper, we introduce a cascaded amortized latent diffusion model (CA-LDM) that can synthesis high-resolution OCT volumes in a memory-efficient way. First, we propose non-holistic autoencoders to efficiently build a bidirectional mapping between high-resolution volume space and low-resolution latent space. In tandem with autoencoders, we propose cascaded diffusion processes to synthesize high-resolution OCT volumes with a global-to-local refinement process, amortizing the memory and computational demands. Experiments on a public high-resolution OCT dataset show that our synthetic data have realistic high-resolution and global features, surpassing the capabilities of existing methods. Moreover, performance gains on two down-stream fine-grained segmentation tasks demonstrate the benefit of the proposed method in training deep learning models for medical imaging tasks. The code is public available at: https://github.com/nicetomeetu21/CA-LDM.",
-        "subjects": [
-            "eess.IV",
-            "cs.CV"
-        ],
-        "comment": "Provisionally accepted for medical image computing and computer-assisted intervention (MICCAI) 2024"
-    },
-    {
-        "paper id": "2405.16597",
-        "abstract url": "https://arxiv.org/abs/2405.16597",
-        "title": "Content and Salient Semantics Collaboration for Cloth-Changing Person Re-Identification",
-        "rating": "-2",
-        "keywords": [
-            [
-                "3D"
-            ],
-            [
-                "biological"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Cloth-changing person Re-IDentification (Re-ID) aims at recognizing the same person with clothing changes across non-overlapping cameras. Conventional person Re-ID methods usually bias the model's focus on cloth-related appearance features rather than identity-sensitive features associated with biological traits. Recently, advanced cloth-changing person Re-ID methods either resort to identity-related auxiliary modalities (e.g., sketches, silhouettes, keypoints and 3D shapes) or clothing labels to mitigate the impact of clothes. However, relying on unpractical and inflexible auxiliary modalities or annotations limits their real-world applicability. In this paper, we promote cloth-changing person Re-ID by effectively leveraging abundant semantics present within pedestrian images without the need for any auxiliaries. Specifically, we propose the Content and Salient Semantics Collaboration (CSSC) framework, facilitating cross-parallel semantics interaction and refinement. Our framework is simple yet effective, and the vital design is the Semantics Mining and Refinement (SMR) module. It extracts robust identity features about content and salient semantics, while mitigating interference from clothing appearances effectively. By capitalizing on the mined abundant semantic features, our proposed approach achieves state-of-the-art performance on three cloth-changing benchmarks as well as conventional benchmarks, demonstrating its superiority over advanced competitors.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2405.16664",
         "abstract url": "https://arxiv.org/abs/2405.16664",
         "title": "Deep learning improved autofocus for motion artifact reduction and its application in quantitative susceptibility mapping",
@@ -3836,26 +3812,6 @@
         "abstract": "This demo paper examines the susceptibility of Federated Learning (FL) systems to targeted data poisoning attacks, presenting a novel system for visualizing and mitigating such threats. We simulate targeted data poisoning attacks via label flipping and analyze the impact on model performance, employing a five-component system that includes Simulation and Data Generation, Data Collection and Upload, User-friendly Interface, Analysis and Insight, and Advisory System. Observations from three demo modules: label manipulation, attack timing, and malicious attack availability, and two analysis components: utility and analytical behavior of local model updates highlight the risks to system integrity and offer insight into the resilience of FL systems. The demo is available at https://github.com/CathyXueqingZhang/DataPoisoningVis.",
         "subjects": [
             "cs.CR"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2405.16710",
-        "abstract url": "https://arxiv.org/abs/2405.16710",
-        "title": "REX: Designing User-centered Repair and Explanations to Address Robot Failures",
-        "rating": "-2",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "Robot"
-            ]
-        ],
-        "abstract": "Robots in real-world environments continuously engage with multiple users and encounter changes that lead to unexpected conflicts in fulfilling user requests. Recent technical advancements (e.g., large-language models (LLMs), program synthesis) offer various methods for automatically generating repair plans that address such conflicts. In this work, we understand how automated repair and explanations can be designed to improve user experience with robot failures through two user studies. In our first, online study ($n=162$), users expressed increased trust, satisfaction, and utility with the robot performing automated repair and explanations. However, we also identified risk factors -- safety, privacy, and complexity -- that require adaptive repair strategies. The second, in-person study ($n=24$) elucidated distinct repair and explanation strategies depending on the level of risk severity and type. Using a design-based approach, we explore automated repair with explanations as a solution for robots to handle conflicts and failures, complemented by adaptive strategies for risk factors. Finally, we discuss the implications of incorporating such strategies into robot designs to achieve seamless operation among changing user needs and environments.",
-        "subjects": [
-            "cs.RO",
-            "cs.HC"
         ],
         "comment": null
     },
@@ -4250,6 +4206,31 @@
         "comment": "Explore our 3D results at: https://idto3d.github.io ; fixed broken url to project page"
     },
     {
+        "paper id": "2405.16597",
+        "abstract url": "https://arxiv.org/abs/2405.16597",
+        "title": "Content and Salient Semantics Collaboration for Cloth-Changing Person Re-Identification",
+        "rating": "-3",
+        "keywords": [
+            [
+                "3D"
+            ],
+            [
+                "Re-Identification"
+            ],
+            [
+                "biological"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Cloth-changing person Re-IDentification (Re-ID) aims at recognizing the same person with clothing changes across non-overlapping cameras. Conventional person Re-ID methods usually bias the model's focus on cloth-related appearance features rather than identity-sensitive features associated with biological traits. Recently, advanced cloth-changing person Re-ID methods either resort to identity-related auxiliary modalities (e.g., sketches, silhouettes, keypoints and 3D shapes) or clothing labels to mitigate the impact of clothes. However, relying on unpractical and inflexible auxiliary modalities or annotations limits their real-world applicability. In this paper, we promote cloth-changing person Re-ID by effectively leveraging abundant semantics present within pedestrian images without the need for any auxiliaries. Specifically, we propose the Content and Salient Semantics Collaboration (CSSC) framework, facilitating cross-parallel semantics interaction and refinement. Our framework is simple yet effective, and the vital design is the Semantics Mining and Refinement (SMR) module. It extracts robust identity features about content and salient semantics, while mitigating interference from clothing appearances effectively. By capitalizing on the mined abundant semantic features, our proposed approach achieves state-of-the-art performance on three cloth-changing benchmarks as well as conventional benchmarks, demonstrating its superiority over advanced competitors.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.16599",
         "abstract url": "https://arxiv.org/abs/2405.16599",
         "title": "MCGMapper: Light-Weight Incremental Structure from Motion and Visual Localization With Planar Markers and Camera Groups",
@@ -4448,6 +4429,18 @@
             "math.AP"
         ],
         "comment": "40 pages"
+    },
+    {
+        "paper id": "2405.16543",
+        "abstract url": "https://arxiv.org/abs/2405.16543",
+        "title": "Periodic Scenario Trees: A Novel Framework for Robust Periodic Invariance and Stabilization of Constrained Uncertain Linear Systems",
+        "rating": "-10",
+        "keywords": [],
+        "abstract": "This work proposes a new a framework for determining robust periodic invariant sets and their associated control laws for constrained uncertain linear systems. Necessary and sufficient conditions for stabilizability by periodic controllers are stated and proven using finite step Lyapunov functions for the unconstrained case. We then introduce a scenario tree interpretation of finite step Lyapunov functions for uncertain systems and show that this interpretation results in useful criteria for the design of robust stabilizing controllers. In particular, novel convex feasibility criteria for the synthesis of simple static controllers and what we call linear interpolating tree periodic controllers with memory are derived. It is proven that for a sufficiently large length of the period, a stabilizing linear interpolating tree periodic controller can always be found using the proposed criterion provided that the uncertain system is stabilizable by such controllers. In this sense, the presented synthesis method is non-conservative. The results are then extended to constrained uncertain linear systems and conditions for controllers that realize robust periodic invariant sets which are less conservative than those that result from the known methods in the literature are derived.",
+        "subjects": [
+            "eess.SY"
+        ],
+        "comment": null
     },
     {
         "paper id": "2405.16545",

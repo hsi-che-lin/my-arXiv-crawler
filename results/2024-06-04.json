@@ -67,6 +67,27 @@
         "comment": null
     },
     {
+        "paper id": "2406.02069",
+        "abstract url": "https://arxiv.org/abs/2406.02069",
+        "title": "PyramidKV: Dynamic KV Cache Compression based on Pyramidal Information Funneling",
+        "rating": "2",
+        "keywords": [
+            [
+                "memory efficiency"
+            ],
+            [
+                "cs.AI",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "In this study, we investigate whether attention-based information flow inside large language models (LLMs) is aggregated through noticeable patterns for long context processing. Our observations reveal that LLMs aggregate information through Pyramidal Information Funneling where attention is scattering widely in lower layers, progressively consolidating within specific contexts, and ultimately focusin on critical tokens (a.k.a massive activation or attention sink) in higher layers. Motivated by these insights, we developed PyramidKV, a novel and effective KV cache compression method. This approach dynamically adjusts the KV cache size across different layers, allocating more cache in lower layers and less in higher ones, diverging from traditional methods that maintain a uniform KV cache size. Our experimental evaluations, utilizing the LongBench benchmark, show that PyramidKV matches the performance of models with a full KV cache while retaining only 12% of the KV cache, thus significantly reducing memory usage. In scenarios emphasizing memory efficiency, where only 0.7% of the KV cache is maintained, PyramidKV surpasses other KV cache compression techniques achieving up to a 20.5 absolute accuracy improvement on TREC.",
+        "subjects": [
+            "cs.CL",
+            "cs.AI"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2406.02166",
         "abstract url": "https://arxiv.org/abs/2406.02166",
         "title": "Whistle: Data-Efficient Multilingual and Crosslingual Speech Recognition via Weakly Phonetic Supervision",
@@ -243,6 +264,29 @@
         "comment": "Accepted to Interspeech'24"
     },
     {
+        "paper id": "2406.02009",
+        "abstract url": "https://arxiv.org/abs/2406.02009",
+        "title": "Phonetic Enhanced Language Modeling for Text-to-Speech Synthesis",
+        "rating": "1.5",
+        "keywords": [
+            [
+                "cs.CL",
+                "cs.SD",
+                "eess.AS"
+            ],
+            [
+                "Interspeech"
+            ]
+        ],
+        "abstract": "Recent language model-based text-to-speech (TTS) frameworks demonstrate scalability and in-context learning capabilities. However, they suffer from robustness issues due to the accumulation of errors in speech unit predictions during autoregressive language modeling. In this paper, we propose a phonetic enhanced language modeling method to improve the performance of TTS models. We leverage self-supervised representations that are phonetically rich as the training target for the autoregressive language model. Subsequently, a non-autoregressive model is employed to predict discrete acoustic codecs that contain fine-grained acoustic details. The TTS model focuses solely on linguistic modeling during autoregressive training, thereby reducing the error propagation that occurs in non-autoregressive training. Both objective and subjective evaluations validate the effectiveness of our proposed method.",
+        "subjects": [
+            "eess.AS",
+            "cs.CL",
+            "cs.SD"
+        ],
+        "comment": "Accepted by Interspeech 2024"
+    },
+    {
         "paper id": "2406.02032",
         "abstract url": "https://arxiv.org/abs/2406.02032",
         "title": "M2D-CLAP: Masked Modeling Duo Meets CLAP for Learning General-purpose Audio-Language Representation",
@@ -288,12 +332,34 @@
         "comment": null
     },
     {
+        "paper id": "2406.02162",
+        "abstract url": "https://arxiv.org/abs/2406.02162",
+        "title": "BiVocoder: A Bidirectional Neural Vocoder Integrating Feature Extraction and Waveform Generation",
+        "rating": "1.5",
+        "keywords": [
+            [
+                "cs.SD",
+                "eess.AS"
+            ],
+            [
+                "Interspeech"
+            ]
+        ],
+        "abstract": "This paper proposes a novel bidirectional neural vocoder, named BiVocoder, capable both of feature extraction and reverse waveform generation within the short-time Fourier transform (STFT) domain. For feature extraction, the BiVocoder takes amplitude and phase spectra derived from STFT as inputs, transforms them into long-frame-shift and low-dimensional features through convolutional neural networks. The extracted features are demonstrated suitable for direct prediction by acoustic models, supporting its application in text-to-speech (TTS) task. For waveform generation, the BiVocoder restores amplitude and phase spectra from the features by a symmetric network, followed by inverse STFT to reconstruct the speech waveform. Experimental results show that our proposed BiVocoder achieves better performance compared to some baseline vocoders, by comprehensively considering both synthesized speech quality and inference speed for both analysis-synthesis and TTS tasks.",
+        "subjects": [
+            "eess.AS",
+            "cs.SD"
+        ],
+        "comment": "Accepted by Interspeech 2024"
+    },
+    {
         "paper id": "2406.02214",
         "abstract url": "https://arxiv.org/abs/2406.02214",
         "title": "SLTrain: a sparse plus low-rank approach for parameter and memory efficient pretraining",
         "rating": "1.5",
         "keywords": [
             [
+                "memory efficient",
                 "efficient fine-tuning"
             ],
             [
@@ -476,6 +542,27 @@
         "comment": "6 pages, 4 figures, 2 tables"
     },
     {
+        "paper id": "2406.02913",
+        "abstract url": "https://arxiv.org/abs/2406.02913",
+        "title": "Zeroth-Order Fine-Tuning of LLMs with Extreme Sparsity",
+        "rating": "1.5",
+        "keywords": [
+            [
+                "memory-efficient"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Zeroth-order optimization (ZO) is a memory-efficient strategy for fine-tuning Large Language Models using only forward passes. However, the application of ZO fine-tuning in memory-constrained settings such as mobile phones and laptops is still challenging since full precision forward passes are infeasible. In this study, we address this limitation by integrating sparsity and quantization into ZO fine-tuning of LLMs. Specifically, we investigate the feasibility of fine-tuning an extremely small subset of LLM parameters using ZO. This approach allows the majority of un-tuned parameters to be quantized to accommodate the constraint of limited device memory. Our findings reveal that the pre-training process can identify a set of \"sensitive parameters\" that can guide the ZO fine-tuning of LLMs on downstream tasks. Our results demonstrate that fine-tuning 0.1% sensitive parameters in the LLM with ZO can outperform the full ZO fine-tuning performance, while offering wall-clock time speedup. Additionally, we show that ZO fine-tuning targeting these 0.1% sensitive parameters, combined with 4 bit quantization, enables efficient ZO fine-tuning of an Llama2-7B model on a GPU device with less than 8 GiB of memory and notably reduced latency.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2406.02924",
         "abstract url": "https://arxiv.org/abs/2406.02924",
         "title": "Pruner-Zero: Evolving Symbolic Pruning Metric from scratch for Large Language Models",
@@ -650,22 +737,24 @@
         "comment": "v1.1"
     },
     {
-        "paper id": "2406.02069",
-        "abstract url": "https://arxiv.org/abs/2406.02069",
-        "title": "PyramidKV: Dynamic KV Cache Compression based on Pyramidal Information Funneling",
+        "paper id": "2406.02066",
+        "abstract url": "https://arxiv.org/abs/2406.02066",
+        "title": "Preference Optimization for Molecule Synthesis with Conditional Residual Energy-based Models",
         "rating": "1",
         "keywords": [
             [
-                "cs.AI",
-                "cs.CL"
+                "cs.LG"
+            ],
+            [
+                "ICML"
             ]
         ],
-        "abstract": "In this study, we investigate whether attention-based information flow inside large language models (LLMs) is aggregated through noticeable patterns for long context processing. Our observations reveal that LLMs aggregate information through Pyramidal Information Funneling where attention is scattering widely in lower layers, progressively consolidating within specific contexts, and ultimately focusin on critical tokens (a.k.a massive activation or attention sink) in higher layers. Motivated by these insights, we developed PyramidKV, a novel and effective KV cache compression method. This approach dynamically adjusts the KV cache size across different layers, allocating more cache in lower layers and less in higher ones, diverging from traditional methods that maintain a uniform KV cache size. Our experimental evaluations, utilizing the LongBench benchmark, show that PyramidKV matches the performance of models with a full KV cache while retaining only 12% of the KV cache, thus significantly reducing memory usage. In scenarios emphasizing memory efficiency, where only 0.7% of the KV cache is maintained, PyramidKV surpasses other KV cache compression techniques achieving up to a 20.5 absolute accuracy improvement on TREC.",
+        "abstract": "Molecule synthesis through machine learning is one of the fundamental problems in drug discovery. Current data-driven strategies employ one-step retrosynthesis models and search algorithms to predict synthetic routes in a top-bottom manner. Despite their effective performance, these strategies face limitations in the molecule synthetic route generation due to a greedy selection of the next molecule set without any lookahead. Furthermore, existing strategies cannot control the generation of synthetic routes based on possible criteria such as material costs, yields, and step count. In this work, we propose a general and principled framework via conditional residual energy-based models (EBMs), that focus on the quality of the entire synthetic route based on the specific criteria. By incorporating an additional energy-based function into our probabilistic model, our proposed algorithm can enhance the quality of the most probable synthetic routes (with higher probabilities) generated by various strategies in a plug-and-play fashion. Extensive experiments demonstrate that our framework can consistently boost performance across various strategies and outperforms previous state-of-the-art top-1 accuracy by a margin of 2.5%. Code is available at https://github.com/SongtaoLiu0823/CREBM.",
         "subjects": [
-            "cs.CL",
-            "cs.AI"
+            "cs.LG",
+            "q-bio.BM"
         ],
-        "comment": null
+        "comment": "Accepted by ICML 2024(Oral)"
     },
     {
         "paper id": "2406.02077",
@@ -684,22 +773,6 @@
             "eess.IV",
             "cs.AI",
             "cs.CV"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2406.02079",
-        "abstract url": "https://arxiv.org/abs/2406.02079",
-        "title": "Assessing the Performance of Chinese Open Source Large Language Models in Information Extraction Tasks",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Information Extraction (IE) plays a crucial role in Natural Language Processing (NLP) by extracting structured information from unstructured text, thereby facilitating seamless integration with various real-world applications that rely on structured data. Despite its significance, recent experiments focusing on English IE tasks have shed light on the challenges faced by Large Language Models (LLMs) in achieving optimal performance, particularly in sub-tasks like Named Entity Recognition (NER). In this paper, we delve into a comprehensive investigation of the performance of mainstream Chinese open-source LLMs in tackling IE tasks, specifically under zero-shot conditions where the models are not fine-tuned for specific tasks. Additionally, we present the outcomes of several few-shot experiments to further gauge the capability of these models. Moreover, our study includes a comparative analysis between these open-source LLMs and ChatGPT, a widely recognized language model, on IE performance. Through meticulous experimentation and analysis, we aim to provide insights into the strengths, limitations, and potential enhancements of existing Chinese open-source LLMs in the domain of Information Extraction within the context of NLP.",
-        "subjects": [
-            "cs.CL"
         ],
         "comment": null
     },
@@ -745,6 +818,22 @@
             "cs.LG"
         ],
         "comment": "ICML 2024"
+    },
+    {
+        "paper id": "2406.02100",
+        "abstract url": "https://arxiv.org/abs/2406.02100",
+        "title": "Exploring Mathematical Extrapolation of Large Language Models with Synthetic Data",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Large Language Models (LLMs) have shown excellent performance in language understanding, text generation, code synthesis, and many other tasks, while they still struggle in complex multi-step reasoning problems, such as mathematical reasoning. In this paper, through a newly proposed arithmetical puzzle problem, we show that the model can perform well on multi-step reasoning tasks via fine-tuning on high-quality synthetic data. Experimental results with the open-llama-3B model on three different test datasets show that not only the model can reach a zero-shot pass@1 at 0.44 on the in-domain dataset, it also demonstrates certain generalization capabilities on the out-of-domain datasets. Specifically, this paper has designed two out-of-domain datasets in the form of extending the numerical range and the composing components of the arithmetical puzzle problem separately. The fine-tuned models have shown encouraging performance on these two far more difficult tasks with the zero-shot pass@1 at 0.33 and 0.35, respectively.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": "Accept by Findings of ACL 2024"
     },
     {
         "paper id": "2406.02106",
@@ -888,6 +977,22 @@
         "comment": "Accepted to ACL-24 Main"
     },
     {
+        "paper id": "2406.02153",
+        "abstract url": "https://arxiv.org/abs/2406.02153",
+        "title": "Analyzing the Feature Extractor Networks for Face Image Synthesis",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Advancements like Generative Adversarial Networks have attracted the attention of researchers toward face image synthesis to generate ever more realistic images. Thereby, the need for the evaluation criteria to assess the realism of the generated images has become apparent. While FID utilized with InceptionV3 is one of the primary choices for benchmarking, concerns about InceptionV3's limitations for face images have emerged. This study investigates the behavior of diverse feature extractors -- InceptionV3, CLIP, DINOv2, and ArcFace -- considering a variety of metrics -- FID, KID, Precision\\&Recall. While the FFHQ dataset is used as the target domain, as the source domains, the CelebA-HQ dataset and the synthetic datasets generated using StyleGAN2 and Projected FastGAN are used. Experiments include deep-down analysis of the features: $L_2$ normalization, model attention during extraction, and domain distributions in the feature space. We aim to give valuable insights into the behavior of feature extractors for evaluating face image synthesis methodologies. The code is publicly available at https://github.com/ThEnded32/AnalyzingFeatureExtractors.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Accepted at 18th International Conference on Automatic Face and Gesture Recognition (FG) on 1st SD-FGA Workshop 2024"
+    },
+    {
         "paper id": "2406.02158",
         "abstract url": "https://arxiv.org/abs/2406.02158",
         "title": "Radar Spectra-Language Model for Automotive Scene Parsing",
@@ -985,22 +1090,6 @@
             "cs.LG"
         ],
         "comment": "ICML 2024"
-    },
-    {
-        "paper id": "2406.02233",
-        "abstract url": "https://arxiv.org/abs/2406.02233",
-        "title": "Towards Out-of-Distribution Detection in Vocoder Recognition via Latent Feature Reconstruction",
-        "rating": "1",
-        "keywords": [
-            [
-                "eess.AS"
-            ]
-        ],
-        "abstract": "Advancements in synthesized speech have created a growing threat of impersonation, making it crucial to develop deepfake algorithm recognition. One significant aspect is out-of-distribution (OOD) detection, which has gained notable attention due to its important role in deepfake algorithm recognition. However, most of the current approaches for detecting OOD in deepfake algorithm recognition rely on probability-score or classified-distance, which may lead to limitations in the accuracy of the sample at the edge of the threshold. In this study, we propose a reconstruction-based detection approach that employs an autoencoder architecture to compress and reconstruct the acoustic feature extracted from a pre-trained WavLM model. Each acoustic feature belonging to a specific vocoder class is only aptly reconstructed by its corresponding decoder. When none of the decoders can satisfactorily reconstruct a feature, it is classified as an OOD sample. To enhance the distinctiveness of the reconstructed features by each decoder, we incorporate contrastive learning and an auxiliary classifier to further constrain the reconstructed feature. Experiments demonstrate that our proposed approach surpasses baseline systems by a relative margin of 10\\% in the evaluation dataset. Ablation studies further validate the effectiveness of both the contrastive constraint and the auxiliary classifier within our proposed approach.",
-        "subjects": [
-            "eess.AS"
-        ],
-        "comment": "5 pages, 4 figures"
     },
     {
         "paper id": "2406.02237",
@@ -1453,6 +1542,24 @@
         "comment": "Accepted to ICML 2024"
     },
     {
+        "paper id": "2406.02429",
+        "abstract url": "https://arxiv.org/abs/2406.02429",
+        "title": "Self-Supervised Singing Voice Pre-Training towards Speech-to-Singing Conversion",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.SD",
+                "eess.AS"
+            ]
+        ],
+        "abstract": "Speech-to-singing voice conversion (STS) task always suffers from data scarcity, because it requires paired speech and singing data. Compounding this issue are the challenges of content-pitch alignment and the suboptimal quality of generated outputs, presenting significant hurdles in STS research. This paper presents SVPT, an STS approach boosted by a self-supervised singing voice pre-training model. We leverage spoken language model techniques to tackle the rhythm alignment problem and the in-context learning capability to achieve zero-shot conversion. We adopt discrete-unit random resampling and pitch corruption strategies, enabling training with unpaired singing data and thus mitigating the issue of data scarcity. SVPT also serves as an effective backbone for singing voice synthesis (SVS), offering insights into scaling up SVS models. Experimental results indicate that SVPT delivers notable improvements in both STS and SVS endeavors. Audio samples are available at https://speech2sing.github.io.",
+        "subjects": [
+            "eess.AS",
+            "cs.SD"
+        ],
+        "comment": "13 pages"
+    },
+    {
         "paper id": "2406.02431",
         "abstract url": "https://arxiv.org/abs/2406.02431",
         "title": "Reweighted Solutions for Weighted Low Rank Approximation",
@@ -1676,22 +1783,6 @@
         "comment": null
     },
     {
-        "paper id": "2406.02528",
-        "abstract url": "https://arxiv.org/abs/2406.02528",
-        "title": "Scalable MatMul-free Language Modeling",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Matrix multiplication (MatMul) typically dominates the overall computational cost of large language models (LLMs). This cost only grows as LLMs scale to larger embedding dimensions and context lengths. In this work, we show that MatMul operations can be completely eliminated from LLMs while maintaining strong performance at billion-parameter scales. Our experiments show that our proposed MatMul-free models achieve performance on-par with state-of-the-art Transformers that require far more memory during inference at a scale up to at least 2.7B parameters. We investigate the scaling laws and find that the performance gap between our MatMul-free models and full precision Transformers narrows as the model size increases. We also provide a GPU-efficient implementation of this model which reduces memory usage by up to 61% over an unoptimized baseline during training. By utilizing an optimized kernel during inference, our model's memory consumption can be reduced by more than 10x compared to unoptimized models. To properly quantify the efficiency of our architecture, we build a custom hardware solution on an FPGA which exploits lightweight operations beyond what GPUs are capable of. We processed billion-parameter scale models at 13W beyond human readable throughput, moving LLMs closer to brain-like efficiency. This work not only shows how far LLMs can be stripped back while still performing effectively, but also points at the types of operations future accelerators should be optimized for in processing the next generation of lightweight LLMs. Our code implementation is available at https://github.com/ridgerchu/matmulfreellm.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2406.02532",
         "abstract url": "https://arxiv.org/abs/2406.02532",
         "title": "SpecExec: Massively Parallel Speculative Decoding for Interactive LLM Inference on Consumer Devices",
@@ -1791,6 +1882,28 @@
             "cs.LG",
             "cs.AI",
             "cs.CL"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2406.02552",
+        "abstract url": "https://arxiv.org/abs/2406.02552",
+        "title": "VHS: High-Resolution Iterative Stereo Matching with Visual Hull Priors",
+        "rating": "1",
+        "keywords": [
+            [
+                "memory-efficient"
+            ],
+            [
+                "depth"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "We present a stereo-matching method for depth estimation from high-resolution images using visual hulls as priors, and a memory-efficient technique for the correlation computation. Our method uses object masks extracted from supplementary views of the scene to guide the disparity estimation, effectively reducing the search space for matches. This approach is specifically tailored to stereo rigs in volumetric capture systems, where an accurate depth plays a key role in the downstream reconstruction task. To enable training and regression at high resolutions targeted by recent systems, our approach extends a sparse correlation computation into a hybrid sparse-dense scheme suitable for application in leading recurrent network architectures. We evaluate the performance-efficiency trade-off of our method compared to state-of-the-art methods, and demonstrate the efficacy of the visual hull guidance. In addition, we propose a training scheme for a further reduction of memory requirements during optimization, facilitating training on high-resolution data.",
+        "subjects": [
+            "cs.CV"
         ],
         "comment": null
     },
@@ -2699,32 +2812,6 @@
         "comment": null
     },
     {
-        "paper id": "2406.02009",
-        "abstract url": "https://arxiv.org/abs/2406.02009",
-        "title": "Phonetic Enhanced Language Modeling for Text-to-Speech Synthesis",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "Synthesis"
-            ],
-            [
-                "cs.CL",
-                "cs.SD",
-                "eess.AS"
-            ],
-            [
-                "Interspeech"
-            ]
-        ],
-        "abstract": "Recent language model-based text-to-speech (TTS) frameworks demonstrate scalability and in-context learning capabilities. However, they suffer from robustness issues due to the accumulation of errors in speech unit predictions during autoregressive language modeling. In this paper, we propose a phonetic enhanced language modeling method to improve the performance of TTS models. We leverage self-supervised representations that are phonetically rich as the training target for the autoregressive language model. Subsequently, a non-autoregressive model is employed to predict discrete acoustic codecs that contain fine-grained acoustic details. The TTS model focuses solely on linguistic modeling during autoregressive training, thereby reducing the error propagation that occurs in non-autoregressive training. Both objective and subjective evaluations validate the effectiveness of our proposed method.",
-        "subjects": [
-            "eess.AS",
-            "cs.CL",
-            "cs.SD"
-        ],
-        "comment": "Accepted by Interspeech 2024"
-    },
-    {
         "paper id": "2406.02013",
         "abstract url": "https://arxiv.org/abs/2406.02013",
         "title": "Mamba as Decision Maker: Exploring Multi-scale Sequence Modeling in Offline Reinforcement Learning",
@@ -2850,24 +2937,6 @@
         "comment": null
     },
     {
-        "paper id": "2406.02057",
-        "abstract url": "https://arxiv.org/abs/2406.02057",
-        "title": "Tabular and Deep Learning for the Whittle Index",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "The Whittle index policy is a heuristic that has shown remarkably good performance (with guaranteed asymptotic optimality) when applied to the class of problems known as Restless Multi-Armed Bandit Problems (RMABPs). In this paper we present QWI and QWINN, two reinforcement learning algorithms, respectively tabular and deep, to learn the Whittle index for the total discounted criterion. The key feature is the use of two time-scales, a faster one to update the state-action Q -values, and a relatively slower one to update the Whittle indices. In our main theoretical result we show that QWI, which is a tabular implementation, converges to the real Whittle indices. We then present QWINN, an adaptation of QWI algorithm using neural networks to compute the Q -values on the faster time-scale, which is able to extrapolate information from one state to another and scales naturally to large state-space environments. For QWINN, we show that all local minima of the Bellman error are locally stable equilibria, which is the first result of its kind for DQN-based schemes. Numerical computations show that QWI and QWINN converge faster than the standard Q -learning algorithm, neural-network based approximate Q-learning and other state of the art algorithms.",
-        "subjects": [
-            "cs.AI",
-            "cs.LG"
-        ],
-        "comment": "ACM Transactions on Modeling and Performance Evaluation of Computing Systems, 2024"
-    },
-    {
         "paper id": "2406.02063",
         "abstract url": "https://arxiv.org/abs/2406.02063",
         "title": "An agent-based model of modal choice with perception biases and habits",
@@ -2984,46 +3053,6 @@
         "abstract": "We study the impact of the batch size $n_b$ on the iteration time $T$ of training two-layer neural networks with one-pass stochastic gradient descent (SGD) on multi-index target functions of isotropic covariates. We characterize the optimal batch size minimizing the iteration time as a function of the hardness of the target, as characterized by the information exponents. We show that performing gradient updates with large batches $n_b \\lesssim d^{\\frac{\\ell}{2}}$ minimizes the training time without changing the total sample complexity, where $\\ell$ is the information exponent of the target to be learned \\citep{arous2021online} and $d$ is the input dimension. However, larger batch sizes than $n_b \\gg d^{\\frac{\\ell}{2}}$ are detrimental for improving the time complexity of SGD. We provably overcome this fundamental limitation via a different training protocol, \\textit{Correlation loss SGD}, which suppresses the auto-correlation terms in the loss function. We show that one can track the training progress by a system of low-dimensional ordinary differential equations (ODEs). Finally, we validate our theoretical results with numerical experiments.",
         "subjects": [
             "stat.ML",
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2406.02162",
-        "abstract url": "https://arxiv.org/abs/2406.02162",
-        "title": "BiVocoder: A Bidirectional Neural Vocoder Integrating Feature Extraction and Waveform Generation",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.SD",
-                "eess.AS"
-            ],
-            [
-                "Interspeech"
-            ]
-        ],
-        "abstract": "This paper proposes a novel bidirectional neural vocoder, named BiVocoder, capable both of feature extraction and reverse waveform generation within the short-time Fourier transform (STFT) domain. For feature extraction, the BiVocoder takes amplitude and phase spectra derived from STFT as inputs, transforms them into long-frame-shift and low-dimensional features through convolutional neural networks. The extracted features are demonstrated suitable for direct prediction by acoustic models, supporting its application in text-to-speech (TTS) task. For waveform generation, the BiVocoder restores amplitude and phase spectra from the features by a symmetric network, followed by inverse STFT to reconstruct the speech waveform. Experimental results show that our proposed BiVocoder achieves better performance compared to some baseline vocoders, by comprehensively considering both synthesized speech quality and inference speed for both analysis-synthesis and TTS tasks.",
-        "subjects": [
-            "eess.AS",
-            "cs.SD"
-        ],
-        "comment": "Accepted by Interspeech 2024"
-    },
-    {
-        "paper id": "2406.02165",
-        "abstract url": "https://arxiv.org/abs/2406.02165",
-        "title": "SaVeR: Optimal Data Collection Strategy for Safe Policy Evaluation in Tabular MDP",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "In this paper, we study safe data collection for the purpose of policy evaluation in tabular Markov decision processes (MDPs). In policy evaluation, we are given a \\textit{target} policy and asked to estimate the expected cumulative reward it will obtain. Policy evaluation requires data and we are interested in the question of what \\textit{behavior} policy should collect the data for the most accurate evaluation of the target policy. While prior work has considered behavior policy selection, in this paper, we additionally consider a safety constraint on the behavior policy. Namely, we assume there exists a known default policy that incurs a particular expected cost when run and we enforce that the cumulative cost of all behavior policies ran is better than a constant factor of the cost that would be incurred had we always run the default policy. We first show that there exists a class of intractable MDPs where no safe oracle algorithm with knowledge about problem parameters can efficiently collect data and satisfy the safety constraints. We then define the tractability condition for an MDP such that a safe oracle algorithm can efficiently collect data and using that we prove the first lower bound for this setting. We then introduce an algorithm SaVeR for this problem that approximates the safe oracle algorithm and bound the finite-sample mean squared error of the algorithm while ensuring it satisfies the safety constraint. Finally, we show in simulations that SaVeR produces low MSE policy evaluation while satisfying the safety constraint.",
-        "subjects": [
             "cs.LG"
         ],
         "comment": null
@@ -3472,7 +3501,7 @@
         "rating": "0.5",
         "keywords": [
             [
-                "synthesis"
+                "Deepfake"
             ],
             [
                 "cs.SD",
@@ -4013,24 +4042,6 @@
         "comment": "ICML 2024"
     },
     {
-        "paper id": "2406.02913",
-        "abstract url": "https://arxiv.org/abs/2406.02913",
-        "title": "Zeroth-Order Fine-Tuning of LLMs with Extreme Sparsity",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Zeroth-order optimization (ZO) is a memory-efficient strategy for fine-tuning Large Language Models using only forward passes. However, the application of ZO fine-tuning in memory-constrained settings such as mobile phones and laptops is still challenging since full precision forward passes are infeasible. In this study, we address this limitation by integrating sparsity and quantization into ZO fine-tuning of LLMs. Specifically, we investigate the feasibility of fine-tuning an extremely small subset of LLM parameters using ZO. This approach allows the majority of un-tuned parameters to be quantized to accommodate the constraint of limited device memory. Our findings reveal that the pre-training process can identify a set of \"sensitive parameters\" that can guide the ZO fine-tuning of LLMs on downstream tasks. Our results demonstrate that fine-tuning 0.1% sensitive parameters in the LLM with ZO can outperform the full ZO fine-tuning performance, while offering wall-clock time speedup. Additionally, we show that ZO fine-tuning targeting these 0.1% sensitive parameters, combined with 4 bit quantization, enables efficient ZO fine-tuning of an Llama2-7B model on a GPU device with less than 8 GiB of memory and notably reduced latency.",
-        "subjects": [
-            "cs.LG",
-            "cs.AI"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2406.02939",
         "abstract url": "https://arxiv.org/abs/2406.02939",
         "title": "Achieving Near-Optimal Convergence for Distributed Minimax Optimization with Adaptive Stepsizes",
@@ -4323,48 +4334,6 @@
         "comment": "Accepted by IJCAI 2024. 10 pages"
     },
     {
-        "paper id": "2406.02066",
-        "abstract url": "https://arxiv.org/abs/2406.02066",
-        "title": "Preference Optimization for Molecule Synthesis with Conditional Residual Energy-based Models",
-        "rating": "0",
-        "keywords": [
-            [
-                "Synthesis"
-            ],
-            [
-                "cs.LG"
-            ],
-            [
-                "ICML"
-            ]
-        ],
-        "abstract": "Molecule synthesis through machine learning is one of the fundamental problems in drug discovery. Current data-driven strategies employ one-step retrosynthesis models and search algorithms to predict synthetic routes in a top-bottom manner. Despite their effective performance, these strategies face limitations in the molecule synthetic route generation due to a greedy selection of the next molecule set without any lookahead. Furthermore, existing strategies cannot control the generation of synthetic routes based on possible criteria such as material costs, yields, and step count. In this work, we propose a general and principled framework via conditional residual energy-based models (EBMs), that focus on the quality of the entire synthetic route based on the specific criteria. By incorporating an additional energy-based function into our probabilistic model, our proposed algorithm can enhance the quality of the most probable synthetic routes (with higher probabilities) generated by various strategies in a plug-and-play fashion. Extensive experiments demonstrate that our framework can consistently boost performance across various strategies and outperforms previous state-of-the-art top-1 accuracy by a margin of 2.5%. Code is available at https://github.com/SongtaoLiu0823/CREBM.",
-        "subjects": [
-            "cs.LG",
-            "q-bio.BM"
-        ],
-        "comment": "Accepted by ICML 2024(Oral)"
-    },
-    {
-        "paper id": "2406.02100",
-        "abstract url": "https://arxiv.org/abs/2406.02100",
-        "title": "Exploring Mathematical Extrapolation of Large Language Models with Synthetic Data",
-        "rating": "0",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Large Language Models (LLMs) have shown excellent performance in language understanding, text generation, code synthesis, and many other tasks, while they still struggle in complex multi-step reasoning problems, such as mathematical reasoning. In this paper, through a newly proposed arithmetical puzzle problem, we show that the model can perform well on multi-step reasoning tasks via fine-tuning on high-quality synthetic data. Experimental results with the open-llama-3B model on three different test datasets show that not only the model can reach a zero-shot pass@1 at 0.44 on the in-domain dataset, it also demonstrates certain generalization capabilities on the out-of-domain datasets. Specifically, this paper has designed two out-of-domain datasets in the form of extending the numerical range and the composing components of the arithmetical puzzle problem separately. The fine-tuned models have shown encouraging performance on these two far more difficult tasks with the zero-shot pass@1 at 0.33 and 0.35, respectively.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": "Accept by Findings of ACL 2024"
-    },
-    {
         "paper id": "2406.02110",
         "abstract url": "https://arxiv.org/abs/2406.02110",
         "title": "UniOQA: A Unified Framework for Knowledge Graph Question Answering with Large Language Models",
@@ -4384,25 +4353,6 @@
             "cs.AI"
         ],
         "comment": "10 pages, 5 figures"
-    },
-    {
-        "paper id": "2406.02153",
-        "abstract url": "https://arxiv.org/abs/2406.02153",
-        "title": "Analyzing the Feature Extractor Networks for Face Image Synthesis",
-        "rating": "0",
-        "keywords": [
-            [
-                "Synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Advancements like Generative Adversarial Networks have attracted the attention of researchers toward face image synthesis to generate ever more realistic images. Thereby, the need for the evaluation criteria to assess the realism of the generated images has become apparent. While FID utilized with InceptionV3 is one of the primary choices for benchmarking, concerns about InceptionV3's limitations for face images have emerged. This study investigates the behavior of diverse feature extractors -- InceptionV3, CLIP, DINOv2, and ArcFace -- considering a variety of metrics -- FID, KID, Precision\\&Recall. While the FFHQ dataset is used as the target domain, as the source domains, the CelebA-HQ dataset and the synthetic datasets generated using StyleGAN2 and Projected FastGAN are used. Experiments include deep-down analysis of the features: $L_2$ normalization, model attention during extraction, and domain distributions in the feature space. We aim to give valuable insights into the behavior of feature extractors for evaluating face image synthesis methodologies. The code is publicly available at https://github.com/ThEnded32/AnalyzingFeatureExtractors.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Accepted at 18th International Conference on Automatic Face and Gesture Recognition (FG) on 1st SD-FGA Workshop 2024"
     },
     {
         "paper id": "2406.02202",
@@ -4456,7 +4406,6 @@
         "keywords": [
             [
                 "diffusion",
-                "synthesis",
                 "Text-to-Video"
             ],
             [
@@ -4468,6 +4417,25 @@
             "cs.CV"
         ],
         "comment": "Project page: https://xiefan-guo.github.io/i4vgen"
+    },
+    {
+        "paper id": "2406.02233",
+        "abstract url": "https://arxiv.org/abs/2406.02233",
+        "title": "Towards Out-of-Distribution Detection in Vocoder Recognition via Latent Feature Reconstruction",
+        "rating": "0",
+        "keywords": [
+            [
+                "deepfake"
+            ],
+            [
+                "eess.AS"
+            ]
+        ],
+        "abstract": "Advancements in synthesized speech have created a growing threat of impersonation, making it crucial to develop deepfake algorithm recognition. One significant aspect is out-of-distribution (OOD) detection, which has gained notable attention due to its important role in deepfake algorithm recognition. However, most of the current approaches for detecting OOD in deepfake algorithm recognition rely on probability-score or classified-distance, which may lead to limitations in the accuracy of the sample at the edge of the threshold. In this study, we propose a reconstruction-based detection approach that employs an autoencoder architecture to compress and reconstruct the acoustic feature extracted from a pre-trained WavLM model. Each acoustic feature belonging to a specific vocoder class is only aptly reconstructed by its corresponding decoder. When none of the decoders can satisfactorily reconstruct a feature, it is classified as an OOD sample. To enhance the distinctiveness of the reconstructed features by each decoder, we incorporate contrastive learning and an auxiliary classifier to further constrain the reconstructed feature. Experiments demonstrate that our proposed approach surpasses baseline systems by a relative margin of 10\\% in the evaluation dataset. Ablation studies further validate the effectiveness of both the contrastive constraint and the auxiliary classifier within our proposed approach.",
+        "subjects": [
+            "eess.AS"
+        ],
+        "comment": "5 pages, 4 figures"
     },
     {
         "paper id": "2406.02328",
@@ -4586,6 +4554,26 @@
         "comment": "The code is available at https://github.com/EasonXiao-888/GrootVL"
     },
     {
+        "paper id": "2406.02407",
+        "abstract url": "https://arxiv.org/abs/2406.02407",
+        "title": "WE-GS: An In-the-wild Efficient 3D Gaussian Representation for Unconstrained Photo Collections",
+        "rating": "0",
+        "keywords": [
+            [
+                "3D",
+                "Gaussian Splatting"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Novel View Synthesis (NVS) from unconstrained photo collections is challenging in computer graphics. Recently, 3D Gaussian Splatting (3DGS) has shown promise for photorealistic and real-time NVS of static scenes. Building on 3DGS, we propose an efficient point-based differentiable rendering framework for scene reconstruction from photo collections. Our key innovation is a residual-based spherical harmonic coefficients transfer module that adapts 3DGS to varying lighting conditions and photometric post-processing. This lightweight module can be pre-computed and ensures efficient gradient propagation from rendered images to 3D Gaussian attributes. Additionally, we observe that the appearance encoder and the transient mask predictor, the two most critical parts of NVS from unconstrained photo collections, can be mutually beneficial. We introduce a plug-and-play lightweight spatial attention module to simultaneously predict transient occluders and latent appearance representation for each image. After training and preprocessing, our method aligns with the standard 3DGS format and rendering pipeline, facilitating seamlessly integration into various 3DGS applications. Extensive experiments on diverse datasets show our approach outperforms existing approaches on the rendering quality of novel view and appearance synthesis with high converge and rendering speed.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Our project page is available at https://yuzewang1998.github.io/we-gs.github.io/"
+    },
+    {
         "paper id": "2406.02411",
         "abstract url": "https://arxiv.org/abs/2406.02411",
         "title": "Decoupling of neural network calibration measures",
@@ -4603,27 +4591,6 @@
             "cs.CV"
         ],
         "comment": "Submitted to the German Conference on Pattern Recognition (GCPR) 2024"
-    },
-    {
-        "paper id": "2406.02429",
-        "abstract url": "https://arxiv.org/abs/2406.02429",
-        "title": "Self-Supervised Singing Voice Pre-Training towards Speech-to-Singing Conversion",
-        "rating": "0",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.SD",
-                "eess.AS"
-            ]
-        ],
-        "abstract": "Speech-to-singing voice conversion (STS) task always suffers from data scarcity, because it requires paired speech and singing data. Compounding this issue are the challenges of content-pitch alignment and the suboptimal quality of generated outputs, presenting significant hurdles in STS research. This paper presents SVPT, an STS approach boosted by a self-supervised singing voice pre-training model. We leverage spoken language model techniques to tackle the rhythm alignment problem and the in-context learning capability to achieve zero-shot conversion. We adopt discrete-unit random resampling and pitch corruption strategies, enabling training with unpaired singing data and thus mitigating the issue of data scarcity. SVPT also serves as an effective backbone for singing voice synthesis (SVS), offering insights into scaling up SVS models. Experimental results indicate that SVPT delivers notable improvements in both STS and SVS endeavors. Audio samples are available at https://speech2sing.github.io.",
-        "subjects": [
-            "eess.AS",
-            "cs.SD"
-        ],
-        "comment": "13 pages"
     },
     {
         "paper id": "2406.02430",
@@ -4772,25 +4739,6 @@
             ]
         ],
         "abstract": "Diffusion models have emerged as a formidable tool for training-free conditional generation.However, a key hurdle in inference-time guidance techniques is the need for compute-heavy backpropagation through the diffusion network for estimating the guidance direction. Moreover, these techniques often require handcrafted parameter tuning on a case-by-case basis. Although some recent works have introduced minimal compute methods for linear inverse problems, a generic lightweight guidance solution to both linear and non-linear guidance problems is still missing. To this end, we propose Dreamguider, a method that enables inference-time guidance without compute-heavy backpropagation through the diffusion network. The key idea is to regulate the gradient flow through a time-varying factor. Moreover, we propose an empirical guidance scale that works for a wide variety of tasks, hence removing the need for handcrafted parameter tuning. We further introduce an effective lightweight augmentation strategy that significantly boosts the performance during inference-time guidance. We present experiments using Dreamguider on multiple tasks across multiple datasets and models to show the effectiveness of the proposed modules. To facilitate further research, we will make the code public after the review process.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2406.02552",
-        "abstract url": "https://arxiv.org/abs/2406.02552",
-        "title": "VHS: High-Resolution Iterative Stereo Matching with Visual Hull Priors",
-        "rating": "0",
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "We present a stereo-matching method for depth estimation from high-resolution images using visual hulls as priors, and a memory-efficient technique for the correlation computation. Our method uses object masks extracted from supplementary views of the scene to guide the disparity estimation, effectively reducing the search space for matches. This approach is specifically tailored to stereo rigs in volumetric capture systems, where an accurate depth plays a key role in the downstream reconstruction task. To enable training and regression at high resolutions targeted by recent systems, our approach extends a sparse correlation computation into a hybrid sparse-dense scheme suitable for application in leading recurrent network architectures. We evaluate the performance-efficiency trade-off of our method compared to state-of-the-art methods, and demonstrate the efficacy of the visual hull guidance. In addition, we propose a training scheme for a further reduction of memory requirements during optimization, facilitating training on high-resolution data.",
         "subjects": [
             "cs.CV"
         ],
@@ -5486,8 +5434,7 @@
         "rating": "-0.5",
         "keywords": [
             [
-                "diffusion",
-                "Synthesis"
+                "diffusion"
             ],
             [
                 "cs.AI",
@@ -5500,33 +5447,6 @@
             "cs.AI"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2406.02343",
-        "abstract url": "https://arxiv.org/abs/2406.02343",
-        "title": "Cluster-Aware Similarity Diffusion for Instance Retrieval",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "Diffusion"
-            ],
-            [
-                "graph"
-            ],
-            [
-                "cs.LG",
-                "cs.CV"
-            ],
-            [
-                "ICML"
-            ]
-        ],
-        "abstract": "Diffusion-based re-ranking is a common method used for retrieving instances by performing similarity propagation in a nearest neighbor graph. However, existing techniques that construct the affinity graph based on pairwise instances can lead to the propagation of misinformation from outliers and other manifolds, resulting in inaccurate results. To overcome this issue, we propose a novel Cluster-Aware Similarity (CAS) diffusion for instance retrieval. The primary concept of CAS is to conduct similarity diffusion within local clusters, which can reduce the influence from other manifolds explicitly. To obtain a symmetrical and smooth similarity matrix, our Bidirectional Similarity Diffusion strategy introduces an inverse constraint term to the optimization objective of local cluster diffusion. Additionally, we have optimized a Neighbor-guided Similarity Smoothing approach to ensure similarity consistency among the local neighbors of each instance. Evaluations in instance retrieval and object re-identification validate the effectiveness of the proposed CAS, our code is publicly available.",
-        "subjects": [
-            "cs.LG",
-            "cs.CV"
-        ],
-        "comment": "This paper has been accepted by ICML2024"
     },
     {
         "paper id": "2406.02348",
@@ -5715,26 +5635,6 @@
             "cs.DS"
         ],
         "comment": "26 pages, 13 figures, Learning on Graphs Conference (LoG 2022)"
-    },
-    {
-        "paper id": "2406.02736",
-        "abstract url": "https://arxiv.org/abs/2406.02736",
-        "title": "Synthetic Data Outliers: Navigating Identity Disclosure",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "attack"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Multiple synthetic data generation models have emerged, among which deep learning models have become the vanguard due to their ability to capture the underlying characteristics of the original data. However, the resemblance of the synthetic to the original data raises important questions on the protection of individuals' privacy. As synthetic data is perceived as a means to fully protect personal information, most current related work disregards the impact of re-identification risk. In particular, limited attention has been given to exploring outliers, despite their privacy relevance. In this work, we analyze the privacy of synthetic data w.r.t the outliers. Our main findings suggest that outliers re-identification via linkage attack is feasible and easily achieved. Furthermore, additional safeguards such as differential privacy can prevent re-identification, albeit at the expense of the data utility.",
-        "subjects": [
-            "cs.LG",
-            "cs.CR"
-        ],
-        "comment": null
     },
     {
         "paper id": "2406.02764",
@@ -6003,6 +5903,25 @@
             "cs.IT"
         ],
         "comment": "optimal linear code, LCD code,generalized anti-code, defining vector, reduced code"
+    },
+    {
+        "paper id": "2406.02079",
+        "abstract url": "https://arxiv.org/abs/2406.02079",
+        "title": "Assessing the Performance of Chinese Open Source Large Language Models in Information Extraction Tasks",
+        "rating": "-1",
+        "keywords": [
+            [
+                "Named Entity Recognition"
+            ],
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Information Extraction (IE) plays a crucial role in Natural Language Processing (NLP) by extracting structured information from unstructured text, thereby facilitating seamless integration with various real-world applications that rely on structured data. Despite its significance, recent experiments focusing on English IE tasks have shed light on the challenges faced by Large Language Models (LLMs) in achieving optimal performance, particularly in sub-tasks like Named Entity Recognition (NER). In this paper, we delve into a comprehensive investigation of the performance of mainstream Chinese open-source LLMs in tackling IE tasks, specifically under zero-shot conditions where the models are not fine-tuned for specific tasks. Additionally, we present the outcomes of several few-shot experiments to further gauge the capability of these models. Moreover, our study includes a comparative analysis between these open-source LLMs and ChatGPT, a widely recognized language model, on IE performance. Through meticulous experimentation and analysis, we aim to provide insights into the strengths, limitations, and potential enhancements of existing Chinese open-source LLMs in the domain of Information Extraction within the context of NLP.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": null
     },
     {
         "paper id": "2406.02092",
@@ -6351,29 +6270,6 @@
         "comment": null
     },
     {
-        "paper id": "2406.02407",
-        "abstract url": "https://arxiv.org/abs/2406.02407",
-        "title": "WE-GS: An In-the-wild Efficient 3D Gaussian Representation for Unconstrained Photo Collections",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting"
-            ],
-            [
-                "Synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Novel View Synthesis (NVS) from unconstrained photo collections is challenging in computer graphics. Recently, 3D Gaussian Splatting (3DGS) has shown promise for photorealistic and real-time NVS of static scenes. Building on 3DGS, we propose an efficient point-based differentiable rendering framework for scene reconstruction from photo collections. Our key innovation is a residual-based spherical harmonic coefficients transfer module that adapts 3DGS to varying lighting conditions and photometric post-processing. This lightweight module can be pre-computed and ensures efficient gradient propagation from rendered images to 3D Gaussian attributes. Additionally, we observe that the appearance encoder and the transient mask predictor, the two most critical parts of NVS from unconstrained photo collections, can be mutually beneficial. We introduce a plug-and-play lightweight spatial attention module to simultaneously predict transient occluders and latent appearance representation for each image. After training and preprocessing, our method aligns with the standard 3DGS format and rendering pipeline, facilitating seamlessly integration into various 3DGS applications. Extensive experiments on diverse datasets show our approach outperforms existing approaches on the rendering quality of novel view and appearance synthesis with high converge and rendering speed.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Our project page is available at https://yuzewang1998.github.io/we-gs.github.io/"
-    },
-    {
         "paper id": "2406.02422",
         "abstract url": "https://arxiv.org/abs/2406.02422",
         "title": "IterMask2: Iterative Unsupervised Anomaly Segmentation via Spatial and Frequency Masking for Brain Lesions in MRI",
@@ -6450,7 +6346,6 @@
             ],
             [
                 "diffusion",
-                "synthesis",
                 "Text-to-Image"
             ],
             [
@@ -6492,8 +6387,7 @@
                 "3D"
             ],
             [
-                "diffusion",
-                "synthesize"
+                "diffusion"
             ],
             [
                 "cs.CV"
@@ -6506,21 +6400,23 @@
         "comment": "Project page: https://ir1d.github.io/CamCo/"
     },
     {
-        "paper id": "2406.02709",
-        "abstract url": "https://arxiv.org/abs/2406.02709",
-        "title": "Constructive Safety-Critical Control: Synthesizing Control Barrier Functions for Partially Feedback Linearizable Systems",
+        "paper id": "2406.02528",
+        "abstract url": "https://arxiv.org/abs/2406.02528",
+        "title": "Scalable MatMul-free Language Modeling",
         "rating": "-1",
         "keywords": [
             [
-                "Synthesizing"
+                "FPGA"
+            ],
+            [
+                "cs.CL"
             ]
         ],
-        "abstract": "Certifying the safety of nonlinear systems, through the lens of set invariance and control barrier functions (CBFs), offers a powerful method for controller synthesis, provided a CBF can be constructed. This paper draws connections between partial feedback linearization and CBF synthesis. We illustrate that when a control affine system is input-output linearizable with respect to a smooth output function, then, under mild regularity conditions, one may extend any safety constraint defined on the output to a CBF for the full-order dynamics. These more general results are specialized to robotic systems where the conditions required to synthesize CBFs simplify. The CBFs constructed from our approach are applied and verified in simulation and hardware experiments on a quadrotor.",
+        "abstract": "Matrix multiplication (MatMul) typically dominates the overall computational cost of large language models (LLMs). This cost only grows as LLMs scale to larger embedding dimensions and context lengths. In this work, we show that MatMul operations can be completely eliminated from LLMs while maintaining strong performance at billion-parameter scales. Our experiments show that our proposed MatMul-free models achieve performance on-par with state-of-the-art Transformers that require far more memory during inference at a scale up to at least 2.7B parameters. We investigate the scaling laws and find that the performance gap between our MatMul-free models and full precision Transformers narrows as the model size increases. We also provide a GPU-efficient implementation of this model which reduces memory usage by up to 61% over an unoptimized baseline during training. By utilizing an optimized kernel during inference, our model's memory consumption can be reduced by more than 10x compared to unoptimized models. To properly quantify the efficiency of our architecture, we build a custom hardware solution on an FPGA which exploits lightweight operations beyond what GPUs are capable of. We processed billion-parameter scale models at 13W beyond human readable throughput, moving LLMs closer to brain-like efficiency. This work not only shows how far LLMs can be stripped back while still performing effectively, but also points at the types of operations future accelerators should be optimized for in processing the next generation of lightweight LLMs. Our code implementation is available at https://github.com/ridgerchu/matmulfreellm.",
         "subjects": [
-            "eess.SY",
-            "cs.RO"
+            "cs.CL"
         ],
-        "comment": "Accepted for publication in IEEE Control Systems Letters"
+        "comment": null
     },
     {
         "paper id": "2406.02722",
@@ -6710,6 +6606,27 @@
         "comment": null
     },
     {
+        "paper id": "2406.02880",
+        "abstract url": "https://arxiv.org/abs/2406.02880",
+        "title": "Controllable Talking Face Generation by Implicit Facial Keypoints Editing",
+        "rating": "-1",
+        "keywords": [
+            [
+                "Facial"
+            ],
+            [
+                "cs.AI",
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Audio-driven talking face generation has garnered significant interest within the domain of digital human research. Existing methods are encumbered by intricate model architectures that are intricately dependent on each other, complicating the process of re-editing image or video inputs. In this work, we present ControlTalk, a talking face generation method to control face expression deformation based on driven audio, which can construct the head pose and facial expression including lip motion for both single image or sequential video inputs in a unified manner. By utilizing a pre-trained video synthesis renderer and proposing the lightweight adaptation, ControlTalk achieves precise and naturalistic lip synchronization while enabling quantitative control over mouth opening shape. Our experiments show that our method is superior to state-of-the-art performance on widely used benchmarks, including HDTF and MEAD. The parameterized adaptation demonstrates remarkable generalization capabilities, effectively handling expression deformation across same-ID and cross-ID scenarios, and extending its utility to out-of-domain portraits, regardless of languages.",
+        "subjects": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2406.02885",
         "abstract url": "https://arxiv.org/abs/2406.02885",
         "title": "Homotopic Path Set Planning for Robot Manipulation and Navigation",
@@ -6771,6 +6688,27 @@
         "comment": "Accepted by IJCAI24"
     },
     {
+        "paper id": "2406.02057",
+        "abstract url": "https://arxiv.org/abs/2406.02057",
+        "title": "Tabular and Deep Learning for the Whittle Index",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "Tabular"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "The Whittle index policy is a heuristic that has shown remarkably good performance (with guaranteed asymptotic optimality) when applied to the class of problems known as Restless Multi-Armed Bandit Problems (RMABPs). In this paper we present QWI and QWINN, two reinforcement learning algorithms, respectively tabular and deep, to learn the Whittle index for the total discounted criterion. The key feature is the use of two time-scales, a faster one to update the state-action Q -values, and a relatively slower one to update the Whittle indices. In our main theoretical result we show that QWI, which is a tabular implementation, converges to the real Whittle indices. We then present QWINN, an adaptation of QWI algorithm using neural networks to compute the Q -values on the faster time-scale, which is able to extrapolate information from one state to another and scales naturally to large state-space environments. For QWINN, we show that all local minima of the Bellman error are locally stable equilibria, which is the first result of its kind for DQN-based schemes. Numerical computations show that QWI and QWINN converge faster than the standard Q -learning algorithm, neural-network based approximate Q-learning and other state of the art algorithms.",
+        "subjects": [
+            "cs.AI",
+            "cs.LG"
+        ],
+        "comment": "ACM Transactions on Modeling and Performance Evaluation of Computing Systems, 2024"
+    },
+    {
         "paper id": "2406.02131",
         "abstract url": "https://arxiv.org/abs/2406.02131",
         "title": "CondTSF: One-line Plugin of Dataset Condensation for Time Series Forecasting",
@@ -6826,6 +6764,25 @@
         "abstract": "Accurately finding and predicting dynamics based on the observational data with noise perturbations is of paramount significance but still a major challenge presently. Here, for the Hamiltonian mechanics, we propose the Hamiltonian Neural Koopman Operator (HNKO), integrating the knowledge of mathematical physics in learning the Koopman operator, and making it automatically sustain and even discover the conservation laws. We demonstrate the outperformance of the HNKO and its extension using a number of representative physical systems even with hundreds or thousands of freedoms. Our results suggest that feeding the prior knowledge of the underlying system and the mathematical theory appropriately to the learning framework can reinforce the capability of machine learning in solving physical problems.",
         "subjects": [
             "math-ph",
+            "cs.LG"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2406.02165",
+        "abstract url": "https://arxiv.org/abs/2406.02165",
+        "title": "SaVeR: Optimal Data Collection Strategy for Safe Policy Evaluation in Tabular MDP",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "Tabular"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "In this paper, we study safe data collection for the purpose of policy evaluation in tabular Markov decision processes (MDPs). In policy evaluation, we are given a \\textit{target} policy and asked to estimate the expected cumulative reward it will obtain. Policy evaluation requires data and we are interested in the question of what \\textit{behavior} policy should collect the data for the most accurate evaluation of the target policy. While prior work has considered behavior policy selection, in this paper, we additionally consider a safety constraint on the behavior policy. Namely, we assume there exists a known default policy that incurs a particular expected cost when run and we enforce that the cumulative cost of all behavior policies ran is better than a constant factor of the cost that would be incurred had we always run the default policy. We first show that there exists a class of intractable MDPs where no safe oracle algorithm with knowledge about problem parameters can efficiently collect data and satisfy the safety constraints. We then define the tractability condition for an MDP such that a safe oracle algorithm can efficiently collect data and using that we prove the first lower bound for this setting. We then introduce an algorithm SaVeR for this problem that approximates the safe oracle algorithm and bound the finite-sample mean squared error of the algorithm while ensuring it satisfies the safety constraint. Finally, we show in simulations that SaVeR produces low MSE policy evaluation while satisfying the safety constraint.",
+        "subjects": [
             "cs.LG"
         ],
         "comment": null
@@ -6892,6 +6849,36 @@
             "cs.LG"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2406.02343",
+        "abstract url": "https://arxiv.org/abs/2406.02343",
+        "title": "Cluster-Aware Similarity Diffusion for Instance Retrieval",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "Diffusion"
+            ],
+            [
+                "re-identification"
+            ],
+            [
+                "graph"
+            ],
+            [
+                "cs.LG",
+                "cs.CV"
+            ],
+            [
+                "ICML"
+            ]
+        ],
+        "abstract": "Diffusion-based re-ranking is a common method used for retrieving instances by performing similarity propagation in a nearest neighbor graph. However, existing techniques that construct the affinity graph based on pairwise instances can lead to the propagation of misinformation from outliers and other manifolds, resulting in inaccurate results. To overcome this issue, we propose a novel Cluster-Aware Similarity (CAS) diffusion for instance retrieval. The primary concept of CAS is to conduct similarity diffusion within local clusters, which can reduce the influence from other manifolds explicitly. To obtain a symmetrical and smooth similarity matrix, our Bidirectional Similarity Diffusion strategy introduces an inverse constraint term to the optimization objective of local cluster diffusion. Additionally, we have optimized a Neighbor-guided Similarity Smoothing approach to ensure similarity consistency among the local neighbors of each instance. Evaluations in instance retrieval and object re-identification validate the effectiveness of the proposed CAS, our code is publicly available.",
+        "subjects": [
+            "cs.LG",
+            "cs.CV"
+        ],
+        "comment": "This paper has been accepted by ICML2024"
     },
     {
         "paper id": "2406.02344",
@@ -7145,6 +7132,29 @@
             "cs.AI"
         ],
         "comment": "9 pages, 17 figures"
+    },
+    {
+        "paper id": "2406.02736",
+        "abstract url": "https://arxiv.org/abs/2406.02736",
+        "title": "Synthetic Data Outliers: Navigating Identity Disclosure",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "re-identification"
+            ],
+            [
+                "attack"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Multiple synthetic data generation models have emerged, among which deep learning models have become the vanguard due to their ability to capture the underlying characteristics of the original data. However, the resemblance of the synthetic to the original data raises important questions on the protection of individuals' privacy. As synthetic data is perceived as a means to fully protect personal information, most current related work disregards the impact of re-identification risk. In particular, limited attention has been given to exploring outliers, despite their privacy relevance. In this work, we analyze the privacy of synthetic data w.r.t the outliers. Our main findings suggest that outliers re-identification via linkage attack is feasible and easily achieved. Furthermore, additional safeguards such as differential privacy can prevent re-identification, albeit at the expense of the data utility.",
+        "subjects": [
+            "cs.LG",
+            "cs.CR"
+        ],
+        "comment": null
     },
     {
         "paper id": "2406.02770",
@@ -7430,6 +7440,39 @@
         "comment": null
     },
     {
+        "paper id": "2406.02088",
+        "abstract url": "https://arxiv.org/abs/2406.02088",
+        "title": "Fast and Practical Strassen's Matrix Multiplication using FPGAs",
+        "rating": "-2",
+        "keywords": [
+            [
+                "FPGAs"
+            ]
+        ],
+        "abstract": "Matrix multiplication is a cornerstone operation in a wide array of scientific fields, including machine learning and computer graphics. The standard algorithm for matrix multiplication has a complexity of $\\mathcal{O}(n^3)$ for $n\\times n$ matrices. Strassen's algorithm improves this to $\\mathcal{O}(n^{2.807})$, but its practicality is limited for small to medium matrix sizes due to the large number of additions it introduces. This paper presents a novel FPGA-based implementation of Strassen's algorithm that achieves superior speed over an optimized General Matrix Multiply (GeMM) implementation for matrices as small as $n=256$. Our design, tested extensively on two high-performance FPGA accelerators (Alveo U50 and U280) across various data types, matches or surpasses the performance of a highly optimized baseline across a range of matrix sizes.",
+        "subjects": [
+            "cs.AR"
+        ],
+        "comment": "Accepted at 34th International Conference on Field-Programmable Logic and Applications (FPL 2024), 7 pages"
+    },
+    {
+        "paper id": "2406.02108",
+        "abstract url": "https://arxiv.org/abs/2406.02108",
+        "title": "Description Complexity of Unary Structures in First-Order Logic with Links to Entropy",
+        "rating": "-2",
+        "keywords": [
+            [
+                "tabular"
+            ]
+        ],
+        "abstract": "The description complexity of a model is the length of the shortest formula that defines the model. We study the description complexity of unary structures in first-order logic FO, also drawing links to semantic complexity in the form of entropy. The class of unary structures provides a simple way to represent tabular Boolean data sets as relational structures. We define structures with FO-formulas that are strictly linear in the size of the model as opposed to using the naive quadratic ones, and we use arguments based on formula size games to obtain related lower bounds for description complexity. We also obtain a precise asymptotic result on the expected description complexity of a randomly selected structure. We then give bounds on the relationship between Shannon entropy and description complexity. We extend this relationship also to Boltzmann entropy by establishing an asymptotic match between the two entropies. Despite the simplicity of unary structures, our arguments require the use of formula size games, Stirling's approximation and Chernoff bounds.",
+        "subjects": [
+            "math.LO",
+            "cs.LO"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2406.02163",
         "abstract url": "https://arxiv.org/abs/2406.02163",
         "title": "Pairwise Ranking Loss for Multi-Task Learning in Recommender Systems",
@@ -7507,23 +7550,6 @@
         "abstract": "Among many envisaged drivers for the sixth generation, one is from the United Nations Sustainability Development Goals 2030 to eliminate digital inequality. Remote coverage in sparsely populated areas, difficult terrains, or emergency scenarios requires on-demand access and flexible deployment with minimal capex and opex. In this context, network-in-a-box (NIB) is an exciting solution that packs the whole wireless network into a single portable and re-configurable box to support multiple access technologies such as WiFi/2G/3G/4G/5G etc. In this paper, we propose low-altitude platform stations (LAPS) based NIBs with stratospheric high-altitude platform station (HAPS) as backhaul. Specifically, backhaul employs non-orthogonal multiple access (NOMA) with superposition coding at the transmitting HAPS and successive interference cancellation (SIC) at the receiving NIBs, whereas the access link (AL) employs superposition coding along with the regularized zero-forcing (RZF) precoding at the NIB in order to elevate the computational overhead from the ground users. The required number of airborne NIBs to serve a desired coverage area, their optimal placement, user association, beam optimization, and resource allocation are optimized by maximizing the sum rate of the AL while maintaining the quality of service. Our findings reveal the significance of thorough system planning and communication parameters optimization for enhanced system performance and best coverage under limited resources.",
         "subjects": [
             "eess.SP"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2406.02247",
-        "abstract url": "https://arxiv.org/abs/2406.02247",
-        "title": "A Study of the Latest Updates of the Readout System for the Hybird-Pixel Detector at HEPS",
-        "rating": "-2",
-        "keywords": [
-            [
-                "Physics"
-            ]
-        ],
-        "abstract": "The High Energy Photon Source (HEPS) represents a fourth-generation light source. This facility has made unprecedented advancements in accelerator technology, necessitating the development of new detectors to satisfy physical requirements such as single-photon resolution, large dynamic range, and high frame rates. Since 2016, the Institute of High Energy Physics has introduced the first user-experimental hybrid pixel detector, progressing to the fourth-generation million-pixel detector designed for challenging conditions, with the dual-threshold single-photon detector HEPS-Beijing PIXel (HEPS-BPIX) set as the next-generation target. HEPS-BPIX will employ the entirely new Application-Specific Integrated Circuit (ASIC) BP40 for pixel information readout. Data flow will be managed and controlled through readout electronics based on a two-tier Field-Programmable Gate Array (FPGA) system: the Front-End Electronics (FEE) and the Input-Output Board (IOB) handle the fan-out for 12 ASICs, and the u4FCP is tasked with processing serial data on high-speed links, transferring pixel-level data to the back-end RTM and uTCA chassis, or independently outputting through a network port, enabling remote control of the entire detector. The new HEPS-BPIX firmware has undergone a comprehensive redesign and update to meet the electronic characteristics of the new chip and to improve the overall performance of the detector. We provide an overview of the core subunits of HEPS-BPIX, emphasizing the readout system, evaluating the new hardware and firmware, and highlighting some of its innovative features and characteristics.",
-        "subjects": [
-            "physics.ins-det",
-            "eess.SY"
         ],
         "comment": null
     },
@@ -7649,6 +7675,38 @@
         "comment": null
     },
     {
+        "paper id": "2406.02462",
+        "abstract url": "https://arxiv.org/abs/2406.02462",
+        "title": "Learning Image Priors through Patch-based Diffusion Models for Solving Inverse Problems",
+        "rating": "-2",
+        "keywords": [
+            [
+                "memory efficiency"
+            ],
+            [
+                "3D"
+            ],
+            [
+                "Diffusion",
+                "superresolution"
+            ],
+            [
+                "medical",
+                "CT"
+            ],
+            [
+                "cs.AI",
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Diffusion models can learn strong image priors from underlying data distribution and use them to solve inverse problems, but the training process is computationally expensive and requires lots of data. Such bottlenecks prevent most existing works from being feasible for high-dimensional and high-resolution data such as 3D images. This paper proposes a method to learn an efficient data prior for the entire image by training diffusion models only on patches of images. Specifically, we propose a patch-based position-aware diffusion inverse solver, called PaDIS, where we obtain the score function of the whole image through scores of patches and their positional encoding and utilize this as the prior for solving inverse problems. First of all, we show that this diffusion model achieves an improved memory efficiency and data efficiency while still maintaining the capability to generate entire images via positional encoding. Additionally, the proposed PaDIS model is highly flexible and can be plugged in with different diffusion inverse solvers (DIS). We demonstrate that the proposed PaDIS approach enables solving various inverse problems in both natural and medical image domains, including CT reconstruction, deblurring, and superresolution, given only patch-based priors. Notably, PaDIS outperforms previous DIS methods trained on entire image priors in the case of limited training data, demonstrating the data efficiency of our proposed approach by learning patch-based prior.",
+        "subjects": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2406.02477",
         "abstract url": "https://arxiv.org/abs/2406.02477",
         "title": "Inpainting Pathology in Lumbar Spine MRI with Latent Diffusion",
@@ -7656,7 +7714,6 @@
         "keywords": [
             [
                 "Diffusion",
-                "synthesize",
                 "Inpainting"
             ],
             [
@@ -7845,30 +7902,6 @@
         "comment": null
     },
     {
-        "paper id": "2406.02880",
-        "abstract url": "https://arxiv.org/abs/2406.02880",
-        "title": "Controllable Talking Face Generation by Implicit Facial Keypoints Editing",
-        "rating": "-2",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "Facial"
-            ],
-            [
-                "cs.AI",
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Audio-driven talking face generation has garnered significant interest within the domain of digital human research. Existing methods are encumbered by intricate model architectures that are intricately dependent on each other, complicating the process of re-editing image or video inputs. In this work, we present ControlTalk, a talking face generation method to control face expression deformation based on driven audio, which can construct the head pose and facial expression including lip motion for both single image or sequential video inputs in a unified manner. By utilizing a pre-trained video synthesis renderer and proposing the lightweight adaptation, ControlTalk achieves precise and naturalistic lip synchronization while enabling quantitative control over mouth opening shape. Our experiments show that our method is superior to state-of-the-art performance on widely used benchmarks, including HDTF and MEAD. The parameterized adaptation demonstrates remarkable generalization capabilities, effectively handling expression deformation across same-ID and cross-ID scenarios, and extending its utility to out-of-domain portraits, regardless of languages.",
-        "subjects": [
-            "cs.CV",
-            "cs.AI"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2406.02898",
         "abstract url": "https://arxiv.org/abs/2406.02898",
         "title": "Location-Driven Beamforming for RIS-Assisted Near-Field Communications",
@@ -8030,32 +8063,6 @@
         "comment": null
     },
     {
-        "paper id": "2406.02333",
-        "abstract url": "https://arxiv.org/abs/2406.02333",
-        "title": "Towards Neural Architecture Search for Transfer Learning in 6G Networks",
-        "rating": "-2.5",
-        "keywords": [
-            [
-                "Architecture Search",
-                "NAS"
-            ],
-            [
-                "6G"
-            ],
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "The future 6G network is envisioned to be AI-native, and as such, ML models will be pervasive in support of optimizing performance, reducing energy consumption, and in coping with increasing complexity and heterogeneity. A key challenge is automating the process of finding optimal model architectures satisfying stringent requirements stemming from varying tasks, dynamicity and available resources in the infrastructure and deployment positions. In this paper, we describe and review the state-of-the-art in Neural Architecture Search and Transfer Learning and their applicability in networking. Further, we identify open research challenges and set directions with a specific focus on three main requirements with elements unique to the future network, namely combining NAS and TL, multi-objective search, and tabular data. Finally, we outline and discuss both near-term and long-term work ahead.",
-        "subjects": [
-            "cs.NI",
-            "cs.AI",
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2406.02636",
         "abstract url": "https://arxiv.org/abs/2406.02636",
         "title": "Strengthening Network Intrusion Detection in IoT Environments with Self-Supervised Learning and Few Shot Learning",
@@ -8178,31 +8185,6 @@
         "comment": null
     },
     {
-        "paper id": "2406.03506",
-        "abstract url": "https://arxiv.org/abs/2406.03506",
-        "title": "Fuzzy Convolution Neural Networks for Tabular Data Classification",
-        "rating": "-2.5",
-        "keywords": [
-            [
-                "SVM",
-                "support vector machine"
-            ],
-            [
-                "bioinformatics"
-            ],
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Recently, convolution neural networks (CNNs) have attracted a great deal of attention due to their remarkable performance in various domains, particularly in image and text classification tasks. However, their application to tabular data classification remains underexplored. There are many fields such as bioinformatics, finance, medicine where nonimage data are prevalent. Adaption of CNNs to classify nonimage data remains highly challenging. This paper investigates the efficacy of CNNs for tabular data classification, aiming to bridge the gap between traditional machine learning approaches and deep learning techniques. We propose a novel framework fuzzy convolution neural network (FCNN) tailored specifically for tabular data to capture local patterns within feature vectors. In our approach, we map feature values to fuzzy memberships. The fuzzy membership vectors are converted into images that are used to train the CNN model. The trained CNN model is used to classify unknown feature vectors. To validate our approach, we generated six complex noisy data sets. We used randomly selected seventy percent samples from each data set for training and thirty percent for testing. The data sets were also classified using the state-of-the-art machine learning algorithms such as the decision tree (DT), support vector machine (SVM), fuzzy neural network (FNN), Bayes classifier, and Random Forest (RF). Experimental results demonstrate that our proposed model can effectively learn meaningful representations from tabular data, achieving competitive or superior performance compared to existing methods. Overall, our finding suggests that the proposed FCNN model holds promise as a viable alternative for tabular data classification tasks, offering a fresh prospective and potentially unlocking new opportunities for leveraging deep learning in structured data analysis.",
-        "subjects": [
-            "cs.LG",
-            "cs.AI"
-        ],
-        "comment": "10 pages, 16 figures, Submitted to IEEE Access"
-    },
-    {
         "paper id": "2406.02096",
         "abstract url": "https://arxiv.org/abs/2406.02096",
         "title": "MS-Mapping: Multi-session LiDAR Mapping with Wasserstein-based Keyframe Selection",
@@ -8310,35 +8292,6 @@
             "eess.SP"
         ],
         "comment": "8 pages, 10 figures, accepted to 27th International Conference on Information Fusion (FUSION 2024)"
-    },
-    {
-        "paper id": "2406.02462",
-        "abstract url": "https://arxiv.org/abs/2406.02462",
-        "title": "Learning Image Priors through Patch-based Diffusion Models for Solving Inverse Problems",
-        "rating": "-3",
-        "keywords": [
-            [
-                "3D"
-            ],
-            [
-                "Diffusion",
-                "superresolution"
-            ],
-            [
-                "medical",
-                "CT"
-            ],
-            [
-                "cs.AI",
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Diffusion models can learn strong image priors from underlying data distribution and use them to solve inverse problems, but the training process is computationally expensive and requires lots of data. Such bottlenecks prevent most existing works from being feasible for high-dimensional and high-resolution data such as 3D images. This paper proposes a method to learn an efficient data prior for the entire image by training diffusion models only on patches of images. Specifically, we propose a patch-based position-aware diffusion inverse solver, called PaDIS, where we obtain the score function of the whole image through scores of patches and their positional encoding and utilize this as the prior for solving inverse problems. First of all, we show that this diffusion model achieves an improved memory efficiency and data efficiency while still maintaining the capability to generate entire images via positional encoding. Additionally, the proposed PaDIS model is highly flexible and can be plugged in with different diffusion inverse solvers (DIS). We demonstrate that the proposed PaDIS approach enables solving various inverse problems in both natural and medical image domains, including CT reconstruction, deblurring, and superresolution, given only patch-based priors. Notably, PaDIS outperforms previous DIS methods trained on entire image priors in the case of limited training data, demonstrating the data efficiency of our proposed approach by learning patch-based prior.",
-        "subjects": [
-            "cs.CV",
-            "cs.AI"
-        ],
-        "comment": null
     },
     {
         "paper id": "2406.02533",
@@ -8680,6 +8633,26 @@
         "comment": null
     },
     {
+        "paper id": "2406.02247",
+        "abstract url": "https://arxiv.org/abs/2406.02247",
+        "title": "A Study of the Latest Updates of the Readout System for the Hybird-Pixel Detector at HEPS",
+        "rating": "-4",
+        "keywords": [
+            [
+                "FPGA"
+            ],
+            [
+                "Physics"
+            ]
+        ],
+        "abstract": "The High Energy Photon Source (HEPS) represents a fourth-generation light source. This facility has made unprecedented advancements in accelerator technology, necessitating the development of new detectors to satisfy physical requirements such as single-photon resolution, large dynamic range, and high frame rates. Since 2016, the Institute of High Energy Physics has introduced the first user-experimental hybrid pixel detector, progressing to the fourth-generation million-pixel detector designed for challenging conditions, with the dual-threshold single-photon detector HEPS-Beijing PIXel (HEPS-BPIX) set as the next-generation target. HEPS-BPIX will employ the entirely new Application-Specific Integrated Circuit (ASIC) BP40 for pixel information readout. Data flow will be managed and controlled through readout electronics based on a two-tier Field-Programmable Gate Array (FPGA) system: the Front-End Electronics (FEE) and the Input-Output Board (IOB) handle the fan-out for 12 ASICs, and the u4FCP is tasked with processing serial data on high-speed links, transferring pixel-level data to the back-end RTM and uTCA chassis, or independently outputting through a network port, enabling remote control of the entire detector. The new HEPS-BPIX firmware has undergone a comprehensive redesign and update to meet the electronic characteristics of the new chip and to improve the overall performance of the detector. We provide an overview of the core subunits of HEPS-BPIX, emphasizing the readout system, evaluating the new hardware and firmware, and highlighting some of its innovative features and characteristics.",
+        "subjects": [
+            "physics.ins-det",
+            "eess.SY"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2406.02302",
         "abstract url": "https://arxiv.org/abs/2406.02302",
         "title": "Towards AI-Assisted Sustainable Adaptive Video Streaming Systems: Tutorial and Survey",
@@ -8752,6 +8725,35 @@
         "comment": null
     },
     {
+        "paper id": "2406.02333",
+        "abstract url": "https://arxiv.org/abs/2406.02333",
+        "title": "Towards Neural Architecture Search for Transfer Learning in 6G Networks",
+        "rating": "-4.5",
+        "keywords": [
+            [
+                "Architecture Search",
+                "NAS"
+            ],
+            [
+                "6G"
+            ],
+            [
+                "tabular"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "The future 6G network is envisioned to be AI-native, and as such, ML models will be pervasive in support of optimizing performance, reducing energy consumption, and in coping with increasing complexity and heterogeneity. A key challenge is automating the process of finding optimal model architectures satisfying stringent requirements stemming from varying tasks, dynamicity and available resources in the infrastructure and deployment positions. In this paper, we describe and review the state-of-the-art in Neural Architecture Search and Transfer Learning and their applicability in networking. Further, we identify open research challenges and set directions with a specific focus on three main requirements with elements unique to the future network, namely combining NAS and TL, multi-objective search, and tabular data. Finally, we outline and discuss both near-term and long-term work ahead.",
+        "subjects": [
+            "cs.NI",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2406.02827",
         "abstract url": "https://arxiv.org/abs/2406.02827",
         "title": "Stochastic Diffusion: A Diffusion Probabilistic Model for Stochastic Time Series Forecasting",
@@ -8778,6 +8780,34 @@
             "cs.AI"
         ],
         "comment": "15 pages, 4 figures"
+    },
+    {
+        "paper id": "2406.03506",
+        "abstract url": "https://arxiv.org/abs/2406.03506",
+        "title": "Fuzzy Convolution Neural Networks for Tabular Data Classification",
+        "rating": "-4.5",
+        "keywords": [
+            [
+                "SVM",
+                "support vector machine"
+            ],
+            [
+                "bioinformatics"
+            ],
+            [
+                "Tabular"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Recently, convolution neural networks (CNNs) have attracted a great deal of attention due to their remarkable performance in various domains, particularly in image and text classification tasks. However, their application to tabular data classification remains underexplored. There are many fields such as bioinformatics, finance, medicine where nonimage data are prevalent. Adaption of CNNs to classify nonimage data remains highly challenging. This paper investigates the efficacy of CNNs for tabular data classification, aiming to bridge the gap between traditional machine learning approaches and deep learning techniques. We propose a novel framework fuzzy convolution neural network (FCNN) tailored specifically for tabular data to capture local patterns within feature vectors. In our approach, we map feature values to fuzzy memberships. The fuzzy membership vectors are converted into images that are used to train the CNN model. The trained CNN model is used to classify unknown feature vectors. To validate our approach, we generated six complex noisy data sets. We used randomly selected seventy percent samples from each data set for training and thirty percent for testing. The data sets were also classified using the state-of-the-art machine learning algorithms such as the decision tree (DT), support vector machine (SVM), fuzzy neural network (FNN), Bayes classifier, and Random Forest (RF). Experimental results demonstrate that our proposed model can effectively learn meaningful representations from tabular data, achieving competitive or superior performance compared to existing methods. Overall, our finding suggests that the proposed FCNN model holds promise as a viable alternative for tabular data classification tasks, offering a fresh prospective and potentially unlocking new opportunities for leveraging deep learning in structured data analysis.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI"
+        ],
+        "comment": "10 pages, 16 figures, Submitted to IEEE Access"
     },
     {
         "paper id": "2406.01996",
@@ -8940,18 +8970,6 @@
         "comment": "The reduction step and increase in space complexity might make the application of this method impractical, unless alternative architectures - such as dataflow computing architectures - or parallel data manipulation mechanisms are employed"
     },
     {
-        "paper id": "2406.02088",
-        "abstract url": "https://arxiv.org/abs/2406.02088",
-        "title": "Fast and Practical Strassen's Matrix Multiplication using FPGAs",
-        "rating": "-10",
-        "keywords": [],
-        "abstract": "Matrix multiplication is a cornerstone operation in a wide array of scientific fields, including machine learning and computer graphics. The standard algorithm for matrix multiplication has a complexity of $\\mathcal{O}(n^3)$ for $n\\times n$ matrices. Strassen's algorithm improves this to $\\mathcal{O}(n^{2.807})$, but its practicality is limited for small to medium matrix sizes due to the large number of additions it introduces. This paper presents a novel FPGA-based implementation of Strassen's algorithm that achieves superior speed over an optimized General Matrix Multiply (GeMM) implementation for matrices as small as $n=256$. Our design, tested extensively on two high-performance FPGA accelerators (Alveo U50 and U280) across various data types, matches or surpasses the performance of a highly optimized baseline across a range of matrix sizes.",
-        "subjects": [
-            "cs.AR"
-        ],
-        "comment": "Accepted at 34th International Conference on Field-Programmable Logic and Applications (FPL 2024), 7 pages"
-    },
-    {
         "paper id": "2406.02094",
         "abstract url": "https://arxiv.org/abs/2406.02094",
         "title": "Hybrid-Dynamic Ehrenfeucht-Fra\u00efss\u00e9 Games",
@@ -8959,19 +8977,6 @@
         "keywords": [],
         "abstract": "Ehrenfeucht-Fra\u00efss\u00e9 games provide means to characterize elementary equivalence for first-order logic, and by standard translation also for modal logics. We propose a novel generalization of Ehrenfeucht- Fra\u00efss\u00e9 games to hybrid-dynamic logics which is direct and fully modular: parameterized by the features of the hybrid language we wish to include, for instance, the modal and hybrid language operators as well as first-order existential quantification. We use these games to establish a new modular Fra\u00efss\u00e9-Hintikka Theorem for hybrid-dynamic propositional logic and its various fragments. We study the relationship between countable game equivalence (determined by countable Ehrenfeucht- Fra\u00efss\u00e9 games) and bisimulation (determined by countable back-and-forth systems). In general, the former turns out to be weaker than the latter, but under certain conditions on the language, the two coincide. We also use games to prove that for reachable image-finite Kripke structures elementary equivalence implies isomorphism.",
         "subjects": [
-            "cs.LO"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2406.02108",
-        "abstract url": "https://arxiv.org/abs/2406.02108",
-        "title": "Description Complexity of Unary Structures in First-Order Logic with Links to Entropy",
-        "rating": "-10",
-        "keywords": [],
-        "abstract": "The description complexity of a model is the length of the shortest formula that defines the model. We study the description complexity of unary structures in first-order logic FO, also drawing links to semantic complexity in the form of entropy. The class of unary structures provides a simple way to represent tabular Boolean data sets as relational structures. We define structures with FO-formulas that are strictly linear in the size of the model as opposed to using the naive quadratic ones, and we use arguments based on formula size games to obtain related lower bounds for description complexity. We also obtain a precise asymptotic result on the expected description complexity of a randomly selected structure. We then give bounds on the relationship between Shannon entropy and description complexity. We extend this relationship also to Boltzmann entropy by establishing an asymptotic match between the two entropies. Despite the simplicity of unary structures, our arguments require the use of formula size games, Stirling's approximation and Chernoff bounds.",
-        "subjects": [
-            "math.LO",
             "cs.LO"
         ],
         "comment": null
@@ -9348,6 +9353,19 @@
             "cs.NI"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2406.02709",
+        "abstract url": "https://arxiv.org/abs/2406.02709",
+        "title": "Constructive Safety-Critical Control: Synthesizing Control Barrier Functions for Partially Feedback Linearizable Systems",
+        "rating": "-10",
+        "keywords": [],
+        "abstract": "Certifying the safety of nonlinear systems, through the lens of set invariance and control barrier functions (CBFs), offers a powerful method for controller synthesis, provided a CBF can be constructed. This paper draws connections between partial feedback linearization and CBF synthesis. We illustrate that when a control affine system is input-output linearizable with respect to a smooth output function, then, under mild regularity conditions, one may extend any safety constraint defined on the output to a CBF for the full-order dynamics. These more general results are specialized to robotic systems where the conditions required to synthesize CBFs simplify. The CBFs constructed from our approach are applied and verified in simulation and hardware experiments on a quadrotor.",
+        "subjects": [
+            "eess.SY",
+            "cs.RO"
+        ],
+        "comment": "Accepted for publication in IEEE Control Systems Letters"
     },
     {
         "paper id": "2406.02728",

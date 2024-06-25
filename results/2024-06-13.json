@@ -146,6 +146,29 @@
         "comment": "12 pages"
     },
     {
+        "paper id": "2406.09041",
+        "abstract url": "https://arxiv.org/abs/2406.09041",
+        "title": "ME-Switch: A Memory-Efficient Expert Switching Framework for Large Language Models",
+        "rating": "2",
+        "keywords": [
+            [
+                "Memory-Efficient"
+            ],
+            [
+                "cs.AI",
+                "cs.LG",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "The typical process for developing LLMs involves pre-training a general foundation model on massive data, followed by fine-tuning on task-specific data to create specialized experts. Serving these experts poses challenges, as loading all experts onto devices is impractical, and frequent switching between experts in response to user requests incurs substantial I/O costs, increasing latency and expenses. Previous approaches decompose expert weights into pre-trained model weights and residual delta weights, then quantize the delta weights to reduce model size. However, these methods often lead to significant quantization errors at extremely low bitwidths and assume the appropriate model for a user request is known in advance, which is not practical. To address these issues, we introduce ME-Switch, a memory-efficient expert switching framework for LLM serving. ME-Switch uses mixed-precision quantization, selectively quantizing non-salient input channels of delta weights to extremely low bits while keeping salient ones intact, significantly reducing storage demands while maintaining performance. Additionally, we develop a routing method that efficiently directs user queries to the most suitable expert by transforming the model selection problem into a domain classification problem. Extensive experiments show ME-Switch's promising memory efficiency and routing performance. For example, when serving three models from the Mistral-7B family, ME-Switch reduces model size by 1.74x while maintaining nearly lossless performance on instruction, mathematical reasoning, and code generation tasks. Furthermore, ME-Switch can efficiently serve 16 models from the Mistral-7B family on a single NVIDIA A100 GPU.",
+        "subjects": [
+            "cs.CL",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "comment": "Tech report"
+    },
+    {
         "paper id": "2406.09044",
         "abstract url": "https://arxiv.org/abs/2406.09044",
         "title": "MiLoRA: Harnessing Minor Singular Components for Parameter-Efficient LLM Finetuning",
@@ -331,6 +354,27 @@
         "comment": null
     },
     {
+        "paper id": "2406.08812",
+        "abstract url": "https://arxiv.org/abs/2406.08812",
+        "title": "Generating Speakers by Prompting Listener Impressions for Pre-trained Multi-Speaker Text-to-Speech Systems",
+        "rating": "1.5",
+        "keywords": [
+            [
+                "cs.SD",
+                "eess.AS"
+            ],
+            [
+                "Interspeech"
+            ]
+        ],
+        "abstract": "This paper proposes a speech synthesis system that allows users to specify and control the acoustic characteristics of a speaker by means of prompts describing the speaker's traits of synthesized speech. Unlike previous approaches, our method utilizes listener impressions to construct prompts, which are easier to collect and align more naturally with everyday descriptions of speaker traits. We adopt the Low-rank Adaptation (LoRA) technique to swiftly tailor a pre-trained language model to our needs, facilitating the extraction of speaker-related traits from the prompt text. Besides, different from other prompt-driven text-to-speech (TTS) systems, we separate the prompt-to-speaker module from the multi-speaker TTS system, enhancing system flexibility and compatibility with various pre-trained multi-speaker TTS systems. Moreover, for the prompt-to-speaker characteristic module, we also compared the discriminative method and flow-matching based generative method and we found that combining both methods can help the system simultaneously capture speaker-related information from prompts better and generate speech with higher fidelity.",
+        "subjects": [
+            "cs.SD",
+            "eess.AS"
+        ],
+        "comment": "Accepted for presentation at Interspeech 2024 (with more analysis in the final Appendix part)"
+    },
+    {
         "paper id": "2406.08859",
         "abstract url": "https://arxiv.org/abs/2406.08859",
         "title": "Fusion of regional and sparse attention in Vision Transformers",
@@ -371,6 +415,27 @@
             "eess.AS"
         ],
         "comment": "12 pages, 3 figures, submitted to NeurIPS 2024"
+    },
+    {
+        "paper id": "2406.08905",
+        "abstract url": "https://arxiv.org/abs/2406.08905",
+        "title": "SingOMD: Singing Oriented Multi-resolution Discrete Representation Construction from Speech Models",
+        "rating": "1.5",
+        "keywords": [
+            [
+                "cs.SD",
+                "eess.AS"
+            ],
+            [
+                "Interspeech"
+            ]
+        ],
+        "abstract": "Discrete representation has shown advantages in speech generation tasks, wherein discrete tokens are derived by discretizing hidden features from self-supervised learning (SSL) pre-trained models. However, the direct application of speech SSL models to singing generation encounters domain gaps between speech and singing. Furthermore, singing generation necessitates a more refined representation than typical speech. To address these challenges, we introduce SingOMD, a novel method to extract singing-oriented multi-resolution discrete representations from speech SSL models. Specifically, we first adapt the features from speech SSL through a resynthesis task and incorporate multi-resolution modules based on resampling to better serve singing generation. These adapted multi-resolution features are then discretized via clustering. Extensive experiments demonstrate the robustness, efficiency, and effectiveness of these representations in singing vocoders and singing voice synthesis.",
+        "subjects": [
+            "cs.SD",
+            "eess.AS"
+        ],
+        "comment": "Accepted by Interspeech 2024"
     },
     {
         "paper id": "2406.08911",
@@ -501,6 +566,25 @@
             "cs.SD"
         ],
         "comment": "Accepted to Interspeech 2024"
+    },
+    {
+        "paper id": "2406.09297",
+        "abstract url": "https://arxiv.org/abs/2406.09297",
+        "title": "MLKV: Multi-Layer Key-Value Heads for Memory Efficient Transformer Decoding",
+        "rating": "1.5",
+        "keywords": [
+            [
+                "Memory Efficient"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Auto-regressive inference of transformers benefit greatly from Key-Value (KV) caching, but can lead to major memory bottlenecks as model size, batch size, and sequence length grow at scale. We introduce Multi-Layer Key-Value (MLKV) sharing, a novel approach extending KV sharing across transformer layers to reduce memory usage beyond what was possible with Multi-Query Attention (MQA) and Grouped-Query Attention (GQA). Evaluations on various NLP benchmarks and inference metrics using uptrained Pythia-160M variants demonstrate that MLKV significantly reduces memory usage with minimal performance loss, reducing KV cache size down to a factor of 6x compared to MQA. These results highlight MLKV's potential for efficient deployment of transformer models at scale. We provide code at https://github.com/zaydzuhri/pythia-mlkv",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": null
     },
     {
         "paper id": "2406.09494",
@@ -671,6 +755,24 @@
             "cs.CY"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2406.08820",
+        "abstract url": "https://arxiv.org/abs/2406.08820",
+        "title": "DisfluencySpeech -- Single-Speaker Conversational Speech Dataset with Paralanguage",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.CL",
+                "eess.AS"
+            ]
+        ],
+        "abstract": "Laughing, sighing, stuttering, and other forms of paralanguage do not contribute any direct lexical meaning to speech, but they provide crucial propositional context that aids semantic and pragmatic processes such as irony. It is thus important for artificial social agents to both understand and be able to generate speech with semantically-important paralanguage. Most speech datasets do not include transcribed non-lexical speech sounds and disfluencies, while those that do are typically multi-speaker datasets where each speaker provides relatively little audio. This makes it challenging to train conversational Text-to-Speech (TTS) synthesis models that include such paralinguistic components. We thus present DisfluencySpeech, a studio-quality labeled English speech dataset with paralanguage. A single speaker recreates nearly 10 hours of expressive utterances from the Switchboard-1 Telephone Speech Corpus (Switchboard), simulating realistic informal conversations. To aid the development of a TTS model that is able to predictively synthesise paralanguage from text without such components, we provide three different transcripts at different levels of information removal (removal of non-speech events, removal of non-sentence elements, and removal of false starts), as well as benchmark TTS models trained on each of these levels.",
+        "subjects": [
+            "eess.AS",
+            "cs.CL"
+        ],
+        "comment": "4 pages, 1 figure, submitted to IEEE TENCON 2024"
     },
     {
         "paper id": "2406.08822",
@@ -905,6 +1007,34 @@
         "comment": "ICML 2024"
     },
     {
+        "paper id": "2406.08920",
+        "abstract url": "https://arxiv.org/abs/2406.08920",
+        "title": "AV-GS: Learning Material and Geometry Aware Priors for Novel View Acoustic Synthesis",
+        "rating": "1",
+        "keywords": [
+            [
+                "Audio-Visual"
+            ],
+            [
+                "3D",
+                "Gaussian Splatting",
+                "NeRF"
+            ],
+            [
+                "cs.AI",
+                "cs.SD",
+                "eess.AS"
+            ]
+        ],
+        "abstract": "Novel view acoustic synthesis (NVAS) aims to render binaural audio at any target viewpoint, given a mono audio emitted by a sound source at a 3D scene. Existing methods have proposed NeRF-based implicit models to exploit visual cues as a condition for synthesizing binaural audio. However, in addition to low efficiency originating from heavy NeRF rendering, these methods all have a limited ability of characterizing the entire scene environment such as room geometry, material properties, and the spatial relation between the listener and sound source. To address these issues, we propose a novel Audio-Visual Gaussian Splatting (AV-GS) model. To obtain a material-aware and geometry-aware condition for audio synthesis, we learn an explicit point-based scene representation with an audio-guidance parameter on locally initialized Gaussian points, taking into account the space relation from the listener and sound source. To make the visual scene model audio adaptive, we propose a point densification and pruning strategy to optimally distribute the Gaussian points, with the per-point contribution in sound propagation (e.g., more points needed for texture-less wall surfaces as they affect sound path diversion). Extensive experiments validate the superiority of our AV-GS over existing alternatives on the real-world RWAS and simulation-based SoundSpaces datasets.",
+        "subjects": [
+            "cs.SD",
+            "cs.AI",
+            "eess.AS"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2406.08922",
         "abstract url": "https://arxiv.org/abs/2406.08922",
         "title": "Navigating the Shadows: Unveiling Effective Disturbances for Modern AI Content Detectors",
@@ -1025,6 +1155,24 @@
         "comment": "Work in progress"
     },
     {
+        "paper id": "2406.08989",
+        "abstract url": "https://arxiv.org/abs/2406.08989",
+        "title": "ToneUnit: A Speech Discretization Approach for Tonal Language Speech Synthesis",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.SD",
+                "eess.AS"
+            ]
+        ],
+        "abstract": "Representing speech as discretized units has numerous benefits in supporting downstream spoken language processing tasks. However, the approach has been less explored in speech synthesis of tonal languages like Mandarin Chinese. Our preliminary experiments on Chinese speech synthesis reveal the issue of \"tone shift\", where a synthesized speech utterance contains correct base syllables but incorrect tones. To address the issue, we propose the ToneUnit framework, which leverages annotated data with tone labels as CTC supervision to learn tone-aware discrete speech units for Mandarin Chinese speech. Our findings indicate that the discrete units acquired through the TonUnit resolve the \"tone shift\" issue in synthesized Chinese speech and yield favorable results in English synthesis. Moreover, the experimental results suggest that finite scalar quantization enhances the effectiveness of ToneUnit. Notably, ToneUnit can work effectively even with minimal annotated data.",
+        "subjects": [
+            "eess.AS",
+            "cs.SD"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2406.09003",
         "abstract url": "https://arxiv.org/abs/2406.09003",
         "title": "Enhancing Cross-Modal Fine-Tuning with Gradually Intermediate Modality Generation",
@@ -1089,26 +1237,6 @@
             "cs.CV"
         ],
         "comment": "15pages, 6figures"
-    },
-    {
-        "paper id": "2406.09041",
-        "abstract url": "https://arxiv.org/abs/2406.09041",
-        "title": "ME-Switch: A Memory-Efficient Expert Switching Framework for Large Language Models",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.LG",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "The typical process for developing LLMs involves pre-training a general foundation model on massive data, followed by fine-tuning on task-specific data to create specialized experts. Serving these experts poses challenges, as loading all experts onto devices is impractical, and frequent switching between experts in response to user requests incurs substantial I/O costs, increasing latency and expenses. Previous approaches decompose expert weights into pre-trained model weights and residual delta weights, then quantize the delta weights to reduce model size. However, these methods often lead to significant quantization errors at extremely low bitwidths and assume the appropriate model for a user request is known in advance, which is not practical. To address these issues, we introduce ME-Switch, a memory-efficient expert switching framework for LLM serving. ME-Switch uses mixed-precision quantization, selectively quantizing non-salient input channels of delta weights to extremely low bits while keeping salient ones intact, significantly reducing storage demands while maintaining performance. Additionally, we develop a routing method that efficiently directs user queries to the most suitable expert by transforming the model selection problem into a domain classification problem. Extensive experiments show ME-Switch's promising memory efficiency and routing performance. For example, when serving three models from the Mistral-7B family, ME-Switch reduces model size by 1.74x while maintaining nearly lossless performance on instruction, mathematical reasoning, and code generation tasks. Furthermore, ME-Switch can efficiently serve 16 models from the Mistral-7B family on a single NVIDIA A100 GPU.",
-        "subjects": [
-            "cs.CL",
-            "cs.AI",
-            "cs.LG"
-        ],
-        "comment": "Tech report"
     },
     {
         "paper id": "2406.09043",
@@ -1247,22 +1375,6 @@
             "cs.CL"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2406.09133",
-        "abstract url": "https://arxiv.org/abs/2406.09133",
-        "title": "RH-SQL: Refined Schema and Hardness Prompt for Text-to-SQL",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Text-to-SQL is a technology that converts natural language queries into the structured query language SQL. A novel research approach that has recently gained attention focuses on methods based on the complexity of SQL queries, achieving notable performance improvements. However, existing methods entail significant storage and training costs, which hampers their practical application. To address this issue, this paper introduces a method for Text-to-SQL based on Refined Schema and Hardness Prompt. By filtering out low-relevance schema information with a refined schema and identifying query hardness through a Language Model (LM) to form prompts, this method reduces storage and training costs while maintaining performance. It's worth mentioning that this method is applicable to any sequence-to-sequence (seq2seq) LM. Our experiments on the Spider dataset, specifically with large-scale LMs, achieved an exceptional Execution accuracy (EX) of 82.6%, demonstrating the effectiveness and greater suitability of our method for real-world applications.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": "4 pages, 2 figures, 2024 6th International Conference on Electronic Engineering and Informatics (EEI 2024)"
     },
     {
         "paper id": "2406.09136",
@@ -1426,22 +1538,6 @@
         "comment": "17 pages"
     },
     {
-        "paper id": "2406.09198",
-        "abstract url": "https://arxiv.org/abs/2406.09198",
-        "title": "CLIP-Driven Cloth-Agnostic Feature Learning for Cloth-Changing Person Re-Identification",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Contrastive Language-Image Pre-Training (CLIP) has shown impressive performance in short-term Person Re-Identification (ReID) due to its ability to extract high-level semantic features of pedestrians, yet its direct application to Cloth-Changing Person Re-Identification (CC-ReID) faces challenges due to CLIP's image encoder overly focusing on clothes clues. To address this, we propose a novel framework called CLIP-Driven Cloth-Agnostic Feature Learning (CCAF) for CC-ReID. Accordingly, two modules were custom-designed: the Invariant Feature Prompting (IFP) and the Clothes Feature Minimization (CFM). These modules guide the model to extract cloth-agnostic features positively and attenuate clothes-related features negatively. Specifically, IFP is designed to extract fine-grained semantic features unrelated to clothes from the raw image, guided by the cloth-agnostic text prompts. This module first covers the clothes in the raw image at the pixel level to obtain the shielding image and then utilizes CLIP's knowledge to generate cloth-agnostic text prompts. Subsequently, it aligns the raw image-text and the raw image-shielding image in the feature space, emphasizing discriminative clues related to identity but unrelated to clothes. Furthermore, CFM is designed to examine and weaken the image encoder's ability to extract clothes features. It first generates text prompts corresponding to clothes pixels. Then, guided by these clothes text prompts, it iteratively examines and disentangles clothes features from pedestrian features, ultimately retaining inherent discriminative features. Extensive experiments have demonstrated the effectiveness of the proposed CCAF, achieving new state-of-the-art performance on several popular CC-ReID benchmarks without any additional inference time.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2406.09201",
         "abstract url": "https://arxiv.org/abs/2406.09201",
         "title": "Enhanced Object Detection: A Study on Vast Vocabulary Object Detection Track for V3Det Challenge 2024",
@@ -1510,22 +1606,6 @@
             "cs.CL",
             "cs.AI",
             "cs.LG"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2406.09211",
-        "abstract url": "https://arxiv.org/abs/2406.09211",
-        "title": "WildlifeReID-10k: Wildlife re-identification dataset with 10k individual animals",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "We introduce a new wildlife re-identification dataset WildlifeReID-10k with more than 214k images of 10k individual animals. It is a collection of 30 existing wildlife re-identification datasets with additional processing steps. WildlifeReID-10k contains animals as diverse as marine turtles, primates, birds, African herbivores, marine mammals and domestic animals. Due to the ubiquity of similar images in datasets, we argue that the standard (random) splits into training and testing sets are inadequate for wildlife re-identification and propose a new similarity-aware split based on the similarity of extracted features. To promote fair method comparison, we include similarity-aware splits both for closed-set and open-set settings, use MegaDescriptor - a foundational model for wildlife re-identification - for baseline performance and host a leaderboard with the best results. We publicly publish the dataset and the codes used to create it in the wildlife-datasets library, making WildlifeReID-10k both highly curated and easy to use.",
-        "subjects": [
-            "cs.CV"
         ],
         "comment": null
     },
@@ -1715,30 +1795,6 @@
         "comment": null
     },
     {
-        "paper id": "2406.09286",
-        "abstract url": "https://arxiv.org/abs/2406.09286",
-        "title": "FlowAVSE: Efficient Audio-Visual Speech Enhancement with Conditional Flow Matching",
-        "rating": "1",
-        "keywords": [
-            [
-                "Audio-Visual"
-            ],
-            [
-                "diffusion"
-            ],
-            [
-                "cs.SD",
-                "eess.AS"
-            ]
-        ],
-        "abstract": "This work proposes an efficient method to enhance the quality of corrupted speech signals by leveraging both acoustic and visual cues. While existing diffusion-based approaches have demonstrated remarkable quality, their applicability is limited by slow inference speeds and computational complexity. To address this issue, we present FlowAVSE which enhances the inference speed and reduces the number of learnable parameters without degrading the output quality. In particular, we employ a conditional flow matching algorithm that enables the generation of high-quality speech in a single sampling step. Moreover, we increase efficiency by optimizing the underlying U-net architecture of diffusion-based systems. Our experiments demonstrate that FlowAVSE achieves 22 times faster inference speed and reduces the model size by half while maintaining the output quality. The demo page is available at: https://cyongong.github.io/FlowAVSE.github.io/",
-        "subjects": [
-            "eess.AS",
-            "cs.SD"
-        ],
-        "comment": "INTERSPEECH 2024"
-    },
-    {
         "paper id": "2406.09289",
         "abstract url": "https://arxiv.org/abs/2406.09289",
         "title": "Understanding Jailbreak Success: A Study of Latent Space Dynamics in Large Language Models",
@@ -1901,26 +1957,6 @@
         "comment": null
     },
     {
-        "paper id": "2406.09393",
-        "abstract url": "https://arxiv.org/abs/2406.09393",
-        "title": "Improving Autoregressive Training with Dynamic Oracles",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.LG",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Many tasks within NLP can be framed as sequential decision problems, ranging from sequence tagging to text generation. However, for many tasks, the standard training methods, including maximum likelihood (teacher forcing) and scheduled sampling, suffer from exposure bias and a mismatch between metrics employed during training and inference. DAgger provides a solution to mitigate these problems, yet it requires a metric-specific dynamic oracle algorithm, which does not exist for many common metrics like span-based F1, ROUGE, and BLEU. In this paper, we develop these novel dynamic oracles and show they maintain DAgger's no-regret guarantee for decomposable metrics like span-based F1. We evaluate the algorithm's performance on named entity recognition (NER), text summarization, and machine translation (MT). While DAgger with dynamic oracle yields less favorable results in our MT experiments, it outperforms the baseline techniques in NER and text summarization.",
-        "subjects": [
-            "cs.CL",
-            "cs.AI",
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2406.09397",
         "abstract url": "https://arxiv.org/abs/2406.09397",
         "title": "Aligning Vision Models with Human Aesthetics in Retrieval: Benchmarks and Algorithms",
@@ -1948,7 +1984,7 @@
                 "parameter-efficient"
             ],
             [
-                "synthesizing"
+                "Deepfake"
             ],
             [
                 "cs.CV"
@@ -2455,30 +2491,6 @@
         "comment": "16 pages"
     },
     {
-        "paper id": "2406.08812",
-        "abstract url": "https://arxiv.org/abs/2406.08812",
-        "title": "Generating Speakers by Prompting Listener Impressions for Pre-trained Multi-Speaker Text-to-Speech Systems",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.SD",
-                "eess.AS"
-            ],
-            [
-                "Interspeech"
-            ]
-        ],
-        "abstract": "This paper proposes a speech synthesis system that allows users to specify and control the acoustic characteristics of a speaker by means of prompts describing the speaker's traits of synthesized speech. Unlike previous approaches, our method utilizes listener impressions to construct prompts, which are easier to collect and align more naturally with everyday descriptions of speaker traits. We adopt the Low-rank Adaptation (LoRA) technique to swiftly tailor a pre-trained language model to our needs, facilitating the extraction of speaker-related traits from the prompt text. Besides, different from other prompt-driven text-to-speech (TTS) systems, we separate the prompt-to-speaker module from the multi-speaker TTS system, enhancing system flexibility and compatibility with various pre-trained multi-speaker TTS systems. Moreover, for the prompt-to-speaker characteristic module, we also compared the discriminative method and flow-matching based generative method and we found that combining both methods can help the system simultaneously capture speaker-related information from prompts better and generate speech with higher fidelity.",
-        "subjects": [
-            "cs.SD",
-            "eess.AS"
-        ],
-        "comment": "Accepted for presentation at Interspeech 2024 (with more analysis in the final Appendix part)"
-    },
-    {
         "paper id": "2406.08816",
         "abstract url": "https://arxiv.org/abs/2406.08816",
         "title": "ToSA: Token Selective Attention for Efficient Vision Transformers",
@@ -2637,30 +2649,6 @@
         "comment": "23 pages, 6 figures"
     },
     {
-        "paper id": "2406.08905",
-        "abstract url": "https://arxiv.org/abs/2406.08905",
-        "title": "SingOMD: Singing Oriented Multi-resolution Discrete Representation Construction from Speech Models",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.SD",
-                "eess.AS"
-            ],
-            [
-                "Interspeech"
-            ]
-        ],
-        "abstract": "Discrete representation has shown advantages in speech generation tasks, wherein discrete tokens are derived by discretizing hidden features from self-supervised learning (SSL) pre-trained models. However, the direct application of speech SSL models to singing generation encounters domain gaps between speech and singing. Furthermore, singing generation necessitates a more refined representation than typical speech. To address these challenges, we introduce SingOMD, a novel method to extract singing-oriented multi-resolution discrete representations from speech SSL models. Specifically, we first adapt the features from speech SSL through a resynthesis task and incorporate multi-resolution modules based on resampling to better serve singing generation. These adapted multi-resolution features are then discretized via clustering. Extensive experiments demonstrate the robustness, efficiency, and effectiveness of these representations in singing vocoders and singing voice synthesis.",
-        "subjects": [
-            "cs.SD",
-            "eess.AS"
-        ],
-        "comment": "Accepted by Interspeech 2024"
-    },
-    {
         "paper id": "2406.08917",
         "abstract url": "https://arxiv.org/abs/2406.08917",
         "title": "Predicting Fault-Ride-Through Probability of Inverter-Dominated Power Grids using Machine Learning",
@@ -2736,6 +2724,23 @@
         "subjects": [
             "cs.LG",
             "cs.AI"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2406.08980",
+        "abstract url": "https://arxiv.org/abs/2406.08980",
+        "title": "From Theory to Therapy: Reframing SBDD Model Evaluation via Practical Metrics",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Recent advancements in structure-based drug design (SBDD) have significantly enhanced the efficiency and precision of drug discovery by generating molecules tailored to bind specific protein pockets. Despite these technological strides, their practical application in real-world drug development remains challenging due to the complexities of synthesizing and testing these molecules. The reliability of the Vina docking score, the current standard for assessing binding abilities, is increasingly questioned due to its susceptibility to overfitting. To address these limitations, we propose a comprehensive evaluation framework that includes assessing the similarity of generated molecules to known active compounds, introducing a virtual screening-based metric for practical deployment capabilities, and re-evaluating binding affinity more rigorously. Our experiments reveal that while current SBDD models achieve high Vina scores, they fall short in practical usability metrics, highlighting a significant gap between theoretical predictions and real-world applicability. Our proposed metrics and dataset aim to bridge this gap, enhancing the practical applicability of future SBDD models and aligning them more closely with the needs of pharmaceutical research and development.",
+        "subjects": [
+            "q-bio.BM",
+            "cs.LG"
         ],
         "comment": null
     },
@@ -2840,23 +2845,6 @@
             "cs.AI"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2406.09069",
-        "abstract url": "https://arxiv.org/abs/2406.09069",
-        "title": "On the Robustness of Global Feature Effect Explanations",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "We study the robustness of global post-hoc explanations for predictive models trained on tabular data. Effects of predictor features in black-box supervised learning are an essential diagnostic tool for model debugging and scientific discovery in applied sciences. However, how vulnerable they are to data and model perturbations remains an open research question. We introduce several theoretical bounds for evaluating the robustness of partial dependence plots and accumulated local effects. Our experimental results with synthetic and real-world datasets quantify the gap between the best and worst-case scenarios of (mis)interpreting machine learning predictions globally.",
-        "subjects": [
-            "cs.LG",
-            "stat.ML"
-        ],
-        "comment": "Accepted at ECML PKDD 2024"
     },
     {
         "paper id": "2406.09079",
@@ -3047,22 +3035,6 @@
             "cs.AI"
         ],
         "comment": "Accepted for publication in the Proceedings of the 2024 IEEE Conference on Games"
-    },
-    {
-        "paper id": "2406.09297",
-        "abstract url": "https://arxiv.org/abs/2406.09297",
-        "title": "MLKV: Multi-Layer Key-Value Heads for Memory Efficient Transformer Decoding",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Auto-regressive inference of transformers benefit greatly from Key-Value (KV) caching, but can lead to major memory bottlenecks as model size, batch size, and sequence length grow at scale. We introduce Multi-Layer Key-Value (MLKV) sharing, a novel approach extending KV sharing across transformer layers to reduce memory usage beyond what was possible with Multi-Query Attention (MQA) and Grouped-Query Attention (GQA). Evaluations on various NLP benchmarks and inference metrics using uptrained Pythia-160M variants demonstrate that MLKV significantly reduces memory usage with minimal performance loss, reducing KV cache size down to a factor of 6x compared to MQA. These results highlight MLKV's potential for efficient deployment of transformer models at scale. We provide code at https://github.com/zaydzuhri/pythia-mlkv",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": null
     },
     {
         "paper id": "2406.09308",
@@ -3301,23 +3273,6 @@
             "cs.DC"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2406.09534",
-        "abstract url": "https://arxiv.org/abs/2406.09534",
-        "title": "FeatNavigator: Automatic Feature Augmentation on Tabular Data",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Data-centric AI focuses on understanding and utilizing high-quality, relevant data in training machine learning (ML) models, thereby increasing the likelihood of producing accurate and useful results. Automatic feature augmentation, aiming to augment the initial base table with useful features from other tables, is critical in data preparation as it improves model performance, robustness, and generalizability. While recent works have investigated automatic feature augmentation, most of them have limited capabilities in utilizing all useful features as many of them are in candidate tables not directly joinable with the base table. Worse yet, with numerous join paths leading to these distant features, existing solutions fail to fully exploit them within a reasonable compute budget. We present FeatNavigator, an effective and efficient framework that explores and integrates high-quality features in relational tables for ML models. FeatNavigator evaluates a feature from two aspects: (1) the intrinsic value of a feature towards an ML task (i.e., feature importance) and (2) the efficacy of a join path connecting the feature to the base table (i.e., integration quality). FeatNavigator strategically selects a small set of available features and their corresponding join paths to train a feature importance estimation model and an integration quality prediction model. Furthermore, FeatNavigator's search algorithm exploits both estimated feature importance and integration quality to identify the optimized feature augmentation plan. Our experimental results show that FeatNavigator outperforms state-of-the-art solutions on five public datasets by up to 40.1% in ML model performance.",
-        "subjects": [
-            "cs.DB",
-            "cs.LG"
-        ],
-        "comment": "15 pages, 41 figures"
     },
     {
         "paper id": "2406.09535",
@@ -3624,27 +3579,6 @@
         "comment": null
     },
     {
-        "paper id": "2406.08820",
-        "abstract url": "https://arxiv.org/abs/2406.08820",
-        "title": "DisfluencySpeech -- Single-Speaker Conversational Speech Dataset with Paralanguage",
-        "rating": "0",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CL",
-                "eess.AS"
-            ]
-        ],
-        "abstract": "Laughing, sighing, stuttering, and other forms of paralanguage do not contribute any direct lexical meaning to speech, but they provide crucial propositional context that aids semantic and pragmatic processes such as irony. It is thus important for artificial social agents to both understand and be able to generate speech with semantically-important paralanguage. Most speech datasets do not include transcribed non-lexical speech sounds and disfluencies, while those that do are typically multi-speaker datasets where each speaker provides relatively little audio. This makes it challenging to train conversational Text-to-Speech (TTS) synthesis models that include such paralinguistic components. We thus present DisfluencySpeech, a studio-quality labeled English speech dataset with paralanguage. A single speaker recreates nearly 10 hours of expressive utterances from the Switchboard-1 Telephone Speech Corpus (Switchboard), simulating realistic informal conversations. To aid the development of a TTS model that is able to predictively synthesise paralanguage from text without such components, we provide three different transcripts at different levels of information removal (removal of non-speech events, removal of non-sentence elements, and removal of false starts), as well as benchmark TTS models trained on each of these levels.",
-        "subjects": [
-            "eess.AS",
-            "cs.CL"
-        ],
-        "comment": "4 pages, 1 figure, submitted to IEEE TENCON 2024"
-    },
-    {
         "paper id": "2406.08824",
         "abstract url": "https://arxiv.org/abs/2406.08824",
         "title": "LLM-Driven Robots Risk Enacting Discrimination, Violence, and Unlawful Actions",
@@ -3734,7 +3668,6 @@
         "rating": "0",
         "keywords": [
             [
-                "synthesis",
                 "Super-Resolution"
             ],
             [
@@ -3790,37 +3723,6 @@
         "comment": null
     },
     {
-        "paper id": "2406.08920",
-        "abstract url": "https://arxiv.org/abs/2406.08920",
-        "title": "AV-GS: Learning Material and Geometry Aware Priors for Novel View Acoustic Synthesis",
-        "rating": "0",
-        "keywords": [
-            [
-                "Audio-Visual"
-            ],
-            [
-                "3D",
-                "Gaussian Splatting",
-                "NeRF"
-            ],
-            [
-                "Synthesis"
-            ],
-            [
-                "cs.AI",
-                "cs.SD",
-                "eess.AS"
-            ]
-        ],
-        "abstract": "Novel view acoustic synthesis (NVAS) aims to render binaural audio at any target viewpoint, given a mono audio emitted by a sound source at a 3D scene. Existing methods have proposed NeRF-based implicit models to exploit visual cues as a condition for synthesizing binaural audio. However, in addition to low efficiency originating from heavy NeRF rendering, these methods all have a limited ability of characterizing the entire scene environment such as room geometry, material properties, and the spatial relation between the listener and sound source. To address these issues, we propose a novel Audio-Visual Gaussian Splatting (AV-GS) model. To obtain a material-aware and geometry-aware condition for audio synthesis, we learn an explicit point-based scene representation with an audio-guidance parameter on locally initialized Gaussian points, taking into account the space relation from the listener and sound source. To make the visual scene model audio adaptive, we propose a point densification and pruning strategy to optimally distribute the Gaussian points, with the per-point contribution in sound propagation (e.g., more points needed for texture-less wall surfaces as they affect sound path diversion). Extensive experiments validate the superiority of our AV-GS over existing alternatives on the real-world RWAS and simulation-based SoundSpaces datasets.",
-        "subjects": [
-            "cs.SD",
-            "cs.AI",
-            "eess.AS"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2406.08928",
         "abstract url": "https://arxiv.org/abs/2406.08928",
         "title": "Multiple Prior Representation Learning for Self-Supervised Monocular Depth Estimation via Hybrid Transformer",
@@ -3864,27 +3766,6 @@
             "stat.ML"
         ],
         "comment": "35 pages, 11 figures"
-    },
-    {
-        "paper id": "2406.08989",
-        "abstract url": "https://arxiv.org/abs/2406.08989",
-        "title": "ToneUnit: A Speech Discretization Approach for Tonal Language Speech Synthesis",
-        "rating": "0",
-        "keywords": [
-            [
-                "Synthesis"
-            ],
-            [
-                "cs.SD",
-                "eess.AS"
-            ]
-        ],
-        "abstract": "Representing speech as discretized units has numerous benefits in supporting downstream spoken language processing tasks. However, the approach has been less explored in speech synthesis of tonal languages like Mandarin Chinese. Our preliminary experiments on Chinese speech synthesis reveal the issue of \"tone shift\", where a synthesized speech utterance contains correct base syllables but incorrect tones. To address the issue, we propose the ToneUnit framework, which leverages annotated data with tone labels as CTC supervision to learn tone-aware discrete speech units for Mandarin Chinese speech. Our findings indicate that the discrete units acquired through the TonUnit resolve the \"tone shift\" issue in synthesized Chinese speech and yield favorable results in English synthesis. Moreover, the experimental results suggest that finite scalar quantization enhances the effectiveness of ToneUnit. Notably, ToneUnit can work effectively even with minimal annotated data.",
-        "subjects": [
-            "eess.AS",
-            "cs.SD"
-        ],
-        "comment": null
     },
     {
         "paper id": "2406.08997",
@@ -4017,6 +3898,25 @@
         "comment": "ICML 2024; Code at https://github.com/AlanNawzadAmin/DAT-graph"
     },
     {
+        "paper id": "2406.09198",
+        "abstract url": "https://arxiv.org/abs/2406.09198",
+        "title": "CLIP-Driven Cloth-Agnostic Feature Learning for Cloth-Changing Person Re-Identification",
+        "rating": "0",
+        "keywords": [
+            [
+                "Re-Identification"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Contrastive Language-Image Pre-Training (CLIP) has shown impressive performance in short-term Person Re-Identification (ReID) due to its ability to extract high-level semantic features of pedestrians, yet its direct application to Cloth-Changing Person Re-Identification (CC-ReID) faces challenges due to CLIP's image encoder overly focusing on clothes clues. To address this, we propose a novel framework called CLIP-Driven Cloth-Agnostic Feature Learning (CCAF) for CC-ReID. Accordingly, two modules were custom-designed: the Invariant Feature Prompting (IFP) and the Clothes Feature Minimization (CFM). These modules guide the model to extract cloth-agnostic features positively and attenuate clothes-related features negatively. Specifically, IFP is designed to extract fine-grained semantic features unrelated to clothes from the raw image, guided by the cloth-agnostic text prompts. This module first covers the clothes in the raw image at the pixel level to obtain the shielding image and then utilizes CLIP's knowledge to generate cloth-agnostic text prompts. Subsequently, it aligns the raw image-text and the raw image-shielding image in the feature space, emphasizing discriminative clues related to identity but unrelated to clothes. Furthermore, CFM is designed to examine and weaken the image encoder's ability to extract clothes features. It first generates text prompts corresponding to clothes pixels. Then, guided by these clothes text prompts, it iteratively examines and disentangles clothes features from pedestrian features, ultimately retaining inherent discriminative features. Extensive experiments have demonstrated the effectiveness of the proposed CCAF, achieving new state-of-the-art performance on several popular CC-ReID benchmarks without any additional inference time.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2406.09203",
         "abstract url": "https://arxiv.org/abs/2406.09203",
         "title": "Optimizing Visual Question Answering Models for Driving: Bridging the Gap Between Human and Machine Attention Patterns",
@@ -4031,6 +3931,25 @@
             ]
         ],
         "abstract": "Visual Question Answering (VQA) models play a critical role in enhancing the perception capabilities of autonomous driving systems by allowing vehicles to analyze visual inputs alongside textual queries, fostering natural interaction and trust between the vehicle and its occupants or other road users. This study investigates the attention patterns of humans compared to a VQA model when answering driving-related questions, revealing disparities in the objects observed. We propose an approach integrating filters to optimize the model's attention mechanisms, prioritizing relevant objects and improving accuracy. Utilizing the LXMERT model for a case study, we compare attention patterns of the pre-trained and Filter Integrated models, alongside human answers using images from the NuImages dataset, gaining insights into feature prioritization. We evaluated the models using a Subjective scoring framework which shows that the integration of the feature encoder filter has enhanced the performance of the VQA model by refining its attention mechanisms.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2406.09211",
+        "abstract url": "https://arxiv.org/abs/2406.09211",
+        "title": "WildlifeReID-10k: Wildlife re-identification dataset with 10k individual animals",
+        "rating": "0",
+        "keywords": [
+            [
+                "re-identification"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "We introduce a new wildlife re-identification dataset WildlifeReID-10k with more than 214k images of 10k individual animals. It is a collection of 30 existing wildlife re-identification datasets with additional processing steps. WildlifeReID-10k contains animals as diverse as marine turtles, primates, birds, African herbivores, marine mammals and domestic animals. Due to the ubiquity of similar images in datasets, we argue that the standard (random) splits into training and testing sets are inadequate for wildlife re-identification and propose a new similarity-aware split based on the similarity of extracted features. To promote fair method comparison, we include similarity-aware splits both for closed-set and open-set settings, use MegaDescriptor - a foundational model for wildlife re-identification - for baseline performance and host a leaderboard with the best results. We publicly publish the dataset and the codes used to create it in the wildlife-datasets library, making WildlifeReID-10k both highly curated and easy to use.",
         "subjects": [
             "cs.CV"
         ],
@@ -4065,6 +3984,33 @@
             "cs.LG"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2406.09286",
+        "abstract url": "https://arxiv.org/abs/2406.09286",
+        "title": "FlowAVSE: Efficient Audio-Visual Speech Enhancement with Conditional Flow Matching",
+        "rating": "0",
+        "keywords": [
+            [
+                "Audio-Visual"
+            ],
+            [
+                "diffusion"
+            ],
+            [
+                "Speech Enhancement"
+            ],
+            [
+                "cs.SD",
+                "eess.AS"
+            ]
+        ],
+        "abstract": "This work proposes an efficient method to enhance the quality of corrupted speech signals by leveraging both acoustic and visual cues. While existing diffusion-based approaches have demonstrated remarkable quality, their applicability is limited by slow inference speeds and computational complexity. To address this issue, we present FlowAVSE which enhances the inference speed and reduces the number of learnable parameters without degrading the output quality. In particular, we employ a conditional flow matching algorithm that enables the generation of high-quality speech in a single sampling step. Moreover, we increase efficiency by optimizing the underlying U-net architecture of diffusion-based systems. Our experiments demonstrate that FlowAVSE achieves 22 times faster inference speed and reduces the model size by half while maintaining the output quality. The demo page is available at: https://cyongong.github.io/FlowAVSE.github.io/",
+        "subjects": [
+            "eess.AS",
+            "cs.SD"
+        ],
+        "comment": "INTERSPEECH 2024"
     },
     {
         "paper id": "2406.09293",
@@ -4177,6 +4123,30 @@
         "comment": null
     },
     {
+        "paper id": "2406.09333",
+        "abstract url": "https://arxiv.org/abs/2406.09333",
+        "title": "Memory-Efficient Sparse Pyramid Attention Networks for Whole Slide Image Analysis",
+        "rating": "0",
+        "keywords": [
+            [
+                "Memory-Efficient"
+            ],
+            [
+                "diagnosis",
+                "Whole Slide",
+                "pathological"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Whole Slide Images (WSIs) are crucial for modern pathological diagnosis, yet their gigapixel-scale resolutions and sparse informative regions pose significant computational challenges. Traditional dense attention mechanisms, widely used in computer vision and natural language processing, are impractical for WSI analysis due to the substantial data scale and the redundant processing of uninformative areas. To address these challenges, we propose Memory-Efficient Sparse Pyramid Attention Networks with Shifted Windows (SPAN), drawing inspiration from state-of-the-art sparse attention techniques in other domains. SPAN introduces a sparse pyramid attention architecture that hierarchically focuses on informative regions within the WSI, aiming to reduce memory overhead while preserving critical features. Additionally, the incorporation of shifted windows enables the model to capture long-range contextual dependencies essential for accurate classification. We evaluated SPAN on multiple public WSI datasets, observing its competitive performance. Unlike existing methods that often struggle to model spatial and contextual information due to memory constraints, our approach enables the accurate modeling of these crucial features. Our study also highlights the importance of key design elements in attention mechanisms, such as the shifted-window scheme and the hierarchical structure, which contribute substantially to the effectiveness of SPAN in WSI analysis. The potential of SPAN for memory-efficient and effective analysis of WSI data is thus demonstrated, and the code will be made publicly available following the publication of this work.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2406.09356",
         "abstract url": "https://arxiv.org/abs/2406.09356",
         "title": "CMC-Bench: Towards a New Paradigm of Visual Signal Compression",
@@ -4220,6 +4190,27 @@
         "comment": "Project page: https://yigitekin.github.io/CLIPAway/"
     },
     {
+        "paper id": "2406.09371",
+        "abstract url": "https://arxiv.org/abs/2406.09371",
+        "title": "LRM-Zero: Training Large Reconstruction Models with Synthesized Data",
+        "rating": "0",
+        "keywords": [
+            [
+                "3D"
+            ],
+            [
+                "cs.LG",
+                "cs.CV"
+            ]
+        ],
+        "abstract": "We present LRM-Zero, a Large Reconstruction Model (LRM) trained entirely on synthesized 3D data, achieving high-quality sparse-view 3D reconstruction. The core of LRM-Zero is our procedural 3D dataset, Zeroverse, which is automatically synthesized from simple primitive shapes with random texturing and augmentations (e.g., height fields, boolean differences, and wireframes). Unlike previous 3D datasets (e.g., Objaverse) which are often captured or crafted by humans to approximate real 3D data, Zeroverse completely ignores realistic global semantics but is rich in complex geometric and texture details that are locally similar to or even more intricate than real objects. We demonstrate that our LRM-Zero, trained with our fully synthesized Zeroverse, can achieve high visual quality in the reconstruction of real-world objects, competitive with models trained on Objaverse. We also analyze several critical design choices of Zeroverse that contribute to LRM-Zero's capability and training stability. Our work demonstrates that 3D reconstruction, one of the core tasks in 3D vision, can potentially be addressed without the semantics of real-world objects. The Zeroverse's procedural synthesis code and interactive visualization are available at: https://desaixie.github.io/lrm-zero/.",
+        "subjects": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "comment": "23 pages, 8 figures. Our code and interactive visualization are available at: https://desaixie.github.io/lrm-zero/"
+    },
+    {
         "paper id": "2406.09374",
         "abstract url": "https://arxiv.org/abs/2406.09374",
         "title": "Scale-Invariant Monocular Depth Estimation via SSI Depth",
@@ -4261,14 +4252,39 @@
         "comment": null
     },
     {
+        "paper id": "2406.09395",
+        "abstract url": "https://arxiv.org/abs/2406.09395",
+        "title": "Modeling Ambient Scene Dynamics for Free-view Synthesis",
+        "rating": "0",
+        "keywords": [
+            [
+                "memory efficiency"
+            ],
+            [
+                "3D",
+                "Gaussian Splatting"
+            ],
+            [
+                "trajectory"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "We introduce a novel method for dynamic free-view synthesis of an ambient scenes from a monocular capture bringing a immersive quality to the viewing experience. Our method builds upon the recent advancements in 3D Gaussian Splatting (3DGS) that can faithfully reconstruct complex static scenes. Previous attempts to extend 3DGS to represent dynamics have been confined to bounded scenes or require multi-camera captures, and often fail to generalize to unseen motions, limiting their practical application. Our approach overcomes these constraints by leveraging the periodicity of ambient motions to learn the motion trajectory model, coupled with careful regularization. We also propose important practical strategies to improve the visual quality of the baseline 3DGS static reconstructions and to improve memory efficiency critical for GPU-memory intensive learning. We demonstrate high-quality photorealistic novel view synthesis of several ambient natural scenes with intricate textures and fine structural elements.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2406.09399",
         "abstract url": "https://arxiv.org/abs/2406.09399",
         "title": "OmniTokenizer: A Joint Image-Video Tokenizer for Visual Generation",
         "rating": "0",
         "keywords": [
             [
-                "diffusion",
-                "synthesis"
+                "diffusion"
             ],
             [
                 "cs.CV"
@@ -4635,26 +4651,6 @@
         "comment": null
     },
     {
-        "paper id": "2406.08980",
-        "abstract url": "https://arxiv.org/abs/2406.08980",
-        "title": "From Theory to Therapy: Reframing SBDD Model Evaluation via Practical Metrics",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "synthesizing"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Recent advancements in structure-based drug design (SBDD) have significantly enhanced the efficiency and precision of drug discovery by generating molecules tailored to bind specific protein pockets. Despite these technological strides, their practical application in real-world drug development remains challenging due to the complexities of synthesizing and testing these molecules. The reliability of the Vina docking score, the current standard for assessing binding abilities, is increasingly questioned due to its susceptibility to overfitting. To address these limitations, we propose a comprehensive evaluation framework that includes assessing the similarity of generated molecules to known active compounds, introducing a virtual screening-based metric for practical deployment capabilities, and re-evaluating binding affinity more rigorously. Our experiments reveal that while current SBDD models achieve high Vina scores, they fall short in practical usability metrics, highlighting a significant gap between theoretical predictions and real-world applicability. Our proposed metrics and dataset aim to bridge this gap, enhancing the practical applicability of future SBDD models and aligning them more closely with the needs of pharmaceutical research and development.",
-        "subjects": [
-            "q-bio.BM",
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2406.09023",
         "abstract url": "https://arxiv.org/abs/2406.09023",
         "title": "Schur's Positive-Definite Network: Deep Learning in the SPD cone with structure",
@@ -4897,25 +4893,6 @@
         "abstract": "By leveraging the kernel trick in the output space, kernel-induced losses provide a principled way to define structured output prediction tasks for a wide variety of output modalities. In particular, they have been successfully used in the context of surrogate non-parametric regression, where the kernel trick is typically exploited in the input space as well. However, when inputs are images or texts, more expressive models such as deep neural networks seem more suited than non-parametric methods. In this work, we tackle the question of how to train neural networks to solve structured output prediction tasks, while still benefiting from the versatility and relevance of kernel-induced losses. We design a novel family of deep neural architectures, whose last layer predicts in a data-dependent finite-dimensional subspace of the infinite-dimensional output feature space deriving from the kernel-induced loss. This subspace is chosen as the span of the eigenfunctions of a randomly-approximated version of the empirical kernel covariance operator. Interestingly, this approach unlocks the use of gradient descent algorithms (and consequently of any neural architecture) for structured prediction. Experiments on synthetic tasks as well as real-world supervised graph prediction problems show the relevance of our method.",
         "subjects": [
             "stat.ML",
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2406.09262",
-        "abstract url": "https://arxiv.org/abs/2406.09262",
-        "title": "Flexible Heteroscedastic Count Regression with Deep Double Poisson Networks",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "point cloud"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Neural networks that can produce accurate, input-conditional uncertainty representations are critical for real-world applications. Recent progress on heteroscedastic continuous regression has shown great promise for calibrated uncertainty quantification on complex tasks, like image regression. However, when these methods are applied to discrete regression tasks, such as crowd counting, ratings prediction, or inventory estimation, they tend to produce predictive distributions with numerous pathologies. We propose to address these issues by training a neural network to output the parameters of a Double Poisson distribution, which we call the Deep Double Poisson Network (DDPN). In contrast to existing methods that are trained to minimize Gaussian negative log likelihood (NLL), DDPNs produce a proper probability mass function over discrete output. Additionally, DDPNs naturally model under-, over-, and equi-dispersion, unlike networks trained with the more rigid Poisson and Negative Binomial parameterizations. We show DDPNs 1) vastly outperform existing discrete models; 2) meet or exceed the accuracy and flexibility of networks trained with Gaussian NLL; 3) produce proper predictive distributions over discrete counts; and 4) exhibit superior out-of-distribution detection. DDPNs can easily be applied to a variety of count regression datasets including tabular, image, point cloud, and text data.",
-        "subjects": [
             "cs.LG"
         ],
         "comment": null
@@ -5755,6 +5732,25 @@
         "comment": "First two authors contributed equally"
     },
     {
+        "paper id": "2406.09133",
+        "abstract url": "https://arxiv.org/abs/2406.09133",
+        "title": "RH-SQL: Refined Schema and Hardness Prompt for Text-to-SQL",
+        "rating": "-1",
+        "keywords": [
+            [
+                "SQL"
+            ],
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Text-to-SQL is a technology that converts natural language queries into the structured query language SQL. A novel research approach that has recently gained attention focuses on methods based on the complexity of SQL queries, achieving notable performance improvements. However, existing methods entail significant storage and training costs, which hampers their practical application. To address this issue, this paper introduces a method for Text-to-SQL based on Refined Schema and Hardness Prompt. By filtering out low-relevance schema information with a refined schema and identifying query hardness through a Language Model (LM) to form prompts, this method reduces storage and training costs while maintaining performance. It's worth mentioning that this method is applicable to any sequence-to-sequence (seq2seq) LM. Our experiments on the Spider dataset, specifically with large-scale LMs, achieved an exceptional Execution accuracy (EX) of 82.6%, demonstrating the effectiveness and greater suitability of our method for real-world applications.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": "4 pages, 2 figures, 2024 6th International Conference on Electronic Engineering and Informatics (EEI 2024)"
+    },
+    {
         "paper id": "2406.09160",
         "abstract url": "https://arxiv.org/abs/2406.09160",
         "title": "Beyond the Frontier: Predicting Unseen Walls from Occupancy Grids by Learning from Floor Plans",
@@ -5842,22 +5838,6 @@
         "comment": "2 pages, 2 figures"
     },
     {
-        "paper id": "2406.09233",
-        "abstract url": "https://arxiv.org/abs/2406.09233",
-        "title": "C2HLSC: Can LLMs Bridge the Software-to-Hardware Design Gap?",
-        "rating": "-1",
-        "keywords": [
-            [
-                "Synthesis"
-            ]
-        ],
-        "abstract": "High Level Synthesis (HLS) tools offer rapid hardware design from C code, but their compatibility is limited by code constructs. This paper investigates Large Language Models (LLMs) for refactoring C code into HLS-compatible formats. We present several case studies by using an LLM to rewrite C code for NIST 800-22 randomness tests, a QuickSort algorithm and AES-128 into HLS-synthesizable c. The LLM iteratively transforms the C code guided by user prompts, implementing functions like streaming data and hardware-specific signals. This evaluation demonstrates the LLM's potential to assist hardware design refactoring regular C code into HLS synthesizable C code.",
-        "subjects": [
-            "cs.AR"
-        ],
-        "comment": "Accepted at The First IEEE International Workshop on LLM-Aided Design"
-    },
-    {
         "paper id": "2406.09238",
         "abstract url": "https://arxiv.org/abs/2406.09238",
         "title": "Near-Field Multiuser Communications based on Sparse Arrays",
@@ -5901,7 +5881,6 @@
             ],
             [
                 "Diffusion",
-                "Synthesis",
                 "text-to-image"
             ],
             [
@@ -6000,27 +5979,6 @@
         "comment": "Codes and Dataset: https://agnjason.github.io/PianoMotion-page"
     },
     {
-        "paper id": "2406.09333",
-        "abstract url": "https://arxiv.org/abs/2406.09333",
-        "title": "Memory-Efficient Sparse Pyramid Attention Networks for Whole Slide Image Analysis",
-        "rating": "-1",
-        "keywords": [
-            [
-                "diagnosis",
-                "Whole Slide",
-                "pathological"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Whole Slide Images (WSIs) are crucial for modern pathological diagnosis, yet their gigapixel-scale resolutions and sparse informative regions pose significant computational challenges. Traditional dense attention mechanisms, widely used in computer vision and natural language processing, are impractical for WSI analysis due to the substantial data scale and the redundant processing of uninformative areas. To address these challenges, we propose Memory-Efficient Sparse Pyramid Attention Networks with Shifted Windows (SPAN), drawing inspiration from state-of-the-art sparse attention techniques in other domains. SPAN introduces a sparse pyramid attention architecture that hierarchically focuses on informative regions within the WSI, aiming to reduce memory overhead while preserving critical features. Additionally, the incorporation of shifted windows enables the model to capture long-range contextual dependencies essential for accurate classification. We evaluated SPAN on multiple public WSI datasets, observing its competitive performance. Unlike existing methods that often struggle to model spatial and contextual information due to memory constraints, our approach enables the accurate modeling of these crucial features. Our study also highlights the importance of key design elements in attention mechanisms, such as the shifted-window scheme and the hierarchical structure, which contribute substantially to the effectiveness of SPAN in WSI analysis. The potential of SPAN for memory-efficient and effective analysis of WSI data is thus demonstrated, and the code will be made publicly available following the publication of this work.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2406.09355",
         "abstract url": "https://arxiv.org/abs/2406.09355",
         "title": "Can't Hide Behind the API: Stealing Black-Box Commercial Embedding Models",
@@ -6035,30 +5993,6 @@
             "cs.IR"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2406.09371",
-        "abstract url": "https://arxiv.org/abs/2406.09371",
-        "title": "LRM-Zero: Training Large Reconstruction Models with Synthesized Data",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.LG",
-                "cs.CV"
-            ]
-        ],
-        "abstract": "We present LRM-Zero, a Large Reconstruction Model (LRM) trained entirely on synthesized 3D data, achieving high-quality sparse-view 3D reconstruction. The core of LRM-Zero is our procedural 3D dataset, Zeroverse, which is automatically synthesized from simple primitive shapes with random texturing and augmentations (e.g., height fields, boolean differences, and wireframes). Unlike previous 3D datasets (e.g., Objaverse) which are often captured or crafted by humans to approximate real 3D data, Zeroverse completely ignores realistic global semantics but is rich in complex geometric and texture details that are locally similar to or even more intricate than real objects. We demonstrate that our LRM-Zero, trained with our fully synthesized Zeroverse, can achieve high visual quality in the reconstruction of real-world objects, competitive with models trained on Objaverse. We also analyze several critical design choices of Zeroverse that contribute to LRM-Zero's capability and training stability. Our work demonstrates that 3D reconstruction, one of the core tasks in 3D vision, can potentially be addressed without the semantics of real-world objects. The Zeroverse's procedural synthesis code and interactive visualization are available at: https://desaixie.github.io/lrm-zero/.",
-        "subjects": [
-            "cs.CV",
-            "cs.LG"
-        ],
-        "comment": "23 pages, 8 figures. Our code and interactive visualization are available at: https://desaixie.github.io/lrm-zero/"
     },
     {
         "paper id": "2406.09377",
@@ -6083,6 +6017,29 @@
             "cs.CV"
         ],
         "comment": "Project Page: https://tobias-kirschstein.github.io/gghead/ ; YouTube Video: https://www.youtube.com/watch?v=1iyC74neQXc"
+    },
+    {
+        "paper id": "2406.09393",
+        "abstract url": "https://arxiv.org/abs/2406.09393",
+        "title": "Improving Autoregressive Training with Dynamic Oracles",
+        "rating": "-1",
+        "keywords": [
+            [
+                "named entity recognition"
+            ],
+            [
+                "cs.AI",
+                "cs.LG",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Many tasks within NLP can be framed as sequential decision problems, ranging from sequence tagging to text generation. However, for many tasks, the standard training methods, including maximum likelihood (teacher forcing) and scheduled sampling, suffer from exposure bias and a mismatch between metrics employed during training and inference. DAgger provides a solution to mitigate these problems, yet it requires a metric-specific dynamic oracle algorithm, which does not exist for many common metrics like span-based F1, ROUGE, and BLEU. In this paper, we develop these novel dynamic oracles and show they maintain DAgger's no-regret guarantee for decomposable metrics like span-based F1. We evaluate the algorithm's performance on named entity recognition (NER), text summarization, and machine translation (MT). While DAgger with dynamic oracle yields less favorable results in our MT experiments, it outperforms the baseline techniques in NER and text summarization.",
+        "subjects": [
+            "cs.CL",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "comment": null
     },
     {
         "paper id": "2406.09394",
@@ -6239,22 +6196,6 @@
         "comment": null
     },
     {
-        "paper id": "2406.09579",
-        "abstract url": "https://arxiv.org/abs/2406.09579",
-        "title": "Hovering Over the Key to Text Input in XR",
-        "rating": "-1",
-        "keywords": [
-            [
-                "synthesizing"
-            ]
-        ],
-        "abstract": "Virtual, Mixed, and Augmented Reality (XR) technologies hold immense potential for transforming productivity beyond PC. Therefore there is a critical need for improved text input solutions for XR. However, achieving efficient text input in these environments remains a significant challenge. This paper examines the current landscape of XR text input techniques, focusing on the importance of keyboards (both physical and virtual) as essential tools. We discuss the unique challenges and opportunities presented by XR, synthesizing key trends from existing solutions.",
-        "subjects": [
-            "cs.HC"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2406.09603",
         "abstract url": "https://arxiv.org/abs/2406.09603",
         "title": "Workload Assessment of Human-Machine Interface: A Simulator Study with Psychophysiological Measures",
@@ -6384,21 +6325,27 @@
         "comment": null
     },
     {
-        "paper id": "2406.09677",
-        "abstract url": "https://arxiv.org/abs/2406.09677",
-        "title": "SAGA: Synthesis Augmentation with Genetic Algorithms for In-Memory Sequence Optimization",
+        "paper id": "2406.09662",
+        "abstract url": "https://arxiv.org/abs/2406.09662",
+        "title": "Learning Language Structures through Grounding",
         "rating": "-1",
         "keywords": [
             [
-                "Synthesis"
+                "grammar"
+            ],
+            [
+                "cs.AI",
+                "cs.CV",
+                "cs.CL"
             ]
         ],
-        "abstract": "The von-Neumann architecture has a bottleneck which limits the speed at which data can be made available for computation. To combat this problem, novel paradigms for computing are being developed. One such paradigm, known as in-memory computing, interleaves computation with the storage of data within the same circuits. MAGIC, or Memristor Aided Logic, is an approach which uses memory circuits which physically perform computation through write operations to memory. Sequencing these operations is a computationally difficult problem which is directly correlated with the cost of solutions using MAGIC based in-memory computation. SAGA models the execution sequences as a topological sorting problem which makes the optimization well-suited for genetic algorithms. We then detail the formation and implementation of these genetic algorithms and evaluate them over a number of open circuit implementations. The memory-footprint needed for evaluating each of these circuits is decreased by up to 52% from existing, greedy-algorithm-based optimization solutions. Over the 10 benchmark circuits evaluated, these modifications lead to an overall improvement in the efficiency of in-memory circuit evaluation of 128% in the best case and 27.5% on average.",
+        "abstract": "Language is highly structured, with syntactic and semantic structures, to some extent, agreed upon by speakers of the same language. With implicit or explicit awareness of such structures, humans can learn and use language efficiently and generalize to sentences that contain unseen words. Motivated by human language learning, in this dissertation, we consider a family of machine learning tasks that aim to learn language structures through grounding. We seek distant supervision from other data sources (i.e., grounds), including but not limited to other modalities (e.g., vision), execution results of programs, and other languages. We demonstrate the potential of this task formulation and advocate for its adoption through three schemes. In Part I, we consider learning syntactic parses through visual grounding. We propose the task of visually grounded grammar induction, present the first models to induce syntactic structures from visually grounded text and speech, and find that the visual grounding signals can help improve the parsing quality over language-only models. As a side contribution, we propose a novel evaluation metric that enables the evaluation of speech parsing without text or automatic speech recognition systems involved. In Part II, we propose two execution-aware methods to map sentences into corresponding semantic structures (i.e., programs), significantly improving compositional generalization and few-shot program synthesis. In Part III, we propose methods that learn language structures from annotations in other languages. Specifically, we propose a method that sets a new state of the art on cross-lingual word alignment. We then leverage the learned word alignments to improve the performance of zero-shot cross-lingual dependency parsing, by proposing a novel substructure-based projection method that preserves structural knowledge learned from the source language.",
         "subjects": [
-            "cs.NE",
-            "cs.AR"
+            "cs.CL",
+            "cs.AI",
+            "cs.CV"
         ],
-        "comment": "6 pages, 2 Figures, 3 Tables"
+        "comment": "Ph.D. Thesis"
     },
     {
         "paper id": "2406.09682",
@@ -6460,22 +6407,6 @@
             "cs.CV"
         ],
         "comment": "8 + 1/2 pages, early accepted to MICCAI2024"
-    },
-    {
-        "paper id": "2406.09704",
-        "abstract url": "https://arxiv.org/abs/2406.09704",
-        "title": "Data-Driven Strategy Synthesis for Stochastic Systems with Unknown Nonlinear Disturbances",
-        "rating": "-1",
-        "keywords": [
-            [
-                "Synthesis"
-            ]
-        ],
-        "abstract": "In this paper, we introduce a data-driven framework for synthesis of provably-correct controllers for general nonlinear switched systems under complex specifications. The focus is on systems with unknown disturbances whose effects on the dynamics of the system is nonlinear. The specifications are assumed to be given as linear temporal logic over finite traces (LTLf) formulas. Starting from observations of either the disturbance or the state of the system, we first learn an ambiguity set that contains the unknown distribution of the disturbances with a user-defined confidence. Next, we construct a robust Markov decision process (RMDP) as a finite abstraction of the system. By composing the RMDP with the automaton obtained from the LTLf formula and performing optimal robust value iteration on the composed RMDP, we synthesize a strategy that yields a high probability that the uncertain system satisfies the specifications. Our empirical evaluations on systems with a wide variety of disturbances show that the strategies synthesized with our approach lead to high satisfaction probabilities and validate the theoretical guarantees.",
-        "subjects": [
-            "eess.SY"
-        ],
-        "comment": null
     },
     {
         "paper id": "2406.08851",
@@ -6769,6 +6700,26 @@
             "cs.AI"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2406.09069",
+        "abstract url": "https://arxiv.org/abs/2406.09069",
+        "title": "On the Robustness of Global Feature Effect Explanations",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "tabular"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "We study the robustness of global post-hoc explanations for predictive models trained on tabular data. Effects of predictor features in black-box supervised learning are an essential diagnostic tool for model debugging and scientific discovery in applied sciences. However, how vulnerable they are to data and model perturbations remains an open research question. We introduce several theoretical bounds for evaluating the robustness of partial dependence plots and accumulated local effects. Our experimental results with synthetic and real-world datasets quantify the gap between the best and worst-case scenarios of (mis)interpreting machine learning predictions globally.",
+        "subjects": [
+            "cs.LG",
+            "stat.ML"
+        ],
+        "comment": "Accepted at ECML PKDD 2024"
     },
     {
         "paper id": "2406.09130",
@@ -7071,6 +7022,51 @@
             "cs.CV"
         ],
         "comment": "19 pages. Accepted to CVPR24"
+    },
+    {
+        "paper id": "2406.09534",
+        "abstract url": "https://arxiv.org/abs/2406.09534",
+        "title": "FeatNavigator: Automatic Feature Augmentation on Tabular Data",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "Tabular"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Data-centric AI focuses on understanding and utilizing high-quality, relevant data in training machine learning (ML) models, thereby increasing the likelihood of producing accurate and useful results. Automatic feature augmentation, aiming to augment the initial base table with useful features from other tables, is critical in data preparation as it improves model performance, robustness, and generalizability. While recent works have investigated automatic feature augmentation, most of them have limited capabilities in utilizing all useful features as many of them are in candidate tables not directly joinable with the base table. Worse yet, with numerous join paths leading to these distant features, existing solutions fail to fully exploit them within a reasonable compute budget. We present FeatNavigator, an effective and efficient framework that explores and integrates high-quality features in relational tables for ML models. FeatNavigator evaluates a feature from two aspects: (1) the intrinsic value of a feature towards an ML task (i.e., feature importance) and (2) the efficacy of a join path connecting the feature to the base table (i.e., integration quality). FeatNavigator strategically selects a small set of available features and their corresponding join paths to train a feature importance estimation model and an integration quality prediction model. Furthermore, FeatNavigator's search algorithm exploits both estimated feature importance and integration quality to identify the optimized feature augmentation plan. Our experimental results show that FeatNavigator outperforms state-of-the-art solutions on five public datasets by up to 40.1% in ML model performance.",
+        "subjects": [
+            "cs.DB",
+            "cs.LG"
+        ],
+        "comment": "15 pages, 41 figures"
+    },
+    {
+        "paper id": "2406.09606",
+        "abstract url": "https://arxiv.org/abs/2406.09606",
+        "title": "Cross-Modality Program Representation Learning for Electronic Design Automation with High-Level Synthesis",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "autonomous driving"
+            ],
+            [
+                "graph"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "In recent years, domain-specific accelerators (DSAs) have gained popularity for applications such as deep learning and autonomous driving. To facilitate DSA designs, programmers use high-level synthesis (HLS) to compile a high-level description written in C/C++ into a design with low-level hardware description languages that eventually synthesize DSAs on circuits. However, creating a high-quality HLS design still demands significant domain knowledge, particularly in microarchitecture decisions expressed as \\textit{pragmas}. Thus, it is desirable to automate such decisions with the help of machine learning for predicting the quality of HLS designs, requiring a deeper understanding of the program that consists of original code and pragmas. Naturally, these programs can be considered as sequence data. In addition, these programs can be compiled and converted into a control data flow graph (CDFG). But existing works either fail to leverage both modalities or combine the two in shallow or coarse ways. We propose ProgSG, a model that allows interaction between the source code sequence modality and the graph modality in a deep and fine-grained way. To alleviate the scarcity of labeled designs, a pre-training method is proposed based on a suite of compiler's data flow analysis tasks. Experimental results show that ProgSG reduces the RMSE of design performance predictions by up to $22\\%$, and identifies designs with an average of $1.10\\times$ and $1.26\\times$ (up to $8.17\\times$ and $13.31\\times$) performance improvement in design space exploration (DSE) task compared to HARP and AutoDSE, respectively.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI",
+            "cs.AR"
+        ],
+        "comment": "14 pages, 8 figures. arXiv admin note: text overlap with arXiv:2305.10838"
     },
     {
         "paper id": "2406.09614",
@@ -7408,6 +7404,22 @@
         "comment": null
     },
     {
+        "paper id": "2406.09078",
+        "abstract url": "https://arxiv.org/abs/2406.09078",
+        "title": "ONNX-to-Hardware Design Flow for Adaptive Neural-Network Inference on FPGAs",
+        "rating": "-2",
+        "keywords": [
+            [
+                "FPGAs"
+            ]
+        ],
+        "abstract": "The challenges involved in executing neural networks (NNs) at the edge include providing diversity, flexibility, and sustainability. That implies, for instance, supporting evolving applications and algorithms energy-efficiently. Using hardware or software accelerators can deliver fast and efficient computation of the NNs, while flexibility can be exploited to support long-term adaptivity. Nonetheless, handcrafting an NN for a specific device, despite the possibility of leading to an optimal solution, takes time and experience, and that's why frameworks for hardware accelerators are being developed. This work, starting from a preliminary semi-integrated ONNX-to-hardware toolchain [21], focuses on enabling approximate computing leveraging the distinctive ability of the original toolchain to favor adaptivity. The goal is to allow lightweight adaptable NN inference on FPGAs at the edge.",
+        "subjects": [
+            "cs.AR"
+        ],
+        "comment": "Proceedings of the XXIV International Conference on Embedded Computer Systems: Architectures, Modeling and Simulation (SAMOS), June 29 - July 4, 2024. arXiv admin note: text overlap with arXiv:2309.13321"
+    },
+    {
         "paper id": "2406.09093",
         "abstract url": "https://arxiv.org/abs/2406.09093",
         "title": "The Observer Effect in Computer Networks",
@@ -7521,22 +7533,6 @@
         "comment": null
     },
     {
-        "paper id": "2406.09208",
-        "abstract url": "https://arxiv.org/abs/2406.09208",
-        "title": "Python-based DSL for generating Verilog model of Synchronous Digital Circuits",
-        "rating": "-2",
-        "keywords": [
-            [
-                "quantum"
-            ]
-        ],
-        "abstract": "We have designed a Python-based Domain Specific Language (DSL) for modeling synchronous digital circuits. In this DSL, hardware is modeled as a collection of transactions -- running in series, parallel, and loops. When the model is executed by a Python interpreter, synthesizable and behavioural Verilog is generated as output, which can be integrated with other RTL designs or directly used for FPGA and ASIC flows. In this paper, we describe - 1) the language (DSL), which allows users to express computation in series/parallel/loop constructs, with explicit cycle boundaries, 2) the internals of a simple Python implementation to produce synthesizable Verilog, and 3) several design examples and case studies for applications in post-quantum cryptography, stereo-vision, digital signal processing and optimization techniques. In the end, we list ideas to extend this framework.",
-        "subjects": [
-            "cs.AR"
-        ],
-        "comment": "9 pages, 13 figures"
-    },
-    {
         "paper id": "2406.09309",
         "abstract url": "https://arxiv.org/abs/2406.09309",
         "title": "Teleoperation of a robotic manipulator in peri-personal space: a virtual wand approach",
@@ -7554,34 +7550,6 @@
             "cs.RO"
         ],
         "comment": "Submitted to IROS2024"
-    },
-    {
-        "paper id": "2406.09327",
-        "abstract url": "https://arxiv.org/abs/2406.09327",
-        "title": "Towards AI Lesion Tracking in PET/CT Imaging: A Siamese-based CNN Pipeline applied on PSMA PET/CT Scans",
-        "rating": "-2",
-        "keywords": [
-            [
-                "3D"
-            ],
-            [
-                "CT",
-                "cancer",
-                "clinical",
-                "tumor"
-            ],
-            [
-                "cs.CV",
-                "eess.IV"
-            ]
-        ],
-        "abstract": "Assessing tumor response to systemic therapies is one of the main applications of PET/CT. Routinely, only a small subset of index lesions out of multiple lesions is analyzed. However, this operator dependent selection may bias the results due to possible significant inter-metastatic heterogeneity of response to therapy. Automated, AI based approaches for lesion tracking hold promise in enabling the analysis of many more lesions and thus providing a better assessment of tumor response. This work introduces a Siamese CNN approach for lesion tracking between PET/CT scans. Our approach is applied on the laborious task of tracking a high number of bone lesions in full-body baseline and follow-up [68Ga]Ga- or [18F]F-PSMA PET/CT scans after two cycles of [177Lu]Lu-PSMA therapy of metastatic castration resistant prostate cancer patients. Data preparation includes lesion segmentation and affine registration. Our algorithm extracts suitable lesion patches and forwards them into a Siamese CNN trained to classify the lesion patch pairs as corresponding or non-corresponding lesions. Experiments have been performed with different input patch types and a Siamese network in 2D and 3D. The CNN model successfully learned to classify lesion assignments, reaching a lesion tracking accuracy of 83 % in its best configuration with an AUC = 0.91. For remaining lesions the pipeline accomplished a re-identification rate of 89 %. We proved that a CNN may facilitate the tracking of multiple lesions in PSMA PET/CT scans. Future clinical studies are necessary if this improves the prediction of the outcome of therapies.",
-        "subjects": [
-            "eess.IV",
-            "cs.CV",
-            "physics.med-ph"
-        ],
-        "comment": "25 pages, 9 figures, 3 tables"
     },
     {
         "paper id": "2406.09335",
@@ -7611,32 +7579,6 @@
         "comment": null
     },
     {
-        "paper id": "2406.09395",
-        "abstract url": "https://arxiv.org/abs/2406.09395",
-        "title": "Modeling Ambient Scene Dynamics for Free-view Synthesis",
-        "rating": "-2",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting"
-            ],
-            [
-                "Synthesis"
-            ],
-            [
-                "trajectory"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "We introduce a novel method for dynamic free-view synthesis of an ambient scenes from a monocular capture bringing a immersive quality to the viewing experience. Our method builds upon the recent advancements in 3D Gaussian Splatting (3DGS) that can faithfully reconstruct complex static scenes. Previous attempts to extend 3DGS to represent dynamics have been confined to bounded scenes or require multi-camera captures, and often fail to generalize to unseen motions, limiting their practical application. Our approach overcomes these constraints by leveraging the periodicity of ambient motions to learn the motion trajectory model, coupled with careful regularization. We also propose important practical strategies to improve the visual quality of the baseline 3DGS static reconstructions and to improve memory efficiency critical for GPU-memory intensive learning. We demonstrate high-quality photorealistic novel view synthesis of several ambient natural scenes with intricate textures and fine structural elements.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2406.09410",
         "abstract url": "https://arxiv.org/abs/2406.09410",
         "title": "Scene Graph Generation in Large-Size VHR Satellite Imagery: A Large-Scale Dataset and A Context-Aware Approach",
@@ -7659,6 +7601,22 @@
             "cs.AI"
         ],
         "comment": "This paper releases a SAI-oriented SGG toolkit with about 30 OBD methods and 10 SGG methods, and develops a benchmark based on RSG where our HOD-Net and RPCM significantly outperform the state-of-the-art methods in both OBD and SGG tasks. The RSG dataset and SAI-oriented toolkit will be made publicly available at https://linlin-dev.github.io/project/RSG"
+    },
+    {
+        "paper id": "2406.09469",
+        "abstract url": "https://arxiv.org/abs/2406.09469",
+        "title": "Conformance Testing of Relational DBMS Against SQL Specifications",
+        "rating": "-2",
+        "keywords": [
+            [
+                "SQL"
+            ]
+        ],
+        "abstract": "A Relational Database Management System (RDBMS) is one of the fundamental software that supports a wide range of applications, making it critical to identify bugs within these systems. There has been active research on testing RDBMS, most of which employ crash or use metamorphic relations as the oracle. Although existing approaches can detect bugs in RDBMS, they are far from comprehensively evaluating the RDBMS's correctness (i.e., with respect to the semantics of SQL). In this work, we propose a method to test the semantic conformance of RDBMS i.e., whether its behavior respects the intended semantics of SQL. Specifically, we have formally defined the semantics of SQL and implemented them in Prolog. Then, the Prolog implementation serves as the reference RDBMS, enabling differential testing on existing RDBMS. We applied our approach to four widely-used and thoroughly tested RDBMSs, i.e., MySQL, TiDB, SQLite, and DuckDB. In total, our approach uncovered 19 bugs and 11 inconsistencies, which are all related to violating the SQL specification or missing/unclear specification, thereby demonstrating the effectiveness and applicability of our approach.",
+        "subjects": [
+            "cs.DB"
+        ],
+        "comment": null
     },
     {
         "paper id": "2406.09560",
@@ -7697,6 +7655,22 @@
         "comment": null
     },
     {
+        "paper id": "2406.09621",
+        "abstract url": "https://arxiv.org/abs/2406.09621",
+        "title": "Enhancing Knowledge Retrieval with In-Context Learning and Semantic Search through Generative AI",
+        "rating": "-2",
+        "keywords": [
+            [
+                "tabular"
+            ]
+        ],
+        "abstract": "Retrieving and extracting knowledge from extensive research documents and large databases presents significant challenges for researchers, students, and professionals in today's information-rich era. Existing retrieval systems, which rely on general-purpose Large Language Models (LLMs), often fail to provide accurate responses to domain-specific inquiries. Additionally, the high cost of pretraining or fine-tuning LLMs for specific domains limits their widespread adoption. To address these limitations, we propose a novel methodology that combines the generative capabilities of LLMs with the fast and accurate retrieval capabilities of vector databases. This advanced retrieval system can efficiently handle both tabular and non-tabular data, understand natural language user queries, and retrieve relevant information without fine-tuning. The developed model, Generative Text Retrieval (GTR), is adaptable to both unstructured and structured data with minor refinement. GTR was evaluated on both manually annotated and public datasets, achieving over 90% accuracy and delivering truthful outputs in 87% of cases. Our model achieved state-of-the-art performance with a Rouge-L F1 score of 0.98 on the MSMARCO dataset. The refined model, Generative Tabular Text Retrieval (GTR-T), demonstrated its efficiency in large database querying, achieving an Execution Accuracy (EX) of 0.82 and an Exact-Set-Match (EM) accuracy of 0.60 on the Spider dataset, using an open-source LLM. These efforts leverage Generative AI and In-Context Learning to enhance human-text interaction and make advanced AI capabilities more accessible. By integrating robust retrieval systems with powerful LLMs, our approach aims to democratize access to sophisticated AI tools, improving the efficiency, accuracy, and scalability of AI-driven information retrieval and database querying.",
+        "subjects": [
+            "cs.IR"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2406.09631",
         "abstract url": "https://arxiv.org/abs/2406.09631",
         "title": "Optimal Convex Cover as Collision-free Space Approximation for Trajectory Generation",
@@ -7715,32 +7689,6 @@
             "cs.RO"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2406.09662",
-        "abstract url": "https://arxiv.org/abs/2406.09662",
-        "title": "Learning Language Structures through Grounding",
-        "rating": "-2",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "grammar"
-            ],
-            [
-                "cs.AI",
-                "cs.CV",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Language is highly structured, with syntactic and semantic structures, to some extent, agreed upon by speakers of the same language. With implicit or explicit awareness of such structures, humans can learn and use language efficiently and generalize to sentences that contain unseen words. Motivated by human language learning, in this dissertation, we consider a family of machine learning tasks that aim to learn language structures through grounding. We seek distant supervision from other data sources (i.e., grounds), including but not limited to other modalities (e.g., vision), execution results of programs, and other languages. We demonstrate the potential of this task formulation and advocate for its adoption through three schemes. In Part I, we consider learning syntactic parses through visual grounding. We propose the task of visually grounded grammar induction, present the first models to induce syntactic structures from visually grounded text and speech, and find that the visual grounding signals can help improve the parsing quality over language-only models. As a side contribution, we propose a novel evaluation metric that enables the evaluation of speech parsing without text or automatic speech recognition systems involved. In Part II, we propose two execution-aware methods to map sentences into corresponding semantic structures (i.e., programs), significantly improving compositional generalization and few-shot program synthesis. In Part III, we propose methods that learn language structures from annotations in other languages. Specifically, we propose a method that sets a new state of the art on cross-lingual word alignment. We then leverage the learned word alignments to improve the performance of zero-shot cross-lingual dependency parsing, by proposing a novel substructure-based projection method that preserves structural knowledge learned from the source language.",
-        "subjects": [
-            "cs.CL",
-            "cs.AI",
-            "cs.CV"
-        ],
-        "comment": "Ph.D. Thesis"
     },
     {
         "paper id": "2406.09669",
@@ -7782,26 +7730,24 @@
         "comment": null
     },
     {
-        "paper id": "2406.08854",
-        "abstract url": "https://arxiv.org/abs/2406.08854",
-        "title": "Current applications and potential future directions of reinforcement learning-based Digital Twins in agriculture",
+        "paper id": "2406.09262",
+        "abstract url": "https://arxiv.org/abs/2406.09262",
+        "title": "Flexible Heteroscedastic Count Regression with Deep Double Poisson Networks",
         "rating": "-2.5",
         "keywords": [
             [
-                "robotics"
+                "point cloud"
             ],
             [
-                "agricultural"
+                "tabular"
             ],
             [
-                "cs.AI",
                 "cs.LG"
             ]
         ],
-        "abstract": "Digital Twins have gained attention in various industries for simulation, monitoring, and decision-making, relying on ever-improving machine learning models. However, agricultural Digital Twin implementations are limited compared to other industries. Meanwhile, machine learning, particularly reinforcement learning, has shown potential in agricultural applications like optimizing decision-making, task automation, and resource management. A key aspect of Digital Twins is representing physical assets or systems in a virtual environment, which aligns well with reinforcement learning's need for environment representations to learn the best policy for a task. Reinforcement learning in agriculture can thus enable various Digital Twin applications in agricultural domains. This review aims to categorize existing research employing reinforcement learning in agricultural settings by application domains like robotics, greenhouse management, irrigation systems, and crop management, identifying potential future areas for reinforcement learning-based Digital Twins. It also categorizes the reinforcement learning techniques used, including tabular methods, Deep Q-Networks (DQN), Policy Gradient methods, and Actor-Critic algorithms, to overview currently employed models. The review seeks to provide insights into the state-of-the-art in integrating Digital Twins and reinforcement learning in agriculture, identifying gaps and opportunities for future research, and exploring synergies to tackle agricultural challenges and optimize farming, paving the way for more efficient and sustainable farming methodologies.",
+        "abstract": "Neural networks that can produce accurate, input-conditional uncertainty representations are critical for real-world applications. Recent progress on heteroscedastic continuous regression has shown great promise for calibrated uncertainty quantification on complex tasks, like image regression. However, when these methods are applied to discrete regression tasks, such as crowd counting, ratings prediction, or inventory estimation, they tend to produce predictive distributions with numerous pathologies. We propose to address these issues by training a neural network to output the parameters of a Double Poisson distribution, which we call the Deep Double Poisson Network (DDPN). In contrast to existing methods that are trained to minimize Gaussian negative log likelihood (NLL), DDPNs produce a proper probability mass function over discrete output. Additionally, DDPNs naturally model under-, over-, and equi-dispersion, unlike networks trained with the more rigid Poisson and Negative Binomial parameterizations. We show DDPNs 1) vastly outperform existing discrete models; 2) meet or exceed the accuracy and flexibility of networks trained with Gaussian NLL; 3) produce proper predictive distributions over discrete counts; and 4) exhibit superior out-of-distribution detection. DDPNs can easily be applied to a variety of count regression datasets including tabular, image, point cloud, and text data.",
         "subjects": [
-            "cs.LG",
-            "cs.AI"
+            "cs.LG"
         ],
         "comment": null
     },
@@ -7853,34 +7799,6 @@
             "q-bio.BM"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2406.09606",
-        "abstract url": "https://arxiv.org/abs/2406.09606",
-        "title": "Cross-Modality Program Representation Learning for Electronic Design Automation with High-Level Synthesis",
-        "rating": "-2.5",
-        "keywords": [
-            [
-                "Synthesis"
-            ],
-            [
-                "autonomous driving"
-            ],
-            [
-                "graph"
-            ],
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "In recent years, domain-specific accelerators (DSAs) have gained popularity for applications such as deep learning and autonomous driving. To facilitate DSA designs, programmers use high-level synthesis (HLS) to compile a high-level description written in C/C++ into a design with low-level hardware description languages that eventually synthesize DSAs on circuits. However, creating a high-quality HLS design still demands significant domain knowledge, particularly in microarchitecture decisions expressed as \\textit{pragmas}. Thus, it is desirable to automate such decisions with the help of machine learning for predicting the quality of HLS designs, requiring a deeper understanding of the program that consists of original code and pragmas. Naturally, these programs can be considered as sequence data. In addition, these programs can be compiled and converted into a control data flow graph (CDFG). But existing works either fail to leverage both modalities or combine the two in shallow or coarse ways. We propose ProgSG, a model that allows interaction between the source code sequence modality and the graph modality in a deep and fine-grained way. To alleviate the scarcity of labeled designs, a pre-training method is proposed based on a suite of compiler's data flow analysis tasks. Experimental results show that ProgSG reduces the RMSE of design performance predictions by up to $22\\%$, and identifies designs with an average of $1.10\\times$ and $1.26\\times$ (up to $8.17\\times$ and $13.31\\times$) performance improvement in design space exploration (DSE) task compared to HARP and AutoDSE, respectively.",
-        "subjects": [
-            "cs.LG",
-            "cs.AI",
-            "cs.AR"
-        ],
-        "comment": "14 pages, 8 figures. arXiv admin note: text overlap with arXiv:2305.10838"
     },
     {
         "paper id": "2406.09622",
@@ -8133,6 +8051,37 @@
         "comment": "This work has been accepted at the ACM International Conference on the Foundations of Software Engineering (FSE) 2024, Porto de Galinhas, Brazil. DOI: https://doi.org/10.1145/3660803"
     },
     {
+        "paper id": "2406.09327",
+        "abstract url": "https://arxiv.org/abs/2406.09327",
+        "title": "Towards AI Lesion Tracking in PET/CT Imaging: A Siamese-based CNN Pipeline applied on PSMA PET/CT Scans",
+        "rating": "-3",
+        "keywords": [
+            [
+                "3D"
+            ],
+            [
+                "re-identification"
+            ],
+            [
+                "CT",
+                "cancer",
+                "clinical",
+                "tumor"
+            ],
+            [
+                "cs.CV",
+                "eess.IV"
+            ]
+        ],
+        "abstract": "Assessing tumor response to systemic therapies is one of the main applications of PET/CT. Routinely, only a small subset of index lesions out of multiple lesions is analyzed. However, this operator dependent selection may bias the results due to possible significant inter-metastatic heterogeneity of response to therapy. Automated, AI based approaches for lesion tracking hold promise in enabling the analysis of many more lesions and thus providing a better assessment of tumor response. This work introduces a Siamese CNN approach for lesion tracking between PET/CT scans. Our approach is applied on the laborious task of tracking a high number of bone lesions in full-body baseline and follow-up [68Ga]Ga- or [18F]F-PSMA PET/CT scans after two cycles of [177Lu]Lu-PSMA therapy of metastatic castration resistant prostate cancer patients. Data preparation includes lesion segmentation and affine registration. Our algorithm extracts suitable lesion patches and forwards them into a Siamese CNN trained to classify the lesion patch pairs as corresponding or non-corresponding lesions. Experiments have been performed with different input patch types and a Siamese network in 2D and 3D. The CNN model successfully learned to classify lesion assignments, reaching a lesion tracking accuracy of 83 % in its best configuration with an AUC = 0.91. For remaining lesions the pipeline accomplished a re-identification rate of 89 %. We proved that a CNN may facilitate the tracking of multiple lesions in PSMA PET/CT scans. Future clinical studies are necessary if this improves the prediction of the outcome of therapies.",
+        "subjects": [
+            "eess.IV",
+            "cs.CV",
+            "physics.med-ph"
+        ],
+        "comment": "25 pages, 9 figures, 3 tables"
+    },
+    {
         "paper id": "2406.09389",
         "abstract url": "https://arxiv.org/abs/2406.09389",
         "title": "Sagiri: Low Dynamic Range Image Enhancement with Generative Diffusion Prior",
@@ -8358,6 +8307,25 @@
         "comment": "48 pages, 2 figures"
     },
     {
+        "paper id": "2406.09208",
+        "abstract url": "https://arxiv.org/abs/2406.09208",
+        "title": "Python-based DSL for generating Verilog model of Synchronous Digital Circuits",
+        "rating": "-4",
+        "keywords": [
+            [
+                "FPGA"
+            ],
+            [
+                "quantum"
+            ]
+        ],
+        "abstract": "We have designed a Python-based Domain Specific Language (DSL) for modeling synchronous digital circuits. In this DSL, hardware is modeled as a collection of transactions -- running in series, parallel, and loops. When the model is executed by a Python interpreter, synthesizable and behavioural Verilog is generated as output, which can be integrated with other RTL designs or directly used for FPGA and ASIC flows. In this paper, we describe - 1) the language (DSL), which allows users to express computation in series/parallel/loop constructs, with explicit cycle boundaries, 2) the internals of a simple Python implementation to produce synthesizable Verilog, and 3) several design examples and case studies for applications in post-quantum cryptography, stereo-vision, digital signal processing and optimization techniques. In the end, we list ideas to extend this framework.",
+        "subjects": [
+            "cs.AR"
+        ],
+        "comment": "9 pages, 13 figures"
+    },
+    {
         "paper id": "2406.09260",
         "abstract url": "https://arxiv.org/abs/2406.09260",
         "title": "Deep Transformer Network for Monocular Pose Estimation of Ship-Based UAV",
@@ -8435,6 +8403,33 @@
         "abstract": "Alloy is well known a declarative modeling language. A key strength of Alloy is its scenario finding toolset, the Analyzer, which allows users to explore all valid scenarios that adhere to the model's constraints up to a user-provided scope. Despite the Analyzer, Alloy is still difficult for novice users to learn and use. A recent empirical study of over 93,000 new user models reveals that users have trouble from the very start: nearly a third of the models novices write fail to compile. We believe that the issue is that Alloy's grammar and type information is passively relayed to the user despite this information outlining a narrow path for how to compose valid formulas. In this paper, we outline a proof-of-concept for a structure editor for Alloy in which user's build their models using block based inputs, rather than free typing, which by design prevents compilation errors.",
         "subjects": [
             "cs.SE"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2406.08854",
+        "abstract url": "https://arxiv.org/abs/2406.08854",
+        "title": "Current applications and potential future directions of reinforcement learning-based Digital Twins in agriculture",
+        "rating": "-4.5",
+        "keywords": [
+            [
+                "robotics"
+            ],
+            [
+                "agricultural"
+            ],
+            [
+                "tabular"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Digital Twins have gained attention in various industries for simulation, monitoring, and decision-making, relying on ever-improving machine learning models. However, agricultural Digital Twin implementations are limited compared to other industries. Meanwhile, machine learning, particularly reinforcement learning, has shown potential in agricultural applications like optimizing decision-making, task automation, and resource management. A key aspect of Digital Twins is representing physical assets or systems in a virtual environment, which aligns well with reinforcement learning's need for environment representations to learn the best policy for a task. Reinforcement learning in agriculture can thus enable various Digital Twin applications in agricultural domains. This review aims to categorize existing research employing reinforcement learning in agricultural settings by application domains like robotics, greenhouse management, irrigation systems, and crop management, identifying potential future areas for reinforcement learning-based Digital Twins. It also categorizes the reinforcement learning techniques used, including tabular methods, Deep Q-Networks (DQN), Policy Gradient methods, and Actor-Critic algorithms, to overview currently employed models. The review seeks to provide insights into the state-of-the-art in integrating Digital Twins and reinforcement learning in agriculture, identifying gaps and opportunities for future research, and exploring synergies to tackle agricultural challenges and optimize farming, paving the way for more efficient and sustainable farming methodologies.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI"
         ],
         "comment": null
     },
@@ -8684,18 +8679,6 @@
         "comment": "to be published in The Journal of Systems & Software"
     },
     {
-        "paper id": "2406.09078",
-        "abstract url": "https://arxiv.org/abs/2406.09078",
-        "title": "ONNX-to-Hardware Design Flow for Adaptive Neural-Network Inference on FPGAs",
-        "rating": "-10",
-        "keywords": [],
-        "abstract": "The challenges involved in executing neural networks (NNs) at the edge include providing diversity, flexibility, and sustainability. That implies, for instance, supporting evolving applications and algorithms energy-efficiently. Using hardware or software accelerators can deliver fast and efficient computation of the NNs, while flexibility can be exploited to support long-term adaptivity. Nonetheless, handcrafting an NN for a specific device, despite the possibility of leading to an optimal solution, takes time and experience, and that's why frameworks for hardware accelerators are being developed. This work, starting from a preliminary semi-integrated ONNX-to-hardware toolchain [21], focuses on enabling approximate computing leveraging the distinctive ability of the original toolchain to favor adaptivity. The goal is to allow lightweight adaptable NN inference on FPGAs at the edge.",
-        "subjects": [
-            "cs.AR"
-        ],
-        "comment": "Proceedings of the XXIV International Conference on Embedded Computer Systems: Architectures, Modeling and Simulation (SAMOS), June 29 - July 4, 2024. arXiv admin note: text overlap with arXiv:2309.13321"
-    },
-    {
         "paper id": "2406.09085",
         "abstract url": "https://arxiv.org/abs/2406.09085",
         "title": "A Symbolic Computing Perspective on Software Systems",
@@ -8783,6 +8766,18 @@
             "eess.SY"
         ],
         "comment": "11 pages, 14 figures"
+    },
+    {
+        "paper id": "2406.09233",
+        "abstract url": "https://arxiv.org/abs/2406.09233",
+        "title": "C2HLSC: Can LLMs Bridge the Software-to-Hardware Design Gap?",
+        "rating": "-10",
+        "keywords": [],
+        "abstract": "High Level Synthesis (HLS) tools offer rapid hardware design from C code, but their compatibility is limited by code constructs. This paper investigates Large Language Models (LLMs) for refactoring C code into HLS-compatible formats. We present several case studies by using an LLM to rewrite C code for NIST 800-22 randomness tests, a QuickSort algorithm and AES-128 into HLS-synthesizable c. The LLM iteratively transforms the C code guided by user prompts, implementing functions like streaming data and hardware-specific signals. This evaluation demonstrates the LLM's potential to assist hardware design refactoring regular C code into HLS synthesizable C code.",
+        "subjects": [
+            "cs.AR"
+        ],
+        "comment": "Accepted at The First IEEE International Workshop on LLM-Aided Design"
     },
     {
         "paper id": "2406.09235",
@@ -8909,18 +8904,6 @@
         "comment": null
     },
     {
-        "paper id": "2406.09469",
-        "abstract url": "https://arxiv.org/abs/2406.09469",
-        "title": "Conformance Testing of Relational DBMS Against SQL Specifications",
-        "rating": "-10",
-        "keywords": [],
-        "abstract": "A Relational Database Management System (RDBMS) is one of the fundamental software that supports a wide range of applications, making it critical to identify bugs within these systems. There has been active research on testing RDBMS, most of which employ crash or use metamorphic relations as the oracle. Although existing approaches can detect bugs in RDBMS, they are far from comprehensively evaluating the RDBMS's correctness (i.e., with respect to the semantics of SQL). In this work, we propose a method to test the semantic conformance of RDBMS i.e., whether its behavior respects the intended semantics of SQL. Specifically, we have formally defined the semantics of SQL and implemented them in Prolog. Then, the Prolog implementation serves as the reference RDBMS, enabling differential testing on existing RDBMS. We applied our approach to four widely-used and thoroughly tested RDBMSs, i.e., MySQL, TiDB, SQLite, and DuckDB. In total, our approach uncovered 19 bugs and 11 inconsistencies, which are all related to violating the SQL specification or missing/unclear specification, thereby demonstrating the effectiveness and applicability of our approach.",
-        "subjects": [
-            "cs.DB"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2406.09531",
         "abstract url": "https://arxiv.org/abs/2406.09531",
         "title": "Brief research of traditional and AI-based models for IMD2 cancellation",
@@ -8974,6 +8957,18 @@
         "comment": null
     },
     {
+        "paper id": "2406.09579",
+        "abstract url": "https://arxiv.org/abs/2406.09579",
+        "title": "Hovering Over the Key to Text Input in XR",
+        "rating": "-10",
+        "keywords": [],
+        "abstract": "Virtual, Mixed, and Augmented Reality (XR) technologies hold immense potential for transforming productivity beyond PC. Therefore there is a critical need for improved text input solutions for XR. However, achieving efficient text input in these environments remains a significant challenge. This paper examines the current landscape of XR text input techniques, focusing on the importance of keyboards (both physical and virtual) as essential tools. We discuss the unique challenges and opportunities presented by XR, synthesizing key trends from existing solutions.",
+        "subjects": [
+            "cs.HC"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2406.09611",
         "abstract url": "https://arxiv.org/abs/2406.09611",
         "title": "Recy-ctronics: Designing Fully Recyclable Electronics With Varied Form Factors",
@@ -8982,18 +8977,6 @@
         "abstract": "For today's electronics manufacturing process, the emphasis on stable functionality, durability, and fixed physical forms is designed to ensure long-term usability. However, this focus on robustness and permanence complicates the disassembly and recycling processes, leading to significant environmental repercussions. In this paper, we present three approaches that leverage easily recyclable materials-specifically, polyvinyl alcohol (PVA) and liquid metal (LM)-alongside accessible manufacturing techniques to produce electronic components and systems with versatile form factors. Our work centers on the development of recyclable electronics through three methods: 1) creating sheet electronics by screen printing LM traces on PVA substrates; 2) developing foam-based electronics by immersing mechanically stirred PVA foam into an LM solution; and 3) fabricating recyclable electronic tubes by injecting LM into mold cast PVA tubes, which can then be woven into various structures. To further assess the sustainability of our proposed methods, we conducted a life cycle assessment (LCA) to evaluate the environmental impact of our recyclable electronics in comparison to their conventional counterparts.",
         "subjects": [
             "cs.HC"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2406.09621",
-        "abstract url": "https://arxiv.org/abs/2406.09621",
-        "title": "Enhancing Knowledge Retrieval with In-Context Learning and Semantic Search through Generative AI",
-        "rating": "-10",
-        "keywords": [],
-        "abstract": "Retrieving and extracting knowledge from extensive research documents and large databases presents significant challenges for researchers, students, and professionals in today's information-rich era. Existing retrieval systems, which rely on general-purpose Large Language Models (LLMs), often fail to provide accurate responses to domain-specific inquiries. Additionally, the high cost of pretraining or fine-tuning LLMs for specific domains limits their widespread adoption. To address these limitations, we propose a novel methodology that combines the generative capabilities of LLMs with the fast and accurate retrieval capabilities of vector databases. This advanced retrieval system can efficiently handle both tabular and non-tabular data, understand natural language user queries, and retrieve relevant information without fine-tuning. The developed model, Generative Text Retrieval (GTR), is adaptable to both unstructured and structured data with minor refinement. GTR was evaluated on both manually annotated and public datasets, achieving over 90% accuracy and delivering truthful outputs in 87% of cases. Our model achieved state-of-the-art performance with a Rouge-L F1 score of 0.98 on the MSMARCO dataset. The refined model, Generative Tabular Text Retrieval (GTR-T), demonstrated its efficiency in large database querying, achieving an Execution Accuracy (EX) of 0.82 and an Exact-Set-Match (EM) accuracy of 0.60 on the Spider dataset, using an open-source LLM. These efforts leverage Generative AI and In-Context Learning to enhance human-text interaction and make advanced AI capabilities more accessible. By integrating robust retrieval systems with powerful LLMs, our approach aims to democratize access to sophisticated AI tools, improving the efficiency, accuracy, and scalability of AI-driven information retrieval and database querying.",
-        "subjects": [
-            "cs.IR"
         ],
         "comment": null
     },
@@ -9032,6 +9015,19 @@
             "cs.NI"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2406.09677",
+        "abstract url": "https://arxiv.org/abs/2406.09677",
+        "title": "SAGA: Synthesis Augmentation with Genetic Algorithms for In-Memory Sequence Optimization",
+        "rating": "-10",
+        "keywords": [],
+        "abstract": "The von-Neumann architecture has a bottleneck which limits the speed at which data can be made available for computation. To combat this problem, novel paradigms for computing are being developed. One such paradigm, known as in-memory computing, interleaves computation with the storage of data within the same circuits. MAGIC, or Memristor Aided Logic, is an approach which uses memory circuits which physically perform computation through write operations to memory. Sequencing these operations is a computationally difficult problem which is directly correlated with the cost of solutions using MAGIC based in-memory computation. SAGA models the execution sequences as a topological sorting problem which makes the optimization well-suited for genetic algorithms. We then detail the formation and implementation of these genetic algorithms and evaluate them over a number of open circuit implementations. The memory-footprint needed for evaluating each of these circuits is decreased by up to 52% from existing, greedy-algorithm-based optimization solutions. Over the 10 benchmark circuits evaluated, these modifications lead to an overall improvement in the efficiency of in-memory circuit evaluation of 128% in the best case and 27.5% on average.",
+        "subjects": [
+            "cs.NE",
+            "cs.AR"
+        ],
+        "comment": "6 pages, 2 Figures, 3 Tables"
     },
     {
         "paper id": "2406.09686",
@@ -9080,6 +9076,18 @@
         "abstract": "Software vulnerabilities pose significant risks to the security and integrity of software systems. Prior studies have proposed a series of approaches to vulnerability detection using deep learning or pre-trained models. However, there is still a lack of vulnerability's detailed explanation for understanding apart from detecting its occurrence. Recently, large language models (LLMs) have shown a remarkable capability in the comprehension of complicated context and content generation, which brings opportunities for the detection and explanation of vulnerabilities of LLMs. In this paper, we conduct a comprehensive study to investigate the capabilities of LLMs in detecting and explaining vulnerabilities and propose LLMVulExp, a framework that utilizes LLMs for vulnerability detection and explanation. Under specialized fine-tuning for vulnerability explanation, LLMVulExp not only detects the types of vulnerabilities in the code but also analyzes the code context to generate the cause, location, and repair suggestions for these vulnerabilities. We find that LLMVulExp can effectively enable the LLMs to perform vulnerability detection (e.g., over 90% F1 score on SeVC dataset) and explanation. We also explore the potential of using advanced strategies such as Chain-of-Thought (CoT) to guide the LLMs concentrating on vulnerability-prone code and achieve promising results.",
         "subjects": [
             "cs.SE"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2406.09704",
+        "abstract url": "https://arxiv.org/abs/2406.09704",
+        "title": "Data-Driven Strategy Synthesis for Stochastic Systems with Unknown Nonlinear Disturbances",
+        "rating": "-10",
+        "keywords": [],
+        "abstract": "In this paper, we introduce a data-driven framework for synthesis of provably-correct controllers for general nonlinear switched systems under complex specifications. The focus is on systems with unknown disturbances whose effects on the dynamics of the system is nonlinear. The specifications are assumed to be given as linear temporal logic over finite traces (LTLf) formulas. Starting from observations of either the disturbance or the state of the system, we first learn an ambiguity set that contains the unknown distribution of the disturbances with a user-defined confidence. Next, we construct a robust Markov decision process (RMDP) as a finite abstraction of the system. By composing the RMDP with the automaton obtained from the LTLf formula and performing optimal robust value iteration on the composed RMDP, we synthesize a strategy that yields a high probability that the uncertain system satisfies the specifications. Our empirical evaluations on systems with a wide variety of disturbances show that the strategies synthesized with our approach lead to high satisfaction probabilities and validate the theoretical guarantees.",
+        "subjects": [
+            "eess.SY"
         ],
         "comment": null
     }

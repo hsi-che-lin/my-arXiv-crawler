@@ -211,6 +211,25 @@
         "comment": "Conference on Computer Vision and Pattern Recognition (CVPR), 2024"
     },
     {
+        "paper id": "2403.10071",
+        "abstract url": "https://arxiv.org/abs/2403.10071",
+        "title": "Codebook Transfer with Part-of-Speech for Vector-Quantized Image Modeling",
+        "rating": "1.5",
+        "keywords": [
+            [
+                "cs.CV"
+            ],
+            [
+                "CVPR"
+            ]
+        ],
+        "abstract": "Vector-Quantized Image Modeling (VQIM) is a fundamental research problem in image synthesis, which aims to represent an image with a discrete token sequence. Existing studies effectively address this problem by learning a discrete codebook from scratch and in a code-independent manner to quantize continuous representations into discrete tokens. However, learning a codebook from scratch and in a code-independent manner is highly challenging, which may be a key reason causing codebook collapse, i.e., some code vectors can rarely be optimized without regard to the relationship between codes and good codebook priors such that die off finally. In this paper, inspired by pretrained language models, we find that these language models have actually pretrained a superior codebook via a large number of text corpus, but such information is rarely exploited in VQIM. To this end, we propose a novel codebook transfer framework with part-of-speech, called VQCT, which aims to transfer a well-trained codebook from pretrained language models to VQIM for robust codebook learning. Specifically, we first introduce a pretrained codebook from language models and part-of-speech knowledge as priors. Then, we construct a vision-related codebook with these priors for achieving codebook transfer. Finally, a novel codebook transfer network is designed to exploit abundant semantic relationships between codes contained in pretrained codebooks for robust VQIM codebook learning. Experimental results on four datasets show that our VQCT method achieves superior VQIM performance over previous state-of-the-art methods.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Accepted by CVPR 2024"
+    },
+    {
         "paper id": "2403.10097",
         "abstract url": "https://arxiv.org/abs/2403.10097",
         "title": "Adaptive Random Feature Regularization on Fine-tuning Deep Neural Networks",
@@ -292,27 +311,6 @@
             "cs.CV"
         ],
         "comment": "Accepted by AAAI 2024"
-    },
-    {
-        "paper id": "2403.10254",
-        "abstract url": "https://arxiv.org/abs/2403.10254",
-        "title": "Magic Tokens: Select Diverse Tokens for Multi-modal Object Re-Identification",
-        "rating": "1.5",
-        "keywords": [
-            [
-                "cs.CV"
-            ],
-            [
-                "CVPR"
-            ]
-        ],
-        "abstract": "Single-modal object re-identification (ReID) faces great challenges in maintaining robustness within complex visual scenarios. In contrast, multi-modal object ReID utilizes complementary information from diverse modalities, showing great potentials for practical applications. However, previous methods may be easily affected by irrelevant backgrounds and usually ignore the modality gaps. To address above issues, we propose a novel learning framework named \\textbf{EDITOR} to select diverse tokens from vision Transformers for multi-modal object ReID. We begin with a shared vision Transformer to extract tokenized features from different input modalities. Then, we introduce a Spatial-Frequency Token Selection (SFTS) module to adaptively select object-centric tokens with both spatial and frequency information. Afterwards, we employ a Hierarchical Masked Aggregation (HMA) module to facilitate feature interactions within and across modalities. Finally, to further reduce the effect of backgrounds, we propose a Background Consistency Constraint (BCC) and an Object-Centric Feature Refinement (OCFR). They are formulated as two new loss functions, which improve the feature discrimination with background suppression. As a result, our framework can generate more discriminative features for multi-modal object ReID. Extensive experiments on three multi-modal ReID benchmarks verify the effectiveness of our methods. The code is available at https://github.com/924973292/EDITOR.",
-        "subjects": [
-            "cs.CV",
-            "cs.IR",
-            "cs.MM"
-        ],
-        "comment": "This work is accepted by CVPR2024. More modifications may be performed"
     },
     {
         "paper id": "2403.10275",
@@ -462,22 +460,6 @@
             "cs.AI"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2403.10022",
-        "abstract url": "https://arxiv.org/abs/2403.10022",
-        "title": "Lifelong Person Re-Identification with Backward-Compatibility",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Lifelong person re-identification (LReID) assumes a practical scenario where the model is sequentially trained on continuously incoming datasets while alleviating the catastrophic forgetting in the old datasets. However, not only the training datasets but also the gallery images are incrementally accumulated, that requires a huge amount of computational complexity and storage space to extract the features at the inference phase. In this paper, we address the above mentioned problem by incorporating the backward-compatibility to LReID for the first time. We train the model using the continuously incoming datasets while maintaining the model's compatibility toward the previously trained old models without re-computing the features of the old gallery images. To this end, we devise the cross-model compatibility loss based on the contrastive learning with respect to the replay features across all the old datasets. Moreover, we also develop the knowledge consolidation method based on the part classification to learn the shared representation across different datasets for the backward-compatibility. We suggest a more practical methodology for performance evaluation as well where all the gallery and query images are considered together. Experimental results demonstrate that the proposed method achieves a significantly higher performance of the backward-compatibility compared with the existing methods. It is a promising tool for more practical scenarios of LReID.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "17 pages, 5 figures, 7 tables"
     },
     {
         "paper id": "2403.10024",
@@ -828,23 +810,6 @@
         "comment": "18 pages"
     },
     {
-        "paper id": "2403.10271",
-        "abstract url": "https://arxiv.org/abs/2403.10271",
-        "title": "SuperME: Supervised and Mixture-to-Mixture Co-Learning for Speech Enhancement and Robust ASR",
-        "rating": "1",
-        "keywords": [
-            [
-                "eess.AS"
-            ]
-        ],
-        "abstract": "The current dominant approach for neural speech enhancement is based on supervised learning by using simulated training data. The trained models, however, often exhibit limited generalizability to real-recorded data. To address this, we investigate training models directly on real target-domain data, and propose two algorithms, mixture-to-mixture (M2M) training and a co-learning algorithm that improves M2M with the help of supervised algorithms. When paired close-talk and far-field mixtures are available for training, M2M realizes speech enhancement by training a deep neural network (DNN) to produce speech and noise estimates in a way such that they can be linearly filtered to reconstruct the close-talk and far-field mixtures. This way, the DNN can be trained directly on real mixtures, and can leverage close-talk mixtures as a weak supervision to enhance far-field mixtures. To improve M2M, we combine it with supervised approaches to co-train the DNN, where mini-batches of real close-talk and far-field mixture pairs and mini-batches of simulated mixture and clean speech pairs are alternately fed to the DNN, and the loss functions are respectively (a) the mixture reconstruction loss on the real close-talk and far-field mixtures and (b) the regular enhancement loss on the simulated clean speech and noise. We find that, this way, the DNN can learn from real and simulated data to achieve better generalization to real data. We name this algorithm SuperME, $\\underline{super}$vised and $\\underline{m}$ixture-to-mixtur$\\underline{e}$ co-learning. Evaluation results on the CHiME-4 dataset show its effectiveness and potential.",
-        "subjects": [
-            "eess.AS",
-            "eess.SP"
-        ],
-        "comment": "in submission"
-    },
-    {
         "paper id": "2403.10283",
         "abstract url": "https://arxiv.org/abs/2403.10283",
         "title": "Local positional graphs and attentive local features for a data and runtime-efficient hierarchical place recognition pipeline",
@@ -961,24 +926,6 @@
         "comment": null
     },
     {
-        "paper id": "2403.10404",
-        "abstract url": "https://arxiv.org/abs/2403.10404",
-        "title": "A comparative study on machine learning approaches for rock mass classification using drilling data",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.LG",
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Current rock engineering design in drill and blast tunnelling primarily relies on engineers' observational assessments. Measure While Drilling (MWD) data, a high-resolution sensor dataset collected during tunnel excavation, is underutilised, mainly serving for geological visualisation. This study aims to automate the translation of MWD data into actionable metrics for rock engineering. It seeks to link data to specific engineering actions, thus providing critical decision support for geological challenges ahead of the tunnel face. Leveraging a large and geologically diverse dataset of 500,000 drillholes from 15 tunnels, the research introduces models for accurate rock mass quality classification in a real-world tunnelling context. Both conventional machine learning and image-based deep learning are explored to classify MWD data into Q-classes and Q-values, examples of metrics describing the stability of the rock mass, using both tabular and image data. The results indicate that the K-nearest neighbours algorithm in an ensemble with tree-based models using tabular data, effectively classifies rock mass quality. It achieves a cross-validated balanced accuracy of 0.86 in classifying rock mass into the Q-classes A, B, C, D, E1, E2, and 0.95 for a binary classification with E versus the rest. Classification using a CNN with MWD-images for each blasting round resulted in a balanced accuracy of 0.82 for binary classification. Regressing the Q-value from tabular MWD-data achieved cross-validated R2 and MSE scores of 0.80 and 0.18 for a similar ensemble model as in classification. High performance in regression and classification boosts confidence in automated rock mass assessment. Applying advanced modelling on a unique dataset demonstrates MWD data's value in improving rock mass classification accuracy and advancing data-driven rock engineering design, reducing manual intervention.",
-        "subjects": [
-            "cs.LG",
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2403.10420",
         "abstract url": "https://arxiv.org/abs/2403.10420",
         "title": "Neural Networks Hear You Loud And Clear: Hearing Loss Compensation Using Deep Neural Networks",
@@ -1073,6 +1020,24 @@
             "stat.ML"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2403.10476",
+        "abstract url": "https://arxiv.org/abs/2403.10476",
+        "title": "Approximate Nullspace Augmented Finetuning for Robust Vision Transformers",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.LG",
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Enhancing the robustness of deep learning models, particularly in the realm of vision transformers (ViTs), is crucial for their real-world deployment. In this work, we provide a finetuning approach to enhance the robustness of vision transformers inspired by the concept of nullspace from linear algebra. Our investigation centers on whether a vision transformer can exhibit resilience to input variations akin to the nullspace property in linear mappings, implying that perturbations sampled from this nullspace do not influence the model's output when added to the input. Firstly, we show that for many pretrained ViTs, a non-trivial nullspace exists due to the presence of the patch embedding layer. Secondly, as nullspace is a concept associated with linear algebra, we demonstrate that it is possible to synthesize approximate nullspace elements for the non-linear blocks of ViTs employing an optimisation strategy. Finally, we propose a fine-tuning strategy for ViTs wherein we augment the training data with synthesized approximate nullspace noise. After finetuning, we find that the model demonstrates robustness to adversarial and natural image perbutations alike.",
+        "subjects": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "comment": "21 pages, 8 figures"
     },
     {
         "paper id": "2403.10481",
@@ -1318,25 +1283,6 @@
         "comment": null
     },
     {
-        "paper id": "2403.10738",
-        "abstract url": "https://arxiv.org/abs/2403.10738",
-        "title": "Horizon-Free Regret for Linear Markov Decision Processes",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.LG"
-            ],
-            [
-                "ICLR"
-            ]
-        ],
-        "abstract": "A recent line of works showed regret bounds in reinforcement learning (RL) can be (nearly) independent of planning horizon, a.k.a.~the horizon-free bounds. However, these regret bounds only apply to settings where a polynomial dependency on the size of transition model is allowed, such as tabular Markov Decision Process (MDP) and linear mixture MDP. We give the first horizon-free bound for the popular linear MDP setting where the size of the transition model can be exponentially large or even uncountable. In contrast to prior works which explicitly estimate the transition model and compute the inhomogeneous value functions at different time steps, we directly estimate the value functions and confidence sets. We obtain the horizon-free bound by: (1) maintaining multiple weighted least square estimators for the value functions; and (2) a structural lemma which shows the maximal total variation of the inhomogeneous value functions is bounded by a polynomial factor of the feature dimension.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": "Published as a conference paper in ICLR 2024"
-    },
-    {
         "paper id": "2403.10746",
         "abstract url": "https://arxiv.org/abs/2403.10746",
         "title": "Vector search with small radiuses",
@@ -1538,6 +1484,24 @@
         "comment": "15 pages, in spanish language, 4 tables, 5 figures"
     },
     {
+        "paper id": "2403.15434",
+        "abstract url": "https://arxiv.org/abs/2403.15434",
+        "title": "ChatPattern: Layout Pattern Customization via Natural Language",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.AI",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Existing works focus on fixed-size layout pattern generation, while the more practical free-size pattern generation receives limited attention. In this paper, we propose ChatPattern, a novel Large-Language-Model (LLM) powered framework for flexible pattern customization. ChatPattern utilizes a two-part system featuring an expert LLM agent and a highly controllable layout pattern generator. The LLM agent can interpret natural language requirements and operate design tools to meet specified needs, while the generator excels in conditional layout generation, pattern modification, and memory-friendly patterns extension. Experiments on challenging pattern generation setting shows the ability of ChatPattern to synthesize high-quality large-scale patterns.",
+        "subjects": [
+            "cs.CL",
+            "cs.AI"
+        ],
+        "comment": "Accepted by DAC24"
+    },
+    {
         "paper id": "2403.15436",
         "abstract url": "https://arxiv.org/abs/2403.15436",
         "title": "Using Contextual Information for Sentence-level Morpheme Segmentation",
@@ -1614,28 +1578,6 @@
             "math.DS"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2403.10071",
-        "abstract url": "https://arxiv.org/abs/2403.10071",
-        "title": "Codebook Transfer with Part-of-Speech for Vector-Quantized Image Modeling",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ],
-            [
-                "CVPR"
-            ]
-        ],
-        "abstract": "Vector-Quantized Image Modeling (VQIM) is a fundamental research problem in image synthesis, which aims to represent an image with a discrete token sequence. Existing studies effectively address this problem by learning a discrete codebook from scratch and in a code-independent manner to quantize continuous representations into discrete tokens. However, learning a codebook from scratch and in a code-independent manner is highly challenging, which may be a key reason causing codebook collapse, i.e., some code vectors can rarely be optimized without regard to the relationship between codes and good codebook priors such that die off finally. In this paper, inspired by pretrained language models, we find that these language models have actually pretrained a superior codebook via a large number of text corpus, but such information is rarely exploited in VQIM. To this end, we propose a novel codebook transfer framework with part-of-speech, called VQCT, which aims to transfer a well-trained codebook from pretrained language models to VQIM for robust codebook learning. Specifically, we first introduce a pretrained codebook from language models and part-of-speech knowledge as priors. Then, we construct a vision-related codebook with these priors for achieving codebook transfer. Finally, a novel codebook transfer network is designed to exploit abundant semantic relationships between codes contained in pretrained codebooks for robust VQIM codebook learning. Experimental results on four datasets show that our VQCT method achieves superior VQIM performance over previous state-of-the-art methods.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Accepted by CVPR 2024"
     },
     {
         "paper id": "2403.10073",
@@ -1882,6 +1824,30 @@
         "comment": "14 pages, 7 figures, 6 tables"
     },
     {
+        "paper id": "2403.10254",
+        "abstract url": "https://arxiv.org/abs/2403.10254",
+        "title": "Magic Tokens: Select Diverse Tokens for Multi-modal Object Re-Identification",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "Re-Identification"
+            ],
+            [
+                "cs.CV"
+            ],
+            [
+                "CVPR"
+            ]
+        ],
+        "abstract": "Single-modal object re-identification (ReID) faces great challenges in maintaining robustness within complex visual scenarios. In contrast, multi-modal object ReID utilizes complementary information from diverse modalities, showing great potentials for practical applications. However, previous methods may be easily affected by irrelevant backgrounds and usually ignore the modality gaps. To address above issues, we propose a novel learning framework named \\textbf{EDITOR} to select diverse tokens from vision Transformers for multi-modal object ReID. We begin with a shared vision Transformer to extract tokenized features from different input modalities. Then, we introduce a Spatial-Frequency Token Selection (SFTS) module to adaptively select object-centric tokens with both spatial and frequency information. Afterwards, we employ a Hierarchical Masked Aggregation (HMA) module to facilitate feature interactions within and across modalities. Finally, to further reduce the effect of backgrounds, we propose a Background Consistency Constraint (BCC) and an Object-Centric Feature Refinement (OCFR). They are formulated as two new loss functions, which improve the feature discrimination with background suppression. As a result, our framework can generate more discriminative features for multi-modal object ReID. Extensive experiments on three multi-modal ReID benchmarks verify the effectiveness of our methods. The code is available at https://github.com/924973292/EDITOR.",
+        "subjects": [
+            "cs.CV",
+            "cs.IR",
+            "cs.MM"
+        ],
+        "comment": "This work is accepted by CVPR2024. More modifications may be performed"
+    },
+    {
         "paper id": "2403.10255",
         "abstract url": "https://arxiv.org/abs/2403.10255",
         "title": "Arbitrary-Scale Image Generation and Upsampling using Latent Diffusion Model and Implicit Neural Decoder",
@@ -1972,6 +1938,29 @@
         "comment": null
     },
     {
+        "paper id": "2403.10335",
+        "abstract url": "https://arxiv.org/abs/2403.10335",
+        "title": "NECA: Neural Customizable Human Avatar",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "3D",
+                "Avatar"
+            ],
+            [
+                "cs.CV"
+            ],
+            [
+                "CVPR"
+            ]
+        ],
+        "abstract": "Human avatar has become a novel type of 3D asset with various applications. Ideally, a human avatar should be fully customizable to accommodate different settings and environments. In this work, we introduce NECA, an approach capable of learning versatile human representation from monocular or sparse-view videos, enabling granular customization across aspects such as pose, shadow, shape, lighting and texture. The core of our approach is to represent humans in complementary dual spaces and predict disentangled neural fields of geometry, albedo, shadow, as well as an external lighting, from which we are able to derive realistic rendering with high-frequency details via volumetric rendering. Extensive experiments demonstrate the advantage of our method over the state-of-the-art methods in photorealistic rendering, as well as various editing tasks such as novel pose synthesis and relighting. The code is available at https://github.com/iSEE-Laboratory/NECA.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Accepted to CVPR 2024"
+    },
+    {
         "paper id": "2403.10356",
         "abstract url": "https://arxiv.org/abs/2403.10356",
         "title": "Understanding Stress: A Web Interface for Mental Arithmetic Tasks in a Trier Social Stress Test",
@@ -1998,7 +1987,8 @@
                 "voxel",
                 "point cloud",
                 "RGB-D",
-                "depth"
+                "depth",
+                "signed distance field"
             ],
             [
                 "cs.CV"
@@ -2104,23 +2094,6 @@
             "cs.LG",
             "cs.DS",
             "math.ST",
-            "stat.ML"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2403.10424",
-        "abstract url": "https://arxiv.org/abs/2403.10424",
-        "title": "Structured Evaluation of Synthetic Tabular Data",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Tabular data is common yet typically incomplete, small in volume, and access-restricted due to privacy concerns. Synthetic data generation offers potential solutions. Many metrics exist for evaluating the quality of synthetic tabular data; however, we lack an objective, coherent interpretation of the many metrics. To address this issue, we propose an evaluation framework with a single, mathematical objective that posits that the synthetic data should be drawn from the same distribution as the observed data. Through various structural decomposition of the objective, this framework allows us to reason for the first time the completeness of any set of metrics, as well as unifies existing metrics, including those that stem from fidelity considerations, downstream application, and model-based approaches. Moreover, the framework motivates model-free baselines and a new spectrum of metrics. We evaluate structurally informed synthesizers and synthesizers powered by deep learning. Using our structured framework, we show that synthetic data generators that explicitly represent tabular structure outperform other methods, especially on smaller datasets.",
-        "subjects": [
-            "cs.LG",
             "stat.ML"
         ],
         "comment": null
@@ -2273,23 +2246,6 @@
             "eess.AS"
         ],
         "comment": "Accepted by CVPR2024, Project page: https://li-ronghui.github.io/lodge"
-    },
-    {
-        "paper id": "2403.10588",
-        "abstract url": "https://arxiv.org/abs/2403.10588",
-        "title": "S3LLM: Large-Scale Scientific Software Understanding with LLMs using Source, Metadata, and Document",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "The understanding of large-scale scientific software poses significant challenges due to its diverse codebase, extensive code length, and target computing architectures. The emergence of generative AI, specifically large language models (LLMs), provides novel pathways for understanding such complex scientific codes. This paper presents S3LLM, an LLM-based framework designed to enable the examination of source code, code metadata, and summarized information in conjunction with textual technical reports in an interactive, conversational manner through a user-friendly interface. S3LLM leverages open-source LLaMA-2 models to enhance code analysis through the automatic transformation of natural language queries into domain-specific language (DSL) queries. Specifically, it translates these queries into Feature Query Language (FQL), enabling efficient scanning and parsing of entire code repositories. In addition, S3LLM is equipped to handle diverse metadata types, including DOT, SQL, and customized formats. Furthermore, S3LLM incorporates retrieval augmented generation (RAG) and LangChain technologies to directly query extensive documents. S3LLM demonstrates the potential of using locally deployed open-source LLMs for the rapid understanding of large-scale scientific computing software, eliminating the need for extensive coding expertise, and thereby making the process more efficient and effective. S3LLM is available at https://github.com/ResponsibleAILab/s3llm.",
-        "subjects": [
-            "cs.SE",
-            "cs.AI"
-        ],
-        "comment": null
     },
     {
         "paper id": "2403.10610",
@@ -2527,6 +2483,22 @@
             "cs.AI"
         ],
         "comment": "30 pages"
+    },
+    {
+        "paper id": "2403.10744",
+        "abstract url": "https://arxiv.org/abs/2403.10744",
+        "title": "Game and Reference: Policy Combination Synthesis for Epidemic Prevention and Control",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "In recent years, epidemic policy-making models are increasingly being used to provide reference for governors on prevention and control policies against catastrophic epidemics such as SARS, H1N1 and COVID-19. Existing studies are currently constrained by two issues: First, previous methods develop policies based on effect evaluation, since few of factors in real-world decision-making can be modeled, the output policies will then easily become extreme. Second, the subjectivity and cognitive limitation of human make the historical policies not always optimal for the training of decision models. To these ends, we present a novel Policy Combination Synthesis (PCS) model for epidemic policy-making. Specially, to prevent extreme decisions, we introduce adversarial learning between the model-made policies and the real policies to force the output policies to be more human-liked. On the other hand, to minimize the impact of sub-optimal historical policies, we employ contrastive learning to let the model draw on experience from the best historical policies under similar scenarios. Both adversarial and contrastive learning are adaptive based on the comprehensive effects of real policies to ensure the model always learns useful information. Extensive experiments on real-world data prove the effectiveness of the proposed model.",
+        "subjects": [
+            "cs.AI"
+        ],
+        "comment": "16 pages, single line, 7 figures, written with Springer conference template"
     },
     {
         "paper id": "2403.10751",
@@ -2864,6 +2836,25 @@
         "comment": "ICLR 2024"
     },
     {
+        "paper id": "2403.10022",
+        "abstract url": "https://arxiv.org/abs/2403.10022",
+        "title": "Lifelong Person Re-Identification with Backward-Compatibility",
+        "rating": "0",
+        "keywords": [
+            [
+                "Re-Identification"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Lifelong person re-identification (LReID) assumes a practical scenario where the model is sequentially trained on continuously incoming datasets while alleviating the catastrophic forgetting in the old datasets. However, not only the training datasets but also the gallery images are incrementally accumulated, that requires a huge amount of computational complexity and storage space to extract the features at the inference phase. In this paper, we address the above mentioned problem by incorporating the backward-compatibility to LReID for the first time. We train the model using the continuously incoming datasets while maintaining the model's compatibility toward the previously trained old models without re-computing the features of the old gallery images. To this end, we devise the cross-model compatibility loss based on the contrastive learning with respect to the replay features across all the old datasets. Moreover, we also develop the knowledge consolidation method based on the part classification to learn the shared representation across different datasets for the backward-compatibility. We suggest a more practical methodology for performance evaluation as well where all the gallery and query images are considered together. Experimental results demonstrate that the proposed method achieves a significantly higher performance of the backward-compatibility compared with the existing methods. It is a promising tool for more practical scenarios of LReID.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "17 pages, 5 figures, 7 tables"
+    },
+    {
         "paper id": "2403.10036",
         "abstract url": "https://arxiv.org/abs/2403.10036",
         "title": "SparseFusion: Efficient Sparse Multi-Modal Fusion Framework for Long-Range 3D Perception",
@@ -2991,6 +2982,49 @@
         "comment": null
     },
     {
+        "paper id": "2403.10075",
+        "abstract url": "https://arxiv.org/abs/2403.10075",
+        "title": "A survey of synthetic data augmentation methods in computer vision",
+        "rating": "0",
+        "keywords": [
+            [
+                "3D"
+            ],
+            [
+                "cs.LG",
+                "cs.CV"
+            ]
+        ],
+        "abstract": "The standard approach to tackling computer vision problems is to train deep convolutional neural network (CNN) models using large-scale image datasets which are representative of the target task. However, in many scenarios, it is often challenging to obtain sufficient image data for the target task. Data augmentation is a way to mitigate this challenge. A common practice is to explicitly transform existing images in desired ways so as to create the required volume and variability of training data necessary to achieve good generalization performance. In situations where data for the target domain is not accessible, a viable workaround is to synthesize training data from scratch--i.e., synthetic data augmentation. This paper presents an extensive review of synthetic data augmentation techniques. It covers data synthesis approaches based on realistic 3D graphics modeling, neural style transfer (NST), differential neural rendering, and generative artificial intelligence (AI) techniques such as generative adversarial networks (GANs) and variational autoencoders (VAEs). For each of these classes of methods, we focus on the important data generation and augmentation techniques, general scope of application and specific use-cases, as well as existing limitations and possible workarounds. Additionally, we provide a summary of common synthetic datasets for training computer vision models, highlighting the main features, application domains and supported tasks. Finally, we discuss the effectiveness of synthetic data augmentation methods. Since this is the first paper to explore synthetic data augmentation methods in great detail, we are hoping to equip readers with the necessary background information and in-depth knowledge of existing methods and their attendant issues.",
+        "subjects": [
+            "cs.CV",
+            "cs.GR",
+            "cs.LG"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2403.10079",
+        "abstract url": "https://arxiv.org/abs/2403.10079",
+        "title": "Learning Physical Dynamics for Object-centric Visual Prediction",
+        "rating": "0",
+        "keywords": [
+            [
+                "trajectory"
+            ],
+            [
+                "cs.AI",
+                "cs.CV"
+            ]
+        ],
+        "abstract": "The ability to model the underlying dynamics of visual scenes and reason about the future is central to human intelligence. Many attempts have been made to empower intelligent systems with such physical understanding and prediction abilities. However, most existing methods focus on pixel-to-pixel prediction, which suffers from heavy computational costs while lacking a deep understanding of the physical dynamics behind videos. Recently, object-centric prediction methods have emerged and attracted increasing interest. Inspired by it, this paper proposes an unsupervised object-centric prediction model that makes future predictions by learning visual dynamics between objects. Our model consists of two modules, perceptual, and dynamic module. The perceptual module is utilized to decompose images into several objects and synthesize images with a set of object-centric representations. The dynamic module fuses contextual information, takes environment-object and object-object interaction into account, and predicts the future trajectory of objects. Extensive experiments are conducted to validate the effectiveness of the proposed method. Both quantitative and qualitative experimental results demonstrate that our model generates higher visual quality and more physically reliable predictions compared to the state-of-the-art methods.",
+        "subjects": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "comment": "13 pages, 10 figures"
+    },
+    {
         "paper id": "2403.10082",
         "abstract url": "https://arxiv.org/abs/2403.10082",
         "title": "CrossGLG: LLM Guides One-shot Skeleton-based 3D Action Recognition in a Cross-level Manner",
@@ -3096,6 +3130,27 @@
         "comment": null
     },
     {
+        "paper id": "2403.10147",
+        "abstract url": "https://arxiv.org/abs/2403.10147",
+        "title": "GGRt: Towards Pose-free Generalizable 3D Gaussian Splatting in Real-time",
+        "rating": "0",
+        "keywords": [
+            [
+                "3D",
+                "Gaussian Splatting",
+                "NeRF"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "This paper presents GGRt, a novel approach to generalizable novel view synthesis that alleviates the need for real camera poses, complexity in processing high-resolution images, and lengthy optimization processes, thus facilitating stronger applicability of 3D Gaussian Splatting (3D-GS) in real-world scenarios. Specifically, we design a novel joint learning framework that consists of an Iterative Pose Optimization Network (IPO-Net) and a Generalizable 3D-Gaussians (G-3DG) model. With the joint learning mechanism, the proposed framework can inherently estimate robust relative pose information from the image observations and thus primarily alleviate the requirement of real camera poses. Moreover, we implement a deferred back-propagation mechanism that enables high-resolution training and inference, overcoming the resolution constraints of previous methods. To enhance the speed and efficiency, we further introduce a progressive Gaussian cache module that dynamically adjusts during training and inference. As the first pose-free generalizable 3D-GS framework, GGRt achieves inference at $\\ge$ 5 FPS and real-time rendering at $\\ge$ 100 FPS. Through extensive experimentation, we demonstrate that our method outperforms existing NeRF-based pose-free techniques in terms of inference speed and effectiveness. It can also approach the real pose-based 3D-GS methods. Our contributions provide a significant leap forward for the integration of computer vision and computer graphics into practical applications, offering state-of-the-art results on LLFF, KITTI, and Waymo Open datasets and enabling real-time rendering for immersive experiences.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Project page: \\href{https://3d-aigc.github.io/GGRt}{https://3d-aigc.github.io/GGRt}"
+    },
+    {
         "paper id": "2403.10173",
         "abstract url": "https://arxiv.org/abs/2403.10173",
         "title": "A Hybrid SNN-ANN Network for Event-based Object Detection with Spatial and Temporal Attention",
@@ -3162,6 +3217,26 @@
         "comment": null
     },
     {
+        "paper id": "2403.10271",
+        "abstract url": "https://arxiv.org/abs/2403.10271",
+        "title": "SuperME: Supervised and Mixture-to-Mixture Co-Learning for Speech Enhancement and Robust ASR",
+        "rating": "0",
+        "keywords": [
+            [
+                "Speech Enhancement"
+            ],
+            [
+                "eess.AS"
+            ]
+        ],
+        "abstract": "The current dominant approach for neural speech enhancement is based on supervised learning by using simulated training data. The trained models, however, often exhibit limited generalizability to real-recorded data. To address this, we investigate training models directly on real target-domain data, and propose two algorithms, mixture-to-mixture (M2M) training and a co-learning algorithm that improves M2M with the help of supervised algorithms. When paired close-talk and far-field mixtures are available for training, M2M realizes speech enhancement by training a deep neural network (DNN) to produce speech and noise estimates in a way such that they can be linearly filtered to reconstruct the close-talk and far-field mixtures. This way, the DNN can be trained directly on real mixtures, and can leverage close-talk mixtures as a weak supervision to enhance far-field mixtures. To improve M2M, we combine it with supervised approaches to co-train the DNN, where mini-batches of real close-talk and far-field mixture pairs and mini-batches of simulated mixture and clean speech pairs are alternately fed to the DNN, and the loss functions are respectively (a) the mixture reconstruction loss on the real close-talk and far-field mixtures and (b) the regular enhancement loss on the simulated clean speech and noise. We find that, this way, the DNN can learn from real and simulated data to achieve better generalization to real data. We name this algorithm SuperME, $\\underline{super}$vised and $\\underline{m}$ixture-to-mixtur$\\underline{e}$ co-learning. Evaluation results on the CHiME-4 dataset show its effectiveness and potential.",
+        "subjects": [
+            "eess.AS",
+            "eess.SP"
+        ],
+        "comment": "in submission"
+    },
+    {
         "paper id": "2403.10348",
         "abstract url": "https://arxiv.org/abs/2403.10348",
         "title": "Denoising Task Difficulty-based Curriculum for Training Diffusion Models",
@@ -3204,6 +3279,31 @@
         "comment": null
     },
     {
+        "paper id": "2403.10413",
+        "abstract url": "https://arxiv.org/abs/2403.10413",
+        "title": "Real-Time Image Segmentation via Hybrid Convolutional-Transformer Architecture Search",
+        "rating": "0",
+        "keywords": [
+            [
+                "memory-efficient"
+            ],
+            [
+                "autonomous driving"
+            ],
+            [
+                "Architecture Search"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Image segmentation is one of the most fundamental problems in computer vision and has drawn a lot of attentions due to its vast applications in image understanding and autonomous driving. However, designing effective and efficient segmentation neural architectures is a labor-intensive process that may require lots of trials by human experts. In this paper, we address the challenge of integrating multi-head self-attention into high resolution representation CNNs efficiently, by leveraging architecture search. Manually replacing convolution layers with multi-head self-attention is non-trivial due to the costly overhead in memory to maintain high resolution. By contrast, we develop a multi-target multi-branch supernet method, which not only fully utilizes the advantages of high-resolution features, but also finds the proper location for placing multi-head self-attention module. Our search algorithm is optimized towards multiple objective s (e.g., latency and mIoU) and capable of finding architectures on Pareto frontier with arbitrary number of branches in a single search. We further present a series of model via Hybrid Convolutional-Transformer Architecture Search (HyCTAS) method that searched for the best hybrid combination of light-weight convolution layers and memory-efficient self-attention layers between branches from different resolutions and fuse to high resolution for both efficiency and effectiveness. Extensive experiments demonstrate that HyCTAS outperforms previous methods on semantic segmentation task. Code and models are available at \\url{https://github.com/MarvinYu1995/HyCTAS}.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "8 pages, 3 figures, submitted to IROS 2024"
+    },
+    {
         "paper id": "2403.10452",
         "abstract url": "https://arxiv.org/abs/2403.10452",
         "title": "Robust Shape Fitting for 3D Scene Abstraction",
@@ -3222,27 +3322,6 @@
             "cs.CV"
         ],
         "comment": "Accepted for publication in Transactions on Pattern Analysis and Machine Intelligence (PAMI). arXiv admin note: substantial text overlap with arXiv:2105.02047"
-    },
-    {
-        "paper id": "2403.10476",
-        "abstract url": "https://arxiv.org/abs/2403.10476",
-        "title": "Approximate Nullspace Augmented Finetuning for Robust Vision Transformers",
-        "rating": "0",
-        "keywords": [
-            [
-                "synthesize"
-            ],
-            [
-                "cs.LG",
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Enhancing the robustness of deep learning models, particularly in the realm of vision transformers (ViTs), is crucial for their real-world deployment. In this work, we provide a finetuning approach to enhance the robustness of vision transformers inspired by the concept of nullspace from linear algebra. Our investigation centers on whether a vision transformer can exhibit resilience to input variations akin to the nullspace property in linear mappings, implying that perturbations sampled from this nullspace do not influence the model's output when added to the input. Firstly, we show that for many pretrained ViTs, a non-trivial nullspace exists due to the presence of the patch embedding layer. Secondly, as nullspace is a concept associated with linear algebra, we demonstrate that it is possible to synthesize approximate nullspace elements for the non-linear blocks of ViTs employing an optimisation strategy. Finally, we propose a fine-tuning strategy for ViTs wherein we augment the training data with synthesized approximate nullspace noise. After finetuning, we find that the model demonstrates robustness to adversarial and natural image perbutations alike.",
-        "subjects": [
-            "cs.CV",
-            "cs.LG"
-        ],
-        "comment": "21 pages, 8 figures"
     },
     {
         "paper id": "2403.10492",
@@ -3597,8 +3676,7 @@
         "rating": "0",
         "keywords": [
             [
-                "Diffusion",
-                "synthesis"
+                "Diffusion"
             ],
             [
                 "cs.LG",
@@ -3681,7 +3759,8 @@
         "rating": "0",
         "keywords": [
             [
-                "Infrared"
+                "Infrared",
+                "Re-Identification"
             ],
             [
                 "cs.CV"
@@ -3738,27 +3817,6 @@
             "eess.IV"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2403.15434",
-        "abstract url": "https://arxiv.org/abs/2403.15434",
-        "title": "ChatPattern: Layout Pattern Customization via Natural Language",
-        "rating": "0",
-        "keywords": [
-            [
-                "synthesize"
-            ],
-            [
-                "cs.AI",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Existing works focus on fixed-size layout pattern generation, while the more practical free-size pattern generation receives limited attention. In this paper, we propose ChatPattern, a novel Large-Language-Model (LLM) powered framework for flexible pattern customization. ChatPattern utilizes a two-part system featuring an expert LLM agent and a highly controllable layout pattern generator. The LLM agent can interpret natural language requirements and operate design tools to meet specified needs, while the generator excels in conditional layout generation, pattern modification, and memory-friendly patterns extension. Experiments on challenging pattern generation setting shows the ability of ChatPattern to synthesize high-quality large-scale patterns.",
-        "subjects": [
-            "cs.CL",
-            "cs.AI"
-        ],
-        "comment": "Accepted by DAC24"
     },
     {
         "paper id": "2403.10064",
@@ -3965,26 +4023,6 @@
         "comment": null
     },
     {
-        "paper id": "2403.10318",
-        "abstract url": "https://arxiv.org/abs/2403.10318",
-        "title": "Anytime Neural Architecture Search on Tabular Data",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "Architecture Search",
-                "NAS"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "The increasing demand for tabular data analysis calls for transitioning from manual architecture design to Neural Architecture Search (NAS). This transition demands an efficient and responsive anytime NAS approach that is capable of returning current optimal architectures within any given time budget while progressively enhancing architecture quality with increased budget allocation. However, the area of research on Anytime NAS for tabular data remains unexplored. To this end, we introduce ATLAS, the first anytime NAS approach tailored for tabular data. ATLAS introduces a novel two-phase filtering-and-refinement optimization scheme with joint optimization, combining the strengths of both paradigms of training-free and training-based architecture evaluation. Specifically, in the filtering phase, ATLAS employs a new zero-cost proxy specifically designed for tabular data to efficiently estimate the performance of candidate architectures, thereby obtaining a set of promising architectures. Subsequently, in the refinement phase, ATLAS leverages a fixed-budget search algorithm to schedule the training of the promising candidates, so as to accurately identify the optimal architecture. To jointly optimize the two phases for anytime NAS, we also devise a budget-aware coordinator that delivers high NAS performance within constraints. Experimental evaluations demonstrate that our ATLAS can obtain a good-performing architecture within any predefined time budget and return better architectures as and when a new time budget is made available. Overall, it reduces the search time on tabular data by up to 82.75x compared to existing NAS approaches.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2403.10330",
         "abstract url": "https://arxiv.org/abs/2403.10330",
         "title": "Towards Non-Adversarial Algorithmic Recourse",
@@ -4023,32 +4061,6 @@
             "cs.LG"
         ],
         "comment": "22 pages, 7 figures"
-    },
-    {
-        "paper id": "2403.10335",
-        "abstract url": "https://arxiv.org/abs/2403.10335",
-        "title": "NECA: Neural Customizable Human Avatar",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "3D",
-                "Avatar"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ],
-            [
-                "CVPR"
-            ]
-        ],
-        "abstract": "Human avatar has become a novel type of 3D asset with various applications. Ideally, a human avatar should be fully customizable to accommodate different settings and environments. In this work, we introduce NECA, an approach capable of learning versatile human representation from monocular or sparse-view videos, enabling granular customization across aspects such as pose, shadow, shape, lighting and texture. The core of our approach is to represent humans in complementary dual spaces and predict disentangled neural fields of geometry, albedo, shadow, as well as an external lighting, from which we are able to derive realistic rendering with high-frequency details via volumetric rendering. Extensive experiments demonstrate the advantage of our method over the state-of-the-art methods in photorealistic rendering, as well as various editing tasks such as novel pose synthesis and relighting. The code is available at https://github.com/iSEE-Laboratory/NECA.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Accepted to CVPR 2024"
     },
     {
         "paper id": "2403.10368",
@@ -4099,6 +4111,7 @@
         "keywords": [
             [
                 "robotics",
+                "robotic manipulation",
                 "navigation"
             ],
             [
@@ -4276,25 +4289,6 @@
         "comment": null
     },
     {
-        "paper id": "2403.10744",
-        "abstract url": "https://arxiv.org/abs/2403.10744",
-        "title": "Game and Reference: Policy Combination Synthesis for Epidemic Prevention and Control",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "Synthesis"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "In recent years, epidemic policy-making models are increasingly being used to provide reference for governors on prevention and control policies against catastrophic epidemics such as SARS, H1N1 and COVID-19. Existing studies are currently constrained by two issues: First, previous methods develop policies based on effect evaluation, since few of factors in real-world decision-making can be modeled, the output policies will then easily become extreme. Second, the subjectivity and cognitive limitation of human make the historical policies not always optimal for the training of decision models. To these ends, we present a novel Policy Combination Synthesis (PCS) model for epidemic policy-making. Specially, to prevent extreme decisions, we introduce adversarial learning between the model-made policies and the real policies to force the output policies to be more human-liked. On the other hand, to minimize the impact of sub-optimal historical policies, we employ contrastive learning to let the model draw on experience from the best historical policies under similar scenarios. Both adversarial and contrastive learning are adaptive based on the comprehensive effects of real policies to ensure the model always learns useful information. Extensive experiments on real-world data prove the effectiveness of the proposed model.",
-        "subjects": [
-            "cs.AI"
-        ],
-        "comment": "16 pages, single line, 7 figures, written with Springer conference template"
-    },
-    {
         "paper id": "2403.10760",
         "abstract url": "https://arxiv.org/abs/2403.10760",
         "title": "CORN: Contact-based Object Representation for Nonprehensile Manipulation of General Unseen Objects",
@@ -4432,7 +4426,7 @@
         "rating": "-1",
         "keywords": [
             [
-                "hyperspectral data"
+                "Hyperspectral Image"
             ],
             [
                 "cs.CV",
@@ -4445,55 +4439,6 @@
             "cs.CV"
         ],
         "comment": "IEEE GRSL 2024"
-    },
-    {
-        "paper id": "2403.10075",
-        "abstract url": "https://arxiv.org/abs/2403.10075",
-        "title": "A survey of synthetic data augmentation methods in computer vision",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D"
-            ],
-            [
-                "synthesize"
-            ],
-            [
-                "cs.LG",
-                "cs.CV"
-            ]
-        ],
-        "abstract": "The standard approach to tackling computer vision problems is to train deep convolutional neural network (CNN) models using large-scale image datasets which are representative of the target task. However, in many scenarios, it is often challenging to obtain sufficient image data for the target task. Data augmentation is a way to mitigate this challenge. A common practice is to explicitly transform existing images in desired ways so as to create the required volume and variability of training data necessary to achieve good generalization performance. In situations where data for the target domain is not accessible, a viable workaround is to synthesize training data from scratch--i.e., synthetic data augmentation. This paper presents an extensive review of synthetic data augmentation techniques. It covers data synthesis approaches based on realistic 3D graphics modeling, neural style transfer (NST), differential neural rendering, and generative artificial intelligence (AI) techniques such as generative adversarial networks (GANs) and variational autoencoders (VAEs). For each of these classes of methods, we focus on the important data generation and augmentation techniques, general scope of application and specific use-cases, as well as existing limitations and possible workarounds. Additionally, we provide a summary of common synthetic datasets for training computer vision models, highlighting the main features, application domains and supported tasks. Finally, we discuss the effectiveness of synthetic data augmentation methods. Since this is the first paper to explore synthetic data augmentation methods in great detail, we are hoping to equip readers with the necessary background information and in-depth knowledge of existing methods and their attendant issues.",
-        "subjects": [
-            "cs.CV",
-            "cs.GR",
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2403.10079",
-        "abstract url": "https://arxiv.org/abs/2403.10079",
-        "title": "Learning Physical Dynamics for Object-centric Visual Prediction",
-        "rating": "-1",
-        "keywords": [
-            [
-                "synthesize"
-            ],
-            [
-                "trajectory"
-            ],
-            [
-                "cs.AI",
-                "cs.CV"
-            ]
-        ],
-        "abstract": "The ability to model the underlying dynamics of visual scenes and reason about the future is central to human intelligence. Many attempts have been made to empower intelligent systems with such physical understanding and prediction abilities. However, most existing methods focus on pixel-to-pixel prediction, which suffers from heavy computational costs while lacking a deep understanding of the physical dynamics behind videos. Recently, object-centric prediction methods have emerged and attracted increasing interest. Inspired by it, this paper proposes an unsupervised object-centric prediction model that makes future predictions by learning visual dynamics between objects. Our model consists of two modules, perceptual, and dynamic module. The perceptual module is utilized to decompose images into several objects and synthesize images with a set of object-centric representations. The dynamic module fuses contextual information, takes environment-object and object-object interaction into account, and predicts the future trajectory of objects. Extensive experiments are conducted to validate the effectiveness of the proposed method. Both quantitative and qualitative experimental results demonstrate that our model generates higher visual quality and more physically reliable predictions compared to the state-of-the-art methods.",
-        "subjects": [
-            "cs.CV",
-            "cs.AI"
-        ],
-        "comment": "13 pages, 10 figures"
     },
     {
         "paper id": "2403.10087",
@@ -4583,30 +4528,6 @@
         "comment": "NAACL 2024 (Findings)"
     },
     {
-        "paper id": "2403.10147",
-        "abstract url": "https://arxiv.org/abs/2403.10147",
-        "title": "GGRt: Towards Pose-free Generalizable 3D Gaussian Splatting in Real-time",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting",
-                "NeRF"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "This paper presents GGRt, a novel approach to generalizable novel view synthesis that alleviates the need for real camera poses, complexity in processing high-resolution images, and lengthy optimization processes, thus facilitating stronger applicability of 3D Gaussian Splatting (3D-GS) in real-world scenarios. Specifically, we design a novel joint learning framework that consists of an Iterative Pose Optimization Network (IPO-Net) and a Generalizable 3D-Gaussians (G-3DG) model. With the joint learning mechanism, the proposed framework can inherently estimate robust relative pose information from the image observations and thus primarily alleviate the requirement of real camera poses. Moreover, we implement a deferred back-propagation mechanism that enables high-resolution training and inference, overcoming the resolution constraints of previous methods. To enhance the speed and efficiency, we further introduce a progressive Gaussian cache module that dynamically adjusts during training and inference. As the first pose-free generalizable 3D-GS framework, GGRt achieves inference at $\\ge$ 5 FPS and real-time rendering at $\\ge$ 100 FPS. Through extensive experimentation, we demonstrate that our method outperforms existing NeRF-based pose-free techniques in terms of inference speed and effectiveness. It can also approach the real pose-based 3D-GS methods. Our contributions provide a significant leap forward for the integration of computer vision and computer graphics into practical applications, offering state-of-the-art results on LLFF, KITTI, and Waymo Open datasets and enabling real-time rendering for immersive experiences.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Project page: \\href{https://3d-aigc.github.io/GGRt}{https://3d-aigc.github.io/GGRt}"
-    },
-    {
         "paper id": "2403.10153",
         "abstract url": "https://arxiv.org/abs/2403.10153",
         "title": "Improving Medical Multi-modal Contrastive Learning with Expert Annotations",
@@ -4685,7 +4606,6 @@
                 "radiance fields"
             ],
             [
-                "synthesis",
                 "super-resolution"
             ],
             [
@@ -4818,7 +4738,8 @@
         "rating": "-1",
         "keywords": [
             [
-                "robot"
+                "robot",
+                "robotic manipulation"
             ]
         ],
         "abstract": "Deformable objects present several challenges to the field of robotic manipulation. One of the tasks that best encapsulates the difficulties arising due to non-rigid behavior is shape control, which requires driving an object to a desired shape. While shape-servoing methods have been shown successful in contexts with approximately linear behavior, they can fail in tasks with more complex dynamics. We investigate an alternative approach, using offline RL to solve a planar shape control problem of a Deformable Linear Object (DLO). To evaluate the effect of material properties, two DLOs are tested namely a soft rope and an elastic cord. We frame this task as a goal-conditioned offline RL problem, and aim to learn to generalize to unseen goal shapes. Data collection and augmentation procedures are proposed to limit the amount of experimental data which needs to be collected with the real robot. We evaluate the amount of augmentation needed to achieve the best results, and test the effect of regularization through behavior cloning on the TD3+BC algorithm. Finally, we show that the proposed approach is able to outperform a shape-servoing baseline in a curvature inversion experiment.",
@@ -4848,6 +4769,29 @@
             "cs.CV"
         ],
         "comment": "11 pages, 9 figures and 1 table. Preliminary results of the method was presented as poster in IEEE conference International Ultrasonics Symposium 2022 in Venice, Italy"
+    },
+    {
+        "paper id": "2403.10297",
+        "abstract url": "https://arxiv.org/abs/2403.10297",
+        "title": "Leveraging Neural Radiance Field in Descriptor Synthesis for Keypoints Scene Coordinate Regression",
+        "rating": "-1",
+        "keywords": [
+            [
+                "3D",
+                "NeRF"
+            ],
+            [
+                "graph"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Classical structural-based visual localization methods offer high accuracy but face trade-offs in terms of storage, speed, and privacy. A recent innovation, keypoint scene coordinate regression (KSCR) named D2S addresses these issues by leveraging graph attention networks to enhance keypoint relationships and predict their 3D coordinates using a simple multilayer perceptron (MLP). Camera pose is then determined via PnP+RANSAC, using established 2D-3D correspondences. While KSCR achieves competitive results, rivaling state-of-the-art image-retrieval methods like HLoc across multiple benchmarks, its performance is hindered when data samples are limited due to the deep learning model's reliance on extensive data. This paper proposes a solution to this challenge by introducing a pipeline for keypoint descriptor synthesis using Neural Radiance Field (NeRF). By generating novel poses and feeding them into a trained NeRF model to create new views, our approach enhances the KSCR's generalization capabilities in data-scarce environments. The proposed system could significantly improve localization accuracy by up to 50% and cost only a fraction of time for data synthesis. Furthermore, its modular design allows for the integration of multiple NeRFs, offering a versatile and efficient solution for visual localization. The implementation is publicly available at: https://github.com/ais-lab/DescriptorSynthesis4Feat2Map.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
     },
     {
         "paper id": "2403.10301",
@@ -4947,7 +4891,8 @@
         "rating": "-1",
         "keywords": [
             [
-                "3D"
+                "3D",
+                "signed distance field"
             ],
             [
                 "LiDAR"
@@ -5133,26 +5078,25 @@
         "comment": "Project page: https://isotropic3d.github.io/ Source code: https://github.com/pkunliu/Isotropic3D"
     },
     {
-        "paper id": "2403.10413",
-        "abstract url": "https://arxiv.org/abs/2403.10413",
-        "title": "Real-Time Image Segmentation via Hybrid Convolutional-Transformer Architecture Search",
+        "paper id": "2403.10404",
+        "abstract url": "https://arxiv.org/abs/2403.10404",
+        "title": "A comparative study on machine learning approaches for rock mass classification using drilling data",
         "rating": "-1",
         "keywords": [
             [
-                "autonomous driving"
+                "tabular"
             ],
             [
-                "Architecture Search"
-            ],
-            [
+                "cs.LG",
                 "cs.CV"
             ]
         ],
-        "abstract": "Image segmentation is one of the most fundamental problems in computer vision and has drawn a lot of attentions due to its vast applications in image understanding and autonomous driving. However, designing effective and efficient segmentation neural architectures is a labor-intensive process that may require lots of trials by human experts. In this paper, we address the challenge of integrating multi-head self-attention into high resolution representation CNNs efficiently, by leveraging architecture search. Manually replacing convolution layers with multi-head self-attention is non-trivial due to the costly overhead in memory to maintain high resolution. By contrast, we develop a multi-target multi-branch supernet method, which not only fully utilizes the advantages of high-resolution features, but also finds the proper location for placing multi-head self-attention module. Our search algorithm is optimized towards multiple objective s (e.g., latency and mIoU) and capable of finding architectures on Pareto frontier with arbitrary number of branches in a single search. We further present a series of model via Hybrid Convolutional-Transformer Architecture Search (HyCTAS) method that searched for the best hybrid combination of light-weight convolution layers and memory-efficient self-attention layers between branches from different resolutions and fuse to high resolution for both efficiency and effectiveness. Extensive experiments demonstrate that HyCTAS outperforms previous methods on semantic segmentation task. Code and models are available at \\url{https://github.com/MarvinYu1995/HyCTAS}.",
+        "abstract": "Current rock engineering design in drill and blast tunnelling primarily relies on engineers' observational assessments. Measure While Drilling (MWD) data, a high-resolution sensor dataset collected during tunnel excavation, is underutilised, mainly serving for geological visualisation. This study aims to automate the translation of MWD data into actionable metrics for rock engineering. It seeks to link data to specific engineering actions, thus providing critical decision support for geological challenges ahead of the tunnel face. Leveraging a large and geologically diverse dataset of 500,000 drillholes from 15 tunnels, the research introduces models for accurate rock mass quality classification in a real-world tunnelling context. Both conventional machine learning and image-based deep learning are explored to classify MWD data into Q-classes and Q-values, examples of metrics describing the stability of the rock mass, using both tabular and image data. The results indicate that the K-nearest neighbours algorithm in an ensemble with tree-based models using tabular data, effectively classifies rock mass quality. It achieves a cross-validated balanced accuracy of 0.86 in classifying rock mass into the Q-classes A, B, C, D, E1, E2, and 0.95 for a binary classification with E versus the rest. Classification using a CNN with MWD-images for each blasting round resulted in a balanced accuracy of 0.82 for binary classification. Regressing the Q-value from tabular MWD-data achieved cross-validated R2 and MSE scores of 0.80 and 0.18 for a similar ensemble model as in classification. High performance in regression and classification boosts confidence in automated rock mass assessment. Applying advanced modelling on a unique dataset demonstrates MWD data's value in improving rock mass classification accuracy and advancing data-driven rock engineering design, reducing manual intervention.",
         "subjects": [
+            "cs.LG",
             "cs.CV"
         ],
-        "comment": "8 pages, 3 figures, submitted to IROS 2024"
+        "comment": null
     },
     {
         "paper id": "2403.10425",
@@ -5178,25 +5122,6 @@
             "cs.RO"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2403.10428",
-        "abstract url": "https://arxiv.org/abs/2403.10428",
-        "title": "How to train your ears: Auditory-model emulation for large-dynamic-range inputs and mild-to-severe hearing losses",
-        "rating": "-1",
-        "keywords": [
-            [
-                "physiological"
-            ],
-            [
-                "eess.AS"
-            ]
-        ],
-        "abstract": "Advanced auditory models are useful in designing signal-processing algorithms for hearing-loss compensation or speech enhancement. Such auditory models provide rich and detailed descriptions of the auditory pathway, and might allow for individualization of signal-processing strategies, based on physiological measurements. However, these auditory models are often computationally demanding, requiring significant time to compute. To address this issue, previous studies have explored the use of deep neural networks to emulate auditory models and reduce inference time. While these deep neural networks offer impressive efficiency gains in terms of computational time, they may suffer from uneven emulation performance as a function of auditory-model frequency-channels and input sound pressure level, making them unsuitable for many tasks. In this study, we demonstrate that the conventional machine-learning optimization objective used in existing state-of-the-art methods is the primary source of this limitation. Specifically, the optimization objective fails to account for the frequency- and level-dependencies of the auditory model, caused by a large input dynamic range and different types of hearing losses emulated by the auditory model. To overcome this limitation, we propose a new optimization objective that explicitly embeds the frequency- and level-dependencies of the auditory model. Our results show that this new optimization objective significantly improves the emulation performance of deep neural networks across relevant input sound levels and auditory-model frequency channels, without increasing the computational load during inference. Addressing these limitations is essential for advancing the application of auditory models in signal-processing tasks, ensuring their efficacy in diverse scenarios.",
-        "subjects": [
-            "eess.AS"
-        ],
-        "comment": "Accepted by IEEE/ACM Transactions on Audio, Speech and Language Processing. This version is the authors' version and may vary from the final publication in details"
     },
     {
         "paper id": "2403.10434",
@@ -5225,7 +5150,8 @@
         "keywords": [
             [
                 "robotics",
-                "robot"
+                "robot",
+                "robotic manipulation"
             ]
         ],
         "abstract": "This study introduces the Hybrid Sequential Manipulation Planner (H-MaP), a novel approach that iteratively does motion planning using contact points and waypoints for complex sequential manipulation tasks in robotics. Combining optimization-based methods for generalizability and sampling-based methods for robustness, H-MaP enhances manipulation planning through active contact mode switches and enables interactions with auxiliary objects and tools. This framework, validated by a series of diverse physical manipulation tasks and real-robot experiments, offers a scalable and adaptable solution for complex real-world applications in robotic manipulation.",
@@ -5560,6 +5486,22 @@
         "comment": "6 pages, 2 figures, this has been submitted and accepted for publication at IEEE - ICACCS 2024"
     },
     {
+        "paper id": "2403.10723",
+        "abstract url": "https://arxiv.org/abs/2403.10723",
+        "title": "Leveraging Symmetries in Gaits for Reinforcement Learning: A Case Study on Quadrupedal Gaits",
+        "rating": "-1",
+        "keywords": [
+            [
+                "trajectory"
+            ]
+        ],
+        "abstract": "In this research, we address the complex task of developing versatile and agile quadrupedal gaits for robotic platforms, a domain predominantly governed by model-based trajectory optimization methods. We propose an innovative, reference-free reinforcement learning framework that exploits the intrinsic symmetries of dynamic systems to synthesize a broad array of naturalistic quadrupedal locomotion patterns. By capitalizing on distinct symmetry characteristics - namely temporal, morphological, and time-reversal - our approach efficiently facilitates the generation and transition among diverse gaits such as pronking, bounding half-bounding and galloping, across a spectrum of velocities, circumventing the necessity for expert-generated trajectories or complex reward structures. Implemented on the Petoi Bittle robotic model, our methodology illustrates robust and adaptable gait generation capabilities, significantly broadening the scope for robotic mobility and speed adaptability. This contribution not only advances our comprehension of quadrupedal locomotion mechanisms but also underscores the pivotal role of symmetry in the development of scalable and effective robotic gait strategies. Our findings hold substantial implications for robotic design and control, potentially enhancing operational versatility and efficiency across a variety of deployment environments.",
+        "subjects": [
+            "eess.SY"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2403.10733",
         "abstract url": "https://arxiv.org/abs/2403.10733",
         "title": "Incentive-Compatible and Distributed Allocation for Robotic Service Provision Through Contract Theory",
@@ -5572,6 +5514,22 @@
         "abstract": "Robot allocation plays an essential role in facilitating robotic service provision across various domains. Yet the increasing number of users and the uncertainties regarding the users' true service requirements have posed challenges for the service provider in effectively allocating service robots to users to meet their needs. In this work, we first propose a contract-based approach to enable incentive-compatible service selection so that the service provider can effectively reduce the user's service uncertainties for precise service provision. Then, we develop a distributed allocation algorithm that incorporates robot dynamics and collision avoidance to allocate service robots and address scalability concerns associated with increasing numbers of service robots and users. We conduct simulations in eight scenarios to validate our approach. Comparative analysis against the robust allocation paradigm and two alternative uncertainty reduction strategies demonstrates that our approach achieves better allocation efficiency and accuracy.",
         "subjects": [
             "cs.RO"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2403.10735",
+        "abstract url": "https://arxiv.org/abs/2403.10735",
+        "title": "Time-Robust Path Planning with Piece-Wise Linear Trajectory for Signal Temporal Logic Specifications",
+        "rating": "-1",
+        "keywords": [
+            [
+                "Trajectory"
+            ]
+        ],
+        "abstract": "Real-world scenarios are characterized by timing uncertainties, e.g., delays, and disturbances. Algorithms with temporal robustness are crucial in guaranteeing the successful execution of tasks and missions in such scenarios. We study time-robust path planning for synthesizing robots' trajectories that adhere to spatial-temporal specifications expressed in Signal Temporal Logic (STL). In contrast to prior approaches that rely on {discretize}d trajectories with fixed time steps, we leverage Piece-Wise Linear (PWL) signals for the synthesis. PWL signals represent a trajectory through a sequence of time-stamped waypoints. This allows us to encode the STL formula into a Mixed-Integer Linear Program (MILP) with fewer variables. This reduction is more pronounced for specifications with a long planning horizon. To that end, we define time-robustness for PWL signals. Subsequently, we propose quantitative semantics for PWL signals according to the recursive syntax of STL and prove their soundness. We then propose an encoding strategy to transform our semantics into a MILP. Our simulations showcase the soundness and the performance of our algorithm.",
+        "subjects": [
+            "eess.SY"
         ],
         "comment": null
     },
@@ -5609,6 +5567,28 @@
             "cs.CV"
         ],
         "comment": "The work was done in 2021"
+    },
+    {
+        "paper id": "2403.10738",
+        "abstract url": "https://arxiv.org/abs/2403.10738",
+        "title": "Horizon-Free Regret for Linear Markov Decision Processes",
+        "rating": "-1",
+        "keywords": [
+            [
+                "tabular"
+            ],
+            [
+                "cs.LG"
+            ],
+            [
+                "ICLR"
+            ]
+        ],
+        "abstract": "A recent line of works showed regret bounds in reinforcement learning (RL) can be (nearly) independent of planning horizon, a.k.a.~the horizon-free bounds. However, these regret bounds only apply to settings where a polynomial dependency on the size of transition model is allowed, such as tabular Markov Decision Process (MDP) and linear mixture MDP. We give the first horizon-free bound for the popular linear MDP setting where the size of the transition model can be exponentially large or even uncountable. In contrast to prior works which explicitly estimate the transition model and compute the inhomogeneous value functions at different time steps, we directly estimate the value functions and confidence sets. We obtain the horizon-free bound by: (1) maintaining multiple weighted least square estimators for the value functions; and (2) a structural lemma which shows the maximal total variation of the inhomogeneous value functions is bounded by a polynomial factor of the feature dimension.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": "Published as a conference paper in ICLR 2024"
     },
     {
         "paper id": "2403.10745",
@@ -5854,8 +5834,7 @@
                 "3D"
             ],
             [
-                "diffusion",
-                "synthesis"
+                "diffusion"
             ],
             [
                 "cs.AI",
@@ -6088,6 +6067,26 @@
         "comment": "8 pages, 8 figures, 1 table, Accepted as a conference paper at IEEE INTERNATIONAL CONFERENCE ON DISTRIBUTED COMPUTING IN SMART SYSTEMS AND THE INTERNET OF THINGS (DCOSS-IoT 2024)"
     },
     {
+        "paper id": "2403.10424",
+        "abstract url": "https://arxiv.org/abs/2403.10424",
+        "title": "Structured Evaluation of Synthetic Tabular Data",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "Tabular"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Tabular data is common yet typically incomplete, small in volume, and access-restricted due to privacy concerns. Synthetic data generation offers potential solutions. Many metrics exist for evaluating the quality of synthetic tabular data; however, we lack an objective, coherent interpretation of the many metrics. To address this issue, we propose an evaluation framework with a single, mathematical objective that posits that the synthetic data should be drawn from the same distribution as the observed data. Through various structural decomposition of the objective, this framework allows us to reason for the first time the completeness of any set of metrics, as well as unifies existing metrics, including those that stem from fidelity considerations, downstream application, and model-based approaches. Moreover, the framework motivates model-free baselines and a new spectrum of metrics. We evaluate structurally informed synthesizers and synthesizers powered by deep learning. Using our structured framework, we show that synthetic data generators that explicitly represent tabular structure outperform other methods, especially on smaller datasets.",
+        "subjects": [
+            "cs.LG",
+            "stat.ML"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2403.10578",
         "abstract url": "https://arxiv.org/abs/2403.10578",
         "title": "Generative Modelling of Stochastic Rotating Shallow Water Noise",
@@ -6134,14 +6133,33 @@
         "comment": "16 pages, 4 Figures"
     },
     {
+        "paper id": "2403.10588",
+        "abstract url": "https://arxiv.org/abs/2403.10588",
+        "title": "S3LLM: Large-Scale Scientific Software Understanding with LLMs using Source, Metadata, and Document",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "SQL"
+            ],
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "The understanding of large-scale scientific software poses significant challenges due to its diverse codebase, extensive code length, and target computing architectures. The emergence of generative AI, specifically large language models (LLMs), provides novel pathways for understanding such complex scientific codes. This paper presents S3LLM, an LLM-based framework designed to enable the examination of source code, code metadata, and summarized information in conjunction with textual technical reports in an interactive, conversational manner through a user-friendly interface. S3LLM leverages open-source LLaMA-2 models to enhance code analysis through the automatic transformation of natural language queries into domain-specific language (DSL) queries. Specifically, it translates these queries into Feature Query Language (FQL), enabling efficient scanning and parsing of entire code repositories. In addition, S3LLM is equipped to handle diverse metadata types, including DOT, SQL, and customized formats. Furthermore, S3LLM incorporates retrieval augmented generation (RAG) and LangChain technologies to directly query extensive documents. S3LLM demonstrates the potential of using locally deployed open-source LLMs for the rapid understanding of large-scale scientific computing software, eliminating the need for extensive coding expertise, and thereby making the process more efficient and effective. S3LLM is available at https://github.com/ResponsibleAILab/s3llm.",
+        "subjects": [
+            "cs.SE",
+            "cs.AI"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2403.10672",
         "abstract url": "https://arxiv.org/abs/2403.10672",
         "title": "Riemannian Flow Matching Policy for Robot Motion Learning",
         "rating": "-1.5",
         "keywords": [
             [
-                "Diffusion",
-                "synthesizing"
+                "Diffusion"
             ],
             [
                 "Robot"
@@ -6687,31 +6705,6 @@
         "comment": null
     },
     {
-        "paper id": "2403.10261",
-        "abstract url": "https://arxiv.org/abs/2403.10261",
-        "title": "Learning Spatiotemporal Inconsistency via Thumbnail Layout for Face Deepfake Detection",
-        "rating": "-2",
-        "keywords": [
-            [
-                "3D"
-            ],
-            [
-                "diffusion"
-            ],
-            [
-                "graph"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "The deepfake threats to society and cybersecurity have provoked significant public apprehension, driving intensified efforts within the realm of deepfake video detection. Current video-level methods are mostly based on {3D CNNs} resulting in high computational demands, although have achieved good performance. This paper introduces an elegantly simple yet effective strategy named Thumbnail Layout (TALL), which transforms a video clip into a pre-defined layout to realize the preservation of spatial and temporal dependencies. This transformation process involves sequentially masking frames at the same positions within each frame. These frames are then resized into sub-frames and reorganized into the predetermined layout, forming thumbnails. TALL is model-agnostic and has remarkable simplicity, necessitating only minimal code modifications. Furthermore, we introduce a graph reasoning block (GRB) and semantic consistency (SC) loss to strengthen TALL, culminating in TALL++. GRB enhances interactions between different semantic regions to capture semantic-level inconsistency clues. The semantic consistency loss imposes consistency constraints on semantic features to improve model generalization ability. Extensive experiments on intra-dataset, cross-dataset, diffusion-generated image detection, and deepfake generation method recognition show that TALL++ achieves results surpassing or comparable to the state-of-the-art methods, demonstrating the effectiveness of our approaches for various deepfake detection problems. The code is available at https://github.com/rainy-xu/TALL4Deepfake.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Accepted by IJCV"
-    },
-    {
         "paper id": "2403.10286",
         "abstract url": "https://arxiv.org/abs/2403.10286",
         "title": "RACH-less Handover with Early Timing Advance Acquisition for Outage Reduction",
@@ -6748,32 +6741,6 @@
             "cs.CL"
         ],
         "comment": "LREC-COLING 2024"
-    },
-    {
-        "paper id": "2403.10297",
-        "abstract url": "https://arxiv.org/abs/2403.10297",
-        "title": "Leveraging Neural Radiance Field in Descriptor Synthesis for Keypoints Scene Coordinate Regression",
-        "rating": "-2",
-        "keywords": [
-            [
-                "3D",
-                "NeRF"
-            ],
-            [
-                "Synthesis"
-            ],
-            [
-                "graph"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Classical structural-based visual localization methods offer high accuracy but face trade-offs in terms of storage, speed, and privacy. A recent innovation, keypoint scene coordinate regression (KSCR) named D2S addresses these issues by leveraging graph attention networks to enhance keypoint relationships and predict their 3D coordinates using a simple multilayer perceptron (MLP). Camera pose is then determined via PnP+RANSAC, using established 2D-3D correspondences. While KSCR achieves competitive results, rivaling state-of-the-art image-retrieval methods like HLoc across multiple benchmarks, its performance is hindered when data samples are limited due to the deep learning model's reliance on extensive data. This paper proposes a solution to this challenge by introducing a pipeline for keypoint descriptor synthesis using Neural Radiance Field (NeRF). By generating novel poses and feeding them into a trained NeRF model to create new views, our approach enhances the KSCR's generalization capabilities in data-scarce environments. The proposed system could significantly improve localization accuracy by up to 50% and cost only a fraction of time for data synthesis. Furthermore, its modular design allows for the integration of multiple NeRFs, offering a versatile and efficient solution for visual localization. The implementation is publicly available at: https://github.com/ais-lab/DescriptorSynthesis4Feat2Map.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
     },
     {
         "paper id": "2403.10303",
@@ -6844,6 +6811,28 @@
             "eess.SP"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2403.10428",
+        "abstract url": "https://arxiv.org/abs/2403.10428",
+        "title": "How to train your ears: Auditory-model emulation for large-dynamic-range inputs and mild-to-severe hearing losses",
+        "rating": "-2",
+        "keywords": [
+            [
+                "speech enhancement"
+            ],
+            [
+                "physiological"
+            ],
+            [
+                "eess.AS"
+            ]
+        ],
+        "abstract": "Advanced auditory models are useful in designing signal-processing algorithms for hearing-loss compensation or speech enhancement. Such auditory models provide rich and detailed descriptions of the auditory pathway, and might allow for individualization of signal-processing strategies, based on physiological measurements. However, these auditory models are often computationally demanding, requiring significant time to compute. To address this issue, previous studies have explored the use of deep neural networks to emulate auditory models and reduce inference time. While these deep neural networks offer impressive efficiency gains in terms of computational time, they may suffer from uneven emulation performance as a function of auditory-model frequency-channels and input sound pressure level, making them unsuitable for many tasks. In this study, we demonstrate that the conventional machine-learning optimization objective used in existing state-of-the-art methods is the primary source of this limitation. Specifically, the optimization objective fails to account for the frequency- and level-dependencies of the auditory model, caused by a large input dynamic range and different types of hearing losses emulated by the auditory model. To overcome this limitation, we propose a new optimization objective that explicitly embeds the frequency- and level-dependencies of the auditory model. Our results show that this new optimization objective significantly improves the emulation performance of deep neural networks across relevant input sound levels and auditory-model frequency channels, without increasing the computational load during inference. Addressing these limitations is essential for advancing the application of auditory models in signal-processing tasks, ensuring their efficacy in diverse scenarios.",
+        "subjects": [
+            "eess.AS"
+        ],
+        "comment": "Accepted by IEEE/ACM Transactions on Audio, Speech and Language Processing. This version is the authors' version and may vary from the final publication in details"
     },
     {
         "paper id": "2403.10469",
@@ -6939,44 +6928,6 @@
         "comment": null
     },
     {
-        "paper id": "2403.10723",
-        "abstract url": "https://arxiv.org/abs/2403.10723",
-        "title": "Leveraging Symmetries in Gaits for Reinforcement Learning: A Case Study on Quadrupedal Gaits",
-        "rating": "-2",
-        "keywords": [
-            [
-                "synthesize"
-            ],
-            [
-                "trajectory"
-            ]
-        ],
-        "abstract": "In this research, we address the complex task of developing versatile and agile quadrupedal gaits for robotic platforms, a domain predominantly governed by model-based trajectory optimization methods. We propose an innovative, reference-free reinforcement learning framework that exploits the intrinsic symmetries of dynamic systems to synthesize a broad array of naturalistic quadrupedal locomotion patterns. By capitalizing on distinct symmetry characteristics - namely temporal, morphological, and time-reversal - our approach efficiently facilitates the generation and transition among diverse gaits such as pronking, bounding half-bounding and galloping, across a spectrum of velocities, circumventing the necessity for expert-generated trajectories or complex reward structures. Implemented on the Petoi Bittle robotic model, our methodology illustrates robust and adaptable gait generation capabilities, significantly broadening the scope for robotic mobility and speed adaptability. This contribution not only advances our comprehension of quadrupedal locomotion mechanisms but also underscores the pivotal role of symmetry in the development of scalable and effective robotic gait strategies. Our findings hold substantial implications for robotic design and control, potentially enhancing operational versatility and efficiency across a variety of deployment environments.",
-        "subjects": [
-            "eess.SY"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2403.10735",
-        "abstract url": "https://arxiv.org/abs/2403.10735",
-        "title": "Time-Robust Path Planning with Piece-Wise Linear Trajectory for Signal Temporal Logic Specifications",
-        "rating": "-2",
-        "keywords": [
-            [
-                "synthesizing"
-            ],
-            [
-                "Trajectory"
-            ]
-        ],
-        "abstract": "Real-world scenarios are characterized by timing uncertainties, e.g., delays, and disturbances. Algorithms with temporal robustness are crucial in guaranteeing the successful execution of tasks and missions in such scenarios. We study time-robust path planning for synthesizing robots' trajectories that adhere to spatial-temporal specifications expressed in Signal Temporal Logic (STL). In contrast to prior approaches that rely on {discretize}d trajectories with fixed time steps, we leverage Piece-Wise Linear (PWL) signals for the synthesis. PWL signals represent a trajectory through a sequence of time-stamped waypoints. This allows us to encode the STL formula into a Mixed-Integer Linear Program (MILP) with fewer variables. This reduction is more pronounced for specifications with a long planning horizon. To that end, we define time-robustness for PWL signals. Subsequently, we propose quantitative semantics for PWL signals according to the recursive syntax of STL and prove their soundness. We then propose an encoding strategy to transform our semantics into a MILP. Our simulations showcase the soundness and the performance of our algorithm.",
-        "subjects": [
-            "eess.SY"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2403.10786",
         "abstract url": "https://arxiv.org/abs/2403.10786",
         "title": "ContourDiff: Unpaired Image Translation with Contour-Guided Diffusion Models",
@@ -7031,8 +6982,7 @@
         "rating": "-2",
         "keywords": [
             [
-                "Diffusion",
-                "synthesis"
+                "Diffusion"
             ],
             [
                 "biometric"
@@ -7073,6 +7023,29 @@
             "cs.AI"
         ],
         "comment": "4 pages, 3 figures"
+    },
+    {
+        "paper id": "2403.10318",
+        "abstract url": "https://arxiv.org/abs/2403.10318",
+        "title": "Anytime Neural Architecture Search on Tabular Data",
+        "rating": "-2.5",
+        "keywords": [
+            [
+                "Architecture Search",
+                "NAS"
+            ],
+            [
+                "Tabular"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "The increasing demand for tabular data analysis calls for transitioning from manual architecture design to Neural Architecture Search (NAS). This transition demands an efficient and responsive anytime NAS approach that is capable of returning current optimal architectures within any given time budget while progressively enhancing architecture quality with increased budget allocation. However, the area of research on Anytime NAS for tabular data remains unexplored. To this end, we introduce ATLAS, the first anytime NAS approach tailored for tabular data. ATLAS introduces a novel two-phase filtering-and-refinement optimization scheme with joint optimization, combining the strengths of both paradigms of training-free and training-based architecture evaluation. Specifically, in the filtering phase, ATLAS employs a new zero-cost proxy specifically designed for tabular data to efficiently estimate the performance of candidate architectures, thereby obtaining a set of promising architectures. Subsequently, in the refinement phase, ATLAS leverages a fixed-budget search algorithm to schedule the training of the promising candidates, so as to accurately identify the optimal architecture. To jointly optimize the two phases for anytime NAS, we also devise a budget-aware coordinator that delivers high NAS performance within constraints. Experimental evaluations demonstrate that our ATLAS can obtain a good-performing architecture within any predefined time budget and return better architectures as and when a new time budget is made available. Overall, it reduces the search time on tabular data by up to 82.75x compared to existing NAS approaches.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": null
     },
     {
         "paper id": "2403.10339",
@@ -7148,31 +7121,6 @@
             "cs.AI"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2403.10686",
-        "abstract url": "https://arxiv.org/abs/2403.10686",
-        "title": "AutoHLS: Learning to Accelerate Design Space Exploration for HLS Designs",
-        "rating": "-2.5",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "quantum"
-            ],
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "High-level synthesis (HLS) is a design flow that leverages modern language features and flexibility, such as complex data structures, inheritance, templates, etc., to prototype hardware designs rapidly. However, exploring various design space parameters can take much time and effort for hardware engineers to meet specific design specifications. This paper proposes a novel framework called AutoHLS, which integrates a deep neural network (DNN) with Bayesian optimization (BO) to accelerate HLS hardware design optimization. Our tool focuses on HLS pragma exploration and operation transformation. It utilizes integrated DNNs to predict synthesizability within a given FPGA resource budget. We also investigate the potential of emerging quantum neural networks (QNNs) instead of classical DNNs for the AutoHLS pipeline. Our experimental results demonstrate up to a 70-fold speedup in exploration time.",
-        "subjects": [
-            "cs.AR",
-            "cs.AI",
-            "cs.LG"
-        ],
-        "comment": "5 pages, 6 figures, MWSCAS 2023"
     },
     {
         "paper id": "2403.10790",
@@ -7286,6 +7234,34 @@
             "eess.SY"
         ],
         "comment": "9 pages, 10 figures, journal"
+    },
+    {
+        "paper id": "2403.10261",
+        "abstract url": "https://arxiv.org/abs/2403.10261",
+        "title": "Learning Spatiotemporal Inconsistency via Thumbnail Layout for Face Deepfake Detection",
+        "rating": "-3",
+        "keywords": [
+            [
+                "3D"
+            ],
+            [
+                "diffusion"
+            ],
+            [
+                "graph"
+            ],
+            [
+                "Deepfake"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "The deepfake threats to society and cybersecurity have provoked significant public apprehension, driving intensified efforts within the realm of deepfake video detection. Current video-level methods are mostly based on {3D CNNs} resulting in high computational demands, although have achieved good performance. This paper introduces an elegantly simple yet effective strategy named Thumbnail Layout (TALL), which transforms a video clip into a pre-defined layout to realize the preservation of spatial and temporal dependencies. This transformation process involves sequentially masking frames at the same positions within each frame. These frames are then resized into sub-frames and reorganized into the predetermined layout, forming thumbnails. TALL is model-agnostic and has remarkable simplicity, necessitating only minimal code modifications. Furthermore, we introduce a graph reasoning block (GRB) and semantic consistency (SC) loss to strengthen TALL, culminating in TALL++. GRB enhances interactions between different semantic regions to capture semantic-level inconsistency clues. The semantic consistency loss imposes consistency constraints on semantic features to improve model generalization ability. Extensive experiments on intra-dataset, cross-dataset, diffusion-generated image detection, and deepfake generation method recognition show that TALL++ achieves results surpassing or comparable to the state-of-the-art methods, demonstrating the effectiveness of our approaches for various deepfake detection problems. The code is available at https://github.com/rainy-xu/TALL4Deepfake.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Accepted by IJCV"
     },
     {
         "paper id": "2403.10313",
@@ -7491,6 +7467,58 @@
         "comment": null
     },
     {
+        "paper id": "2403.10686",
+        "abstract url": "https://arxiv.org/abs/2403.10686",
+        "title": "AutoHLS: Learning to Accelerate Design Space Exploration for HLS Designs",
+        "rating": "-3.5",
+        "keywords": [
+            [
+                "FPGA"
+            ],
+            [
+                "quantum"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "High-level synthesis (HLS) is a design flow that leverages modern language features and flexibility, such as complex data structures, inheritance, templates, etc., to prototype hardware designs rapidly. However, exploring various design space parameters can take much time and effort for hardware engineers to meet specific design specifications. This paper proposes a novel framework called AutoHLS, which integrates a deep neural network (DNN) with Bayesian optimization (BO) to accelerate HLS hardware design optimization. Our tool focuses on HLS pragma exploration and operation transformation. It utilizes integrated DNNs to predict synthesizability within a given FPGA resource budget. We also investigate the potential of emerging quantum neural networks (QNNs) instead of classical DNNs for the AutoHLS pipeline. Our experimental results demonstrate up to a 70-fold speedup in exploration time.",
+        "subjects": [
+            "cs.AR",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "comment": "5 pages, 6 figures, MWSCAS 2023"
+    },
+    {
+        "paper id": "2404.00014",
+        "abstract url": "https://arxiv.org/abs/2404.00014",
+        "title": "Deep Geometry Handling and Fragment-wise Molecular 3D Graph Generation",
+        "rating": "-3.5",
+        "keywords": [
+            [
+                "3D"
+            ],
+            [
+                "Graph"
+            ],
+            [
+                "chemical"
+            ],
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "Most earlier 3D structure-based molecular generation approaches follow an atom-wise paradigm, incrementally adding atoms to a partially built molecular fragment within protein pockets. These methods, while effective in designing tightly bound ligands, often overlook other essential properties such as synthesizability. The fragment-wise generation paradigm offers a promising solution. However, a common challenge across both atom-wise and fragment-wise methods lies in their limited ability to co-design plausible chemical and geometrical structures, resulting in distorted conformations. In response to this challenge, we introduce the Deep Geometry Handling protocol, a more abstract design that extends the design focus beyond the model architecture. Through a comprehensive review of existing geometry-related models and their protocols, we propose a novel hybrid strategy, culminating in the development of FragGen - a geometry-reliable, fragment-wise molecular generation method. FragGen marks a significant leap forward in the quality of generated geometry and the synthesis accessibility of molecules. The efficacy of FragGen is further validated by its successful application in designing type II kinase inhibitors at the nanomolar level.",
+        "subjects": [
+            "physics.chem-ph",
+            "cs.AI",
+            "q-bio.BM"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2403.10342",
         "abstract url": "https://arxiv.org/abs/2403.10342",
         "title": "Cooperative Jamming for Physical Layer Security Enhancement Using Deep Reinforcement Learning",
@@ -7554,36 +7582,6 @@
         "subjects": [
             "cs.LG",
             "cs.AI"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2404.00014",
-        "abstract url": "https://arxiv.org/abs/2404.00014",
-        "title": "Deep Geometry Handling and Fragment-wise Molecular 3D Graph Generation",
-        "rating": "-4.5",
-        "keywords": [
-            [
-                "3D"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "Graph"
-            ],
-            [
-                "chemical"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "Most earlier 3D structure-based molecular generation approaches follow an atom-wise paradigm, incrementally adding atoms to a partially built molecular fragment within protein pockets. These methods, while effective in designing tightly bound ligands, often overlook other essential properties such as synthesizability. The fragment-wise generation paradigm offers a promising solution. However, a common challenge across both atom-wise and fragment-wise methods lies in their limited ability to co-design plausible chemical and geometrical structures, resulting in distorted conformations. In response to this challenge, we introduce the Deep Geometry Handling protocol, a more abstract design that extends the design focus beyond the model architecture. Through a comprehensive review of existing geometry-related models and their protocols, we propose a novel hybrid strategy, culminating in the development of FragGen - a geometry-reliable, fragment-wise molecular generation method. FragGen marks a significant leap forward in the quality of generated geometry and the synthesis accessibility of molecules. The efficacy of FragGen is further validated by its successful application in designing type II kinase inhibitors at the nanomolar level.",
-        "subjects": [
-            "physics.chem-ph",
-            "cs.AI",
-            "q-bio.BM"
         ],
         "comment": null
     },

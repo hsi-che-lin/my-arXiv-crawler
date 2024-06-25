@@ -112,6 +112,25 @@
         "comment": "Tech report"
     },
     {
+        "paper id": "2405.19092",
+        "abstract url": "https://arxiv.org/abs/2405.19092",
+        "title": "Benchmarking and Improving Detail Image Caption",
+        "rating": "2",
+        "keywords": [
+            [
+                "vision-language"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Image captioning has long been regarded as a fundamental task in visual understanding. Recently, however, few large vision-language model (LVLM) research discusses model's image captioning performance because of the outdated short-caption benchmarks and unreliable evaluation metrics. In this work, we propose to benchmark detail image caption task by curating high-quality evaluation datasets annotated by human experts, GPT-4V and Gemini-1.5-Pro. We also design a more reliable caption evaluation metric called CAPTURE (CAPtion evaluation by exTracting and coUpling coRE information). CAPTURE extracts visual elements, e.g., objects, attributes and relations from captions, and then matches these elements through three stages, achieving the highest consistency with expert judgements over other rule-based or model-based caption metrics. The proposed benchmark and metric provide reliable evaluation for LVLM's detailed image captioning ability. Guided by this evaluation, we further explore to unleash LVLM's detail caption capabilities by synthesizing high-quality data through a five-stage data construction pipeline. Our pipeline only uses a given LVLM itself and other open-source tools, without any human or GPT-4V annotation in the loop. Experiments show that the proposed data construction strategy significantly improves model-generated detail caption data quality for LVLMs with leading performance, and the data quality can be further improved in a self-looping paradigm. All code and dataset will be publicly available at https://github.com/foundation-multimodal-models/CAPTURE.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.19117",
         "abstract url": "https://arxiv.org/abs/2405.19117",
         "title": "ChartFormer: A Large Vision Language Model for Converting Chart Images into Tactile Accessible SVGs",
@@ -172,6 +191,27 @@
             "cs.MM"
         ],
         "comment": "Accepted in ACL 2024 Findings"
+    },
+    {
+        "paper id": "2405.19234",
+        "abstract url": "https://arxiv.org/abs/2405.19234",
+        "title": "Forward-Backward Knowledge Distillation for Continual Clustering",
+        "rating": "2",
+        "keywords": [
+            [
+                "memory efficiency"
+            ],
+            [
+                "cs.LG",
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Unsupervised Continual Learning (UCL) is a burgeoning field in machine learning, focusing on enabling neural networks to sequentially learn tasks without explicit label information. Catastrophic Forgetting (CF), where models forget previously learned tasks upon learning new ones, poses a significant challenge in continual learning, especially in UCL, where labeled information of data is not accessible. CF mitigation strategies, such as knowledge distillation and replay buffers, often face memory inefficiency and privacy issues. Although current research in UCL has endeavored to refine data representations and address CF in streaming data contexts, there is a noticeable lack of algorithms specifically designed for unsupervised clustering. To fill this gap, in this paper, we introduce the concept of Unsupervised Continual Clustering (UCC). We propose Forward-Backward Knowledge Distillation for unsupervised Continual Clustering (FBCC) to counteract CF within the context of UCC. FBCC employs a single continual learner (the ``teacher'') with a cluster projector, along with multiple student models, to address the CF issue. The proposed method consists of two phases: Forward Knowledge Distillation, where the teacher learns new clusters while retaining knowledge from previous tasks with guidance from specialized student models, and Backward Knowledge Distillation, where a student model mimics the teacher's behavior to retain task-specific knowledge, aiding the teacher in subsequent tasks. FBCC marks a pioneering approach to UCC, demonstrating enhanced performance and memory efficiency in clustering across various tasks, outperforming the application of clustering algorithms to the latent space of state-of-the-art UCL algorithms.",
+        "subjects": [
+            "cs.LG",
+            "cs.CV"
+        ],
+        "comment": null
     },
     {
         "paper id": "2405.19299",
@@ -617,6 +657,22 @@
         "comment": "31 pages, 5 Figures"
     },
     {
+        "paper id": "2405.18801",
+        "abstract url": "https://arxiv.org/abs/2405.18801",
+        "title": "SketchTriplet: Self-Supervised Scenarized Sketch-Text-Image Triplet Generation",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "The scarcity of free-hand sketch presents a challenging problem. Despite the emergence of some large-scale sketch datasets, these datasets primarily consist of sketches at the single-object level. There continues to be a lack of large-scale paired datasets for scene sketches. In this paper, we propose a self-supervised method for scene sketch generation that does not rely on any existing scene sketch, enabling the transformation of single-object sketches into scene sketches. To accomplish this, we introduce a method for vector sketch captioning and sketch semantic expansion. Additionally, we design a sketch generation network that incorporates a fusion of multi-modal perceptual constraints, suitable for application in zero-shot image-to-sketch downstream task, demonstrating state-of-the-art performance through experimental validation. Finally, leveraging our proposed sketch-to-sketch generation method, we contribute a large-scale dataset centered around scene sketches, comprising highly semantically consistent \"text-sketch-image\" triplets. Our research confirms that this dataset can significantly enhance the capabilities of existing models in sketch-based image retrieval and sketch-controlled image synthesis tasks. We will make our dataset and code publicly available.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.18822",
         "abstract url": "https://arxiv.org/abs/2405.18822",
         "title": "Toxicity Detection for Free",
@@ -934,22 +990,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.19005",
-        "abstract url": "https://arxiv.org/abs/2405.19005",
-        "title": "Auto-selected Knowledge Adapters for Lifelong Person Re-identification",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Lifelong Person Re-Identification (LReID) extends traditional ReID by requiring systems to continually learn from non-overlapping datasets across different times and locations, adapting to new identities while preserving knowledge of previous ones. Existing approaches, either rehearsal-free or rehearsal-based, still suffer from the problem of catastrophic forgetting since they try to cram diverse knowledge into one fixed model. To overcome this limitation, we introduce a novel framework AdalReID, that adopts knowledge adapters and a parameter-free auto-selection mechanism for lifelong learning. Concretely, we incrementally build distinct adapters to learn domain-specific knowledge at each step, which can effectively learn and preserve knowledge across different datasets. Meanwhile, the proposed auto-selection strategy adaptively calculates the knowledge similarity between the input set and the adapters. On the one hand, the appropriate adapters are selected for the inputs to process ReID, and on the other hand, the knowledge interaction and fusion between adapters are enhanced to improve the generalization ability of the model. Extensive experiments are conducted to demonstrate the superiority of our AdalReID, which significantly outperforms SOTAs by about 10$\\sim$20\\% mAP on both seen and unseen domains.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2405.19010",
         "abstract url": "https://arxiv.org/abs/2405.19010",
         "title": "Evaluating the External and Parametric Knowledge Fusion of Large Language Models",
@@ -1042,46 +1082,6 @@
             "cs.CV"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2405.19092",
-        "abstract url": "https://arxiv.org/abs/2405.19092",
-        "title": "Benchmarking and Improving Detail Image Caption",
-        "rating": "1",
-        "keywords": [
-            [
-                "vision-language"
-            ],
-            [
-                "synthesizing"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Image captioning has long been regarded as a fundamental task in visual understanding. Recently, however, few large vision-language model (LVLM) research discusses model's image captioning performance because of the outdated short-caption benchmarks and unreliable evaluation metrics. In this work, we propose to benchmark detail image caption task by curating high-quality evaluation datasets annotated by human experts, GPT-4V and Gemini-1.5-Pro. We also design a more reliable caption evaluation metric called CAPTURE (CAPtion evaluation by exTracting and coUpling coRE information). CAPTURE extracts visual elements, e.g., objects, attributes and relations from captions, and then matches these elements through three stages, achieving the highest consistency with expert judgements over other rule-based or model-based caption metrics. The proposed benchmark and metric provide reliable evaluation for LVLM's detailed image captioning ability. Guided by this evaluation, we further explore to unleash LVLM's detail caption capabilities by synthesizing high-quality data through a five-stage data construction pipeline. Our pipeline only uses a given LVLM itself and other open-source tools, without any human or GPT-4V annotation in the loop. Experiments show that the proposed data construction strategy significantly improves model-generated detail caption data quality for LVLMs with leading performance, and the data quality can be further improved in a self-looping paradigm. All code and dataset will be publicly available at https://github.com/foundation-multimodal-models/CAPTURE.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2405.19094",
-        "abstract url": "https://arxiv.org/abs/2405.19094",
-        "title": "Faithful Chart Summarization with ChaTS-Pi",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Chart-to-summary generation can help explore data, communicate insights, and help the visually impaired people. Multi-modal generative models have been used to produce fluent summaries, but they can suffer from factual and perceptual errors. In this work we present CHATS-CRITIC, a reference-free chart summarization metric for scoring faithfulness. CHATS-CRITIC is composed of an image-to-text model to recover the table from a chart, and a tabular entailment model applied to score the summary sentence by sentence. We find that CHATS-CRITIC evaluates the summary quality according to human ratings better than reference-based metrics, either learned or n-gram based, and can be further used to fix candidate summaries by removing not supported sentences. We then introduce CHATS-PI, a chart-to-summary pipeline that leverages CHATS-CRITIC during inference to fix and rank sampled candidates from any chart-summarization model. We evaluate CHATS-PI and CHATS-CRITIC using human raters, establishing state-of-the-art results on two popular chart-to-summary datasets.",
-        "subjects": [
-            "cs.CL",
-            "cs.AI"
-        ],
-        "comment": "To be published in the proceedings of the 2024 Annual Meeting of the Association for Computational Linguistics"
     },
     {
         "paper id": "2405.19111",
@@ -1221,24 +1221,6 @@
         "abstract": "The recent successes and spread of large neural language models (LMs) call for a thorough understanding of their computational ability. Describing their computational abilities through LMs' \\emph{representational capacity} is a lively area of research. However, investigation into the representational capacity of neural LMs has predominantly focused on their ability to \\emph{recognize} formal languages. For example, recurrent neural networks (RNNs) with Heaviside activations are tightly linked to regular languages, i.e., languages defined by finite-state automata (FSAs). Such results, however, fall short of describing the capabilities of RNN \\emph{language models} (LMs), which are definitionally \\emph{distributions} over strings. We take a fresh look at the representational capacity of RNN LMs by connecting them to \\emph{probabilistic} FSAs and demonstrate that RNN LMs with linearly bounded precision can express arbitrary regular LMs.",
         "subjects": [
             "cs.CL"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2405.19234",
-        "abstract url": "https://arxiv.org/abs/2405.19234",
-        "title": "Forward-Backward Knowledge Distillation for Continual Clustering",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.LG",
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Unsupervised Continual Learning (UCL) is a burgeoning field in machine learning, focusing on enabling neural networks to sequentially learn tasks without explicit label information. Catastrophic Forgetting (CF), where models forget previously learned tasks upon learning new ones, poses a significant challenge in continual learning, especially in UCL, where labeled information of data is not accessible. CF mitigation strategies, such as knowledge distillation and replay buffers, often face memory inefficiency and privacy issues. Although current research in UCL has endeavored to refine data representations and address CF in streaming data contexts, there is a noticeable lack of algorithms specifically designed for unsupervised clustering. To fill this gap, in this paper, we introduce the concept of Unsupervised Continual Clustering (UCC). We propose Forward-Backward Knowledge Distillation for unsupervised Continual Clustering (FBCC) to counteract CF within the context of UCC. FBCC employs a single continual learner (the ``teacher'') with a cluster projector, along with multiple student models, to address the CF issue. The proposed method consists of two phases: Forward Knowledge Distillation, where the teacher learns new clusters while retaining knowledge from previous tasks with guidance from specialized student models, and Backward Knowledge Distillation, where a student model mimics the teacher's behavior to retain task-specific knowledge, aiding the teacher in subsequent tasks. FBCC marks a pioneering approach to UCC, demonstrating enhanced performance and memory efficiency in clustering across various tasks, outperforming the application of clustering algorithms to the latent space of state-of-the-art UCL algorithms.",
-        "subjects": [
-            "cs.LG",
-            "cs.CV"
         ],
         "comment": null
     },
@@ -1856,6 +1838,25 @@
         "comment": null
     },
     {
+        "paper id": "2405.19653",
+        "abstract url": "https://arxiv.org/abs/2405.19653",
+        "title": "SysCaps: Language Interfaces for Simulation Surrogates of Complex Systems",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.LG",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Data-driven simulation surrogates help computational scientists study complex systems. They can also help inform impactful policy decisions. We introduce a learning framework for surrogate modeling where language is used to interface with the underlying system being simulated. We call a language description of a system a \"system caption\", or SysCap. To address the lack of datasets of paired natural language SysCaps and simulation runs, we use large language models (LLMs) to synthesize high-quality captions. Using our framework, we train multimodal text and timeseries regression models for two real-world simulators of complex energy systems. Our experiments demonstrate the feasibility of designing language interfaces for real-world surrogate models at comparable accuracy to standard baselines. We qualitatively and quantitatively show that SysCaps unlock text-prompt-style surrogate modeling and new generalization abilities beyond what was previously possible. We will release the generated SysCaps datasets and our code to support follow-on studies.",
+        "subjects": [
+            "cs.LG",
+            "cs.CL",
+            "eess.SY"
+        ],
+        "comment": "17 pages. Under review"
+    },
+    {
         "paper id": "2405.19669",
         "abstract url": "https://arxiv.org/abs/2405.19669",
         "title": "Texture-guided Coding for Deep Features",
@@ -1959,23 +1960,6 @@
             "cs.LG"
         ],
         "comment": "38 pages, 2 figures"
-    },
-    {
-        "paper id": "2405.18795",
-        "abstract url": "https://arxiv.org/abs/2405.18795",
-        "title": "Federated Q-Learning with Reference-Advantage Decomposition: Almost Optimal Regret and Logarithmic Communication Cost",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "In this paper, we consider model-free federated reinforcement learning for tabular episodic Markov decision processes. Under the coordination of a central server, multiple agents collaboratively explore the environment and learn an optimal policy without sharing their raw data. Despite recent advances in federated Q-learning algorithms achieving near-linear regret speedup with low communication cost, existing algorithms only attain suboptimal regrets compared to the information bound. We propose a novel model-free federated Q-learning algorithm, termed FedQ-Advantage. Our algorithm leverages reference-advantage decomposition for variance reduction and operates under two distinct mechanisms: synchronization between the agents and the server, and policy update, both triggered by events. We prove that our algorithm not only requires a lower logarithmic communication cost but also achieves an almost optimal regret, reaching the information bound up to a logarithmic factor and near-linear regret speedup compared to its single-agent counterpart when the time horizon is sufficiently large.",
-        "subjects": [
-            "stat.ML",
-            "cs.LG"
-        ],
-        "comment": null
     },
     {
         "paper id": "2405.18805",
@@ -2335,6 +2319,23 @@
         "comment": null
     },
     {
+        "paper id": "2405.19029",
+        "abstract url": "https://arxiv.org/abs/2405.19029",
+        "title": "Convex neural network synthesis for robustness in the 1-norm",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "With neural networks being used to control safety-critical systems, they increasingly have to be both accurate (in the sense of matching inputs to outputs) and robust. However, these two properties are often at odds with each other and a trade-off has to be navigated. To address this issue, this paper proposes a method to generate an approximation of a neural network which is certifiably more robust. Crucially, the method is fully convex and posed as a semi-definite programme. An application to robustifying model predictive control is used to demonstrate the results. The aim of this work is to introduce a method to navigate the neural network robustness/accuracy trade-off.",
+        "subjects": [
+            "eess.SY",
+            "cs.AI"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.19032",
         "abstract url": "https://arxiv.org/abs/2405.19032",
         "title": "Large Language Models for Code Summarization",
@@ -2648,26 +2649,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.19213",
-        "abstract url": "https://arxiv.org/abs/2405.19213",
-        "title": "HawkVision: Low-Latency Modeless Edge AI Serving",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "The trend of modeless ML inference is increasingly growing in popularity as it hides the complexity of model inference from users and caters to diverse user and application accuracy requirements. Previous work mostly focuses on modeless inference in data centers. To provide low-latency inference, in this paper, we promote modeless inference at the edge. The edge environment introduces additional challenges related to low power consumption, limited device memory, and volatile network environments. To address these challenges, we propose HawkVision, which provides low-latency modeless serving of vision DNNs. HawkVision leverages a two-layer edge-DC architecture that employs confidence scaling to reduce the number of model options while meeting diverse accuracy requirements. It also supports lossy inference under volatile network environments. Our experimental results show that HawkVision outperforms current serving systems by up to 1.6X in P99 latency for providing modeless service. Our FPGA prototype demonstrates similar performance at certain accuracy levels with up to a 3.34X reduction in power consumption.",
-        "subjects": [
-            "eess.SY",
-            "cs.AI",
-            "cs.LG",
-            "cs.NI"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2405.19225",
         "abstract url": "https://arxiv.org/abs/2405.19225",
         "title": "Synthetic Potential Outcomes for Mixtures of Treatment Effects",
@@ -2818,24 +2799,6 @@
             "cs.AR"
         ],
         "comment": "14 pages, 10 figures, 4 tables, IEEE Transactions on Circuits and Systems for Artificial Intelligence"
-    },
-    {
-        "paper id": "2405.19300",
-        "abstract url": "https://arxiv.org/abs/2405.19300",
-        "title": "Measuring and Mitigating Bias for Tabular Datasets with Multiple Protected Attributes",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Motivated by the recital (67) of the current corrigendum of the AI Act in the European Union, we propose and present measures and mitigation strategies for discrimination in tabular datasets. We specifically focus on datasets that contain multiple protected attributes, such as nationality, age, and sex. This makes measuring and mitigating bias more challenging, as many existing methods are designed for a single protected attribute. This paper comes with a twofold contribution: Firstly, new discrimination measures are introduced. These measures are categorized in our framework along with existing ones, guiding researchers and practitioners in choosing the right measure to assess the fairness of the underlying dataset. Secondly, a novel application of an existing bias mitigation method, FairDo, is presented. We show that this strategy can mitigate any type of discrimination, including intersectional discrimination, by transforming the dataset. By conducting experiments on real-world datasets (Adult, Bank, Compas), we demonstrate that de-biasing datasets with multiple protected attributes is achievable. Further, the transformed fair datasets do not compromise any of the tested machine learning models' performances significantly when trained on these datasets compared to the original datasets. Discrimination was reduced by up to 83% in our experimentation. For most experiments, the disparity between protected groups was reduced by at least 7% and 27% on average. Generally, the findings show that the mitigation strategy used is effective, and this study contributes to the ongoing discussion on the implementation of the European Union's AI Act.",
-        "subjects": [
-            "cs.LG",
-            "cs.AI"
-        ],
-        "comment": "12 pages, 13 figures"
     },
     {
         "paper id": "2405.19317",
@@ -3089,6 +3052,23 @@
         "comment": null
     },
     {
+        "paper id": "2405.19581",
+        "abstract url": "https://arxiv.org/abs/2405.19581",
+        "title": "Source Code Foundation Models are Transferable Binary Analysis Knowledge Bases",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "Human-Oriented Binary Reverse Engineering (HOBRE) lies at the intersection of binary and source code, aiming to lift binary code to human-readable content relevant to source code, thereby bridging the binary-source semantic gap. Recent advancements in uni-modal code model pre-training, particularly in generative Source Code Foundation Models (SCFMs) and binary understanding models, have laid the groundwork for transfer learning applicable to HOBRE. However, existing approaches for HOBRE rely heavily on uni-modal models like SCFMs for supervised fine-tuning or general LLMs for prompting, resulting in sub-optimal performance. Inspired by recent progress in large multi-modal models, we propose that it is possible to harness the strengths of uni-modal code models from both sides to bridge the semantic gap effectively. In this paper, we introduce a novel probe-and-recover framework that incorporates a binary-source encoder-decoder model and black-box LLMs for binary analysis. Our approach leverages the pre-trained knowledge within SCFMs to synthesize relevant, symbol-rich code fragments as context. This additional context enables black-box LLMs to enhance recovery accuracy. We demonstrate significant improvements in zero-shot binary summarization and binary function name recovery, with a 10.3% relative gain in CHRF and a 16.7% relative gain in a GPT4-based metric for summarization, as well as a 6.7% and 7.4% absolute increase in token-level precision and recall for name recovery, respectively. These results highlight the effectiveness of our approach in automating and improving binary code analysis.",
+        "subjects": [
+            "cs.SE",
+            "cs.AI"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.19586",
         "abstract url": "https://arxiv.org/abs/2405.19586",
         "title": "SAM-E: Leveraging Visual Foundation Model with Sequence Imitation for Embodied Manipulation",
@@ -3265,6 +3245,27 @@
         "comment": null
     },
     {
+        "paper id": "2405.18784",
+        "abstract url": "https://arxiv.org/abs/2405.18784",
+        "title": "LP-3DGS: Learning to Prune 3D Gaussian Splatting",
+        "rating": "0",
+        "keywords": [
+            [
+                "3D",
+                "Gaussian Splatting",
+                "point cloud"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Recently, 3D Gaussian Splatting (3DGS) has become one of the mainstream methodologies for novel view synthesis (NVS) due to its high quality and fast rendering speed. However, as a point-based scene representation, 3DGS potentially generates a large number of Gaussians to fit the scene, leading to high memory usage. Improvements that have been proposed require either an empirical and preset pruning ratio or importance score threshold to prune the point cloud. Such hyperparamter requires multiple rounds of training to optimize and achieve the maximum pruning ratio, while maintaining the rendering quality for each scene. In this work, we propose learning-to-prune 3DGS (LP-3DGS), where a trainable binary mask is applied to the importance score that can find optimal pruning ratio automatically. Instead of using the traditional straight-through estimator (STE) method to approximate the binary mask gradient, we redesign the masking function to leverage the Gumbel-Sigmoid method, making it differentiable and compatible with the existing training process of 3DGS. Extensive experiments have shown that LP-3DGS consistently produces a good balance that is both efficient and high quality.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.18790",
         "abstract url": "https://arxiv.org/abs/2405.18790",
         "title": "Opinion-Unaware Blind Image Quality Assessment using Multi-Scale Deep Feature Statistics",
@@ -3288,25 +3289,6 @@
             "eess.IV"
         ],
         "comment": "Accepted to IEEE Transactions on Multimedia 2024"
-    },
-    {
-        "paper id": "2405.18801",
-        "abstract url": "https://arxiv.org/abs/2405.18801",
-        "title": "SketchTriplet: Self-Supervised Scenarized Sketch-Text-Image Triplet Generation",
-        "rating": "0",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "The scarcity of free-hand sketch presents a challenging problem. Despite the emergence of some large-scale sketch datasets, these datasets primarily consist of sketches at the single-object level. There continues to be a lack of large-scale paired datasets for scene sketches. In this paper, we propose a self-supervised method for scene sketch generation that does not rely on any existing scene sketch, enabling the transformation of single-object sketches into scene sketches. To accomplish this, we introduce a method for vector sketch captioning and sketch semantic expansion. Additionally, we design a sketch generation network that incorporates a fusion of multi-modal perceptual constraints, suitable for application in zero-shot image-to-sketch downstream task, demonstrating state-of-the-art performance through experimental validation. Finally, leveraging our proposed sketch-to-sketch generation method, we contribute a large-scale dataset centered around scene sketches, comprising highly semantically consistent \"text-sketch-image\" triplets. Our research confirms that this dataset can significantly enhance the capabilities of existing models in sketch-based image retrieval and sketch-controlled image synthesis tasks. We will make our dataset and code publicly available.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
     },
     {
         "paper id": "2405.18839",
@@ -3408,6 +3390,47 @@
             "cs.LG"
         ],
         "comment": "12 pages, 7 figures"
+    },
+    {
+        "paper id": "2405.18991",
+        "abstract url": "https://arxiv.org/abs/2405.18991",
+        "title": "EasyAnimate: A High-Performance Long Video Generation Method based on Transformer Architecture",
+        "rating": "0",
+        "keywords": [
+            [
+                "3D"
+            ],
+            [
+                "cs.CV",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "This paper presents EasyAnimate, an advanced method for video generation that leverages the power of transformer architecture for high-performance outcomes. We have expanded the DiT framework originally designed for 2D image synthesis to accommodate the complexities of 3D video generation by incorporating a motion module block. It is used to capture temporal dynamics, thereby ensuring the production of consistent frames and seamless motion transitions. The motion module can be adapted to various DiT baseline methods to generate video with different styles. It can also generate videos with different frame rates and resolutions during both training and inference phases, suitable for both images and videos. Moreover, we introduce slice VAE, a novel approach to condense the temporal axis, facilitating the generation of long duration videos. Currently, EasyAnimate exhibits the proficiency to generate videos with 144 frames. We provide a holistic ecosystem for video production based on DiT, encompassing aspects such as data pre-processing, VAE training, DiT models training (both the baseline model and LoRA model), and end-to-end video inference. Code is available at: https://github.com/aigc-apps/EasyAnimate. We are continuously working to enhance the performance of our method.",
+        "subjects": [
+            "cs.CV",
+            "cs.CL",
+            "cs.MM"
+        ],
+        "comment": "6 pages, 5 figures"
+    },
+    {
+        "paper id": "2405.19005",
+        "abstract url": "https://arxiv.org/abs/2405.19005",
+        "title": "Auto-selected Knowledge Adapters for Lifelong Person Re-identification",
+        "rating": "0",
+        "keywords": [
+            [
+                "Re-identification"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Lifelong Person Re-Identification (LReID) extends traditional ReID by requiring systems to continually learn from non-overlapping datasets across different times and locations, adapting to new identities while preserving knowledge of previous ones. Existing approaches, either rehearsal-free or rehearsal-based, still suffer from the problem of catastrophic forgetting since they try to cram diverse knowledge into one fixed model. To overcome this limitation, we introduce a novel framework AdalReID, that adopts knowledge adapters and a parameter-free auto-selection mechanism for lifelong learning. Concretely, we incrementally build distinct adapters to learn domain-specific knowledge at each step, which can effectively learn and preserve knowledge across different datasets. Meanwhile, the proposed auto-selection strategy adaptively calculates the knowledge similarity between the input set and the adapters. On the one hand, the appropriate adapters are selected for the inputs to process ReID, and on the other hand, the knowledge interaction and fusion between adapters are enhanced to improve the generalization ability of the model. Extensive experiments are conducted to demonstrate the superiority of our AdalReID, which significantly outperforms SOTAs by about 10$\\sim$20\\% mAP on both seen and unseen domains.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
     },
     {
         "paper id": "2405.19086",
@@ -3520,6 +3543,7 @@
         "rating": "0",
         "keywords": [
             [
+                "memory efficiency",
                 "GPU memory"
             ],
             [
@@ -3837,28 +3861,6 @@
         "comment": "Code available at: https://github.com/AlaaLab/Dr-LLaVA"
     },
     {
-        "paper id": "2405.19653",
-        "abstract url": "https://arxiv.org/abs/2405.19653",
-        "title": "SysCaps: Language Interfaces for Simulation Surrogates of Complex Systems",
-        "rating": "0",
-        "keywords": [
-            [
-                "synthesize"
-            ],
-            [
-                "cs.LG",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Data-driven simulation surrogates help computational scientists study complex systems. They can also help inform impactful policy decisions. We introduce a learning framework for surrogate modeling where language is used to interface with the underlying system being simulated. We call a language description of a system a \"system caption\", or SysCap. To address the lack of datasets of paired natural language SysCaps and simulation runs, we use large language models (LLMs) to synthesize high-quality captions. Using our framework, we train multimodal text and timeseries regression models for two real-world simulators of complex energy systems. Our experiments demonstrate the feasibility of designing language interfaces for real-world surrogate models at comparable accuracy to standard baselines. We qualitatively and quantitatively show that SysCaps unlock text-prompt-style surrogate modeling and new generalization abilities beyond what was previously possible. We will release the generated SysCaps datasets and our code to support follow-on studies.",
-        "subjects": [
-            "cs.LG",
-            "cs.CL",
-            "eess.SY"
-        ],
-        "comment": "17 pages. Under review"
-    },
-    {
         "paper id": "2405.19654",
         "abstract url": "https://arxiv.org/abs/2405.19654",
         "title": "Unlocking the Power of Spatial and Temporal Information in Medical Multimodal Pre-training",
@@ -3882,6 +3884,29 @@
             "cs.AI"
         ],
         "comment": "Accepted at ICML 2024"
+    },
+    {
+        "paper id": "2405.19657",
+        "abstract url": "https://arxiv.org/abs/2405.19657",
+        "title": "Uncertainty-guided Optimal Transport in Depth Supervised Sparse-View 3D Gaussian",
+        "rating": "0",
+        "keywords": [
+            [
+                "3D",
+                "Gaussian splatting",
+                "depth"
+            ],
+            [
+                "cs.AI",
+                "cs.CV"
+            ]
+        ],
+        "abstract": "3D Gaussian splatting has demonstrated impressive performance in real-time novel view synthesis. However, achieving successful reconstruction from RGB images generally requires multiple input views captured under static conditions. To address the challenge of sparse input views, previous approaches have incorporated depth supervision into the training of 3D Gaussians to mitigate overfitting, using dense predictions from pretrained depth networks as pseudo-ground truth. Nevertheless, depth predictions from monocular depth estimation models inherently exhibit significant uncertainty in specific areas. Relying solely on pixel-wise L2 loss may inadvertently incorporate detrimental noise from these uncertain areas. In this work, we introduce a novel method to supervise the depth distribution of 3D Gaussians, utilizing depth priors with integrated uncertainty estimates. To address these localized errors in depth predictions, we integrate a patch-wise optimal transport strategy to complement traditional L2 loss in depth supervision. Extensive experiments conducted on the LLFF, DTU, and Blender datasets demonstrate that our approach, UGOT, achieves superior novel view synthesis and consistently outperforms state-of-the-art methods.",
+        "subjects": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "comment": "10pages"
     },
     {
         "paper id": "2405.19659",
@@ -3923,6 +3948,29 @@
             "cs.CV"
         ],
         "comment": "Under review"
+    },
+    {
+        "paper id": "2405.19671",
+        "abstract url": "https://arxiv.org/abs/2405.19671",
+        "title": "GaussianRoom: Improving 3D Gaussian Splatting with SDF Guidance and Monocular Cues for Indoor Scene Reconstruction",
+        "rating": "0",
+        "keywords": [
+            [
+                "3D",
+                "Gaussian Splatting",
+                "point cloud",
+                "signed distance field",
+                "SDF"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Recently, 3D Gaussian Splatting(3DGS) has revolutionized neural rendering with its high-quality rendering and real-time speed. However, when it comes to indoor scenes with a significant number of textureless areas, 3DGS yields incomplete and noisy reconstruction results due to the poor initialization of the point cloud and under-constrained optimization. Inspired by the continuity of signed distance field (SDF), which naturally has advantages in modeling surfaces, we present a unified optimizing framework integrating neural SDF with 3DGS. This framework incorporates a learnable neural SDF field to guide the densification and pruning of Gaussians, enabling Gaussians to accurately model scenes even with poor initialized point clouds. At the same time, the geometry represented by Gaussians improves the efficiency of the SDF field by piloting its point sampling. Additionally, we regularize the optimization with normal and edge priors to eliminate geometry ambiguity in textureless areas and improve the details. Extensive experiments in ScanNet and ScanNet++ show that our method achieves state-of-the-art performance in both surface reconstruction and novel view synthesis.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
     },
     {
         "paper id": "2405.19675",
@@ -3988,6 +4036,27 @@
             "cs.CV"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2405.20224",
+        "abstract url": "https://arxiv.org/abs/2405.20224",
+        "title": "EvaGaussians: Event Stream Assisted Gaussian Splatting from Blurry Images",
+        "rating": "0",
+        "keywords": [
+            [
+                "3D",
+                "Gaussian Splatting",
+                "event camera"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "3D Gaussian Splatting (3D-GS) has demonstrated exceptional capabilities in 3D scene reconstruction and novel view synthesis. However, its training heavily depends on high-quality, sharp images and accurate camera poses. Fulfilling these requirements can be challenging in non-ideal real-world scenarios, where motion-blurred images are commonly encountered in high-speed moving cameras or low-light environments that require long exposure times. To address these challenges, we introduce Event Stream Assisted Gaussian Splatting (EvaGaussians), a novel approach that integrates event streams captured by an event camera to assist in reconstructing high-quality 3D-GS from blurry images. Capitalizing on the high temporal resolution and dynamic range offered by the event camera, we leverage the event streams to explicitly model the formation process of motion-blurred images and guide the deblurring reconstruction of 3D-GS. By jointly optimizing the 3D-GS parameters and recovering camera motion trajectories during the exposure time, our method can robustly facilitate the acquisition of high-fidelity novel views with intricate texture details. We comprehensively evaluated our method and compared it with previous state-of-the-art deblurring rendering methods. Both qualitative and quantitative comparisons demonstrate that our method surpasses existing techniques in restoring fine details from blurry images and producing high-fidelity novel views.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Project Page: https://drexubery.github.io/EvaGaussians/"
     },
     {
         "paper id": "2405.18781",
@@ -4275,26 +4344,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.19029",
-        "abstract url": "https://arxiv.org/abs/2405.19029",
-        "title": "Convex neural network synthesis for robustness in the 1-norm",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "With neural networks being used to control safety-critical systems, they increasingly have to be both accurate (in the sense of matching inputs to outputs) and robust. However, these two properties are often at odds with each other and a trade-off has to be navigated. To address this issue, this paper proposes a method to generate an approximation of a neural network which is certifiably more robust. Crucially, the method is fully convex and posed as a semi-definite programme. An application to robustifying model predictive control is used to demonstrate the results. The aim of this work is to introduce a method to navigate the neural network robustness/accuracy trade-off.",
-        "subjects": [
-            "eess.SY",
-            "cs.AI"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2405.19033",
         "abstract url": "https://arxiv.org/abs/2405.19033",
         "title": "CiliaGraph: Enabling Expression-enhanced Hyper-Dimensional Computation in Ultra-Lightweight and One-Shot Graph Classification on Edge",
@@ -4525,6 +4574,26 @@
         "comment": "17 pages, 8 figures"
     },
     {
+        "paper id": "2405.19243",
+        "abstract url": "https://arxiv.org/abs/2405.19243",
+        "title": "Challenge-Device-Synthesis: A multi-disciplinary approach for the development of social innovation competences for students of Artificial Intelligence",
+        "rating": "-0.5",
+        "keywords": [
+            [
+                "depth"
+            ],
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "The advent of Artificial Intelligence is expected to imply profound changes in the short-term. It is therefore imperative for Academia, and particularly for the Computer Science scope, to develop cross-disciplinary tools that bond AI developments to their social dimension. To this aim, we introduce the Challenge-Device-Synthesis methodology (CDS), in which a specific challenge is presented to the students of AI, who are required to develop a device as a solution for the challenge. The device becomes the object of study for the different dimensions of social transformation, and the conclusions addressed by the students during the discussion around the device are presented in a synthesis piece in the shape of a 10-page scientific paper. The latter is evaluated taking into account both the depth of analysis and the level to which it genuinely reflects the social transformations associated with the proposed AI-based device. We provide data obtained during the pilot for the implementation phase of CDS within the subject of Social Innovation, a 6-ECTS subject from the 6th semester of the Degree of Artificial Intelligence, UAB-Barcelona. We provide details on temporalisation, task distribution, methodological tools used and assessment delivery procedure, as well as qualitative analysis of the results obtained.",
+        "subjects": [
+            "cs.AI",
+            "physics.ed-ph"
+        ],
+        "comment": "accepted as contribution for EDULEARN24 - 16th annual International Conference on Education and New Learning Technologies"
+    },
+    {
         "paper id": "2405.19256",
         "abstract url": "https://arxiv.org/abs/2405.19256",
         "title": "Weak Generative Sampler to Efficiently Sample Invariant Distribution of Stochastic Differential Equation",
@@ -4711,26 +4780,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.19581",
-        "abstract url": "https://arxiv.org/abs/2405.19581",
-        "title": "Source Code Foundation Models are Transferable Binary Analysis Knowledge Bases",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "synthesize"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "Human-Oriented Binary Reverse Engineering (HOBRE) lies at the intersection of binary and source code, aiming to lift binary code to human-readable content relevant to source code, thereby bridging the binary-source semantic gap. Recent advancements in uni-modal code model pre-training, particularly in generative Source Code Foundation Models (SCFMs) and binary understanding models, have laid the groundwork for transfer learning applicable to HOBRE. However, existing approaches for HOBRE rely heavily on uni-modal models like SCFMs for supervised fine-tuning or general LLMs for prompting, resulting in sub-optimal performance. Inspired by recent progress in large multi-modal models, we propose that it is possible to harness the strengths of uni-modal code models from both sides to bridge the semantic gap effectively. In this paper, we introduce a novel probe-and-recover framework that incorporates a binary-source encoder-decoder model and black-box LLMs for binary analysis. Our approach leverages the pre-trained knowledge within SCFMs to synthesize relevant, symbol-rich code fragments as context. This additional context enables black-box LLMs to enhance recovery accuracy. We demonstrate significant improvements in zero-shot binary summarization and binary function name recovery, with a 10.3% relative gain in CHRF and a 16.7% relative gain in a GPT4-based metric for summarization, as well as a 6.7% and 7.4% absolute increase in token-level precision and recall for name recovery, respectively. These results highlight the effectiveness of our approach in automating and improving binary code analysis.",
-        "subjects": [
-            "cs.SE",
-            "cs.AI"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2405.19600",
         "abstract url": "https://arxiv.org/abs/2405.19600",
         "title": "Do spectral cues matter in contrast-based graph self-supervised learning?",
@@ -4871,30 +4920,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.18784",
-        "abstract url": "https://arxiv.org/abs/2405.18784",
-        "title": "LP-3DGS: Learning to Prune 3D Gaussian Splatting",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting",
-                "point cloud"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Recently, 3D Gaussian Splatting (3DGS) has become one of the mainstream methodologies for novel view synthesis (NVS) due to its high quality and fast rendering speed. However, as a point-based scene representation, 3DGS potentially generates a large number of Gaussians to fit the scene, leading to high memory usage. Improvements that have been proposed require either an empirical and preset pruning ratio or importance score threshold to prune the point cloud. Such hyperparamter requires multiple rounds of training to optimize and achieve the maximum pruning ratio, while maintaining the rendering quality for each scene. In this work, we propose learning-to-prune 3DGS (LP-3DGS), where a trainable binary mask is applied to the importance score that can find optimal pruning ratio automatically. Instead of using the traditional straight-through estimator (STE) method to approximate the binary mask gradient, we redesign the masking function to leverage the Gumbel-Sigmoid method, making it differentiable and compatible with the existing training process of 3DGS. Extensive experiments have shown that LP-3DGS consistently produces a good balance that is both efficient and high quality.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2405.18791",
         "abstract url": "https://arxiv.org/abs/2405.18791",
         "title": "A new platooning model for connected and autonomous vehicles to improve string stability",
@@ -4910,22 +4935,6 @@
             "math.DS"
         ],
         "comment": "preprint submitted to Physica A"
-    },
-    {
-        "paper id": "2405.18804",
-        "abstract url": "https://arxiv.org/abs/2405.18804",
-        "title": "Tilde: Teleoperation for Dexterous In-Hand Manipulation Learning with a DeltaHand",
-        "rating": "-1",
-        "keywords": [
-            [
-                "diffusion"
-            ]
-        ],
-        "abstract": "Dexterous robotic manipulation remains a challenging domain due to its strict demands for precision and robustness on both hardware and software. While dexterous robotic hands have demonstrated remarkable capabilities in complex tasks, efficiently learning adaptive control policies for hands still presents a significant hurdle given the high dimensionalities of hands and tasks. To bridge this gap, we propose Tilde, an imitation learning-based in-hand manipulation system on a dexterous DeltaHand. It leverages 1) a low-cost, configurable, simple-to-control, soft dexterous robotic hand, DeltaHand, 2) a user-friendly, precise, real-time teleoperation interface, TeleHand, and 3) an efficient and generalizable imitation learning approach with diffusion policies. Our proposed TeleHand has a kinematic twin design to the DeltaHand that enables precise one-to-one joint control of the DeltaHand during teleoperation. This facilitates efficient high-quality data collection of human demonstrations in the real world. To evaluate the effectiveness of our system, we demonstrate the fully autonomous closed-loop deployment of diffusion policies learned from demonstrations across seven dexterous manipulation tasks with an average 90% success rate.",
-        "subjects": [
-            "cs.RO"
-        ],
-        "comment": null
     },
     {
         "paper id": "2405.18808",
@@ -4994,7 +5003,6 @@
         "rating": "-1",
         "keywords": [
             [
-                "synthesis",
                 "inpainting",
                 "super-resolution"
             ],
@@ -5243,31 +5251,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.18991",
-        "abstract url": "https://arxiv.org/abs/2405.18991",
-        "title": "EasyAnimate: A High-Performance Long Video Generation Method based on Transformer Architecture",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "This paper presents EasyAnimate, an advanced method for video generation that leverages the power of transformer architecture for high-performance outcomes. We have expanded the DiT framework originally designed for 2D image synthesis to accommodate the complexities of 3D video generation by incorporating a motion module block. It is used to capture temporal dynamics, thereby ensuring the production of consistent frames and seamless motion transitions. The motion module can be adapted to various DiT baseline methods to generate video with different styles. It can also generate videos with different frame rates and resolutions during both training and inference phases, suitable for both images and videos. Moreover, we introduce slice VAE, a novel approach to condense the temporal axis, facilitating the generation of long duration videos. Currently, EasyAnimate exhibits the proficiency to generate videos with 144 frames. We provide a holistic ecosystem for video production based on DiT, encompassing aspects such as data pre-processing, VAE training, DiT models training (both the baseline model and LoRA model), and end-to-end video inference. Code is available at: https://github.com/aigc-apps/EasyAnimate. We are continuously working to enhance the performance of our method.",
-        "subjects": [
-            "cs.CV",
-            "cs.CL",
-            "cs.MM"
-        ],
-        "comment": "6 pages, 5 figures"
-    },
-    {
         "paper id": "2405.18995",
         "abstract url": "https://arxiv.org/abs/2405.18995",
         "title": "Best Ergodic Averages via Optimal Graph Filters in Reversible Markov Chains",
@@ -5321,6 +5304,27 @@
             "cs.CV"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2405.19094",
+        "abstract url": "https://arxiv.org/abs/2405.19094",
+        "title": "Faithful Chart Summarization with ChaTS-Pi",
+        "rating": "-1",
+        "keywords": [
+            [
+                "tabular"
+            ],
+            [
+                "cs.AI",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Chart-to-summary generation can help explore data, communicate insights, and help the visually impaired people. Multi-modal generative models have been used to produce fluent summaries, but they can suffer from factual and perceptual errors. In this work we present CHATS-CRITIC, a reference-free chart summarization metric for scoring faithfulness. CHATS-CRITIC is composed of an image-to-text model to recover the table from a chart, and a tabular entailment model applied to score the summary sentence by sentence. We find that CHATS-CRITIC evaluates the summary quality according to human ratings better than reference-based metrics, either learned or n-gram based, and can be further used to fix candidate summaries by removing not supported sentences. We then introduce CHATS-PI, a chart-to-summary pipeline that leverages CHATS-CRITIC during inference to fix and rank sampled candidates from any chart-summarization model. We evaluate CHATS-PI and CHATS-CRITIC using human raters, establishing state-of-the-art results on two popular chart-to-summary datasets.",
+        "subjects": [
+            "cs.CL",
+            "cs.AI"
+        ],
+        "comment": "To be published in the proceedings of the 2024 Annual Meeting of the Association for Computational Linguistics"
     },
     {
         "paper id": "2405.19129",
@@ -5712,22 +5716,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.19514",
-        "abstract url": "https://arxiv.org/abs/2405.19514",
-        "title": "Wavefront Threading Enables Effective High-Level Synthesis",
-        "rating": "-1",
-        "keywords": [
-            [
-                "Synthesis"
-            ]
-        ],
-        "abstract": "Digital systems are growing in importance and computing hardware is growing more heterogeneous. Hardware design, however, remains laborious and expensive, in part due to the limitations of conventional hardware description languages (HDLs) like VHDL and Verilog. A longstanding research goal has been programming hardware like software, with high-level languages that can generate efficient hardware designs. This paper describes Kanagawa, a language that takes a new approach to combine the programmer productivity benefits of traditional High-Level Synthesis (HLS) approaches with the expressibility and hardware efficiency of Register-Transfer Level (RTL) design. The language's concise syntax, matched with a hardware design-friendly execution model, permits a relatively simple toolchain to map high-level code into efficient hardware implementations.",
-        "subjects": [
-            "cs.PL"
-        ],
-        "comment": "Accepted to PLDI'24"
-    },
-    {
         "paper id": "2405.19519",
         "abstract url": "https://arxiv.org/abs/2405.19519",
         "title": "Two-layer retrieval augmented generation framework for low-resource medical question-answering: proof of concept using Reddit data",
@@ -5918,32 +5906,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.19657",
-        "abstract url": "https://arxiv.org/abs/2405.19657",
-        "title": "Uncertainty-guided Optimal Transport in Depth Supervised Sparse-View 3D Gaussian",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian splatting",
-                "depth"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.AI",
-                "cs.CV"
-            ]
-        ],
-        "abstract": "3D Gaussian splatting has demonstrated impressive performance in real-time novel view synthesis. However, achieving successful reconstruction from RGB images generally requires multiple input views captured under static conditions. To address the challenge of sparse input views, previous approaches have incorporated depth supervision into the training of 3D Gaussians to mitigate overfitting, using dense predictions from pretrained depth networks as pseudo-ground truth. Nevertheless, depth predictions from monocular depth estimation models inherently exhibit significant uncertainty in specific areas. Relying solely on pixel-wise L2 loss may inadvertently incorporate detrimental noise from these uncertain areas. In this work, we introduce a novel method to supervise the depth distribution of 3D Gaussians, utilizing depth priors with integrated uncertainty estimates. To address these localized errors in depth predictions, we integrate a patch-wise optimal transport strategy to complement traditional L2 loss in depth supervision. Extensive experiments conducted on the LLFF, DTU, and Blender datasets demonstrate that our approach, UGOT, achieves superior novel view synthesis and consistently outperforms state-of-the-art methods.",
-        "subjects": [
-            "cs.CV",
-            "cs.AI"
-        ],
-        "comment": "10pages"
-    },
-    {
         "paper id": "2405.19660",
         "abstract url": "https://arxiv.org/abs/2405.19660",
         "title": "PATIENT-\u03a8: Using Large Language Models to Simulate Patients for Training Mental Health Professionals",
@@ -5961,32 +5923,6 @@
             "cs.CL"
         ],
         "comment": "Work in progress"
-    },
-    {
-        "paper id": "2405.19671",
-        "abstract url": "https://arxiv.org/abs/2405.19671",
-        "title": "GaussianRoom: Improving 3D Gaussian Splatting with SDF Guidance and Monocular Cues for Indoor Scene Reconstruction",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting",
-                "point cloud",
-                "signed distance field",
-                "SDF"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Recently, 3D Gaussian Splatting(3DGS) has revolutionized neural rendering with its high-quality rendering and real-time speed. However, when it comes to indoor scenes with a significant number of textureless areas, 3DGS yields incomplete and noisy reconstruction results due to the poor initialization of the point cloud and under-constrained optimization. Inspired by the continuity of signed distance field (SDF), which naturally has advantages in modeling surfaces, we present a unified optimizing framework integrating neural SDF with 3DGS. This framework incorporates a learnable neural SDF field to guide the densification and pruning of Gaussians, enabling Gaussians to accurately model scenes even with poor initialized point clouds. At the same time, the geometry represented by Gaussians improves the efficiency of the SDF field by piloting its point sampling. Additionally, we regularize the optimization with normal and edge priors to eliminate geometry ambiguity in textureless areas and improve the details. Extensive experiments in ScanNet and ScanNet++ show that our method achieves state-of-the-art performance in both surface reconstruction and novel view synthesis.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
     },
     {
         "paper id": "2405.19672",
@@ -6030,30 +5966,6 @@
             "cs.CV"
         ],
         "comment": "A survey on the underwater image enhancement task"
-    },
-    {
-        "paper id": "2405.20224",
-        "abstract url": "https://arxiv.org/abs/2405.20224",
-        "title": "EvaGaussians: Event Stream Assisted Gaussian Splatting from Blurry Images",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting",
-                "event camera"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "3D Gaussian Splatting (3D-GS) has demonstrated exceptional capabilities in 3D scene reconstruction and novel view synthesis. However, its training heavily depends on high-quality, sharp images and accurate camera poses. Fulfilling these requirements can be challenging in non-ideal real-world scenarios, where motion-blurred images are commonly encountered in high-speed moving cameras or low-light environments that require long exposure times. To address these challenges, we introduce Event Stream Assisted Gaussian Splatting (EvaGaussians), a novel approach that integrates event streams captured by an event camera to assist in reconstructing high-quality 3D-GS from blurry images. Capitalizing on the high temporal resolution and dynamic range offered by the event camera, we leverage the event streams to explicitly model the formation process of motion-blurred images and guide the deblurring reconstruction of 3D-GS. By jointly optimizing the 3D-GS parameters and recovering camera motion trajectories during the exposure time, our method can robustly facilitate the acquisition of high-fidelity novel views with intricate texture details. We comprehensively evaluated our method and compared it with previous state-of-the-art deblurring rendering methods. Both qualitative and quantitative comparisons demonstrate that our method surpasses existing techniques in restoring fine details from blurry images and producing high-fidelity novel views.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Project Page: https://drexubery.github.io/EvaGaussians/"
     },
     {
         "paper id": "2405.20354",
@@ -6120,6 +6032,26 @@
             "cs.LG"
         ],
         "comment": "The Twelfth International Conference on Learning Representations"
+    },
+    {
+        "paper id": "2405.18795",
+        "abstract url": "https://arxiv.org/abs/2405.18795",
+        "title": "Federated Q-Learning with Reference-Advantage Decomposition: Almost Optimal Regret and Logarithmic Communication Cost",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "tabular"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "In this paper, we consider model-free federated reinforcement learning for tabular episodic Markov decision processes. Under the coordination of a central server, multiple agents collaboratively explore the environment and learn an optimal policy without sharing their raw data. Despite recent advances in federated Q-learning algorithms achieving near-linear regret speedup with low communication cost, existing algorithms only attain suboptimal regrets compared to the information bound. We propose a novel model-free federated Q-learning algorithm, termed FedQ-Advantage. Our algorithm leverages reference-advantage decomposition for variance reduction and operates under two distinct mechanisms: synchronization between the agents and the server, and policy update, both triggered by events. We prove that our algorithm not only requires a lower logarithmic communication cost but also achieves an almost optimal regret, reaching the information bound up to a logarithmic factor and near-linear regret speedup compared to its single-agent counterpart when the time horizon is sufficiently large.",
+        "subjects": [
+            "stat.ML",
+            "cs.LG"
+        ],
+        "comment": null
     },
     {
         "paper id": "2405.18802",
@@ -6450,6 +6382,29 @@
         "comment": null
     },
     {
+        "paper id": "2405.19213",
+        "abstract url": "https://arxiv.org/abs/2405.19213",
+        "title": "HawkVision: Low-Latency Modeless Edge AI Serving",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "FPGA"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "The trend of modeless ML inference is increasingly growing in popularity as it hides the complexity of model inference from users and caters to diverse user and application accuracy requirements. Previous work mostly focuses on modeless inference in data centers. To provide low-latency inference, in this paper, we promote modeless inference at the edge. The edge environment introduces additional challenges related to low power consumption, limited device memory, and volatile network environments. To address these challenges, we propose HawkVision, which provides low-latency modeless serving of vision DNNs. HawkVision leverages a two-layer edge-DC architecture that employs confidence scaling to reduce the number of model options while meeting diverse accuracy requirements. It also supports lossy inference under volatile network environments. Our experimental results show that HawkVision outperforms current serving systems by up to 1.6X in P99 latency for providing modeless service. Our FPGA prototype demonstrates similar performance at certain accuracy levels with up to a 3.34X reduction in power consumption.",
+        "subjects": [
+            "eess.SY",
+            "cs.AI",
+            "cs.LG",
+            "cs.NI"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.19221",
         "abstract url": "https://arxiv.org/abs/2405.19221",
         "title": "Domain adaptation in small-scale and heterogeneous biological datasets",
@@ -6468,29 +6423,6 @@
             "cs.LG"
         ],
         "comment": "main manuscript + supplement"
-    },
-    {
-        "paper id": "2405.19243",
-        "abstract url": "https://arxiv.org/abs/2405.19243",
-        "title": "Challenge-Device-Synthesis: A multi-disciplinary approach for the development of social innovation competences for students of Artificial Intelligence",
-        "rating": "-1.5",
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "Synthesis"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "The advent of Artificial Intelligence is expected to imply profound changes in the short-term. It is therefore imperative for Academia, and particularly for the Computer Science scope, to develop cross-disciplinary tools that bond AI developments to their social dimension. To this aim, we introduce the Challenge-Device-Synthesis methodology (CDS), in which a specific challenge is presented to the students of AI, who are required to develop a device as a solution for the challenge. The device becomes the object of study for the different dimensions of social transformation, and the conclusions addressed by the students during the discussion around the device are presented in a synthesis piece in the shape of a 10-page scientific paper. The latter is evaluated taking into account both the depth of analysis and the level to which it genuinely reflects the social transformations associated with the proposed AI-based device. We provide data obtained during the pilot for the implementation phase of CDS within the subject of Social Innovation, a 6-ECTS subject from the 6th semester of the Degree of Artificial Intelligence, UAB-Barcelona. We provide details on temporalisation, task distribution, methodological tools used and assessment delivery procedure, as well as qualitative analysis of the results obtained.",
-        "subjects": [
-            "cs.AI",
-            "physics.ed-ph"
-        ],
-        "comment": "accepted as contribution for EDULEARN24 - 16th annual International Conference on Education and New Learning Technologies"
     },
     {
         "paper id": "2405.19276",
@@ -6533,6 +6465,27 @@
             "cs.LG"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2405.19300",
+        "abstract url": "https://arxiv.org/abs/2405.19300",
+        "title": "Measuring and Mitigating Bias for Tabular Datasets with Multiple Protected Attributes",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "Tabular"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Motivated by the recital (67) of the current corrigendum of the AI Act in the European Union, we propose and present measures and mitigation strategies for discrimination in tabular datasets. We specifically focus on datasets that contain multiple protected attributes, such as nationality, age, and sex. This makes measuring and mitigating bias more challenging, as many existing methods are designed for a single protected attribute. This paper comes with a twofold contribution: Firstly, new discrimination measures are introduced. These measures are categorized in our framework along with existing ones, guiding researchers and practitioners in choosing the right measure to assess the fairness of the underlying dataset. Secondly, a novel application of an existing bias mitigation method, FairDo, is presented. We show that this strategy can mitigate any type of discrimination, including intersectional discrimination, by transforming the dataset. By conducting experiments on real-world datasets (Adult, Bank, Compas), we demonstrate that de-biasing datasets with multiple protected attributes is achievable. Further, the transformed fair datasets do not compromise any of the tested machine learning models' performances significantly when trained on these datasets compared to the original datasets. Discrimination was reduced by up to 83% in our experimentation. For most experiments, the disparity between protected groups was reduced by at least 7% and 27% on average. Generally, the findings show that the mitigation strategy used is effective, and this study contributes to the ongoing discussion on the implementation of the European Union's AI Act.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI"
+        ],
+        "comment": "12 pages, 13 figures"
     },
     {
         "paper id": "2405.19384",
@@ -6622,6 +6575,25 @@
             "cs.LG"
         ],
         "comment": "10 pages, 8 figures, 2 tables"
+    },
+    {
+        "paper id": "2405.19456",
+        "abstract url": "https://arxiv.org/abs/2405.19456",
+        "title": "An Automated Startup Evaluation Pipeline: Startup Success Forecasting Framework (SSFF)",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "Forecasting"
+            ],
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "Evaluating startups in their early stages is a complex task that requires detailed analysis by experts. While automating this process on a large scale can significantly impact businesses, the inherent complexity poses challenges. This paper addresses this challenge by introducing the Startup Success Forecasting Framework (SSFF), a new automated system that combines traditional machine learning with advanced language models. This intelligent agent-based architecture is designed to reason, act, synthesize, and decide like a venture capitalist to perform the analysis end-to-end. The SSFF is made up of three main parts: - Prediction Block: Uses random forests and neural networks to make predictions. - Analyst Block: Simulates VC analysis scenario and uses SOTA prompting techniques - External Knowledge Block: Gathers real-time information from external sources. This framework requires minimal input data about the founder and startup description, enhances it with additional data from external resources, and performs a detailed analysis with high accuracy, all in an automated manner",
+        "subjects": [
+            "cs.AI"
+        ],
+        "comment": "For relevant code: https://github.com/Xisen-Wang/Startup-Success-Forecasting-Framework"
     },
     {
         "paper id": "2405.19466",
@@ -6838,6 +6810,25 @@
         "comment": "17 pages, 5 figures"
     },
     {
+        "paper id": "2405.18804",
+        "abstract url": "https://arxiv.org/abs/2405.18804",
+        "title": "Tilde: Teleoperation for Dexterous In-Hand Manipulation Learning with a DeltaHand",
+        "rating": "-2",
+        "keywords": [
+            [
+                "diffusion"
+            ],
+            [
+                "robotic manipulation"
+            ]
+        ],
+        "abstract": "Dexterous robotic manipulation remains a challenging domain due to its strict demands for precision and robustness on both hardware and software. While dexterous robotic hands have demonstrated remarkable capabilities in complex tasks, efficiently learning adaptive control policies for hands still presents a significant hurdle given the high dimensionalities of hands and tasks. To bridge this gap, we propose Tilde, an imitation learning-based in-hand manipulation system on a dexterous DeltaHand. It leverages 1) a low-cost, configurable, simple-to-control, soft dexterous robotic hand, DeltaHand, 2) a user-friendly, precise, real-time teleoperation interface, TeleHand, and 3) an efficient and generalizable imitation learning approach with diffusion policies. Our proposed TeleHand has a kinematic twin design to the DeltaHand that enables precise one-to-one joint control of the DeltaHand during teleoperation. This facilitates efficient high-quality data collection of human demonstrations in the real world. To evaluate the effectiveness of our system, we demonstrate the fully autonomous closed-loop deployment of diffusion policies learned from demonstrations across seven dexterous manipulation tasks with an average 90% success rate.",
+        "subjects": [
+            "cs.RO"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.18824",
         "abstract url": "https://arxiv.org/abs/2405.18824",
         "title": "Node Injection Attack Based on Label Propagation Against Graph Neural Network",
@@ -6856,6 +6847,22 @@
             "cs.CR"
         ],
         "comment": "Accepted by TCSS;DOI:10.1109/TCSS.2024.3395794"
+    },
+    {
+        "paper id": "2405.18847",
+        "abstract url": "https://arxiv.org/abs/2405.18847",
+        "title": "Defining Requirements Strategies in Agile: A Design Science Research Study",
+        "rating": "-2",
+        "keywords": [
+            [
+                "industrial"
+            ]
+        ],
+        "abstract": "Research shows that many of the challenges currently encountered with agile development are related to requirements engineering. Based on design science research, this paper investigates critical challenges that arise in agile development from an undefined requirements strategy. We explore potential ways to address these challenges and synthesize the key building blocks of requirements strategies. Our design science research rests on a multiple case study with three industrial cases in the domains of communication technology, security services, and automotive. We relied on a total of 20 interviews, two workshops, participant observation in two cases, and document analysis in each of the cases to understand concrete challenges and workflows. In each case, we define a requirements strategy in collaboration with process managers and experienced engineers. From this experience, we extract guidelines for defining requirements strategies in agile development.",
+        "subjects": [
+            "cs.SE"
+        ],
+        "comment": null
     },
     {
         "paper id": "2405.18852",
@@ -6900,6 +6907,31 @@
             "cs.RO"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2405.18863",
+        "abstract url": "https://arxiv.org/abs/2405.18863",
+        "title": "Neural Radiance Fields for Novel View Synthesis in Monocular Gastroscopy",
+        "rating": "-2",
+        "keywords": [
+            [
+                "3D",
+                "point cloud",
+                "NeRF",
+                "Radiance Fields"
+            ],
+            [
+                "diagnosis"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Enabling the synthesis of arbitrarily novel viewpoint images within a patient's stomach from pre-captured monocular gastroscopic images is a promising topic in stomach diagnosis. Typical methods to achieve this objective integrate traditional 3D reconstruction techniques, including structure-from-motion (SfM) and Poisson surface reconstruction. These methods produce explicit 3D representations, such as point clouds and meshes, thereby enabling the rendering of the images from novel viewpoints. However, the existence of low-texture and non-Lambertian regions within the stomach often results in noisy and incomplete reconstructions of point clouds and meshes, hindering the attainment of high-quality image rendering. In this paper, we apply the emerging technique of neural radiance fields (NeRF) to monocular gastroscopic data for synthesizing photo-realistic images for novel viewpoints. To address the performance degradation due to view sparsity in local regions of monocular gastroscopy, we incorporate geometry priors from a pre-reconstructed point cloud into the training of NeRF, which introduces a novel geometry-based loss to both pre-captured observed views and generated unobserved views. Compared to other recent NeRF methods, our approach showcases high-fidelity image renderings from novel viewpoints within the stomach both qualitatively and quantitatively.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Accepted for EMBC 2024"
     },
     {
         "paper id": "2405.18955",
@@ -6959,6 +6991,22 @@
             "cs.IR"
         ],
         "comment": "5 pages, 3 figures"
+    },
+    {
+        "paper id": "2405.18992",
+        "abstract url": "https://arxiv.org/abs/2405.18992",
+        "title": "A Digital Beamforming Receiver Architecture Implemented on a FPGA for Space Applications",
+        "rating": "-2",
+        "keywords": [
+            [
+                "FPGA"
+            ]
+        ],
+        "abstract": "The burgeoning interest within the space community in digital beamforming is largely attributable to the superior flexibility that satellites with active antenna systems offer for a wide range of applications, notably in communication services. This paper delves into the analysis and practical implementation of a Digital Beamforming and Digital Down Conversion (DDC) chain, leveraging a high-speed Analog-to-Digital Converter (ADC) certified for space applications alongside a high-performance Field-Programmable Gate Array (FPGA). The proposed design strategy focuses on optimizing resource efficiency and minimizing power consumption by strategically sequencing the beamformer processor ahead of the complex down-conversion operation. This innovative approach entails the application of demodulation and low-pass filtering exclusively to the aggregated beam channel, culminating in a marked reduction in the requisite digital signal processing resources relative to traditional, more resource-intensive digital beamforming and DDC architectures. In the experimental validation, an evaluation board integrating a high-speed ADC and a FPGA was utilized. This setup facilitated the empirical validation of the design's efficacy by applying various RF input signals to the digital beamforming receiver system. The ADC employed is capable of high-resolution signal processing, while the FPGA provides the necessary computational flexibility and speed for real-time digital signal processing tasks. The findings underscore the potential of this design to significantly enhance the efficiency and performance of digital beamforming systems in space applications.",
+        "subjects": [
+            "eess.SP"
+        ],
+        "comment": null
     },
     {
         "paper id": "2405.19026",
@@ -7059,7 +7107,6 @@
                 "3D"
             ],
             [
-                "synthesis",
                 "text-to-image"
             ],
             [
@@ -7608,28 +7655,6 @@
         "comment": "Accepted By INFOCOM 2024 Poster - 2024 IEEE International Conference on Computer Communications"
     },
     {
-        "paper id": "2405.19456",
-        "abstract url": "https://arxiv.org/abs/2405.19456",
-        "title": "An Automated Startup Evaluation Pipeline: Startup Success Forecasting Framework (SSFF)",
-        "rating": "-2.5",
-        "keywords": [
-            [
-                "synthesize"
-            ],
-            [
-                "Forecasting"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "Evaluating startups in their early stages is a complex task that requires detailed analysis by experts. While automating this process on a large scale can significantly impact businesses, the inherent complexity poses challenges. This paper addresses this challenge by introducing the Startup Success Forecasting Framework (SSFF), a new automated system that combines traditional machine learning with advanced language models. This intelligent agent-based architecture is designed to reason, act, synthesize, and decide like a venture capitalist to perform the analysis end-to-end. The SSFF is made up of three main parts: - Prediction Block: Uses random forests and neural networks to make predictions. - Analyst Block: Simulates VC analysis scenario and uses SOTA prompting techniques - External Knowledge Block: Gathers real-time information from external sources. This framework requires minimal input data about the founder and startup description, enhances it with additional data from external resources, and performs a detailed analysis with high accuracy, all in an automated manner",
-        "subjects": [
-            "cs.AI"
-        ],
-        "comment": "For relevant code: https://github.com/Xisen-Wang/Startup-Success-Forecasting-Framework"
-    },
-    {
         "paper id": "2405.19542",
         "abstract url": "https://arxiv.org/abs/2405.19542",
         "title": "Anatomical Region Recognition and Real-time Bone Tracking Methods by Dynamically Decoding A-Mode Ultrasound Signals",
@@ -7767,53 +7792,6 @@
             "eess.SY"
         ],
         "comment": "This paper is accepted for publication in the 2024 IEEE International Conference on Automatic Control and Intelligent Systems (I2CACIS 2024), Shah Alam, Malaysia"
-    },
-    {
-        "paper id": "2405.18847",
-        "abstract url": "https://arxiv.org/abs/2405.18847",
-        "title": "Defining Requirements Strategies in Agile: A Design Science Research Study",
-        "rating": "-3",
-        "keywords": [
-            [
-                "synthesize"
-            ],
-            [
-                "industrial"
-            ]
-        ],
-        "abstract": "Research shows that many of the challenges currently encountered with agile development are related to requirements engineering. Based on design science research, this paper investigates critical challenges that arise in agile development from an undefined requirements strategy. We explore potential ways to address these challenges and synthesize the key building blocks of requirements strategies. Our design science research rests on a multiple case study with three industrial cases in the domains of communication technology, security services, and automotive. We relied on a total of 20 interviews, two workshops, participant observation in two cases, and document analysis in each of the cases to understand concrete challenges and workflows. In each case, we define a requirements strategy in collaboration with process managers and experienced engineers. From this experience, we extract guidelines for defining requirements strategies in agile development.",
-        "subjects": [
-            "cs.SE"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2405.18863",
-        "abstract url": "https://arxiv.org/abs/2405.18863",
-        "title": "Neural Radiance Fields for Novel View Synthesis in Monocular Gastroscopy",
-        "rating": "-3",
-        "keywords": [
-            [
-                "3D",
-                "point cloud",
-                "NeRF",
-                "Radiance Fields"
-            ],
-            [
-                "Synthesis"
-            ],
-            [
-                "diagnosis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Enabling the synthesis of arbitrarily novel viewpoint images within a patient's stomach from pre-captured monocular gastroscopic images is a promising topic in stomach diagnosis. Typical methods to achieve this objective integrate traditional 3D reconstruction techniques, including structure-from-motion (SfM) and Poisson surface reconstruction. These methods produce explicit 3D representations, such as point clouds and meshes, thereby enabling the rendering of the images from novel viewpoints. However, the existence of low-texture and non-Lambertian regions within the stomach often results in noisy and incomplete reconstructions of point clouds and meshes, hindering the attainment of high-quality image rendering. In this paper, we apply the emerging technique of neural radiance fields (NeRF) to monocular gastroscopic data for synthesizing photo-realistic images for novel viewpoints. To address the performance degradation due to view sparsity in local regions of monocular gastroscopy, we incorporate geometry priors from a pre-reconstructed point cloud into the training of NeRF, which introduces a novel geometry-based loss to both pre-captured observed views and generated unobserved views. Compared to other recent NeRF methods, our approach showcases high-fidelity image renderings from novel viewpoints within the stomach both qualitatively and quantitatively.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Accepted for EMBC 2024"
     },
     {
         "paper id": "2405.18919",
@@ -7985,8 +7963,7 @@
         "rating": "-3",
         "keywords": [
             [
-                "Diffusion",
-                "Synthesizing"
+                "Diffusion"
             ],
             [
                 "trajectory"
@@ -8280,6 +8257,34 @@
         "comment": null
     },
     {
+        "paper id": "2405.19561",
+        "abstract url": "https://arxiv.org/abs/2405.19561",
+        "title": "Quo Vadis ChatGPT? From Large Language Models to Large Knowledge Models",
+        "rating": "-5",
+        "keywords": [
+            [
+                "biology"
+            ],
+            [
+                "chemistry",
+                "chemical"
+            ],
+            [
+                "physics"
+            ],
+            [
+                "cs.AI",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "The startling success of ChatGPT and other large language models (LLMs) using transformer-based generative neural network architecture in applications such as natural language processing and image synthesis has many researchers excited about potential opportunities in process systems engineering (PSE). The almost human-like performance of LLMs in these areas is indeed very impressive, surprising, and a major breakthrough. Their capabilities are very useful in certain tasks, such as writing first drafts of documents, code writing assistance, text summarization, etc. However, their success is limited in highly scientific domains as they cannot yet reason, plan, or explain due to their lack of in-depth domain knowledge. This is a problem in domains such as chemical engineering as they are governed by fundamental laws of physics and chemistry (and biology), constitutive relations, and highly technical knowledge about materials, processes, and systems. Although purely data-driven machine learning has its immediate uses, the long-term success of AI in scientific and engineering domains would depend on developing hybrid AI systems that use first principles and technical knowledge effectively. We call these hybrid AI systems Large Knowledge Models (LKMs), as they will not be limited to only NLP-based techniques or NLP-like applications. In this paper, we discuss the challenges and opportunities in developing such systems in chemical engineering.",
+        "subjects": [
+            "cs.AI",
+            "cs.CL"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.18968",
         "abstract url": "https://arxiv.org/abs/2405.18968",
         "title": "UniIF: Unified Molecule Inverse Folding",
@@ -8307,37 +8312,6 @@
             "cs.AI",
             "cs.LG",
             "q-bio.QM"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2405.19561",
-        "abstract url": "https://arxiv.org/abs/2405.19561",
-        "title": "Quo Vadis ChatGPT? From Large Language Models to Large Knowledge Models",
-        "rating": "-6",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "biology"
-            ],
-            [
-                "chemistry",
-                "chemical"
-            ],
-            [
-                "physics"
-            ],
-            [
-                "cs.AI",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "The startling success of ChatGPT and other large language models (LLMs) using transformer-based generative neural network architecture in applications such as natural language processing and image synthesis has many researchers excited about potential opportunities in process systems engineering (PSE). The almost human-like performance of LLMs in these areas is indeed very impressive, surprising, and a major breakthrough. Their capabilities are very useful in certain tasks, such as writing first drafts of documents, code writing assistance, text summarization, etc. However, their success is limited in highly scientific domains as they cannot yet reason, plan, or explain due to their lack of in-depth domain knowledge. This is a problem in domains such as chemical engineering as they are governed by fundamental laws of physics and chemistry (and biology), constitutive relations, and highly technical knowledge about materials, processes, and systems. Although purely data-driven machine learning has its immediate uses, the long-term success of AI in scientific and engineering domains would depend on developing hybrid AI systems that use first principles and technical knowledge effectively. We call these hybrid AI systems Large Knowledge Models (LKMs), as they will not be limited to only NLP-based techniques or NLP-like applications. In this paper, we discuss the challenges and opportunities in developing such systems in chemical engineering.",
-        "subjects": [
-            "cs.AI",
-            "cs.CL"
         ],
         "comment": null
     },
@@ -8528,18 +8502,6 @@
         "subjects": [
             "eess.SY",
             "cs.CE"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2405.18992",
-        "abstract url": "https://arxiv.org/abs/2405.18992",
-        "title": "A Digital Beamforming Receiver Architecture Implemented on a FPGA for Space Applications",
-        "rating": "-10",
-        "keywords": [],
-        "abstract": "The burgeoning interest within the space community in digital beamforming is largely attributable to the superior flexibility that satellites with active antenna systems offer for a wide range of applications, notably in communication services. This paper delves into the analysis and practical implementation of a Digital Beamforming and Digital Down Conversion (DDC) chain, leveraging a high-speed Analog-to-Digital Converter (ADC) certified for space applications alongside a high-performance Field-Programmable Gate Array (FPGA). The proposed design strategy focuses on optimizing resource efficiency and minimizing power consumption by strategically sequencing the beamformer processor ahead of the complex down-conversion operation. This innovative approach entails the application of demodulation and low-pass filtering exclusively to the aggregated beam channel, culminating in a marked reduction in the requisite digital signal processing resources relative to traditional, more resource-intensive digital beamforming and DDC architectures. In the experimental validation, an evaluation board integrating a high-speed ADC and a FPGA was utilized. This setup facilitated the empirical validation of the design's efficacy by applying various RF input signals to the digital beamforming receiver system. The ADC employed is capable of high-resolution signal processing, while the FPGA provides the necessary computational flexibility and speed for real-time digital signal processing tasks. The findings underscore the potential of this design to significantly enhance the efficiency and performance of digital beamforming systems in space applications.",
-        "subjects": [
-            "eess.SP"
         ],
         "comment": null
     },
@@ -8997,6 +8959,18 @@
             "cs.IT"
         ],
         "comment": "12 pages, 7 figures"
+    },
+    {
+        "paper id": "2405.19514",
+        "abstract url": "https://arxiv.org/abs/2405.19514",
+        "title": "Wavefront Threading Enables Effective High-Level Synthesis",
+        "rating": "-10",
+        "keywords": [],
+        "abstract": "Digital systems are growing in importance and computing hardware is growing more heterogeneous. Hardware design, however, remains laborious and expensive, in part due to the limitations of conventional hardware description languages (HDLs) like VHDL and Verilog. A longstanding research goal has been programming hardware like software, with high-level languages that can generate efficient hardware designs. This paper describes Kanagawa, a language that takes a new approach to combine the programmer productivity benefits of traditional High-Level Synthesis (HLS) approaches with the expressibility and hardware efficiency of Register-Transfer Level (RTL) design. The language's concise syntax, matched with a hardware design-friendly execution model, permits a relatively simple toolchain to map high-level code into efficient hardware implementations.",
+        "subjects": [
+            "cs.PL"
+        ],
+        "comment": "Accepted to PLDI'24"
     },
     {
         "paper id": "2405.19527",

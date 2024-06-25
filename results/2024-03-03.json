@@ -649,7 +649,9 @@
         "rating": "0.5",
         "keywords": [
             [
-                "3D"
+                "3D",
+                "signed distance field",
+                "SDF"
             ],
             [
                 "cs.CV"
@@ -924,25 +926,6 @@
         "comment": "27 pages, 10 figures"
     },
     {
-        "paper id": "2403.01605",
-        "abstract url": "https://arxiv.org/abs/2403.01605",
-        "title": "Towards Provable Log Density Policy Gradient",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Policy gradient methods are a vital ingredient behind the success of modern reinforcement learning. Modern policy gradient methods, although successful, introduce a residual error in gradient estimation. In this work, we argue that this residual term is significant and correcting for it could potentially improve sample-complexity of reinforcement learning methods. To that end, we propose log density gradient to estimate the policy gradient, which corrects for this residual error term. Log density gradient method computes policy gradient by utilising the state-action discounted distributional formulation. We first present the equations needed to exactly find the log density gradient for a tabular Markov Decision Processes (MDPs). For more complex environments, we propose a temporal difference (TD) method that approximates log density gradient by utilizing backward on-policy samples. Since backward sampling from a Markov chain is highly restrictive we also propose a min-max optimization that can approximate log density gradient using just on-policy samples. We also prove uniqueness, and convergence under linear function approximation, for this min-max optimization. Finally, we show that the sample complexity of our min-max optimization to be of the order of $m^{-1/2}$, where $m$ is the number of on-policy samples. We also demonstrate a proof-of-concept for our log density gradient method on gridworld environment, and observe that our method is able to improve upon the classical policy gradient method by a clear margin, thus indicating a promising novel direction to develop reinforcement learning algorithms that require fewer samples.",
-        "subjects": [
-            "cs.LG",
-            "cs.AI",
-            "stat.ML"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2403.01619",
         "abstract url": "https://arxiv.org/abs/2403.01619",
         "title": "Spectrum AUC Difference (SAUCD): Human-aligned 3D Shape Evaluation",
@@ -1214,25 +1197,6 @@
         "subjects": [
             "cs.GT",
             "cs.AI"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2403.10538",
-        "abstract url": "https://arxiv.org/abs/2403.10538",
-        "title": "MATADOR: Automated System-on-Chip Tsetlin Machine Design Generation for Edge Applications",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "System-on-Chip Field-Programmable Gate Arrays (SoC-FPGAs) offer significant throughput gains for machine learning (ML) edge inference applications via the design of co-processor accelerator systems. However, the design effort for training and translating ML models into SoC-FPGA solutions can be substantial and requires specialist knowledge aware trade-offs between model performance, power consumption, latency and resource utilization. Contrary to other ML algorithms, Tsetlin Machine (TM) performs classification by forming logic proposition between boolean actions from the Tsetlin Automata (the learning elements) and boolean input features. A trained TM model, usually, exhibits high sparsity and considerable overlapping of these logic propositions both within and among the classes. The model, thus, can be translated to RTL-level design using a miniscule number of AND and NOT gates. This paper presents MATADOR, an automated boolean-to-silicon tool with GUI interface capable of implementing optimized accelerator design of the TM model onto SoC-FPGA for inference at the edge. It offers automation of the full development pipeline: model training, system level design generation, design verification and deployment. It makes use of the logic sharing that ensues from propositional overlap and creates a compact design by effectively utilizing the TM model's sparsity. MATADOR accelerator designs are shown to be up to 13.4x faster, up to 7x more resource frugal and up to 2x more power efficient when compared to the state-of-the-art Quantized and Binary Deep Neural Network implementations.",
-        "subjects": [
-            "cs.AR",
-            "cs.AI",
-            "cs.LG"
         ],
         "comment": null
     },
@@ -1739,7 +1703,6 @@
         "keywords": [
             [
                 "Diffusion",
-                "synthesis",
                 "text-to-image"
             ],
             [
@@ -2200,6 +2163,25 @@
         "comment": null
     },
     {
+        "paper id": "2403.01652",
+        "abstract url": "https://arxiv.org/abs/2403.01652",
+        "title": "Towards Memory-Efficient Traffic Policing in Time-Sensitive Networking",
+        "rating": "-1",
+        "keywords": [
+            [
+                "Memory-Efficient"
+            ],
+            [
+                "FPGAs"
+            ]
+        ],
+        "abstract": "Time-Sensitive Networking (TSN) is an emerging real-time Ethernet technology that provides deterministic communication for time-critical traffic. At its core, TSN relies on Time-Aware Shaper (TAS) for pre-allocating frames in specific time intervals and Per-Stream Filtering and Policing (PSFP) for mitigating the fatal disturbance of unavoidable frame drift. However, as first identified in this work, PSFP incurs heavy memory consumption during policing, hindering normal switching functionalities. This work proposes a lightweight policing design called FooDog, which could facilitate sub-microsecond jitter with ultra-low memory consumption. FooDog employs a period-wise and stream-wise structure to realize the memory-efficient PSFP without loss of determinism. Results using commercial FPGAs in typical aerospace scenarios show that FooDog could keep end-to-end time-sensitive traffic jitter <150 nanoseconds in the presence of abnormal traffic, comparable to typical TSN performance without anomalies. Meanwhile, it consumes merely hundreds of kilobits of memory, reducing >90% of on-chip memory overheads than unoptimized PSFP design.",
+        "subjects": [
+            "cs.NI"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2403.01663",
         "abstract url": "https://arxiv.org/abs/2403.01663",
         "title": "PillarGen: Enhancing Radar Point Cloud Density and Quality via Pillar-based Point Generation Network",
@@ -2271,7 +2253,6 @@
             ],
             [
                 "diffusion",
-                "synthesize",
                 "Text-to-Image"
             ],
             [
@@ -2294,7 +2275,8 @@
         "keywords": [
             [
                 "robotics",
-                "robot"
+                "robot",
+                "robotic manipulation"
             ]
         ],
         "abstract": "Integrating robotics into human-centric environments such as homes, necessitates advanced manipulation skills as robotic devices will need to engage with articulated objects like doors and drawers. Key challenges in robotic manipulation are the unpredictability and diversity of these objects' internal structures, which render models based on priors, both explicit and implicit, inadequate. Their reliability is significantly diminished by pre-interaction ambiguities, imperfect structural parameters, encounters with unknown objects, and unforeseen disturbances. Here, we present a prior-free strategy, Tac-Man, focusing on maintaining stable robot-object contact during manipulation. Utilizing tactile feedback, but independent of object priors, Tac-Man enables robots to proficiently handle a variety of articulated objects, including those with complex joints, even when influenced by unexpected disturbances. Demonstrated in both real-world experiments and extensive simulations, it consistently achieves near-perfect success in dynamic and varied settings, outperforming existing methods. Our results indicate that tactile sensing alone suffices for managing diverse articulated objects, offering greater robustness and generalization than prior-based approaches. This underscores the importance of detailed contact modeling in complex manipulation tasks, especially with articulated objects. Advancements in tactile sensors significantly expand the scope of robotic applications in human-centric environments, particularly where accurate models are difficult to obtain.",
@@ -2563,6 +2545,28 @@
         "comment": "Presented at the American Statistical Association Symposium on Data Science and Statistics, St. Louis, USA, May 2023"
     },
     {
+        "paper id": "2403.01605",
+        "abstract url": "https://arxiv.org/abs/2403.01605",
+        "title": "Towards Provable Log Density Policy Gradient",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "tabular"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Policy gradient methods are a vital ingredient behind the success of modern reinforcement learning. Modern policy gradient methods, although successful, introduce a residual error in gradient estimation. In this work, we argue that this residual term is significant and correcting for it could potentially improve sample-complexity of reinforcement learning methods. To that end, we propose log density gradient to estimate the policy gradient, which corrects for this residual error term. Log density gradient method computes policy gradient by utilising the state-action discounted distributional formulation. We first present the equations needed to exactly find the log density gradient for a tabular Markov Decision Processes (MDPs). For more complex environments, we propose a temporal difference (TD) method that approximates log density gradient by utilizing backward on-policy samples. Since backward sampling from a Markov chain is highly restrictive we also propose a min-max optimization that can approximate log density gradient using just on-policy samples. We also prove uniqueness, and convergence under linear function approximation, for this min-max optimization. Finally, we show that the sample complexity of our min-max optimization to be of the order of $m^{-1/2}$, where $m$ is the number of on-policy samples. We also demonstrate a proof-of-concept for our log density gradient method on gridworld environment, and observe that our method is able to improve upon the classical policy gradient method by a clear margin, thus indicating a promising novel direction to develop reinforcement learning algorithms that require fewer samples.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI",
+            "stat.ML"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2403.01623",
         "abstract url": "https://arxiv.org/abs/2403.01623",
         "title": "ML4PhySim : Machine Learning for Physical Simulations Challenge (The airfoil design)",
@@ -2701,6 +2705,28 @@
         "abstract": "For Multivariate Time Series Forecasting (MTSF), recent deep learning applications show that univariate models frequently outperform multivariate ones. To address the difficiency in multivariate models, we introduce a method to Construct Auxiliary Time Series (CATS) that functions like a 2D temporal-contextual attention mechanism, which generates Auxiliary Time Series (ATS) from Original Time Series (OTS) to effectively represent and incorporate inter-series relationships for forecasting. Key principles of ATS - continuity, sparsity, and variability - are identified and implemented through different modules. Even with a basic 2-layer MLP as core predictor, CATS achieves state-of-the-art, significantly reducing complexity and parameters compared to previous multivariate models, marking it an efficient and transferable MTSF solution.",
         "subjects": [
             "stat.ML",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2403.10538",
+        "abstract url": "https://arxiv.org/abs/2403.10538",
+        "title": "MATADOR: Automated System-on-Chip Tsetlin Machine Design Generation for Edge Applications",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "FPGAs"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "System-on-Chip Field-Programmable Gate Arrays (SoC-FPGAs) offer significant throughput gains for machine learning (ML) edge inference applications via the design of co-processor accelerator systems. However, the design effort for training and translating ML models into SoC-FPGA solutions can be substantial and requires specialist knowledge aware trade-offs between model performance, power consumption, latency and resource utilization. Contrary to other ML algorithms, Tsetlin Machine (TM) performs classification by forming logic proposition between boolean actions from the Tsetlin Automata (the learning elements) and boolean input features. A trained TM model, usually, exhibits high sparsity and considerable overlapping of these logic propositions both within and among the classes. The model, thus, can be translated to RTL-level design using a miniscule number of AND and NOT gates. This paper presents MATADOR, an automated boolean-to-silicon tool with GUI interface capable of implementing optimized accelerator design of the TM model onto SoC-FPGA for inference at the edge. It offers automation of the full development pipeline: model training, system level design generation, design verification and deployment. It makes use of the logic sharing that ensues from propositional overlap and creates a compact design by effectively utilizing the TM model's sparsity. MATADOR accelerator designs are shown to be up to 13.4x faster, up to 7x more resource frugal and up to 2x more power efficient when compared to the state-of-the-art Quantized and Binary Deep Neural Network implementations.",
+        "subjects": [
+            "cs.AR",
             "cs.AI",
             "cs.LG"
         ],
@@ -2857,7 +2883,7 @@
                 "LiDAR"
             ],
             [
-                "Hyperspectral imaging"
+                "Hyperspectral Image"
             ],
             [
                 "cs.LG",
@@ -3115,7 +3141,8 @@
         "rating": "-3",
         "keywords": [
             [
-                "robot"
+                "robot",
+                "Robotic manipulation"
             ],
             [
                 "surgery"
@@ -3152,6 +3179,32 @@
             "cs.LG",
             "cs.CV",
             "stat.ML"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2403.01683",
+        "abstract url": "https://arxiv.org/abs/2403.01683",
+        "title": "DD-VNB: A Depth-based Dual-Loop Framework for Real-time Visually Navigated Bronchoscopy",
+        "rating": "-3",
+        "keywords": [
+            [
+                "3D",
+                "Depth"
+            ],
+            [
+                "navigation"
+            ],
+            [
+                "clinical"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Real-time 6 DOF localization of bronchoscopes is crucial for enhancing intervention quality. However, current vision-based technologies struggle to balance between generalization to unseen data and computational speed. In this study, we propose a Depth-based Dual-Loop framework for real-time Visually Navigated Bronchoscopy (DD-VNB) that can generalize across patient cases without the need of re-training. The DD-VNB framework integrates two key modules: depth estimation and dual-loop localization. To address the domain gap among patients, we propose a knowledge-embedded depth estimation network that maps endoscope frames to depth, ensuring generalization by eliminating patient-specific textures. The network embeds view synthesis knowledge into a cycle adversarial architecture for scale-constrained monocular depth estimation. For real-time performance, our localization module embeds a fast ego-motion estimation network into the loop of depth registration. The ego-motion inference network estimates the pose change of the bronchoscope in high frequency while depth registration against the pre-operative 3D model provides absolute pose periodically. Specifically, the relative pose changes are fed into the registration process as the initial guess to boost its accuracy and speed. Experiments on phantom and in-vivo data from patients demonstrate the effectiveness of our framework: 1) monocular depth estimation outperforms SOTA, 2) localization achieves an accuracy of Absolute Tracking Error (ATE) of 4.7 $\\pm$ 3.17 mm in phantom and 6.49 $\\pm$ 3.88 mm in patient data, 3) with a frame-rate approaching video capture speed, 4) without the necessity of case-wise network retraining. The framework's superior speed and accuracy demonstrate its promising clinical potential for real-time bronchoscopic navigation.",
+        "subjects": [
+            "cs.CV"
         ],
         "comment": null
     },
@@ -3253,35 +3306,6 @@
             "cs.DC",
             "cs.PF",
             "physics.comp-ph"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2403.01683",
-        "abstract url": "https://arxiv.org/abs/2403.01683",
-        "title": "DD-VNB: A Depth-based Dual-Loop Framework for Real-time Visually Navigated Bronchoscopy",
-        "rating": "-4",
-        "keywords": [
-            [
-                "3D",
-                "Depth"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "navigation"
-            ],
-            [
-                "clinical"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Real-time 6 DOF localization of bronchoscopes is crucial for enhancing intervention quality. However, current vision-based technologies struggle to balance between generalization to unseen data and computational speed. In this study, we propose a Depth-based Dual-Loop framework for real-time Visually Navigated Bronchoscopy (DD-VNB) that can generalize across patient cases without the need of re-training. The DD-VNB framework integrates two key modules: depth estimation and dual-loop localization. To address the domain gap among patients, we propose a knowledge-embedded depth estimation network that maps endoscope frames to depth, ensuring generalization by eliminating patient-specific textures. The network embeds view synthesis knowledge into a cycle adversarial architecture for scale-constrained monocular depth estimation. For real-time performance, our localization module embeds a fast ego-motion estimation network into the loop of depth registration. The ego-motion inference network estimates the pose change of the bronchoscope in high frequency while depth registration against the pre-operative 3D model provides absolute pose periodically. Specifically, the relative pose changes are fed into the registration process as the initial guess to boost its accuracy and speed. Experiments on phantom and in-vivo data from patients demonstrate the effectiveness of our framework: 1) monocular depth estimation outperforms SOTA, 2) localization achieves an accuracy of Absolute Tracking Error (ATE) of 4.7 $\\pm$ 3.17 mm in phantom and 6.49 $\\pm$ 3.88 mm in patient data, 3) with a frame-rate approaching video capture speed, 4) without the necessity of case-wise network retraining. The framework's superior speed and accuracy demonstrate its promising clinical potential for real-time bronchoscopic navigation.",
-        "subjects": [
-            "cs.CV"
         ],
         "comment": null
     },
@@ -3629,18 +3653,6 @@
         "abstract": "Many important query processing methods proactively use semijoins or semijoin-like filters to delete dangling tuples, i.e., tuples that do not appear in the final query result. Semijoin methods can achieve formal optimality but have high upfront cost in practice. Filter methods reduce the cost but lose the optimality guarantee. We propose a new join algorithm, TreeTracker Join ($\\mathsf{TTJ}$), that achieves the data complexity optimality for acyclic conjunctive queries (ACQs) without semijoins or semijoin-like filters. $\\mathsf{TTJ}$ leverages join failure events, where a tuple from one of the relations of a binary join operator fails to match any tuples from the other relation. $\\mathsf{TTJ}$ starts join evaluation immediately and when join fails, $\\mathsf{TTJ}$ identifies the tuple as dangling and prevents it from further consideration in the execution of the query. The design of $\\mathsf{TTJ}$ exploits the connection between query evaluation and constraint satisfaction problem (CSP) by treating a join tree of an ACQ as a constraint network and the query evaluation as a CSP search problem. $\\mathsf{TTJ}$ is a direct extension of a CSP algorithm, TreeTracker, that embodies two search techniques backjumping and no-good. We establish that join tree and plan can be constructed from each other in order to incorporate the search techniques into physical operators in the iterator form. We compare $\\mathsf{TTJ}$ with hash-join, a classic semijoin method: Yannakakis's algorithm, and two contemporary filter methods: Predicate Transfer and Lookahead Information Passing. Favorable empirical results are developed using standard query benchmarks: JOB, TPC-H, and SSB.",
         "subjects": [
             "cs.DB"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2403.01652",
-        "abstract url": "https://arxiv.org/abs/2403.01652",
-        "title": "Towards Memory-Efficient Traffic Policing in Time-Sensitive Networking",
-        "rating": "-10",
-        "keywords": [],
-        "abstract": "Time-Sensitive Networking (TSN) is an emerging real-time Ethernet technology that provides deterministic communication for time-critical traffic. At its core, TSN relies on Time-Aware Shaper (TAS) for pre-allocating frames in specific time intervals and Per-Stream Filtering and Policing (PSFP) for mitigating the fatal disturbance of unavoidable frame drift. However, as first identified in this work, PSFP incurs heavy memory consumption during policing, hindering normal switching functionalities. This work proposes a lightweight policing design called FooDog, which could facilitate sub-microsecond jitter with ultra-low memory consumption. FooDog employs a period-wise and stream-wise structure to realize the memory-efficient PSFP without loss of determinism. Results using commercial FPGAs in typical aerospace scenarios show that FooDog could keep end-to-end time-sensitive traffic jitter <150 nanoseconds in the presence of abnormal traffic, comparable to typical TSN performance without anomalies. Meanwhile, it consumes merely hundreds of kilobits of memory, reducing >90% of on-chip memory overheads than unoptimized PSFP design.",
-        "subjects": [
-            "cs.NI"
         ],
         "comment": null
     },

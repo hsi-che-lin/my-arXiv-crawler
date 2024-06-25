@@ -79,22 +79,6 @@
         "comment": "ICASSP 2024"
     },
     {
-        "paper id": "2403.05802",
-        "abstract url": "https://arxiv.org/abs/2403.05802",
-        "title": "UniSparse: An Intermediate Language for General Sparse Format Customization",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "The ongoing trend of hardware specialization has led to a growing use of custom data formats when processing sparse workloads, which are typically memory-bound. These formats facilitate optimized software/hardware implementations by utilizing sparsity pattern- or target-aware data structures and layouts to enhance memory access latency and bandwidth utilization. However, existing sparse tensor programming models and compilers offer little or no support for productively customizing the sparse formats. Additionally, because these frameworks represent formats using a limited set of per-dimension attributes, they lack the flexibility to accommodate numerous new variations of custom sparse data structures and layouts. To overcome this deficiency, we propose UniSparse, an intermediate language that provides a unified abstraction for representing and customizing sparse formats. Unlike the existing attribute-based frameworks, UniSparse decouples the logical representation of the sparse tensor (i.e., the data structure) from its low-level memory layout, enabling the customization of both. As a result, a rich set of format customizations can be succinctly expressed in a small set of well-defined query, mutation, and layout primitives. We also develop a compiler leveraging the MLIR infrastructure, which supports adaptive customization of formats, and automatic code generation of format conversion and compute operations for heterogeneous architectures. We demonstrate the efficacy of our approach through experiments running commonly-used sparse linear algebra operations with specialized formats on multiple different hardware targets, including an Intel CPU, an NVIDIA GPU, an AMD Xilinx FPGA, and a simulated processing-in-memory (PIM) device.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": "to be published in OOPSLA'24"
-    },
-    {
         "paper id": "2403.05805",
         "abstract url": "https://arxiv.org/abs/2403.05805",
         "title": "And Then the Hammer Broke: Reflections on Machine Ethics from Feminist Philosophy of Science",
@@ -555,40 +539,6 @@
         "comment": null
     },
     {
-        "paper id": "2403.05811",
-        "abstract url": "https://arxiv.org/abs/2403.05811",
-        "title": "Near Minimax-Optimal Distributional Temporal Difference Algorithms and The Freedman Inequality in Hilbert Spaces",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Distributional reinforcement learning (DRL) has achieved empirical success in various domains. One of the core tasks in the field of DRL is distributional policy evaluation, which involves estimating the return distribution $\u03b7^\u03c0$ for a given policy $\u03c0$. The distributional temporal difference (TD) algorithm has been accordingly proposed, which is an extension of the temporal difference algorithm in the classic RL literature. In the tabular case, \\citet{rowland2018analysis} and \\citet{rowland2023analysis} proved the asymptotic convergence of two instances of distributional TD, namely categorical temporal difference algorithm (CTD) and quantile temporal difference algorithm (QTD), respectively. In this paper, we go a step further and analyze the finite-sample performance of distributional TD. To facilitate theoretical analysis, we propose a non-parametric distributional TD algorithm (NTD). For a $\u03b3$-discounted infinite-horizon tabular Markov decision process, we show that for NTD we need $\\tilde{O}\\left(\\frac{1}{\\varepsilon^{2p}(1-\u03b3)^{2p+1}}\\right)$ iterations to achieve an $\\varepsilon$-optimal estimator with high probability, when the estimation error is measured by the $p$-Wasserstein distance. This sample complexity bound is minimax optimal (up to logarithmic factors) in the case of the $1$-Wasserstein distance. To achieve this, we establish a novel Freedman's inequality in Hilbert spaces, which would be of independent interest. In addition, we revisit CTD, showing that the same non-asymptotic convergence bounds hold for CTD in the case of the $p$-Wasserstein distance.",
-        "subjects": [
-            "stat.ML",
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2403.05821",
-        "abstract url": "https://arxiv.org/abs/2403.05821",
-        "title": "Optimizing LLM Queries in Relational Workloads",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Analytical database providers (e.g., Redshift, Databricks, BigQuery) have rapidly added support for invoking Large Language Models (LLMs) through native user-defined functions (UDFs) to help users perform natural language tasks, such as classification, entity extraction, and translation, inside analytical workloads. For instance, an analyst might want to extract customer sentiments on millions of product reviews. However, LLM inference is highly expensive in both computational and economic terms: for example, an NVIDIA L4 GPU running Llama2-7B can only process 6 KB of text per second. In this paper, we explore how to optimize LLM inference for analytical workloads that invoke LLMs within relational queries. We show that relational queries present novel opportunities for accelerating LLM inference, including reordering rows to maximize key-value (KV) cache reuse within the LLM inference engine, reordering columns within a row to further increase cache reuse, and deduplicating redundant inference requests. We implement these optimizations in Apache Spark, with vLLM as the model serving backend and achieve up to 4.4x improvement in end-to-end latency on a benchmark of diverse LLM-based queries on real datasets. To the best of our knowledge, this is the first work to explicitly address the problem of optimizing LLM invocations within SQL queries.",
-        "subjects": [
-            "cs.LG",
-            "cs.DB"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2403.05822",
         "abstract url": "https://arxiv.org/abs/2403.05822",
         "title": "TrafficGPT: Breaking the Token Barrier for Efficient Long Traffic Analysis and Generation",
@@ -960,6 +910,28 @@
         "comment": "Accepted at AISTATS 2024"
     },
     {
+        "paper id": "2403.06092",
+        "abstract url": "https://arxiv.org/abs/2403.06092",
+        "title": "Is Vanilla MLP in Neural Radiance Field Enough for Few-shot View Synthesis?",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "NeRF"
+            ],
+            [
+                "cs.CV"
+            ],
+            [
+                "CVPR"
+            ]
+        ],
+        "abstract": "Neural Radiance Field (NeRF) has achieved superior performance for novel view synthesis by modeling the scene with a Multi-Layer Perception (MLP) and a volume rendering procedure, however, when fewer known views are given (i.e., few-shot view synthesis), the model is prone to overfit the given views. To handle this issue, previous efforts have been made towards leveraging learned priors or introducing additional regularizations. In contrast, in this paper, we for the first time provide an orthogonal method from the perspective of network structure. Given the observation that trivially reducing the number of model parameters alleviates the overfitting issue, but at the cost of missing details, we propose the multi-input MLP (mi-MLP) that incorporates the inputs (i.e., location and viewing direction) of the vanilla MLP into each layer to prevent the overfitting issue without harming detailed synthesis. To further reduce the artifacts, we propose to model colors and volume density separately and present two regularization terms. Extensive experiments on multiple datasets demonstrate that: 1) although the proposed mi-MLP is easy to implement, it is surprisingly effective as it boosts the PSNR of the baseline from $14.73$ to $24.23$. 2) the overall framework achieves state-of-the-art results on a wide range of benchmarks. We will release the code upon publication.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Accepted by CVPR 2024"
+    },
+    {
         "paper id": "2403.06093",
         "abstract url": "https://arxiv.org/abs/2403.06093",
         "title": "Enhancing 3D Object Detection with 2D Detection-Guided Query Anchors",
@@ -1145,6 +1117,27 @@
             "cs.RO"
         ],
         "comment": "Code will be released at https://github.com/xuboshen/SPAFormer"
+    },
+    {
+        "paper id": "2403.05895",
+        "abstract url": "https://arxiv.org/abs/2403.05895",
+        "title": "DO3D: Self-supervised Learning of Decomposed Object-aware 3D Motion and Depth from Monocular Videos",
+        "rating": "0",
+        "keywords": [
+            [
+                "3D",
+                "6-DoF",
+                "Depth"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Although considerable advancements have been attained in self-supervised depth estimation from monocular videos, most existing methods often treat all objects in a video as static entities, which however violates the dynamic nature of real-world scenes and fails to model the geometry and motion of moving objects. In this paper, we propose a self-supervised method to jointly learn 3D motion and depth from monocular videos. Our system contains a depth estimation module to predict depth, and a new decomposed object-wise 3D motion (DO3D) estimation module to predict ego-motion and 3D object motion. Depth and motion networks work collaboratively to faithfully model the geometry and dynamics of real-world scenes, which, in turn, benefits both depth and 3D motion estimation. Their predictions are further combined to synthesize a novel video frame for self-supervised training. As a core component of our framework, DO3D is a new motion disentanglement module that learns to predict camera ego-motion and instance-aware 3D object motion separately. To alleviate the difficulties in estimating non-rigid 3D object motions, they are decomposed to object-wise 6-DoF global transformations and a pixel-wise local 3D motion deformation field. Qualitative and quantitative experiments are conducted on three benchmark datasets, including KITTI, Cityscapes, and VKITTI2, where our model delivers superior performance in all evaluated settings. For the depth estimation task, our model outperforms all compared research works in the high-resolution setting, attaining an absolute relative depth error (abs rel) of 0.099 on the KITTI benchmark. Besides, our optical flow estimation results (an overall EPE of 7.09 on KITTI) also surpass state-of-the-art methods and largely improve the estimation of dynamic regions, demonstrating the effectiveness of our motion model. Our code will be available.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "24 pages, 14 figures, Tech Report"
     },
     {
         "paper id": "2403.05955",
@@ -1341,27 +1334,6 @@
         "comment": "We are a collaborative article with a company, and the company needs to revise and verify the relevant information of the article before publishing it, including acknowledgments, authors, and some details"
     },
     {
-        "paper id": "2403.05918",
-        "abstract url": "https://arxiv.org/abs/2403.05918",
-        "title": "SEMRes-DDPM: Residual Network Based Diffusion Modelling Applied to Imbalanced Data",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "Diffusion"
-            ],
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "In the field of data mining and machine learning, commonly used classification models cannot effectively learn in unbalanced data. In order to balance the data distribution before model training, oversampling methods are often used to generate data for a small number of classes to solve the problem of classifying unbalanced data. Most of the classical oversampling methods are based on the SMOTE technique, which only focuses on the local information of the data, and therefore the generated data may have the problem of not being realistic enough. In the current oversampling methods based on generative networks, the methods based on GANs can capture the true distribution of data, but there is the problem of pattern collapse and training instability in training; in the oversampling methods based on denoising diffusion probability models, the neural network of the inverse diffusion process using the U-Net is not applicable to tabular data, and although the MLP can be used to replace the U-Net, the problem exists due to the simplicity of the structure and the poor effect of removing noise. problem of poor noise removal. In order to overcome the above problems, we propose a novel oversampling method SEMRes-DDPM.In the SEMRes-DDPM backward diffusion process, a new neural network structure SEMST-ResNet is used, which is suitable for tabular data and has good noise removal effect, and it can generate tabular data with higher quality. Experiments show that the SEMResNet network removes noise better than MLP; SEMRes-DDPM generates data distributions that are closer to the real data distributions than TabDDPM with CWGAN-GP; on 20 real unbalanced tabular datasets with 9 classification models, SEMRes-DDPM improves the quality of the generated tabular data in terms of three evaluation metrics (F1, G-mean, AUC) with better classification performance than other SOTA oversampling methods.",
-        "subjects": [
-            "cs.LG",
-            "cs.AI"
-        ],
-        "comment": "None"
-    },
-    {
         "paper id": "2403.05921",
         "abstract url": "https://arxiv.org/abs/2403.05921",
         "title": "OntoChat: a Framework for Conversational Ontology Engineering using Language Models",
@@ -1379,6 +1351,28 @@
             "cs.AI"
         ],
         "comment": "ESWC 2024 Special Track on Large Language Models for Knowledge Engineering"
+    },
+    {
+        "paper id": "2403.06003",
+        "abstract url": "https://arxiv.org/abs/2403.06003",
+        "title": "A Generalized Acquisition Function for Preference-based Reward Learning",
+        "rating": "-0.5",
+        "keywords": [
+            [
+                "robotics"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Preference-based reward learning is a popular technique for teaching robots and autonomous systems how a human user wants them to perform a task. Previous works have shown that actively synthesizing preference queries to maximize information gain about the reward function parameters improves data efficiency. The information gain criterion focuses on precisely identifying all parameters of the reward function. This can potentially be wasteful as many parameters may result in the same reward, and many rewards may result in the same behavior in the downstream tasks. Instead, we show that it is possible to optimize for learning the reward function up to a behavioral equivalence class, such as inducing the same ranking over behaviors, distribution over choices, or other related definitions of what makes two rewards similar. We introduce a tractable framework that can capture such definitions of similarity. Our experiments in a synthetic environment, an assistive robotics environment with domain transfer, and a natural language processing problem with real datasets demonstrate the superior performance of our querying method over the state-of-the-art information gain method.",
+        "subjects": [
+            "cs.RO",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "comment": null
     },
     {
         "paper id": "2403.06017",
@@ -1444,31 +1438,6 @@
         "comment": "17 pages, 3 figures"
     },
     {
-        "paper id": "2403.06092",
-        "abstract url": "https://arxiv.org/abs/2403.06092",
-        "title": "Is Vanilla MLP in Neural Radiance Field Enough for Few-shot View Synthesis?",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "NeRF"
-            ],
-            [
-                "Synthesis"
-            ],
-            [
-                "cs.CV"
-            ],
-            [
-                "CVPR"
-            ]
-        ],
-        "abstract": "Neural Radiance Field (NeRF) has achieved superior performance for novel view synthesis by modeling the scene with a Multi-Layer Perception (MLP) and a volume rendering procedure, however, when fewer known views are given (i.e., few-shot view synthesis), the model is prone to overfit the given views. To handle this issue, previous efforts have been made towards leveraging learned priors or introducing additional regularizations. In contrast, in this paper, we for the first time provide an orthogonal method from the perspective of network structure. Given the observation that trivially reducing the number of model parameters alleviates the overfitting issue, but at the cost of missing details, we propose the multi-input MLP (mi-MLP) that incorporates the inputs (i.e., location and viewing direction) of the vanilla MLP into each layer to prevent the overfitting issue without harming detailed synthesis. To further reduce the artifacts, we propose to model colors and volume density separately and present two regularization terms. Extensive experiments on multiple datasets demonstrate that: 1) although the proposed mi-MLP is easy to implement, it is surprisingly effective as it boosts the PSNR of the baseline from $14.73$ to $24.23$. 2) the overall framework achieves state-of-the-art results on a wide range of benchmarks. We will release the code upon publication.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Accepted by CVPR 2024"
-    },
-    {
         "paper id": "2403.05795",
         "abstract url": "https://arxiv.org/abs/2403.05795",
         "title": "ClinicalMamba: A Generative Clinical Language Model on Longitudinal Clinical Notes",
@@ -1507,6 +1476,25 @@
             "cs.CV"
         ],
         "comment": "code is available: https://github.com/BinghaoLu/KD-MSI"
+    },
+    {
+        "paper id": "2403.05802",
+        "abstract url": "https://arxiv.org/abs/2403.05802",
+        "title": "UniSparse: An Intermediate Language for General Sparse Format Customization",
+        "rating": "-1",
+        "keywords": [
+            [
+                "FPGA"
+            ],
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "The ongoing trend of hardware specialization has led to a growing use of custom data formats when processing sparse workloads, which are typically memory-bound. These formats facilitate optimized software/hardware implementations by utilizing sparsity pattern- or target-aware data structures and layouts to enhance memory access latency and bandwidth utilization. However, existing sparse tensor programming models and compilers offer little or no support for productively customizing the sparse formats. Additionally, because these frameworks represent formats using a limited set of per-dimension attributes, they lack the flexibility to accommodate numerous new variations of custom sparse data structures and layouts. To overcome this deficiency, we propose UniSparse, an intermediate language that provides a unified abstraction for representing and customizing sparse formats. Unlike the existing attribute-based frameworks, UniSparse decouples the logical representation of the sparse tensor (i.e., the data structure) from its low-level memory layout, enabling the customization of both. As a result, a rich set of format customizations can be succinctly expressed in a small set of well-defined query, mutation, and layout primitives. We also develop a compiler leveraging the MLIR infrastructure, which supports adaptive customization of formats, and automatic code generation of format conversion and compute operations for heterogeneous architectures. We demonstrate the efficacy of our approach through experiments running commonly-used sparse linear algebra operations with specialized formats on multiple different hardware targets, including an Intel CPU, an NVIDIA GPU, an AMD Xilinx FPGA, and a simulated processing-in-memory (PIM) device.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": "to be published in OOPSLA'24"
     },
     {
         "paper id": "2403.05807",
@@ -1653,30 +1641,6 @@
         "comment": "Published in IEEE Transactions on Automatic Control"
     },
     {
-        "paper id": "2403.05895",
-        "abstract url": "https://arxiv.org/abs/2403.05895",
-        "title": "DO3D: Self-supervised Learning of Decomposed Object-aware 3D Motion and Depth from Monocular Videos",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D",
-                "6-DoF",
-                "Depth"
-            ],
-            [
-                "synthesize"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Although considerable advancements have been attained in self-supervised depth estimation from monocular videos, most existing methods often treat all objects in a video as static entities, which however violates the dynamic nature of real-world scenes and fails to model the geometry and motion of moving objects. In this paper, we propose a self-supervised method to jointly learn 3D motion and depth from monocular videos. Our system contains a depth estimation module to predict depth, and a new decomposed object-wise 3D motion (DO3D) estimation module to predict ego-motion and 3D object motion. Depth and motion networks work collaboratively to faithfully model the geometry and dynamics of real-world scenes, which, in turn, benefits both depth and 3D motion estimation. Their predictions are further combined to synthesize a novel video frame for self-supervised training. As a core component of our framework, DO3D is a new motion disentanglement module that learns to predict camera ego-motion and instance-aware 3D object motion separately. To alleviate the difficulties in estimating non-rigid 3D object motions, they are decomposed to object-wise 6-DoF global transformations and a pixel-wise local 3D motion deformation field. Qualitative and quantitative experiments are conducted on three benchmark datasets, including KITTI, Cityscapes, and VKITTI2, where our model delivers superior performance in all evaluated settings. For the depth estimation task, our model outperforms all compared research works in the high-resolution setting, attaining an absolute relative depth error (abs rel) of 0.099 on the KITTI benchmark. Besides, our optical flow estimation results (an overall EPE of 7.09 on KITTI) also surpass state-of-the-art methods and largely improve the estimation of dynamic regions, demonstrating the effectiveness of our motion model. Our code will be available.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "24 pages, 14 figures, Tech Report"
-    },
-    {
         "paper id": "2403.05896",
         "abstract url": "https://arxiv.org/abs/2403.05896",
         "title": "Fast Kernel Scene Flow",
@@ -1738,6 +1702,30 @@
             "cs.CV"
         ],
         "comment": "13 pages, 10 figures, conference or other essential info"
+    },
+    {
+        "paper id": "2403.05907",
+        "abstract url": "https://arxiv.org/abs/2403.05907",
+        "title": "Lightning NeRF: Efficient Hybrid Scene Representation for Autonomous Driving",
+        "rating": "-1",
+        "keywords": [
+            [
+                "NeRF"
+            ],
+            [
+                "Autonomous Driving",
+                "LiDAR"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Recent studies have highlighted the promising application of NeRF in autonomous driving contexts. However, the complexity of outdoor environments, combined with the restricted viewpoints in driving scenarios, complicates the task of precisely reconstructing scene geometry. Such challenges often lead to diminished quality in reconstructions and extended durations for both training and rendering. To tackle these challenges, we present Lightning NeRF. It uses an efficient hybrid scene representation that effectively utilizes the geometry prior from LiDAR in autonomous driving scenarios. Lightning NeRF significantly improves the novel view synthesis performance of NeRF and reduces computational overheads. Through evaluations on real-world datasets, such as KITTI-360, Argoverse2, and our private dataset, we demonstrate that our approach not only exceeds the current state-of-the-art in novel view synthesis quality but also achieves a five-fold increase in training speed and a ten-fold improvement in rendering speed. Codes are available at https://github.com/VISION-SJTU/Lightning-NeRF .",
+        "subjects": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "comment": "Accepted to ICRA 2024"
     },
     {
         "paper id": "2403.05916",
@@ -2131,6 +2119,26 @@
         "comment": null
     },
     {
+        "paper id": "2403.05811",
+        "abstract url": "https://arxiv.org/abs/2403.05811",
+        "title": "Near Minimax-Optimal Distributional Temporal Difference Algorithms and The Freedman Inequality in Hilbert Spaces",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "tabular"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Distributional reinforcement learning (DRL) has achieved empirical success in various domains. One of the core tasks in the field of DRL is distributional policy evaluation, which involves estimating the return distribution $\u03b7^\u03c0$ for a given policy $\u03c0$. The distributional temporal difference (TD) algorithm has been accordingly proposed, which is an extension of the temporal difference algorithm in the classic RL literature. In the tabular case, \\citet{rowland2018analysis} and \\citet{rowland2023analysis} proved the asymptotic convergence of two instances of distributional TD, namely categorical temporal difference algorithm (CTD) and quantile temporal difference algorithm (QTD), respectively. In this paper, we go a step further and analyze the finite-sample performance of distributional TD. To facilitate theoretical analysis, we propose a non-parametric distributional TD algorithm (NTD). For a $\u03b3$-discounted infinite-horizon tabular Markov decision process, we show that for NTD we need $\\tilde{O}\\left(\\frac{1}{\\varepsilon^{2p}(1-\u03b3)^{2p+1}}\\right)$ iterations to achieve an $\\varepsilon$-optimal estimator with high probability, when the estimation error is measured by the $p$-Wasserstein distance. This sample complexity bound is minimax optimal (up to logarithmic factors) in the case of the $1$-Wasserstein distance. To achieve this, we establish a novel Freedman's inequality in Hilbert spaces, which would be of independent interest. In addition, we revisit CTD, showing that the same non-asymptotic convergence bounds hold for CTD in the case of the $p$-Wasserstein distance.",
+        "subjects": [
+            "stat.ML",
+            "cs.LG"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2403.05817",
         "abstract url": "https://arxiv.org/abs/2403.05817",
         "title": "SAFDNet: A Simple and Effective Network for Fully Sparse 3D Object Detection",
@@ -2209,6 +2217,26 @@
             "eess.AS"
         ],
         "comment": "ICASSP2024 Accept"
+    },
+    {
+        "paper id": "2403.05821",
+        "abstract url": "https://arxiv.org/abs/2403.05821",
+        "title": "Optimizing LLM Queries in Relational Workloads",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "SQL"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Analytical database providers (e.g., Redshift, Databricks, BigQuery) have rapidly added support for invoking Large Language Models (LLMs) through native user-defined functions (UDFs) to help users perform natural language tasks, such as classification, entity extraction, and translation, inside analytical workloads. For instance, an analyst might want to extract customer sentiments on millions of product reviews. However, LLM inference is highly expensive in both computational and economic terms: for example, an NVIDIA L4 GPU running Llama2-7B can only process 6 KB of text per second. In this paper, we explore how to optimize LLM inference for analytical workloads that invoke LLMs within relational queries. We show that relational queries present novel opportunities for accelerating LLM inference, including reordering rows to maximize key-value (KV) cache reuse within the LLM inference engine, reordering columns within a row to further increase cache reuse, and deduplicating redundant inference requests. We implement these optimizations in Apache Spark, with vLLM as the model serving backend and achieve up to 4.4x improvement in end-to-end latency on a benchmark of diverse LLM-based queries on real datasets. To the best of our knowledge, this is the first work to explicitly address the problem of optimizing LLM invocations within SQL queries.",
+        "subjects": [
+            "cs.LG",
+            "cs.DB"
+        ],
+        "comment": null
     },
     {
         "paper id": "2403.05828",
@@ -2292,31 +2320,6 @@
             "cs.LG"
         ],
         "comment": "5 pages, 4 figures"
-    },
-    {
-        "paper id": "2403.06003",
-        "abstract url": "https://arxiv.org/abs/2403.06003",
-        "title": "A Generalized Acquisition Function for Preference-based Reward Learning",
-        "rating": "-1.5",
-        "keywords": [
-            [
-                "synthesizing"
-            ],
-            [
-                "robotics"
-            ],
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Preference-based reward learning is a popular technique for teaching robots and autonomous systems how a human user wants them to perform a task. Previous works have shown that actively synthesizing preference queries to maximize information gain about the reward function parameters improves data efficiency. The information gain criterion focuses on precisely identifying all parameters of the reward function. This can potentially be wasteful as many parameters may result in the same reward, and many rewards may result in the same behavior in the downstream tasks. Instead, we show that it is possible to optimize for learning the reward function up to a behavioral equivalence class, such as inducing the same ranking over behaviors, distribution over choices, or other related definitions of what makes two rewards similar. We introduce a tractable framework that can capture such definitions of similarity. Our experiments in a synthetic environment, an assistive robotics environment with domain transfer, and a natural language processing problem with real datasets demonstrate the superior performance of our querying method over the state-of-the-art information gain method.",
-        "subjects": [
-            "cs.RO",
-            "cs.AI",
-            "cs.LG"
-        ],
-        "comment": null
     },
     {
         "paper id": "2403.06027",
@@ -2607,33 +2610,6 @@
             "eess.SY"
         ],
         "comment": "To appear at the 2024 ACM/IEEE Design Automation and Test in Europe, Valencia, Spain, 25-27 March 2024. 2 pages, 1 figure, 1 table"
-    },
-    {
-        "paper id": "2403.05907",
-        "abstract url": "https://arxiv.org/abs/2403.05907",
-        "title": "Lightning NeRF: Efficient Hybrid Scene Representation for Autonomous Driving",
-        "rating": "-2",
-        "keywords": [
-            [
-                "NeRF"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "Autonomous Driving",
-                "LiDAR"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Recent studies have highlighted the promising application of NeRF in autonomous driving contexts. However, the complexity of outdoor environments, combined with the restricted viewpoints in driving scenarios, complicates the task of precisely reconstructing scene geometry. Such challenges often lead to diminished quality in reconstructions and extended durations for both training and rendering. To tackle these challenges, we present Lightning NeRF. It uses an efficient hybrid scene representation that effectively utilizes the geometry prior from LiDAR in autonomous driving scenarios. Lightning NeRF significantly improves the novel view synthesis performance of NeRF and reduces computational overheads. Through evaluations on real-world datasets, such as KITTI-360, Argoverse2, and our private dataset, we demonstrate that our approach not only exceeds the current state-of-the-art in novel view synthesis quality but also achieves a five-fold increase in training speed and a ten-fold improvement in rendering speed. Codes are available at https://github.com/VISION-SJTU/Lightning-NeRF .",
-        "subjects": [
-            "cs.CV",
-            "cs.RO"
-        ],
-        "comment": "Accepted to ICRA 2024"
     },
     {
         "paper id": "2403.05912",
@@ -2943,8 +2919,7 @@
         "rating": "-2.5",
         "keywords": [
             [
-                "Diffusion",
-                "synthesizing"
+                "Diffusion"
             ],
             [
                 "Anomaly Detection"
@@ -2964,6 +2939,30 @@
             "cs.CV"
         ],
         "comment": "Accepted to CVPR 2024"
+    },
+    {
+        "paper id": "2403.05918",
+        "abstract url": "https://arxiv.org/abs/2403.05918",
+        "title": "SEMRes-DDPM: Residual Network Based Diffusion Modelling Applied to Imbalanced Data",
+        "rating": "-2.5",
+        "keywords": [
+            [
+                "Diffusion"
+            ],
+            [
+                "tabular"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "In the field of data mining and machine learning, commonly used classification models cannot effectively learn in unbalanced data. In order to balance the data distribution before model training, oversampling methods are often used to generate data for a small number of classes to solve the problem of classifying unbalanced data. Most of the classical oversampling methods are based on the SMOTE technique, which only focuses on the local information of the data, and therefore the generated data may have the problem of not being realistic enough. In the current oversampling methods based on generative networks, the methods based on GANs can capture the true distribution of data, but there is the problem of pattern collapse and training instability in training; in the oversampling methods based on denoising diffusion probability models, the neural network of the inverse diffusion process using the U-Net is not applicable to tabular data, and although the MLP can be used to replace the U-Net, the problem exists due to the simplicity of the structure and the poor effect of removing noise. problem of poor noise removal. In order to overcome the above problems, we propose a novel oversampling method SEMRes-DDPM.In the SEMRes-DDPM backward diffusion process, a new neural network structure SEMST-ResNet is used, which is suitable for tabular data and has good noise removal effect, and it can generate tabular data with higher quality. Experiments show that the SEMResNet network removes noise better than MLP; SEMRes-DDPM generates data distributions that are closer to the real data distributions than TabDDPM with CWGAN-GP; on 20 real unbalanced tabular datasets with 9 classification models, SEMRes-DDPM improves the quality of the generated tabular data in terms of three evaluation metrics (F1, G-mean, AUC) with better classification performance than other SOTA oversampling methods.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI"
+        ],
+        "comment": "None"
     },
     {
         "paper id": "2404.07939",

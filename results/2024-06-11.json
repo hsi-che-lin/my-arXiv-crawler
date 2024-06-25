@@ -22,6 +22,25 @@
         "comment": "25 pages, 35 figures"
     },
     {
+        "paper id": "2406.06973",
+        "abstract url": "https://arxiv.org/abs/2406.06973",
+        "title": "RWKV-CLIP: A Robust Vision-Language Representation Learner",
+        "rating": "2",
+        "keywords": [
+            [
+                "Vision-Language"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Contrastive Language-Image Pre-training (CLIP) has significantly improved performance in various vision-language tasks by expanding the dataset with image-text pairs obtained from websites. This paper further explores CLIP from the perspectives of data and model architecture. To address the prevalence of noisy data and enhance the quality of large-scale image-text data crawled from the internet, we introduce a diverse description generation framework that can leverage Large Language Models (LLMs) to synthesize and refine content from web-based texts, synthetic captions, and detection tags. Furthermore, we propose RWKV-CLIP, the first RWKV-driven vision-language representation learning model that combines the effective parallel training of transformers with the efficient inference of RNNs. Comprehensive experiments across various model scales and pre-training datasets demonstrate that RWKV-CLIP is a robust and efficient vision-language representation learner, it achieves state-of-the-art performance in several downstream tasks, including linear probe, zero-shot classification, and zero-shot image-text retrieval. To facilitate future research, the code and pre-trained models are released at https://github.com/deepglint/RWKV-CLIP",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "14 pages, 10 figures"
+    },
+    {
         "paper id": "2406.07091",
         "abstract url": "https://arxiv.org/abs/2406.07091",
         "title": "AutoTVG: A New Vision-language Pre-training Paradigm for Temporal Video Grounding",
@@ -58,6 +77,25 @@
             "cs.CL"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2406.07191",
+        "abstract url": "https://arxiv.org/abs/2406.07191",
+        "title": "MeMSVD: Long-Range Temporal Structure Capturing Using Incremental SVD",
+        "rating": "2",
+        "keywords": [
+            [
+                "memory-efficient"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "This paper is on long-term video understanding where the goal is to recognise human actions over long temporal windows (up to minutes long). In prior work, long temporal context is captured by constructing a long-term memory bank consisting of past and future video features which are then integrated into standard (short-term) video recognition backbones through the use of attention mechanisms. Two well-known problems related to this approach are the quadratic complexity of the attention operation and the fact that the whole feature bank must be stored in memory for inference. To address both issues, we propose an alternative to attention-based schemes which is based on a low-rank approximation of the memory obtained using Singular Value Decomposition. Our scheme has two advantages: (a) it reduces complexity by more than an order of magnitude, and (b) it is amenable to an efficient implementation for the calculation of the memory bases in an incremental fashion which does not require the storage of the whole feature bank in memory. The proposed scheme matches or surpasses the accuracy achieved by attention-based mechanisms while being memory-efficient. Through extensive experiments, we demonstrate that our framework generalises to different architectures and tasks, outperforming the state-of-the-art in three datasets.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Accepted to ICIP 2024"
     },
     {
         "paper id": "2406.07236",
@@ -121,28 +159,6 @@
             "cs.CL"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2406.07854",
-        "abstract url": "https://arxiv.org/abs/2406.07854",
-        "title": "Zero-Shot Fake Video Detection by Audio-Visual Consistency",
-        "rating": "2",
-        "keywords": [
-            [
-                "Audio-Visual"
-            ],
-            [
-                "cs.SD",
-                "eess.AS"
-            ]
-        ],
-        "abstract": "Recent studies have advocated the detection of fake videos as a one-class detection task, predicated on the hypothesis that the consistency between audio and visual modalities of genuine data is more significant than that of fake data. This methodology, which solely relies on genuine audio-visual data while negating the need for forged counterparts, is thus delineated as a `zero-shot' detection paradigm. This paper introduces a novel zero-shot detection approach anchored in content consistency across audio and video. By employing pre-trained ASR and VSR models, we recognize the audio and video content sequences, respectively. Then, the edit distance between the two sequences is computed to assess whether the claimed video is genuine. Experimental results indicate that, compared to two mainstream approaches based on semantic consistency and temporal consistency, our approach achieves superior generalizability across various deepfake techniques and demonstrates strong robustness against audio-visual perturbations. Finally, state-of-the-art performance gains can be achieved by simply integrating the decision scores of these three systems.",
-        "subjects": [
-            "cs.SD",
-            "cs.MM",
-            "eess.AS"
-        ],
-        "comment": "to be published in INTERSPEECH 2024"
     },
     {
         "paper id": "2406.06962",
@@ -337,28 +353,6 @@
         "comment": "Accepted by Interspeech 2024"
     },
     {
-        "paper id": "2406.07268",
-        "abstract url": "https://arxiv.org/abs/2406.07268",
-        "title": "Advancing Grounded Multimodal Named Entity Recognition via LLM-Based Reformulation and Box-Based Segmentation",
-        "rating": "1.5",
-        "keywords": [
-            [
-                "cs.CV",
-                "cs.CL"
-            ],
-            [
-                "EMNLP"
-            ]
-        ],
-        "abstract": "Grounded Multimodal Named Entity Recognition (GMNER) task aims to identify named entities, entity types and their corresponding visual regions. GMNER task exhibits two challenging attributes: 1) The tenuous correlation between images and text on social media contributes to a notable proportion of named entities being ungroundable. 2) There exists a distinction between coarse-grained noun phrases used in similar tasks (e.g., phrase localization) and fine-grained named entities. In this paper, we propose RiVEG, a unified framework that reformulates GMNER into a joint MNER-VE-VG task by leveraging large language models (LLMs) as connecting bridges. This reformulation brings two benefits: 1) It enables us to optimize the MNER module for optimal MNER performance and eliminates the need to pre-extract region features using object detection methods, thus naturally addressing the two major limitations of existing GMNER methods. 2) The introduction of Entity Expansion Expression module and Visual Entailment (VE) module unifies Visual Grounding (VG) and Entity Grounding (EG). This endows the proposed framework with unlimited data and model scalability. Furthermore, to address the potential ambiguity stemming from the coarse-grained bounding box output in GMNER, we further construct the new Segmented Multimodal Named Entity Recognition (SMNER) task and corresponding Twitter-SMNER dataset aimed at generating fine-grained segmentation masks, and experimentally demonstrate the feasibility and effectiveness of using box prompt-based Segment Anything Model (SAM) to empower any GMNER model with the ability to accomplish the SMNER task. Extensive experiments demonstrate that RiVEG significantly outperforms SoTA methods on four datasets across the MNER, GMNER, and SMNER tasks.",
-        "subjects": [
-            "cs.MM",
-            "cs.CL",
-            "cs.CV"
-        ],
-        "comment": "Extension of our Findings of EMNLP 2023 & ACL 2024 paper"
-    },
-    {
         "paper id": "2406.07291",
         "abstract url": "https://arxiv.org/abs/2406.07291",
         "title": "Joint Learning of Context and Feedback Embeddings in Spoken Dialogue",
@@ -419,27 +413,6 @@
         ],
         "abstract": "The multi-codebook speech codec enables the application of large language models (LLM) in TTS but bottlenecks efficiency and robustness due to multi-sequence prediction. To avoid this obstacle, we propose Single-Codec, a single-codebook single-sequence codec, which employs a disentangled VQ-VAE to decouple speech into a time-invariant embedding and a phonetically-rich discrete sequence. Furthermore, the encoder is enhanced with 1) contextual modeling with a BLSTM module to exploit the temporal information, 2) a hybrid sampling module to alleviate distortion from upsampling and downsampling, and 3) a resampling module to encourage discrete units to carry more phonetic information. Compared with multi-codebook codecs, e.g., EnCodec and TiCodec, Single-Codec demonstrates higher reconstruction quality with a lower bandwidth of only 304bps. The effectiveness of Single-Code is further validated by LLM-TTS experiments, showing improved naturalness and intelligibility.",
         "subjects": [
-            "eess.AS"
-        ],
-        "comment": "Accepted by Interspeech 2024"
-    },
-    {
-        "paper id": "2406.07498",
-        "abstract url": "https://arxiv.org/abs/2406.07498",
-        "title": "RaD-Net 2: A causal two-stage repairing and denoising speech enhancement network with knowledge distillation and complex axial self-attention",
-        "rating": "1.5",
-        "keywords": [
-            [
-                "cs.SD",
-                "eess.AS"
-            ],
-            [
-                "Interspeech"
-            ]
-        ],
-        "abstract": "In real-time speech communication systems, speech signals are often degraded by multiple distortions. Recently, a two-stage Repair-and-Denoising network (RaD-Net) was proposed with superior speech quality improvement in the ICASSP 2024 Speech Signal Improvement (SSI) Challenge. However, failure to use future information and constraint receptive field of convolution layers limit the system's performance. To mitigate these problems, we extend RaD-Net to its upgraded version, RaD-Net 2. Specifically, a causality-based knowledge distillation is introduced in the first stage to use future information in a causal way. We use the non-causal repairing network as the teacher to improve the performance of the causal repairing network. In addition, in the second stage, complex axial self-attention is applied in the denoising network's complex feature encoder/decoder. Experimental results on the ICASSP 2024 SSI Challenge blind test set show that RaD-Net 2 brings 0.10 OVRL DNSMOS improvement compared to RaD-Net.",
-        "subjects": [
-            "cs.SD",
             "eess.AS"
         ],
         "comment": "Accepted by Interspeech 2024"
@@ -541,6 +514,27 @@
         "comment": "Accepted to Interspeech 2024"
     },
     {
+        "paper id": "2406.07725",
+        "abstract url": "https://arxiv.org/abs/2406.07725",
+        "title": "The Interspeech 2024 Challenge on Speech Processing Using Discrete Units",
+        "rating": "1.5",
+        "keywords": [
+            [
+                "cs.SD",
+                "eess.AS"
+            ],
+            [
+                "Interspeech"
+            ]
+        ],
+        "abstract": "Representing speech and audio signals in discrete units has become a compelling alternative to traditional high-dimensional feature vectors. Numerous studies have highlighted the efficacy of discrete units in various applications such as speech compression and restoration, speech recognition, and speech generation. To foster exploration in this domain, we introduce the Interspeech 2024 Challenge, which focuses on new speech processing benchmarks using discrete units. It encompasses three pivotal tasks, namely multilingual automatic speech recognition, text-to-speech, and singing voice synthesis, and aims to assess the potential applicability of discrete units in these tasks. This paper outlines the challenge designs and baseline descriptions. We also collate baseline and selected submission systems, along with preliminary findings, offering valuable contributions to future research in this evolving field.",
+        "subjects": [
+            "cs.SD",
+            "eess.AS"
+        ],
+        "comment": "This manuscript has been accepted by Interspeech2024"
+    },
+    {
         "paper id": "2406.07816",
         "abstract url": "https://arxiv.org/abs/2406.07816",
         "title": "Spoof Diarization: \"What Spoofed When\" in Partially Spoofed Audio",
@@ -583,6 +577,25 @@
             "cs.SD"
         ],
         "comment": "Accepted for presentation at Interspeech 2024"
+    },
+    {
+        "paper id": "2406.07846",
+        "abstract url": "https://arxiv.org/abs/2406.07846",
+        "title": "DualVC 3: Leveraging Language Model Generated Pseudo Context for End-to-end Low Latency Streaming Voice Conversion",
+        "rating": "1.5",
+        "keywords": [
+            [
+                "eess.AS"
+            ],
+            [
+                "Interspeech"
+            ]
+        ],
+        "abstract": "Streaming voice conversion has become increasingly popular for its potential in real-time applications. The recently proposed DualVC 2 has achieved robust and high-quality streaming voice conversion with a latency of about 180ms. Nonetheless, the recognition-synthesis framework hinders end-to-end optimization, and the instability of automatic speech recognition (ASR) model with short chunks makes it challenging to further reduce latency. To address these issues, we propose an end-to-end model, DualVC 3. With speaker-independent semantic tokens to guide the training of the content encoder, the dependency on ASR is removed and the model can operate under extremely small chunks, with cascading errors eliminated. A language model is trained on the content encoder output to produce pseudo context by iteratively predicting future frames, providing more contextual information for the decoder to improve conversion quality. Experimental results demonstrate that DualVC 3 achieves comparable performance to DualVC 2 in subjective and objective metrics, with a latency of only 50 ms.",
+        "subjects": [
+            "eess.AS"
+        ],
+        "comment": "Accepted by Interspeech 2024"
     },
     {
         "paper id": "2406.08517",
@@ -677,28 +690,6 @@
             "cs.AI"
         ],
         "comment": "To appear as spotlight at ICML 2024. 36 pages, 4 figures"
-    },
-    {
-        "paper id": "2406.06973",
-        "abstract url": "https://arxiv.org/abs/2406.06973",
-        "title": "RWKV-CLIP: A Robust Vision-Language Representation Learner",
-        "rating": "1",
-        "keywords": [
-            [
-                "Vision-Language"
-            ],
-            [
-                "synthesize"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Contrastive Language-Image Pre-training (CLIP) has significantly improved performance in various vision-language tasks by expanding the dataset with image-text pairs obtained from websites. This paper further explores CLIP from the perspectives of data and model architecture. To address the prevalence of noisy data and enhance the quality of large-scale image-text data crawled from the internet, we introduce a diverse description generation framework that can leverage Large Language Models (LLMs) to synthesize and refine content from web-based texts, synthetic captions, and detection tags. Furthermore, we propose RWKV-CLIP, the first RWKV-driven vision-language representation learning model that combines the effective parallel training of transformers with the efficient inference of RNNs. Comprehensive experiments across various model scales and pre-training datasets demonstrate that RWKV-CLIP is a robust and efficient vision-language representation learner, it achieves state-of-the-art performance in several downstream tasks, including linear probe, zero-shot classification, and zero-shot image-text retrieval. To facilitate future research, the code and pre-trained models are released at https://github.com/deepglint/RWKV-CLIP",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "14 pages, 10 figures"
     },
     {
         "paper id": "2406.06999",
@@ -846,22 +837,6 @@
         "comment": null
     },
     {
-        "paper id": "2406.07050",
-        "abstract url": "https://arxiv.org/abs/2406.07050",
-        "title": "DualMamba: A Lightweight Spectral-Spatial Mamba-Convolution Network for Hyperspectral Image Classification",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "The effectiveness and efficiency of modeling complex spectral-spatial relations are both crucial for Hyperspectral image (HSI) classification. Most existing methods based on CNNs and transformers still suffer from heavy computational burdens and have room for improvement in capturing the global-local spectral-spatial feature representation. To this end, we propose a novel lightweight parallel design called lightweight dual-stream Mamba-convolution network (DualMamba) for HSI classification. Specifically, a parallel lightweight Mamba and CNN block are first developed to extract global and local spectral-spatial features. First, the cross-attention spectral-spatial Mamba module is proposed to leverage the global modeling of Mamba at linear complexity. Within this module, dynamic positional embedding is designed to enhance the spatial location information of visual sequences. The lightweight spectral/spatial Mamba blocks comprise an efficient scanning strategy and a lightweight Mamba design to efficiently extract global spectral-spatial features. And the cross-attention spectral-spatial fusion is designed to learn cross-correlation and fuse spectral-spatial features. Second, the lightweight spectral-spatial residual convolution module is proposed with lightweight spectral and spatial branches to extract local spectral-spatial features through residual learning. Finally, the adaptive global-local fusion is proposed to dynamically combine global Mamba features and local convolution features for a global-local spectral-spatial representation. Compared with state-of-the-art HSI classification methods, experimental results demonstrate that DualMamba achieves significant classification accuracy on three public HSI datasets and a superior reduction in model parameters and floating point operations (FLOPs).",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2406.07054",
         "abstract url": "https://arxiv.org/abs/2406.07054",
         "title": "CoEvol: Constructing Better Responses for Instruction Finetuning through Multi-Agent Cooperation",
@@ -980,6 +955,24 @@
         "comment": null
     },
     {
+        "paper id": "2406.07131",
+        "abstract url": "https://arxiv.org/abs/2406.07131",
+        "title": "ICGAN: An implicit conditioning method for interpretable feature control of neural audio synthesis",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.SD",
+                "eess.AS"
+            ]
+        ],
+        "abstract": "Neural audio synthesis methods can achieve high-fidelity and realistic sound generation by utilizing deep generative models. Such models typically rely on external labels which are often discrete as conditioning information to achieve guided sound generation. However, it remains difficult to control the subtle changes in sounds without appropriate and descriptive labels, especially given a limited dataset. This paper proposes an implicit conditioning method for neural audio synthesis using generative adversarial networks that allows for interpretable control of the acoustic features of synthesized sounds. Our technique creates a continuous conditioning space that enables timbre manipulation without relying on explicit labels. We further introduce an evaluation metric to explore controllability and demonstrate that our approach is effective in enabling a degree of controlled variation of different synthesized sound effects for in-domain and cross-domain sounds.",
+        "subjects": [
+            "cs.SD",
+            "eess.AS"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2406.07155",
         "abstract url": "https://arxiv.org/abs/2406.07155",
         "title": "Scaling Large-Language-Model-based Multi-Agent Collaboration",
@@ -1064,6 +1057,31 @@
         "comment": "Findings of ACL 2024"
     },
     {
+        "paper id": "2406.07170",
+        "abstract url": "https://arxiv.org/abs/2406.07170",
+        "title": "VoxNeuS: Enhancing Voxel-Based Neural Surface Reconstruction via Gradient Interpolation",
+        "rating": "1",
+        "keywords": [
+            [
+                "memory efficient"
+            ],
+            [
+                "3D",
+                "Voxel",
+                "Signed Distance Field",
+                "SDF"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Neural Surface Reconstruction learns a Signed Distance Field~(SDF) to reconstruct the 3D model from multi-view images. Previous works adopt voxel-based explicit representation to improve efficiency. However, they ignored the gradient instability of interpolation in the voxel grid, leading to degradation on convergence and smoothness. Besides, previous works entangled the optimization of geometry and radiance, which leads to the deformation of geometry to explain radiance, causing artifacts when reconstructing textured planes. In this work, we reveal that the instability of gradient comes from its discontinuity during trilinear interpolation, and propose to use the interpolated gradient instead of the original analytical gradient to eliminate the discontinuity. Based on gradient interpolation, we propose VoxNeuS, a lightweight surface reconstruction method for computational and memory efficient neural surface reconstruction. Thanks to the explicit representation, the gradient of regularization terms, i.e. Eikonal and curvature loss, are directly solved, avoiding computation and memory-access overhead. Further, VoxNeuS adopts a geometry-radiance disentangled architecture to handle the geometry deformation from radiance optimization. The experimental results show that VoxNeuS achieves better reconstruction quality than previous works. The entire training process takes 15 minutes and less than 3 GB of memory on a single 2080ti GPU.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2406.07189",
         "abstract url": "https://arxiv.org/abs/2406.07189",
         "title": "RGB-Sonar Tracking Benchmark and Spatial Cross-Attention Transformer Tracker",
@@ -1078,22 +1096,6 @@
             "cs.CV"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2406.07191",
-        "abstract url": "https://arxiv.org/abs/2406.07191",
-        "title": "MeMSVD: Long-Range Temporal Structure Capturing Using Incremental SVD",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "This paper is on long-term video understanding where the goal is to recognise human actions over long temporal windows (up to minutes long). In prior work, long temporal context is captured by constructing a long-term memory bank consisting of past and future video features which are then integrated into standard (short-term) video recognition backbones through the use of attention mechanisms. Two well-known problems related to this approach are the quadratic complexity of the attention operation and the fact that the whole feature bank must be stored in memory for inference. To address both issues, we propose an alternative to attention-based schemes which is based on a low-rank approximation of the memory obtained using Singular Value Decomposition. Our scheme has two advantages: (a) it reduces complexity by more than an order of magnitude, and (b) it is amenable to an efficient implementation for the calculation of the memory bases in an incremental fashion which does not require the storage of the whole feature bank in memory. The proposed scheme matches or surpasses the accuracy achieved by attention-based mechanisms while being memory-efficient. Through extensive experiments, we demonstrate that our framework generalises to different architectures and tasks, outperforming the state-of-the-art in three datasets.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Accepted to ICIP 2024"
     },
     {
         "paper id": "2406.07198",
@@ -1311,24 +1313,6 @@
         "comment": "34 pages, 7 figures, published at ICML 2024"
     },
     {
-        "paper id": "2406.07254",
-        "abstract url": "https://arxiv.org/abs/2406.07254",
-        "title": "SRC4VC: Smartphone-Recorded Corpus for Voice Conversion Benchmark",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.SD",
-                "eess.AS"
-            ]
-        ],
-        "abstract": "We present SRC4VC, a new corpus containing 11 hours of speech recorded on smartphones by 100 Japanese speakers. Although high-quality multi-speaker corpora can advance voice conversion (VC) technologies, they are not always suitable for testing VC when low-quality speech recording is given as the input. To this end, we first asked 100 crowdworkers to record their voice samples using smartphones. Then, we annotated the recorded samples with speaker-wise recording-quality scores and utterance-wise perceived emotion labels. We also benchmark SRC4VC on any-to-any VC, in which we trained a multi-speaker VC model on high-quality speech and used the SRC4VC speakers' voice samples as the source in VC. The results show that the recording quality mismatch between the training and evaluation data significantly degrades the VC performance, which can be improved by applying speech enhancement to the low-quality source speech samples.",
-        "subjects": [
-            "cs.SD",
-            "eess.AS"
-        ],
-        "comment": "Accepted for INTERSPEECH 2024, corpus project page: https://y-saito.sakura.ne.jp/sython/Corpus/SRC4VC/index.html"
-    },
-    {
         "paper id": "2406.07257",
         "abstract url": "https://arxiv.org/abs/2406.07257",
         "title": "Scholarly Question Answering using Large Language Models in the NFDI4DataScience Gateway",
@@ -1414,6 +1398,28 @@
             "cs.CL"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2406.07289",
+        "abstract url": "https://arxiv.org/abs/2406.07289",
+        "title": "Can We Achieve High-quality Direct Speech-to-Speech Translation without Parallel Speech Data?",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.AI",
+                "cs.CL",
+                "cs.SD",
+                "eess.AS"
+            ]
+        ],
+        "abstract": "Recently proposed two-pass direct speech-to-speech translation (S2ST) models decompose the task into speech-to-text translation (S2TT) and text-to-speech (TTS) within an end-to-end model, yielding promising results. However, the training of these models still relies on parallel speech data, which is extremely challenging to collect. In contrast, S2TT and TTS have accumulated a large amount of data and pretrained models, which have not been fully utilized in the development of S2ST models. Inspired by this, in this paper, we first introduce a composite S2ST model named ComSpeech, which can seamlessly integrate any pretrained S2TT and TTS models into a direct S2ST model. Furthermore, to eliminate the reliance on parallel speech data, we propose a novel training method ComSpeech-ZS that solely utilizes S2TT and TTS data. It aligns representations in the latent space through contrastive learning, enabling the speech synthesis capability learned from the TTS data to generalize to S2ST in a zero-shot manner. Experimental results on the CVSS dataset show that when the parallel speech data is available, ComSpeech surpasses previous two-pass models like UnitY and Translatotron 2 in both translation quality and decoding speed. When there is no parallel speech data, ComSpeech-ZS lags behind \\name by only 0.7 ASR-BLEU and outperforms the cascaded models.",
+        "subjects": [
+            "cs.CL",
+            "cs.AI",
+            "cs.SD",
+            "eess.AS"
+        ],
+        "comment": "ACL 2024 main conference. Project Page: https://ictnlp.github.io/ComSpeech-Site/"
     },
     {
         "paper id": "2406.07294",
@@ -1988,8 +1994,7 @@
             ],
             [
                 "diffusion",
-                "GAN",
-                "synthesis"
+                "GAN"
             ],
             [
                 "cs.LG",
@@ -2262,6 +2267,26 @@
         "comment": null
     },
     {
+        "paper id": "2406.07801",
+        "abstract url": "https://arxiv.org/abs/2406.07801",
+        "title": "PolySpeech: Exploring Unified Multitask Speech Models for Competitiveness with Single-task Models",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.CL",
+                "cs.SD",
+                "eess.AS"
+            ]
+        ],
+        "abstract": "Recently, there have been attempts to integrate various speech processing tasks into a unified model. However, few previous works directly demonstrated that joint optimization of diverse tasks in multitask speech models has positive influence on the performance of individual tasks. In this paper we present a multitask speech model -- PolySpeech, which supports speech recognition, speech synthesis, and two speech classification tasks. PolySpeech takes multi-modal language model as its core structure and uses semantic representations as speech inputs. We introduce semantic speech embedding tokenization and speech reconstruction methods to PolySpeech, enabling efficient generation of high-quality speech for any given speaker. PolySpeech shows competitiveness across various tasks compared to single-task models. In our experiments, multitask optimization achieves performance comparable to single-task optimization and is especially beneficial for specific tasks.",
+        "subjects": [
+            "cs.CL",
+            "cs.SD",
+            "eess.AS"
+        ],
+        "comment": "5 pages, 2 figures"
+    },
+    {
         "paper id": "2406.07803",
         "abstract url": "https://arxiv.org/abs/2406.07803",
         "title": "EmoSphere-TTS: Emotional Style and Intensity Modeling via Spherical Emotion Vector for Controllable Emotional Text-to-Speech",
@@ -2486,24 +2511,74 @@
         "comment": "Submitted to: Electronic Letters on Computer Vision and Image Analysis"
     },
     {
-        "paper id": "2406.07860",
-        "abstract url": "https://arxiv.org/abs/2406.07860",
-        "title": "BookSQL: A Large Scale Text-to-SQL Dataset for Accounting Domain",
+        "paper id": "2406.07854",
+        "abstract url": "https://arxiv.org/abs/2406.07854",
+        "title": "Zero-Shot Fake Video Detection by Audio-Visual Consistency",
         "rating": "1",
         "keywords": [
             [
-                "cs.AI",
-                "cs.LG",
-                "cs.CL"
+                "Audio-Visual"
+            ],
+            [
+                "deepfake"
+            ],
+            [
+                "cs.SD",
+                "eess.AS"
             ]
         ],
-        "abstract": "Several large-scale datasets (e.g., WikiSQL, Spider) for developing natural language interfaces to databases have recently been proposed. These datasets cover a wide breadth of domains but fall short on some essential domains, such as finance and accounting. Given that accounting databases are used worldwide, particularly by non-technical people, there is an imminent need to develop models that could help extract information from accounting databases via natural language queries. In this resource paper, we aim to fill this gap by proposing a new large-scale Text-to-SQL dataset for the accounting and financial domain: BookSQL. The dataset consists of 100k natural language queries-SQL pairs, and accounting databases of 1 million records. We experiment with and analyze existing state-of-the-art models (including GPT-4) for the Text-to-SQL task on BookSQL. We find significant performance gaps, thus pointing towards developing more focused models for this domain.",
+        "abstract": "Recent studies have advocated the detection of fake videos as a one-class detection task, predicated on the hypothesis that the consistency between audio and visual modalities of genuine data is more significant than that of fake data. This methodology, which solely relies on genuine audio-visual data while negating the need for forged counterparts, is thus delineated as a `zero-shot' detection paradigm. This paper introduces a novel zero-shot detection approach anchored in content consistency across audio and video. By employing pre-trained ASR and VSR models, we recognize the audio and video content sequences, respectively. Then, the edit distance between the two sequences is computed to assess whether the claimed video is genuine. Experimental results indicate that, compared to two mainstream approaches based on semantic consistency and temporal consistency, our approach achieves superior generalizability across various deepfake techniques and demonstrates strong robustness against audio-visual perturbations. Finally, state-of-the-art performance gains can be achieved by simply integrating the decision scores of these three systems.",
+        "subjects": [
+            "cs.SD",
+            "cs.MM",
+            "eess.AS"
+        ],
+        "comment": "to be published in INTERSPEECH 2024"
+    },
+    {
+        "paper id": "2406.07855",
+        "abstract url": "https://arxiv.org/abs/2406.07855",
+        "title": "VALL-E R: Robust and Efficient Zero-Shot Text-to-Speech Synthesis via Monotonic Alignment",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.CL",
+                "cs.SD",
+                "eess.AS"
+            ]
+        ],
+        "abstract": "With the help of discrete neural audio codecs, large language models (LLM) have increasingly been recognized as a promising methodology for zero-shot Text-to-Speech (TTS) synthesis. However, sampling based decoding strategies bring astonishing diversity to generation, but also pose robustness issues such as typos, omissions and repetition. In addition, the high sampling rate of audio also brings huge computational overhead to the inference process of autoregression. To address these issues, we propose VALL-E R, a robust and efficient zero-shot TTS system, building upon the foundation of VALL-E. Specifically, we introduce a phoneme monotonic alignment strategy to strengthen the connection between phonemes and acoustic sequence, ensuring a more precise alignment by constraining the acoustic tokens to match their associated phonemes. Furthermore, we employ a codec-merging approach to downsample the discrete codes in shallow quantization layer, thereby accelerating the decoding speed while preserving the high quality of speech output. Benefiting from these strategies, VALL-E R obtains controllablity over phonemes and demonstrates its strong robustness by approaching the WER of ground truth. In addition, it requires fewer autoregressive steps, with over 60% time reduction during inference. This research has the potential to be applied to meaningful projects, including the creation of speech for those affected by aphasia. Audio samples will be available at: https://aka.ms/valler.",
         "subjects": [
             "cs.CL",
-            "cs.AI",
-            "cs.LG"
+            "cs.SD",
+            "eess.AS"
         ],
-        "comment": "Accepted at NAACL 2024; 20 Pages (main + appendix)"
+        "comment": "15 pages, 5 figures"
+    },
+    {
+        "paper id": "2406.07867",
+        "abstract url": "https://arxiv.org/abs/2406.07867",
+        "title": "Let's Go Real Talk: Spoken Dialogue Model for Face-to-Face Conversation",
+        "rating": "1",
+        "keywords": [
+            [
+                "audio-visual"
+            ],
+            [
+                "avatar"
+            ],
+            [
+                "cs.AI",
+                "cs.CV"
+            ]
+        ],
+        "abstract": "In this paper, we introduce a novel Face-to-Face spoken dialogue model. It processes audio-visual speech from user input and generates audio-visual speech as the response, marking the initial step towards creating an avatar chatbot system without relying on intermediate text. To this end, we newly introduce MultiDialog, the first large-scale multimodal (i.e., audio and visual) spoken dialogue corpus containing 340 hours of approximately 9,000 dialogues, recorded based on the open domain dialogue dataset, TopicalChat. The MultiDialog contains parallel audio-visual recordings of conversation partners acting according to the given script with emotion annotations, which we expect to open up research opportunities in multimodal synthesis. Our Face-to-Face spoken dialogue model incorporates a textually pretrained large language model and adapts it into the audio-visual spoken dialogue domain by incorporating speech-text joint pretraining. Through extensive experiments, we validate the effectiveness of our model in facilitating a face-to-face conversation. Demo and data are available at https://multidialog.github.io and https://huggingface.co/datasets/IVLLab/MultiDialog, respectively.",
+        "subjects": [
+            "cs.CV",
+            "cs.AI",
+            "cs.HC"
+        ],
+        "comment": "Accepted to ACL 2024"
     },
     {
         "paper id": "2406.08520",
@@ -2571,25 +2646,6 @@
         "abstract": "Context: In a freeze drying (FD) process, an accurate observation and control of the process parameters at critical stages are at high importance. Particularly accurate and timely identification of the critical temperature (TC) at the end of primary drying phase would lead to heating energy cost reduction and product waste elimination by ending the process before the product's micro-collapse stage. Aim: Within this work, a combination of novel techniques optical technique called Intelligent Laser Speckle Imaging (ILSI) in association with product image texture analysis, coupled to an electrical impedance technique called through vial impedance spectroscopy (TVIS) has been applied onto the real-time product states observation process to identify the specific structural product surface/subsurface characteristics and hence the micro-collapse stage. Method: 2 cycles - one providing a profile for standard approach (non-collapsed) and another with a temperature ramp through TC to micro-collapse, TVIS provides an assessment of the onset of micro-collapse through the assessment of the acceleration in drying rate whereas the ILSI with pattern recognition detects the change in microstructure",
         "subjects": [
             "eess.IV"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2406.09443",
-        "abstract url": "https://arxiv.org/abs/2406.09443",
-        "title": "Comparative Analysis of Personalized Voice Activity Detection Systems: Assessing Real-World Effectiveness",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.LG",
-                "eess.AS"
-            ]
-        ],
-        "abstract": "Voice activity detection (VAD) is a critical component in various applications such as speech recognition, speech enhancement, and hands-free communication systems. With the increasing demand for personalized and context-aware technologies, the need for effective personalized VAD systems has become paramount. In this paper, we present a comparative analysis of Personalized Voice Activity Detection (PVAD) systems to assess their real-world effectiveness. We introduce a comprehensive approach to assess PVAD systems, incorporating various performance metrics such as frame-level and utterance-level error rates, detection latency and accuracy, alongside user-level analysis. Through extensive experimentation and evaluation, we provide a thorough understanding of the strengths and limitations of various PVAD variants. This paper advances the understanding of PVAD technology by offering insights into its efficacy and viability in practical applications using a comprehensive set of metrics.",
-        "subjects": [
-            "eess.AS",
-            "cs.HC",
-            "cs.LG"
         ],
         "comment": null
     },
@@ -3004,7 +3060,7 @@
         "rating": "0.5",
         "keywords": [
             [
-                "Synthesis"
+                "Deepfake"
             ],
             [
                 "cs.SD",
@@ -3200,6 +3256,23 @@
         "comment": "International Conference on Machine Learning (ICML) 2024"
     },
     {
+        "paper id": "2406.07400",
+        "abstract url": "https://arxiv.org/abs/2406.07400",
+        "title": "Guiding LLM Temporal Logic Generation with Explicit Separation of Data and Control",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Temporal logics are powerful tools that are widely used for the synthesis and verification of reactive systems. The recent progress on Large Language Models (LLMs) has the potential to make the process of writing such specifications more accessible. However, writing specifications in temporal logics remains challenging for all but the most expert users. A key question in using LLMs for temporal logic specification engineering is to understand what kind of guidance is most helpful to the LLM and the users to easily produce specifications. Looking specifically at the problem of reactive program synthesis, we explore the impact of providing an LLM with guidance on the separation of control and data--making explicit for the LLM what functionality is relevant for the specification, and treating the remaining functionality as an implementation detail for a series of pre-defined functions and predicates. We present a benchmark set and find that this separation of concerns improves specification generation. Our benchmark provides a test set against which to verify future work in LLM generation of temporal logic specifications.",
+        "subjects": [
+            "cs.LG",
+            "cs.LO"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2406.07402",
         "abstract url": "https://arxiv.org/abs/2406.07402",
         "title": "A Survey on Recent Random Walk-based Methods for Embedding Knowledge Graphs",
@@ -3340,6 +3413,30 @@
         "comment": "40th Conference on Uncertainty in Artificial Intelligence"
     },
     {
+        "paper id": "2406.07498",
+        "abstract url": "https://arxiv.org/abs/2406.07498",
+        "title": "RaD-Net 2: A causal two-stage repairing and denoising speech enhancement network with knowledge distillation and complex axial self-attention",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "speech enhancement"
+            ],
+            [
+                "cs.SD",
+                "eess.AS"
+            ],
+            [
+                "Interspeech"
+            ]
+        ],
+        "abstract": "In real-time speech communication systems, speech signals are often degraded by multiple distortions. Recently, a two-stage Repair-and-Denoising network (RaD-Net) was proposed with superior speech quality improvement in the ICASSP 2024 Speech Signal Improvement (SSI) Challenge. However, failure to use future information and constraint receptive field of convolution layers limit the system's performance. To mitigate these problems, we extend RaD-Net to its upgraded version, RaD-Net 2. Specifically, a causality-based knowledge distillation is introduced in the first stage to use future information in a causal way. We use the non-causal repairing network as the teacher to improve the performance of the causal repairing network. In addition, in the second stage, complex axial self-attention is applied in the denoising network's complex feature encoder/decoder. Experimental results on the ICASSP 2024 SSI Challenge blind test set show that RaD-Net 2 brings 0.10 OVRL DNSMOS improvement compared to RaD-Net.",
+        "subjects": [
+            "cs.SD",
+            "eess.AS"
+        ],
+        "comment": "Accepted by Interspeech 2024"
+    },
+    {
         "paper id": "2406.07515",
         "abstract url": "https://arxiv.org/abs/2406.07515",
         "title": "Beyond Model Collapse: Scaling Up with Synthesized Data Requires Reinforcement",
@@ -3389,6 +3486,34 @@
             "cs.LG"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2406.07532",
+        "abstract url": "https://arxiv.org/abs/2406.07532",
+        "title": "Hearing Anything Anywhere",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "3D"
+            ],
+            [
+                "cs.LG",
+                "cs.CV",
+                "cs.SD",
+                "eess.AS"
+            ],
+            [
+                "CVPR"
+            ]
+        ],
+        "abstract": "Recent years have seen immense progress in 3D computer vision and computer graphics, with emerging tools that can virtualize real-world 3D environments for numerous Mixed Reality (XR) applications. However, alongside immersive visual experiences, immersive auditory experiences are equally vital to our holistic perception of an environment. In this paper, we aim to reconstruct the spatial acoustic characteristics of an arbitrary environment given only a sparse set of (roughly 12) room impulse response (RIR) recordings and a planar reconstruction of the scene, a setup that is easily achievable by ordinary users. To this end, we introduce DiffRIR, a differentiable RIR rendering framework with interpretable parametric models of salient acoustic features of the scene, including sound source directivity and surface reflectivity. This allows us to synthesize novel auditory experiences through the space with any source audio. To evaluate our method, we collect a dataset of RIR recordings and music in four diverse, real environments. We show that our model outperforms state-ofthe-art baselines on rendering monaural and binaural RIRs and music at unseen locations, and learns physically interpretable parameters characterizing acoustic properties of the sound source and surfaces in the scene.",
+        "subjects": [
+            "cs.SD",
+            "cs.CV",
+            "cs.LG",
+            "eess.AS"
+        ],
+        "comment": "CVPR 2024. The first two authors contributed equally. Project page: https://masonlwang.com/hearinganythinganywhere/"
     },
     {
         "paper id": "2406.07541",
@@ -3496,34 +3621,6 @@
         "comment": null
     },
     {
-        "paper id": "2406.07646",
-        "abstract url": "https://arxiv.org/abs/2406.07646",
-        "title": "Pre-training Feature Guided Diffusion Model for Speech Enhancement",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "Diffusion"
-            ],
-            [
-                "cs.AI",
-                "cs.LG",
-                "cs.SD",
-                "eess.AS"
-            ],
-            [
-                "Interspeech"
-            ]
-        ],
-        "abstract": "Speech enhancement significantly improves the clarity and intelligibility of speech in noisy environments, improving communication and listening experiences. In this paper, we introduce a novel pretraining feature-guided diffusion model tailored for efficient speech enhancement, addressing the limitations of existing discriminative and generative models. By integrating spectral features into a variational autoencoder (VAE) and leveraging pre-trained features for guidance during the reverse process, coupled with the utilization of the deterministic discrete integration method (DDIM) to streamline sampling steps, our model improves efficiency and speech enhancement quality. Demonstrating state-of-the-art results on two public datasets with different SNRs, our model outshines other baselines in efficiency and robustness. The proposed method not only optimizes performance but also enhances practical deployment capabilities, without increasing computational demands.",
-        "subjects": [
-            "cs.SD",
-            "cs.AI",
-            "cs.LG",
-            "eess.AS"
-        ],
-        "comment": "Accepted by Interspeech 2024 Conference"
-    },
-    {
         "paper id": "2406.07683",
         "abstract url": "https://arxiv.org/abs/2406.07683",
         "title": "Impact of AI-tooling on the Engineering Workspace",
@@ -3557,30 +3654,6 @@
             "cs.LG"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2406.07725",
-        "abstract url": "https://arxiv.org/abs/2406.07725",
-        "title": "The Interspeech 2024 Challenge on Speech Processing Using Discrete Units",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.SD",
-                "eess.AS"
-            ],
-            [
-                "Interspeech"
-            ]
-        ],
-        "abstract": "Representing speech and audio signals in discrete units has become a compelling alternative to traditional high-dimensional feature vectors. Numerous studies have highlighted the efficacy of discrete units in various applications such as speech compression and restoration, speech recognition, and speech generation. To foster exploration in this domain, we introduce the Interspeech 2024 Challenge, which focuses on new speech processing benchmarks using discrete units. It encompasses three pivotal tasks, namely multilingual automatic speech recognition, text-to-speech, and singing voice synthesis, and aims to assess the potential applicability of discrete units in these tasks. This paper outlines the challenge designs and baseline descriptions. We also collate baseline and selected submission systems, along with preliminary findings, offering valuable contributions to future research in this evolving field.",
-        "subjects": [
-            "cs.SD",
-            "eess.AS"
-        ],
-        "comment": "This manuscript has been accepted by Interspeech2024"
     },
     {
         "paper id": "2406.07726",
@@ -3734,7 +3807,6 @@
         "keywords": [
             [
                 "Diffusion",
-                "synthesis",
                 "text-to-video"
             ],
             [
@@ -3817,28 +3889,6 @@
             "cs.LG"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2406.07846",
-        "abstract url": "https://arxiv.org/abs/2406.07846",
-        "title": "DualVC 3: Leveraging Language Model Generated Pseudo Context for End-to-end Low Latency Streaming Voice Conversion",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "eess.AS"
-            ],
-            [
-                "Interspeech"
-            ]
-        ],
-        "abstract": "Streaming voice conversion has become increasingly popular for its potential in real-time applications. The recently proposed DualVC 2 has achieved robust and high-quality streaming voice conversion with a latency of about 180ms. Nonetheless, the recognition-synthesis framework hinders end-to-end optimization, and the instability of automatic speech recognition (ASR) model with short chunks makes it challenging to further reduce latency. To address these issues, we propose an end-to-end model, DualVC 3. With speaker-independent semantic tokens to guide the training of the content encoder, the dependency on ASR is removed and the model can operate under extremely small chunks, with cascading errors eliminated. A language model is trained on the content encoder output to produce pseudo context by iteratively predicting future frames, providing more contextual information for the decoder to improve conversion quality. Experimental results demonstrate that DualVC 3 achieves comparable performance to DualVC 2 in subjective and objective metrics, with a latency of only 50 ms.",
-        "subjects": [
-            "eess.AS"
-        ],
-        "comment": "Accepted by Interspeech 2024"
     },
     {
         "paper id": "2406.07848",
@@ -3961,7 +4011,6 @@
         "keywords": [
             [
                 "Diffusion",
-                "synthesis",
                 "text-to-image"
             ],
             [
@@ -4065,27 +4114,6 @@
         "comment": "10 pages"
     },
     {
-        "paper id": "2406.07131",
-        "abstract url": "https://arxiv.org/abs/2406.07131",
-        "title": "ICGAN: An implicit conditioning method for interpretable feature control of neural audio synthesis",
-        "rating": "0",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.SD",
-                "eess.AS"
-            ]
-        ],
-        "abstract": "Neural audio synthesis methods can achieve high-fidelity and realistic sound generation by utilizing deep generative models. Such models typically rely on external labels which are often discrete as conditioning information to achieve guided sound generation. However, it remains difficult to control the subtle changes in sounds without appropriate and descriptive labels, especially given a limited dataset. This paper proposes an implicit conditioning method for neural audio synthesis using generative adversarial networks that allows for interpretable control of the acoustic features of synthesized sounds. Our technique creates a continuous conditioning space that enables timbre manipulation without relying on explicit labels. We further introduce an evaluation metric to explore controllability and demonstrate that our approach is effective in enabling a degree of controlled variation of different synthesized sound effects for in-domain and cross-domain sounds.",
-        "subjects": [
-            "cs.SD",
-            "eess.AS"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2406.07169",
         "abstract url": "https://arxiv.org/abs/2406.07169",
         "title": "RecMoDiffuse: Recurrent Flow Diffusion for Human Motion Generation",
@@ -4103,28 +4131,6 @@
             "cs.CV"
         ],
         "comment": "20 pages, 6 figures"
-    },
-    {
-        "paper id": "2406.07170",
-        "abstract url": "https://arxiv.org/abs/2406.07170",
-        "title": "VoxNeuS: Enhancing Voxel-Based Neural Surface Reconstruction via Gradient Interpolation",
-        "rating": "0",
-        "keywords": [
-            [
-                "3D",
-                "Voxel",
-                "Signed Distance Field",
-                "SDF"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Neural Surface Reconstruction learns a Signed Distance Field~(SDF) to reconstruct the 3D model from multi-view images. Previous works adopt voxel-based explicit representation to improve efficiency. However, they ignored the gradient instability of interpolation in the voxel grid, leading to degradation on convergence and smoothness. Besides, previous works entangled the optimization of geometry and radiance, which leads to the deformation of geometry to explain radiance, causing artifacts when reconstructing textured planes. In this work, we reveal that the instability of gradient comes from its discontinuity during trilinear interpolation, and propose to use the interpolated gradient instead of the original analytical gradient to eliminate the discontinuity. Based on gradient interpolation, we propose VoxNeuS, a lightweight surface reconstruction method for computational and memory efficient neural surface reconstruction. Thanks to the explicit representation, the gradient of regularization terms, i.e. Eikonal and curvature loss, are directly solved, avoiding computation and memory-access overhead. Further, VoxNeuS adopts a geometry-radiance disentangled architecture to handle the geometry deformation from radiance optimization. The experimental results show that VoxNeuS achieves better reconstruction quality than previous works. The entire training process takes 15 minutes and less than 3 GB of memory on a single 2080ti GPU.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
     },
     {
         "paper id": "2406.07176",
@@ -4228,6 +4234,27 @@
         "comment": null
     },
     {
+        "paper id": "2406.07254",
+        "abstract url": "https://arxiv.org/abs/2406.07254",
+        "title": "SRC4VC: Smartphone-Recorded Corpus for Voice Conversion Benchmark",
+        "rating": "0",
+        "keywords": [
+            [
+                "speech enhancement"
+            ],
+            [
+                "cs.SD",
+                "eess.AS"
+            ]
+        ],
+        "abstract": "We present SRC4VC, a new corpus containing 11 hours of speech recorded on smartphones by 100 Japanese speakers. Although high-quality multi-speaker corpora can advance voice conversion (VC) technologies, they are not always suitable for testing VC when low-quality speech recording is given as the input. To this end, we first asked 100 crowdworkers to record their voice samples using smartphones. Then, we annotated the recorded samples with speaker-wise recording-quality scores and utterance-wise perceived emotion labels. We also benchmark SRC4VC on any-to-any VC, in which we trained a multi-speaker VC model on high-quality speech and used the SRC4VC speakers' voice samples as the source in VC. The results show that the recording quality mismatch between the training and evaluation data significantly degrades the VC performance, which can be improved by applying speech enhancement to the low-quality source speech samples.",
+        "subjects": [
+            "cs.SD",
+            "eess.AS"
+        ],
+        "comment": "Accepted for INTERSPEECH 2024, corpus project page: https://y-saito.sakura.ne.jp/sython/Corpus/SRC4VC/index.html"
+    },
+    {
         "paper id": "2406.07255",
         "abstract url": "https://arxiv.org/abs/2406.07255",
         "title": "Towards Realistic Data Generation for Real-World Super-Resolution",
@@ -4248,31 +4275,6 @@
             "eess.IV"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2406.07289",
-        "abstract url": "https://arxiv.org/abs/2406.07289",
-        "title": "Can We Achieve High-quality Direct Speech-to-Speech Translation without Parallel Speech Data?",
-        "rating": "0",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.AI",
-                "cs.CL",
-                "cs.SD",
-                "eess.AS"
-            ]
-        ],
-        "abstract": "Recently proposed two-pass direct speech-to-speech translation (S2ST) models decompose the task into speech-to-text translation (S2TT) and text-to-speech (TTS) within an end-to-end model, yielding promising results. However, the training of these models still relies on parallel speech data, which is extremely challenging to collect. In contrast, S2TT and TTS have accumulated a large amount of data and pretrained models, which have not been fully utilized in the development of S2ST models. Inspired by this, in this paper, we first introduce a composite S2ST model named ComSpeech, which can seamlessly integrate any pretrained S2TT and TTS models into a direct S2ST model. Furthermore, to eliminate the reliance on parallel speech data, we propose a novel training method ComSpeech-ZS that solely utilizes S2TT and TTS data. It aligns representations in the latent space through contrastive learning, enabling the speech synthesis capability learned from the TTS data to generalize to S2ST in a zero-shot manner. Experimental results on the CVSS dataset show that when the parallel speech data is available, ComSpeech surpasses previous two-pass models like UnitY and Translatotron 2 in both translation quality and decoding speed. When there is no parallel speech data, ComSpeech-ZS lags behind \\name by only 0.7 ASR-BLEU and outperforms the cascaded models.",
-        "subjects": [
-            "cs.CL",
-            "cs.AI",
-            "cs.SD",
-            "eess.AS"
-        ],
-        "comment": "ACL 2024 main conference. Project Page: https://ictnlp.github.io/ComSpeech-Site/"
     },
     {
         "paper id": "2406.07296",
@@ -4577,7 +4579,6 @@
         "keywords": [
             [
                 "diffusion",
-                "synthesis",
                 "Text-to-Image"
             ],
             [
@@ -4643,8 +4644,7 @@
         "rating": "0",
         "keywords": [
             [
-                "diffusion",
-                "synthesis"
+                "diffusion"
             ],
             [
                 "cs.CV"
@@ -4889,27 +4889,43 @@
         "comment": null
     },
     {
-        "paper id": "2406.07801",
-        "abstract url": "https://arxiv.org/abs/2406.07801",
-        "title": "PolySpeech: Exploring Unified Multitask Speech Models for Competitiveness with Single-task Models",
+        "paper id": "2406.07828",
+        "abstract url": "https://arxiv.org/abs/2406.07828",
+        "title": "Spatial Annealing Smoothing for Efficient Few-shot Neural Rendering",
         "rating": "0",
         "keywords": [
             [
-                "synthesis"
+                "NeRF",
+                "Radiance Fields"
             ],
             [
-                "cs.CL",
-                "cs.SD",
-                "eess.AS"
+                "cs.CV"
             ]
         ],
-        "abstract": "Recently, there have been attempts to integrate various speech processing tasks into a unified model. However, few previous works directly demonstrated that joint optimization of diverse tasks in multitask speech models has positive influence on the performance of individual tasks. In this paper we present a multitask speech model -- PolySpeech, which supports speech recognition, speech synthesis, and two speech classification tasks. PolySpeech takes multi-modal language model as its core structure and uses semantic representations as speech inputs. We introduce semantic speech embedding tokenization and speech reconstruction methods to PolySpeech, enabling efficient generation of high-quality speech for any given speaker. PolySpeech shows competitiveness across various tasks compared to single-task models. In our experiments, multitask optimization achieves performance comparable to single-task optimization and is especially beneficial for specific tasks.",
+        "abstract": "Neural Radiance Fields (NeRF) with hybrid representations have shown impressive capabilities in reconstructing scenes for view synthesis, delivering high efficiency. Nonetheless, their performance significantly drops with sparse view inputs, due to the issue of overfitting. While various regularization strategies have been devised to address these challenges, they often depend on inefficient assumptions or are not compatible with hybrid models. There is a clear need for a method that maintains efficiency and improves resilience to sparse views within a hybrid framework. In this paper, we introduce an accurate and efficient few-shot neural rendering method named Spatial Annealing smoothing regularized NeRF (SANeRF), which is specifically designed for a pre-filtering-driven hybrid representation architecture. We implement an exponential reduction of the sample space size from an initially large value. This methodology is crucial for stabilizing the early stages of the training phase and significantly contributes to the enhancement of the subsequent process of detail refinement. Our extensive experiments reveal that, by adding merely one line of code, SANeRF delivers superior rendering quality and much faster reconstruction speed compared to current few-shot NeRF methods. Notably, SANeRF outperforms FreeNeRF by 0.3 dB in PSNR on the Blender dataset, while achieving 700x faster reconstruction speed.",
         "subjects": [
-            "cs.CL",
-            "cs.SD",
-            "eess.AS"
+            "cs.CV"
         ],
-        "comment": "5 pages, 2 figures"
+        "comment": null
+    },
+    {
+        "paper id": "2406.07840",
+        "abstract url": "https://arxiv.org/abs/2406.07840",
+        "title": "SynthForge: Synthesizing High-Quality Face Dataset with Controllable 3D Generative Models",
+        "rating": "0",
+        "keywords": [
+            [
+                "3D"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Recent advancements in generative models have unlocked the capabilities to render photo-realistic data in a controllable fashion. Trained on the real data, these generative models are capable of producing realistic samples with minimal to no domain gap, as compared to the traditional graphics rendering. However, using the data generated using such models for training downstream tasks remains under-explored, mainly due to the lack of 3D consistent annotations. Moreover, controllable generative models are learned from massive data and their latent space is often too vast to obtain meaningful sample distributions for downstream task with limited generation. To overcome these challenges, we extract 3D consistent annotations from an existing controllable generative model, making the data useful for downstream tasks. Our experiments show competitive performance against state-of-the-art models using only generated synthetic data, demonstrating potential for solving downstream tasks. Project page: https://synth-forge.github.io",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "11 pages, 4 figures, 3 tables. Under Review"
     },
     {
         "paper id": "2406.07844",
@@ -4951,29 +4967,6 @@
         "comment": null
     },
     {
-        "paper id": "2406.07855",
-        "abstract url": "https://arxiv.org/abs/2406.07855",
-        "title": "VALL-E R: Robust and Efficient Zero-Shot Text-to-Speech Synthesis via Monotonic Alignment",
-        "rating": "0",
-        "keywords": [
-            [
-                "Synthesis"
-            ],
-            [
-                "cs.CL",
-                "cs.SD",
-                "eess.AS"
-            ]
-        ],
-        "abstract": "With the help of discrete neural audio codecs, large language models (LLM) have increasingly been recognized as a promising methodology for zero-shot Text-to-Speech (TTS) synthesis. However, sampling based decoding strategies bring astonishing diversity to generation, but also pose robustness issues such as typos, omissions and repetition. In addition, the high sampling rate of audio also brings huge computational overhead to the inference process of autoregression. To address these issues, we propose VALL-E R, a robust and efficient zero-shot TTS system, building upon the foundation of VALL-E. Specifically, we introduce a phoneme monotonic alignment strategy to strengthen the connection between phonemes and acoustic sequence, ensuring a more precise alignment by constraining the acoustic tokens to match their associated phonemes. Furthermore, we employ a codec-merging approach to downsample the discrete codes in shallow quantization layer, thereby accelerating the decoding speed while preserving the high quality of speech output. Benefiting from these strategies, VALL-E R obtains controllablity over phonemes and demonstrates its strong robustness by approaching the WER of ground truth. In addition, it requires fewer autoregressive steps, with over 60% time reduction during inference. This research has the potential to be applied to meaningful projects, including the creation of speech for those affected by aphasia. Audio samples will be available at: https://aka.ms/valler.",
-        "subjects": [
-            "cs.CL",
-            "cs.SD",
-            "eess.AS"
-        ],
-        "comment": "15 pages, 5 figures"
-    },
-    {
         "paper id": "2406.07865",
         "abstract url": "https://arxiv.org/abs/2406.07865",
         "title": "FaithFill: Faithful Inpainting for Object Completion Using a Single Reference Image",
@@ -4996,34 +4989,6 @@
             "cs.LG"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2406.07867",
-        "abstract url": "https://arxiv.org/abs/2406.07867",
-        "title": "Let's Go Real Talk: Spoken Dialogue Model for Face-to-Face Conversation",
-        "rating": "0",
-        "keywords": [
-            [
-                "audio-visual"
-            ],
-            [
-                "avatar"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.AI",
-                "cs.CV"
-            ]
-        ],
-        "abstract": "In this paper, we introduce a novel Face-to-Face spoken dialogue model. It processes audio-visual speech from user input and generates audio-visual speech as the response, marking the initial step towards creating an avatar chatbot system without relying on intermediate text. To this end, we newly introduce MultiDialog, the first large-scale multimodal (i.e., audio and visual) spoken dialogue corpus containing 340 hours of approximately 9,000 dialogues, recorded based on the open domain dialogue dataset, TopicalChat. The MultiDialog contains parallel audio-visual recordings of conversation partners acting according to the given script with emotion annotations, which we expect to open up research opportunities in multimodal synthesis. Our Face-to-Face spoken dialogue model incorporates a textually pretrained large language model and adapts it into the audio-visual spoken dialogue domain by incorporating speech-text joint pretraining. Through extensive experiments, we validate the effectiveness of our model in facilitating a face-to-face conversation. Demo and data are available at https://multidialog.github.io and https://huggingface.co/datasets/IVLLab/MultiDialog, respectively.",
-        "subjects": [
-            "cs.CV",
-            "cs.AI",
-            "cs.HC"
-        ],
-        "comment": "Accepted to ACL 2024"
     },
     {
         "paper id": "2406.07871",
@@ -5051,6 +5016,28 @@
         "comment": null
     },
     {
+        "paper id": "2406.09443",
+        "abstract url": "https://arxiv.org/abs/2406.09443",
+        "title": "Comparative Analysis of Personalized Voice Activity Detection Systems: Assessing Real-World Effectiveness",
+        "rating": "0",
+        "keywords": [
+            [
+                "speech enhancement"
+            ],
+            [
+                "cs.LG",
+                "eess.AS"
+            ]
+        ],
+        "abstract": "Voice activity detection (VAD) is a critical component in various applications such as speech recognition, speech enhancement, and hands-free communication systems. With the increasing demand for personalized and context-aware technologies, the need for effective personalized VAD systems has become paramount. In this paper, we present a comparative analysis of Personalized Voice Activity Detection (PVAD) systems to assess their real-world effectiveness. We introduce a comprehensive approach to assess PVAD systems, incorporating various performance metrics such as frame-level and utterance-level error rates, detection latency and accuracy, alongside user-level analysis. Through extensive experimentation and evaluation, we provide a thorough understanding of the strengths and limitations of various PVAD variants. This paper advances the understanding of PVAD technology by offering insights into its efficacy and viability in practical applications using a comprehensive set of metrics.",
+        "subjects": [
+            "eess.AS",
+            "cs.HC",
+            "cs.LG"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2406.06954",
         "abstract url": "https://arxiv.org/abs/2406.06954",
         "title": "Distributional MIPLIB: a Multi-Domain Library for Advancing ML-Guided MILP Methods",
@@ -5067,6 +5054,30 @@
         "subjects": [
             "cs.LG",
             "math.OC"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2406.06955",
+        "abstract url": "https://arxiv.org/abs/2406.06955",
+        "title": "ElasticRec: A Microservice-based Model Serving Architecture Enabling Elastic Resource Scaling for Recommendation Models",
+        "rating": "-0.5",
+        "keywords": [
+            [
+                "memory efficiency"
+            ],
+            [
+                "Recommendation"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "With the increasing popularity of recommendation systems (RecSys), the demand for compute resources in datacenters has surged. However, the model-wise resource allocation employed in current RecSys model serving architectures falls short in effectively utilizing resources, leading to sub-optimal total cost of ownership. We propose ElasticRec, a model serving architecture for RecSys providing resource elasticity and high memory efficiency. ElasticRec is based on a microservice-based software architecture for fine-grained resource allocation, tailored to the heterogeneous resource demands of RecSys. Additionally, ElasticRec achieves high memory efficiency via our utility-based resource allocation. Overall, ElasticRec achieves an average 3.3x reduction in memory allocation size and 8.1x increase in memory utility, resulting in an average 1.6x reduction in deployment cost compared to state-of-the-art RecSys inference serving system.",
+        "subjects": [
+            "cs.DC",
+            "cs.IR",
+            "cs.LG"
         ],
         "comment": null
     },
@@ -5288,6 +5299,31 @@
         "comment": "10 Pages, 11 Figures"
     },
     {
+        "paper id": "2406.07268",
+        "abstract url": "https://arxiv.org/abs/2406.07268",
+        "title": "Advancing Grounded Multimodal Named Entity Recognition via LLM-Based Reformulation and Box-Based Segmentation",
+        "rating": "-0.5",
+        "keywords": [
+            [
+                "Named Entity Recognition"
+            ],
+            [
+                "cs.CV",
+                "cs.CL"
+            ],
+            [
+                "EMNLP"
+            ]
+        ],
+        "abstract": "Grounded Multimodal Named Entity Recognition (GMNER) task aims to identify named entities, entity types and their corresponding visual regions. GMNER task exhibits two challenging attributes: 1) The tenuous correlation between images and text on social media contributes to a notable proportion of named entities being ungroundable. 2) There exists a distinction between coarse-grained noun phrases used in similar tasks (e.g., phrase localization) and fine-grained named entities. In this paper, we propose RiVEG, a unified framework that reformulates GMNER into a joint MNER-VE-VG task by leveraging large language models (LLMs) as connecting bridges. This reformulation brings two benefits: 1) It enables us to optimize the MNER module for optimal MNER performance and eliminates the need to pre-extract region features using object detection methods, thus naturally addressing the two major limitations of existing GMNER methods. 2) The introduction of Entity Expansion Expression module and Visual Entailment (VE) module unifies Visual Grounding (VG) and Entity Grounding (EG). This endows the proposed framework with unlimited data and model scalability. Furthermore, to address the potential ambiguity stemming from the coarse-grained bounding box output in GMNER, we further construct the new Segmented Multimodal Named Entity Recognition (SMNER) task and corresponding Twitter-SMNER dataset aimed at generating fine-grained segmentation masks, and experimentally demonstrate the feasibility and effectiveness of using box prompt-based Segment Anything Model (SAM) to empower any GMNER model with the ability to accomplish the SMNER task. Extensive experiments demonstrate that RiVEG significantly outperforms SoTA methods on four datasets across the MNER, GMNER, and SMNER tasks.",
+        "subjects": [
+            "cs.MM",
+            "cs.CL",
+            "cs.CV"
+        ],
+        "comment": "Extension of our Findings of EMNLP 2023 & ACL 2024 paper"
+    },
+    {
         "paper id": "2406.07373",
         "abstract url": "https://arxiv.org/abs/2406.07373",
         "title": "Closing the Computational-Query Depth Gap in Parallel Stochastic Convex Optimization",
@@ -5331,26 +5367,6 @@
         "subjects": [
             "cs.LG",
             "eess.SP"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2406.07400",
-        "abstract url": "https://arxiv.org/abs/2406.07400",
-        "title": "Guiding LLM Temporal Logic Generation with Explicit Separation of Data and Control",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Temporal logics are powerful tools that are widely used for the synthesis and verification of reactive systems. The recent progress on Large Language Models (LLMs) has the potential to make the process of writing such specifications more accessible. However, writing specifications in temporal logics remains challenging for all but the most expert users. A key question in using LLMs for temporal logic specification engineering is to understand what kind of guidance is most helpful to the LLM and the users to easily produce specifications. Looking specifically at the problem of reactive program synthesis, we explore the impact of providing an LLM with guidance on the separation of control and data--making explicit for the LLM what functionality is relevant for the specification, and treating the remaining functionality as an implementation detail for a series of pre-defined functions and predicates. We present a benchmark set and find that this separation of concerns improves specification generation. Our benchmark provides a test set against which to verify future work in LLM generation of temporal logic specifications.",
-        "subjects": [
-            "cs.LG",
-            "cs.LO"
         ],
         "comment": null
     },
@@ -5456,37 +5472,6 @@
         "comment": "Accepted for presentation at the Conference on Learning Theory (COLT) 2024"
     },
     {
-        "paper id": "2406.07532",
-        "abstract url": "https://arxiv.org/abs/2406.07532",
-        "title": "Hearing Anything Anywhere",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "3D"
-            ],
-            [
-                "synthesize"
-            ],
-            [
-                "cs.LG",
-                "cs.CV",
-                "cs.SD",
-                "eess.AS"
-            ],
-            [
-                "CVPR"
-            ]
-        ],
-        "abstract": "Recent years have seen immense progress in 3D computer vision and computer graphics, with emerging tools that can virtualize real-world 3D environments for numerous Mixed Reality (XR) applications. However, alongside immersive visual experiences, immersive auditory experiences are equally vital to our holistic perception of an environment. In this paper, we aim to reconstruct the spatial acoustic characteristics of an arbitrary environment given only a sparse set of (roughly 12) room impulse response (RIR) recordings and a planar reconstruction of the scene, a setup that is easily achievable by ordinary users. To this end, we introduce DiffRIR, a differentiable RIR rendering framework with interpretable parametric models of salient acoustic features of the scene, including sound source directivity and surface reflectivity. This allows us to synthesize novel auditory experiences through the space with any source audio. To evaluate our method, we collect a dataset of RIR recordings and music in four diverse, real environments. We show that our model outperforms state-ofthe-art baselines on rendering monaural and binaural RIRs and music at unseen locations, and learns physically interpretable parameters characterizing acoustic properties of the sound source and surfaces in the scene.",
-        "subjects": [
-            "cs.SD",
-            "cs.CV",
-            "cs.LG",
-            "eess.AS"
-        ],
-        "comment": "CVPR 2024. The first two authors contributed equally. Project page: https://masonlwang.com/hearinganythinganywhere/"
-    },
-    {
         "paper id": "2406.07642",
         "abstract url": "https://arxiv.org/abs/2406.07642",
         "title": "Generating Human Understandable Explanations for Node Embeddings",
@@ -5508,24 +5493,35 @@
         "comment": null
     },
     {
-        "paper id": "2406.07658",
-        "abstract url": "https://arxiv.org/abs/2406.07658",
-        "title": "Treeffuser: Probabilistic Predictions via Conditional Diffusions with Gradient-Boosted Trees",
+        "paper id": "2406.07646",
+        "abstract url": "https://arxiv.org/abs/2406.07646",
+        "title": "Pre-training Feature Guided Diffusion Model for Speech Enhancement",
         "rating": "-0.5",
         "keywords": [
             [
-                "diffusion"
+                "Diffusion"
             ],
             [
-                "cs.LG"
+                "Speech Enhancement"
+            ],
+            [
+                "cs.AI",
+                "cs.LG",
+                "cs.SD",
+                "eess.AS"
+            ],
+            [
+                "Interspeech"
             ]
         ],
-        "abstract": "Probabilistic prediction aims to compute predictive distributions rather than single-point predictions. These distributions enable practitioners to quantify uncertainty, compute risk, and detect outliers. However, most probabilistic methods assume parametric responses, such as Gaussian or Poisson distributions. When these assumptions fail, such models lead to bad predictions and poorly calibrated uncertainty. In this paper, we propose Treeffuser, an easy-to-use method for probabilistic prediction on tabular data. The idea is to learn a conditional diffusion model where the score function is estimated using gradient-boosted trees. The conditional diffusion model makes Treeffuser flexible and non-parametric, while the gradient-boosted trees make it robust and easy to train on CPUs. Treeffuser learns well-calibrated predictive distributions and can handle a wide range of regression tasks -- including those with multivariate, multimodal, and skewed responses. % , as well as categorical predictors and missing data We study Treeffuser on synthetic and real data and show that it outperforms existing methods, providing better-calibrated probabilistic predictions. We further demonstrate its versatility with an application to inventory allocation under uncertainty using sales data from Walmart. We implement Treeffuser in \\href{https://github.com/blei-lab/treeffuser}{https://github.com/blei-lab/treeffuser}.",
+        "abstract": "Speech enhancement significantly improves the clarity and intelligibility of speech in noisy environments, improving communication and listening experiences. In this paper, we introduce a novel pretraining feature-guided diffusion model tailored for efficient speech enhancement, addressing the limitations of existing discriminative and generative models. By integrating spectral features into a variational autoencoder (VAE) and leveraging pre-trained features for guidance during the reverse process, coupled with the utilization of the deterministic discrete integration method (DDIM) to streamline sampling steps, our model improves efficiency and speech enhancement quality. Demonstrating state-of-the-art results on two public datasets with different SNRs, our model outshines other baselines in efficiency and robustness. The proposed method not only optimizes performance but also enhances practical deployment capabilities, without increasing computational demands.",
         "subjects": [
+            "cs.SD",
+            "cs.AI",
             "cs.LG",
-            "stat.ML"
+            "eess.AS"
         ],
-        "comment": null
+        "comment": "Accepted by Interspeech 2024 Conference"
     },
     {
         "paper id": "2406.07680",
@@ -5718,31 +5714,6 @@
         "comment": null
     },
     {
-        "paper id": "2406.06965",
-        "abstract url": "https://arxiv.org/abs/2406.06965",
-        "title": "Evolving from Single-modal to Multi-modal Facial Deepfake Detection: A Survey",
-        "rating": "-1",
-        "keywords": [
-            [
-                "audio-visual"
-            ],
-            [
-                "diffusion"
-            ],
-            [
-                "Facial"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "This survey addresses the critical challenge of deepfake detection amidst the rapid advancements in artificial intelligence. As AI-generated media, including video, audio and text, become more realistic, the risk of misuse to spread misinformation and commit identity fraud increases. Focused on face-centric deepfakes, this work traces the evolution from traditional single-modality methods to sophisticated multi-modal approaches that handle audio-visual and text-visual scenarios. We provide comprehensive taxonomies of detection techniques, discuss the evolution of generative methods from auto-encoders and GANs to diffusion models, and categorize these technologies by their unique attributes. To our knowledge, this is the first survey of its kind. We also explore the challenges of adapting detection methods to new generative models and enhancing the reliability and robustness of deepfake detectors, proposing directions for future research. This survey offers a detailed roadmap for researchers, supporting the development of technologies to counter the deceptive use of AI in media creation, particularly facial forgery. A curated list of all related papers can be found at \\href{https://github.com/qiqitao77/Comprehensive-Advances-in-Deepfake-Detection-Spanning-Diverse-Modalities}{https://github.com/qiqitao77/Awesome-Comprehensive-Deepfake-Detection}.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2406.06972",
         "abstract url": "https://arxiv.org/abs/2406.06972",
         "title": "Generative Lifting of Multiview to 3D from Unknown Pose: Wrapping NeRF inside Diffusion",
@@ -5887,6 +5858,25 @@
         "comment": "preprint under review"
     },
     {
+        "paper id": "2406.07050",
+        "abstract url": "https://arxiv.org/abs/2406.07050",
+        "title": "DualMamba: A Lightweight Spectral-Spatial Mamba-Convolution Network for Hyperspectral Image Classification",
+        "rating": "-1",
+        "keywords": [
+            [
+                "Hyperspectral Image"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "The effectiveness and efficiency of modeling complex spectral-spatial relations are both crucial for Hyperspectral image (HSI) classification. Most existing methods based on CNNs and transformers still suffer from heavy computational burdens and have room for improvement in capturing the global-local spectral-spatial feature representation. To this end, we propose a novel lightweight parallel design called lightweight dual-stream Mamba-convolution network (DualMamba) for HSI classification. Specifically, a parallel lightweight Mamba and CNN block are first developed to extract global and local spectral-spatial features. First, the cross-attention spectral-spatial Mamba module is proposed to leverage the global modeling of Mamba at linear complexity. Within this module, dynamic positional embedding is designed to enhance the spatial location information of visual sequences. The lightweight spectral/spatial Mamba blocks comprise an efficient scanning strategy and a lightweight Mamba design to efficiently extract global spectral-spatial features. And the cross-attention spectral-spatial fusion is designed to learn cross-correlation and fuse spectral-spatial features. Second, the lightweight spectral-spatial residual convolution module is proposed with lightweight spectral and spatial branches to extract local spectral-spatial features through residual learning. Finally, the adaptive global-local fusion is proposed to dynamically combine global Mamba features and local convolution features for a global-local spectral-spatial representation. Compared with state-of-the-art HSI classification methods, experimental results demonstrate that DualMamba achieves significant classification accuracy on three public HSI datasets and a superior reduction in model parameters and floating point operations (FLOPs).",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2406.07060",
         "abstract url": "https://arxiv.org/abs/2406.07060",
         "title": "Reading Miscue Detection in Primary School through Automatic Speech Recognition",
@@ -5940,22 +5930,6 @@
         "abstract": "This study presents an innovative approach to optimal gait control for a soft quadruped robot enabled by four Compressible Tendon-driven Soft Actuators (CTSAs). Improving our previous studies of using model-free reinforcement learning for gait control, we employ model-based reinforcement learning (MBRL) to further enhance the performance of the gait controller. Compared to rigid robots, the proposed soft quadruped robot has better safety, less weight, and a simpler mechanism for fabrication and control. However, the primary challenge lies in developing sophisticated control algorithms to attain optimal gait control for fast and stable locomotion. The research employs a multi-stage methodology, including state space restriction, data-driven model training, and reinforcement learning algorithm development. Compared to benchmark methods, the proposed MBRL algorithm, combined with post-training, significantly improves the efficiency and performance of gait control policies. The developed policy is both robust and adaptable to the robot's deformable morphology. The study concludes by highlighting the practical applicability of these findings in real-world scenarios.",
         "subjects": [
             "cs.RO",
-            "eess.SY"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2406.07073",
-        "abstract url": "https://arxiv.org/abs/2406.07073",
-        "title": "Adaptive Control: Algorithms, Analysis and Applications",
-        "rating": "-1",
-        "keywords": [
-            [
-                "synthesizing"
-            ]
-        ],
-        "abstract": "Adaptive control provides techniques for adjusting control parameters in real time to maintain system performance despite unknown or changing process parameters. These methods use real data to tune controllers and adjust plant models or controller parameters. The field has progressed significantly since the 1970s, helped by digital computers. Early applications offered essential feedback, and theoretical advances solved many basic problems. This book comprehensively treats adaptive control, guiding readers from basic problems to analytical solutions with practical applications. Presenting a unified view is challenging due to various design steps and applications. However, a coherent presentation of basic techniques is now possible. The book uses a discrete-time approach to reflect the role of digital computers and shares practical experiences and understanding of different control designs. Mathematical aspects of synthesizing and analyzing algorithms are emphasized, though they alone may not solve practical problems. The book includes applications of control techniques but stresses that a solid mathematical understanding is crucial for creatively applying them to new challenges. Mathematical synthesis and analysis are highlighted, but they must be supplemented with practical problem-solving and algorithm modifications for specific applications.",
-        "subjects": [
             "eess.SY"
         ],
         "comment": null
@@ -6178,33 +6152,6 @@
             "eess.AS"
         ],
         "comment": "5 pages, accepted for INTERSPEECH 2024, audio samples: http://y-saito.sakura.ne.jp/sython/Corpus/SRC4VC/IS2024_CDT_supplementary/demo_cdt.html"
-    },
-    {
-        "paper id": "2406.07318",
-        "abstract url": "https://arxiv.org/abs/2406.07318",
-        "title": "Embedded Graph Convolutional Networks for Real-Time Event Data Processing on SoC FPGAs",
-        "rating": "-1",
-        "keywords": [
-            [
-                "point cloud",
-                "event cameras"
-            ],
-            [
-                "GNN",
-                "Graph"
-            ],
-            [
-                "cs.CV",
-                "eess.IV"
-            ]
-        ],
-        "abstract": "The utilisation of event cameras represents an important and swiftly evolving trend aimed at addressing the constraints of traditional video systems. Particularly within the automotive domain, these cameras find significant relevance for their integration into embedded real-time systems due to lower latency and energy consumption. One effective approach to ensure the necessary throughput and latency for event processing systems is through the utilisation of graph convolutional networks (GCNs). In this study, we introduce a series of hardware-aware optimisations tailored for PointNet++, a GCN architecture designed for point cloud processing. The proposed techniques result in more than a 100-fold reduction in model size compared to Asynchronous Event-based GNN (AEGNN), one of the most recent works in the field, with a relatively small decrease in accuracy (2.3% for N-Caltech101 classification, 1.7% for N-Cars classification), thus following the TinyML trend. Based on software research, we designed a custom EFGCN (Event-Based FPGA-accelerated Graph Convolutional Network) and we implemented it on ZCU104 SoC FPGA platform, achieving a throughput of 13.3 million events per second (MEPS) and real-time partially asynchronous processing with a latency of 4.47 ms. We also address the scalability of the proposed hardware model to improve the obtained accuracy score. To the best of our knowledge, this study marks the first endeavour in accelerating PointNet++ networks on SoC FPGAs, as well as the first hardware architecture exploration of graph convolutional networks implementation for real-time continuous event data processing. We publish both software and hardware source code in an open repository: https://github.com/vision-agh/*** (will be published upon acceptance).",
-        "subjects": [
-            "cs.CV",
-            "cs.AR",
-            "eess.IV"
-        ],
-        "comment": "Submitted to the IEEE Transactions on Circuits and System for Video Technology. This manuscript was first submitted for publication on March 31, 2024. It has since been revised twice: on May 22, 2024 and June 10, 2024"
     },
     {
         "paper id": "2406.07327",
@@ -6508,8 +6455,7 @@
                 "Avatar"
             ],
             [
-                "Diffusion",
-                "synthesis"
+                "Diffusion"
             ],
             [
                 "cs.CV"
@@ -6531,8 +6477,7 @@
                 "3D"
             ],
             [
-                "Diffusion",
-                "synthesize"
+                "Diffusion"
             ],
             [
                 "cs.AI",
@@ -6898,49 +6843,27 @@
         "comment": "Previous versions accepted to NeurIPS 2023's XAIA and AAAI 2024's XAI4DRL workshops"
     },
     {
-        "paper id": "2406.07828",
-        "abstract url": "https://arxiv.org/abs/2406.07828",
-        "title": "Spatial Annealing Smoothing for Efficient Few-shot Neural Rendering",
+        "paper id": "2406.07860",
+        "abstract url": "https://arxiv.org/abs/2406.07860",
+        "title": "BookSQL: A Large Scale Text-to-SQL Dataset for Accounting Domain",
         "rating": "-1",
         "keywords": [
             [
-                "NeRF",
-                "Radiance Fields"
+                "SQL"
             ],
             [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
+                "cs.AI",
+                "cs.LG",
+                "cs.CL"
             ]
         ],
-        "abstract": "Neural Radiance Fields (NeRF) with hybrid representations have shown impressive capabilities in reconstructing scenes for view synthesis, delivering high efficiency. Nonetheless, their performance significantly drops with sparse view inputs, due to the issue of overfitting. While various regularization strategies have been devised to address these challenges, they often depend on inefficient assumptions or are not compatible with hybrid models. There is a clear need for a method that maintains efficiency and improves resilience to sparse views within a hybrid framework. In this paper, we introduce an accurate and efficient few-shot neural rendering method named Spatial Annealing smoothing regularized NeRF (SANeRF), which is specifically designed for a pre-filtering-driven hybrid representation architecture. We implement an exponential reduction of the sample space size from an initially large value. This methodology is crucial for stabilizing the early stages of the training phase and significantly contributes to the enhancement of the subsequent process of detail refinement. Our extensive experiments reveal that, by adding merely one line of code, SANeRF delivers superior rendering quality and much faster reconstruction speed compared to current few-shot NeRF methods. Notably, SANeRF outperforms FreeNeRF by 0.3 dB in PSNR on the Blender dataset, while achieving 700x faster reconstruction speed.",
+        "abstract": "Several large-scale datasets (e.g., WikiSQL, Spider) for developing natural language interfaces to databases have recently been proposed. These datasets cover a wide breadth of domains but fall short on some essential domains, such as finance and accounting. Given that accounting databases are used worldwide, particularly by non-technical people, there is an imminent need to develop models that could help extract information from accounting databases via natural language queries. In this resource paper, we aim to fill this gap by proposing a new large-scale Text-to-SQL dataset for the accounting and financial domain: BookSQL. The dataset consists of 100k natural language queries-SQL pairs, and accounting databases of 1 million records. We experiment with and analyze existing state-of-the-art models (including GPT-4) for the Text-to-SQL task on BookSQL. We find significant performance gaps, thus pointing towards developing more focused models for this domain.",
         "subjects": [
-            "cs.CV"
+            "cs.CL",
+            "cs.AI",
+            "cs.LG"
         ],
-        "comment": null
-    },
-    {
-        "paper id": "2406.07840",
-        "abstract url": "https://arxiv.org/abs/2406.07840",
-        "title": "SynthForge: Synthesizing High-Quality Face Dataset with Controllable 3D Generative Models",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D"
-            ],
-            [
-                "Synthesizing"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Recent advancements in generative models have unlocked the capabilities to render photo-realistic data in a controllable fashion. Trained on the real data, these generative models are capable of producing realistic samples with minimal to no domain gap, as compared to the traditional graphics rendering. However, using the data generated using such models for training downstream tasks remains under-explored, mainly due to the lack of 3D consistent annotations. Moreover, controllable generative models are learned from massive data and their latent space is often too vast to obtain meaningful sample distributions for downstream task with limited generation. To overcome these challenges, we extract 3D consistent annotations from an existing controllable generative model, making the data useful for downstream tasks. Our experiments show competitive performance against state-of-the-art models using only generated synthetic data, demonstrating potential for solving downstream tasks. Project page: https://synth-forge.github.io",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "11 pages, 4 figures, 3 tables. Under Review"
+        "comment": "Accepted at NAACL 2024; 20 Pages (main + appendix)"
     },
     {
         "paper id": "2406.07862",
@@ -6973,7 +6896,7 @@
         "rating": "-1",
         "keywords": [
             [
-                "hyperspectral data"
+                "Hyperspectral Image"
             ],
             [
                 "cs.AI",
@@ -7005,27 +6928,6 @@
         "subjects": [
             "cs.CL",
             "cs.CY"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2406.06955",
-        "abstract url": "https://arxiv.org/abs/2406.06955",
-        "title": "ElasticRec: A Microservice-based Model Serving Architecture Enabling Elastic Resource Scaling for Recommendation Models",
-        "rating": "-1.5",
-        "keywords": [
-            [
-                "Recommendation"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "With the increasing popularity of recommendation systems (RecSys), the demand for compute resources in datacenters has surged. However, the model-wise resource allocation employed in current RecSys model serving architectures falls short in effectively utilizing resources, leading to sub-optimal total cost of ownership. We propose ElasticRec, a model serving architecture for RecSys providing resource elasticity and high memory efficiency. ElasticRec is based on a microservice-based software architecture for fine-grained resource allocation, tailored to the heterogeneous resource demands of RecSys. Additionally, ElasticRec achieves high memory efficiency via our utility-based resource allocation. Overall, ElasticRec achieves an average 3.3x reduction in memory allocation size and 8.1x increase in memory utility, resulting in an average 1.6x reduction in deployment cost compared to state-of-the-art RecSys inference serving system.",
-        "subjects": [
-            "cs.DC",
-            "cs.IR",
-            "cs.LG"
         ],
         "comment": null
     },
@@ -7325,28 +7227,6 @@
             "cs.LG"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2406.07404",
-        "abstract url": "https://arxiv.org/abs/2406.07404",
-        "title": "Enhancing Tabular Data Optimization with a Flexible Graph-based Reinforced Exploration Strategy",
-        "rating": "-1.5",
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "Graph"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Tabular data optimization methods aim to automatically find an optimal feature transformation process that generates high-value features and improves the performance of downstream machine learning tasks. Current frameworks for automated feature transformation rely on iterative sequence generation tasks, optimizing decision strategies through performance feedback from downstream tasks. However, these approaches fail to effectively utilize historical decision-making experiences and overlook potential relationships among generated features, thus limiting the depth of knowledge extraction. Moreover, the granularity of the decision-making process lacks dynamic backtracking capabilities for individual features, leading to insufficient adaptability when encountering inefficient pathways, adversely affecting overall robustness and exploration efficiency. To address the limitations observed in current automatic feature engineering frameworks, we introduce a novel method that utilizes a feature-state transformation graph to effectively preserve the entire feature transformation journey, where each node represents a specific transformation state. During exploration, three cascading agents iteratively select nodes and idea mathematical operations to generate new transformation states. This strategy leverages the inherent properties of the graph structure, allowing for the preservation and reuse of valuable transformations. It also enables backtracking capabilities through graph pruning techniques, which can rectify inefficient transformation paths. To validate the efficacy and flexibility of our approach, we conducted comprehensive experiments and detailed case studies, demonstrating superior performance in diverse scenarios.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": "17 pages"
     },
     {
         "paper id": "2406.07418",
@@ -7682,6 +7562,34 @@
         "comment": "24 Pages, 4 Figures"
     },
     {
+        "paper id": "2406.06965",
+        "abstract url": "https://arxiv.org/abs/2406.06965",
+        "title": "Evolving from Single-modal to Multi-modal Facial Deepfake Detection: A Survey",
+        "rating": "-2",
+        "keywords": [
+            [
+                "audio-visual"
+            ],
+            [
+                "diffusion"
+            ],
+            [
+                "Deepfake"
+            ],
+            [
+                "Facial"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "This survey addresses the critical challenge of deepfake detection amidst the rapid advancements in artificial intelligence. As AI-generated media, including video, audio and text, become more realistic, the risk of misuse to spread misinformation and commit identity fraud increases. Focused on face-centric deepfakes, this work traces the evolution from traditional single-modality methods to sophisticated multi-modal approaches that handle audio-visual and text-visual scenarios. We provide comprehensive taxonomies of detection techniques, discuss the evolution of generative methods from auto-encoders and GANs to diffusion models, and categorize these technologies by their unique attributes. To our knowledge, this is the first survey of its kind. We also explore the challenges of adapting detection methods to new generative models and enhancing the reliability and robustness of deepfake detectors, proposing directions for future research. This survey offers a detailed roadmap for researchers, supporting the development of technologies to counter the deceptive use of AI in media creation, particularly facial forgery. A curated list of all related papers can be found at \\href{https://github.com/qiqitao77/Comprehensive-Advances-in-Deepfake-Detection-Spanning-Diverse-Modalities}{https://github.com/qiqitao77/Awesome-Comprehensive-Deepfake-Detection}.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2406.07077",
         "abstract url": "https://arxiv.org/abs/2406.07077",
         "title": "Meta-Backscatter: A New ISAC Paradigm for Battery-Free Internet of Things",
@@ -7794,6 +7702,33 @@
             "cs.RO"
         ],
         "comment": "Submitted to IROS 24"
+    },
+    {
+        "paper id": "2406.07329",
+        "abstract url": "https://arxiv.org/abs/2406.07329",
+        "title": "Cinematic Gaussians: Real-Time HDR Radiance Fields with Depth of Field",
+        "rating": "-2",
+        "keywords": [
+            [
+                "3D",
+                "Gaussian Splatting",
+                "Depth",
+                "Radiance Fields"
+            ],
+            [
+                "HDR"
+            ],
+            [
+                "cs.CV",
+                "eess.IV"
+            ]
+        ],
+        "abstract": "Radiance field methods represent the state of the art in reconstructing complex scenes from multi-view photos. However, these reconstructions often suffer from one or both of the following limitations: First, they typically represent scenes in low dynamic range (LDR), which restricts their use to evenly lit environments and hinders immersive viewing experiences. Secondly, their reliance on a pinhole camera model, assuming all scene elements are in focus in the input images, presents practical challenges and complicates refocusing during novel-view synthesis. Addressing these limitations, we present a lightweight method based on 3D Gaussian Splatting that utilizes multi-view LDR images of a scene with varying exposure times, apertures, and focus distances as input to reconstruct a high-dynamic-range (HDR) radiance field. By incorporating analytical convolutions of Gaussians based on a thin-lens camera model as well as a tonemapping module, our reconstructions enable the rendering of HDR content with flexible refocusing capabilities. We demonstrate that our combined treatment of HDR and depth of field facilitates real-time cinematic rendering, outperforming the state of the art.",
+        "subjects": [
+            "cs.CV",
+            "eess.IV"
+        ],
+        "comment": null
     },
     {
         "paper id": "2406.07333",
@@ -8274,6 +8209,29 @@
         "comment": "6 page paper"
     },
     {
+        "paper id": "2406.07658",
+        "abstract url": "https://arxiv.org/abs/2406.07658",
+        "title": "Treeffuser: Probabilistic Predictions via Conditional Diffusions with Gradient-Boosted Trees",
+        "rating": "-2.5",
+        "keywords": [
+            [
+                "diffusion"
+            ],
+            [
+                "tabular"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Probabilistic prediction aims to compute predictive distributions rather than single-point predictions. These distributions enable practitioners to quantify uncertainty, compute risk, and detect outliers. However, most probabilistic methods assume parametric responses, such as Gaussian or Poisson distributions. When these assumptions fail, such models lead to bad predictions and poorly calibrated uncertainty. In this paper, we propose Treeffuser, an easy-to-use method for probabilistic prediction on tabular data. The idea is to learn a conditional diffusion model where the score function is estimated using gradient-boosted trees. The conditional diffusion model makes Treeffuser flexible and non-parametric, while the gradient-boosted trees make it robust and easy to train on CPUs. Treeffuser learns well-calibrated predictive distributions and can handle a wide range of regression tasks -- including those with multivariate, multimodal, and skewed responses. % , as well as categorical predictors and missing data We study Treeffuser on synthetic and real data and show that it outperforms existing methods, providing better-calibrated probabilistic predictions. We further demonstrate its versatility with an application to inventory allocation under uncertainty using sales data from Walmart. We implement Treeffuser in \\href{https://github.com/blei-lab/treeffuser}{https://github.com/blei-lab/treeffuser}.",
+        "subjects": [
+            "cs.LG",
+            "stat.ML"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2406.07837",
         "abstract url": "https://arxiv.org/abs/2406.07837",
         "title": "Scaling Manipulation Learning with Visual Kinematic Chain Prediction",
@@ -8458,34 +8416,34 @@
         "comment": "6 pages, 6 figures, conference"
     },
     {
-        "paper id": "2406.07329",
-        "abstract url": "https://arxiv.org/abs/2406.07329",
-        "title": "Cinematic Gaussians: Real-Time HDR Radiance Fields with Depth of Field",
+        "paper id": "2406.07318",
+        "abstract url": "https://arxiv.org/abs/2406.07318",
+        "title": "Embedded Graph Convolutional Networks for Real-Time Event Data Processing on SoC FPGAs",
         "rating": "-3",
         "keywords": [
             [
-                "3D",
-                "Gaussian Splatting",
-                "Depth",
-                "Radiance Fields"
+                "point cloud",
+                "event cameras"
             ],
             [
-                "synthesis"
+                "GNN",
+                "Graph"
             ],
             [
-                "HDR"
+                "FPGAs"
             ],
             [
                 "cs.CV",
                 "eess.IV"
             ]
         ],
-        "abstract": "Radiance field methods represent the state of the art in reconstructing complex scenes from multi-view photos. However, these reconstructions often suffer from one or both of the following limitations: First, they typically represent scenes in low dynamic range (LDR), which restricts their use to evenly lit environments and hinders immersive viewing experiences. Secondly, their reliance on a pinhole camera model, assuming all scene elements are in focus in the input images, presents practical challenges and complicates refocusing during novel-view synthesis. Addressing these limitations, we present a lightweight method based on 3D Gaussian Splatting that utilizes multi-view LDR images of a scene with varying exposure times, apertures, and focus distances as input to reconstruct a high-dynamic-range (HDR) radiance field. By incorporating analytical convolutions of Gaussians based on a thin-lens camera model as well as a tonemapping module, our reconstructions enable the rendering of HDR content with flexible refocusing capabilities. We demonstrate that our combined treatment of HDR and depth of field facilitates real-time cinematic rendering, outperforming the state of the art.",
+        "abstract": "The utilisation of event cameras represents an important and swiftly evolving trend aimed at addressing the constraints of traditional video systems. Particularly within the automotive domain, these cameras find significant relevance for their integration into embedded real-time systems due to lower latency and energy consumption. One effective approach to ensure the necessary throughput and latency for event processing systems is through the utilisation of graph convolutional networks (GCNs). In this study, we introduce a series of hardware-aware optimisations tailored for PointNet++, a GCN architecture designed for point cloud processing. The proposed techniques result in more than a 100-fold reduction in model size compared to Asynchronous Event-based GNN (AEGNN), one of the most recent works in the field, with a relatively small decrease in accuracy (2.3% for N-Caltech101 classification, 1.7% for N-Cars classification), thus following the TinyML trend. Based on software research, we designed a custom EFGCN (Event-Based FPGA-accelerated Graph Convolutional Network) and we implemented it on ZCU104 SoC FPGA platform, achieving a throughput of 13.3 million events per second (MEPS) and real-time partially asynchronous processing with a latency of 4.47 ms. We also address the scalability of the proposed hardware model to improve the obtained accuracy score. To the best of our knowledge, this study marks the first endeavour in accelerating PointNet++ networks on SoC FPGAs, as well as the first hardware architecture exploration of graph convolutional networks implementation for real-time continuous event data processing. We publish both software and hardware source code in an open repository: https://github.com/vision-agh/*** (will be published upon acceptance).",
         "subjects": [
             "cs.CV",
+            "cs.AR",
             "eess.IV"
         ],
-        "comment": null
+        "comment": "Submitted to the IEEE Transactions on Circuits and System for Video Technology. This manuscript was first submitted for publication on March 31, 2024. It has since been revised twice: on May 22, 2024 and June 10, 2024"
     },
     {
         "paper id": "2406.07369",
@@ -8657,6 +8615,31 @@
             "cs.LG"
         ],
         "comment": "6 pages, 8 figures, TrustAICyberSec workshop - IEEE ISCC 2024"
+    },
+    {
+        "paper id": "2406.07404",
+        "abstract url": "https://arxiv.org/abs/2406.07404",
+        "title": "Enhancing Tabular Data Optimization with a Flexible Graph-based Reinforced Exploration Strategy",
+        "rating": "-3.5",
+        "keywords": [
+            [
+                "depth"
+            ],
+            [
+                "Graph"
+            ],
+            [
+                "Tabular"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Tabular data optimization methods aim to automatically find an optimal feature transformation process that generates high-value features and improves the performance of downstream machine learning tasks. Current frameworks for automated feature transformation rely on iterative sequence generation tasks, optimizing decision strategies through performance feedback from downstream tasks. However, these approaches fail to effectively utilize historical decision-making experiences and overlook potential relationships among generated features, thus limiting the depth of knowledge extraction. Moreover, the granularity of the decision-making process lacks dynamic backtracking capabilities for individual features, leading to insufficient adaptability when encountering inefficient pathways, adversely affecting overall robustness and exploration efficiency. To address the limitations observed in current automatic feature engineering frameworks, we introduce a novel method that utilizes a feature-state transformation graph to effectively preserve the entire feature transformation journey, where each node represents a specific transformation state. During exploration, three cascading agents iteratively select nodes and idea mathematical operations to generate new transformation states. This strategy leverages the inherent properties of the graph structure, allowing for the preservation and reuse of valuable transformations. It also enables backtracking capabilities through graph pruning techniques, which can rectify inefficient transformation paths. To validate the efficacy and flexibility of our approach, we conducted comprehensive experiments and detailed case studies, demonstrating superior performance in diverse scenarios.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": "17 pages"
     },
     {
         "paper id": "2406.07438",
@@ -9048,6 +9031,18 @@
         "subjects": [
             "cs.SE",
             "cs.CR"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2406.07073",
+        "abstract url": "https://arxiv.org/abs/2406.07073",
+        "title": "Adaptive Control: Algorithms, Analysis and Applications",
+        "rating": "-10",
+        "keywords": [],
+        "abstract": "Adaptive control provides techniques for adjusting control parameters in real time to maintain system performance despite unknown or changing process parameters. These methods use real data to tune controllers and adjust plant models or controller parameters. The field has progressed significantly since the 1970s, helped by digital computers. Early applications offered essential feedback, and theoretical advances solved many basic problems. This book comprehensively treats adaptive control, guiding readers from basic problems to analytical solutions with practical applications. Presenting a unified view is challenging due to various design steps and applications. However, a coherent presentation of basic techniques is now possible. The book uses a discrete-time approach to reflect the role of digital computers and shares practical experiences and understanding of different control designs. Mathematical aspects of synthesizing and analyzing algorithms are emphasized, though they alone may not solve practical problems. The book includes applications of control techniques but stresses that a solid mathematical understanding is crucial for creatively applying them to new challenges. Mathematical synthesis and analysis are highlighted, but they must be supplemented with practical problem-solving and algorithm modifications for specific applications.",
+        "subjects": [
+            "eess.SY"
         ],
         "comment": null
     },

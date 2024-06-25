@@ -49,6 +49,7 @@
         "rating": "2",
         "keywords": [
             [
+                "memory-efficient",
                 "GPU memory"
             ],
             [
@@ -266,24 +267,6 @@
             "cs.CV"
         ],
         "comment": "9 pages, 6 figures, 5 tables. Accepted by IJCAI2024 main track"
-    },
-    {
-        "paper id": "2405.11865",
-        "abstract url": "https://arxiv.org/abs/2405.11865",
-        "title": "CoNLL#: Fine-grained Error Analysis and a Corrected Test Set for CoNLL-03 English",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Modern named entity recognition systems have steadily improved performance in the age of larger and more powerful neural models. However, over the past several years, the state-of-the-art has seemingly hit another plateau on the benchmark CoNLL-03 English dataset. In this paper, we perform a deep dive into the test outputs of the highest-performing NER models, conducting a fine-grained evaluation of their performance by introducing new document-level annotations on the test set. We go beyond F1 scores by categorizing errors in order to interpret the true state of the art for NER and guide future work. We review previous attempts at correcting the various flaws of the test set and introduce CoNLL#, a new corrected version of the test set that addresses its systematic and most prevalent errors, allowing for low-noise, interpretable error analysis.",
-        "subjects": [
-            "cs.CL",
-            "cs.AI"
-        ],
-        "comment": "Accepted to LREC-COLING 2024"
     },
     {
         "paper id": "2405.11874",
@@ -533,6 +516,23 @@
             "eess.AS"
         ],
         "comment": "8 pages, 2 figures, 3 tables"
+    },
+    {
+        "paper id": "2405.12034",
+        "abstract url": "https://arxiv.org/abs/2405.12034",
+        "title": "Count-Min Sketch with Conservative Updates: Worst-Case Analysis",
+        "rating": "1",
+        "keywords": [
+            [
+                "memory-efficient"
+            ]
+        ],
+        "abstract": "Count-Min Sketch with Conservative Updates (CMS-CU) is a memory-efficient hash-based data structure used to estimate the occurrences of items within a data stream. CMS-CU stores $m$ counters and employs $d$ hash functions to map items to these counters. We first argue that the estimation error in CMS-CU is maximal when each item appears at most once in the stream. Next, we study CMS-CU in this setting. In the case where $d=m-1$, we prove that the average estimation error and the average counter rate converge almost surely to $\\frac{1}{2}$, contrasting with the vanilla Count-Min Sketch, where the average counter rate is equal to $\\frac{m-1}{m}$. For any given $m$ and $d$, we prove novel lower and upper bounds on the average estimation error, incorporating a positive integer parameter $g$. Larger values of this parameter improve the accuracy of the bounds. Moreover, the computation of each bound involves examining an ergodic Markov process with a state space of size $\\binom{m+g-d}{g}$ and a sparse transition probabilities matrix containing $\\mathcal{O}(m\\binom{m+g-d}{g})$ non-zero entries. For $d=m-1$, $g=1$, and as $m\\to \\infty$, we show that the lower and upper bounds coincide. In general, our bounds exhibit high accuracy for small values of $g$, as shown by numerical computation. For example, for $m=50$, $d=4$, and $g=5$, the difference between the lower and upper bounds is smaller than $10^{-4}$.",
+        "subjects": [
+            "cs.DS",
+            "cs.PF"
+        ],
+        "comment": null
     },
     {
         "paper id": "2405.12055",
@@ -802,6 +802,22 @@
             "cs.CV"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2405.12363",
+        "abstract url": "https://arxiv.org/abs/2405.12363",
+        "title": "Question-Based Retrieval using Atomic Units for Enterprise RAG",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Enterprise retrieval augmented generation (RAG) offers a highly flexible framework for combining powerful large language models (LLMs) with internal, possibly temporally changing, documents. In RAG, documents are first chunked. Relevant chunks are then retrieved for a specific user query, which are passed as context to a synthesizer LLM to generate the query response. However, the retrieval step can limit performance, as incorrect chunks can lead the synthesizer LLM to generate a false response. This work proposes a zero-shot adaptation of standard dense retrieval steps for more accurate chunk recall. Specifically, a chunk is first decomposed into atomic statements. A set of synthetic questions are then generated on these atoms (with the chunk as the context). Dense retrieval involves finding the closest set of synthetic questions, and associated chunks, to the user query. It is found that retrieval with the atoms leads to higher recall than retrieval with chunks. Further performance gain is observed with retrieval using the synthetic questions generated over the atoms. Higher recall at the retrieval step enables higher performance of the enterprise LLM using the RAG pipeline.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": "10 pages, 2 figures, 3 tables"
     },
     {
         "paper id": "2405.12413",
@@ -1324,7 +1340,6 @@
         "keywords": [
             [
                 "Diffusion",
-                "synthesis",
                 "Video Editing",
                 "Text-to-Image"
             ],
@@ -1410,22 +1425,6 @@
             "cs.LG"
         ],
         "comment": "16 pages, 7 figures"
-    },
-    {
-        "paper id": "2405.12326",
-        "abstract url": "https://arxiv.org/abs/2405.12326",
-        "title": "Overlap Number of Balls Model-Agnostic CounterFactuals (ONB-MACF): A Data-Morphology-based Counterfactual Generation Method for Trustworthy Artificial Intelligence",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Explainable Artificial Intelligence (XAI) is a pivotal research domain aimed at understanding the operational mechanisms of AI systems, particularly those considered ``black boxes'' due to their complex, opaque nature. XAI seeks to make these AI systems more understandable and trustworthy, providing insight into their decision-making processes. By producing clear and comprehensible explanations, XAI enables users, practitioners, and stakeholders to trust a model's decisions. This work analyses the value of data morphology strategies in generating counterfactual explanations. It introduces the Overlap Number of Balls Model-Agnostic CounterFactuals (ONB-MACF) method, a model-agnostic counterfactual generator that leverages data morphology to estimate a model's decision boundaries. The ONB-MACF method constructs hyperspheres in the data space whose covered points share a class, mapping the decision boundary. Counterfactuals are then generated by incrementally adjusting an instance's attributes towards the nearest alternate-class hypersphere, crossing the decision boundary with minimal modifications. By design, the ONB-MACF method generates feasible and sparse counterfactuals that follow the data distribution. Our comprehensive benchmark from a double perspective (quantitative and qualitative) shows that the ONB-MACF method outperforms existing state-of-the-art counterfactual generation methods across multiple quality metrics on diverse tabular datasets. This supports our hypothesis, showcasing the potential of data-morphology-based explainability strategies for trustworthy AI.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": "21 pages, 6 figures. Submitted to Information Sciences"
     },
     {
         "paper id": "2405.12355",
@@ -1666,7 +1665,6 @@
         "keywords": [
             [
                 "Diffusion",
-                "synthesis",
                 "text-to-image"
             ],
             [
@@ -1786,6 +1784,26 @@
         "comment": null
     },
     {
+        "paper id": "2405.11921",
+        "abstract url": "https://arxiv.org/abs/2405.11921",
+        "title": "MirrorGaussian: Reflecting 3D Gaussians for Reconstructing Mirror Reflections",
+        "rating": "0",
+        "keywords": [
+            [
+                "3D",
+                "Gaussian Splatting"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "3D Gaussian Splatting showcases notable advancements in photo-realistic and real-time novel view synthesis. However, it faces challenges in modeling mirror reflections, which exhibit substantial appearance variations from different viewpoints. To tackle this problem, we present MirrorGaussian, the first method for mirror scene reconstruction with real-time rendering based on 3D Gaussian Splatting. The key insight is grounded on the mirror symmetry between the real-world space and the virtual mirror space. We introduce an intuitive dual-rendering strategy that enables differentiable rasterization of both the real-world 3D Gaussians and the mirrored counterpart obtained by reflecting the former about the mirror plane. All 3D Gaussians are jointly optimized with the mirror plane in an end-to-end framework. MirrorGaussian achieves high-quality and real-time rendering in scenes with mirrors, empowering scene editing like adding new mirrors and objects. Comprehensive experiments on multiple datasets demonstrate that our approach significantly outperforms existing methods, achieving state-of-the-art results. Project page: https://mirror-gaussian.github.io/.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.11993",
         "abstract url": "https://arxiv.org/abs/2405.11993",
         "title": "GGAvatar: Geometric Adjustment of Gaussian Head Avatar",
@@ -1891,6 +1909,48 @@
         "comment": "Project Page: https://gaussian-head-shoulders.netlify.app/"
     },
     {
+        "paper id": "2405.12110",
+        "abstract url": "https://arxiv.org/abs/2405.12110",
+        "title": "CoR-GS: Sparse-View 3D Gaussian Splatting via Co-Regularization",
+        "rating": "0",
+        "keywords": [
+            [
+                "3D",
+                "Gaussian Splatting",
+                "radiance fields"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "3D Gaussian Splatting (3DGS) creates a radiance field consisting of 3D Gaussians to represent a scene. With sparse training views, 3DGS easily suffers from overfitting, negatively impacting the reconstruction quality. This paper introduces a new co-regularization perspective for improving sparse-view 3DGS. When training two 3D Gaussian radiance fields with the same sparse views of a scene, we observe that the two radiance fields exhibit \\textit{point disagreement} and \\textit{rendering disagreement} that can unsupervisedly predict reconstruction quality, stemming from the sampling implementation in densification. We further quantify the point disagreement and rendering disagreement by evaluating the registration between Gaussians' point representations and calculating differences in their rendered pixels. The empirical study demonstrates the negative correlation between the two disagreements and accurate reconstruction, which allows us to identify inaccurate reconstruction without accessing ground-truth information. Based on the study, we propose CoR-GS, which identifies and suppresses inaccurate reconstruction based on the two disagreements: (\\romannumeral1) Co-pruning considers Gaussians that exhibit high point disagreement in inaccurate positions and prunes them. (\\romannumeral2) Pseudo-view co-regularization considers pixels that exhibit high rendering disagreement are inaccurately rendered and suppress the disagreement. Results on LLFF, Mip-NeRF360, DTU, and Blender demonstrate that CoR-GS effectively regularizes the scene geometry, reconstructs the compact representations, and achieves state-of-the-art novel view synthesis quality under sparse training views.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Project page: https://jiaw-z.github.io/CoR-GS/"
+    },
+    {
+        "paper id": "2405.12218",
+        "abstract url": "https://arxiv.org/abs/2405.12218",
+        "title": "Fast Generalizable Gaussian Splatting Reconstruction from Multi-View Stereo",
+        "rating": "0",
+        "keywords": [
+            [
+                "3D",
+                "Gaussian Splatting",
+                "NeRF"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "We present MVSGaussian, a new generalizable 3D Gaussian representation approach derived from Multi-View Stereo (MVS) that can efficiently reconstruct unseen scenes. Specifically, 1) we leverage MVS to encode geometry-aware Gaussian representations and decode them into Gaussian parameters. 2) To further enhance performance, we propose a hybrid Gaussian rendering that integrates an efficient volume rendering design for novel view synthesis. 3) To support fast fine-tuning for specific scenes, we introduce a multi-view geometric consistent aggregation strategy to effectively aggregate the point clouds generated by the generalizable model, serving as the initialization for per-scene optimization. Compared with previous generalizable NeRF-based methods, which typically require minutes of fine-tuning and seconds of rendering per image, MVSGaussian achieves real-time rendering with better synthesis quality for each scene. Compared with the vanilla 3D-GS, MVSGaussian achieves better view synthesis with less training computational cost. Extensive experiments on DTU, Real Forward-facing, NeRF Synthetic, and Tanks and Temples datasets validate that MVSGaussian attains state-of-the-art performance with convincing generalizability, real-time rendering speed, and fast per-scene optimization.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Project page: https://mvsgaussian.github.io/"
+    },
+    {
         "paper id": "2405.12221",
         "abstract url": "https://arxiv.org/abs/2405.12221",
         "title": "Images that Sound: Composing Images and Sounds on a Single Canvas",
@@ -1898,7 +1958,6 @@
         "keywords": [
             [
                 "diffusion",
-                "synthesize",
                 "text-to-image"
             ],
             [
@@ -1945,23 +2004,25 @@
         "comment": "MICCAI 2024, early accept, top 11%"
     },
     {
-        "paper id": "2405.12363",
-        "abstract url": "https://arxiv.org/abs/2405.12363",
-        "title": "Question-Based Retrieval using Atomic Units for Enterprise RAG",
+        "paper id": "2405.12369",
+        "abstract url": "https://arxiv.org/abs/2405.12369",
+        "title": "AtomGS: Atomizing Gaussian Splatting for High-Fidelity Radiance Field",
         "rating": "0",
         "keywords": [
             [
-                "synthesizer"
+                "3D",
+                "Gaussian Splatting",
+                "SDF"
             ],
             [
-                "cs.CL"
+                "cs.CV"
             ]
         ],
-        "abstract": "Enterprise retrieval augmented generation (RAG) offers a highly flexible framework for combining powerful large language models (LLMs) with internal, possibly temporally changing, documents. In RAG, documents are first chunked. Relevant chunks are then retrieved for a specific user query, which are passed as context to a synthesizer LLM to generate the query response. However, the retrieval step can limit performance, as incorrect chunks can lead the synthesizer LLM to generate a false response. This work proposes a zero-shot adaptation of standard dense retrieval steps for more accurate chunk recall. Specifically, a chunk is first decomposed into atomic statements. A set of synthetic questions are then generated on these atoms (with the chunk as the context). Dense retrieval involves finding the closest set of synthetic questions, and associated chunks, to the user query. It is found that retrieval with the atoms leads to higher recall than retrieval with chunks. Further performance gain is observed with retrieval using the synthetic questions generated over the atoms. Higher recall at the retrieval step enables higher performance of the enterprise LLM using the RAG pipeline.",
+        "abstract": "3D Gaussian Splatting (3DGS) has recently advanced radiance field reconstruction by offering superior capabilities for novel view synthesis and real-time rendering speed. However, its strategy of blending optimization and adaptive density control might lead to sub-optimal results; it can sometimes yield noisy geometry and blurry artifacts due to prioritizing optimizing large Gaussians at the cost of adequately densifying smaller ones. To address this, we introduce AtomGS, consisting of Atomized Proliferation and Geometry-Guided Optimization. The Atomized Proliferation constrains ellipsoid Gaussians of various sizes into more uniform-sized Atom Gaussians. The strategy enhances the representation of areas with fine features by placing greater emphasis on densification in accordance with scene details. In addition, we proposed a Geometry-Guided Optimization approach that incorporates an Edge-Aware Normal Loss. This optimization method effectively smooths flat surfaces while preserving intricate details. Our evaluation shows that AtomGS outperforms existing state-of-the-art methods in rendering quality. Additionally, it achieves competitive accuracy in geometry reconstruction and offers a significant improvement in training speed over other SDF-based methods. More interactive demos can be found in our website (\\href{https://rongliu-leo.github.io/AtomGS/}{https://rongliu-leo.github.io/AtomGS/}).",
         "subjects": [
-            "cs.CL"
+            "cs.CV"
         ],
-        "comment": "10 pages, 2 figures, 3 tables"
+        "comment": null
     },
     {
         "paper id": "2405.12398",
@@ -2408,7 +2469,8 @@
         "rating": "-0.5",
         "keywords": [
             [
-                "Robot"
+                "Robot",
+                "robotic manipulation"
             ],
             [
                 "cs.LG"
@@ -2742,6 +2804,27 @@
         "comment": null
     },
     {
+        "paper id": "2405.11865",
+        "abstract url": "https://arxiv.org/abs/2405.11865",
+        "title": "CoNLL#: Fine-grained Error Analysis and a Corrected Test Set for CoNLL-03 English",
+        "rating": "-1",
+        "keywords": [
+            [
+                "named entity recognition"
+            ],
+            [
+                "cs.AI",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Modern named entity recognition systems have steadily improved performance in the age of larger and more powerful neural models. However, over the past several years, the state-of-the-art has seemingly hit another plateau on the benchmark CoNLL-03 English dataset. In this paper, we perform a deep dive into the test outputs of the highest-performing NER models, conducting a fine-grained evaluation of their performance by introducing new document-level annotations on the test set. We go beyond F1 scores by categorizing errors in order to interpret the true state of the art for NER and guide future work. We review previous attempts at correcting the various flaws of the test set and introduce CoNLL#, a new corrected version of the test set that addresses its systematic and most prevalent errors, allowing for low-noise, interpretable error analysis.",
+        "subjects": [
+            "cs.CL",
+            "cs.AI"
+        ],
+        "comment": "Accepted to LREC-COLING 2024"
+    },
+    {
         "paper id": "2405.11883",
         "abstract url": "https://arxiv.org/abs/2405.11883",
         "title": "Asynchronous MIMO-OFDM Massive Unsourced Random Access with Codeword Collisions",
@@ -2757,29 +2840,6 @@
             "eess.SP"
         ],
         "comment": "13 pages, 12 figures, submitted to the IEEE for possible publication"
-    },
-    {
-        "paper id": "2405.11903",
-        "abstract url": "https://arxiv.org/abs/2405.11903",
-        "title": "A comprehensive overview of deep learning techniques for 3D point cloud classification and semantic segmentation",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D",
-                "point cloud"
-            ],
-            [
-                "autonomous driving"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Point cloud analysis has a wide range of applications in many areas such as computer vision, robotic manipulation, and autonomous driving. While deep learning has achieved remarkable success on image-based tasks, there are many unique challenges faced by deep neural networks in processing massive, unordered, irregular and noisy 3D points. To stimulate future research, this paper analyzes recent progress in deep learning methods employed for point cloud processing and presents challenges and potential directions to advance this field. It serves as a comprehensive review on two major tasks in 3D point cloud processing-- namely, 3D shape classification and semantic segmentation.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Published in Springer Nature (Machine Vision and Applications)"
     },
     {
         "paper id": "2405.11914",
@@ -2802,29 +2862,6 @@
             "cs.CV"
         ],
         "comment": "10 pages, 6 figures"
-    },
-    {
-        "paper id": "2405.11921",
-        "abstract url": "https://arxiv.org/abs/2405.11921",
-        "title": "MirrorGaussian: Reflecting 3D Gaussians for Reconstructing Mirror Reflections",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "3D Gaussian Splatting showcases notable advancements in photo-realistic and real-time novel view synthesis. However, it faces challenges in modeling mirror reflections, which exhibit substantial appearance variations from different viewpoints. To tackle this problem, we present MirrorGaussian, the first method for mirror scene reconstruction with real-time rendering based on 3D Gaussian Splatting. The key insight is grounded on the mirror symmetry between the real-world space and the virtual mirror space. We introduce an intuitive dual-rendering strategy that enables differentiable rasterization of both the real-world 3D Gaussians and the mirrored counterpart obtained by reflecting the former about the mirror plane. All 3D Gaussians are jointly optimized with the mirror plane in an end-to-end framework. MirrorGaussian achieves high-quality and real-time rendering in scenes with mirrors, empowering scene editing like adding new mirrors and objects. Comprehensive experiments on multiple datasets demonstrate that our approach significantly outperforms existing methods, achieving state-of-the-art results. Project page: https://mirror-gaussian.github.io/.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
     },
     {
         "paper id": "2405.11935",
@@ -2945,7 +2982,8 @@
         "rating": "-1",
         "keywords": [
             [
-                "remote sensing"
+                "remote sensing",
+                "Hyperspectral Image"
             ],
             [
                 "cs.CV"
@@ -3068,30 +3106,6 @@
             "cs.LO"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2405.12110",
-        "abstract url": "https://arxiv.org/abs/2405.12110",
-        "title": "CoR-GS: Sparse-View 3D Gaussian Splatting via Co-Regularization",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting",
-                "radiance fields"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "3D Gaussian Splatting (3DGS) creates a radiance field consisting of 3D Gaussians to represent a scene. With sparse training views, 3DGS easily suffers from overfitting, negatively impacting the reconstruction quality. This paper introduces a new co-regularization perspective for improving sparse-view 3DGS. When training two 3D Gaussian radiance fields with the same sparse views of a scene, we observe that the two radiance fields exhibit \\textit{point disagreement} and \\textit{rendering disagreement} that can unsupervisedly predict reconstruction quality, stemming from the sampling implementation in densification. We further quantify the point disagreement and rendering disagreement by evaluating the registration between Gaussians' point representations and calculating differences in their rendered pixels. The empirical study demonstrates the negative correlation between the two disagreements and accurate reconstruction, which allows us to identify inaccurate reconstruction without accessing ground-truth information. Based on the study, we propose CoR-GS, which identifies and suppresses inaccurate reconstruction based on the two disagreements: (\\romannumeral1) Co-pruning considers Gaussians that exhibit high point disagreement in inaccurate positions and prunes them. (\\romannumeral2) Pseudo-view co-regularization considers pixels that exhibit high rendering disagreement are inaccurately rendered and suppress the disagreement. Results on LLFF, Mip-NeRF360, DTU, and Blender demonstrate that CoR-GS effectively regularizes the scene geometry, reconstructs the compact representations, and achieves state-of-the-art novel view synthesis quality under sparse training views.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Project page: https://jiaw-z.github.io/CoR-GS/"
     },
     {
         "paper id": "2405.12114",
@@ -3263,30 +3277,6 @@
         "comment": "17 pages, 7 figures, 7 tables"
     },
     {
-        "paper id": "2405.12218",
-        "abstract url": "https://arxiv.org/abs/2405.12218",
-        "title": "Fast Generalizable Gaussian Splatting Reconstruction from Multi-View Stereo",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting",
-                "NeRF"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "We present MVSGaussian, a new generalizable 3D Gaussian representation approach derived from Multi-View Stereo (MVS) that can efficiently reconstruct unseen scenes. Specifically, 1) we leverage MVS to encode geometry-aware Gaussian representations and decode them into Gaussian parameters. 2) To further enhance performance, we propose a hybrid Gaussian rendering that integrates an efficient volume rendering design for novel view synthesis. 3) To support fast fine-tuning for specific scenes, we introduce a multi-view geometric consistent aggregation strategy to effectively aggregate the point clouds generated by the generalizable model, serving as the initialization for per-scene optimization. Compared with previous generalizable NeRF-based methods, which typically require minutes of fine-tuning and seconds of rendering per image, MVSGaussian achieves real-time rendering with better synthesis quality for each scene. Compared with the vanilla 3D-GS, MVSGaussian achieves better view synthesis with less training computational cost. Extensive experiments on DTU, Real Forward-facing, NeRF Synthetic, and Tanks and Temples datasets validate that MVSGaussian attains state-of-the-art performance with convincing generalizability, real-time rendering speed, and fast per-scene optimization.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Project page: https://mvsgaussian.github.io/"
-    },
-    {
         "paper id": "2405.12293",
         "abstract url": "https://arxiv.org/abs/2405.12293",
         "title": "Exact Random Graph Matching with Multiple Graphs",
@@ -3303,22 +3293,6 @@
             "math.ST"
         ],
         "comment": "20 pages, 3 figures"
-    },
-    {
-        "paper id": "2405.12304",
-        "abstract url": "https://arxiv.org/abs/2405.12304",
-        "title": "Automatic Hardware Pragma Insertion in High-Level Synthesis: A Non-Linear Programming Approach",
-        "rating": "-1",
-        "keywords": [
-            [
-                "Synthesis"
-            ]
-        ],
-        "abstract": "High-level synthesis, source-to-source compilers, and various Design Space Exploration techniques for pragma insertion have significantly improved the Quality of Results of generated designs. These tools offer benefits such as reduced development time and enhanced performance. However, achieving high-quality results often requires additional manual code transformations and tiling selections, which are typically performed separately or as pre-processing steps. Although DSE techniques enable code transformation upfront, the vastness of the search space often limits the exploration of all possible code transformations, making it challenging to determine which transformations are necessary. Additionally, ensuring correctness remains challenging, especially for complex transformations and optimizations. To tackle this obstacle, we first propose a comprehensive framework leveraging HLS compilers. Our system streamlines code transformation, pragma insertion, and tiles size selection for on-chip data caching through a unified optimization problem, aiming to enhance parallelization, particularly beneficial for computation-bound kernels. Them employing a novel Non-Linear Programming (NLP) approach, we simultaneously ascertain transformations, pragmas, and tile sizes, focusing on regular loop-based kernels. Our evaluation demonstrates that our framework adeptly identifies the appropriate transformations, including scenarios where no transformation is necessary, and inserts pragmas to achieve a favorable Quality of Results.",
-        "subjects": [
-            "cs.AR"
-        ],
-        "comment": null
     },
     {
         "paper id": "2405.12318",
@@ -3427,30 +3401,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.12369",
-        "abstract url": "https://arxiv.org/abs/2405.12369",
-        "title": "AtomGS: Atomizing Gaussian Splatting for High-Fidelity Radiance Field",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting",
-                "SDF"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "3D Gaussian Splatting (3DGS) has recently advanced radiance field reconstruction by offering superior capabilities for novel view synthesis and real-time rendering speed. However, its strategy of blending optimization and adaptive density control might lead to sub-optimal results; it can sometimes yield noisy geometry and blurry artifacts due to prioritizing optimizing large Gaussians at the cost of adequately densifying smaller ones. To address this, we introduce AtomGS, consisting of Atomized Proliferation and Geometry-Guided Optimization. The Atomized Proliferation constrains ellipsoid Gaussians of various sizes into more uniform-sized Atom Gaussians. The strategy enhances the representation of areas with fine features by placing greater emphasis on densification in accordance with scene details. In addition, we proposed a Geometry-Guided Optimization approach that incorporates an Edge-Aware Normal Loss. This optimization method effectively smooths flat surfaces while preserving intricate details. Our evaluation shows that AtomGS outperforms existing state-of-the-art methods in rendering quality. Additionally, it achieves competitive accuracy in geometry reconstruction and offers a significant improvement in training speed over other SDF-based methods. More interactive demos can be found in our website (\\href{https://rongliu-leo.github.io/AtomGS/}{https://rongliu-leo.github.io/AtomGS/}).",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2405.12408",
         "abstract url": "https://arxiv.org/abs/2405.12408",
         "title": "Flexible Active Safety Motion Control for Robotic Obstacle Avoidance: A CBF-Guided MPC Approach",
@@ -3497,8 +3447,7 @@
                 "Gaussian Splatting"
             ],
             [
-                "diffusion",
-                "Synthesis"
+                "diffusion"
             ],
             [
                 "cs.CV"
@@ -3914,6 +3863,25 @@
         "comment": "15 pages and planning to submit it to IEEE Access"
     },
     {
+        "paper id": "2405.12326",
+        "abstract url": "https://arxiv.org/abs/2405.12326",
+        "title": "Overlap Number of Balls Model-Agnostic CounterFactuals (ONB-MACF): A Data-Morphology-based Counterfactual Generation Method for Trustworthy Artificial Intelligence",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "tabular"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Explainable Artificial Intelligence (XAI) is a pivotal research domain aimed at understanding the operational mechanisms of AI systems, particularly those considered ``black boxes'' due to their complex, opaque nature. XAI seeks to make these AI systems more understandable and trustworthy, providing insight into their decision-making processes. By producing clear and comprehensible explanations, XAI enables users, practitioners, and stakeholders to trust a model's decisions. This work analyses the value of data morphology strategies in generating counterfactual explanations. It introduces the Overlap Number of Balls Model-Agnostic CounterFactuals (ONB-MACF) method, a model-agnostic counterfactual generator that leverages data morphology to estimate a model's decision boundaries. The ONB-MACF method constructs hyperspheres in the data space whose covered points share a class, mapping the decision boundary. Counterfactuals are then generated by incrementally adjusting an instance's attributes towards the nearest alternate-class hypersphere, crossing the decision boundary with minimal modifications. By design, the ONB-MACF method generates feasible and sparse counterfactuals that follow the data distribution. Our comprehensive benchmark from a double perspective (quantitative and qualitative) shows that the ONB-MACF method outperforms existing state-of-the-art counterfactual generation methods across multiple quality metrics on diverse tabular datasets. This supports our hypothesis, showcasing the potential of data-morphology-based explainability strategies for trustworthy AI.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": "21 pages, 6 figures. Submitted to Information Sciences"
+    },
+    {
         "paper id": "2405.12327",
         "abstract url": "https://arxiv.org/abs/2405.12327",
         "title": "Diversifying by Intent in Recommender Systems",
@@ -4223,6 +4191,32 @@
         "comment": "Accepted and Presented at Neuro-Inspired Computational Elements (NICE) Conference, La Jolla, CA. 2024"
     },
     {
+        "paper id": "2405.11903",
+        "abstract url": "https://arxiv.org/abs/2405.11903",
+        "title": "A comprehensive overview of deep learning techniques for 3D point cloud classification and semantic segmentation",
+        "rating": "-2",
+        "keywords": [
+            [
+                "3D",
+                "point cloud"
+            ],
+            [
+                "autonomous driving"
+            ],
+            [
+                "robotic manipulation"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Point cloud analysis has a wide range of applications in many areas such as computer vision, robotic manipulation, and autonomous driving. While deep learning has achieved remarkable success on image-based tasks, there are many unique challenges faced by deep neural networks in processing massive, unordered, irregular and noisy 3D points. To stimulate future research, this paper analyzes recent progress in deep learning methods employed for point cloud processing and presents challenges and potential directions to advance this field. It serves as a comprehensive review on two major tasks in 3D point cloud processing-- namely, 3D shape classification and semantic segmentation.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Published in Springer Nature (Machine Vision and Applications)"
+    },
+    {
         "paper id": "2405.11936",
         "abstract url": "https://arxiv.org/abs/2405.11936",
         "title": "UAV-VisLoc: A Large-scale Dataset for UAV Visual Localization",
@@ -4264,6 +4258,28 @@
             "cs.CE"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2405.11976",
+        "abstract url": "https://arxiv.org/abs/2405.11976",
+        "title": "Position-Guided Prompt Learning for Anomaly Detection in Chest X-Rays",
+        "rating": "-2",
+        "keywords": [
+            [
+                "Anomaly Detection"
+            ],
+            [
+                "medical"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Anomaly detection in chest X-rays is a critical task. Most methods mainly model the distribution of normal images, and then regard significant deviation from normal distribution as anomaly. Recently, CLIP-based methods, pre-trained on a large number of medical images, have shown impressive performance on zero/few-shot downstream tasks. In this paper, we aim to explore the potential of CLIP-based methods for anomaly detection in chest X-rays. Considering the discrepancy between the CLIP pre-training data and the task-specific data, we propose a position-guided prompt learning method. Specifically, inspired by the fact that experts diagnose chest X-rays by carefully examining distinct lung regions, we propose learnable position-guided text and image prompts to adapt the task data to the frozen pre-trained CLIP-based model. To enhance the model's discriminative capability, we propose a novel structure-preserving anomaly synthesis method within chest x-rays during the training process. Extensive experiments on three datasets demonstrate that our proposed method outperforms some state-of-the-art methods. The code of our implementation is available at https://github.com/sunzc-sunny/PPAD.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "MICCAI 2024 Early Accept"
     },
     {
         "paper id": "2405.11977",
@@ -4515,7 +4531,8 @@
                 "3D"
             ],
             [
-                "remote sensing"
+                "remote sensing",
+                "Hyperspectral Image"
             ],
             [
                 "cs.CV",
@@ -4834,31 +4851,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.11976",
-        "abstract url": "https://arxiv.org/abs/2405.11976",
-        "title": "Position-Guided Prompt Learning for Anomaly Detection in Chest X-Rays",
-        "rating": "-3",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "Anomaly Detection"
-            ],
-            [
-                "medical"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Anomaly detection in chest X-rays is a critical task. Most methods mainly model the distribution of normal images, and then regard significant deviation from normal distribution as anomaly. Recently, CLIP-based methods, pre-trained on a large number of medical images, have shown impressive performance on zero/few-shot downstream tasks. In this paper, we aim to explore the potential of CLIP-based methods for anomaly detection in chest X-rays. Considering the discrepancy between the CLIP pre-training data and the task-specific data, we propose a position-guided prompt learning method. Specifically, inspired by the fact that experts diagnose chest X-rays by carefully examining distinct lung regions, we propose learnable position-guided text and image prompts to adapt the task data to the frozen pre-trained CLIP-based model. To enhance the model's discriminative capability, we propose a novel structure-preserving anomaly synthesis method within chest x-rays during the training process. Extensive experiments on three datasets demonstrate that our proposed method outperforms some state-of-the-art methods. The code of our implementation is available at https://github.com/sunzc-sunny/PPAD.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "MICCAI 2024 Early Accept"
-    },
-    {
         "paper id": "2405.12121",
         "abstract url": "https://arxiv.org/abs/2405.12121",
         "title": "Insecurity of Quantum Two-Party Computation with Applications to Cheat-Sensitive Protocols and Oblivious Transfer Reductions",
@@ -4928,7 +4920,7 @@
         "rating": "-3",
         "keywords": [
             [
-                "Hyperspectral imaging",
+                "hyperspectral image",
                 "agricultural"
             ],
             [
@@ -5472,19 +5464,6 @@
         "comment": "23 pages, 1 figure"
     },
     {
-        "paper id": "2405.12034",
-        "abstract url": "https://arxiv.org/abs/2405.12034",
-        "title": "Count-Min Sketch with Conservative Updates: Worst-Case Analysis",
-        "rating": "-10",
-        "keywords": [],
-        "abstract": "Count-Min Sketch with Conservative Updates (CMS-CU) is a memory-efficient hash-based data structure used to estimate the occurrences of items within a data stream. CMS-CU stores $m$ counters and employs $d$ hash functions to map items to these counters. We first argue that the estimation error in CMS-CU is maximal when each item appears at most once in the stream. Next, we study CMS-CU in this setting. In the case where $d=m-1$, we prove that the average estimation error and the average counter rate converge almost surely to $\\frac{1}{2}$, contrasting with the vanilla Count-Min Sketch, where the average counter rate is equal to $\\frac{m-1}{m}$. For any given $m$ and $d$, we prove novel lower and upper bounds on the average estimation error, incorporating a positive integer parameter $g$. Larger values of this parameter improve the accuracy of the bounds. Moreover, the computation of each bound involves examining an ergodic Markov process with a state space of size $\\binom{m+g-d}{g}$ and a sparse transition probabilities matrix containing $\\mathcal{O}(m\\binom{m+g-d}{g})$ non-zero entries. For $d=m-1$, $g=1$, and as $m\\to \\infty$, we show that the lower and upper bounds coincide. In general, our bounds exhibit high accuracy for small values of $g$, as shown by numerical computation. For example, for $m=50$, $d=4$, and $g=5$, the difference between the lower and upper bounds is smaller than $10^{-4}$.",
-        "subjects": [
-            "cs.DS",
-            "cs.PF"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2405.12042",
         "abstract url": "https://arxiv.org/abs/2405.12042",
         "title": "Attribute-Based Authentication in Secure Group Messaging for Distributed Environments",
@@ -5680,6 +5659,18 @@
             "eess.SY"
         ],
         "comment": "Accepted to the 15th ACM International Conference on Future Energy Systems"
+    },
+    {
+        "paper id": "2405.12304",
+        "abstract url": "https://arxiv.org/abs/2405.12304",
+        "title": "Automatic Hardware Pragma Insertion in High-Level Synthesis: A Non-Linear Programming Approach",
+        "rating": "-10",
+        "keywords": [],
+        "abstract": "High-level synthesis, source-to-source compilers, and various Design Space Exploration techniques for pragma insertion have significantly improved the Quality of Results of generated designs. These tools offer benefits such as reduced development time and enhanced performance. However, achieving high-quality results often requires additional manual code transformations and tiling selections, which are typically performed separately or as pre-processing steps. Although DSE techniques enable code transformation upfront, the vastness of the search space often limits the exploration of all possible code transformations, making it challenging to determine which transformations are necessary. Additionally, ensuring correctness remains challenging, especially for complex transformations and optimizations. To tackle this obstacle, we first propose a comprehensive framework leveraging HLS compilers. Our system streamlines code transformation, pragma insertion, and tiles size selection for on-chip data caching through a unified optimization problem, aiming to enhance parallelization, particularly beneficial for computation-bound kernels. Them employing a novel Non-Linear Programming (NLP) approach, we simultaneously ascertain transformations, pragmas, and tile sizes, focusing on regular loop-based kernels. Our evaluation demonstrates that our framework adeptly identifies the appropriate transformations, including scenarios where no transformation is necessary, and inserts pragmas to achieve a favorable Quality of Results.",
+        "subjects": [
+            "cs.AR"
+        ],
+        "comment": null
     },
     {
         "paper id": "2405.12311",

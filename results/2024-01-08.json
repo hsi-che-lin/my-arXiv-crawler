@@ -140,6 +140,28 @@
         "comment": "Work in progress"
     },
     {
+        "paper id": "2401.04343",
+        "abstract url": "https://arxiv.org/abs/2401.04343",
+        "title": "Private Fine-tuning of Large Language Models with Zeroth-order Optimization",
+        "rating": "2",
+        "keywords": [
+            [
+                "memory-efficient"
+            ],
+            [
+                "cs.LG",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Fine-tuning large pretrained models on private datasets may run the risk of violating privacy. Differential privacy is a framework for mitigating privacy risks by enforcing algorithmic stability. DP-SGD enables training models with private data in a privacy-preserving manner, but raises new obstacles in the form of performance loss and significant engineering challenges. We introduce DP-ZO, a new method for fine-tuning large language models that preserves the privacy of training data by privatizing zeroth-order optimization. A key insight into the design of our method is that the direction of the gradient in SPSA, the zeroth-order algorithm we use, is always random and the only information that depends on private data is the step size, i.e., a scalar. Therefore, we only need to privatize the scalar step size, which is memory-efficient. DP-ZO, which can be instantiated with either Laplace or Gaussian noise, provides a strong privacy-utility trade-off across different tasks, and model sizes, under conservative privacy budgets. One noteworthy result is that DP-ZO exhibits just $1.86\\%$ performance degradation due to privacy at $(1,10^{-5})$-DP when fine-tuning OPT-66B on 1000 training samples from SQuAD.",
+        "subjects": [
+            "cs.LG",
+            "cs.CL",
+            "cs.CR"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2401.03687",
         "abstract url": "https://arxiv.org/abs/2401.03687",
         "title": "BS-PLCNet: Band-split Packet Loss Concealment Network with Multi-task Learning Framework and Multi-discriminators",
@@ -999,6 +1021,7 @@
         "rating": "1",
         "keywords": [
             [
+                "Memory-Efficient",
                 "Efficient Finetuning"
             ],
             [
@@ -1043,7 +1066,8 @@
             ],
             [
                 "Robotics",
-                "robot"
+                "robot",
+                "Robotic Manipulation"
             ],
             [
                 "cs.CV"
@@ -1151,23 +1175,28 @@
         "comment": null
     },
     {
-        "paper id": "2401.04343",
-        "abstract url": "https://arxiv.org/abs/2401.04343",
-        "title": "Private Fine-tuning of Large Language Models with Zeroth-order Optimization",
+        "paper id": "2401.04339",
+        "abstract url": "https://arxiv.org/abs/2401.04339",
+        "title": "Memory-Efficient Personalization using Quantized Diffusion Model",
         "rating": "1",
         "keywords": [
             [
-                "cs.LG",
-                "cs.CL"
+                "Memory-Efficient"
+            ],
+            [
+                "Diffusion"
+            ],
+            [
+                "cs.AI",
+                "cs.CV"
             ]
         ],
-        "abstract": "Fine-tuning large pretrained models on private datasets may run the risk of violating privacy. Differential privacy is a framework for mitigating privacy risks by enforcing algorithmic stability. DP-SGD enables training models with private data in a privacy-preserving manner, but raises new obstacles in the form of performance loss and significant engineering challenges. We introduce DP-ZO, a new method for fine-tuning large language models that preserves the privacy of training data by privatizing zeroth-order optimization. A key insight into the design of our method is that the direction of the gradient in SPSA, the zeroth-order algorithm we use, is always random and the only information that depends on private data is the step size, i.e., a scalar. Therefore, we only need to privatize the scalar step size, which is memory-efficient. DP-ZO, which can be instantiated with either Laplace or Gaussian noise, provides a strong privacy-utility trade-off across different tasks, and model sizes, under conservative privacy budgets. One noteworthy result is that DP-ZO exhibits just $1.86\\%$ performance degradation due to privacy at $(1,10^{-5})$-DP when fine-tuning OPT-66B on 1000 training samples from SQuAD.",
+        "abstract": "The rise of billion-parameter diffusion models like Stable Diffusion XL, Imagen, and Dall-E3 markedly advances the field of generative AI. However, their large-scale nature poses challenges in fine-tuning and deployment due to high resource demands and slow inference speed. This paper ventures into the relatively unexplored yet promising realm of fine-tuning quantized diffusion models. We establish a strong baseline by customizing three models: PEQA for fine-tuning quantization parameters, Q-Diffusion for post-training quantization, and DreamBooth for personalization. Our analysis reveals a notable trade-off between subject and prompt fidelity within the baseline model. To address these issues, we introduce two strategies, inspired by the distinct roles of different timesteps in diffusion models: S1 optimizing a single set of fine-tuning parameters exclusively at selected intervals, and S2 creating multiple fine-tuning parameter sets, each specialized for different timestep intervals. Our approach not only enhances personalization but also upholds prompt fidelity and image quality, significantly outperforming the baseline qualitatively and quantitatively. The code will be made publicly available.",
         "subjects": [
-            "cs.LG",
-            "cs.CL",
-            "cs.CR"
+            "cs.CV",
+            "cs.AI"
         ],
-        "comment": null
+        "comment": "20 pages"
     },
     {
         "paper id": "2401.04354",
@@ -1426,23 +1455,6 @@
             "cs.AI"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2401.03868",
-        "abstract url": "https://arxiv.org/abs/2401.03868",
-        "title": "FlightLLM: Efficient Large Language Model Inference with a Complete Mapping Flow on FPGAs",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "Transformer-based Large Language Models (LLMs) have made a significant impact on various domains. However, LLMs' efficiency suffers from both heavy computation and memory overheads. Compression techniques like sparsification and quantization are commonly used to mitigate the gap between LLM's computation/memory overheads and hardware capacity. However, existing GPU and transformer-based accelerators cannot efficiently process compressed LLMs, due to the following unresolved challenges: low computational efficiency, underutilized memory bandwidth, and large compilation overheads. This paper proposes FlightLLM, enabling efficient LLMs inference with a complete mapping flow on FPGAs. In FlightLLM, we highlight an innovative solution that the computation and memory overhead of LLMs can be solved by utilizing FPGA-specific resources (e.g., DSP48 and heterogeneous memory hierarchy). We propose a configurable sparse DSP chain to support different sparsity patterns with high computation efficiency. Second, we propose an always-on-chip decode scheme to boost memory bandwidth with mixed-precision support. Finally, to make FlightLLM available for real-world LLMs, we propose a length adaptive compilation method to reduce the compilation overhead. Implemented on the Xilinx Alveo U280 FPGA, FlightLLM achieves 6.0$\\times$ higher energy efficiency and 1.8$\\times$ better cost efficiency against commercial GPUs (e.g., NVIDIA V100S) on modern LLMs (e.g., LLaMA2-7B) using vLLM and SmoothQuant under the batch size of one. FlightLLM beats NVIDIA A100 GPU with 1.2$\\times$ higher throughput using the latest Versal VHK158 FPGA.",
-        "subjects": [
-            "cs.AR",
-            "cs.AI"
-        ],
-        "comment": "Accepted to FPGA'24"
     },
     {
         "paper id": "2401.03870",
@@ -1769,22 +1781,6 @@
         "comment": null
     },
     {
-        "paper id": "2401.04266",
-        "abstract url": "https://arxiv.org/abs/2401.04266",
-        "title": "Attention versus Contrastive Learning of Tabular Data -- A Data-centric Benchmarking",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Despite groundbreaking success in image and text learning, deep learning has not achieved significant improvements against traditional machine learning (ML) when it comes to tabular data. This performance gap underscores the need for data-centric treatment and benchmarking of learning algorithms. Recently, attention and contrastive learning breakthroughs have shifted computer vision and natural language processing paradigms. However, the effectiveness of these advanced deep models on tabular data is sparsely studied using a few data sets with very large sample sizes, reporting mixed findings after benchmarking against a limited number of baselines. We argue that the heterogeneity of tabular data sets and selective baselines in the literature can bias the benchmarking outcomes. This article extensively evaluates state-of-the-art attention and contrastive learning methods on a wide selection of 28 tabular data sets (14 easy and 14 hard-to-classify) against traditional deep and machine learning. Our data-centric benchmarking demonstrates when traditional ML is preferred over deep learning and vice versa because no best learning method exists for all tabular data sets. Combining between-sample and between-feature attentions conquers the invincible traditional ML on tabular data sets by a significant margin but fails on high dimensional data, where contrastive learning takes a robust lead. While a hybrid attention-contrastive learning strategy mostly wins on hard-to-classify data sets, traditional methods are frequently superior on easy-to-classify data sets with presumably simpler decision boundaries. To the best of our knowledge, this is the first benchmarking paper with statistical analyses of attention and contrastive learning performances on a diverse selection of tabular data sets against traditional deep and machine learning baselines to facilitate further advances in this field.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2401.04286",
         "abstract url": "https://arxiv.org/abs/2401.04286",
         "title": "Universal Consistency of Wide and Deep ReLU Neural Networks and Minimax Optimal Convergence Rates for Kolmogorov-Donoho Optimal Function Classes",
@@ -1877,7 +1873,9 @@
         "rating": "0",
         "keywords": [
             [
-                "3D"
+                "3D",
+                "signed distance field",
+                "SDF"
             ],
             [
                 "cs.CV"
@@ -2032,23 +2030,21 @@
         "comment": null
     },
     {
-        "paper id": "2401.04283",
-        "abstract url": "https://arxiv.org/abs/2401.04283",
-        "title": "FADI-AEC: Fast Score Based Diffusion Model Guided by Far-end Signal for Acoustic Echo Cancellation",
+        "paper id": "2401.04241",
+        "abstract url": "https://arxiv.org/abs/2401.04241",
+        "title": "Data-Agnostic Face Image Synthesis Detection Using Bayesian CNNs",
         "rating": "0",
         "keywords": [
             [
-                "Diffusion"
+                "anomaly detection"
             ],
             [
-                "cs.SD",
-                "eess.AS"
+                "cs.CV"
             ]
         ],
-        "abstract": "Despite the potential of diffusion models in speech enhancement, their deployment in Acoustic Echo Cancellation (AEC) has been restricted. In this paper, we propose DI-AEC, pioneering a diffusion-based stochastic regeneration approach dedicated to AEC. Further, we propose FADI-AEC, fast score-based diffusion AEC framework to save computational demands, making it favorable for edge devices. It stands out by running the score model once per frame, achieving a significant surge in processing efficiency. Apart from that, we introduce a novel noise generation technique where far-end signals are utilized, incorporating both far-end and near-end signals to refine the score model's accuracy. We test our proposed method on the ICASSP2023 Microsoft deep echo cancellation challenge evaluation dataset, where our method outperforms some of the end-to-end methods and other diffusion based echo cancellation methods.",
+        "abstract": "Face image synthesis detection is considerably gaining attention because of the potential negative impact on society that this type of synthetic data brings. In this paper, we propose a data-agnostic solution to detect the face image synthesis process. Specifically, our solution is based on an anomaly detection framework that requires only real data to learn the inference process. It is therefore data-agnostic in the sense that it requires no synthetic face images. The solution uses the posterior probability with respect to the reference data to determine if new samples are synthetic or not. Our evaluation results using different synthesizers show that our solution is very competitive against the state-of-the-art, which requires synthetic data for training.",
         "subjects": [
-            "eess.AS",
-            "cs.SD"
+            "cs.CV"
         ],
         "comment": null
     },
@@ -2072,27 +2068,6 @@
             "cs.CL"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2401.04339",
-        "abstract url": "https://arxiv.org/abs/2401.04339",
-        "title": "Memory-Efficient Personalization using Quantized Diffusion Model",
-        "rating": "0",
-        "keywords": [
-            [
-                "Diffusion"
-            ],
-            [
-                "cs.AI",
-                "cs.CV"
-            ]
-        ],
-        "abstract": "The rise of billion-parameter diffusion models like Stable Diffusion XL, Imagen, and Dall-E3 markedly advances the field of generative AI. However, their large-scale nature poses challenges in fine-tuning and deployment due to high resource demands and slow inference speed. This paper ventures into the relatively unexplored yet promising realm of fine-tuning quantized diffusion models. We establish a strong baseline by customizing three models: PEQA for fine-tuning quantization parameters, Q-Diffusion for post-training quantization, and DreamBooth for personalization. Our analysis reveals a notable trade-off between subject and prompt fidelity within the baseline model. To address these issues, we introduce two strategies, inspired by the distinct roles of different timesteps in diffusion models: S1 optimizing a single set of fine-tuning parameters exclusively at selected intervals, and S2 creating multiple fine-tuning parameter sets, each specialized for different timestep intervals. Our approach not only enhances personalization but also upholds prompt fidelity and image quality, significantly outperforming the baseline qualitatively and quantitatively. The code will be made publicly available.",
-        "subjects": [
-            "cs.CV",
-            "cs.AI"
-        ],
-        "comment": "20 pages"
     },
     {
         "paper id": "2401.04345",
@@ -2241,6 +2216,27 @@
             "stat.AP"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2401.04003",
+        "abstract url": "https://arxiv.org/abs/2401.04003",
+        "title": "Simultaneous Task Allocation and Planning for Multi-Robots under Hierarchical Temporal Logic Specifications",
+        "rating": "-0.5",
+        "keywords": [
+            [
+                "robot"
+            ],
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "Past research into robotic planning with temporal logic specifications, notably Linear Temporal Logic (LTL), was largely based on singular formulas for individual or groups of robots. But with increasing task complexity, LTL formulas unavoidably grow lengthy, complicating interpretation and specification generation, and straining the computational capacities of the planners. By leveraging the intrinsic structure of tasks, we introduced a hierarchical structure to LTL specifications with requirements on syntax and semantics, and proved that they are more expressive than their flat counterparts. Second, we employ a search-based approach to synthesize plans for a multi-robot system, accomplishing simultaneous task allocation and planning. The search space is approximated by loosely interconnected sub-spaces, with each sub-space corresponding to one LTL specification. The search is predominantly confined to a single sub-space, transitioning to another sub-space under certain conditions, determined by the decomposition of automatons. Moreover, multiple heuristics are formulated to expedite the search significantly. A theoretical analysis concerning completeness and optimality is conducted under mild assumptions. When compared with existing methods on service tasks, our method outperforms in terms of execution times with comparable solution quality. Finally, scalability is evaluated by testing a group of 30 robots and achieving reasonable runtimes.",
+        "subjects": [
+            "cs.RO",
+            "cs.AI",
+            "cs.FL"
+        ],
+        "comment": "20 pages, 7 figures"
     },
     {
         "paper id": "2401.04013",
@@ -2508,27 +2504,6 @@
             "cs.CV"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2401.03792",
-        "abstract url": "https://arxiv.org/abs/2401.03792",
-        "title": "Monitoring water contaminants in coastal areas through ML algorithms leveraging atmospherically corrected Sentinel-2 data",
-        "rating": "-1",
-        "keywords": [
-            [
-                "health"
-            ],
-            [
-                "cs.LG",
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Monitoring water contaminants is of paramount importance, ensuring public health and environmental well-being. Turbidity, a key parameter, poses a significant problem, affecting water quality. Its accurate assessment is crucial for safeguarding ecosystems and human consumption, demanding meticulous attention and action. For this, our study pioneers a novel approach to monitor the Turbidity contaminant, integrating CatBoost Machine Learning (ML) with high-resolution data from Sentinel-2 Level-2A. Traditional methods are labor-intensive while CatBoost offers an efficient solution, excelling in predictive accuracy. Leveraging atmospherically corrected Sentinel-2 data through the Google Earth Engine (GEE), our study contributes to scalable and precise Turbidity monitoring. A specific tabular dataset derived from Hong Kong contaminants monitoring stations enriches our study, providing region-specific insights. Results showcase the viability of this integrated approach, laying the foundation for adopting advanced techniques in global water quality management.",
-        "subjects": [
-            "cs.CV",
-            "cs.LG"
-        ],
-        "comment": "4 pages, 3 figures, IGARSS2024"
     },
     {
         "paper id": "2401.03794",
@@ -2876,23 +2851,6 @@
         "comment": null
     },
     {
-        "paper id": "2401.04068",
-        "abstract url": "https://arxiv.org/abs/2401.04068",
-        "title": "IntervalMDP.jl: Accelerated Value Iteration for Interval Markov Decision Processes",
-        "rating": "-1",
-        "keywords": [
-            [
-                "synthesis"
-            ]
-        ],
-        "abstract": "In this paper, we present IntervalMDP.jl, a Julia package for probabilistic analysis of interval Markov Decision Processes (IMDPs). IntervalMDP.jl facilitates the synthesis of optimal strategies and verification of IMDPs against reachability specifications and discounted reward properties. The library supports sparse matrices and is compatible with data formats from common tools for the analysis of probabilistic models, such as PRISM. A key feature of IntervalMDP.jl is that it presents both a multi-threaded CPU and a GPU-accelerated implementation of value iteration algorithms for IMDPs. In particular, IntervalMDP.jl takes advantage of the Julia type system and the inherently parallelizable nature of value iteration to improve the efficiency of performing analysis of IMDPs. On a set of examples, we show that IntervalMDP.jl substantially outperforms existing tools for verification and strategy synthesis for IMDPs in both computation time and memory consumption.",
-        "subjects": [
-            "eess.SY",
-            "cs.LO"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2401.04076",
         "abstract url": "https://arxiv.org/abs/2401.04076",
         "title": "Security and Privacy Issues in Cloud Storage",
@@ -3001,28 +2959,6 @@
         "comment": "7 figures"
     },
     {
-        "paper id": "2401.04241",
-        "abstract url": "https://arxiv.org/abs/2401.04241",
-        "title": "Data-Agnostic Face Image Synthesis Detection Using Bayesian CNNs",
-        "rating": "-1",
-        "keywords": [
-            [
-                "Synthesis"
-            ],
-            [
-                "anomaly detection"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Face image synthesis detection is considerably gaining attention because of the potential negative impact on society that this type of synthetic data brings. In this paper, we propose a data-agnostic solution to detect the face image synthesis process. Specifically, our solution is based on an anomaly detection framework that requires only real data to learn the inference process. It is therefore data-agnostic in the sense that it requires no synthetic face images. The solution uses the posterior probability with respect to the reference data to determine if new samples are synthetic or not. Our evaluation results using different synthesizers show that our solution is very competitive against the state-of-the-art, which requires synthetic data for training.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2401.04264",
         "abstract url": "https://arxiv.org/abs/2401.04264",
         "title": "General Performance Evaluation for Competitive Resource Allocation Games via Unseen Payoff Estimation",
@@ -3038,6 +2974,30 @@
             "cs.MA",
             "math.CO",
             "math.OC"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2401.04283",
+        "abstract url": "https://arxiv.org/abs/2401.04283",
+        "title": "FADI-AEC: Fast Score Based Diffusion Model Guided by Far-end Signal for Acoustic Echo Cancellation",
+        "rating": "-1",
+        "keywords": [
+            [
+                "Diffusion"
+            ],
+            [
+                "speech enhancement"
+            ],
+            [
+                "cs.SD",
+                "eess.AS"
+            ]
+        ],
+        "abstract": "Despite the potential of diffusion models in speech enhancement, their deployment in Acoustic Echo Cancellation (AEC) has been restricted. In this paper, we propose DI-AEC, pioneering a diffusion-based stochastic regeneration approach dedicated to AEC. Further, we propose FADI-AEC, fast score-based diffusion AEC framework to save computational demands, making it favorable for edge devices. It stands out by running the score model once per frame, achieving a significant surge in processing efficiency. Apart from that, we introduce a novel noise generation technique where far-end signals are utilized, incorporating both far-end and near-end signals to refine the score model's accuracy. We test our proposed method on the ICASSP2023 Microsoft deep echo cancellation challenge evaluation dataset, where our method outperforms some of the end-to-end methods and other diffusion based echo cancellation methods.",
+        "subjects": [
+            "eess.AS",
+            "cs.SD"
         ],
         "comment": null
     },
@@ -3208,6 +3168,29 @@
             "cs.HC"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2401.06173",
+        "abstract url": "https://arxiv.org/abs/2401.06173",
+        "title": "Tree Search-Based Evolutionary Bandits for Protein Sequence Optimization",
+        "rating": "-1",
+        "keywords": [
+            [
+                "biotechnologies"
+            ],
+            [
+                "cs.LG"
+            ],
+            [
+                "AAAI"
+            ]
+        ],
+        "abstract": "While modern biotechnologies allow synthesizing new proteins and function measurements at scale, efficiently exploring a protein sequence space and engineering it remains a daunting task due to the vast sequence space of any given protein. Protein engineering is typically conducted through an iterative process of adding mutations to the wild-type or lead sequences, recombination of mutations, and running new rounds of screening. To enhance the efficiency of such a process, we propose a tree search-based bandit learning method, which expands a tree starting from the initial sequence with the guidance of a bandit machine learning model. Under simplified assumptions and a Gaussian Process prior, we provide theoretical analysis and a Bayesian regret bound, demonstrating that the combination of local search and bandit learning method can efficiently discover a near-optimal design. The full algorithm is compatible with a suite of randomized tree search heuristics, machine learning models, pre-trained embeddings, and bandit techniques. We test various instances of the algorithm across benchmark protein datasets using simulated screens. Experiment results demonstrate that the algorithm is both sample-efficient and able to find top designs using reasonably small mutation counts.",
+        "subjects": [
+            "q-bio.BM",
+            "cs.LG"
+        ],
+        "comment": "AAAI 2024"
     },
     {
         "paper id": "2401.06794",
@@ -3488,6 +3471,26 @@
         "comment": null
     },
     {
+        "paper id": "2401.03868",
+        "abstract url": "https://arxiv.org/abs/2401.03868",
+        "title": "FlightLLM: Efficient Large Language Model Inference with a Complete Mapping Flow on FPGAs",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "FPGAs"
+            ],
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "Transformer-based Large Language Models (LLMs) have made a significant impact on various domains. However, LLMs' efficiency suffers from both heavy computation and memory overheads. Compression techniques like sparsification and quantization are commonly used to mitigate the gap between LLM's computation/memory overheads and hardware capacity. However, existing GPU and transformer-based accelerators cannot efficiently process compressed LLMs, due to the following unresolved challenges: low computational efficiency, underutilized memory bandwidth, and large compilation overheads. This paper proposes FlightLLM, enabling efficient LLMs inference with a complete mapping flow on FPGAs. In FlightLLM, we highlight an innovative solution that the computation and memory overhead of LLMs can be solved by utilizing FPGA-specific resources (e.g., DSP48 and heterogeneous memory hierarchy). We propose a configurable sparse DSP chain to support different sparsity patterns with high computation efficiency. Second, we propose an always-on-chip decode scheme to boost memory bandwidth with mixed-precision support. Finally, to make FlightLLM available for real-world LLMs, we propose a length adaptive compilation method to reduce the compilation overhead. Implemented on the Xilinx Alveo U280 FPGA, FlightLLM achieves 6.0$\\times$ higher energy efficiency and 1.8$\\times$ better cost efficiency against commercial GPUs (e.g., NVIDIA V100S) on modern LLMs (e.g., LLaMA2-7B) using vLLM and SmoothQuant under the batch size of one. FlightLLM beats NVIDIA A100 GPU with 1.2$\\times$ higher throughput using the latest Versal VHK158 FPGA.",
+        "subjects": [
+            "cs.AR",
+            "cs.AI"
+        ],
+        "comment": "Accepted to FPGA'24"
+    },
+    {
         "paper id": "2401.03955",
         "abstract url": "https://arxiv.org/abs/2401.03955",
         "title": "Tiny Time Mixers (TTMs): Fast Pre-trained Models for Enhanced Zero/Few-Shot Forecasting of Multivariate Time Series",
@@ -3569,30 +3572,6 @@
             "cs.CY"
         ],
         "comment": "21 pages"
-    },
-    {
-        "paper id": "2401.04003",
-        "abstract url": "https://arxiv.org/abs/2401.04003",
-        "title": "Simultaneous Task Allocation and Planning for Multi-Robots under Hierarchical Temporal Logic Specifications",
-        "rating": "-1.5",
-        "keywords": [
-            [
-                "synthesize"
-            ],
-            [
-                "robot"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "Past research into robotic planning with temporal logic specifications, notably Linear Temporal Logic (LTL), was largely based on singular formulas for individual or groups of robots. But with increasing task complexity, LTL formulas unavoidably grow lengthy, complicating interpretation and specification generation, and straining the computational capacities of the planners. By leveraging the intrinsic structure of tasks, we introduced a hierarchical structure to LTL specifications with requirements on syntax and semantics, and proved that they are more expressive than their flat counterparts. Second, we employ a search-based approach to synthesize plans for a multi-robot system, accomplishing simultaneous task allocation and planning. The search space is approximated by loosely interconnected sub-spaces, with each sub-space corresponding to one LTL specification. The search is predominantly confined to a single sub-space, transitioning to another sub-space under certain conditions, determined by the decomposition of automatons. Moreover, multiple heuristics are formulated to expedite the search significantly. A theoretical analysis concerning completeness and optimality is conducted under mild assumptions. When compared with existing methods on service tasks, our method outperforms in terms of execution times with comparable solution quality. Finally, scalability is evaluated by testing a group of 30 robots and achieving reasonable runtimes.",
-        "subjects": [
-            "cs.RO",
-            "cs.AI",
-            "cs.FL"
-        ],
-        "comment": "20 pages, 7 figures"
     },
     {
         "paper id": "2401.04055",
@@ -3716,6 +3695,25 @@
             "cs.LG"
         ],
         "comment": "2024 AIAA SciTech Forum, 8-12 January 2024, Orlando, FL, USA"
+    },
+    {
+        "paper id": "2401.04266",
+        "abstract url": "https://arxiv.org/abs/2401.04266",
+        "title": "Attention versus Contrastive Learning of Tabular Data -- A Data-centric Benchmarking",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "Tabular"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Despite groundbreaking success in image and text learning, deep learning has not achieved significant improvements against traditional machine learning (ML) when it comes to tabular data. This performance gap underscores the need for data-centric treatment and benchmarking of learning algorithms. Recently, attention and contrastive learning breakthroughs have shifted computer vision and natural language processing paradigms. However, the effectiveness of these advanced deep models on tabular data is sparsely studied using a few data sets with very large sample sizes, reporting mixed findings after benchmarking against a limited number of baselines. We argue that the heterogeneity of tabular data sets and selective baselines in the literature can bias the benchmarking outcomes. This article extensively evaluates state-of-the-art attention and contrastive learning methods on a wide selection of 28 tabular data sets (14 easy and 14 hard-to-classify) against traditional deep and machine learning. Our data-centric benchmarking demonstrates when traditional ML is preferred over deep learning and vice versa because no best learning method exists for all tabular data sets. Combining between-sample and between-feature attentions conquers the invincible traditional ML on tabular data sets by a significant margin but fails on high dimensional data, where contrastive learning takes a robust lead. While a hybrid attention-contrastive learning strategy mostly wins on hard-to-classify data sets, traditional methods are frequently superior on easy-to-classify data sets with presumably simpler decision boundaries. To the best of our knowledge, this is the first benchmarking paper with statistical analyses of attention and contrastive learning performances on a diverse selection of tabular data sets against traditional deep and machine learning baselines to facilitate further advances in this field.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": null
     },
     {
         "paper id": "2401.04336",
@@ -4000,22 +3998,6 @@
         "comment": "Accepted for publication in IEEE INFOCOM 2024"
     },
     {
-        "paper id": "2401.03833",
-        "abstract url": "https://arxiv.org/abs/2401.03833",
-        "title": "T-FREX: A Transformer-based Feature Extraction Method from Mobile App Reviews",
-        "rating": "-2",
-        "keywords": [
-            [
-                "recommendation"
-            ]
-        ],
-        "abstract": "Mobile app reviews are a large-scale data source for software-related knowledge generation activities, including software maintenance, evolution and feedback analysis. Effective extraction of features (i.e., functionalities or characteristics) from these reviews is key to support analysis on the acceptance of these features, identification of relevant new feature requests and prioritization of feature development, among others. Traditional methods focus on syntactic pattern-based approaches, typically context-agnostic, evaluated on a closed set of apps, difficult to replicate and limited to a reduced set and domain of apps. Meanwhile, the pervasiveness of Large Language Models (LLMs) based on the Transformer architecture in software engineering tasks lays the groundwork for empirical evaluation of the performance of these models to support feature extraction. In this study, we present T-FREX, a Transformer-based, fully automatic approach for mobile app review feature extraction. First, we collect a set of ground truth features from users in a real crowdsourced software recommendation platform and transfer them automatically into a dataset of app reviews. Then, we use this newly created dataset to fine-tune multiple LLMs on a named entity recognition task under different data configurations. We assess the performance of T-FREX with respect to this ground truth, and we complement our analysis by comparing T-FREX with a baseline method from the field. Finally, we assess the quality of new features predicted by T-FREX through an external human evaluation. Results show that T-FREX outperforms on average the traditional syntactic-based method, especially when discovering new features from a domain for which the model has been fine-tuned.",
-        "subjects": [
-            "cs.SE"
-        ],
-        "comment": "Accepted at IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER 2024). 12 pages (including references), 5 figures, 4 tables"
-    },
-    {
         "paper id": "2401.03836",
         "abstract url": "https://arxiv.org/abs/2401.03836",
         "title": "WidthFormer: Toward Efficient Transformer-based BEV View Transformation",
@@ -4211,6 +4193,44 @@
         "comment": null
     },
     {
+        "paper id": "2401.04257",
+        "abstract url": "https://arxiv.org/abs/2401.04257",
+        "title": "Detecting Face Synthesis Using a Concealed Fusion Model",
+        "rating": "-2",
+        "keywords": [
+            [
+                "attacks"
+            ],
+            [
+                "biometrics"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Face image synthesis is gaining more attention in computer security due to concerns about its potential negative impacts, including those related to fake biometrics. Hence, building models that can detect the synthesized face images is an important challenge to tackle. In this paper, we propose a fusion-based strategy to detect face image synthesis while providing resiliency to several attacks. The proposed strategy uses a late fusion of the outputs computed by several undisclosed models by relying on random polynomial coefficients and exponents to conceal a new feature space. Unlike existing concealing solutions, our strategy requires no quantization, which helps to preserve the feature space. Our experiments reveal that our strategy achieves state-of-the-art performance while providing protection against poisoning, perturbation, backdoor, and reverse model attacks.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2401.04261",
+        "abstract url": "https://arxiv.org/abs/2401.04261",
+        "title": "A Statically and Dynamically Scalable Soft GPGPU",
+        "rating": "-2",
+        "keywords": [
+            [
+                "FPGAs"
+            ]
+        ],
+        "abstract": "Current soft processor architectures for FPGAs do not utilize the potential of the massive parallelism available. FPGAs now support many thousands of embedded floating point operators, and have similar computational densities to GPGPUs. Several soft GPGPU or SIMT processors have been published, but the reported large areas and modest Fmax makes their widespread use unlikely for commercial designs. In this paper we take an alternative approach, building the soft GPU microarchitecture around the FPGA resource mix available. We demonstrate a statically scalable soft GPGPU processor (where both parameters and feature set can be determined at configuration time) that always closes timing at the peak speed of the slowest embedded component in the FPGA (DSP or hard memory), with a completely unconstrained compile into a current Intel Agilex FPGA. We also show dynamic scalability, where a subset of the thread space can be specified on an instruction-by-instruction basis. For one example core type, we show a logic range -- depending on the configuration -- of 4k to 10k ALMs, along with 24 to 32 DSP Blocks, and 50 to 250 M20K memories. All of these instances close timing at 771 MHz, a performance level limited only by the DSP Blocks. We describe our methodology for reliably achieving this clock rate by matching the processor pipeline structure to the physical structure of the FPGA fabric. We also benchmark several algorithms across a range of data sizes, and compare to a commercial soft RISC processor.",
+        "subjects": [
+            "cs.AR"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2401.04302",
         "abstract url": "https://arxiv.org/abs/2401.04302",
         "title": "eSIM Technology in IoT Architecture",
@@ -4276,32 +4296,6 @@
             "q-bio.QM"
         ],
         "comment": "43 pages, 3 tables, 9 figures, supplementary figures and tables attached in latex code"
-    },
-    {
-        "paper id": "2401.06173",
-        "abstract url": "https://arxiv.org/abs/2401.06173",
-        "title": "Tree Search-Based Evolutionary Bandits for Protein Sequence Optimization",
-        "rating": "-2",
-        "keywords": [
-            [
-                "synthesizing"
-            ],
-            [
-                "biotechnologies"
-            ],
-            [
-                "cs.LG"
-            ],
-            [
-                "AAAI"
-            ]
-        ],
-        "abstract": "While modern biotechnologies allow synthesizing new proteins and function measurements at scale, efficiently exploring a protein sequence space and engineering it remains a daunting task due to the vast sequence space of any given protein. Protein engineering is typically conducted through an iterative process of adding mutations to the wild-type or lead sequences, recombination of mutations, and running new rounds of screening. To enhance the efficiency of such a process, we propose a tree search-based bandit learning method, which expands a tree starting from the initial sequence with the guidance of a bandit machine learning model. Under simplified assumptions and a Gaussian Process prior, we provide theoretical analysis and a Bayesian regret bound, demonstrating that the combination of local search and bandit learning method can efficiently discover a near-optimal design. The full algorithm is compatible with a suite of randomized tree search heuristics, machine learning models, pre-trained embeddings, and bandit techniques. We test various instances of the algorithm across benchmark protein datasets using simulated screens. Experiment results demonstrate that the algorithm is both sample-efficient and able to find top designs using reasonably small mutation counts.",
-        "subjects": [
-            "q-bio.BM",
-            "cs.LG"
-        ],
-        "comment": "AAAI 2024"
     },
     {
         "paper id": "2403.15390",
@@ -4529,8 +4523,7 @@
                 "depth"
             ],
             [
-                "GAN",
-                "Synthesis"
+                "GAN"
             ],
             [
                 "facial"
@@ -4545,6 +4538,30 @@
             "cs.GR"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2401.03792",
+        "abstract url": "https://arxiv.org/abs/2401.03792",
+        "title": "Monitoring water contaminants in coastal areas through ML algorithms leveraging atmospherically corrected Sentinel-2 data",
+        "rating": "-3",
+        "keywords": [
+            [
+                "health"
+            ],
+            [
+                "tabular"
+            ],
+            [
+                "cs.LG",
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Monitoring water contaminants is of paramount importance, ensuring public health and environmental well-being. Turbidity, a key parameter, poses a significant problem, affecting water quality. Its accurate assessment is crucial for safeguarding ecosystems and human consumption, demanding meticulous attention and action. For this, our study pioneers a novel approach to monitor the Turbidity contaminant, integrating CatBoost Machine Learning (ML) with high-resolution data from Sentinel-2 Level-2A. Traditional methods are labor-intensive while CatBoost offers an efficient solution, excelling in predictive accuracy. Leveraging atmospherically corrected Sentinel-2 data through the Google Earth Engine (GEE), our study contributes to scalable and precise Turbidity monitoring. A specific tabular dataset derived from Hong Kong contaminants monitoring stations enriches our study, providing region-specific insights. Results showcase the viability of this integrated approach, laying the foundation for adopting advanced techniques in global water quality management.",
+        "subjects": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "comment": "4 pages, 3 figures, IGARSS2024"
     },
     {
         "paper id": "2401.03878",
@@ -4649,31 +4666,6 @@
         "comment": "15 pages, 14 figures"
     },
     {
-        "paper id": "2401.04257",
-        "abstract url": "https://arxiv.org/abs/2401.04257",
-        "title": "Detecting Face Synthesis Using a Concealed Fusion Model",
-        "rating": "-3",
-        "keywords": [
-            [
-                "Synthesis"
-            ],
-            [
-                "attacks"
-            ],
-            [
-                "biometrics"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Face image synthesis is gaining more attention in computer security due to concerns about its potential negative impacts, including those related to fake biometrics. Hence, building models that can detect the synthesized face images is an important challenge to tackle. In this paper, we propose a fusion-based strategy to detect face image synthesis while providing resiliency to several attacks. The proposed strategy uses a late fusion of the outputs computed by several undisclosed models by relying on random polynomial coefficients and exponents to conceal a new feature space. Unlike existing concealing solutions, our strategy requires no quantization, which helps to preserve the feature space. Our experiments reveal that our strategy achieves state-of-the-art performance while providing protection against poisoning, perturbation, backdoor, and reverse model attacks.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2401.04268",
         "abstract url": "https://arxiv.org/abs/2401.04268",
         "title": "Design and Development of a Remotely-enabled Modular Release Mechanism for Autonomous Underwater Vehicles",
@@ -4764,6 +4756,25 @@
             "eess.IV"
         ],
         "comment": "11 pages, 5 figures, to be published in SPIE Medical Imaging 2024: Image Processing"
+    },
+    {
+        "paper id": "2401.03833",
+        "abstract url": "https://arxiv.org/abs/2401.03833",
+        "title": "T-FREX: A Transformer-based Feature Extraction Method from Mobile App Reviews",
+        "rating": "-4",
+        "keywords": [
+            [
+                "recommendation"
+            ],
+            [
+                "named entity recognition"
+            ]
+        ],
+        "abstract": "Mobile app reviews are a large-scale data source for software-related knowledge generation activities, including software maintenance, evolution and feedback analysis. Effective extraction of features (i.e., functionalities or characteristics) from these reviews is key to support analysis on the acceptance of these features, identification of relevant new feature requests and prioritization of feature development, among others. Traditional methods focus on syntactic pattern-based approaches, typically context-agnostic, evaluated on a closed set of apps, difficult to replicate and limited to a reduced set and domain of apps. Meanwhile, the pervasiveness of Large Language Models (LLMs) based on the Transformer architecture in software engineering tasks lays the groundwork for empirical evaluation of the performance of these models to support feature extraction. In this study, we present T-FREX, a Transformer-based, fully automatic approach for mobile app review feature extraction. First, we collect a set of ground truth features from users in a real crowdsourced software recommendation platform and transfer them automatically into a dataset of app reviews. Then, we use this newly created dataset to fine-tune multiple LLMs on a named entity recognition task under different data configurations. We assess the performance of T-FREX with respect to this ground truth, and we complement our analysis by comparing T-FREX with a baseline method from the field. Finally, we assess the quality of new features predicted by T-FREX through an external human evaluation. Results show that T-FREX outperforms on average the traditional syntactic-based method, especially when discovering new features from a domain for which the model has been fine-tuned.",
+        "subjects": [
+            "cs.SE"
+        ],
+        "comment": "Accepted at IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER 2024). 12 pages (including references), 5 figures, 4 tables"
     },
     {
         "paper id": "2401.03938",
@@ -5074,6 +5085,19 @@
         "comment": "12 pages, 7 figures, for supplemental materials: https://github.com/chasejstokes/role-text"
     },
     {
+        "paper id": "2401.04068",
+        "abstract url": "https://arxiv.org/abs/2401.04068",
+        "title": "IntervalMDP.jl: Accelerated Value Iteration for Interval Markov Decision Processes",
+        "rating": "-10",
+        "keywords": [],
+        "abstract": "In this paper, we present IntervalMDP.jl, a Julia package for probabilistic analysis of interval Markov Decision Processes (IMDPs). IntervalMDP.jl facilitates the synthesis of optimal strategies and verification of IMDPs against reachability specifications and discounted reward properties. The library supports sparse matrices and is compatible with data formats from common tools for the analysis of probabilistic models, such as PRISM. A key feature of IntervalMDP.jl is that it presents both a multi-threaded CPU and a GPU-accelerated implementation of value iteration algorithms for IMDPs. In particular, IntervalMDP.jl takes advantage of the Julia type system and the inherently parallelizable nature of value iteration to improve the efficiency of performing analysis of IMDPs. On a set of examples, we show that IntervalMDP.jl substantially outperforms existing tools for verification and strategy synthesis for IMDPs in both computation time and memory consumption.",
+        "subjects": [
+            "eess.SY",
+            "cs.LO"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2401.04098",
         "abstract url": "https://arxiv.org/abs/2401.04098",
         "title": "Modeling AoII in Push- and Pull-Based Sampling of Continuous Time Markov Chains",
@@ -5175,18 +5199,6 @@
         "abstract": "This paper investigates the rate-distortion function, under a squared error distortion $D$, for an $n$-dimensional random vector uniformly distributed on an $(n-1)$-sphere of radius $R$. First, an expression for the rate-distortion function is derived for any values of $n$, $D$, and $R$. Second, two types of asymptotics with respect to the rate-distortion function of a Gaussian source are characterized. More specifically, these asymptotics concern the low-distortion regime (that is, $D \\to 0$) and the high-dimensional regime (that is, $n \\to \\infty$).",
         "subjects": [
             "cs.IT"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2401.04261",
-        "abstract url": "https://arxiv.org/abs/2401.04261",
-        "title": "A Statically and Dynamically Scalable Soft GPGPU",
-        "rating": "-10",
-        "keywords": [],
-        "abstract": "Current soft processor architectures for FPGAs do not utilize the potential of the massive parallelism available. FPGAs now support many thousands of embedded floating point operators, and have similar computational densities to GPGPUs. Several soft GPGPU or SIMT processors have been published, but the reported large areas and modest Fmax makes their widespread use unlikely for commercial designs. In this paper we take an alternative approach, building the soft GPU microarchitecture around the FPGA resource mix available. We demonstrate a statically scalable soft GPGPU processor (where both parameters and feature set can be determined at configuration time) that always closes timing at the peak speed of the slowest embedded component in the FPGA (DSP or hard memory), with a completely unconstrained compile into a current Intel Agilex FPGA. We also show dynamic scalability, where a subset of the thread space can be specified on an instruction-by-instruction basis. For one example core type, we show a logic range -- depending on the configuration -- of 4k to 10k ALMs, along with 24 to 32 DSP Blocks, and 50 to 250 M20K memories. All of these instances close timing at 771 MHz, a performance level limited only by the DSP Blocks. We describe our methodology for reliably achieving this clock rate by matching the processor pipeline structure to the physical structure of the FPGA fabric. We also benchmark several algorithms across a range of data sizes, and compare to a commercial soft RISC processor.",
-        "subjects": [
-            "cs.AR"
         ],
         "comment": null
     },

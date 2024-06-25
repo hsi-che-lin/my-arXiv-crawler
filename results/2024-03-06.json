@@ -60,6 +60,44 @@
         "comment": "Accepted to CVPR 2024"
     },
     {
+        "paper id": "2403.03507",
+        "abstract url": "https://arxiv.org/abs/2403.03507",
+        "title": "GaLore: Memory-Efficient LLM Training by Gradient Low-Rank Projection",
+        "rating": "1.5",
+        "keywords": [
+            [
+                "Memory-Efficient"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Training Large Language Models (LLMs) presents significant memory challenges, predominantly due to the growing size of weights and optimizer states. Common memory-reduction approaches, such as low-rank adaptation (LoRA), add a trainable low-rank matrix to the frozen pre-trained weight in each layer, reducing trainable parameters and optimizer states. However, such approaches typically underperform training with full-rank weights in both pre-training and fine-tuning stages since they limit the parameter search to a low-rank subspace and alter the training dynamics, and further, may require full-rank warm start. In this work, we propose Gradient Low-Rank Projection (GaLore), a training strategy that allows full-parameter learning but is more memory-efficient than common low-rank adaptation methods such as LoRA. Our approach reduces memory usage by up to 65.5% in optimizer states while maintaining both efficiency and performance for pre-training on LLaMA 1B and 7B architectures with C4 dataset with up to 19.7B tokens, and on fine-tuning RoBERTa on GLUE tasks. Our 8-bit GaLore further reduces optimizer memory by up to 82.5% and total training memory by 63.3%, compared to a BF16 baseline. Notably, we demonstrate, for the first time, the feasibility of pre-training a 7B model on consumer GPUs with 24GB memory (e.g., NVIDIA RTX 4090) without model parallel, checkpointing, or offloading strategies.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2403.03662",
+        "abstract url": "https://arxiv.org/abs/2403.03662",
+        "title": "Harnessing Meta-Learning for Improving Full-Frame Video Stabilization",
+        "rating": "1.5",
+        "keywords": [
+            [
+                "cs.CV"
+            ],
+            [
+                "CVPR"
+            ]
+        ],
+        "abstract": "Video stabilization is a longstanding computer vision problem, particularly pixel-level synthesis solutions for video stabilization which synthesize full frames add to the complexity of this task. These techniques aim to stabilize videos by synthesizing full frames while enhancing the stability of the considered video. This intensifies the complexity of the task due to the distinct mix of unique motion profiles and visual content present in each video sequence, making robust generalization with fixed parameters difficult. In our study, we introduce a novel approach to enhance the performance of pixel-level synthesis solutions for video stabilization by adapting these models to individual input video sequences. The proposed adaptation exploits low-level visual cues accessible during test-time to improve both the stability and quality of resulting videos. We highlight the efficacy of our methodology of \"test-time adaptation\" through simple fine-tuning of one of these models, followed by significant stability gain via the integration of meta-learning techniques. Notably, significant improvement is achieved with only a single adaptation step. The versatility of the proposed algorithm is demonstrated by consistently improving the performance of various pixel-level synthesis models for video stabilization in real-world scenarios.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "CVPR 2024, Code will be made availble on: http://github.com/MKashifAli/MetaVideoStab"
+    },
+    {
         "paper id": "2403.03728",
         "abstract url": "https://arxiv.org/abs/2403.03728",
         "title": "Bridging Diversity and Uncertainty in Active learning with Self-Supervised Pre-Training",
@@ -104,28 +142,6 @@
             "cs.CV"
         ],
         "comment": "Accepted at ICLR 2024 Workshop on Practical Machine Learning for Low Resource Settings (PML4LRS)"
-    },
-    {
-        "paper id": "2403.03949",
-        "abstract url": "https://arxiv.org/abs/2403.03949",
-        "title": "Reconciling Reality through Simulation: A Real-to-Sim-to-Real Approach for Robust Manipulation",
-        "rating": "1.5",
-        "keywords": [
-            [
-                "efficient fine-tuning"
-            ],
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Imitation learning methods need significant human supervision to learn policies robust to changes in object poses, physical disturbances, and visual distractors. Reinforcement learning, on the other hand, can explore the environment autonomously to learn robust behaviors but may require impractical amounts of unsafe real-world data collection. To learn performant, robust policies without the burden of unsafe real-world data collection or extensive human supervision, we propose RialTo, a system for robustifying real-world imitation learning policies via reinforcement learning in \"digital twin\" simulation environments constructed on the fly from small amounts of real-world data. To enable this real-to-sim-to-real pipeline, RialTo proposes an easy-to-use interface for quickly scanning and constructing digital twins of real-world environments. We also introduce a novel \"inverse distillation\" procedure for bringing real-world demonstrations into simulated environments for efficient fine-tuning, with minimal human intervention and engineering required. We evaluate RialTo across a variety of robotic manipulation problems in the real world, such as robustly stacking dishes on a rack, placing books on a shelf, and six other tasks. RialTo increases (over 67%) in policy robustness without requiring extensive human data collection. Project website and videos at https://real-to-sim-to-real.github.io/RialTo/",
-        "subjects": [
-            "cs.RO",
-            "cs.AI",
-            "cs.LG"
-        ],
-        "comment": "Project page: https://real-to-sim-to-real.github.io/RialTo/"
     },
     {
         "paper id": "2403.04149",
@@ -1568,22 +1584,6 @@
         "comment": "The paper consists of 30 pages, 37 figures, 5 tables"
     },
     {
-        "paper id": "2403.03507",
-        "abstract url": "https://arxiv.org/abs/2403.03507",
-        "title": "GaLore: Memory-Efficient LLM Training by Gradient Low-Rank Projection",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Training Large Language Models (LLMs) presents significant memory challenges, predominantly due to the growing size of weights and optimizer states. Common memory-reduction approaches, such as low-rank adaptation (LoRA), add a trainable low-rank matrix to the frozen pre-trained weight in each layer, reducing trainable parameters and optimizer states. However, such approaches typically underperform training with full-rank weights in both pre-training and fine-tuning stages since they limit the parameter search to a low-rank subspace and alter the training dynamics, and further, may require full-rank warm start. In this work, we propose Gradient Low-Rank Projection (GaLore), a training strategy that allows full-parameter learning but is more memory-efficient than common low-rank adaptation methods such as LoRA. Our approach reduces memory usage by up to 65.5% in optimizer states while maintaining both efficiency and performance for pre-training on LLaMA 1B and 7B architectures with C4 dataset with up to 19.7B tokens, and on fine-tuning RoBERTa on GLUE tasks. Our 8-bit GaLore further reduces optimizer memory by up to 82.5% and total training memory by 63.3%, compared to a BF16 baseline. Notably, we demonstrate, for the first time, the feasibility of pre-training a 7B model on consumer GPUs with 24GB memory (e.g., NVIDIA RTX 4090) without model parallel, checkpointing, or offloading strategies.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2403.03525",
         "abstract url": "https://arxiv.org/abs/2403.03525",
         "title": "Exploratory Factory Analysis of the Centrality Metrics for Complex Real-World Networks",
@@ -1751,6 +1751,35 @@
         "comment": null
     },
     {
+        "paper id": "2403.03608",
+        "abstract url": "https://arxiv.org/abs/2403.03608",
+        "title": "GSNeRF: Generalizable Semantic Neural Radiance Fields with Enhanced 3D Scene Understanding",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "3D",
+                "Depth",
+                "NeRF",
+                "Radiance Fields"
+            ],
+            [
+                "cs.AI",
+                "cs.LG",
+                "cs.CV"
+            ],
+            [
+                "CVPR"
+            ]
+        ],
+        "abstract": "Utilizing multi-view inputs to synthesize novel-view images, Neural Radiance Fields (NeRF) have emerged as a popular research topic in 3D vision. In this work, we introduce a Generalizable Semantic Neural Radiance Field (GSNeRF), which uniquely takes image semantics into the synthesis process so that both novel view images and the associated semantic maps can be produced for unseen scenes. Our GSNeRF is composed of two stages: Semantic Geo-Reasoning and Depth-Guided Visual rendering. The former is able to observe multi-view image inputs to extract semantic and geometry features from a scene. Guided by the resulting image geometry information, the latter performs both image and semantic rendering with improved performances. Our experiments not only confirm that GSNeRF performs favorably against prior works on both novel-view image and semantic segmentation synthesis but the effectiveness of our sampling strategy for visual rendering is further verified.",
+        "subjects": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "comment": "Accepted by CVPR2024"
+    },
+    {
         "paper id": "2403.03636",
         "abstract url": "https://arxiv.org/abs/2403.03636",
         "title": "SheetAgent: A Generalist Agent for Spreadsheet Reasoning and Manipulation via Large Language Models",
@@ -1767,28 +1796,6 @@
             "cs.LG"
         ],
         "comment": "24 pages, 14 figures"
-    },
-    {
-        "paper id": "2403.03662",
-        "abstract url": "https://arxiv.org/abs/2403.03662",
-        "title": "Harnessing Meta-Learning for Improving Full-Frame Video Stabilization",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ],
-            [
-                "CVPR"
-            ]
-        ],
-        "abstract": "Video stabilization is a longstanding computer vision problem, particularly pixel-level synthesis solutions for video stabilization which synthesize full frames add to the complexity of this task. These techniques aim to stabilize videos by synthesizing full frames while enhancing the stability of the considered video. This intensifies the complexity of the task due to the distinct mix of unique motion profiles and visual content present in each video sequence, making robust generalization with fixed parameters difficult. In our study, we introduce a novel approach to enhance the performance of pixel-level synthesis solutions for video stabilization by adapting these models to individual input video sequences. The proposed adaptation exploits low-level visual cues accessible during test-time to improve both the stability and quality of resulting videos. We highlight the efficacy of our methodology of \"test-time adaptation\" through simple fine-tuning of one of these models, followed by significant stability gain via the integration of meta-learning techniques. Notably, significant improvement is achieved with only a single adaptation step. The versatility of the proposed algorithm is demonstrated by consistently improving the performance of various pixel-level synthesis models for video stabilization in real-world scenarios.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "CVPR 2024, Code will be made availble on: http://github.com/MKashifAli/MetaVideoStab"
     },
     {
         "paper id": "2403.03695",
@@ -1809,6 +1816,25 @@
             "math.ST"
         ],
         "comment": "26 pages, 2 figures"
+    },
+    {
+        "paper id": "2403.03698",
+        "abstract url": "https://arxiv.org/abs/2403.03698",
+        "title": "Towards Controllable Time Series Generation",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Time Series Generation (TSG) has emerged as a pivotal technique in synthesizing data that accurately mirrors real-world time series, becoming indispensable in numerous applications. Despite significant advancements in TSG, its efficacy frequently hinges on having large training datasets. This dependency presents a substantial challenge in data-scarce scenarios, especially when dealing with rare or unique conditions. To confront these challenges, we explore a new problem of Controllable Time Series Generation (CTSG), aiming to produce synthetic time series that can adapt to various external conditions, thereby tackling the data scarcity issue. In this paper, we propose \\textbf{C}ontrollable \\textbf{T}ime \\textbf{S}eries (\\textsf{CTS}), an innovative VAE-agnostic framework tailored for CTSG. A key feature of \\textsf{CTS} is that it decouples the mapping process from standard VAE training, enabling precise learning of a complex interplay between latent features and external conditions. Moreover, we develop a comprehensive evaluation scheme for CTSG. Extensive experiments across three real-world time series datasets showcase \\textsf{CTS}'s exceptional capabilities in generating high-quality, controllable outputs. This underscores its adeptness in seamlessly integrating latent features with external conditions. Extending \\textsf{CTS} to the image domain highlights its remarkable potential for explainability and further reinforces its versatility across different modalities.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI",
+            "cs.DB"
+        ],
+        "comment": "14 pages, 13 figures, and 5 tables"
     },
     {
         "paper id": "2403.03771",
@@ -2016,23 +2042,45 @@
         "comment": "This paper has not been peer reviewed yet"
     },
     {
-        "paper id": "2403.03950",
-        "abstract url": "https://arxiv.org/abs/2403.03950",
-        "title": "Stop Regressing: Training Value Functions via Classification for Scalable Deep RL",
+        "paper id": "2403.03949",
+        "abstract url": "https://arxiv.org/abs/2403.03949",
+        "title": "Reconciling Reality through Simulation: A Real-to-Sim-to-Real Approach for Robust Manipulation",
         "rating": "0.5",
         "keywords": [
+            [
+                "efficient fine-tuning"
+            ],
+            [
+                "robotic manipulation"
+            ],
             [
                 "cs.AI",
                 "cs.LG"
             ]
         ],
-        "abstract": "Value functions are a central component of deep reinforcement learning (RL). These functions, parameterized by neural networks, are trained using a mean squared error regression objective to match bootstrapped target values. However, scaling value-based RL methods that use regression to large networks, such as high-capacity Transformers, has proven challenging. This difficulty is in stark contrast to supervised learning: by leveraging a cross-entropy classification loss, supervised methods have scaled reliably to massive networks. Observing this discrepancy, in this paper, we investigate whether the scalability of deep RL can also be improved simply by using classification in place of regression for training value functions. We demonstrate that value functions trained with categorical cross-entropy significantly improves performance and scalability in a variety of domains. These include: single-task RL on Atari 2600 games with SoftMoEs, multi-task RL on Atari with large-scale ResNets, robotic manipulation with Q-transformers, playing Chess without search, and a language-agent Wordle task with high-capacity Transformers, achieving state-of-the-art results on these domains. Through careful analysis, we show that the benefits of categorical cross-entropy primarily stem from its ability to mitigate issues inherent to value-based RL, such as noisy targets and non-stationarity. Overall, we argue that a simple shift to training value functions with categorical cross-entropy can yield substantial improvements in the scalability of deep RL at little-to-no cost.",
+        "abstract": "Imitation learning methods need significant human supervision to learn policies robust to changes in object poses, physical disturbances, and visual distractors. Reinforcement learning, on the other hand, can explore the environment autonomously to learn robust behaviors but may require impractical amounts of unsafe real-world data collection. To learn performant, robust policies without the burden of unsafe real-world data collection or extensive human supervision, we propose RialTo, a system for robustifying real-world imitation learning policies via reinforcement learning in \"digital twin\" simulation environments constructed on the fly from small amounts of real-world data. To enable this real-to-sim-to-real pipeline, RialTo proposes an easy-to-use interface for quickly scanning and constructing digital twins of real-world environments. We also introduce a novel \"inverse distillation\" procedure for bringing real-world demonstrations into simulated environments for efficient fine-tuning, with minimal human intervention and engineering required. We evaluate RialTo across a variety of robotic manipulation problems in the real world, such as robustly stacking dishes on a rack, placing books on a shelf, and six other tasks. RialTo increases (over 67%) in policy robustness without requiring extensive human data collection. Project website and videos at https://real-to-sim-to-real.github.io/RialTo/",
         "subjects": [
-            "cs.LG",
+            "cs.RO",
             "cs.AI",
-            "stat.ML"
+            "cs.LG"
         ],
-        "comment": null
+        "comment": "Project page: https://real-to-sim-to-real.github.io/RialTo/"
+    },
+    {
+        "paper id": "2403.03997",
+        "abstract url": "https://arxiv.org/abs/2403.03997",
+        "title": "Guiding Enumerative Program Synthesis with Large Language Models",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "Pre-trained Large Language Models (LLMs) are beginning to dominate the discourse around automatic code generation with natural language specifications. In contrast, the best-performing synthesizers in the domain of formal synthesis with precise logical specifications are still based on enumerative algorithms. In this paper, we evaluate the abilities of LLMs to solve formal synthesis benchmarks by carefully crafting a library of prompts for the domain. When one-shot synthesis fails, we propose a novel enumerative synthesis algorithm, which integrates calls to an LLM into a weighted probabilistic search. This allows the synthesizer to provide the LLM with information about the progress of the enumerator, and the LLM to provide the enumerator with syntactic guidance in an iterative loop. We evaluate our techniques on benchmarks from the Syntax-Guided Synthesis (SyGuS) competition. We find that GPT-3.5 as a stand-alone tool for formal synthesis is easily outperformed by state-of-the-art formal synthesis algorithms, but our approach integrating the LLM into an enumerative synthesis algorithm shows significant performance gains over both the LLM and the enumerative synthesizer alone and the winning SyGuS competition tool.",
+        "subjects": [
+            "cs.AI"
+        ],
+        "comment": "27 pages"
     },
     {
         "paper id": "2403.04005",
@@ -2496,23 +2544,6 @@
         "comment": null
     },
     {
-        "paper id": "2403.05592",
-        "abstract url": "https://arxiv.org/abs/2403.05592",
-        "title": "Eternal Sunshine of the Mechanical Mind: The Irreconcilability of Machine Learning and the Right to be Forgotten",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "As we keep rapidly advancing toward an era where artificial intelligence is a constant and normative experience for most of us, we must also be aware of what this vision and this progress entail. By first approximating neural connections and activities in computer circuits and then creating more and more sophisticated versions of this crude approximation, we are now facing an age to come where modern deep learning-based artificial intelligence systems can rightly be called thinking machines, and they are sometimes even lauded for their emergent behavior and black-box approaches. But as we create more powerful electronic brains, with billions of neural connections and parameters, can we guarantee that these mammoths built of artificial neurons will be able to forget the data that we store in them? If they are at some level like a brain, can the right to be forgotten still be protected while dealing with these AIs? The essential gap between machine learning and the RTBF is explored in this article, with a premonition of far-reaching conclusions if the gap is not bridged or reconciled any time soon. The core argument is that deep learning models, due to their structure and size, cannot be expected to forget or delete a data as it would be expected from a tabular database, and they should be treated more like a mechanical brain, albeit still in development.",
-        "subjects": [
-            "cs.GL",
-            "cs.AI"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2403.15413",
         "abstract url": "https://arxiv.org/abs/2403.15413",
         "title": "Playing With Neuroscience: Past, Present and Future of Neuroimaging and Games",
@@ -2536,8 +2567,7 @@
         "rating": "0",
         "keywords": [
             [
-                "Diffusion",
-                "Synthesis"
+                "Diffusion"
             ],
             [
                 "cs.CV"
@@ -2726,6 +2756,30 @@
         "comment": "19 pages, 2 figures"
     },
     {
+        "paper id": "2403.04114",
+        "abstract url": "https://arxiv.org/abs/2403.04114",
+        "title": "Closing the Visual Sim-to-Real Gap with Object-Composable NeRFs",
+        "rating": "0",
+        "keywords": [
+            [
+                "3D",
+                "depth",
+                "NeRF"
+            ],
+            [
+                "cs.LG",
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Deep learning methods for perception are the cornerstone of many robotic systems. Despite their potential for impressive performance, obtaining real-world training data is expensive, and can be impractically difficult for some tasks. Sim-to-real transfer with domain randomization offers a potential workaround, but often requires extensive manual tuning and results in models that are brittle to distribution shift between sim and real. In this work, we introduce Composable Object Volume NeRF (COV-NeRF), an object-composable NeRF model that is the centerpiece of a real-to-sim pipeline for synthesizing training data targeted to scenes and objects from the real world. COV-NeRF extracts objects from real images and composes them into new scenes, generating photorealistic renderings and many types of 2D and 3D supervision, including depth maps, segmentation masks, and meshes. We show that COV-NeRF matches the rendering quality of modern NeRF methods, and can be used to rapidly close the sim-to-real gap across a variety of perceptual modalities.",
+        "subjects": [
+            "cs.RO",
+            "cs.CV",
+            "cs.LG"
+        ],
+        "comment": "ICRA 2024"
+    },
+    {
         "paper id": "2403.04133",
         "abstract url": "https://arxiv.org/abs/2403.04133",
         "title": "Towards learning-based planning:The nuPlan benchmark for real-world autonomous driving",
@@ -2752,7 +2806,8 @@
         "rating": "0",
         "keywords": [
             [
-                "Infrared"
+                "Infrared",
+                "Re-Identification"
             ],
             [
                 "cs.CV"
@@ -2781,27 +2836,6 @@
         "subjects": [
             "cs.RO",
             "cs.CV"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2405.02295",
-        "abstract url": "https://arxiv.org/abs/2405.02295",
-        "title": "Neural Additive Image Model: Interpretation through Interpolation",
-        "rating": "0",
-        "keywords": [
-            [
-                "Diffusion"
-            ],
-            [
-                "cs.LG",
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Understanding how images influence the world, interpreting which effects their semantics have on various quantities and exploring the reasons behind changes in image-based predictions are highly difficult yet extremely interesting problems. By adopting a holistic modeling approach utilizing Neural Additive Models in combination with Diffusion Autoencoders, we can effectively identify the latent hidden semantics of image effects and achieve full intelligibility of additional tabular effects. Our approach offers a high degree of flexibility, empowering us to comprehensively explore the impact of various image characteristics. We demonstrate that the proposed method can precisely identify complex image effects in an ablation study. To further showcase the practical applicability of our proposed model, we conduct a case study in which we investigate how the distinctive features and attributes captured within host images exert influence on the pricing of Airbnb rentals.",
-        "subjects": [
-            "cs.CV",
-            "cs.LG"
         ],
         "comment": null
     },
@@ -2958,38 +2992,6 @@
         "comment": null
     },
     {
-        "paper id": "2403.03608",
-        "abstract url": "https://arxiv.org/abs/2403.03608",
-        "title": "GSNeRF: Generalizable Semantic Neural Radiance Fields with Enhanced 3D Scene Understanding",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "3D",
-                "Depth",
-                "NeRF",
-                "Radiance Fields"
-            ],
-            [
-                "synthesize"
-            ],
-            [
-                "cs.AI",
-                "cs.LG",
-                "cs.CV"
-            ],
-            [
-                "CVPR"
-            ]
-        ],
-        "abstract": "Utilizing multi-view inputs to synthesize novel-view images, Neural Radiance Fields (NeRF) have emerged as a popular research topic in 3D vision. In this work, we introduce a Generalizable Semantic Neural Radiance Field (GSNeRF), which uniquely takes image semantics into the synthesis process so that both novel view images and the associated semantic maps can be produced for unseen scenes. Our GSNeRF is composed of two stages: Semantic Geo-Reasoning and Depth-Guided Visual rendering. The former is able to observe multi-view image inputs to extract semantic and geometry features from a scene. Guided by the resulting image geometry information, the latter performs both image and semantic rendering with improved performances. Our experiments not only confirm that GSNeRF performs favorably against prior works on both novel-view image and semantic segmentation synthesis but the effectiveness of our sampling strategy for visual rendering is further verified.",
-        "subjects": [
-            "cs.CV",
-            "cs.AI",
-            "cs.LG"
-        ],
-        "comment": "Accepted by CVPR2024"
-    },
-    {
         "paper id": "2403.03643",
         "abstract url": "https://arxiv.org/abs/2403.03643",
         "title": "A Survey on Applications of Reinforcement Learning in Spatial Resource Allocation",
@@ -3126,28 +3128,6 @@
             "cs.LG"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2403.03698",
-        "abstract url": "https://arxiv.org/abs/2403.03698",
-        "title": "Towards Controllable Time Series Generation",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "synthesizing"
-            ],
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Time Series Generation (TSG) has emerged as a pivotal technique in synthesizing data that accurately mirrors real-world time series, becoming indispensable in numerous applications. Despite significant advancements in TSG, its efficacy frequently hinges on having large training datasets. This dependency presents a substantial challenge in data-scarce scenarios, especially when dealing with rare or unique conditions. To confront these challenges, we explore a new problem of Controllable Time Series Generation (CTSG), aiming to produce synthetic time series that can adapt to various external conditions, thereby tackling the data scarcity issue. In this paper, we propose \\textbf{C}ontrollable \\textbf{T}ime \\textbf{S}eries (\\textsf{CTS}), an innovative VAE-agnostic framework tailored for CTSG. A key feature of \\textsf{CTS} is that it decouples the mapping process from standard VAE training, enabling precise learning of a complex interplay between latent features and external conditions. Moreover, we develop a comprehensive evaluation scheme for CTSG. Extensive experiments across three real-world time series datasets showcase \\textsf{CTS}'s exceptional capabilities in generating high-quality, controllable outputs. This underscores its adeptness in seamlessly integrating latent features with external conditions. Extending \\textsf{CTS} to the image domain highlights its remarkable potential for explainability and further reinforces its versatility across different modalities.",
-        "subjects": [
-            "cs.LG",
-            "cs.AI",
-            "cs.DB"
-        ],
-        "comment": "14 pages, 13 figures, and 5 tables"
     },
     {
         "paper id": "2403.03699",
@@ -3348,7 +3328,8 @@
                 "Diffusion"
             ],
             [
-                "robot"
+                "robot",
+                "Robotic Manipulation"
             ],
             [
                 "cs.AI",
@@ -3388,6 +3369,28 @@
         "comment": null
     },
     {
+        "paper id": "2403.03950",
+        "abstract url": "https://arxiv.org/abs/2403.03950",
+        "title": "Stop Regressing: Training Value Functions via Classification for Scalable Deep RL",
+        "rating": "-0.5",
+        "keywords": [
+            [
+                "robotic manipulation"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Value functions are a central component of deep reinforcement learning (RL). These functions, parameterized by neural networks, are trained using a mean squared error regression objective to match bootstrapped target values. However, scaling value-based RL methods that use regression to large networks, such as high-capacity Transformers, has proven challenging. This difficulty is in stark contrast to supervised learning: by leveraging a cross-entropy classification loss, supervised methods have scaled reliably to massive networks. Observing this discrepancy, in this paper, we investigate whether the scalability of deep RL can also be improved simply by using classification in place of regression for training value functions. We demonstrate that value functions trained with categorical cross-entropy significantly improves performance and scalability in a variety of domains. These include: single-task RL on Atari 2600 games with SoftMoEs, multi-task RL on Atari with large-scale ResNets, robotic manipulation with Q-transformers, playing Chess without search, and a language-agent Wordle task with high-capacity Transformers, achieving state-of-the-art results on these domains. Through careful analysis, we show that the benefits of categorical cross-entropy primarily stem from its ability to mitigate issues inherent to value-based RL, such as noisy targets and non-stationarity. Overall, we argue that a simple shift to training value functions with categorical cross-entropy can yield substantial improvements in the scalability of deep RL at little-to-no cost.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI",
+            "stat.ML"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2403.03967",
         "abstract url": "https://arxiv.org/abs/2403.03967",
         "title": "Effect of Ambient-Intrinsic Dimension Gap on Adversarial Vulnerability",
@@ -3407,25 +3410,6 @@
             "stat.ML"
         ],
         "comment": "AISTATS 2024"
-    },
-    {
-        "paper id": "2403.03997",
-        "abstract url": "https://arxiv.org/abs/2403.03997",
-        "title": "Guiding Enumerative Program Synthesis with Large Language Models",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "Synthesis"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "Pre-trained Large Language Models (LLMs) are beginning to dominate the discourse around automatic code generation with natural language specifications. In contrast, the best-performing synthesizers in the domain of formal synthesis with precise logical specifications are still based on enumerative algorithms. In this paper, we evaluate the abilities of LLMs to solve formal synthesis benchmarks by carefully crafting a library of prompts for the domain. When one-shot synthesis fails, we propose a novel enumerative synthesis algorithm, which integrates calls to an LLM into a weighted probabilistic search. This allows the synthesizer to provide the LLM with information about the progress of the enumerator, and the LLM to provide the enumerator with syntactic guidance in an iterative loop. We evaluate our techniques on benchmarks from the Syntax-Guided Synthesis (SyGuS) competition. We find that GPT-3.5 as a stand-alone tool for formal synthesis is easily outperformed by state-of-the-art formal synthesis algorithms, but our approach integrating the LLM into an enumerative synthesis algorithm shows significant performance gains over both the LLM and the enumerative synthesizer alone and the winning SyGuS competition tool.",
-        "subjects": [
-            "cs.AI"
-        ],
-        "comment": "27 pages"
     },
     {
         "paper id": "2403.04001",
@@ -3457,7 +3441,6 @@
         "keywords": [
             [
                 "Diffusion",
-                "synthesizing",
                 "inpainting",
                 "Text-to-Image"
             ],
@@ -3741,6 +3724,23 @@
         "abstract": "We explore the $\\textit{average-case deterministic query complexity}$ of boolean functions under the $\\textit{uniform distribution}$, denoted by $\\mathrm{D}_\\mathrm{ave}(f)$, the minimum average depth of zero-error decision tree computing a boolean function $f$. This measure found several applications across diverse fields. We study $\\mathrm{D}_\\mathrm{ave}(f)$ of several common functions, including penalty shoot-out functions, symmetric functions, linear threshold functions and tribes functions. Let $\\mathrm{wt}(f)$ denote the number of the inputs on which $f$ outputs $1$. We prove that $\\mathrm{D}_\\mathrm{ave}(f) \\le \\log \\frac{\\mathrm{wt}(f)}{\\log n} + O\\left(\\log \\log \\frac{\\mathrm{wt}(f)}{\\log n}\\right)$ when $\\mathrm{wt}(f) \\ge 4 \\log n$ (otherwise, $\\mathrm{D}_\\mathrm{ave}(f) = O(1)$), and that for almost all fixed-weight functions, $\\mathrm{D}_\\mathrm{ave}(f) \\geq \\log \\frac{\\mathrm{wt}(f)}{\\log n} - O\\left( \\log \\log \\frac{\\mathrm{wt}(f)}{\\log n}\\right)$, which implies the tightness of the upper bound up to an additive logarithmic term. We also study $\\mathrm{D}_\\mathrm{ave}(f)$ of circuits. Using H\u00e5stad's switching lemma or Rossman's switching lemma [Comput. Complexity Conf. 137, 2019], one can derive upper bounds $\\mathrm{D}_\\mathrm{ave}(f) \\leq n\\left(1 - \\frac{1}{O(k)}\\right)$ for width-$k$ CNFs/DNFs and $\\mathrm{D}_\\mathrm{ave}(f) \\leq n\\left(1 - \\frac{1}{O(\\log s)}\\right)$ for size-$s$ CNFs/DNFs, respectively. For any $w \\ge 1.1 \\log n$, we prove the existence of some width-$w$ size-$(2^w/w)$ DNF formula with $\\mathrm{D}_\\mathrm{ave} (f) = n \\left(1 - \\frac{\\log n}{\u0398(w)}\\right)$, providing evidence on the tightness of the switching lemmas.",
         "subjects": [
             "cs.CC"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2403.03541",
+        "abstract url": "https://arxiv.org/abs/2403.03541",
+        "title": "Seamless Virtual Reality with Integrated Synchronizer and Synthesizer for Autonomous Driving",
+        "rating": "-1",
+        "keywords": [
+            [
+                "Autonomous Driving",
+                "lidar"
+            ]
+        ],
+        "abstract": "Virtual reality (VR) is a promising data engine for autonomous driving (AD). However, data fidelity in this paradigm is often degraded by VR inconsistency, for which the existing VR approaches become ineffective, as they ignore the inter-dependency between low-level VR synchronizer designs (i.e., data collector) and high-level VR synthesizer designs (i.e., data processor). This paper presents a seamless virtual reality SVR platform for AD, which mitigates such inconsistency, enabling VR agents to interact with each other in a shared symbiotic world. The crux to SVR is an integrated synchronizer and synthesizer IS2 design, which consists of a drift-aware lidar-inertial synchronizer for VR colocation and a motion-aware deep visual synthesis network for augmented reality image generation. We implement SVR on car-like robots in two sandbox platforms, achieving a cm-level VR colocalization accuracy and 3.2% VR image deviation, thereby avoiding missed collisions or model clippings. Experiments show that the proposed SVR reduces the intervention times, missed turns, and failure rates compared to other benchmarks. The SVR-trained neural network can handle unseen situations in real-world environments, by leveraging its knowledge learnt from the VR space.",
+        "subjects": [
+            "cs.RO"
         ],
         "comment": null
     },
@@ -4386,22 +4386,6 @@
         "comment": null
     },
     {
-        "paper id": "2403.03995",
-        "abstract url": "https://arxiv.org/abs/2403.03995",
-        "title": "Cafe-Mpc: A Cascaded-Fidelity Model Predictive Control Framework with Tuning-Free Whole-Body Control",
-        "rating": "-1",
-        "keywords": [
-            [
-                "synthesis"
-            ]
-        ],
-        "abstract": "This work introduces an optimization-based locomotion control framework for on-the-fly synthesis of complex dynamic maneuvers. At the core of the proposed framework is a cascaded-fidelity model predictive controller (Cafe-Mpc). Cafe-Mpc strategically relaxes the planning problem along the prediction horizon (i.e., with descending model fidelity, increasingly coarse time steps, and relaxed constraints) for computational and performance gains. This problem is numerically solved with an efficient customized multiple-shooting iLQR (MS-iLQR) solver that is tailored for hybrid systems. The action-value function from Cafe-Mpc is then used as the basis for a new value-function-based whole-body control (VWBC) technique that avoids additional tuning for the WBC. In this respect, the proposed framework unifies whole-body MPC and more conventional whole-body quadratic programming (QP), which have been treated as separate components in previous works. We study the effects of the cascaded relaxations in Cafe-Mpc on the tracking performance and required computation time. We also show that the Cafe-Mpc, if configured appropriately, advances the performance of whole-body MPC without necessarily increasing computational cost. Further, we show the superior performance of the proposed VWBC over the Riccati feedback controller in terms of constraint handling. The proposed framework enables accomplishing for the first time gymnastic-style running barrel rolls on the MIT Mini Cheetah. Video: https://youtu.be/YiNqrgj9mb8.",
-        "subjects": [
-            "cs.RO"
-        ],
-        "comment": "submitted to IEEE Transactions on Robotics. 20 pages, 18 figures"
-    },
-    {
         "paper id": "2403.04009",
         "abstract url": "https://arxiv.org/abs/2403.04009",
         "title": "Media Bias Matters: Understanding the Impact of Politically Biased News on Vaccine Attitudes in Social Media",
@@ -4584,33 +4568,6 @@
             "cs.CV"
         ],
         "comment": "Published at IEEE European Control Conference 2024"
-    },
-    {
-        "paper id": "2403.04114",
-        "abstract url": "https://arxiv.org/abs/2403.04114",
-        "title": "Closing the Visual Sim-to-Real Gap with Object-Composable NeRFs",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D",
-                "depth",
-                "NeRF"
-            ],
-            [
-                "synthesizing"
-            ],
-            [
-                "cs.LG",
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Deep learning methods for perception are the cornerstone of many robotic systems. Despite their potential for impressive performance, obtaining real-world training data is expensive, and can be impractically difficult for some tasks. Sim-to-real transfer with domain randomization offers a potential workaround, but often requires extensive manual tuning and results in models that are brittle to distribution shift between sim and real. In this work, we introduce Composable Object Volume NeRF (COV-NeRF), an object-composable NeRF model that is the centerpiece of a real-to-sim pipeline for synthesizing training data targeted to scenes and objects from the real world. COV-NeRF extracts objects from real images and composes them into new scenes, generating photorealistic renderings and many types of 2D and 3D supervision, including depth maps, segmentation masks, and meshes. We show that COV-NeRF matches the rendering quality of modern NeRF methods, and can be used to rapidly close the sim-to-real gap across a variety of perceptual modalities.",
-        "subjects": [
-            "cs.RO",
-            "cs.CV",
-            "cs.LG"
-        ],
-        "comment": "ICRA 2024"
     },
     {
         "paper id": "2403.04115",
@@ -4843,6 +4800,22 @@
             "cs.CV"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2403.04205",
+        "abstract url": "https://arxiv.org/abs/2403.04205",
+        "title": "OGMP: Oracle Guided Multimodal Policies for Agile and Versatile Robot Control",
+        "rating": "-1",
+        "keywords": [
+            [
+                "Robot"
+            ]
+        ],
+        "abstract": "Amidst task-specific learning-based control synthesis frameworks that achieve impressive empirical results, a unified framework that systematically constructs an optimal policy for sufficiently solving a general notion of a task is absent. Hence, we propose a theoretical framework for a task-centered control synthesis leveraging two critical ideas: 1) oracle-guided policy optimization for the non-limiting integration of sub-optimal task-based priors to guide the policy optimization and 2) task-vital multimodality to break down solving a task into executing a sequence of behavioral modes. The proposed approach results in highly agile parkour and diving on a 16-DoF dynamic bipedal robot. The obtained policy advances indefinitely on a track, performing leaps and jumps of varying lengths and heights for the parkour task. Corresponding to the dive task, the policy demonstrates front, back, and side flips from various initial heights. Finally, we introduce a novel latent mode space reachability analysis to study our policies' versatility and generalization by computing a feasible mode set function through which we certify a set of failure-free modes for our policy to perform at any given state.",
+        "subjects": [
+            "cs.RO"
+        ],
+        "comment": "10 pages, 9 figures"
     },
     {
         "paper id": "2403.04808",
@@ -5307,6 +5280,34 @@
         "comment": null
     },
     {
+        "paper id": "2403.03896",
+        "abstract url": "https://arxiv.org/abs/2403.03896",
+        "title": "DART: Implicit Doppler Tomography for Radar Novel View Synthesis",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "lidar",
+                "Radar"
+            ],
+            [
+                "physics"
+            ],
+            [
+                "cs.LG",
+                "cs.CV"
+            ],
+            [
+                "CVPR"
+            ]
+        ],
+        "abstract": "Simulation is an invaluable tool for radio-frequency system designers that enables rapid prototyping of various algorithms for imaging, target detection, classification, and tracking. However, simulating realistic radar scans is a challenging task that requires an accurate model of the scene, radio frequency material properties, and a corresponding radar synthesis function. Rather than specifying these models explicitly, we propose DART - Doppler Aided Radar Tomography, a Neural Radiance Field-inspired method which uses radar-specific physics to create a reflectance and transmittance-based rendering pipeline for range-Doppler images. We then evaluate DART by constructing a custom data collection platform and collecting a novel radar dataset together with accurate position and instantaneous velocity measurements from lidar-based localization. In comparison to state-of-the-art baselines, DART synthesizes superior radar range-Doppler images from novel views across all datasets and additionally can be used to generate high quality tomographic images.",
+        "subjects": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "comment": "To appear in CVPR 2024; see https://wiselabcmu.github.io/dart/ for our project site"
+    },
+    {
         "paper id": "2403.03945",
         "abstract url": "https://arxiv.org/abs/2403.03945",
         "title": "SPEAR:Exact Gradient Inversion of Batches in Federated Learning",
@@ -5534,6 +5535,26 @@
         "comment": null
     },
     {
+        "paper id": "2403.05592",
+        "abstract url": "https://arxiv.org/abs/2403.05592",
+        "title": "Eternal Sunshine of the Mechanical Mind: The Irreconcilability of Machine Learning and the Right to be Forgotten",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "tabular"
+            ],
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "As we keep rapidly advancing toward an era where artificial intelligence is a constant and normative experience for most of us, we must also be aware of what this vision and this progress entail. By first approximating neural connections and activities in computer circuits and then creating more and more sophisticated versions of this crude approximation, we are now facing an age to come where modern deep learning-based artificial intelligence systems can rightly be called thinking machines, and they are sometimes even lauded for their emergent behavior and black-box approaches. But as we create more powerful electronic brains, with billions of neural connections and parameters, can we guarantee that these mammoths built of artificial neurons will be able to forget the data that we store in them? If they are at some level like a brain, can the right to be forgotten still be protected while dealing with these AIs? The essential gap between machine learning and the RTBF is explored in this article, with a premonition of far-reaching conclusions if the gap is not bridged or reconciled any time soon. The core argument is that deep learning models, due to their structure and size, cannot be expected to forget or delete a data as it would be expected from a tabular database, and they should be treated more like a mechanical brain, albeit still in development.",
+        "subjects": [
+            "cs.GL",
+            "cs.AI"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2403.05593",
         "abstract url": "https://arxiv.org/abs/2403.05593",
         "title": "Introducing First-Principles Calculations: New Approach to Group Dynamics and Bridging Social Phenomena in TeNP-Chain Based Social Dynamics Simulations",
@@ -5617,8 +5638,7 @@
         "rating": "-2",
         "keywords": [
             [
-                "diffusion",
-                "synthesis"
+                "diffusion"
             ],
             [
                 "MRI"
@@ -5634,26 +5654,6 @@
             "eess.IV",
             "cs.CV",
             "cs.LG"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2403.03541",
-        "abstract url": "https://arxiv.org/abs/2403.03541",
-        "title": "Seamless Virtual Reality with Integrated Synchronizer and Synthesizer for Autonomous Driving",
-        "rating": "-2",
-        "keywords": [
-            [
-                "Synthesizer"
-            ],
-            [
-                "Autonomous Driving",
-                "lidar"
-            ]
-        ],
-        "abstract": "Virtual reality (VR) is a promising data engine for autonomous driving (AD). However, data fidelity in this paradigm is often degraded by VR inconsistency, for which the existing VR approaches become ineffective, as they ignore the inter-dependency between low-level VR synchronizer designs (i.e., data collector) and high-level VR synthesizer designs (i.e., data processor). This paper presents a seamless virtual reality SVR platform for AD, which mitigates such inconsistency, enabling VR agents to interact with each other in a shared symbiotic world. The crux to SVR is an integrated synchronizer and synthesizer IS2 design, which consists of a drift-aware lidar-inertial synchronizer for VR colocation and a motion-aware deep visual synthesis network for augmented reality image generation. We implement SVR on car-like robots in two sandbox platforms, achieving a cm-level VR colocalization accuracy and 3.2% VR image deviation, thereby avoiding missed collisions or model clippings. Experiments show that the proposed SVR reduces the intervention times, missed turns, and failure rates compared to other benchmarks. The SVR-trained neural network can handle unseen situations in real-world environments, by leveraging its knowledge learnt from the VR space.",
-        "subjects": [
-            "cs.RO"
         ],
         "comment": null
     },
@@ -5956,6 +5956,34 @@
         "comment": "Accepted for 2024 IEEE American Control Conference"
     },
     {
+        "paper id": "2403.04116",
+        "abstract url": "https://arxiv.org/abs/2403.04116",
+        "title": "Radiative Gaussian Splatting for Efficient X-ray Novel View Synthesis",
+        "rating": "-2",
+        "keywords": [
+            [
+                "3D",
+                "Gaussian Splatting",
+                "point cloud",
+                "NeRF"
+            ],
+            [
+                "CT",
+                "X-ray"
+            ],
+            [
+                "cs.CV",
+                "eess.IV"
+            ]
+        ],
+        "abstract": "X-ray is widely applied for transmission imaging due to its stronger penetration than natural light. When rendering novel view X-ray projections, existing methods mainly based on NeRF suffer from long training time and slow inference speed. In this paper, we propose a 3D Gaussian splatting-based framework, namely X-Gaussian, for X-ray novel view synthesis. Firstly, we redesign a radiative Gaussian point cloud model inspired by the isotropic nature of X-ray imaging. Our model excludes the influence of view direction when learning to predict the radiation intensity of 3D points. Based on this model, we develop a Differentiable Radiative Rasterization (DRR) with CUDA implementation. Secondly, we customize an Angle-pose Cuboid Uniform Initialization (ACUI) strategy that directly uses the parameters of the X-ray scanner to compute the camera information and then uniformly samples point positions within a cuboid enclosing the scanned object. Experiments show that our X-Gaussian outperforms state-of-the-art methods by 6.5 dB while enjoying less than 15% training time and over 73x inference speed. The application on sparse-view CT reconstruction also reveals the practical values of our method. Code and models will be publicly available at https://github.com/caiyuanhao1998/X-Gaussian . A video demo of the training process visualization is at https://www.youtube.com/watch?v=gDVf_Ngeghg .",
+        "subjects": [
+            "eess.IV",
+            "cs.CV"
+        ],
+        "comment": "The first 3D Gaussian Splatting-based method for X-ray 3D reconstruction"
+    },
+    {
         "paper id": "2403.04148",
         "abstract url": "https://arxiv.org/abs/2403.04148",
         "title": "Optical turbulence profiling at the Table Mountain Facility with the Laser Communication Relay Demonstration GEO downlink",
@@ -6072,23 +6100,28 @@
         "comment": "6 Pages, 11 Figures"
     },
     {
-        "paper id": "2403.04205",
-        "abstract url": "https://arxiv.org/abs/2403.04205",
-        "title": "OGMP: Oracle Guided Multimodal Policies for Agile and Versatile Robot Control",
+        "paper id": "2403.04809",
+        "abstract url": "https://arxiv.org/abs/2403.04809",
+        "title": "Investigation of the Impact of Synthetic Training Data in the Industrial Application of Terminal Strip Object Detection",
         "rating": "-2",
         "keywords": [
             [
-                "synthesis"
+                "3D"
             ],
             [
-                "Robot"
+                "Industrial"
+            ],
+            [
+                "cs.LG",
+                "cs.CV"
             ]
         ],
-        "abstract": "Amidst task-specific learning-based control synthesis frameworks that achieve impressive empirical results, a unified framework that systematically constructs an optimal policy for sufficiently solving a general notion of a task is absent. Hence, we propose a theoretical framework for a task-centered control synthesis leveraging two critical ideas: 1) oracle-guided policy optimization for the non-limiting integration of sub-optimal task-based priors to guide the policy optimization and 2) task-vital multimodality to break down solving a task into executing a sequence of behavioral modes. The proposed approach results in highly agile parkour and diving on a 16-DoF dynamic bipedal robot. The obtained policy advances indefinitely on a track, performing leaps and jumps of varying lengths and heights for the parkour task. Corresponding to the dive task, the policy demonstrates front, back, and side flips from various initial heights. Finally, we introduce a novel latent mode space reachability analysis to study our policies' versatility and generalization by computing a feasible mode set function through which we certify a set of failure-free modes for our policy to perform at any given state.",
+        "abstract": "In industrial manufacturing, numerous tasks of visually inspecting or detecting specific objects exist that are currently performed manually or by classical image processing methods. Therefore, introducing recent deep learning models to industrial environments holds the potential to increase productivity and enable new applications. However, gathering and labeling sufficient data is often intractable, complicating the implementation of such projects. Hence, image synthesis methods are commonly used to generate synthetic training data from 3D models and annotate them automatically, although it results in a sim-to-real domain gap. In this paper, we investigate the sim-to-real generalization performance of standard object detectors on the complex industrial application of terminal strip object detection. Combining domain randomization and domain knowledge, we created an image synthesis pipeline for automatically generating the training data. Moreover, we manually annotated 300 real images of terminal strips for the evaluation. The results show the cruciality of the objects of interest to have the same scale in either domain. Nevertheless, under optimized scaling conditions, the sim-to-real performance difference in mean average precision amounts to 2.69 % for RetinaNet and 0.98 % for Faster R-CNN, qualifying this approach for industrial requirements.",
         "subjects": [
-            "cs.RO"
+            "cs.CV",
+            "cs.LG"
         ],
-        "comment": "10 pages, 9 figures"
+        "comment": null
     },
     {
         "paper id": "2403.08823",
@@ -6120,6 +6153,30 @@
         "subjects": [
             "quant-ph",
             "cs.ET"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2405.02295",
+        "abstract url": "https://arxiv.org/abs/2405.02295",
+        "title": "Neural Additive Image Model: Interpretation through Interpolation",
+        "rating": "-2",
+        "keywords": [
+            [
+                "Diffusion"
+            ],
+            [
+                "tabular"
+            ],
+            [
+                "cs.LG",
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Understanding how images influence the world, interpreting which effects their semantics have on various quantities and exploring the reasons behind changes in image-based predictions are highly difficult yet extremely interesting problems. By adopting a holistic modeling approach utilizing Neural Additive Models in combination with Diffusion Autoencoders, we can effectively identify the latent hidden semantics of image effects and achieve full intelligibility of additional tabular effects. Our approach offers a high degree of flexibility, empowering us to comprehensively explore the impact of various image characteristics. We demonstrate that the proposed method can precisely identify complex image effects in an ablation study. To further showcase the practical applicability of our proposed model, we conduct a case study in which we investigate how the distinctive features and attributes captured within host images exert influence on the pricing of Airbnb rentals.",
+        "subjects": [
+            "cs.CV",
+            "cs.LG"
         ],
         "comment": null
     },
@@ -6317,30 +6374,6 @@
         "comment": null
     },
     {
-        "paper id": "2403.03812",
-        "abstract url": "https://arxiv.org/abs/2403.03812",
-        "title": "ProbSAINT: Probabilistic Tabular Regression for Used Car Pricing",
-        "rating": "-2.5",
-        "keywords": [
-            [
-                "vehicle"
-            ],
-            [
-                "forecasting"
-            ],
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Used car pricing is a critical aspect of the automotive industry, influenced by many economic factors and market dynamics. With the recent surge in online marketplaces and increased demand for used cars, accurate pricing would benefit both buyers and sellers by ensuring fair transactions. However, the transition towards automated pricing algorithms using machine learning necessitates the comprehension of model uncertainties, specifically the ability to flag predictions that the model is unsure about. Although recent literature proposes the use of boosting algorithms or nearest neighbor-based approaches for swift and precise price predictions, encapsulating model uncertainties with such algorithms presents a complex challenge. We introduce ProbSAINT, a model that offers a principled approach for uncertainty quantification of its price predictions, along with accurate point predictions that are comparable to state-of-the-art boosting techniques. Furthermore, acknowledging that the business prefers pricing used cars based on the number of days the vehicle was listed for sale, we show how ProbSAINT can be used as a dynamic forecasting model for predicting price probabilities for different expected offer duration. Our experiments further indicate that ProbSAINT is especially accurate on instances where it is highly certain. This proves the applicability of its probabilistic predictions in real-world scenarios where trustworthiness is crucial.",
-        "subjects": [
-            "cs.LG",
-            "cs.AI"
-        ],
-        "comment": "9 pages, 4 figures"
-    },
-    {
         "paper id": "2403.03827",
         "abstract url": "https://arxiv.org/abs/2403.03827",
         "title": "Linear and nonlinear system identification under $\\ell_1$- and group-Lasso regularization via L-BFGS-B",
@@ -6363,37 +6396,6 @@
             "math.OC"
         ],
         "comment": "23 pages, 4 figures"
-    },
-    {
-        "paper id": "2403.03896",
-        "abstract url": "https://arxiv.org/abs/2403.03896",
-        "title": "DART: Implicit Doppler Tomography for Radar Novel View Synthesis",
-        "rating": "-2.5",
-        "keywords": [
-            [
-                "Synthesis"
-            ],
-            [
-                "lidar",
-                "Radar"
-            ],
-            [
-                "physics"
-            ],
-            [
-                "cs.LG",
-                "cs.CV"
-            ],
-            [
-                "CVPR"
-            ]
-        ],
-        "abstract": "Simulation is an invaluable tool for radio-frequency system designers that enables rapid prototyping of various algorithms for imaging, target detection, classification, and tracking. However, simulating realistic radar scans is a challenging task that requires an accurate model of the scene, radio frequency material properties, and a corresponding radar synthesis function. Rather than specifying these models explicitly, we propose DART - Doppler Aided Radar Tomography, a Neural Radiance Field-inspired method which uses radar-specific physics to create a reflectance and transmittance-based rendering pipeline for range-Doppler images. We then evaluate DART by constructing a custom data collection platform and collecting a novel radar dataset together with accurate position and instantaneous velocity measurements from lidar-based localization. In comparison to state-of-the-art baselines, DART synthesizes superior radar range-Doppler images from novel views across all datasets and additionally can be used to generate high quality tomographic images.",
-        "subjects": [
-            "cs.CV",
-            "cs.LG"
-        ],
-        "comment": "To appear in CVPR 2024; see https://wiselabcmu.github.io/dart/ for our project site"
     },
     {
         "paper id": "2403.04037",
@@ -6524,37 +6526,6 @@
         "comment": null
     },
     {
-        "paper id": "2403.04116",
-        "abstract url": "https://arxiv.org/abs/2403.04116",
-        "title": "Radiative Gaussian Splatting for Efficient X-ray Novel View Synthesis",
-        "rating": "-3",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting",
-                "point cloud",
-                "NeRF"
-            ],
-            [
-                "Synthesis"
-            ],
-            [
-                "CT",
-                "X-ray"
-            ],
-            [
-                "cs.CV",
-                "eess.IV"
-            ]
-        ],
-        "abstract": "X-ray is widely applied for transmission imaging due to its stronger penetration than natural light. When rendering novel view X-ray projections, existing methods mainly based on NeRF suffer from long training time and slow inference speed. In this paper, we propose a 3D Gaussian splatting-based framework, namely X-Gaussian, for X-ray novel view synthesis. Firstly, we redesign a radiative Gaussian point cloud model inspired by the isotropic nature of X-ray imaging. Our model excludes the influence of view direction when learning to predict the radiation intensity of 3D points. Based on this model, we develop a Differentiable Radiative Rasterization (DRR) with CUDA implementation. Secondly, we customize an Angle-pose Cuboid Uniform Initialization (ACUI) strategy that directly uses the parameters of the X-ray scanner to compute the camera information and then uniformly samples point positions within a cuboid enclosing the scanned object. Experiments show that our X-Gaussian outperforms state-of-the-art methods by 6.5 dB while enjoying less than 15% training time and over 73x inference speed. The application on sparse-view CT reconstruction also reveals the practical values of our method. Code and models will be publicly available at https://github.com/caiyuanhao1998/X-Gaussian . A video demo of the training process visualization is at https://www.youtube.com/watch?v=gDVf_Ngeghg .",
-        "subjects": [
-            "eess.IV",
-            "cs.CV"
-        ],
-        "comment": "The first 3D Gaussian Splatting-based method for X-ray 3D reconstruction"
-    },
-    {
         "paper id": "2403.04126",
         "abstract url": "https://arxiv.org/abs/2403.04126",
         "title": "Optimal Scheduling of Graph States via Path Decompositions",
@@ -6574,33 +6545,6 @@
             "cs.DS"
         ],
         "comment": "5 pages, 1 figure"
-    },
-    {
-        "paper id": "2403.04809",
-        "abstract url": "https://arxiv.org/abs/2403.04809",
-        "title": "Investigation of the Impact of Synthetic Training Data in the Industrial Application of Terminal Strip Object Detection",
-        "rating": "-3",
-        "keywords": [
-            [
-                "3D"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "Industrial"
-            ],
-            [
-                "cs.LG",
-                "cs.CV"
-            ]
-        ],
-        "abstract": "In industrial manufacturing, numerous tasks of visually inspecting or detecting specific objects exist that are currently performed manually or by classical image processing methods. Therefore, introducing recent deep learning models to industrial environments holds the potential to increase productivity and enable new applications. However, gathering and labeling sufficient data is often intractable, complicating the implementation of such projects. Hence, image synthesis methods are commonly used to generate synthetic training data from 3D models and annotate them automatically, although it results in a sim-to-real domain gap. In this paper, we investigate the sim-to-real generalization performance of standard object detectors on the complex industrial application of terminal strip object detection. Combining domain randomization and domain knowledge, we created an image synthesis pipeline for automatically generating the training data. Moreover, we manually annotated 300 real images of terminal strips for the evaluation. The results show the cruciality of the objects of interest to have the same scale in either domain. Nevertheless, under optimized scaling conditions, the sim-to-real performance difference in mean average precision amounts to 2.69 % for RetinaNet and 0.98 % for Faster R-CNN, qualifying this approach for industrial requirements.",
-        "subjects": [
-            "cs.CV",
-            "cs.LG"
-        ],
-        "comment": null
     },
     {
         "paper id": "2403.13829",
@@ -6741,6 +6685,33 @@
             "cs.DB"
         ],
         "comment": "This work is published in Elsevier Internet of Things. This work was supported by the European Commission CEF Programme by means of the project SALTED under the Action Number 2020-EU-IA-0274 and by the Spanish State Research Agency (AEI) by means of the project SITED under Grant Agreement No. PID2021-125725OB-I00"
+    },
+    {
+        "paper id": "2403.03812",
+        "abstract url": "https://arxiv.org/abs/2403.03812",
+        "title": "ProbSAINT: Probabilistic Tabular Regression for Used Car Pricing",
+        "rating": "-4.5",
+        "keywords": [
+            [
+                "vehicle"
+            ],
+            [
+                "forecasting"
+            ],
+            [
+                "Tabular"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Used car pricing is a critical aspect of the automotive industry, influenced by many economic factors and market dynamics. With the recent surge in online marketplaces and increased demand for used cars, accurate pricing would benefit both buyers and sellers by ensuring fair transactions. However, the transition towards automated pricing algorithms using machine learning necessitates the comprehension of model uncertainties, specifically the ability to flag predictions that the model is unsure about. Although recent literature proposes the use of boosting algorithms or nearest neighbor-based approaches for swift and precise price predictions, encapsulating model uncertainties with such algorithms presents a complex challenge. We introduce ProbSAINT, a model that offers a principled approach for uncertainty quantification of its price predictions, along with accurate point predictions that are comparable to state-of-the-art boosting techniques. Furthermore, acknowledging that the business prefers pricing used cars based on the number of days the vehicle was listed for sale, we show how ProbSAINT can be used as a dynamic forecasting model for predicting price probabilities for different expected offer duration. Our experiments further indicate that ProbSAINT is especially accurate on instances where it is highly certain. This proves the applicability of its probabilistic predictions in real-world scenarios where trustworthiness is crucial.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI"
+        ],
+        "comment": "9 pages, 4 figures"
     },
     {
         "paper id": "2403.03658",
@@ -7305,6 +7276,18 @@
             "math.NA"
         ],
         "comment": "16 pages, 4 figures. arXiv admin note: substantial text overlap with arXiv:2206.03376"
+    },
+    {
+        "paper id": "2403.03995",
+        "abstract url": "https://arxiv.org/abs/2403.03995",
+        "title": "Cafe-Mpc: A Cascaded-Fidelity Model Predictive Control Framework with Tuning-Free Whole-Body Control",
+        "rating": "-10",
+        "keywords": [],
+        "abstract": "This work introduces an optimization-based locomotion control framework for on-the-fly synthesis of complex dynamic maneuvers. At the core of the proposed framework is a cascaded-fidelity model predictive controller (Cafe-Mpc). Cafe-Mpc strategically relaxes the planning problem along the prediction horizon (i.e., with descending model fidelity, increasingly coarse time steps, and relaxed constraints) for computational and performance gains. This problem is numerically solved with an efficient customized multiple-shooting iLQR (MS-iLQR) solver that is tailored for hybrid systems. The action-value function from Cafe-Mpc is then used as the basis for a new value-function-based whole-body control (VWBC) technique that avoids additional tuning for the WBC. In this respect, the proposed framework unifies whole-body MPC and more conventional whole-body quadratic programming (QP), which have been treated as separate components in previous works. We study the effects of the cascaded relaxations in Cafe-Mpc on the tracking performance and required computation time. We also show that the Cafe-Mpc, if configured appropriately, advances the performance of whole-body MPC without necessarily increasing computational cost. Further, we show the superior performance of the proposed VWBC over the Riccati feedback controller in terms of constraint handling. The proposed framework enables accomplishing for the first time gymnastic-style running barrel rolls on the MIT Mini Cheetah. Video: https://youtu.be/YiNqrgj9mb8.",
+        "subjects": [
+            "cs.RO"
+        ],
+        "comment": "submitted to IEEE Transactions on Robotics. 20 pages, 18 figures"
     },
     {
         "paper id": "2403.03998",

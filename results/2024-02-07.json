@@ -96,6 +96,7 @@
         "rating": "2",
         "keywords": [
             [
+                "Memory-efficient",
                 "efficient finetuning",
                 "GPU memory"
             ],
@@ -613,25 +614,6 @@
         "comment": "Accepted at NLP4HR Workshop at EACL2024"
     },
     {
-        "paper id": "2402.04823",
-        "abstract url": "https://arxiv.org/abs/2402.04823",
-        "title": "How Realistic Is Your Synthetic Data? Constraining Deep Generative Models for Tabular Data",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.LG"
-            ],
-            [
-                "ICLR"
-            ]
-        ],
-        "abstract": "Deep Generative Models (DGMs) have been shown to be powerful tools for generating tabular data, as they have been increasingly able to capture the complex distributions that characterize them. However, to generate realistic synthetic data, it is often not enough to have a good approximation of their distribution, as it also requires compliance with constraints that encode essential background knowledge on the problem at hand. In this paper, we address this limitation and show how DGMs for tabular data can be transformed into Constrained Deep Generative Models (C-DGMs), whose generated samples are guaranteed to be compliant with the given constraints. This is achieved by automatically parsing the constraints and transforming them into a Constraint Layer (CL) seamlessly integrated with the DGM. Our extensive experimental analysis with various DGMs and tasks reveals that standard DGMs often violate constraints, some exceeding $95\\%$ non-compliance, while their corresponding C-DGMs are never non-compliant. Then, we quantitatively demonstrate that, at training time, C-DGMs are able to exploit the background knowledge expressed by the constraints to outperform their standard counterparts with up to $6.5\\%$ improvement in utility and detection. Further, we show how our CL does not necessarily need to be integrated at training time, as it can be also used as a guardrail at inference time, still producing some improvements in the overall performance of the models. Finally, we show that our CL does not hinder the sample generation time of the models.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": "Accepted at ICLR 2024"
-    },
-    {
         "paper id": "2402.04833",
         "abstract url": "https://arxiv.org/abs/2402.04833",
         "title": "Long Is More for Alignment: A Simple but Tough-to-Beat Baseline for Instruction Fine-Tuning",
@@ -666,24 +648,6 @@
         "comment": "13 pages, 6 tables, 2 figures"
     },
     {
-        "paper id": "2402.04838",
-        "abstract url": "https://arxiv.org/abs/2402.04838",
-        "title": "PaDeLLM-NER: Parallel Decoding in Large Language Models for Named Entity Recognition",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "In this study, we aim to reduce generation latency for Named Entity Recognition (NER) with Large Language Models (LLMs). The main cause of high latency in LLMs is the sequential decoding process, which autoregressively generates all labels and mentions for NER, significantly increase the sequence length. To this end, we introduce Parallel Decoding in LLM for NE} (PaDeLLM-NER), a approach that integrates seamlessly into existing generative model frameworks without necessitating additional modules or architectural modifications. PaDeLLM-NER allows for the simultaneous decoding of all mentions, thereby reducing generation latency. Experiments reveal that PaDeLLM-NER significantly increases inference speed that is 1.76 to 10.22 times faster than the autoregressive approach for both English and Chinese. Simultaneously it maintains the quality of predictions as evidenced by the performance that is on par with the state-of-the-art across various datasets.",
-        "subjects": [
-            "cs.CL",
-            "cs.AI"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2402.04841",
         "abstract url": "https://arxiv.org/abs/2402.04841",
         "title": "Data-efficient Large Vision Models through Sequential Autoregression",
@@ -698,6 +662,26 @@
             "cs.CV"
         ],
         "comment": "15 pages"
+    },
+    {
+        "paper id": "2402.04858",
+        "abstract url": "https://arxiv.org/abs/2402.04858",
+        "title": "CodeIt: Self-Improving Language Models with Prioritized Hindsight Replay",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.AI",
+                "cs.LG",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Large language models are increasingly solving tasks that are commonly believed to require human-level reasoning ability. However, these models still perform very poorly on benchmarks of general intelligence such as the Abstraction and Reasoning Corpus (ARC). In this paper, we approach ARC as a programming-by-examples problem, and introduce a novel and scalable method for language model self-improvement called Code Iteration (CodeIt). Our method iterates between 1) program sampling and hindsight relabeling, and 2) learning from prioritized experience replay. By relabeling the goal of an episode (i.e., the target program output given input) to the realized output produced by the sampled program, our method effectively deals with the extreme sparsity of rewards in program synthesis. Applying CodeIt to the ARC dataset, we demonstrate that prioritized hindsight replay, along with pre-training and data-augmentation, leads to successful inter-task generalization. CodeIt is the first neuro-symbolic approach that scales to the full ARC evaluation dataset. Our method solves 15% of ARC evaluation tasks, achieving state-of-the-art performance and outperforming existing neural and symbolic baselines.",
+        "subjects": [
+            "cs.AI",
+            "cs.CL",
+            "cs.LG"
+        ],
+        "comment": "8 pages, 11 figures"
     },
     {
         "paper id": "2402.04868",
@@ -1379,7 +1363,6 @@
         "keywords": [
             [
                 "diffusion",
-                "synthesis",
                 "Image Editing"
             ],
             [
@@ -2176,6 +2159,22 @@
         "comment": null
     },
     {
+        "paper id": "2402.05110",
+        "abstract url": "https://arxiv.org/abs/2402.05110",
+        "title": "Opening the AI black box: program synthesis via mechanistic interpretability",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "We present MIPS, a novel method for program synthesis based on automated mechanistic interpretability of neural networks trained to perform the desired task, auto-distilling the learned algorithm into Python code. We test MIPS on a benchmark of 62 algorithmic tasks that can be learned by an RNN and find it highly complementary to GPT-4: MIPS solves 32 of them, including 13 that are not solved by GPT-4 (which also solves 30). MIPS uses an integer autoencoder to convert the RNN into a finite state machine, then applies Boolean or integer symbolic regression to capture the learned algorithm. As opposed to large language models, this program synthesis technique makes no use of (and is therefore not limited by) human training data such as algorithms and code from GitHub. We discuss opportunities and challenges for scaling up this approach to make machine-learned models more interpretable and trustworthy.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": "24 pages"
+    },
+    {
         "paper id": "2402.05144",
         "abstract url": "https://arxiv.org/abs/2402.05144",
         "title": "A Bandit Approach with Evolutionary Operators for Model Selection",
@@ -2659,7 +2658,6 @@
         "keywords": [
             [
                 "diffusion",
-                "Synthesis",
                 "Text-to-Image"
             ],
             [
@@ -3071,6 +3069,28 @@
         "comment": "4 pages"
     },
     {
+        "paper id": "2402.04796",
+        "abstract url": "https://arxiv.org/abs/2402.04796",
+        "title": "Mesh-based Gaussian Splatting for Real-time Large-scale Deformation",
+        "rating": "0",
+        "keywords": [
+            [
+                "3D",
+                "Gaussian Splatting",
+                "Radiance Fields"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Neural implicit representations, including Neural Distance Fields and Neural Radiance Fields, have demonstrated significant capabilities for reconstructing surfaces with complicated geometry and topology, and generating novel views of a scene. Nevertheless, it is challenging for users to directly deform or manipulate these implicit representations with large deformations in the real-time fashion. Gaussian Splatting(GS) has recently become a promising method with explicit geometry for representing static scenes and facilitating high-quality and real-time synthesis of novel views. However,it cannot be easily deformed due to the use of discrete Gaussians and lack of explicit topology. To address this, we develop a novel GS-based method that enables interactive deformation. Our key idea is to design an innovative mesh-based GS representation, which is integrated into Gaussian learning and manipulation. 3D Gaussians are defined over an explicit mesh, and they are bound with each other: the rendering of 3D Gaussians guides the mesh face split for adaptive refinement, and the mesh face split directs the splitting of 3D Gaussians. Moreover, the explicit mesh constraints help regularize the Gaussian distribution, suppressing poor-quality Gaussians(e.g. misaligned Gaussians,long-narrow shaped Gaussians), thus enhancing visual quality and avoiding artifacts during deformation. Based on this representation, we further introduce a large-scale Gaussian deformation technique to enable deformable GS, which alters the parameters of 3D Gaussians according to the manipulation of the associated mesh. Our method benefits from existing mesh deformation datasets for more realistic data-driven Gaussian deformation. Extensive experiments show that our approach achieves high-quality reconstruction and effective deformation, while maintaining the promising rendering results at a high frame rate(65 FPS on average).",
+        "subjects": [
+            "cs.GR",
+            "cs.CV"
+        ],
+        "comment": "11 pages, 7 figures"
+    },
+    {
         "paper id": "2402.04825",
         "abstract url": "https://arxiv.org/abs/2402.04825",
         "title": "Fast Timing-Conditioned Latent Audio Diffusion",
@@ -3130,29 +3150,6 @@
             "cs.CV"
         ],
         "comment": "Research report"
-    },
-    {
-        "paper id": "2402.04858",
-        "abstract url": "https://arxiv.org/abs/2402.04858",
-        "title": "CodeIt: Self-Improving Language Models with Prioritized Hindsight Replay",
-        "rating": "0",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.AI",
-                "cs.LG",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Large language models are increasingly solving tasks that are commonly believed to require human-level reasoning ability. However, these models still perform very poorly on benchmarks of general intelligence such as the Abstraction and Reasoning Corpus (ARC). In this paper, we approach ARC as a programming-by-examples problem, and introduce a novel and scalable method for language model self-improvement called Code Iteration (CodeIt). Our method iterates between 1) program sampling and hindsight relabeling, and 2) learning from prioritized experience replay. By relabeling the goal of an episode (i.e., the target program output given input) to the realized output produced by the sampled program, our method effectively deals with the extreme sparsity of rewards in program synthesis. Applying CodeIt to the ARC dataset, we demonstrate that prioritized hindsight replay, along with pre-training and data-augmentation, leads to successful inter-task generalization. CodeIt is the first neuro-symbolic approach that scales to the full ARC evaluation dataset. Our method solves 15% of ARC evaluation tasks, achieving state-of-the-art performance and outperforming existing neural and symbolic baselines.",
-        "subjects": [
-            "cs.AI",
-            "cs.CL",
-            "cs.LG"
-        ],
-        "comment": "8 pages, 11 figures"
     },
     {
         "paper id": "2402.04883",
@@ -3474,7 +3471,6 @@
         "keywords": [
             [
                 "diffusion",
-                "synthesis",
                 "image editing"
             ],
             [
@@ -3651,6 +3647,31 @@
             "cs.LG"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2402.04717",
+        "abstract url": "https://arxiv.org/abs/2402.04717",
+        "title": "InstructScene: Instruction-Driven 3D Indoor Scene Synthesis with Semantic Graph Prior",
+        "rating": "-0.5",
+        "keywords": [
+            [
+                "3D"
+            ],
+            [
+                "Graph"
+            ],
+            [
+                "cs.CV"
+            ],
+            [
+                "ICLR"
+            ]
+        ],
+        "abstract": "Comprehending natural language instructions is a charming property for 3D indoor scene synthesis systems. Existing methods directly model object joint distributions and express object relations implicitly within a scene, thereby hindering the controllability of generation. We introduce InstructScene, a novel generative framework that integrates a semantic graph prior and a layout decoder to improve controllability and fidelity for 3D scene synthesis. The proposed semantic graph prior jointly learns scene appearances and layout distributions, exhibiting versatility across various downstream tasks in a zero-shot manner. To facilitate the benchmarking for text-driven 3D scene synthesis, we curate a high-quality dataset of scene-instruction pairs with large language and multimodal models. Extensive experimental results reveal that the proposed method surpasses existing state-of-the-art approaches by a large margin. Thorough ablation studies confirm the efficacy of crucial design components. Project page: https://chenguolin.github.io/projects/InstructScene.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Accepted by ICLR 2024 for spotlight presentation; Project page: https://chenguolin.github.io/projects/InstructScene"
     },
     {
         "paper id": "2402.04732",
@@ -3938,25 +3959,6 @@
             "stat.ML"
         ],
         "comment": "21 pages; code: https://github.com/GFNOrg/gfn-diffusion"
-    },
-    {
-        "paper id": "2402.05110",
-        "abstract url": "https://arxiv.org/abs/2402.05110",
-        "title": "Opening the AI black box: program synthesis via mechanistic interpretability",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "We present MIPS, a novel method for program synthesis based on automated mechanistic interpretability of neural networks trained to perform the desired task, auto-distilling the learned algorithm into Python code. We test MIPS on a benchmark of 62 algorithmic tasks that can be learned by an RNN and find it highly complementary to GPT-4: MIPS solves 32 of them, including 13 that are not solved by GPT-4 (which also solves 30). MIPS uses an integer autoencoder to convert the RNN into a finite state machine, then applies Boolean or integer symbolic regression to capture the learned algorithm. As opposed to large language models, this program synthesis technique makes no use of (and is therefore not limited by) human training data such as algorithms and code from GitHub. We discuss opportunities and challenges for scaling up this approach to make machine-learned models more interpretable and trustworthy.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": "24 pages"
     },
     {
         "paper id": "2402.05146",
@@ -4501,31 +4503,6 @@
         "comment": null
     },
     {
-        "paper id": "2402.04796",
-        "abstract url": "https://arxiv.org/abs/2402.04796",
-        "title": "Mesh-based Gaussian Splatting for Real-time Large-scale Deformation",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting",
-                "Radiance Fields"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Neural implicit representations, including Neural Distance Fields and Neural Radiance Fields, have demonstrated significant capabilities for reconstructing surfaces with complicated geometry and topology, and generating novel views of a scene. Nevertheless, it is challenging for users to directly deform or manipulate these implicit representations with large deformations in the real-time fashion. Gaussian Splatting(GS) has recently become a promising method with explicit geometry for representing static scenes and facilitating high-quality and real-time synthesis of novel views. However,it cannot be easily deformed due to the use of discrete Gaussians and lack of explicit topology. To address this, we develop a novel GS-based method that enables interactive deformation. Our key idea is to design an innovative mesh-based GS representation, which is integrated into Gaussian learning and manipulation. 3D Gaussians are defined over an explicit mesh, and they are bound with each other: the rendering of 3D Gaussians guides the mesh face split for adaptive refinement, and the mesh face split directs the splitting of 3D Gaussians. Moreover, the explicit mesh constraints help regularize the Gaussian distribution, suppressing poor-quality Gaussians(e.g. misaligned Gaussians,long-narrow shaped Gaussians), thus enhancing visual quality and avoiding artifacts during deformation. Based on this representation, we further introduce a large-scale Gaussian deformation technique to enable deformable GS, which alters the parameters of 3D Gaussians according to the manipulation of the associated mesh. Our method benefits from existing mesh deformation datasets for more realistic data-driven Gaussian deformation. Extensive experiments show that our approach achieves high-quality reconstruction and effective deformation, while maintaining the promising rendering results at a high frame rate(65 FPS on average).",
-        "subjects": [
-            "cs.GR",
-            "cs.CV"
-        ],
-        "comment": "11 pages, 7 figures"
-    },
-    {
         "paper id": "2402.04798",
         "abstract url": "https://arxiv.org/abs/2402.04798",
         "title": "Spiking-PhysFormer: Camera-Based Remote Photoplethysmography with Parallel Spike-driven Transformer",
@@ -4545,6 +4522,49 @@
             "cs.CV"
         ],
         "comment": "Mingxuan Liu and Jiankai Tang are co-first authors of the article"
+    },
+    {
+        "paper id": "2402.04823",
+        "abstract url": "https://arxiv.org/abs/2402.04823",
+        "title": "How Realistic Is Your Synthetic Data? Constraining Deep Generative Models for Tabular Data",
+        "rating": "-1",
+        "keywords": [
+            [
+                "Tabular"
+            ],
+            [
+                "cs.LG"
+            ],
+            [
+                "ICLR"
+            ]
+        ],
+        "abstract": "Deep Generative Models (DGMs) have been shown to be powerful tools for generating tabular data, as they have been increasingly able to capture the complex distributions that characterize them. However, to generate realistic synthetic data, it is often not enough to have a good approximation of their distribution, as it also requires compliance with constraints that encode essential background knowledge on the problem at hand. In this paper, we address this limitation and show how DGMs for tabular data can be transformed into Constrained Deep Generative Models (C-DGMs), whose generated samples are guaranteed to be compliant with the given constraints. This is achieved by automatically parsing the constraints and transforming them into a Constraint Layer (CL) seamlessly integrated with the DGM. Our extensive experimental analysis with various DGMs and tasks reveals that standard DGMs often violate constraints, some exceeding $95\\%$ non-compliance, while their corresponding C-DGMs are never non-compliant. Then, we quantitatively demonstrate that, at training time, C-DGMs are able to exploit the background knowledge expressed by the constraints to outperform their standard counterparts with up to $6.5\\%$ improvement in utility and detection. Further, we show how our CL does not necessarily need to be integrated at training time, as it can be also used as a guardrail at inference time, still producing some improvements in the overall performance of the models. Finally, we show that our CL does not hinder the sample generation time of the models.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": "Accepted at ICLR 2024"
+    },
+    {
+        "paper id": "2402.04838",
+        "abstract url": "https://arxiv.org/abs/2402.04838",
+        "title": "PaDeLLM-NER: Parallel Decoding in Large Language Models for Named Entity Recognition",
+        "rating": "-1",
+        "keywords": [
+            [
+                "Named Entity Recognition"
+            ],
+            [
+                "cs.AI",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "In this study, we aim to reduce generation latency for Named Entity Recognition (NER) with Large Language Models (LLMs). The main cause of high latency in LLMs is the sequential decoding process, which autoregressively generates all labels and mentions for NER, significantly increase the sequence length. To this end, we introduce Parallel Decoding in LLM for NE} (PaDeLLM-NER), a approach that integrates seamlessly into existing generative model frameworks without necessitating additional modules or architectural modifications. PaDeLLM-NER allows for the simultaneous decoding of all mentions, thereby reducing generation latency. Experiments reveal that PaDeLLM-NER significantly increases inference speed that is 1.76 to 10.22 times faster than the autoregressive approach for both English and Chinese. Simultaneously it maintains the quality of predictions as evidenced by the performance that is on par with the state-of-the-art across various datasets.",
+        "subjects": [
+            "cs.CL",
+            "cs.AI"
+        ],
+        "comment": null
     },
     {
         "paper id": "2402.04884",
@@ -4785,23 +4805,6 @@
         "comment": "Project page: https://me.kiui.moe/lgm/"
     },
     {
-        "paper id": "2402.05061",
-        "abstract url": "https://arxiv.org/abs/2402.05061",
-        "title": "$H_{\\infty}$-Optimal Estimator Synthesis for Coupled Linear 2D PDEs using Convex Optimization",
-        "rating": "-1",
-        "keywords": [
-            [
-                "Synthesis"
-            ]
-        ],
-        "abstract": "Any suitably well-posed PDE in two spatial dimensions can be represented as a Partial Integral Equation (PIE) -- with system dynamics parameterized using Partial Integral (PI) operators. Furthermore, $L_2$-gain analysis of PDEs with a PIE representation can be posed as a linear operator inequality, which can be solved using convex optimization. In this paper, we use these results to derive a convex-optimization-based test for constructing an $H_{\\infty}$-optimal estimator for 2D PDEs. In particular, we first use PIEs to represent an arbitrary well-posed 2D PDE where sensor measurements occur along some boundary of the domain. We then parameterize an associated Luenberger-type estimator using a PI operator $\\mathcal{L}$ as the observer gain. Examining the error dynamics of this estimator, we prove that an upper bound on the $H_{\\infty}$-norm of these error dynamics can be minimized by solving a linear operator inequality on PI operator variables. Finally, we propose an analytical formula for inversion of 2D PI operators and use this formula to reconstruct the Luenberger gain $\\mathcal{L}$. We implement these results in the PIETOOLS software suite -- applying the methodology and simulating the resulting observer for an unstable 2D heat equation with boundary observations.",
-        "subjects": [
-            "math.OC",
-            "eess.SY"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2402.05064",
         "abstract url": "https://arxiv.org/abs/2402.05064",
         "title": "Tuning the feedback controller gains is a simple way to improve autonomous driving performance",
@@ -4983,8 +4986,7 @@
                 "3D"
             ],
             [
-                "diffusion",
-                "synthesis"
+                "diffusion"
             ],
             [
                 "cs.CV"
@@ -5020,7 +5022,8 @@
         "rating": "-1",
         "keywords": [
             [
-                "RGBD"
+                "RGBD",
+                "Signed Distance Field"
             ]
         ],
         "abstract": "This paper proposes two new algorithms for certified perception in safety-critical robotic applications. The first is a Certified Visual Odometry algorithm, which uses a RGBD camera with bounded sensor noise to construct a visual odometry estimate with provable error bounds. The second is a Certified Mapping algorithm which, using the same RGBD images, constructs a Signed Distance Field of the obstacle environment, always safely underestimating the distance to the nearest obstacle. This is required to avoid errors due to VO drift. The algorithms are demonstrated in hardware experiments, where we demonstrate both running online at 30FPS. The methods are also compared to state-of-the-art techniques for odometry and mapping.",
@@ -5281,56 +5284,6 @@
         "comment": null
     },
     {
-        "paper id": "2402.04668",
-        "abstract url": "https://arxiv.org/abs/2402.04668",
-        "title": "A Perspective on Individualized Treatment Effects Estimation from Time-series Health Data",
-        "rating": "-1.5",
-        "keywords": [
-            [
-                "medical",
-                "Health",
-                "Healthcare",
-                "clinical"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "The burden of diseases is rising worldwide, with unequal treatment efficacy for patient populations that are underrepresented in clinical trials. Healthcare, however, is driven by the average population effect of medical treatments and, therefore, operates in a \"one-size-fits-all\" approach, not necessarily what best fits each patient. These facts suggest a pressing need for methodologies to study individualized treatment effects (ITE) to drive personalized treatment. Despite the increased interest in machine-learning-driven ITE estimation models, the vast majority focus on tabular data with limited review and understanding of methodologies proposed for time-series electronic health records (EHRs). To this end, this work provides an overview of ITE works for time-series data and insights into future research. The work summarizes the latest work in the literature and reviews it in light of theoretical assumptions, types of treatment settings, and computational frameworks. Furthermore, this work discusses challenges and future research directions for ITEs in a time-series setting. We hope this work opens new directions and serves as a resource for understanding one of the exciting yet under-studied research areas.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2402.04717",
-        "abstract url": "https://arxiv.org/abs/2402.04717",
-        "title": "InstructScene: Instruction-Driven 3D Indoor Scene Synthesis with Semantic Graph Prior",
-        "rating": "-1.5",
-        "keywords": [
-            [
-                "3D"
-            ],
-            [
-                "Synthesis"
-            ],
-            [
-                "Graph"
-            ],
-            [
-                "cs.CV"
-            ],
-            [
-                "ICLR"
-            ]
-        ],
-        "abstract": "Comprehending natural language instructions is a charming property for 3D indoor scene synthesis systems. Existing methods directly model object joint distributions and express object relations implicitly within a scene, thereby hindering the controllability of generation. We introduce InstructScene, a novel generative framework that integrates a semantic graph prior and a layout decoder to improve controllability and fidelity for 3D scene synthesis. The proposed semantic graph prior jointly learns scene appearances and layout distributions, exhibiting versatility across various downstream tasks in a zero-shot manner. To facilitate the benchmarking for text-driven 3D scene synthesis, we curate a high-quality dataset of scene-instruction pairs with large language and multimodal models. Extensive experimental results reveal that the proposed method surpasses existing state-of-the-art approaches by a large margin. Thorough ablation studies confirm the efficacy of crucial design components. Project page: https://chenguolin.github.io/projects/InstructScene.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Accepted by ICLR 2024 for spotlight presentation; Project page: https://chenguolin.github.io/projects/InstructScene"
-    },
-    {
         "paper id": "2402.04821",
         "abstract url": "https://arxiv.org/abs/2402.04821",
         "title": "E(3)-Equivariant Mesh Neural Networks",
@@ -5494,6 +5447,29 @@
             "cs.PL"
         ],
         "comment": "29 pages, 7 figures, accepted by CHI 2024"
+    },
+    {
+        "paper id": "2402.05011",
+        "abstract url": "https://arxiv.org/abs/2402.05011",
+        "title": "Navigating Complexity: Toward Lossless Graph Condensation via Expanding Window Matching",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "trajectory"
+            ],
+            [
+                "GNNs",
+                "Graph"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Graph condensation aims to reduce the size of a large-scale graph dataset by synthesizing a compact counterpart without sacrificing the performance of Graph Neural Networks (GNNs) trained on it, which has shed light on reducing the computational cost for training GNNs. Nevertheless, existing methods often fall short of accurately replicating the original graph for certain datasets, thereby failing to achieve the objective of lossless condensation. To understand this phenomenon, we investigate the potential reasons and reveal that the previous state-of-the-art trajectory matching method provides biased and restricted supervision signals from the original graph when optimizing the condensed one. This significantly limits both the scale and efficacy of the condensed graph. In this paper, we make the first attempt toward \\textit{lossless graph condensation} by bridging the previously neglected supervision signals. Specifically, we employ a curriculum learning strategy to train expert trajectories with more diverse supervision signals from the original graph, and then effectively transfer the information into the condensed graph with expanding window matching. Moreover, we design a loss function to further extract knowledge from the expert trajectories. Theoretical analysis justifies the design of our method and extensive experiments verify its superiority across different datasets. Code is released at https://github.com/NUS-HPC-AI-Lab/GEOM.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": "Lossless graph condensation method"
     },
     {
         "paper id": "2402.05067",
@@ -6023,6 +5999,30 @@
             "eess.IV"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2402.04768",
+        "abstract url": "https://arxiv.org/abs/2402.04768",
+        "title": "Robot Interaction Behavior Generation based on Social Motion Forecasting for Human-Robot Interaction",
+        "rating": "-2",
+        "keywords": [
+            [
+                "Robot"
+            ],
+            [
+                "Forecasting"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Integrating robots into populated environments is a complex challenge that requires an understanding of human social dynamics. In this work, we propose to model social motion forecasting in a shared human-robot representation space, which facilitates us to synthesize robot motions that interact with humans in social scenarios despite not observing any robot in the motion training. We develop a transformer-based architecture called ECHO, which operates in the aforementioned shared space to predict the future motions of the agents encountered in social scenarios. Contrary to prior works, we reformulate the social motion problem as the refinement of the predicted individual motions based on the surrounding agents, which facilitates the training while allowing for single-motion forecasting when only one human is in the scene. We evaluate our model in multi-person and human-robot motion forecasting tasks and obtain state-of-the-art performance by a large margin while being efficient and performing in real-time. Additionally, our qualitative results showcase the effectiveness of our approach in generating human-robot interaction behaviors that can be controlled via text commands. Webpage: https://evm7.github.io/ECHO/",
+        "subjects": [
+            "cs.RO",
+            "cs.CV",
+            "cs.HC"
+        ],
+        "comment": "Accepted at ICRA 2024. Webpage: https://evm7.github.io/ECHO/"
     },
     {
         "paper id": "2402.04797",
@@ -6645,32 +6645,6 @@
         "comment": "58 pages. arXiv admin note: substantial text overlap with arXiv:2304.14096"
     },
     {
-        "paper id": "2402.05011",
-        "abstract url": "https://arxiv.org/abs/2402.05011",
-        "title": "Navigating Complexity: Toward Lossless Graph Condensation via Expanding Window Matching",
-        "rating": "-2.5",
-        "keywords": [
-            [
-                "synthesizing"
-            ],
-            [
-                "trajectory"
-            ],
-            [
-                "GNNs",
-                "Graph"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Graph condensation aims to reduce the size of a large-scale graph dataset by synthesizing a compact counterpart without sacrificing the performance of Graph Neural Networks (GNNs) trained on it, which has shed light on reducing the computational cost for training GNNs. Nevertheless, existing methods often fall short of accurately replicating the original graph for certain datasets, thereby failing to achieve the objective of lossless condensation. To understand this phenomenon, we investigate the potential reasons and reveal that the previous state-of-the-art trajectory matching method provides biased and restricted supervision signals from the original graph when optimizing the condensed one. This significantly limits both the scale and efficacy of the condensed graph. In this paper, we make the first attempt toward \\textit{lossless graph condensation} by bridging the previously neglected supervision signals. Specifically, we employ a curriculum learning strategy to train expert trajectories with more diverse supervision signals from the original graph, and then effectively transfer the information into the condensed graph with expanding window matching. Moreover, we design a loss function to further extract knowledge from the expert trajectories. Theoretical analysis justifies the design of our method and extensive experiments verify its superiority across different datasets. Code is released at https://github.com/NUS-HPC-AI-Lab/GEOM.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": "Lossless graph condensation method"
-    },
-    {
         "paper id": "2402.05039",
         "abstract url": "https://arxiv.org/abs/2402.05039",
         "title": "PAC Learnability under Explanation-Preserving Graph Perturbations",
@@ -6860,33 +6834,6 @@
         "comment": "Published in: IEEE Transactions on Communications, 2023"
     },
     {
-        "paper id": "2402.04768",
-        "abstract url": "https://arxiv.org/abs/2402.04768",
-        "title": "Robot Interaction Behavior Generation based on Social Motion Forecasting for Human-Robot Interaction",
-        "rating": "-3",
-        "keywords": [
-            [
-                "synthesize"
-            ],
-            [
-                "Robot"
-            ],
-            [
-                "Forecasting"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Integrating robots into populated environments is a complex challenge that requires an understanding of human social dynamics. In this work, we propose to model social motion forecasting in a shared human-robot representation space, which facilitates us to synthesize robot motions that interact with humans in social scenarios despite not observing any robot in the motion training. We develop a transformer-based architecture called ECHO, which operates in the aforementioned shared space to predict the future motions of the agents encountered in social scenarios. Contrary to prior works, we reformulate the social motion problem as the refinement of the predicted individual motions based on the surrounding agents, which facilitates the training while allowing for single-motion forecasting when only one human is in the scene. We evaluate our model in multi-person and human-robot motion forecasting tasks and obtain state-of-the-art performance by a large margin while being efficient and performing in real-time. Additionally, our qualitative results showcase the effectiveness of our approach in generating human-robot interaction behaviors that can be controlled via text commands. Webpage: https://evm7.github.io/ECHO/",
-        "subjects": [
-            "cs.RO",
-            "cs.CV",
-            "cs.HC"
-        ],
-        "comment": "Accepted at ICRA 2024. Webpage: https://evm7.github.io/ECHO/"
-    },
-    {
         "paper id": "2402.04854",
         "abstract url": "https://arxiv.org/abs/2402.04854",
         "title": "Hierarchical Tree-structured Knowledge Graph For Academic Insight Survey",
@@ -7031,6 +6978,31 @@
         "abstract": "Recent studies have demonstrated the immense potential of exploiting muscle actuator morphology for natural and robust movement -- in simulation. A validation on real robotic hardware is yet missing. In this study, we emulate muscle actuator properties on hardware in real-time, taking advantage of modern and affordable electric motors. We demonstrate that our setup can emulate a simplified muscle model on a real robot while being controlled by a learned policy. We improve upon an existing muscle model by deriving a damping rule that ensures that the model is not only performant and stable but also tuneable for the real hardware. Our policies are trained by reinforcement learning entirely in simulation, where we show that previously reported benefits of muscles extend to the case of quadruped locomotion and hopping: the learned policies are more robust and exhibit more regular gaits. Finally, we confirm that the learned policies can be executed on real hardware and show that sim-to-real transfer with real-time emulated muscles on a quadruped robot is possible. These results show that artificial muscles can be highly beneficial actuators for future generations of robust legged robots.",
         "subjects": [
             "cs.RO"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2402.04668",
+        "abstract url": "https://arxiv.org/abs/2402.04668",
+        "title": "A Perspective on Individualized Treatment Effects Estimation from Time-series Health Data",
+        "rating": "-3.5",
+        "keywords": [
+            [
+                "medical",
+                "Health",
+                "Healthcare",
+                "clinical"
+            ],
+            [
+                "tabular"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "The burden of diseases is rising worldwide, with unequal treatment efficacy for patient populations that are underrepresented in clinical trials. Healthcare, however, is driven by the average population effect of medical treatments and, therefore, operates in a \"one-size-fits-all\" approach, not necessarily what best fits each patient. These facts suggest a pressing need for methodologies to study individualized treatment effects (ITE) to drive personalized treatment. Despite the increased interest in machine-learning-driven ITE estimation models, the vast majority focus on tabular data with limited review and understanding of methodologies proposed for time-series electronic health records (EHRs). To this end, this work provides an overview of ITE works for time-series data and insights into future research. The work summarizes the latest work in the literature and reviews it in light of theoretical assumptions, types of treatment settings, and computational frameworks. Furthermore, this work discusses challenges and future research directions for ITEs in a time-series setting. We hope this work opens new directions and serves as a resource for understanding one of the exciting yet under-studied research areas.",
+        "subjects": [
+            "cs.LG"
         ],
         "comment": null
     },
@@ -7769,6 +7741,19 @@
             "cs.CR"
         ],
         "comment": "32 pages. 5 figures. Submitted"
+    },
+    {
+        "paper id": "2402.05061",
+        "abstract url": "https://arxiv.org/abs/2402.05061",
+        "title": "$H_{\\infty}$-Optimal Estimator Synthesis for Coupled Linear 2D PDEs using Convex Optimization",
+        "rating": "-10",
+        "keywords": [],
+        "abstract": "Any suitably well-posed PDE in two spatial dimensions can be represented as a Partial Integral Equation (PIE) -- with system dynamics parameterized using Partial Integral (PI) operators. Furthermore, $L_2$-gain analysis of PDEs with a PIE representation can be posed as a linear operator inequality, which can be solved using convex optimization. In this paper, we use these results to derive a convex-optimization-based test for constructing an $H_{\\infty}$-optimal estimator for 2D PDEs. In particular, we first use PIEs to represent an arbitrary well-posed 2D PDE where sensor measurements occur along some boundary of the domain. We then parameterize an associated Luenberger-type estimator using a PI operator $\\mathcal{L}$ as the observer gain. Examining the error dynamics of this estimator, we prove that an upper bound on the $H_{\\infty}$-norm of these error dynamics can be minimized by solving a linear operator inequality on PI operator variables. Finally, we propose an analytical formula for inversion of 2D PI operators and use this formula to reconstruct the Luenberger gain $\\mathcal{L}$. We implement these results in the PIETOOLS software suite -- applying the methodology and simulating the resulting observer for an unstable 2D heat equation with boundary observations.",
+        "subjects": [
+            "math.OC",
+            "eess.SY"
+        ],
+        "comment": null
     },
     {
         "paper id": "2402.05083",

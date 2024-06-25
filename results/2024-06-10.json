@@ -120,7 +120,7 @@
         "rating": "2",
         "keywords": [
             [
-                "parameter-efficient",
+                "memory efficient",
                 "PEFT",
                 "efficient fine-tuning"
             ],
@@ -158,6 +158,27 @@
             "cs.LG"
         ],
         "comment": "18 pages, 2 figures"
+    },
+    {
+        "paper id": "2406.06484",
+        "abstract url": "https://arxiv.org/abs/2406.06484",
+        "title": "Parallelizing Linear Transformers with the Delta Rule over Sequence Length",
+        "rating": "2",
+        "keywords": [
+            [
+                "memory-efficient"
+            ],
+            [
+                "cs.LG",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Transformers with linear attention (i.e., linear transformers) and state-space models have recently been suggested as a viable linear-time alternative to transformers with softmax attention. However, these models still underperform transformers especially on tasks that require in-context retrieval. While more expressive variants of linear transformers which replace the additive outer-product update in linear transformers with the delta rule have been found to be more effective at associative recall, existing algorithms for training such models do not parallelize over sequence length and are thus inefficient to train on modern hardware. This work describes a hardware-efficient algorithm for training linear transformers with the delta rule, which exploits a memory-efficient representation for computing products of Householder matrices. This algorithm allows us to scale up DeltaNet to standard language modeling settings. We train a 1.3B model for 100B tokens and find that it outperforms recent linear-time baselines such as Mamba and GLA in terms of perplexity and zero-shot performance on downstream tasks (including on tasks that focus on recall). We also experiment with two hybrid models which combine DeltaNet layers with (1) sliding-window attention layers every other layer or (2) two global attention layers, and find that these hybrid models outperform strong transformer baselines.",
+        "subjects": [
+            "cs.LG",
+            "cs.CL"
+        ],
+        "comment": "Preprint"
     },
     {
         "paper id": "2406.06037",
@@ -243,34 +264,14 @@
         "comment": "accepted to ICML 2024"
     },
     {
-        "paper id": "2406.06086",
-        "abstract url": "https://arxiv.org/abs/2406.06086",
-        "title": "RawBMamba: End-to-End Bidirectional State Space Model for Audio Deepfake Detection",
-        "rating": "1.5",
-        "keywords": [
-            [
-                "cs.SD",
-                "eess.AS"
-            ],
-            [
-                "Interspeech"
-            ]
-        ],
-        "abstract": "Fake artefacts for discriminating between bonafide and fake audio can exist in both short- and long-range segments. Therefore, combining local and global feature information can effectively discriminate between bonafide and fake audio. This paper proposes an end-to-end bidirectional state space model, named RawBMamba, to capture both short- and long-range discriminative information for audio deepfake detection. Specifically, we use sinc Layer and multiple convolutional layers to capture short-range features, and then design a bidirectional Mamba to address Mamba's unidirectional modelling problem and further capture long-range feature information. Moreover, we develop a bidirectional fusion module to integrate embeddings, enhancing audio context representation and combining short- and long-range information. The results show that our proposed RawBMamba achieves a 34.1\\% improvement over Rawformer on ASVspoof2021 LA dataset, and demonstrates competitive performance on other datasets.",
-        "subjects": [
-            "cs.SD",
-            "eess.AS"
-        ],
-        "comment": "Accepted by Interspeech 2024"
-    },
-    {
-        "paper id": "2406.06185",
-        "abstract url": "https://arxiv.org/abs/2406.06185",
-        "title": "EARS: An Anechoic Fullband Speech Dataset Benchmarked for Speech Enhancement and Dereverberation",
+        "paper id": "2406.06403",
+        "abstract url": "https://arxiv.org/abs/2406.06403",
+        "title": "Meta Learning Text-to-Speech Synthesis in over 7000 Languages",
         "rating": "1.5",
         "keywords": [
             [
                 "cs.LG",
+                "cs.CL",
                 "cs.SD",
                 "eess.AS"
             ],
@@ -278,13 +279,37 @@
                 "Interspeech"
             ]
         ],
-        "abstract": "We release the EARS (Expressive Anechoic Recordings of Speech) dataset, a high-quality speech dataset comprising 107 speakers from diverse backgrounds, totaling in 100 hours of clean, anechoic speech data. The dataset covers a large range of different speaking styles, including emotional speech, different reading styles, non-verbal sounds, and conversational freeform speech. We benchmark various methods for speech enhancement and dereverberation on the dataset and evaluate their performance through a set of instrumental metrics. In addition, we conduct a listening test with 20 participants for the speech enhancement task, where a generative method is preferred. We introduce a blind test set that allows for automatic online evaluation of uploaded data. Dataset download links and automatic evaluation server can be found online.",
+        "abstract": "In this work, we take on the challenging task of building a single text-to-speech synthesis system that is capable of generating speech in over 7000 languages, many of which lack sufficient data for traditional TTS development. By leveraging a novel integration of massively multilingual pretraining and meta learning to approximate language representations, our approach enables zero-shot speech synthesis in languages without any available data. We validate our system's performance through objective measures and human evaluation across a diverse linguistic landscape. By releasing our code and models publicly, we aim to empower communities with limited linguistic resources and foster further innovation in the field of speech technology.",
         "subjects": [
-            "eess.AS",
+            "cs.CL",
             "cs.LG",
-            "cs.SD"
+            "cs.SD",
+            "eess.AS"
         ],
-        "comment": "Accepted at Interspeech 2024"
+        "comment": "accepted at Interspeech 2024"
+    },
+    {
+        "paper id": "2406.06406",
+        "abstract url": "https://arxiv.org/abs/2406.06406",
+        "title": "Controlling Emotion in Text-to-Speech with Natural Language Prompts",
+        "rating": "1.5",
+        "keywords": [
+            [
+                "cs.CL",
+                "cs.SD",
+                "eess.AS"
+            ],
+            [
+                "Interspeech"
+            ]
+        ],
+        "abstract": "In recent years, prompting has quickly become one of the standard ways of steering the outputs of generative machine learning models, due to its intuitive use of natural language. In this work, we propose a system conditioned on embeddings derived from an emotionally rich text that serves as prompt. Thereby, a joint representation of speaker and prompt embeddings is integrated at several points within a transformer-based architecture. Our approach is trained on merged emotional speech and text datasets and varies prompts in each training iteration to increase the generalization capabilities of the model. Objective and subjective evaluation results demonstrate the ability of the conditioned synthesis system to accurately transfer the emotions present in a prompt to speech. At the same time, precise tractability of speaker identities as well as overall high speech quality and intelligibility are maintained.",
+        "subjects": [
+            "cs.CL",
+            "cs.SD",
+            "eess.AS"
+        ],
+        "comment": "accepted at Interspeech 2024"
     },
     {
         "paper id": "2406.06420",
@@ -1174,44 +1199,6 @@
         "comment": null
     },
     {
-        "paper id": "2406.06469",
-        "abstract url": "https://arxiv.org/abs/2406.06469",
-        "title": "Husky: A Unified, Open-Source Language Agent for Multi-Step Reasoning",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.LG",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Language agents perform complex tasks by using tools to execute each step precisely. However, most existing agents are based on proprietary models or designed to target specific tasks, such as mathematics or multi-hop question answering. We introduce Husky, a holistic, open-source language agent that learns to reason over a unified action space to address a diverse set of complex tasks involving numerical, tabular, and knowledge-based reasoning. Husky iterates between two stages: 1) generating the next action to take towards solving a given task and 2) executing the action using expert models and updating the current solution state. We identify a thorough ontology of actions for addressing complex tasks and curate high-quality data to train expert models for executing these actions. Our experiments show that Husky outperforms prior language agents across 14 evaluation datasets. Moreover, we introduce HuskyQA, a new evaluation set which stress tests language agents for mixed-tool reasoning, with a focus on retrieving missing knowledge and performing numerical reasoning. Despite using 7B models, Husky matches or even exceeds frontier LMs such as GPT-4 on these tasks, showcasing the efficacy of our holistic approach in addressing complex reasoning problems. Our code and models are available at https://github.com/agent-husky/Husky-v1.",
-        "subjects": [
-            "cs.AI",
-            "cs.CL",
-            "cs.LG"
-        ],
-        "comment": "50 pages, 42 figures. Project webpage available [here](https://agent-husky.github.io/)"
-    },
-    {
-        "paper id": "2406.06484",
-        "abstract url": "https://arxiv.org/abs/2406.06484",
-        "title": "Parallelizing Linear Transformers with the Delta Rule over Sequence Length",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.LG",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Transformers with linear attention (i.e., linear transformers) and state-space models have recently been suggested as a viable linear-time alternative to transformers with softmax attention. However, these models still underperform transformers especially on tasks that require in-context retrieval. While more expressive variants of linear transformers which replace the additive outer-product update in linear transformers with the delta rule have been found to be more effective at associative recall, existing algorithms for training such models do not parallelize over sequence length and are thus inefficient to train on modern hardware. This work describes a hardware-efficient algorithm for training linear transformers with the delta rule, which exploits a memory-efficient representation for computing products of Householder matrices. This algorithm allows us to scale up DeltaNet to standard language modeling settings. We train a 1.3B model for 100B tokens and find that it outperforms recent linear-time baselines such as Mamba and GLA in terms of perplexity and zero-shot performance on downstream tasks (including on tasks that focus on recall). We also experiment with two hybrid models which combine DeltaNet layers with (1) sliding-window attention layers every other layer or (2) two global attention layers, and find that these hybrid models outperform strong transformer baselines.",
-        "subjects": [
-            "cs.LG",
-            "cs.CL"
-        ],
-        "comment": "Preprint"
-    },
-    {
         "paper id": "2406.06485",
         "abstract url": "https://arxiv.org/abs/2406.06485",
         "title": "Can Language Models Serve as Text-Based World Simulators?",
@@ -1555,6 +1542,22 @@
         "comment": "ACL 2024"
     },
     {
+        "paper id": "2406.06847",
+        "abstract url": "https://arxiv.org/abs/2406.06847",
+        "title": "Generalized W-Net: Arbitrary-style Chinese Character Synthesization",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Synthesizing Chinese characters with consistent style using few stylized examples is challenging. Existing models struggle to generate arbitrary style characters with limited examples. In this paper, we propose the Generalized W-Net, a novel class of W-shaped architectures that addresses this. By incorporating Adaptive Instance Normalization and introducing multi-content, our approach can synthesize Chinese characters in any desired style, even with limited examples. It handles seen and unseen styles during training and can generate new character contents. Experimental results demonstrate the effectiveness of our approach.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2406.06852",
         "abstract url": "https://arxiv.org/abs/2406.06852",
         "title": "A Survey of Backdoor Attacks and Defenses on Large Language Models: Implications for Security Measures",
@@ -1751,7 +1754,6 @@
         "keywords": [
             [
                 "Diffusion",
-                "synthesize",
                 "Video Editing"
             ],
             [
@@ -1785,6 +1787,30 @@
             "cs.LG"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2406.06086",
+        "abstract url": "https://arxiv.org/abs/2406.06086",
+        "title": "RawBMamba: End-to-End Bidirectional State Space Model for Audio Deepfake Detection",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "Deepfake"
+            ],
+            [
+                "cs.SD",
+                "eess.AS"
+            ],
+            [
+                "Interspeech"
+            ]
+        ],
+        "abstract": "Fake artefacts for discriminating between bonafide and fake audio can exist in both short- and long-range segments. Therefore, combining local and global feature information can effectively discriminate between bonafide and fake audio. This paper proposes an end-to-end bidirectional state space model, named RawBMamba, to capture both short- and long-range discriminative information for audio deepfake detection. Specifically, we use sinc Layer and multiple convolutional layers to capture short-range features, and then design a bidirectional Mamba to address Mamba's unidirectional modelling problem and further capture long-range feature information. Moreover, we develop a bidirectional fusion module to integrate embeddings, enhancing audio context representation and combining short- and long-range information. The results show that our proposed RawBMamba achieves a 34.1\\% improvement over Rawformer on ASVspoof2021 LA dataset, and demonstrates competitive performance on other datasets.",
+        "subjects": [
+            "cs.SD",
+            "eess.AS"
+        ],
+        "comment": "Accepted by Interspeech 2024"
     },
     {
         "paper id": "2406.06101",
@@ -1843,8 +1869,7 @@
         "rating": "0.5",
         "keywords": [
             [
-                "GAN",
-                "Synthesis"
+                "GAN"
             ],
             [
                 "cs.AI",
@@ -1959,6 +1984,32 @@
             "cs.LG"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2406.06185",
+        "abstract url": "https://arxiv.org/abs/2406.06185",
+        "title": "EARS: An Anechoic Fullband Speech Dataset Benchmarked for Speech Enhancement and Dereverberation",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "Speech Enhancement"
+            ],
+            [
+                "cs.LG",
+                "cs.SD",
+                "eess.AS"
+            ],
+            [
+                "Interspeech"
+            ]
+        ],
+        "abstract": "We release the EARS (Expressive Anechoic Recordings of Speech) dataset, a high-quality speech dataset comprising 107 speakers from diverse backgrounds, totaling in 100 hours of clean, anechoic speech data. The dataset covers a large range of different speaking styles, including emotional speech, different reading styles, non-verbal sounds, and conversational freeform speech. We benchmark various methods for speech enhancement and dereverberation on the dataset and evaluate their performance through a set of instrumental metrics. In addition, we conduct a listening test with 20 participants for the speech enhancement task, where a generative method is preferred. We introduce a blind test set that allows for automatic online evaluation of uploaded data. Dataset download links and automatic evaluation server can be found online.",
+        "subjects": [
+            "eess.AS",
+            "cs.LG",
+            "cs.SD"
+        ],
+        "comment": "Accepted at Interspeech 2024"
     },
     {
         "paper id": "2406.06192",
@@ -2226,60 +2277,6 @@
         "comment": "19 pages, 17 figures"
     },
     {
-        "paper id": "2406.06403",
-        "abstract url": "https://arxiv.org/abs/2406.06403",
-        "title": "Meta Learning Text-to-Speech Synthesis in over 7000 Languages",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "Synthesis"
-            ],
-            [
-                "cs.LG",
-                "cs.CL",
-                "cs.SD",
-                "eess.AS"
-            ],
-            [
-                "Interspeech"
-            ]
-        ],
-        "abstract": "In this work, we take on the challenging task of building a single text-to-speech synthesis system that is capable of generating speech in over 7000 languages, many of which lack sufficient data for traditional TTS development. By leveraging a novel integration of massively multilingual pretraining and meta learning to approximate language representations, our approach enables zero-shot speech synthesis in languages without any available data. We validate our system's performance through objective measures and human evaluation across a diverse linguistic landscape. By releasing our code and models publicly, we aim to empower communities with limited linguistic resources and foster further innovation in the field of speech technology.",
-        "subjects": [
-            "cs.CL",
-            "cs.LG",
-            "cs.SD",
-            "eess.AS"
-        ],
-        "comment": "accepted at Interspeech 2024"
-    },
-    {
-        "paper id": "2406.06406",
-        "abstract url": "https://arxiv.org/abs/2406.06406",
-        "title": "Controlling Emotion in Text-to-Speech with Natural Language Prompts",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CL",
-                "cs.SD",
-                "eess.AS"
-            ],
-            [
-                "Interspeech"
-            ]
-        ],
-        "abstract": "In recent years, prompting has quickly become one of the standard ways of steering the outputs of generative machine learning models, due to its intuitive use of natural language. In this work, we propose a system conditioned on embeddings derived from an emotionally rich text that serves as prompt. Thereby, a joint representation of speaker and prompt embeddings is integrated at several points within a transformer-based architecture. Our approach is trained on merged emotional speech and text datasets and varies prompts in each training iteration to increase the generalization capabilities of the model. Objective and subjective evaluation results demonstrate the ability of the conditioned synthesis system to accurately transfer the emotions present in a prompt to speech. At the same time, precise tractability of speaker identities as well as overall high speech quality and intelligibility are maintained.",
-        "subjects": [
-            "cs.CL",
-            "cs.SD",
-            "eess.AS"
-        ],
-        "comment": "accepted at Interspeech 2024"
-    },
-    {
         "paper id": "2406.06407",
         "abstract url": "https://arxiv.org/abs/2406.06407",
         "title": "A Taxonomy of Challenges to Curating Fair Datasets",
@@ -2456,22 +2453,6 @@
         "comment": null
     },
     {
-        "paper id": "2406.06487",
-        "abstract url": "https://arxiv.org/abs/2406.06487",
-        "title": "When is Multicalibration Post-Processing Necessary?",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Calibration is a well-studied property of predictors which guarantees meaningful uncertainty estimates. Multicalibration is a related notion -- originating in algorithmic fairness -- which requires predictors to be simultaneously calibrated over a potentially complex and overlapping collection of protected subpopulations (such as groups defined by ethnicity, race, or income). We conduct the first comprehensive study evaluating the usefulness of multicalibration post-processing across a broad set of tabular, image, and language datasets for models spanning from simple decision trees to 90 million parameter fine-tuned LLMs. Our findings can be summarized as follows: (1) models which are calibrated out of the box tend to be relatively multicalibrated without any additional post-processing; (2) multicalibration post-processing can help inherently uncalibrated models; and (3) traditional calibration measures may sometimes provide multicalibration implicitly. More generally, we also distill many independent observations which may be useful for practical and effective applications of multicalibration post-processing in real-world contexts.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2406.06494",
         "abstract url": "https://arxiv.org/abs/2406.06494",
         "title": "Scaling Continuous Latent Variable Models as Probabilistic Integral Circuits",
@@ -2540,6 +2521,25 @@
             "stat.ML"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2406.06514",
+        "abstract url": "https://arxiv.org/abs/2406.06514",
+        "title": "Random Features Approximation for Control-Affine Systems",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Modern data-driven control applications call for flexible nonlinear models that are amenable to principled controller synthesis and realtime feedback. Many nonlinear dynamical systems of interest are control affine. We propose two novel classes of nonlinear feature representations which capture control affine structure while allowing for arbitrary complexity in the state dependence. Our methods make use of random features (RF) approximations, inheriting the expressiveness of kernel methods at a lower computational cost. We formalize the representational capabilities of our methods by showing their relationship to the Affine Dot Product (ADP) kernel proposed by Casta\u00f1eda et al. (2021) and a novel Affine Dense (AD) kernel that we introduce. We further illustrate the utility by presenting a case study of data-driven optimization-based control using control certificate functions (CCF). Simulation experiments on a double pendulum empirically demonstrate the advantages of our methods.",
+        "subjects": [
+            "cs.LG",
+            "eess.SY",
+            "math.OC",
+            "stat.ML"
+        ],
+        "comment": "25 pages, 3 figures"
     },
     {
         "paper id": "2406.06516",
@@ -2897,24 +2897,6 @@
         "comment": null
     },
     {
-        "paper id": "2406.06856",
-        "abstract url": "https://arxiv.org/abs/2406.06856",
-        "title": "Sample Complexity Reduction via Policy Difference Estimation in Tabular Reinforcement Learning",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "In this paper, we study the non-asymptotic sample complexity for the pure exploration problem in contextual bandits and tabular reinforcement learning (RL): identifying an epsilon-optimal policy from a set of policies with high probability. Existing work in bandits has shown that it is possible to identify the best policy by estimating only the difference between the behaviors of individual policies, which can be substantially cheaper than estimating the behavior of each policy directly. However, the best-known complexities in RL fail to take advantage of this and instead estimate the behavior of each policy directly. Does it suffice to estimate only the differences in the behaviors of policies in RL? We answer this question positively for contextual bandits but in the negative for tabular RL, showing a separation between contextual bandits and RL. However, inspired by this, we show that it almost suffices to estimate only the differences in RL: if we can estimate the behavior of a single reference policy, it suffices to only estimate how any other policy deviates from this reference policy. We develop an algorithm which instantiates this principle and obtains, to the best of our knowledge, the tightest known bound on the sample complexity of tabular RL.",
-        "subjects": [
-            "cs.LG",
-            "cs.AI"
-        ],
-        "comment": "59 pages, 2 Figures"
-    },
-    {
         "paper id": "2406.06858",
         "abstract url": "https://arxiv.org/abs/2406.06858",
         "title": "FLUX: Fast Software-based Communication Overlap On GPUs Through Kernel Fusion",
@@ -3001,24 +2983,6 @@
         "comment": null
     },
     {
-        "paper id": "2406.06891",
-        "abstract url": "https://arxiv.org/abs/2406.06891",
-        "title": "Tokenize features, enhancing tables: the FT-TABPFN model for tabular classification",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Traditional methods for tabular classification usually rely on supervised learning from scratch, which requires extensive training data to determine model parameters. However, a novel approach called Prior-Data Fitted Networks (TabPFN) has changed this paradigm. TabPFN uses a 12-layer transformer trained on large synthetic datasets to learn universal tabular representations. This method enables fast and accurate predictions on new tasks with a single forward pass and no need for additional training. Although TabPFN has been successful on small datasets, it generally shows weaker performance when dealing with categorical features. To overcome this limitation, we propose FT-TabPFN, which is an enhanced version of TabPFN that includes a novel Feature Tokenization layer to better handle classification features. By fine-tuning it for downstream tasks, FT-TabPFN not only expands the functionality of the original model but also significantly improves its applicability and accuracy in tabular classification. Our full source code is available for community use and development.",
-        "subjects": [
-            "cs.LG",
-            "cs.AI"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2406.06893",
         "abstract url": "https://arxiv.org/abs/2406.06893",
         "title": "Transformers Provably Learn Sparse Token Selection While Fully-Connected Nets Cannot",
@@ -3088,6 +3052,22 @@
             "stat.ML"
         ],
         "comment": "21 pages, 11 figures"
+    },
+    {
+        "paper id": "2406.06915",
+        "abstract url": "https://arxiv.org/abs/2406.06915",
+        "title": "Scalability in Workforce Management: Applying Scalability Principles to Foster a Four-Day Work Week",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "cs.CY"
+            ]
+        ],
+        "abstract": "The traditional five-day workweek faces mounting challenges, prompting exploration of alternative models like the four-day workweek. This research explores the transformative potential of scalability principles derived from cloud computing and IT in redefining workforce management for a four-day workweek. The study employs a Multivocal Literacy Research methodology, combining grey literature and systematic review approaches. Through a comprehensive review of related work, the challenges, and benefits of transitioning to a four-day workweek are explored. Pilot programs, clear communication, and agility are identified as critical success factors. The synthesis of scalability principles in workforce management serves as a powerful framework for a smooth transition towards a four-day workweek. By prioritizing adaptability, dynamic resource allocation, and data-driven insights, organizations can unlock the full potential of a compressed work schedule. This research contributes valuable insights for organizations seeking to thrive in the evolving landscape of modern work structures and prioritizing employee well-being.",
+        "subjects": [
+            "cs.CY"
+        ],
+        "comment": null
     },
     {
         "paper id": "2406.06934",
@@ -3181,28 +3161,6 @@
             "cs.CL"
         ],
         "comment": "Accepted at ACL 2024 in the main track"
-    },
-    {
-        "paper id": "2406.06045",
-        "abstract url": "https://arxiv.org/abs/2406.06045",
-        "title": "Synthesizing Efficient Data with Diffusion Models for Person Re-Identification Pre-Training",
-        "rating": "0",
-        "keywords": [
-            [
-                "Diffusion",
-                "Synthesizing"
-            ],
-            [
-                "cs.AI",
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Existing person re-identification (Re-ID) methods principally deploy the ImageNet-1K dataset for model initialization, which inevitably results in sub-optimal situations due to the large domain gap. One of the key challenges is that building large-scale person Re-ID datasets is time-consuming. Some previous efforts address this problem by collecting person images from the internet e.g., LUPerson, but it struggles to learn from unlabeled, uncontrollable, and noisy data. In this paper, we present a novel paradigm Diffusion-ReID to efficiently augment and generate diverse images based on known identities without requiring any cost of data collection and annotation. Technically, this paradigm unfolds in two stages: generation and filtering. During the generation stage, we propose Language Prompts Enhancement (LPE) to ensure the ID consistency between the input image sequence and the generated images. In the diffusion process, we propose a Diversity Injection (DI) module to increase attribute diversity. In order to make the generated data have higher quality, we apply a Re-ID confidence threshold filter to further remove the low-quality images. Benefiting from our proposed paradigm, we first create a new large-scale person Re-ID dataset Diff-Person, which consists of over 777K images from 5,183 identities. Next, we build a stronger person Re-ID backbone pre-trained on our Diff-Person. Extensive experiments are conducted on four person Re-ID benchmarks in six widely used settings. Compared with other pre-training and self-supervised competitors, our approach shows significant superiority.",
-        "subjects": [
-            "cs.CV",
-            "cs.AI"
-        ],
-        "comment": null
     },
     {
         "paper id": "2406.06062",
@@ -3304,50 +3262,6 @@
             "cs.AI"
         ],
         "comment": "6 pages, 2 figures"
-    },
-    {
-        "paper id": "2406.06139",
-        "abstract url": "https://arxiv.org/abs/2406.06139",
-        "title": "Thunder : Unified Regression-Diffusion Speech Enhancement with a Single Reverse Step using Brownian Bridge",
-        "rating": "0",
-        "keywords": [
-            [
-                "Diffusion"
-            ],
-            [
-                "cs.AI",
-                "cs.CL",
-                "cs.SD",
-                "eess.AS"
-            ]
-        ],
-        "abstract": "Diffusion-based speech enhancement has shown promising results, but can suffer from a slower inference time. Initializing the diffusion process with the enhanced audio generated by a regression-based model can be used to reduce the computational steps required. However, these approaches often necessitate a regression model, further increasing the system's complexity. We propose Thunder, a unified regression-diffusion model that utilizes the Brownian bridge process which can allow the model to act in both modes. The regression mode can be accessed by setting the diffusion time step closed to 1. However, the standard score-based diffusion modeling does not perform well in this setup due to gradient instability. To mitigate this problem, we modify the diffusion model to predict the clean speech instead of the score function, achieving competitive performance with a more compact model size and fewer reverse steps.",
-        "subjects": [
-            "cs.SD",
-            "cs.AI",
-            "cs.CL",
-            "eess.AS"
-        ],
-        "comment": "5 pages, 3 figures, 4 tables, This paper will be submitted in the interspeech conference"
-    },
-    {
-        "paper id": "2406.06160",
-        "abstract url": "https://arxiv.org/abs/2406.06160",
-        "title": "The Effect of Training Dataset Size on Discriminative and Diffusion-Based Speech Enhancement Systems",
-        "rating": "0",
-        "keywords": [
-            [
-                "Diffusion"
-            ],
-            [
-                "eess.AS"
-            ]
-        ],
-        "abstract": "The performance of deep neural network-based speech enhancement systems typically increases with the training dataset size. However, studies that investigated the effect of training dataset size on speech enhancement performance did not consider recent approaches, such as diffusion-based generative models. Diffusion models are typically trained with massive datasets for image generation tasks, but whether this is also required for speech enhancement is unknown. Moreover, studies that investigated the effect of training dataset size did not control for the data diversity. It is thus unclear whether the performance improvement was due to the increased dataset size or diversity. Therefore, we systematically investigate the effect of training dataset size on the performance of popular state-of-the-art discriminative and diffusion-based speech enhancement systems. We control for the data diversity by using a fixed set of speech utterances, noise segments and binaural room impulse responses to generate datasets of different sizes. We find that the diffusion-based systems do not benefit from increasing the training dataset size as much as the discriminative systems. They perform the best relative to the discriminative systems with datasets of 10 h or less, but they are outperformed by the discriminative systems with datasets of 100 h or more.",
-        "subjects": [
-            "eess.AS"
-        ],
-        "comment": null
     },
     {
         "paper id": "2406.06247",
@@ -3510,8 +3424,7 @@
         "rating": "0",
         "keywords": [
             [
-                "Diffusion",
-                "synthesis"
+                "Diffusion"
             ],
             [
                 "cs.AI",
@@ -3695,25 +3608,6 @@
         "abstract": "Legal tasks and datasets are often used as benchmarks for the capabilities of language models. However, openly available annotated datasets are rare. In this paper, we introduce AGB-DE, a corpus of 3,764 clauses from German consumer contracts that have been annotated and legally assessed by legal experts. Together with the data, we present a first baseline for the task of detecting potentially void clauses, comparing the performance of an SVM baseline with three fine-tuned open language models and the performance of GPT-3.5. Our results show the challenging nature of the task, with no approach exceeding an F1-score of 0.54. While the fine-tuned models often performed better with regard to precision, GPT-3.5 outperformed the other approaches with regard to recall. An analysis of the errors indicates that one of the main challenges could be the correct interpretation of complex clauses, rather than the decision boundaries of what is permissible and what is not.",
         "subjects": [
             "cs.CL"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2406.06847",
-        "abstract url": "https://arxiv.org/abs/2406.06847",
-        "title": "Generalized W-Net: Arbitrary-style Chinese Character Synthesization",
-        "rating": "0",
-        "keywords": [
-            [
-                "Synthesizing"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Synthesizing Chinese characters with consistent style using few stylized examples is challenging. Existing models struggle to generate arbitrary style characters with limited examples. In this paper, we propose the Generalized W-Net, a novel class of W-shaped architectures that addresses this. By incorporating Adaptive Instance Normalization and introducing multi-content, our approach can synthesize Chinese characters in any desired style, even with limited examples. It handles seen and unseen styles during training and can generate new character contents. Experimental results demonstrate the effectiveness of our approach.",
-        "subjects": [
-            "cs.CV"
         ],
         "comment": null
     },
@@ -4118,28 +4012,6 @@
         "comment": "Accepted for presentation at the Conference on Learning Theory (COLT) 2024"
     },
     {
-        "paper id": "2406.06514",
-        "abstract url": "https://arxiv.org/abs/2406.06514",
-        "title": "Random Features Approximation for Control-Affine Systems",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Modern data-driven control applications call for flexible nonlinear models that are amenable to principled controller synthesis and realtime feedback. Many nonlinear dynamical systems of interest are control affine. We propose two novel classes of nonlinear feature representations which capture control affine structure while allowing for arbitrary complexity in the state dependence. Our methods make use of random features (RF) approximations, inheriting the expressiveness of kernel methods at a lower computational cost. We formalize the representational capabilities of our methods by showing their relationship to the Affine Dot Product (ADP) kernel proposed by Casta\u00f1eda et al. (2021) and a novel Affine Dense (AD) kernel that we introduce. We further illustrate the utility by presenting a case study of data-driven optimization-based control using control certificate functions (CCF). Simulation experiments on a double pendulum empirically demonstrate the advantages of our methods.",
-        "subjects": [
-            "cs.LG",
-            "eess.SY",
-            "math.OC",
-            "stat.ML"
-        ],
-        "comment": "25 pages, 3 figures"
-    },
-    {
         "paper id": "2406.06652",
         "abstract url": "https://arxiv.org/abs/2406.06652",
         "title": "Improving Generalization of Neural Vehicle Routing Problem Solvers Through the Lens of Model Architecture",
@@ -4331,25 +4203,6 @@
         "comment": "15 pages, 6 figures"
     },
     {
-        "paper id": "2406.06915",
-        "abstract url": "https://arxiv.org/abs/2406.06915",
-        "title": "Scalability in Workforce Management: Applying Scalability Principles to Foster a Four-Day Work Week",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CY"
-            ]
-        ],
-        "abstract": "The traditional five-day workweek faces mounting challenges, prompting exploration of alternative models like the four-day workweek. This research explores the transformative potential of scalability principles derived from cloud computing and IT in redefining workforce management for a four-day workweek. The study employs a Multivocal Literacy Research methodology, combining grey literature and systematic review approaches. Through a comprehensive review of related work, the challenges, and benefits of transitioning to a four-day workweek are explored. Pilot programs, clear communication, and agility are identified as critical success factors. The synthesis of scalability principles in workforce management serves as a powerful framework for a smooth transition towards a four-day workweek. By prioritizing adaptability, dynamic resource allocation, and data-driven insights, organizations can unlock the full potential of a compressed work schedule. This research contributes valuable insights for organizations seeking to thrive in the evolving landscape of modern work structures and prioritizing employee well-being.",
-        "subjects": [
-            "cs.CY"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2406.09049",
         "abstract url": "https://arxiv.org/abs/2406.09049",
         "title": "Efficiently Deciding Algebraic Equivalence of Bow-Free Acyclic Path Diagrams",
@@ -4385,6 +4238,30 @@
             "cs.CR"
         ],
         "comment": "USENIX Security Symposium, 2024"
+    },
+    {
+        "paper id": "2406.06045",
+        "abstract url": "https://arxiv.org/abs/2406.06045",
+        "title": "Synthesizing Efficient Data with Diffusion Models for Person Re-Identification Pre-Training",
+        "rating": "-1",
+        "keywords": [
+            [
+                "Diffusion"
+            ],
+            [
+                "Re-Identification"
+            ],
+            [
+                "cs.AI",
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Existing person re-identification (Re-ID) methods principally deploy the ImageNet-1K dataset for model initialization, which inevitably results in sub-optimal situations due to the large domain gap. One of the key challenges is that building large-scale person Re-ID datasets is time-consuming. Some previous efforts address this problem by collecting person images from the internet e.g., LUPerson, but it struggles to learn from unlabeled, uncontrollable, and noisy data. In this paper, we present a novel paradigm Diffusion-ReID to efficiently augment and generate diverse images based on known identities without requiring any cost of data collection and annotation. Technically, this paradigm unfolds in two stages: generation and filtering. During the generation stage, we propose Language Prompts Enhancement (LPE) to ensure the ID consistency between the input image sequence and the generated images. In the diffusion process, we propose a Diversity Injection (DI) module to increase attribute diversity. In order to make the generated data have higher quality, we apply a Re-ID confidence threshold filter to further remove the low-quality images. Benefiting from our proposed paradigm, we first create a new large-scale person Re-ID dataset Diff-Person, which consists of over 777K images from 5,183 identities. Next, we build a stronger person Re-ID backbone pre-trained on our Diff-Person. Extensive experiments are conducted on four person Re-ID benchmarks in six widely used settings. Compared with other pre-training and self-supervised competitors, our approach shows significant superiority.",
+        "subjects": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "comment": null
     },
     {
         "paper id": "2406.06050",
@@ -4553,6 +4430,34 @@
         "comment": null
     },
     {
+        "paper id": "2406.06139",
+        "abstract url": "https://arxiv.org/abs/2406.06139",
+        "title": "Thunder : Unified Regression-Diffusion Speech Enhancement with a Single Reverse Step using Brownian Bridge",
+        "rating": "-1",
+        "keywords": [
+            [
+                "Diffusion"
+            ],
+            [
+                "Speech Enhancement"
+            ],
+            [
+                "cs.AI",
+                "cs.CL",
+                "cs.SD",
+                "eess.AS"
+            ]
+        ],
+        "abstract": "Diffusion-based speech enhancement has shown promising results, but can suffer from a slower inference time. Initializing the diffusion process with the enhanced audio generated by a regression-based model can be used to reduce the computational steps required. However, these approaches often necessitate a regression model, further increasing the system's complexity. We propose Thunder, a unified regression-diffusion model that utilizes the Brownian bridge process which can allow the model to act in both modes. The regression mode can be accessed by setting the diffusion time step closed to 1. However, the standard score-based diffusion modeling does not perform well in this setup due to gradient instability. To mitigate this problem, we modify the diffusion model to predict the clean speech instead of the score function, achieving competitive performance with a more compact model size and fewer reverse steps.",
+        "subjects": [
+            "cs.SD",
+            "cs.AI",
+            "cs.CL",
+            "eess.AS"
+        ],
+        "comment": "5 pages, 3 figures, 4 tables, This paper will be submitted in the interspeech conference"
+    },
+    {
         "paper id": "2406.06146",
         "abstract url": "https://arxiv.org/abs/2406.06146",
         "title": "Revisiting 3D Cartesian Scatterplots with a Novel Plotting Framework and a Survey",
@@ -4619,6 +4524,28 @@
         "comment": "36 pages, 17 figures, 37th Conference on Neural Information Processing Systems (NeurIPS 2023)"
     },
     {
+        "paper id": "2406.06160",
+        "abstract url": "https://arxiv.org/abs/2406.06160",
+        "title": "The Effect of Training Dataset Size on Discriminative and Diffusion-Based Speech Enhancement Systems",
+        "rating": "-1",
+        "keywords": [
+            [
+                "Diffusion"
+            ],
+            [
+                "Speech Enhancement"
+            ],
+            [
+                "eess.AS"
+            ]
+        ],
+        "abstract": "The performance of deep neural network-based speech enhancement systems typically increases with the training dataset size. However, studies that investigated the effect of training dataset size on speech enhancement performance did not consider recent approaches, such as diffusion-based generative models. Diffusion models are typically trained with massive datasets for image generation tasks, but whether this is also required for speech enhancement is unknown. Moreover, studies that investigated the effect of training dataset size did not control for the data diversity. It is thus unclear whether the performance improvement was due to the increased dataset size or diversity. Therefore, we systematically investigate the effect of training dataset size on the performance of popular state-of-the-art discriminative and diffusion-based speech enhancement systems. We control for the data diversity by using a fixed set of speech utterances, noise segments and binaural room impulse responses to generate datasets of different sizes. We find that the diffusion-based systems do not benefit from increasing the training dataset size as much as the discriminative systems. They perform the best relative to the discriminative systems with datasets of 10 h or less, but they are outperformed by the discriminative systems with datasets of 100 h or more.",
+        "subjects": [
+            "eess.AS"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2406.06211",
         "abstract url": "https://arxiv.org/abs/2406.06211",
         "title": "iMotion-LLM: Motion Prediction Instruction Tuning",
@@ -4639,22 +4566,6 @@
             "cs.CV"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2406.06241",
-        "abstract url": "https://arxiv.org/abs/2406.06241",
-        "title": "Practical Boolean Decomposition for Delay-driven LUT Mapping",
-        "rating": "-1",
-        "keywords": [
-            [
-                "synthesizing"
-            ]
-        ],
-        "abstract": "Ashenhurst-Curtis decomposition (ACD) is a decomposition technique used, in particular, to map combinational logic into lookup tables (LUTs) structures when synthesizing hardware designs. However, available implementations of ACD suffer from excessive complexity, search-space restrictions, and slow run time, which limit their applicability and scalability. This paper presents a novel fast and versatile technique of ACD suitable for delay optimization. We use this new formulation to compute two-level decompositions into a variable number of LUTs and enhance delay-driven LUT mapping by performing ACD on the fly. Compared to state-of-the-art technology mapping, experiments on heavily optimized benchmarks demonstrate an average delay improvement of 12.39%, and area reduction of 2.20% with affordable run time. Additionally, our method improves 4 of the best delay results in the EPFL synthesis competition without employing design-space exploration techniques.",
-        "subjects": [
-            "cs.LO"
-        ],
-        "comment": "originally accepted at 33rd International Workshop on Logic & Synthesis 2024"
     },
     {
         "paper id": "2406.06252",
@@ -5003,8 +4914,7 @@
                 "3D"
             ],
             [
-                "GAN",
-                "synthesize"
+                "GAN"
             ],
             [
                 "cs.CV"
@@ -5108,6 +5018,29 @@
             "cs.MM"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2406.06469",
+        "abstract url": "https://arxiv.org/abs/2406.06469",
+        "title": "Husky: A Unified, Open-Source Language Agent for Multi-Step Reasoning",
+        "rating": "-1",
+        "keywords": [
+            [
+                "tabular"
+            ],
+            [
+                "cs.AI",
+                "cs.LG",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Language agents perform complex tasks by using tools to execute each step precisely. However, most existing agents are based on proprietary models or designed to target specific tasks, such as mathematics or multi-hop question answering. We introduce Husky, a holistic, open-source language agent that learns to reason over a unified action space to address a diverse set of complex tasks involving numerical, tabular, and knowledge-based reasoning. Husky iterates between two stages: 1) generating the next action to take towards solving a given task and 2) executing the action using expert models and updating the current solution state. We identify a thorough ontology of actions for addressing complex tasks and curate high-quality data to train expert models for executing these actions. Our experiments show that Husky outperforms prior language agents across 14 evaluation datasets. Moreover, we introduce HuskyQA, a new evaluation set which stress tests language agents for mixed-tool reasoning, with a focus on retrieving missing knowledge and performing numerical reasoning. Despite using 7B models, Husky matches or even exceeds frontier LMs such as GPT-4 on these tasks, showcasing the efficacy of our holistic approach in addressing complex reasoning problems. Our code and models are available at https://github.com/agent-husky/Husky-v1.",
+        "subjects": [
+            "cs.AI",
+            "cs.CL",
+            "cs.LG"
+        ],
+        "comment": "50 pages, 42 figures. Project webpage available [here](https://agent-husky.github.io/)"
     },
     {
         "paper id": "2406.06474",
@@ -5245,8 +5178,7 @@
                 "NeRF"
             ],
             [
-                "diffusion",
-                "synthesis"
+                "diffusion"
             ],
             [
                 "cs.AI",
@@ -5372,38 +5304,6 @@
         "subjects": [
             "cs.CL",
             "cs.IR"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2406.06724",
-        "abstract url": "https://arxiv.org/abs/2406.06724",
-        "title": "Stochastic Guidance of Buoyancy Controlled Vehicles under Ice Shelves using Ocean Currents",
-        "rating": "-1",
-        "keywords": [
-            [
-                "synthesize"
-            ]
-        ],
-        "abstract": "We propose a novel technique for guidance of buoyancy-controlled vehicles in uncertain under-ice ocean flows. In-situ melt rate measurements collected at the grounding zone of Antarctic ice shelves, where the ice shelf meets the underlying bedrock, are essential to constrain models of future sea level rise. Buoyancy-controlled vehicles, which control their vertical position in the water column through internal actuation but have no means of horizontal propulsion, offer an affordable and reliable platform for such in-situ data collection. However, reaching the grounding zone requires vehicles to traverse tens of kilometers under the ice shelf, with approximate position knowledge and no means of communication, in highly variable and uncertain ocean currents. To address this challenge, we propose a partially observable MDP approach that exploits model-based knowledge of the under-ice currents and, critically, of their uncertainty, to synthesize effective guidance policies. The approach uses approximate dynamic programming to model uncertainty in the currents, and QMDP to address localization uncertainty. Numerical experiments show that the policy can deliver up to 88.8% of underwater vehicles to the grounding zone -- a 33% improvement compared to state-of-the-art guidance techniques, and a 262% improvement over uncontrolled drifters. Collectively, these results show that model-based under-ice guidance is a highly promising technique for exploration of under-ice cavities, and has the potential to enable cost-effective and scalable access to these challenging and rarely observed environments.",
-        "subjects": [
-            "cs.RO"
-        ],
-        "comment": "Presented at IROS 2021"
-    },
-    {
-        "paper id": "2406.06732",
-        "abstract url": "https://arxiv.org/abs/2406.06732",
-        "title": "Mining for sustainability in cloud architecture among the discussions of software practitioners: building a dataset",
-        "rating": "-1",
-        "keywords": [
-            [
-                "synthesis"
-            ]
-        ],
-        "abstract": "The adoption of cloud computing is steadily increasing in designing and implementing software systems, thus it becomes imperative to consider the sustainability implications of these processes. While there has already been some academic research on this topic, there is a lack of perspective from practitioners. To bridge this gap, we utilize software repository mining techniques to examine 192 discussions among practitioners on the Software Engineering forum of the StackExchange platform, aiming to build an annotated dataset containing cloud architectural discussions and to understand the current discussion on sustainability in cloud architecture. To identify these discussions, we first put together a list of terms indicating sustainability as the topic. Our initial findings indicate practitioners mainly focus on design aspects (analysis, synthesis, and implementation) while avoiding complex activities like evaluation and maintenance. Technical sustainability is emphasized, while the economic dimension has the most discussions exclusively focused on it. This contrasts with previous academic literature, which highlighted environmental sustainability.",
-        "subjects": [
-            "cs.SE"
         ],
         "comment": null
     },
@@ -5581,22 +5481,6 @@
             "cs.DC"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2406.06902",
-        "abstract url": "https://arxiv.org/abs/2406.06902",
-        "title": "CodeScore-R: An Automated Robustness Metric for Assessing the FunctionalCorrectness of Code Synthesis",
-        "rating": "-1",
-        "keywords": [
-            [
-                "Synthesis"
-            ]
-        ],
-        "abstract": "Evaluation metrics are crucial in the field of code synthesis. Commonly used code evaluation metrics canbe classified into three types: match-based, semantic-based, and execution-based. Among them, the execution-basedPass@k metric accurately assesses the functionality of predicted code by executing test cases. However, calculatingthis metric requires a significant amount of overhead, necessitating the design of an automated evaluation metric thatcan assess the functionality of predicted code without the need for test cases. Additionally, a good evaluation metricshould be robust, that is the metric can maintain its accuracy even when the predicted code undergoes minor changes.To address these challenges, we propose an automated robust metric, called CodeScore-R, based on UniXcoder andcontrastive learning, for evaluating the functionality of code synthesis. CodeScore-R employs techniques such assketch-based processing, syntactic-equivalent transformations, and mutation testing to effectively mitigate theinterference caused by identifiers, syntax structures, and operators on evaluation results. Experimental resultsdemonstrate that in the tasks of code generation and migration in Java and Python, CodeScore-R outperforms otherevaluation metrics and is more closely aligned with the Pass@k metric, while exhibiting stronger robustness.",
-        "subjects": [
-            "cs.SE"
-        ],
-        "comment": "in Chinese language, Journal of Computer Research and Development"
     },
     {
         "paper id": "2406.06904",
@@ -5915,6 +5799,25 @@
         "comment": "10 pages, 3 figures; comments welcome!"
     },
     {
+        "paper id": "2406.06487",
+        "abstract url": "https://arxiv.org/abs/2406.06487",
+        "title": "When is Multicalibration Post-Processing Necessary?",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "tabular"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Calibration is a well-studied property of predictors which guarantees meaningful uncertainty estimates. Multicalibration is a related notion -- originating in algorithmic fairness -- which requires predictors to be simultaneously calibrated over a potentially complex and overlapping collection of protected subpopulations (such as groups defined by ethnicity, race, or income). We conduct the first comprehensive study evaluating the usefulness of multicalibration post-processing across a broad set of tabular, image, and language datasets for models spanning from simple decision trees to 90 million parameter fine-tuned LLMs. Our findings can be summarized as follows: (1) models which are calibrated out of the box tend to be relatively multicalibrated without any additional post-processing; (2) multicalibration post-processing can help inherently uncalibrated models; and (3) traditional calibration measures may sometimes provide multicalibration implicitly. More generally, we also distill many independent observations which may be useful for practical and effective applications of multicalibration post-processing in real-world contexts.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2406.06651",
         "abstract url": "https://arxiv.org/abs/2406.06651",
         "title": "Short-Term Electricity Demand Forecasting of Dhaka City Using CNN with Stacked BiLSTM",
@@ -6022,6 +5925,48 @@
             "cs.AI"
         ],
         "comment": "17 pages"
+    },
+    {
+        "paper id": "2406.06856",
+        "abstract url": "https://arxiv.org/abs/2406.06856",
+        "title": "Sample Complexity Reduction via Policy Difference Estimation in Tabular Reinforcement Learning",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "Tabular"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "In this paper, we study the non-asymptotic sample complexity for the pure exploration problem in contextual bandits and tabular reinforcement learning (RL): identifying an epsilon-optimal policy from a set of policies with high probability. Existing work in bandits has shown that it is possible to identify the best policy by estimating only the difference between the behaviors of individual policies, which can be substantially cheaper than estimating the behavior of each policy directly. However, the best-known complexities in RL fail to take advantage of this and instead estimate the behavior of each policy directly. Does it suffice to estimate only the differences in the behaviors of policies in RL? We answer this question positively for contextual bandits but in the negative for tabular RL, showing a separation between contextual bandits and RL. However, inspired by this, we show that it almost suffices to estimate only the differences in RL: if we can estimate the behavior of a single reference policy, it suffices to only estimate how any other policy deviates from this reference policy. We develop an algorithm which instantiates this principle and obtains, to the best of our knowledge, the tightest known bound on the sample complexity of tabular RL.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI"
+        ],
+        "comment": "59 pages, 2 Figures"
+    },
+    {
+        "paper id": "2406.06891",
+        "abstract url": "https://arxiv.org/abs/2406.06891",
+        "title": "Tokenize features, enhancing tables: the FT-TABPFN model for tabular classification",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "tabular"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Traditional methods for tabular classification usually rely on supervised learning from scratch, which requires extensive training data to determine model parameters. However, a novel approach called Prior-Data Fitted Networks (TabPFN) has changed this paradigm. TabPFN uses a 12-layer transformer trained on large synthetic datasets to learn universal tabular representations. This method enables fast and accurate predictions on new tasks with a single forward pass and no need for additional training. Although TabPFN has been successful on small datasets, it generally shows weaker performance when dealing with categorical features. To overcome this limitation, we propose FT-TabPFN, which is an enhanced version of TabPFN that includes a novel Feature Tokenization layer to better handle classification features. By fine-tuning it for downstream tasks, FT-TabPFN not only expands the functionality of the original model but also significantly improves its applicability and accuracy in tabular classification. Our full source code is available for community use and development.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI"
+        ],
+        "comment": null
     },
     {
         "paper id": "2406.06028",
@@ -6271,6 +6216,31 @@
         "comment": null
     },
     {
+        "paper id": "2406.06216",
+        "abstract url": "https://arxiv.org/abs/2406.06216",
+        "title": "Lighting Every Darkness with 3DGS: Fast Training and Real-Time Rendering for HDR View Synthesis",
+        "rating": "-2",
+        "keywords": [
+            [
+                "3D",
+                "Gaussian Splatting",
+                "depth",
+                "NeRF"
+            ],
+            [
+                "HDR"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Volumetric rendering based methods, like NeRF, excel in HDR view synthesis from RAWimages, especially for nighttime scenes. While, they suffer from long training times and cannot perform real-time rendering due to dense sampling requirements. The advent of 3D Gaussian Splatting (3DGS) enables real-time rendering and faster training. However, implementing RAW image-based view synthesis directly using 3DGS is challenging due to its inherent drawbacks: 1) in nighttime scenes, extremely low SNR leads to poor structure-from-motion (SfM) estimation in distant views; 2) the limited representation capacity of spherical harmonics (SH) function is unsuitable for RAW linear color space; and 3) inaccurate scene structure hampers downstream tasks such as refocusing. To address these issues, we propose LE3D (Lighting Every darkness with 3DGS). Our method proposes Cone Scatter Initialization to enrich the estimation of SfM, and replaces SH with a Color MLP to represent the RAW linear color space. Additionally, we introduce depth distortion and near-far regularizations to improve the accuracy of scene structure for downstream tasks. These designs enable LE3D to perform real-time novel view synthesis, HDR rendering, refocusing, and tone-mapping changes. Compared to previous volumetric rendering based methods, LE3D reduces training time to 1% and improves rendering speed by up to 4,000 times for 2K resolution images in terms of FPS. Code and viewer can be found in https://github.com/Srameo/LE3D .",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2406.06221",
         "abstract url": "https://arxiv.org/abs/2406.06221",
         "title": "Synchronous Programming with Refinement Types",
@@ -6327,6 +6297,22 @@
             "cs.RO"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2406.06261",
+        "abstract url": "https://arxiv.org/abs/2406.06261",
+        "title": "What All the PHUZZ Is About: A Coverage-guided Fuzzer for Finding Vulnerabilities in PHP Web Applications",
+        "rating": "-2",
+        "keywords": [
+            [
+                "SQL"
+            ]
+        ],
+        "abstract": "Coverage-guided fuzz testing has received significant attention from the research community, with a strong focus on binary applications, greatly disregarding other targets, such as web applications. The importance of the World Wide Web in everyone's life cannot be overstated, and to this day, many web applications are developed in PHP. In this work, we address the challenges of applying coverage-guided fuzzing to PHP web applications and introduce PHUZZ, a modular fuzzing framework for PHP web applications. PHUZZ uses novel approaches to detect more client-side and server-side vulnerability classes than state-of-the-art related work, including SQL injections, remote command injections, insecure deserialization, path traversal, external entity injection, cross-site scripting, and open redirection. We evaluate PHUZZ on a diverse set of artificial and real-world web applications with known and unknown vulnerabilities, and compare it against a variety of state-of-the-art fuzzers. In order to show PHUZZ' effectiveness, we fuzz over 1,000 API endpoints of the 115 most popular WordPress plugins, resulting in over 20 security issues and 2 new CVE-IDs. Finally, we make the framework publicly available to motivate and encourage further research on web application fuzz testing.",
+        "subjects": [
+            "cs.CR"
+        ],
+        "comment": "Preprint; Final version to be published in ASIA CCS '24: Proceedings of the 2024 ACM Asia Conference on Computer and Communications Security"
     },
     {
         "paper id": "2406.06288",
@@ -6429,25 +6415,6 @@
         "comment": null
     },
     {
-        "paper id": "2406.06394",
-        "abstract url": "https://arxiv.org/abs/2406.06394",
-        "title": "A Gigabit, DMA-enhanced Open-Source Ethernet Controller for Mixed-Criticality Systems",
-        "rating": "-2",
-        "keywords": [
-            [
-                "vehicle"
-            ],
-            [
-                "navigation"
-            ]
-        ],
-        "abstract": "The ongoing revolution in application domains targeting autonomous navigation, first and foremost automotive \"zonalization\", has increased the importance of certain off-chip communication interfaces, particularly Ethernet. The latter will play an essential role in next-generation vehicle architectures as the backbone connecting simultaneously and instantaneously the zonal/domain controllers. There is thereby an incumbent need to introduce a performant Ethernet controller in the open-source HW community, to be used as a proxy for architectural explorations and prototyping of mixed-criticality systems (MCSs). Driven by this trend, in this work, we propose a fully open-source, DMA-enhanced, technology-agnostic Gigabit Ethernet architecture that overcomes the limitations of existing open-source architectures, such as Lowrisc's Ethernet, often tied to FPGA implementation, performance-bound by sub-optimal design choices such as large memory buffers, and in general not mature enough to bridge the gap between academia and industry. Besides the area advantage, the proposed design increases packet transmission speed up to almost 3x compared to Lowrisc's and is validated through implementation and FPGA prototyping into two open-source, heterogeneous MCSs.",
-        "subjects": [
-            "cs.AR"
-        ],
-        "comment": "4 pages,4 figures, 21st ACM International Conference on Computing Frontiers Workshops and Special Sessions"
-    },
-    {
         "paper id": "2406.06422",
         "abstract url": "https://arxiv.org/abs/2406.06422",
         "title": "Notes on Various Errors and Jacobian Derivations for SLAM",
@@ -6507,6 +6474,31 @@
         "abstract": "A science map of topics is a visualization that shows topics identified algorithmically based on the bibliographic metadata of scientific publications. In practice not all topics are well represented in a science map. We analyzed how effectively different topics are represented in science maps created by clustering biomedical publications. To achieve this, we investigated which topic categories, obtained from MeSH terms, are better represented in science maps based on citation or text similarity networks. To evaluate the clustering effectiveness of topics, we determined the extent to which documents belonging to the same topic are grouped together in the same cluster. We found that the best and worst represented topic categories are the same for citation and text similarity networks. The best represented topic categories are diseases, psychology, anatomy, organisms and the techniques and equipment used for diagnostics and therapy, while the worst represented topic categories are natural science fields, geographical entities, information sciences and health care and occupations. Furthermore, for the diseases and organisms topic categories and for science maps with smaller clusters, we found that topics tend to be better represented in citation similarity networks than in text similarity networks.",
         "subjects": [
             "cs.DL"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2406.06526",
+        "abstract url": "https://arxiv.org/abs/2406.06526",
+        "title": "GaussianCity: Generative Gaussian Splatting for Unbounded 3D City Generation",
+        "rating": "-2",
+        "keywords": [
+            [
+                "3D",
+                "Gaussian Splatting",
+                "NeRF"
+            ],
+            [
+                "BEV",
+                "drone"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "3D city generation with NeRF-based methods shows promising generation results but is computationally inefficient. Recently 3D Gaussian Splatting (3D-GS) has emerged as a highly efficient alternative for object-level 3D generation. However, adapting 3D-GS from finite-scale 3D objects and humans to infinite-scale 3D cities is non-trivial. Unbounded 3D city generation entails significant storage overhead (out-of-memory issues), arising from the need to expand points to billions, often demanding hundreds of Gigabytes of VRAM for a city scene spanning 10km^2. In this paper, we propose GaussianCity, a generative Gaussian Splatting framework dedicated to efficiently synthesizing unbounded 3D cities with a single feed-forward pass. Our key insights are two-fold: 1) Compact 3D Scene Representation: We introduce BEV-Point as a highly compact intermediate representation, ensuring that the growth in VRAM usage for unbounded scenes remains constant, thus enabling unbounded city generation. 2) Spatial-aware Gaussian Attribute Decoder: We present spatial-aware BEV-Point decoder to produce 3D Gaussian attributes, which leverages Point Serializer to integrate the structural and contextual characteristics of BEV points. Extensive experiments demonstrate that GaussianCity achieves state-of-the-art results in both drone-view and street-view 3D city generation. Notably, compared to CityDreamer, GaussianCity exhibits superior performance with a speedup of 60 times (10.72 FPS v.s. 0.18 FPS).",
+        "subjects": [
+            "cs.CV"
         ],
         "comment": null
     },
@@ -6652,6 +6644,22 @@
             "cs.CR"
         ],
         "comment": "arXiv admin note: text overlap with arXiv:2310.02783 by other authors"
+    },
+    {
+        "paper id": "2406.06886",
+        "abstract url": "https://arxiv.org/abs/2406.06886",
+        "title": "Enabling Data Dependency-based Query Optimization",
+        "rating": "-2",
+        "keywords": [
+            [
+                "SQL"
+            ]
+        ],
+        "abstract": "Data dependency-based query optimization techniques can considerably improve database system performance: we apply three such optimization techniques to five database management systems (DBMSs) and observe throughput improvements between 5 % and 33 %. We address two key challenges to achieve these results: (i) efficiently identifying and extracting relevant dependencies from the data, and (ii) making use of the dependencies through SQL rewrites or as transformation rules in the optimizer. First, the schema does not provide all relevant dependencies. We present a workload-driven dependency discovery approach to find additional dependencies within milliseconds. Second, the throughput improvement of a state-of-the-art DBMS is 13 % using only SQL rewrites, but 20 % when we integrate dependency-based optimization into the optimizer and execution engine, e. g., by employing dependency propagation and subquery handling. Using all relevant dependencies, the runtime of four standard benchmarks improves by up to 10 % compared to using only primary and foreign keys, and up to 22 % compared to not using dependencies. The dependency discovery overhead amortizes after a single workload execution.",
+        "subjects": [
+            "cs.DB"
+        ],
+        "comment": null
     },
     {
         "paper id": "2406.06183",
@@ -6822,6 +6830,33 @@
         "comment": "Submitted to Information Processing & Management"
     },
     {
+        "paper id": "2406.07835",
+        "abstract url": "https://arxiv.org/abs/2406.07835",
+        "title": "SciRIFF: A Resource to Enhance Language Model Instruction-Following over Scientific Literature",
+        "rating": "-2.5",
+        "keywords": [
+            [
+                "clinical"
+            ],
+            [
+                "chemistry"
+            ],
+            [
+                "cs.AI",
+                "cs.CL"
+            ],
+            [
+                "NeurIPS"
+            ]
+        ],
+        "abstract": "We present SciRIFF (Scientific Resource for Instruction-Following and Finetuning), a dataset of 137K instruction-following demonstrations for 54 tasks covering five essential scientific literature understanding capabilities: information extraction, summarization, question answering, claim verification, and classification. SciRIFF demonstrations are notable for their long input contexts, detailed task specifications, and complex structured outputs. While instruction-following resources are available in specific domains such as clinical medicine and chemistry, SciRIFF is the first dataset focused on extracting and synthesizing information from research literature across a wide range of scientific fields. To demonstrate the utility of SciRIFF, we develop a sample-efficient strategy to adapt a general instruction-following model for science by performing additional finetuning on a mix of general-domain and SciRIFF demonstrations. In evaluations on nine held-out scientific tasks, our model -- called SciTulu -- improves over a strong LLM baseline by 28.1% and 6.5% at the 7B and 70B scales respectively, while maintaining general instruction-following performance within 2% of the baseline. We are optimistic that SciRIFF will facilitate the development and evaluation of LLMs to help researchers navigate the ever-growing body of scientific literature. We release our dataset, model checkpoints, and data processing and evaluation code to enable further research.",
+        "subjects": [
+            "cs.CL",
+            "cs.AI"
+        ],
+        "comment": "Submitted to NeurIPS Datasets and Benchmarks 2024"
+    },
+    {
         "paper id": "2406.06092",
         "abstract url": "https://arxiv.org/abs/2406.06092",
         "title": "Sim-To-Real Transfer for Visual Reinforcement Learning of Deformable Object Manipulation for Robot-Assisted Surgery",
@@ -6829,7 +6864,8 @@
         "keywords": [
             [
                 "robotics",
-                "Robot"
+                "Robot",
+                "robotic manipulation"
             ],
             [
                 "surgical",
@@ -6863,34 +6899,6 @@
             "cs.IT"
         ],
         "comment": "31 pages. Accepted to the Proceedings of the IEEE, 2024. \\c{opyright}2024 IEEE. Personal use of this material is permitted. Permission from IEEE must be obtained for all other uses, in any current or future media, including reprinting/republishing this material, creating new works, for resale or redistribution to servers or lists, or reuse of any copyrighted component of this work in other works"
-    },
-    {
-        "paper id": "2406.06216",
-        "abstract url": "https://arxiv.org/abs/2406.06216",
-        "title": "Lighting Every Darkness with 3DGS: Fast Training and Real-Time Rendering for HDR View Synthesis",
-        "rating": "-3",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting",
-                "depth",
-                "NeRF"
-            ],
-            [
-                "Synthesis"
-            ],
-            [
-                "HDR"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Volumetric rendering based methods, like NeRF, excel in HDR view synthesis from RAWimages, especially for nighttime scenes. While, they suffer from long training times and cannot perform real-time rendering due to dense sampling requirements. The advent of 3D Gaussian Splatting (3DGS) enables real-time rendering and faster training. However, implementing RAW image-based view synthesis directly using 3DGS is challenging due to its inherent drawbacks: 1) in nighttime scenes, extremely low SNR leads to poor structure-from-motion (SfM) estimation in distant views; 2) the limited representation capacity of spherical harmonics (SH) function is unsuitable for RAW linear color space; and 3) inaccurate scene structure hampers downstream tasks such as refocusing. To address these issues, we propose LE3D (Lighting Every darkness with 3DGS). Our method proposes Cone Scatter Initialization to enrich the estimation of SfM, and replaces SH with a Color MLP to represent the RAW linear color space. Additionally, we introduce depth distortion and near-far regularizations to improve the accuracy of scene structure for downstream tasks. These designs enable LE3D to perform real-time novel view synthesis, HDR rendering, refocusing, and tone-mapping changes. Compared to previous volumetric rendering based methods, LE3D reduces training time to 1% and improves rendering speed by up to 4,000 times for 2K resolution images in terms of FPS. Code and viewer can be found in https://github.com/Srameo/LE3D .",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
     },
     {
         "paper id": "2406.06316",
@@ -6938,34 +6946,6 @@
             "cs.HC"
         ],
         "comment": "8 pages, 7 figures"
-    },
-    {
-        "paper id": "2406.06526",
-        "abstract url": "https://arxiv.org/abs/2406.06526",
-        "title": "GaussianCity: Generative Gaussian Splatting for Unbounded 3D City Generation",
-        "rating": "-3",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting",
-                "NeRF"
-            ],
-            [
-                "synthesizing"
-            ],
-            [
-                "BEV",
-                "drone"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "3D city generation with NeRF-based methods shows promising generation results but is computationally inefficient. Recently 3D Gaussian Splatting (3D-GS) has emerged as a highly efficient alternative for object-level 3D generation. However, adapting 3D-GS from finite-scale 3D objects and humans to infinite-scale 3D cities is non-trivial. Unbounded 3D city generation entails significant storage overhead (out-of-memory issues), arising from the need to expand points to billions, often demanding hundreds of Gigabytes of VRAM for a city scene spanning 10km^2. In this paper, we propose GaussianCity, a generative Gaussian Splatting framework dedicated to efficiently synthesizing unbounded 3D cities with a single feed-forward pass. Our key insights are two-fold: 1) Compact 3D Scene Representation: We introduce BEV-Point as a highly compact intermediate representation, ensuring that the growth in VRAM usage for unbounded scenes remains constant, thus enabling unbounded city generation. 2) Spatial-aware Gaussian Attribute Decoder: We present spatial-aware BEV-Point decoder to produce 3D Gaussian attributes, which leverages Point Serializer to integrate the structural and contextual characteristics of BEV points. Extensive experiments demonstrate that GaussianCity achieves state-of-the-art results in both drone-view and street-view 3D city generation. Notably, compared to CityDreamer, GaussianCity exhibits superior performance with a speedup of 60 times (10.72 FPS v.s. 0.18 FPS).",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
     },
     {
         "paper id": "2406.06842",
@@ -7078,36 +7058,6 @@
         "comment": null
     },
     {
-        "paper id": "2406.07835",
-        "abstract url": "https://arxiv.org/abs/2406.07835",
-        "title": "SciRIFF: A Resource to Enhance Language Model Instruction-Following over Scientific Literature",
-        "rating": "-3.5",
-        "keywords": [
-            [
-                "synthesizing"
-            ],
-            [
-                "clinical"
-            ],
-            [
-                "chemistry"
-            ],
-            [
-                "cs.AI",
-                "cs.CL"
-            ],
-            [
-                "NeurIPS"
-            ]
-        ],
-        "abstract": "We present SciRIFF (Scientific Resource for Instruction-Following and Finetuning), a dataset of 137K instruction-following demonstrations for 54 tasks covering five essential scientific literature understanding capabilities: information extraction, summarization, question answering, claim verification, and classification. SciRIFF demonstrations are notable for their long input contexts, detailed task specifications, and complex structured outputs. While instruction-following resources are available in specific domains such as clinical medicine and chemistry, SciRIFF is the first dataset focused on extracting and synthesizing information from research literature across a wide range of scientific fields. To demonstrate the utility of SciRIFF, we develop a sample-efficient strategy to adapt a general instruction-following model for science by performing additional finetuning on a mix of general-domain and SciRIFF demonstrations. In evaluations on nine held-out scientific tasks, our model -- called SciTulu -- improves over a strong LLM baseline by 28.1% and 6.5% at the 7B and 70B scales respectively, while maintaining general instruction-following performance within 2% of the baseline. We are optimistic that SciRIFF will facilitate the development and evaluation of LLMs to help researchers navigate the ever-growing body of scientific literature. We release our dataset, model checkpoints, and data processing and evaluation code to enable further research.",
-        "subjects": [
-            "cs.CL",
-            "cs.AI"
-        ],
-        "comment": "Submitted to NeurIPS Datasets and Benchmarks 2024"
-    },
-    {
         "paper id": "2406.06337",
         "abstract url": "https://arxiv.org/abs/2406.06337",
         "title": "System- and Sample-agnostic Isotropic 3D Microscopy by Weakly Physics-informed, Domain-shift-resistant Axial Deblurring",
@@ -7133,6 +7083,28 @@
             "physics.bio-ph"
         ],
         "comment": "27 pages, 6 figures"
+    },
+    {
+        "paper id": "2406.06394",
+        "abstract url": "https://arxiv.org/abs/2406.06394",
+        "title": "A Gigabit, DMA-enhanced Open-Source Ethernet Controller for Mixed-Criticality Systems",
+        "rating": "-4",
+        "keywords": [
+            [
+                "vehicle"
+            ],
+            [
+                "navigation"
+            ],
+            [
+                "FPGA"
+            ]
+        ],
+        "abstract": "The ongoing revolution in application domains targeting autonomous navigation, first and foremost automotive \"zonalization\", has increased the importance of certain off-chip communication interfaces, particularly Ethernet. The latter will play an essential role in next-generation vehicle architectures as the backbone connecting simultaneously and instantaneously the zonal/domain controllers. There is thereby an incumbent need to introduce a performant Ethernet controller in the open-source HW community, to be used as a proxy for architectural explorations and prototyping of mixed-criticality systems (MCSs). Driven by this trend, in this work, we propose a fully open-source, DMA-enhanced, technology-agnostic Gigabit Ethernet architecture that overcomes the limitations of existing open-source architectures, such as Lowrisc's Ethernet, often tied to FPGA implementation, performance-bound by sub-optimal design choices such as large memory buffers, and in general not mature enough to bridge the gap between academia and industry. Besides the area advantage, the proposed design increases packet transmission speed up to almost 3x compared to Lowrisc's and is validated through implementation and FPGA prototyping into two open-source, heterogeneous MCSs.",
+        "subjects": [
+            "cs.AR"
+        ],
+        "comment": "4 pages,4 figures, 21st ACM International Conference on Computing Frontiers Workshops and Special Sessions"
     },
     {
         "paper id": "2406.06748",
@@ -7397,6 +7369,18 @@
         "comment": "20 pages before references, 40 pages in total, 4 figures, 3 tables"
     },
     {
+        "paper id": "2406.06241",
+        "abstract url": "https://arxiv.org/abs/2406.06241",
+        "title": "Practical Boolean Decomposition for Delay-driven LUT Mapping",
+        "rating": "-10",
+        "keywords": [],
+        "abstract": "Ashenhurst-Curtis decomposition (ACD) is a decomposition technique used, in particular, to map combinational logic into lookup tables (LUTs) structures when synthesizing hardware designs. However, available implementations of ACD suffer from excessive complexity, search-space restrictions, and slow run time, which limit their applicability and scalability. This paper presents a novel fast and versatile technique of ACD suitable for delay optimization. We use this new formulation to compute two-level decompositions into a variable number of LUTs and enhance delay-driven LUT mapping by performing ACD on the fly. Compared to state-of-the-art technology mapping, experiments on heavily optimized benchmarks demonstrate an average delay improvement of 12.39%, and area reduction of 2.20% with affordable run time. Additionally, our method improves 4 of the best delay results in the EPFL synthesis competition without employing design-space exploration techniques.",
+        "subjects": [
+            "cs.LO"
+        ],
+        "comment": "originally accepted at 33rd International Workshop on Logic & Synthesis 2024"
+    },
+    {
         "paper id": "2406.06253",
         "abstract url": "https://arxiv.org/abs/2406.06253",
         "title": "PretVM: Predictable, Efficient Virtual Machine for Real-Time Concurrency",
@@ -7420,18 +7404,6 @@
             "cs.HC"
         ],
         "comment": "38 pages, 5 figures"
-    },
-    {
-        "paper id": "2406.06261",
-        "abstract url": "https://arxiv.org/abs/2406.06261",
-        "title": "What All the PHUZZ Is About: A Coverage-guided Fuzzer for Finding Vulnerabilities in PHP Web Applications",
-        "rating": "-10",
-        "keywords": [],
-        "abstract": "Coverage-guided fuzz testing has received significant attention from the research community, with a strong focus on binary applications, greatly disregarding other targets, such as web applications. The importance of the World Wide Web in everyone's life cannot be overstated, and to this day, many web applications are developed in PHP. In this work, we address the challenges of applying coverage-guided fuzzing to PHP web applications and introduce PHUZZ, a modular fuzzing framework for PHP web applications. PHUZZ uses novel approaches to detect more client-side and server-side vulnerability classes than state-of-the-art related work, including SQL injections, remote command injections, insecure deserialization, path traversal, external entity injection, cross-site scripting, and open redirection. We evaluate PHUZZ on a diverse set of artificial and real-world web applications with known and unknown vulnerabilities, and compare it against a variety of state-of-the-art fuzzers. In order to show PHUZZ' effectiveness, we fuzz over 1,000 API endpoints of the 115 most popular WordPress plugins, resulting in over 20 security issues and 2 new CVE-IDs. Finally, we make the framework publicly available to motivate and encourage further research on web application fuzz testing.",
-        "subjects": [
-            "cs.CR"
-        ],
-        "comment": "Preprint; Final version to be published in ASIA CCS '24: Proceedings of the 2024 ACM Asia Conference on Computer and Communications Security"
     },
     {
         "paper id": "2406.06280",
@@ -7674,6 +7646,30 @@
         "comment": null
     },
     {
+        "paper id": "2406.06724",
+        "abstract url": "https://arxiv.org/abs/2406.06724",
+        "title": "Stochastic Guidance of Buoyancy Controlled Vehicles under Ice Shelves using Ocean Currents",
+        "rating": "-10",
+        "keywords": [],
+        "abstract": "We propose a novel technique for guidance of buoyancy-controlled vehicles in uncertain under-ice ocean flows. In-situ melt rate measurements collected at the grounding zone of Antarctic ice shelves, where the ice shelf meets the underlying bedrock, are essential to constrain models of future sea level rise. Buoyancy-controlled vehicles, which control their vertical position in the water column through internal actuation but have no means of horizontal propulsion, offer an affordable and reliable platform for such in-situ data collection. However, reaching the grounding zone requires vehicles to traverse tens of kilometers under the ice shelf, with approximate position knowledge and no means of communication, in highly variable and uncertain ocean currents. To address this challenge, we propose a partially observable MDP approach that exploits model-based knowledge of the under-ice currents and, critically, of their uncertainty, to synthesize effective guidance policies. The approach uses approximate dynamic programming to model uncertainty in the currents, and QMDP to address localization uncertainty. Numerical experiments show that the policy can deliver up to 88.8% of underwater vehicles to the grounding zone -- a 33% improvement compared to state-of-the-art guidance techniques, and a 262% improvement over uncontrolled drifters. Collectively, these results show that model-based under-ice guidance is a highly promising technique for exploration of under-ice cavities, and has the potential to enable cost-effective and scalable access to these challenging and rarely observed environments.",
+        "subjects": [
+            "cs.RO"
+        ],
+        "comment": "Presented at IROS 2021"
+    },
+    {
+        "paper id": "2406.06732",
+        "abstract url": "https://arxiv.org/abs/2406.06732",
+        "title": "Mining for sustainability in cloud architecture among the discussions of software practitioners: building a dataset",
+        "rating": "-10",
+        "keywords": [],
+        "abstract": "The adoption of cloud computing is steadily increasing in designing and implementing software systems, thus it becomes imperative to consider the sustainability implications of these processes. While there has already been some academic research on this topic, there is a lack of perspective from practitioners. To bridge this gap, we utilize software repository mining techniques to examine 192 discussions among practitioners on the Software Engineering forum of the StackExchange platform, aiming to build an annotated dataset containing cloud architectural discussions and to understand the current discussion on sustainability in cloud architecture. To identify these discussions, we first put together a list of terms indicating sustainability as the topic. Our initial findings indicate practitioners mainly focus on design aspects (analysis, synthesis, and implementation) while avoiding complex activities like evaluation and maintenance. Technical sustainability is emphasized, while the economic dimension has the most discussions exclusively focused on it. This contrasts with previous academic literature, which highlighted environmental sustainability.",
+        "subjects": [
+            "cs.SE"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2406.06735",
         "abstract url": "https://arxiv.org/abs/2406.06735",
         "title": "Fast Sampling Based Sketches for Tensors",
@@ -7796,16 +7792,16 @@
         "comment": "Accepted by IEEE Transactions on Industry Applications"
     },
     {
-        "paper id": "2406.06886",
-        "abstract url": "https://arxiv.org/abs/2406.06886",
-        "title": "Enabling Data Dependency-based Query Optimization",
+        "paper id": "2406.06902",
+        "abstract url": "https://arxiv.org/abs/2406.06902",
+        "title": "CodeScore-R: An Automated Robustness Metric for Assessing the FunctionalCorrectness of Code Synthesis",
         "rating": "-10",
         "keywords": [],
-        "abstract": "Data dependency-based query optimization techniques can considerably improve database system performance: we apply three such optimization techniques to five database management systems (DBMSs) and observe throughput improvements between 5 % and 33 %. We address two key challenges to achieve these results: (i) efficiently identifying and extracting relevant dependencies from the data, and (ii) making use of the dependencies through SQL rewrites or as transformation rules in the optimizer. First, the schema does not provide all relevant dependencies. We present a workload-driven dependency discovery approach to find additional dependencies within milliseconds. Second, the throughput improvement of a state-of-the-art DBMS is 13 % using only SQL rewrites, but 20 % when we integrate dependency-based optimization into the optimizer and execution engine, e. g., by employing dependency propagation and subquery handling. Using all relevant dependencies, the runtime of four standard benchmarks improves by up to 10 % compared to using only primary and foreign keys, and up to 22 % compared to not using dependencies. The dependency discovery overhead amortizes after a single workload execution.",
+        "abstract": "Evaluation metrics are crucial in the field of code synthesis. Commonly used code evaluation metrics canbe classified into three types: match-based, semantic-based, and execution-based. Among them, the execution-basedPass@k metric accurately assesses the functionality of predicted code by executing test cases. However, calculatingthis metric requires a significant amount of overhead, necessitating the design of an automated evaluation metric thatcan assess the functionality of predicted code without the need for test cases. Additionally, a good evaluation metricshould be robust, that is the metric can maintain its accuracy even when the predicted code undergoes minor changes.To address these challenges, we propose an automated robust metric, called CodeScore-R, based on UniXcoder andcontrastive learning, for evaluating the functionality of code synthesis. CodeScore-R employs techniques such assketch-based processing, syntactic-equivalent transformations, and mutation testing to effectively mitigate theinterference caused by identifiers, syntax structures, and operators on evaluation results. Experimental resultsdemonstrate that in the tasks of code generation and migration in Java and Python, CodeScore-R outperforms otherevaluation metrics and is more closely aligned with the Pass@k metric, while exhibiting stronger robustness.",
         "subjects": [
-            "cs.DB"
+            "cs.SE"
         ],
-        "comment": null
+        "comment": "in Chinese language, Journal of Computer Research and Development"
     },
     {
         "paper id": "2406.06914",

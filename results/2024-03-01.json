@@ -233,6 +233,25 @@
         "comment": "21 pages, 8 figures, ICLR 2024"
     },
     {
+        "paper id": "2403.00999",
+        "abstract url": "https://arxiv.org/abs/2403.00999",
+        "title": "Distributional Dataset Distillation with Subtask Decomposition",
+        "rating": "1.5",
+        "keywords": [
+            [
+                "memory-efficient"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "What does a neural network learn when training from a task-specific dataset? Synthesizing this knowledge is the central idea behind Dataset Distillation, which recent work has shown can be used to compress large datasets into a small set of input-label pairs ($\\textit{prototypes}$) that capture essential aspects of the original dataset. In this paper, we make the key observation that existing methods distilling into explicit prototypes are very often suboptimal, incurring in unexpected storage cost from distilled labels. In response, we propose $\\textit{Distributional Dataset Distillation}$ (D3), which encodes the data using minimal sufficient per-class statistics and paired with a decoder, we distill dataset into a compact distributional representation that is more memory-efficient compared to prototype-based methods. To scale up the process of learning these representations, we propose $\\textit{Federated distillation}$, which decomposes the dataset into subsets, distills them in parallel using sub-task experts and then re-aggregates them. We thoroughly evaluate our algorithm on a three-dimensional metric and show that our method achieves state-of-the-art results on TinyImageNet and ImageNet-1K. Specifically, we outperform the prior art by $6.9\\%$ on ImageNet-1K under the storage budget of 2 images per class.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2403.00307",
         "abstract url": "https://arxiv.org/abs/2403.00307",
         "title": "Embedded Multi-label Feature Selection via Orthogonal Regression",
@@ -291,6 +310,22 @@
             "cs.LG"
         ],
         "comment": "Published as a conference paper at ICLR 2023, and code is available at https://github.com/SoftWiser-group/NeSy-without-Shortcuts"
+    },
+    {
+        "paper id": "2403.00338",
+        "abstract url": "https://arxiv.org/abs/2403.00338",
+        "title": "Semi-Instruct: Bridging Natural-Instruct and Self-Instruct for Code Large Language Models",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Instruction tuning plays a pivotal role in Code Large Language Models (Code LLMs) for the task of program synthesis. Presently, two dominant paradigms for collecting tuning data are natural-instruct (human-written) and self-instruct (automatically generated). Natural-instruct includes diverse and correct codes but lacks instruction-code pairs, and exists improper code formats like nested single-line codes. In contrast, self-instruct automatically generates proper paired data. However, it suffers from low diversity due to generating duplicates and cannot ensure the correctness of codes. To bridge the both paradigms, we propose \\textbf{Semi-Instruct}. It first converts diverse but improper codes from natural-instruct into proper instruction-code pairs through a method similar to self-instruct. To verify the correctness of generated codes, we design a novel way to construct test cases by generating cases' inputs and executing correct codes from natural-instruct to get outputs. Finally, diverse and correct instruction-code pairs are retained for instruction tuning. Experiments show that semi-instruct is significantly better than natural-instruct and self-instruct. Furthermore, the performance steadily improves as data scale increases.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": null
     },
     {
         "paper id": "2403.00354",
@@ -574,6 +609,26 @@
             "cs.CV"
         ],
         "comment": "9 pages, 1 figure"
+    },
+    {
+        "paper id": "2403.00529",
+        "abstract url": "https://arxiv.org/abs/2403.00529",
+        "title": "VoxGenesis: Unsupervised Discovery of Latent Speaker Manifold for Speech Synthesis",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.LG",
+                "cs.SD",
+                "eess.AS"
+            ]
+        ],
+        "abstract": "Achieving nuanced and accurate emulation of human voice has been a longstanding goal in artificial intelligence. Although significant progress has been made in recent years, the mainstream of speech synthesis models still relies on supervised speaker modeling and explicit reference utterances. However, there are many aspects of human voice, such as emotion, intonation, and speaking style, for which it is hard to obtain accurate labels. In this paper, we propose VoxGenesis, a novel unsupervised speech synthesis framework that can discover a latent speaker manifold and meaningful voice editing directions without supervision. VoxGenesis is conceptually simple. Instead of mapping speech features to waveforms deterministically, VoxGenesis transforms a Gaussian distribution into speech distributions conditioned and aligned by semantic tokens. This forces the model to learn a speaker distribution disentangled from the semantic content. During the inference, sampling from the Gaussian distribution enables the creation of novel speakers with distinct characteristics. More importantly, the exploration of latent space uncovers human-interpretable directions associated with specific speaker characteristics such as gender attributes, pitch, tone, and emotion, allowing for voice editing by manipulating the latent codes along these identified directions. We conduct extensive experiments to evaluate the proposed VoxGenesis using both subjective and objective metrics, finding that it produces significantly more diverse and realistic speakers with distinct characteristics than the previous approaches. We also show that latent space manipulation produces consistent and human-identifiable effects that are not detrimental to the speech quality, which was not possible with previous approaches. Audio samples of VoxGenesis can be found at: \\url{https://bit.ly/VoxGenesis}.",
+        "subjects": [
+            "cs.SD",
+            "cs.LG",
+            "eess.AS"
+        ],
+        "comment": "preprint"
     },
     {
         "paper id": "2403.00553",
@@ -1066,25 +1121,6 @@
         "comment": "13 pages"
     },
     {
-        "paper id": "2403.00963",
-        "abstract url": "https://arxiv.org/abs/2403.00963",
-        "title": "Tree-Regularized Tabular Embeddings",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.LG"
-            ],
-            [
-                "NeurIPS"
-            ]
-        ],
-        "abstract": "Tabular neural network (NN) has attracted remarkable attentions and its recent advances have gradually narrowed the performance gap with respect to tree-based models on many public datasets. While the mainstreams focus on calibrating NN to fit tabular data, we emphasize the importance of homogeneous embeddings and alternately concentrate on regularizing tabular inputs through supervised pretraining. Specifically, we extend a recent work (DeepTLF) and utilize the structure of pretrained tree ensembles to transform raw variables into a single vector (T2V), or an array of tokens (T2T). Without loss of space efficiency, these binarized embeddings can be consumed by canonical tabular NN with fully-connected or attention-based building blocks. Through quantitative experiments on 88 OpenML datasets with binary classification task, we validated that the proposed tree-regularized representation not only tapers the difference with respect to tree-based models, but also achieves on-par and better performance when compared with advanced NN models. Most importantly, it possesses better robustness and can be easily scaled and generalized as standalone encoder for tabular modality. Codes: https://github.com/milanlx/tree-regularized-embedding.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": "Table Representation Learning Workshop at NeurIPS 2023"
-    },
-    {
         "paper id": "2403.00964",
         "abstract url": "https://arxiv.org/abs/2403.00964",
         "title": "MALTO at SemEval-2024 Task 6: Leveraging Synthetic Data for LLM Hallucination Detection",
@@ -1101,24 +1137,6 @@
             "cs.LG"
         ],
         "comment": "Under revision at SemEval 2024"
-    },
-    {
-        "paper id": "2403.00977",
-        "abstract url": "https://arxiv.org/abs/2403.00977",
-        "title": "Scaling Up Adaptive Filter Optimizers",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.SD",
-                "eess.AS"
-            ]
-        ],
-        "abstract": "We introduce a new online adaptive filtering method called supervised multi-step adaptive filters (SMS-AF). Our method uses neural networks to control or optimize linear multi-delay or multi-channel frequency-domain filters and can flexibly scale-up performance at the cost of increased compute -- a property rarely addressed in the AF literature, but critical for many applications. To do so, we extend recent work with a set of improvements including feature pruning, a supervised loss, and multiple optimization steps per time-frame. These improvements work in a cohesive manner to unlock scaling. Furthermore, we show how our method relates to Kalman filtering and meta-adaptive filtering, making it seamlessly applicable to a diverse set of AF tasks. We evaluate our method on acoustic echo cancellation (AEC) and multi-channel speech enhancement tasks and compare against several baselines on standard synthetic and real-world datasets. Results show our method performance scales with inference cost and model capacity, yields multi-dB performance gains for both tasks, and is real-time capable on a single CPU core.",
-        "subjects": [
-            "cs.SD",
-            "eess.AS"
-        ],
-        "comment": null
     },
     {
         "paper id": "2403.00982",
@@ -1257,6 +1275,27 @@
             "cs.LG"
         ],
         "comment": "Corresponding Author: Akash Srivastava. Equal Contribution: Shivchander Sudalairaj, Abhishek Bhandwaldar, Aldo Pareja, Akash Srivastava, Code: https://github.com/instructlab"
+    },
+    {
+        "paper id": "2403.01087",
+        "abstract url": "https://arxiv.org/abs/2403.01087",
+        "title": "Towards Accurate Lip-to-Speech Synthesis in-the-Wild",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.CV",
+                "cs.SD",
+                "eess.AS"
+            ]
+        ],
+        "abstract": "In this paper, we introduce a novel approach to address the task of synthesizing speech from silent videos of any in-the-wild speaker solely based on lip movements. The traditional approach of directly generating speech from lip videos faces the challenge of not being able to learn a robust language model from speech alone, resulting in unsatisfactory outcomes. To overcome this issue, we propose incorporating noisy text supervision using a state-of-the-art lip-to-text network that instills language information into our model. The noisy text is generated using a pre-trained lip-to-text model, enabling our approach to work without text annotations during inference. We design a visual text-to-speech network that utilizes the visual stream to generate accurate speech, which is in-sync with the silent input video. We perform extensive experiments and ablation studies, demonstrating our approach's superiority over the current state-of-the-art methods on various benchmark datasets. Further, we demonstrate an essential practical application of our method in assistive technology by generating speech for an ALS patient who has lost the voice but can make mouth movements. Our demo video, code, and additional details can be found at \\url{http://cvit.iiit.ac.in/research/projects/cvit-projects/ms-l2s-itw}.",
+        "subjects": [
+            "cs.MM",
+            "cs.CV",
+            "cs.SD",
+            "eess.AS"
+        ],
+        "comment": "8 pages of content, 1 page of references and 4 figures"
     },
     {
         "paper id": "2403.00282",
@@ -1447,7 +1486,6 @@
         "rating": "0.5",
         "keywords": [
             [
-                "synthesize",
                 "Text-to-Image"
             ],
             [
@@ -1685,8 +1723,7 @@
         "rating": "0.5",
         "keywords": [
             [
-                "Diffusion",
-                "synthesis"
+                "Diffusion"
             ],
             [
                 "cs.CV"
@@ -1812,23 +1849,6 @@
         "comment": "ICLR 2024"
     },
     {
-        "paper id": "2403.00872",
-        "abstract url": "https://arxiv.org/abs/2403.00872",
-        "title": "DFIN-SQL: Integrating Focused Schema with DIN-SQL for Superior Accuracy in Large-Scale Databases",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "The task of converting natural language queries into SQL queries is intricate, necessitating a blend of precise techniques for an accurate translation. The DIN-SQL (Decomposed-In-Context SQL) methodology represents a significant development in this domain. This paper introduces DFIN (Decomposed Focused-In-Context), an innovative extension of DIN-SQL that enhances Text-to-SQL conversion by addressing schema linking errors, which are a major source of inaccuracies. DFIN uniquely alternates between prompting techniques and Retrieval-Augmented Generation (RAG), adapting to the size and complexity of the database schema. A preprocessing phase embeds database definitions and leverages annotated files, akin to those in the BIRD dataset, facilitating the runtime retrieval of pertinent schema information. This strategy significantly reduces the token count for schema linking prompts, enabling the use of a standard GPT-4 model over its larger context variant, thus handling large-scale databases more effectively and economically. Our evaluation on the BIRD dataset, a challenging real-world benchmark, demonstrates that DFIN not only scales efficiently but also improves accuracy, achieving a score of 51.69. This improvement surpasses DIN-SQL method (the current third-place), which is the highest-ranked model employing in-context learning rather than fine-tuning, previously scoring 50.72. The advancement of DFIN underscores the evolving capabilities of in-context learning methodologies combined with advanced language models, offering a promising avenue for future research in complex Text-to-SQL conversion tasks.",
-        "subjects": [
-            "cs.DB",
-            "cs.AI"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2403.00878",
         "abstract url": "https://arxiv.org/abs/2403.00878",
         "title": "Crimson: Empowering Strategic Reasoning in Cybersecurity through Large Language Models",
@@ -1860,6 +1880,25 @@
             "cs.DB",
             "cs.AI",
             "cs.IR"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2403.00898",
+        "abstract url": "https://arxiv.org/abs/2403.00898",
+        "title": "The Algorithm Configuration Problem",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "The field of algorithmic optimization has significantly advanced with the development of methods for the automatic configuration of algorithmic parameters. This article delves into the Algorithm Configuration Problem, focused on optimizing parametrized algorithms for solving specific instances of decision/optimization problems. We present a comprehensive framework that not only formalizes the Algorithm Configuration Problem, but also outlines different approaches for its resolution, leveraging machine learning models and heuristic strategies. The article categorizes existing methodologies into per-instance and per-problem approaches, distinguishing between offline and online strategies for model construction and deployment. By synthesizing these approaches, we aim to provide a clear pathway for both understanding and addressing the complexities inherent in algorithm configuration.",
+        "subjects": [
+            "cs.AI",
+            "cs.LG",
+            "math.OC"
         ],
         "comment": null
     },
@@ -2025,6 +2064,30 @@
             "cs.DL"
         ],
         "comment": "18 pages, 4 figures, 3 tables"
+    },
+    {
+        "paper id": "2403.01058",
+        "abstract url": "https://arxiv.org/abs/2403.01058",
+        "title": "Neural Field Classifiers via Target Encoding and Classification Loss",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "NeRF"
+            ],
+            [
+                "cs.LG",
+                "cs.CV"
+            ],
+            [
+                "ICLR"
+            ]
+        ],
+        "abstract": "Neural field methods have seen great progress in various long-standing tasks in computer vision and computer graphics, including novel view synthesis and geometry reconstruction. As existing neural field methods try to predict some coordinate-based continuous target values, such as RGB for Neural Radiance Field (NeRF), all of these methods are regression models and are optimized by some regression loss. However, are regression models really better than classification models for neural field methods? In this work, we try to visit this very fundamental but overlooked question for neural fields from a machine learning perspective. We successfully propose a novel Neural Field Classifier (NFC) framework which formulates existing neural field methods as classification tasks rather than regression tasks. The proposed NFC can easily transform arbitrary Neural Field Regressor (NFR) into its classification variant via employing a novel Target Encoding module and optimizing a classification loss. By encoding a continuous regression target into a high-dimensional discrete encoding, we naturally formulate a multi-label classification task. Extensive experiments demonstrate the impressive effectiveness of NFC at the nearly free extra computational costs. Moreover, NFC also shows robustness to sparse inputs, corrupted images, and dynamic scenes.",
+        "subjects": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "comment": "ICLR 2024 Main Conference; 17 pages; 11 figures; 13 tables"
     },
     {
         "paper id": "2403.02352",
@@ -2194,25 +2257,6 @@
         "comment": null
     },
     {
-        "paper id": "2403.00338",
-        "abstract url": "https://arxiv.org/abs/2403.00338",
-        "title": "Semi-Instruct: Bridging Natural-Instruct and Self-Instruct for Code Large Language Models",
-        "rating": "0",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Instruction tuning plays a pivotal role in Code Large Language Models (Code LLMs) for the task of program synthesis. Presently, two dominant paradigms for collecting tuning data are natural-instruct (human-written) and self-instruct (automatically generated). Natural-instruct includes diverse and correct codes but lacks instruction-code pairs, and exists improper code formats like nested single-line codes. In contrast, self-instruct automatically generates proper paired data. However, it suffers from low diversity due to generating duplicates and cannot ensure the correctness of codes. To bridge the both paradigms, we propose \\textbf{Semi-Instruct}. It first converts diverse but improper codes from natural-instruct into proper instruction-code pairs through a method similar to self-instruct. To verify the correctness of generated codes, we design a novel way to construct test cases by generating cases' inputs and executing correct codes from natural-instruct to get outputs. Finally, diverse and correct instruction-code pairs are retained for instruction tuning. Experiments show that semi-instruct is significantly better than natural-instruct and self-instruct. Furthermore, the performance steadily improves as data scale increases.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2403.00353",
         "abstract url": "https://arxiv.org/abs/2403.00353",
         "title": "MS-Net: A Multi-Path Sparse Model for Motion Prediction in Multi-Scenes",
@@ -2301,37 +2345,13 @@
         "comment": "18 pages"
     },
     {
-        "paper id": "2403.00529",
-        "abstract url": "https://arxiv.org/abs/2403.00529",
-        "title": "VoxGenesis: Unsupervised Discovery of Latent Speaker Manifold for Speech Synthesis",
-        "rating": "0",
-        "keywords": [
-            [
-                "Synthesis"
-            ],
-            [
-                "cs.LG",
-                "cs.SD",
-                "eess.AS"
-            ]
-        ],
-        "abstract": "Achieving nuanced and accurate emulation of human voice has been a longstanding goal in artificial intelligence. Although significant progress has been made in recent years, the mainstream of speech synthesis models still relies on supervised speaker modeling and explicit reference utterances. However, there are many aspects of human voice, such as emotion, intonation, and speaking style, for which it is hard to obtain accurate labels. In this paper, we propose VoxGenesis, a novel unsupervised speech synthesis framework that can discover a latent speaker manifold and meaningful voice editing directions without supervision. VoxGenesis is conceptually simple. Instead of mapping speech features to waveforms deterministically, VoxGenesis transforms a Gaussian distribution into speech distributions conditioned and aligned by semantic tokens. This forces the model to learn a speaker distribution disentangled from the semantic content. During the inference, sampling from the Gaussian distribution enables the creation of novel speakers with distinct characteristics. More importantly, the exploration of latent space uncovers human-interpretable directions associated with specific speaker characteristics such as gender attributes, pitch, tone, and emotion, allowing for voice editing by manipulating the latent codes along these identified directions. We conduct extensive experiments to evaluate the proposed VoxGenesis using both subjective and objective metrics, finding that it produces significantly more diverse and realistic speakers with distinct characteristics than the previous approaches. We also show that latent space manipulation produces consistent and human-identifiable effects that are not detrimental to the speech quality, which was not possible with previous approaches. Audio samples of VoxGenesis can be found at: \\url{https://bit.ly/VoxGenesis}.",
-        "subjects": [
-            "cs.SD",
-            "cs.LG",
-            "eess.AS"
-        ],
-        "comment": "preprint"
-    },
-    {
         "paper id": "2403.00570",
         "abstract url": "https://arxiv.org/abs/2403.00570",
         "title": "Rethinking cluster-conditioned diffusion models",
         "rating": "0",
         "keywords": [
             [
-                "diffusion",
-                "synthesis"
+                "diffusion"
             ],
             [
                 "cs.AI",
@@ -2452,6 +2472,27 @@
         "comment": "Accepted to The Web Conference 2024 (Industry)"
     },
     {
+        "paper id": "2403.00977",
+        "abstract url": "https://arxiv.org/abs/2403.00977",
+        "title": "Scaling Up Adaptive Filter Optimizers",
+        "rating": "0",
+        "keywords": [
+            [
+                "speech enhancement"
+            ],
+            [
+                "cs.SD",
+                "eess.AS"
+            ]
+        ],
+        "abstract": "We introduce a new online adaptive filtering method called supervised multi-step adaptive filters (SMS-AF). Our method uses neural networks to control or optimize linear multi-delay or multi-channel frequency-domain filters and can flexibly scale-up performance at the cost of increased compute -- a property rarely addressed in the AF literature, but critical for many applications. To do so, we extend recent work with a set of improvements including feature pruning, a supervised loss, and multiple optimization steps per time-frame. These improvements work in a cohesive manner to unlock scaling. Furthermore, we show how our method relates to Kalman filtering and meta-adaptive filtering, making it seamlessly applicable to a diverse set of AF tasks. We evaluate our method on acoustic echo cancellation (AEC) and multi-channel speech enhancement tasks and compare against several baselines on standard synthetic and real-world datasets. Results show our method performance scales with inference cost and model capacity, yields multi-dB performance gains for both tasks, and is real-time capable on a single CPU core.",
+        "subjects": [
+            "cs.SD",
+            "eess.AS"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2403.00991",
         "abstract url": "https://arxiv.org/abs/2403.00991",
         "title": "SELFI: Autonomous Self-Improvement with Reinforcement Learning for Social Navigation",
@@ -2511,30 +2552,6 @@
             "cs.CV"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2403.01087",
-        "abstract url": "https://arxiv.org/abs/2403.01087",
-        "title": "Towards Accurate Lip-to-Speech Synthesis in-the-Wild",
-        "rating": "0",
-        "keywords": [
-            [
-                "Synthesis"
-            ],
-            [
-                "cs.CV",
-                "cs.SD",
-                "eess.AS"
-            ]
-        ],
-        "abstract": "In this paper, we introduce a novel approach to address the task of synthesizing speech from silent videos of any in-the-wild speaker solely based on lip movements. The traditional approach of directly generating speech from lip videos faces the challenge of not being able to learn a robust language model from speech alone, resulting in unsatisfactory outcomes. To overcome this issue, we propose incorporating noisy text supervision using a state-of-the-art lip-to-text network that instills language information into our model. The noisy text is generated using a pre-trained lip-to-text model, enabling our approach to work without text annotations during inference. We design a visual text-to-speech network that utilizes the visual stream to generate accurate speech, which is in-sync with the silent input video. We perform extensive experiments and ablation studies, demonstrating our approach's superiority over the current state-of-the-art methods on various benchmark datasets. Further, we demonstrate an essential practical application of our method in assistive technology by generating speech for an ALS patient who has lost the voice but can make mouth movements. Our demo video, code, and additional details can be found at \\url{http://cvit.iiit.ac.in/research/projects/cvit-projects/ms-l2s-itw}.",
-        "subjects": [
-            "cs.MM",
-            "cs.CV",
-            "cs.SD",
-            "eess.AS"
-        ],
-        "comment": "8 pages of content, 1 page of references and 4 figures"
     },
     {
         "paper id": "2403.12981",
@@ -2829,28 +2846,6 @@
         "comment": null
     },
     {
-        "paper id": "2403.00898",
-        "abstract url": "https://arxiv.org/abs/2403.00898",
-        "title": "The Algorithm Configuration Problem",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "synthesizing"
-            ],
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "The field of algorithmic optimization has significantly advanced with the development of methods for the automatic configuration of algorithmic parameters. This article delves into the Algorithm Configuration Problem, focused on optimizing parametrized algorithms for solving specific instances of decision/optimization problems. We present a comprehensive framework that not only formalizes the Algorithm Configuration Problem, but also outlines different approaches for its resolution, leveraging machine learning models and heuristic strategies. The article categorizes existing methodologies into per-instance and per-problem approaches, distinguishing between offline and online strategies for model construction and deployment. By synthesizing these approaches, we aim to provide a clear pathway for both understanding and addressing the complexities inherent in algorithm configuration.",
-        "subjects": [
-            "cs.AI",
-            "cs.LG",
-            "math.OC"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2403.00929",
         "abstract url": "https://arxiv.org/abs/2403.00929",
         "title": "PRIME: Scaffolding Manipulation Tasks with Behavior Primitives for Data-Efficient Imitation Learning",
@@ -2915,25 +2910,6 @@
             "stat.ML"
         ],
         "comment": "57 pages, 5 figures"
-    },
-    {
-        "paper id": "2403.00999",
-        "abstract url": "https://arxiv.org/abs/2403.00999",
-        "title": "Distributional Dataset Distillation with Subtask Decomposition",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "Synthesizing"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "What does a neural network learn when training from a task-specific dataset? Synthesizing this knowledge is the central idea behind Dataset Distillation, which recent work has shown can be used to compress large datasets into a small set of input-label pairs ($\\textit{prototypes}$) that capture essential aspects of the original dataset. In this paper, we make the key observation that existing methods distilling into explicit prototypes are very often suboptimal, incurring in unexpected storage cost from distilled labels. In response, we propose $\\textit{Distributional Dataset Distillation}$ (D3), which encodes the data using minimal sufficient per-class statistics and paired with a decoder, we distill dataset into a compact distributional representation that is more memory-efficient compared to prototype-based methods. To scale up the process of learning these representations, we propose $\\textit{Federated distillation}$, which decomposes the dataset into subsets, distills them in parallel using sub-task experts and then re-aggregates them. We thoroughly evaluate our algorithm on a three-dimensional metric and show that our method achieves state-of-the-art results on TinyImageNet and ImageNet-1K. Specifically, we outperform the prior art by $6.9\\%$ on ImageNet-1K under the storage budget of 2 images per class.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": null
     },
     {
         "paper id": "2403.01023",
@@ -3020,33 +2996,6 @@
             "cs.CY"
         ],
         "comment": "15 pages, 2 figures; Accepted to 5th Workshop on Human-AI Co-Creation with Generative Models (HAI-GEN) at ACM IUI 2024"
-    },
-    {
-        "paper id": "2403.01058",
-        "abstract url": "https://arxiv.org/abs/2403.01058",
-        "title": "Neural Field Classifiers via Target Encoding and Classification Loss",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "NeRF"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.LG",
-                "cs.CV"
-            ],
-            [
-                "ICLR"
-            ]
-        ],
-        "abstract": "Neural field methods have seen great progress in various long-standing tasks in computer vision and computer graphics, including novel view synthesis and geometry reconstruction. As existing neural field methods try to predict some coordinate-based continuous target values, such as RGB for Neural Radiance Field (NeRF), all of these methods are regression models and are optimized by some regression loss. However, are regression models really better than classification models for neural field methods? In this work, we try to visit this very fundamental but overlooked question for neural fields from a machine learning perspective. We successfully propose a novel Neural Field Classifier (NFC) framework which formulates existing neural field methods as classification tasks rather than regression tasks. The proposed NFC can easily transform arbitrary Neural Field Regressor (NFR) into its classification variant via employing a novel Target Encoding module and optimizing a classification loss. By encoding a continuous regression target into a high-dimensional discrete encoding, we naturally formulate a multi-label classification task. Extensive experiments demonstrate the impressive effectiveness of NFC at the nearly free extra computational costs. Moreover, NFC also shows robustness to sparse inputs, corrupted images, and dynamic scenes.",
-        "subjects": [
-            "cs.CV",
-            "cs.LG"
-        ],
-        "comment": "ICLR 2024 Main Conference; 17 pages; 11 figures; 13 tables"
     },
     {
         "paper id": "2403.01059",
@@ -3227,22 +3176,6 @@
         "comment": null
     },
     {
-        "paper id": "2403.00390",
-        "abstract url": "https://arxiv.org/abs/2403.00390",
-        "title": "Deterministic Weighted Automata under Partial Observability",
-        "rating": "-1",
-        "keywords": [
-            [
-                "synthesis"
-            ]
-        ],
-        "abstract": "Weighted automata is a basic tool for specification in quantitative verification, which allows to express quantitative features of analysed systems such as resource consumption. Quantitative specification can be assisted by automata learning as there are classic results on Angluin-style learning of weighted automata. The existing work assumes perfect information about the values returned by the target weighted automaton. In assisted synthesis of a quantitative specification, knowledge of the exact values is a strong assumption and may be infeasible. In our work, we address this issue by introducing a new framework of partially-observable deterministic weighted automata, in which weighted automata return intervals containing the computed values of words instead of the exact values. We study the basic properties of this framework with the particular focus on the challenges of",
-        "subjects": [
-            "cs.CC"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2403.00394",
         "abstract url": "https://arxiv.org/abs/2403.00394",
         "title": "List-Mode PET Image Reconstruction Using Dykstra-Like Splitting",
@@ -3300,22 +3233,6 @@
             "cs.RO"
         ],
         "comment": "Appear to ICRA 2024, Project page: https://sites.google.com/view/learning-impaired-joints-loco"
-    },
-    {
-        "paper id": "2403.00399",
-        "abstract url": "https://arxiv.org/abs/2403.00399",
-        "title": "As Soon as Possible but Rationally",
-        "rating": "-1",
-        "keywords": [
-            [
-                "synthesis"
-            ]
-        ],
-        "abstract": "This paper addresses complexity problems in rational verification and synthesis for multi-player games played on weighted graphs, where the objective of each player is to minimize the cost of reaching a specific set of target vertices. In these games, one player, referred to as the system, declares his strategy upfront. The other players, composing the environment, then rationally make their moves according to their objectives. The rational behavior of these responding players is captured through two models: they opt for strategies that either represent a Nash equilibrium or lead to a play with a Pareto-optimal cost tuple.",
-        "subjects": [
-            "cs.GT"
-        ],
-        "comment": null
     },
     {
         "paper id": "2403.00402",
@@ -3550,6 +3467,22 @@
         "comment": null
     },
     {
+        "paper id": "2403.00558",
+        "abstract url": "https://arxiv.org/abs/2403.00558",
+        "title": "Rational Linkages: From Poses to 3D-printed Prototypes",
+        "rating": "-1",
+        "keywords": [
+            [
+                "3D"
+            ]
+        ],
+        "abstract": "In this paper, a set of tools is introduced that simplifies the synthesis and rapid-prototyping of single-loop rational kinematic chains. It allows the user to perform rational motion interpolation of up to four given poses and yields the design parameters of a linkage that can execute this motion. The package also provides a visualization of the output and performs a self-collision analysis with the possibility to adapt the design parameters. The results can be imported into CAD-systems for fast 3D printing.",
+        "subjects": [
+            "cs.RO"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2403.00582",
         "abstract url": "https://arxiv.org/abs/2403.00582",
         "title": "To Trust or Distrust Trust Measures: Validating Questionnaires for Trust in AI",
@@ -3765,6 +3698,28 @@
             "cs.LG"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2403.00963",
+        "abstract url": "https://arxiv.org/abs/2403.00963",
+        "title": "Tree-Regularized Tabular Embeddings",
+        "rating": "-1",
+        "keywords": [
+            [
+                "Tabular"
+            ],
+            [
+                "cs.LG"
+            ],
+            [
+                "NeurIPS"
+            ]
+        ],
+        "abstract": "Tabular neural network (NN) has attracted remarkable attentions and its recent advances have gradually narrowed the performance gap with respect to tree-based models on many public datasets. While the mainstreams focus on calibrating NN to fit tabular data, we emphasize the importance of homogeneous embeddings and alternately concentrate on regularizing tabular inputs through supervised pretraining. Specifically, we extend a recent work (DeepTLF) and utilize the structure of pretrained tree ensembles to transform raw variables into a single vector (T2V), or an array of tokens (T2T). Without loss of space efficiency, these binarized embeddings can be consumed by canonical tabular NN with fully-connected or attention-based building blocks. Through quantitative experiments on 88 OpenML datasets with binary classification task, we validated that the proposed tree-regularized representation not only tapers the difference with respect to tree-based models, but also achieves on-par and better performance when compared with advanced NN models. Most importantly, it possesses better robustness and can be easily scaled and generalized as standalone encoder for tabular modality. Codes: https://github.com/milanlx/tree-regularized-embedding.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": "Table Representation Learning Workshop at NeurIPS 2023"
     },
     {
         "paper id": "2403.00970",
@@ -4224,6 +4179,26 @@
         "comment": null
     },
     {
+        "paper id": "2403.00872",
+        "abstract url": "https://arxiv.org/abs/2403.00872",
+        "title": "DFIN-SQL: Integrating Focused Schema with DIN-SQL for Superior Accuracy in Large-Scale Databases",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "SQL"
+            ],
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "The task of converting natural language queries into SQL queries is intricate, necessitating a blend of precise techniques for an accurate translation. The DIN-SQL (Decomposed-In-Context SQL) methodology represents a significant development in this domain. This paper introduces DFIN (Decomposed Focused-In-Context), an innovative extension of DIN-SQL that enhances Text-to-SQL conversion by addressing schema linking errors, which are a major source of inaccuracies. DFIN uniquely alternates between prompting techniques and Retrieval-Augmented Generation (RAG), adapting to the size and complexity of the database schema. A preprocessing phase embeds database definitions and leverages annotated files, akin to those in the BIRD dataset, facilitating the runtime retrieval of pertinent schema information. This strategy significantly reduces the token count for schema linking prompts, enabling the use of a standard GPT-4 model over its larger context variant, thus handling large-scale databases more effectively and economically. Our evaluation on the BIRD dataset, a challenging real-world benchmark, demonstrates that DFIN not only scales efficiently but also improves accuracy, achieving a score of 51.69. This improvement surpasses DIN-SQL method (the current third-place), which is the highest-ranked model employing in-context learning rather than fine-tuning, previously scoring 50.72. The advancement of DFIN underscores the evolving capabilities of in-context learning methodologies combined with advanced language models, offering a promising avenue for future research in complex Text-to-SQL conversion tasks.",
+        "subjects": [
+            "cs.DB",
+            "cs.AI"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2403.00875",
         "abstract url": "https://arxiv.org/abs/2403.00875",
         "title": "Enhancing Protein Predictive Models via Proteins Data Augmentation: A Benchmark and New Directions",
@@ -4328,6 +4303,31 @@
             "physics.data-an"
         ],
         "comment": "21 pages, 4 figures, 2 tables. The associated GItHub repository can be found at https://github.com/GDS-Education-Community-of-Practice/DSECOP"
+    },
+    {
+        "paper id": "2403.00965",
+        "abstract url": "https://arxiv.org/abs/2403.00965",
+        "title": "Binary Gaussian Copula Synthesis: A Novel Data Augmentation Technique to Advance ML-based Clinical Decision Support Systems for Early Prediction of Dialysis Among CKD Patients",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "medical",
+                "healthcare",
+                "Disease",
+                "Clinical"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "The Center for Disease Control estimates that over 37 million US adults suffer from chronic kidney disease (CKD), yet 9 out of 10 of these individuals are unaware of their condition due to the absence of symptoms in the early stages. It has a significant impact on patients' quality of life, particularly when it progresses to the need for dialysis. Early prediction of dialysis is crucial as it can significantly improve patient outcomes and assist healthcare providers in making timely and informed decisions. However, developing an effective machine learning (ML)-based Clinical Decision Support System (CDSS) for early dialysis prediction poses a key challenge due to the imbalanced nature of data. To address this challenge, this study evaluates various data augmentation techniques to understand their effectiveness on real-world datasets. We propose a new approach named Binary Gaussian Copula Synthesis (BGCS). BGCS is tailored for binary medical datasets and excels in generating synthetic minority data that mirrors the distribution of the original data. BGCS enhances early dialysis prediction by outperforming traditional methods in detecting dialysis patients. For the best ML model, Random Forest, BCGS achieved a 72% improvement, surpassing the state-of-the-art augmentation approaches. Also, we present a ML-based CDSS, designed to aid clinicians in making informed decisions. CDSS, which utilizes decision tree models, is developed to improve patient outcomes, identify critical variables, and thereby enable clinicians to make proactive decisions, and strategize treatment plans effectively for CKD patients who are more likely to require dialysis in the near future. Through comprehensive feature analysis and meticulous data preparation, we ensure that the CDSS's dialysis predictions are not only accurate but also actionable, providing a valuable tool in the management and treatment of CKD.",
+        "subjects": [
+            "stat.AP",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "comment": null
     },
     {
         "paper id": "2403.01022",
@@ -4707,25 +4707,6 @@
         "abstract": "Data-oriented applications, their users, and even the law require data of high quality. Research has broken down the rather vague notion of data quality into various dimensions, such as accuracy, consistency, and reputation, to name but a few. To achieve the goal of high data quality, many tools and techniques exist to clean and otherwise improve data. Yet, systematic research on actually assessing data quality in all of its dimensions is largely absent, and with it the ability to gauge the success of any data cleaning effort. It is our vision to establish a systematic and comprehensive framework for the (numeric) assessment of data quality for a given dataset and its intended use. Such a framework must cover the various facets that influence data quality, as well as the many types of data quality dimensions. In particular, we identify five facets that serve as a foundation of data quality assessment. For each facet, we outline the challenges and opportunities that arise when trying to actually assign quality scores to data and create a data quality profile for it, along with a wide range of technologies needed for this purpose.",
         "subjects": [
             "cs.DB"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2403.00558",
-        "abstract url": "https://arxiv.org/abs/2403.00558",
-        "title": "Rational Linkages: From Poses to 3D-printed Prototypes",
-        "rating": "-2",
-        "keywords": [
-            [
-                "3D"
-            ],
-            [
-                "synthesis"
-            ]
-        ],
-        "abstract": "In this paper, a set of tools is introduced that simplifies the synthesis and rapid-prototyping of single-loop rational kinematic chains. It allows the user to perform rational motion interpolation of up to four given poses and yields the design parameters of a linkage that can execute this motion. The package also provides a visualization of the output and performs a self-collision analysis with the possibility to adapt the design parameters. The results can be imported into CAD-systems for fast 3D printing.",
-        "subjects": [
-            "cs.RO"
         ],
         "comment": null
     },
@@ -5119,34 +5100,6 @@
         "comment": "4 pages, 1 figure, submitted to WWW'24, short-paper track"
     },
     {
-        "paper id": "2403.00965",
-        "abstract url": "https://arxiv.org/abs/2403.00965",
-        "title": "Binary Gaussian Copula Synthesis: A Novel Data Augmentation Technique to Advance ML-based Clinical Decision Support Systems for Early Prediction of Dialysis Among CKD Patients",
-        "rating": "-2.5",
-        "keywords": [
-            [
-                "Synthesis"
-            ],
-            [
-                "medical",
-                "healthcare",
-                "Disease",
-                "Clinical"
-            ],
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "The Center for Disease Control estimates that over 37 million US adults suffer from chronic kidney disease (CKD), yet 9 out of 10 of these individuals are unaware of their condition due to the absence of symptoms in the early stages. It has a significant impact on patients' quality of life, particularly when it progresses to the need for dialysis. Early prediction of dialysis is crucial as it can significantly improve patient outcomes and assist healthcare providers in making timely and informed decisions. However, developing an effective machine learning (ML)-based Clinical Decision Support System (CDSS) for early dialysis prediction poses a key challenge due to the imbalanced nature of data. To address this challenge, this study evaluates various data augmentation techniques to understand their effectiveness on real-world datasets. We propose a new approach named Binary Gaussian Copula Synthesis (BGCS). BGCS is tailored for binary medical datasets and excels in generating synthetic minority data that mirrors the distribution of the original data. BGCS enhances early dialysis prediction by outperforming traditional methods in detecting dialysis patients. For the best ML model, Random Forest, BCGS achieved a 72% improvement, surpassing the state-of-the-art augmentation approaches. Also, we present a ML-based CDSS, designed to aid clinicians in making informed decisions. CDSS, which utilizes decision tree models, is developed to improve patient outcomes, identify critical variables, and thereby enable clinicians to make proactive decisions, and strategize treatment plans effectively for CKD patients who are more likely to require dialysis in the near future. Through comprehensive feature analysis and meticulous data preparation, we ensure that the CDSS's dialysis predictions are not only accurate but also actionable, providing a valuable tool in the management and treatment of CKD.",
-        "subjects": [
-            "stat.AP",
-            "cs.AI",
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2403.00974",
         "abstract url": "https://arxiv.org/abs/2403.00974",
         "title": "Motif distribution and function of sparse deep neural networks",
@@ -5502,12 +5455,36 @@
         "comment": null
     },
     {
+        "paper id": "2403.00390",
+        "abstract url": "https://arxiv.org/abs/2403.00390",
+        "title": "Deterministic Weighted Automata under Partial Observability",
+        "rating": "-10",
+        "keywords": [],
+        "abstract": "Weighted automata is a basic tool for specification in quantitative verification, which allows to express quantitative features of analysed systems such as resource consumption. Quantitative specification can be assisted by automata learning as there are classic results on Angluin-style learning of weighted automata. The existing work assumes perfect information about the values returned by the target weighted automaton. In assisted synthesis of a quantitative specification, knowledge of the exact values is a strong assumption and may be infeasible. In our work, we address this issue by introducing a new framework of partially-observable deterministic weighted automata, in which weighted automata return intervals containing the computed values of words instead of the exact values. We study the basic properties of this framework with the particular focus on the challenges of",
+        "subjects": [
+            "cs.CC"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2403.00397",
         "abstract url": "https://arxiv.org/abs/2403.00397",
         "title": "The Price of Fairness in Bipartite Matching",
         "rating": "-10",
         "keywords": [],
         "abstract": "We investigate notions of group fairness in bipartite matching markets involving agents and jobs, where agents are grouped based on sensitive attributes. Employing a geometric approach, we characterize how many agents can be matched in each group, showing that the set of feasible matchings forms a (discrete) polymatroid. We show how we can define weakly-fair matchings geometrically, for which poly-matroid properties imply that they are maximal. Next, we focus on strong fairness notions (inspired by group-fairness metrics in machine learning), where each group gets their exact same fraction of their entitlement, and we explore the Price of Fairness (PoF), i.e., the loss in optimality when imposing such fairness constraints. Importantly, we advocate for the notion of opportunity fairness, where a group entitlement is the maximum number of agents that can be matched without the presence of other competing groups. We show that the opportunity PoF is bounded independently of the number of agents and jobs, but may be linear in the number of groups. Finally, we provide improved bounds with additional structural properties, or with stochastic graphs.",
+        "subjects": [
+            "cs.GT"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2403.00399",
+        "abstract url": "https://arxiv.org/abs/2403.00399",
+        "title": "As Soon as Possible but Rationally",
+        "rating": "-10",
+        "keywords": [],
+        "abstract": "This paper addresses complexity problems in rational verification and synthesis for multi-player games played on weighted graphs, where the objective of each player is to minimize the cost of reaching a specific set of target vertices. In these games, one player, referred to as the system, declares his strategy upfront. The other players, composing the environment, then rationally make their moves according to their objectives. The rational behavior of these responding players is captured through two models: they opt for strategies that either represent a Nash equilibrium or lead to a play with a Pareto-optimal cost tuple.",
         "subjects": [
             "cs.GT"
         ],

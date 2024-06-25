@@ -60,6 +60,28 @@
         "comment": "10 pages. arXiv admin note: text overlap with arXiv:2311.16922 by other authors"
     },
     {
+        "paper id": "2405.15362",
+        "abstract url": "https://arxiv.org/abs/2405.15362",
+        "title": "Pipeline Parallelism with Controllable Memory",
+        "rating": "2",
+        "keywords": [
+            [
+                "memory efficient"
+            ],
+            [
+                "cs.LG",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Pipeline parallelism has been widely explored, but most existing schedules lack a systematic methodology. In this paper, we propose a framework to decompose pipeline schedules as repeating a building block and we show that the lifespan of the building block decides the peak activation memory of the pipeline schedule. Guided by the observations, we find that almost all existing pipeline schedules, to the best of our knowledge, are memory inefficient. To address this, we introduce a family of memory efficient building blocks with controllable activation memory, which can reduce the peak activation memory to 1/2 of 1F1B without sacrificing efficiency, and even to 1/3 with comparable throughput. We can also achieve almost zero pipeline bubbles while maintaining the same activation memory as 1F1B. Our evaluations demonstrate that in pure pipeline parallelism settings, our methods outperform 1F1B by from 7% to 55% in terms of throughput. When employing a grid search over hybrid parallelism hyperparameters in practical scenarios, our proposed methods demonstrate a 16% throughput improvement over the 1F1B baseline for large language models.",
+        "subjects": [
+            "cs.LG",
+            "cs.CL",
+            "cs.DC"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.15525",
         "abstract url": "https://arxiv.org/abs/2405.15525",
         "title": "Sparse Matrix in Large Language Model Fine-tuning",
@@ -396,23 +418,26 @@
         "comment": "Accepted at the 3rd CVPR Workshop on Vision Datasets Understanding"
     },
     {
-        "paper id": "2405.15223",
-        "abstract url": "https://arxiv.org/abs/2405.15223",
-        "title": "iVideoGPT: Interactive VideoGPTs are Scalable World Models",
+        "paper id": "2405.15216",
+        "abstract url": "https://arxiv.org/abs/2405.15216",
+        "title": "Denoising LM: Pushing the Limits of Error Correction Models for Speech Recognition",
         "rating": "1",
         "keywords": [
             [
                 "cs.LG",
-                "cs.CV"
+                "cs.CL",
+                "cs.SD",
+                "eess.AS"
             ]
         ],
-        "abstract": "World models empower model-based agents to interactively explore, reason, and plan within imagined environments for real-world decision-making. However, the high demand for interactivity poses challenges in harnessing recent advancements in video generative models for developing world models at scale. This work introduces Interactive VideoGPT (iVideoGPT), a scalable autoregressive transformer framework that integrates multimodal signals--visual observations, actions, and rewards--into a sequence of tokens, facilitating an interactive experience of agents via next-token prediction. iVideoGPT features a novel compressive tokenization technique that efficiently discretizes high-dimensional visual observations. Leveraging its scalable architecture, we are able to pre-train iVideoGPT on millions of human and robotic manipulation trajectories, establishing a versatile foundation that is adaptable to serve as interactive world models for a wide range of downstream tasks. These include action-conditioned video prediction, visual planning, and model-based reinforcement learning, where iVideoGPT achieves competitive performance compared with state-of-the-art methods. Our work advances the development of interactive general world models, bridging the gap between generative video models and practical model-based reinforcement learning applications.",
+        "abstract": "Language models (LMs) have long been used to improve results of automatic speech recognition (ASR) systems, but they are unaware of the errors that ASR systems make. Error correction models are designed to fix ASR errors, however, they showed little improvement over traditional LMs mainly due to the lack of supervised training data. In this paper, we present Denoising LM (DLM), which is a $\\textit{scaled}$ error correction model trained with vast amounts of synthetic data, significantly exceeding prior attempts meanwhile achieving new state-of-the-art ASR performance. We use text-to-speech (TTS) systems to synthesize audio, which is fed into an ASR system to produce noisy hypotheses, which are then paired with the original texts to train the DLM. DLM has several $\\textit{key ingredients}$: (i) up-scaled model and data; (ii) usage of multi-speaker TTS systems; (iii) combination of multiple noise augmentation strategies; and (iv) new decoding techniques. With a Transformer-CTC ASR, DLM achieves 1.5% word error rate (WER) on $\\textit{test-clean}$ and 3.3% WER on $\\textit{test-other}$ on Librispeech, which to our knowledge are the best reported numbers in the setting where no external audio data are used and even match self-supervised methods which use external audio data. Furthermore, a single DLM is applicable to different ASRs, and greatly surpassing the performance of conventional LM based beam-search rescoring. These results indicate that properly investigated error correction models have the potential to replace conventional LMs, holding the key to a new level of accuracy in ASR systems.",
         "subjects": [
-            "cs.CV",
             "cs.LG",
-            "cs.RO"
+            "cs.CL",
+            "cs.SD",
+            "eess.AS"
         ],
-        "comment": null
+        "comment": "under review"
     },
     {
         "paper id": "2405.15240",
@@ -499,6 +524,24 @@
             "cs.LG"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2405.15306",
+        "abstract url": "https://arxiv.org/abs/2405.15306",
+        "title": "DeTikZify: Synthesizing Graphics Programs for Scientific Figures and Sketches with TikZ",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.CV",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Creating high-quality scientific figures can be time-consuming and challenging, even though sketching ideas on paper is relatively easy. Furthermore, recreating existing figures that are not stored in formats preserving semantic information is equally complex. To tackle this problem, we introduce DeTikZify, a novel multimodal language model that automatically synthesizes scientific figures as semantics-preserving TikZ graphics programs based on sketches and existing figures. To achieve this, we create three new datasets: DaTikZv2, the largest TikZ dataset to date, containing over 360k human-created TikZ graphics; SketchFig, a dataset that pairs hand-drawn sketches with their corresponding scientific figures; and SciCap++, a collection of diverse scientific figures and associated metadata. We train DeTikZify on SciCap++ and DaTikZv2, along with synthetically generated sketches learned from SketchFig. We also introduce an MCTS-based inference algorithm that enables DeTikZify to iteratively refine its outputs without the need for additional training. Through both automatic and human evaluation, we demonstrate that DeTikZify outperforms commercial Claude 3 and GPT-4V in synthesizing TikZ programs, with the MCTS algorithm effectively boosting its performance. We make our code, models, and datasets publicly available.",
+        "subjects": [
+            "cs.CL",
+            "cs.CV"
+        ],
+        "comment": "Project page: https://github.com/potamides/DeTikZify"
     },
     {
         "paper id": "2405.15311",
@@ -628,25 +671,6 @@
             "cs.CL",
             "cs.AI",
             "cs.LG"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2405.15362",
-        "abstract url": "https://arxiv.org/abs/2405.15362",
-        "title": "Pipeline Parallelism with Controllable Memory",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.LG",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Pipeline parallelism has been widely explored, but most existing schedules lack a systematic methodology. In this paper, we propose a framework to decompose pipeline schedules as repeating a building block and we show that the lifespan of the building block decides the peak activation memory of the pipeline schedule. Guided by the observations, we find that almost all existing pipeline schedules, to the best of our knowledge, are memory inefficient. To address this, we introduce a family of memory efficient building blocks with controllable activation memory, which can reduce the peak activation memory to 1/2 of 1F1B without sacrificing efficiency, and even to 1/3 with comparable throughput. We can also achieve almost zero pipeline bubbles while maintaining the same activation memory as 1F1B. Our evaluations demonstrate that in pure pipeline parallelism settings, our methods outperform 1F1B by from 7% to 55% in terms of throughput. When employing a grid search over hybrid parallelism hyperparameters in practical scenarios, our proposed methods demonstrate a 16% throughput improvement over the 1F1B baseline for large language models.",
-        "subjects": [
-            "cs.LG",
-            "cs.CL",
-            "cs.DC"
         ],
         "comment": null
     },
@@ -1178,6 +1202,22 @@
         "comment": "9 pages, 8 figures, Submitted to NeurIPS 2024 main track"
     },
     {
+        "paper id": "2405.15763",
+        "abstract url": "https://arxiv.org/abs/2405.15763",
+        "title": "FreeMotion: A Unified Framework for Number-free Text-to-Motion Synthesis",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Text-to-motion synthesis is a crucial task in computer vision. Existing methods are limited in their universality, as they are tailored for single-person or two-person scenarios and can not be applied to generate motions for more individuals. To achieve the number-free motion synthesis, this paper reconsiders motion generation and proposes to unify the single and multi-person motion by the conditional motion distribution. Furthermore, a generation module and an interaction module are designed for our FreeMotion framework to decouple the process of conditional motion generation and finally support the number-free motion synthesis. Besides, based on our framework, the current single-person motion spatial control method could be seamlessly integrated, achieving precise control of multi-person motion. Extensive experiments demonstrate the superior performance of our method and our capability to infer single and multi-human motions simultaneously.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.15765",
         "abstract url": "https://arxiv.org/abs/2405.15765",
         "title": "Scaling Laws for Discriminative Classification in Large Language Models",
@@ -1451,23 +1491,6 @@
             "cs.LG",
             "cs.CR",
             "cs.CV"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2405.15976",
-        "abstract url": "https://arxiv.org/abs/2405.15976",
-        "title": "Understanding the Impact of Training Set Size on Animal Re-identification",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Recent advancements in the automatic re-identification of animal individuals from images have opened up new possibilities for studying wildlife through camera traps and citizen science projects. Existing methods leverage distinct and permanent visual body markings, such as fur patterns or scars, and typically employ one of two strategies: local features or end-to-end learning. In this study, we delve into the impact of training set size by conducting comprehensive experiments across six different methods and five animal species. While it is well known that end-to-end learning-based methods surpass local feature-based methods given a sufficient amount of good-quality training data, the challenge of gathering such datasets for wildlife animals means that local feature-based methods remain a more practical approach for many species. We demonstrate the benefits of both local feature and end-to-end learning-based approaches and show that species-specific characteristics, particularly intra-individual variance, have a notable effect on training data requirements.",
-        "subjects": [
-            "cs.CV",
-            "q-bio.PE"
         ],
         "comment": null
     },
@@ -1830,6 +1853,22 @@
             "cs.AI"
         ],
         "comment": "RISC-V Summit Europe 2024"
+    },
+    {
+        "paper id": "2405.15383",
+        "abstract url": "https://arxiv.org/abs/2405.15383",
+        "title": "Generating Code World Models with Large Language Models Guided by Monte Carlo Tree Search",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "In this work we consider Code World Models, world models generated by a Large Language Model (LLM) in the form of Python code for model-based Reinforcement Learning (RL). Calling code instead of LLMs for planning has the advantages of being precise, reliable, interpretable, and extremely efficient. However, writing appropriate Code World Models requires the ability to understand complex instructions, to generate exact code with non-trivial logic and to self-debug a long program with feedback from unit tests and environment trajectories. To address these challenges, we propose Generate, Improve and Fix with Monte Carlo Tree Search (GIF-MCTS), a new code generation strategy for LLMs. To test our approach, we introduce the Code World Models Benchmark (CWMB), a suite of program synthesis and planning tasks comprised of 18 diverse RL environments paired with corresponding textual descriptions and curated trajectories. GIF-MCTS surpasses all baselines on the CWMB and two other benchmarks, and we show that the Code World Models synthesized with it can be successfully used for planning, resulting in model-based RL agents with greatly improved sample efficiency and inference speed.",
+        "subjects": [
+            "cs.AI"
+        ],
+        "comment": "10 pages in main text, 24 pages including references and supplementary materials. 2 figures and 3 tables in the main text, 9 figures and 12 tables when including the supplementary materials"
     },
     {
         "paper id": "2405.15393",
@@ -2202,6 +2241,28 @@
         "comment": "43 pages, 2 figures"
     },
     {
+        "paper id": "2405.15551",
+        "abstract url": "https://arxiv.org/abs/2405.15551",
+        "title": "Thinking Forward: Memory-Efficient Federated Finetuning of Language Models",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "Memory-Efficient"
+            ],
+            [
+                "federated learning"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Finetuning large language models (LLMs) in federated learning (FL) settings has become important as it allows resource-constrained devices to finetune a model using private data. However, finetuning LLMs using backpropagation requires excessive memory (especially from intermediate activations) for resource-constrained devices. While Forward-mode Auto-Differentiation (AD) can reduce memory footprint from activations, we observe that directly applying it to LLM finetuning results in slow convergence and poor accuracy. This work introduces Spry, an FL algorithm that splits trainable weights of an LLM among participating clients, such that each client computes gradients using Forward-mode AD that are closer estimates of the true gradients. Spry achieves a low memory footprint, high accuracy, and fast convergence. We theoretically show that the global gradients in Spry are unbiased estimates of true global gradients for homogeneous data distributions across clients, while heterogeneity increases bias of the estimates. We also derive Spry's convergence rate, showing that the gradients decrease inversely proportional to the number of FL rounds, indicating the convergence up to the limits of heterogeneity. Empirically, Spry reduces the memory footprint during training by 1.4-7.1$\\times$ in contrast to backpropagation, while reaching comparable accuracy, across a wide range of language tasks, models, and FL settings. Spry reduces the convergence time by 1.2-20.3$\\times$ and achieves 5.2-13.5\\% higher accuracy against state-of-the-art zero-order methods. When finetuning Llama2-7B with LoRA, compared to the peak memory usage of 33.9GB of backpropagation, Spry only consumes 6.2GB of peak memory. For OPT13B, the reduction is from 76.5GB to 10.8GB. Spry makes feasible previously impossible FL deployments on commodity mobile and edge devices. Source code is available at https://github.com/Astuary/Spry.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.15561",
         "abstract url": "https://arxiv.org/abs/2405.15561",
         "title": "When Generative AI Meets Workplace Learning: Creating A Realistic & Motivating Learning Experience With A Generative PCA",
@@ -2497,6 +2558,23 @@
         "comment": null
     },
     {
+        "paper id": "2405.15723",
+        "abstract url": "https://arxiv.org/abs/2405.15723",
+        "title": "Bisimulation Learning",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "We introduce a data-driven approach to computing finite bisimulations for state transition systems with very large, possibly infinite state space. Our novel technique computes stutter-insensitive bisimulations of deterministic systems, which we characterize as the problem of learning a state classifier together with a ranking function for each class. Our procedure learns a candidate state classifier and candidate ranking functions from a finite dataset of sample states; then, it checks whether these generalise to the entire state space using satisfiability modulo theory solving. Upon the affirmative answer, the procedure concludes that the classifier constitutes a valid stutter-insensitive bisimulation of the system. Upon a negative answer, the solver produces a counterexample state for which the classifier violates the claim, adds it to the dataset, and repeats learning and checking in a counterexample-guided inductive synthesis loop until a valid bisimulation is found. We demonstrate on a range of benchmarks from reactive verification and software model checking that our method yields faster verification results than alternative state-of-the-art tools in practice. Our method produces succinct abstractions that enable an effective verification of linear temporal logic without next operator, and are interpretable for system diagnostics.",
+        "subjects": [
+            "cs.LO",
+            "cs.LG"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.15731",
         "abstract url": "https://arxiv.org/abs/2405.15731",
         "title": "Understanding the differences in Foundation Models: Attention, State Space Models, and Recurrent Neural Networks",
@@ -2660,6 +2738,23 @@
             "cs.LG"
         ],
         "comment": "14 pages, 4 figures"
+    },
+    {
+        "paper id": "2405.15880",
+        "abstract url": "https://arxiv.org/abs/2405.15880",
+        "title": "HYSYNTH: Context-Free LLM Approximation for Guiding Program Synthesis",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "Many structured prediction and reasoning tasks can be framed as program synthesis problems, where the goal is to generate a program in a domain-specific language (DSL) that transforms input data into the desired output. Unfortunately, purely neural approaches, such as large language models (LLMs), often fail to produce fully correct programs in unfamiliar DSLs, while purely symbolic methods based on combinatorial search scale poorly to complex problems. Motivated by these limitations, we introduce a hybrid approach, where LLM completions for a given task are used to learn a task-specific, context-free surrogate model, which is then used to guide program synthesis. We evaluate this hybrid approach on three domains, and show that it outperforms both unguided search and direct sampling from LLMs, as well as existing program synthesizers.",
+        "subjects": [
+            "cs.PL",
+            "cs.AI"
+        ],
+        "comment": null
     },
     {
         "paper id": "2405.15893",
@@ -3093,31 +3188,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.15216",
-        "abstract url": "https://arxiv.org/abs/2405.15216",
-        "title": "Denoising LM: Pushing the Limits of Error Correction Models for Speech Recognition",
-        "rating": "0",
-        "keywords": [
-            [
-                "synthesize"
-            ],
-            [
-                "cs.LG",
-                "cs.CL",
-                "cs.SD",
-                "eess.AS"
-            ]
-        ],
-        "abstract": "Language models (LMs) have long been used to improve results of automatic speech recognition (ASR) systems, but they are unaware of the errors that ASR systems make. Error correction models are designed to fix ASR errors, however, they showed little improvement over traditional LMs mainly due to the lack of supervised training data. In this paper, we present Denoising LM (DLM), which is a $\\textit{scaled}$ error correction model trained with vast amounts of synthetic data, significantly exceeding prior attempts meanwhile achieving new state-of-the-art ASR performance. We use text-to-speech (TTS) systems to synthesize audio, which is fed into an ASR system to produce noisy hypotheses, which are then paired with the original texts to train the DLM. DLM has several $\\textit{key ingredients}$: (i) up-scaled model and data; (ii) usage of multi-speaker TTS systems; (iii) combination of multiple noise augmentation strategies; and (iv) new decoding techniques. With a Transformer-CTC ASR, DLM achieves 1.5% word error rate (WER) on $\\textit{test-clean}$ and 3.3% WER on $\\textit{test-other}$ on Librispeech, which to our knowledge are the best reported numbers in the setting where no external audio data are used and even match self-supervised methods which use external audio data. Furthermore, a single DLM is applicable to different ASRs, and greatly surpassing the performance of conventional LM based beam-search rescoring. These results indicate that properly investigated error correction models have the potential to replace conventional LMs, holding the key to a new level of accuracy in ASR systems.",
-        "subjects": [
-            "cs.LG",
-            "cs.CL",
-            "cs.SD",
-            "eess.AS"
-        ],
-        "comment": "under review"
-    },
-    {
         "paper id": "2405.15217",
         "abstract url": "https://arxiv.org/abs/2405.15217",
         "title": "NIVeL: Neural Implicit Vector Layers for Text-to-Vector Generation",
@@ -3134,6 +3204,28 @@
         "subjects": [
             "cs.CV",
             "cs.GR"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2405.15223",
+        "abstract url": "https://arxiv.org/abs/2405.15223",
+        "title": "iVideoGPT: Interactive VideoGPTs are Scalable World Models",
+        "rating": "0",
+        "keywords": [
+            [
+                "robotic manipulation"
+            ],
+            [
+                "cs.LG",
+                "cs.CV"
+            ]
+        ],
+        "abstract": "World models empower model-based agents to interactively explore, reason, and plan within imagined environments for real-world decision-making. However, the high demand for interactivity poses challenges in harnessing recent advancements in video generative models for developing world models at scale. This work introduces Interactive VideoGPT (iVideoGPT), a scalable autoregressive transformer framework that integrates multimodal signals--visual observations, actions, and rewards--into a sequence of tokens, facilitating an interactive experience of agents via next-token prediction. iVideoGPT features a novel compressive tokenization technique that efficiently discretizes high-dimensional visual observations. Leveraging its scalable architecture, we are able to pre-train iVideoGPT on millions of human and robotic manipulation trajectories, establishing a versatile foundation that is adaptable to serve as interactive world models for a wide range of downstream tasks. These include action-conditioned video prediction, visual planning, and model-based reinforcement learning, where iVideoGPT achieves competitive performance compared with state-of-the-art methods. Our work advances the development of interactive general world models, bridging the gap between generative video models and practical model-based reinforcement learning applications.",
+        "subjects": [
+            "cs.CV",
+            "cs.LG",
+            "cs.RO"
         ],
         "comment": null
     },
@@ -3237,46 +3329,6 @@
             "cs.CV"
         ],
         "comment": "Project: https://yiboz2001.github.io/Diff3DS/"
-    },
-    {
-        "paper id": "2405.15306",
-        "abstract url": "https://arxiv.org/abs/2405.15306",
-        "title": "DeTikZify: Synthesizing Graphics Programs for Scientific Figures and Sketches with TikZ",
-        "rating": "0",
-        "keywords": [
-            [
-                "Synthesizing"
-            ],
-            [
-                "cs.CV",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Creating high-quality scientific figures can be time-consuming and challenging, even though sketching ideas on paper is relatively easy. Furthermore, recreating existing figures that are not stored in formats preserving semantic information is equally complex. To tackle this problem, we introduce DeTikZify, a novel multimodal language model that automatically synthesizes scientific figures as semantics-preserving TikZ graphics programs based on sketches and existing figures. To achieve this, we create three new datasets: DaTikZv2, the largest TikZ dataset to date, containing over 360k human-created TikZ graphics; SketchFig, a dataset that pairs hand-drawn sketches with their corresponding scientific figures; and SciCap++, a collection of diverse scientific figures and associated metadata. We train DeTikZify on SciCap++ and DaTikZv2, along with synthetically generated sketches learned from SketchFig. We also introduce an MCTS-based inference algorithm that enables DeTikZify to iteratively refine its outputs without the need for additional training. Through both automatic and human evaluation, we demonstrate that DeTikZify outperforms commercial Claude 3 and GPT-4V in synthesizing TikZ programs, with the MCTS algorithm effectively boosting its performance. We make our code, models, and datasets publicly available.",
-        "subjects": [
-            "cs.CL",
-            "cs.CV"
-        ],
-        "comment": "Project page: https://github.com/potamides/DeTikZify"
-    },
-    {
-        "paper id": "2405.15307",
-        "abstract url": "https://arxiv.org/abs/2405.15307",
-        "title": "Before Generation, Align it! A Novel and Effective Strategy for Mitigating Hallucinations in Text-to-SQL Generation",
-        "rating": "0",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Large Language Models (LLMs) driven by In-Context Learning (ICL) have significantly improved the performance of text-to-SQL. Previous methods generally employ a two-stage reasoning framework, namely 1) schema linking and 2) logical synthesis, making the framework not only effective but also interpretable. Despite these advancements, the inherent bad nature of the generalization of LLMs often results in hallucinations, which limits the full potential of LLMs. In this work, we first identify and categorize the common types of hallucinations at each stage in text-to-SQL. We then introduce a novel strategy, Task Alignment (TA), designed to mitigate hallucinations at each stage. TA encourages LLMs to take advantage of experiences from similar tasks rather than starting the tasks from scratch. This can help LLMs reduce the burden of generalization, thereby mitigating hallucinations effectively. We further propose TA-SQL, a text-to-SQL framework based on this strategy. The experimental results and comprehensive analysis demonstrate the effectiveness and robustness of our framework. Specifically, it enhances the performance of the GPT-4 baseline by 21.23% relatively on BIRD dev and it yields significant improvements across six models and four mainstream, complex text-to-SQL benchmarks.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": "Accepted to ACL Findings 2024"
     },
     {
         "paper id": "2405.15313",
@@ -3409,8 +3461,7 @@
         "rating": "0",
         "keywords": [
             [
-                "Diffusion",
-                "Synthesizer"
+                "Diffusion"
             ],
             [
                 "cs.CV"
@@ -3592,6 +3643,26 @@
         "comment": "For project page, see https://jhuangbu.github.io/gsdeformer"
     },
     {
+        "paper id": "2405.15518",
+        "abstract url": "https://arxiv.org/abs/2405.15518",
+        "title": "Feature Splatting for Better Novel View Synthesis with Low Overlap",
+        "rating": "0",
+        "keywords": [
+            [
+                "3D",
+                "Gaussian Splatting"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "3D Gaussian Splatting has emerged as a very promising scene representation, achieving state-of-the-art quality in novel view synthesis significantly faster than competing alternatives. However, its use of spherical harmonics to represent scene colors limits the expressivity of 3D Gaussians and, as a consequence, the capability of the representation to generalize as we move away from the training views. In this paper, we propose to encode the color information of 3D Gaussians into per-Gaussian feature vectors, which we denote as Feature Splatting (FeatSplat). To synthesize a novel view, Gaussians are first \"splatted\" into the image plane, then the corresponding feature vectors are alpha-blended, and finally the blended vector is decoded by a small MLP to render the RGB pixel values. To further inform the model, we concatenate a camera embedding to the blended feature vector, to condition the decoding also on the viewpoint information. Our experiments show that these novel model for encoding the radiance considerably improves novel view synthesis for low overlap views that are distant from the training views. Finally, we also show the capacity and convenience of our feature vector representation, demonstrating its capability not only to generate RGB values for novel views, but also their per-pixel semantic labels. We will release the code upon acceptance. Keywords: Gaussian Splatting, Novel View Synthesis, Feature Splatting",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.15519",
         "abstract url": "https://arxiv.org/abs/2405.15519",
         "title": "Confocal structured illumination microscopy",
@@ -3761,25 +3832,6 @@
         "comment": "Project page: https://jeff-liangf.github.io/projects/streamv2v"
     },
     {
-        "paper id": "2405.15763",
-        "abstract url": "https://arxiv.org/abs/2405.15763",
-        "title": "FreeMotion: A Unified Framework for Number-free Text-to-Motion Synthesis",
-        "rating": "0",
-        "keywords": [
-            [
-                "Synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Text-to-motion synthesis is a crucial task in computer vision. Existing methods are limited in their universality, as they are tailored for single-person or two-person scenarios and can not be applied to generate motions for more individuals. To achieve the number-free motion synthesis, this paper reconsiders motion generation and proposes to unify the single and multi-person motion by the conditional motion distribution. Furthermore, a generation module and an interaction module are designed for our FreeMotion framework to decouple the process of conditional motion generation and finally support the number-free motion synthesis. Besides, based on our framework, the current single-person motion spatial control method could be seamlessly integrated, achieving precise control of multi-person motion. Extensive experiments demonstrate the superior performance of our method and our capability to infer single and multi-human motions simultaneously.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2405.15766",
         "abstract url": "https://arxiv.org/abs/2405.15766",
         "title": "Enhancing Adverse Drug Event Detection with Multimodal Dataset: Corpus Creation and Model Development",
@@ -3834,8 +3886,7 @@
         "rating": "0",
         "keywords": [
             [
-                "Diffusion",
-                "synthesizing"
+                "Diffusion"
             ],
             [
                 "cs.AI",
@@ -3894,6 +3945,26 @@
             "cs.RO"
         ],
         "comment": "Accepted to International Conference on Robotics and Automation(ICRA) 2024"
+    },
+    {
+        "paper id": "2405.15976",
+        "abstract url": "https://arxiv.org/abs/2405.15976",
+        "title": "Understanding the Impact of Training Set Size on Animal Re-identification",
+        "rating": "0",
+        "keywords": [
+            [
+                "Re-identification"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Recent advancements in the automatic re-identification of animal individuals from images have opened up new possibilities for studying wildlife through camera traps and citizen science projects. Existing methods leverage distinct and permanent visual body markings, such as fur patterns or scars, and typically employ one of two strategies: local features or end-to-end learning. In this study, we delve into the impact of training set size by conducting comprehensive experiments across six different methods and five animal species. While it is well known that end-to-end learning-based methods surpass local feature-based methods given a sufficient amount of good-quality training data, the challenge of gathering such datasets for wildlife animals means that local feature-based methods remain a more practical approach for many species. We demonstrate the benefits of both local feature and end-to-end learning-based approaches and show that species-specific characteristics, particularly intra-individual variance, have a notable effect on training data requirements.",
+        "subjects": [
+            "cs.CV",
+            "q-bio.PE"
+        ],
+        "comment": null
     },
     {
         "paper id": "2405.15984",
@@ -4200,27 +4271,6 @@
         "comment": "13 pages, 6 figures"
     },
     {
-        "paper id": "2405.15375",
-        "abstract url": "https://arxiv.org/abs/2405.15375",
-        "title": "A Planet Scale Spatial-Temporal Knowledge Graph Based On OpenStreetMap And H3 Grid",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "Graph"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "Geospatial data plays a central role in modeling our world, for which OpenStreetMap (OSM) provides a rich source of such data. While often spatial data is represented in a tabular format, a graph based representation provides the possibility to interconnect entities which would have been separated in a tabular representation. We propose in our paper a framework which supports a planet scale transformation of OpenStreetMap data into a Spatial Temporal Knowledge Graph. In addition to OpenStreetMap data, we align the different OpenStreetMap geometries on individual h3 grid cells. We compare our constructed spatial knowledge graph to other spatial knowledge graphs and outline our contribution in this paper. As a basis for our computation, we use Apache Sedona as a computational framework for our Spatial Temporal Knowledge Graph construction",
-        "subjects": [
-            "cs.AI",
-            "cs.DB",
-            "cs.DC"
-        ],
-        "comment": "12 pages, 2 figures, GeoLD2024: 6th Geospatial Linked Data Workshop, May 26, 2024, Hersonissos, Greece"
-    },
-    {
         "paper id": "2405.15376",
         "abstract url": "https://arxiv.org/abs/2405.15376",
         "title": "Fast, accurate training and sampling of Restricted Boltzmann Machines",
@@ -4240,25 +4290,6 @@
             "cond-mat.stat-mech"
         ],
         "comment": "18 pages, 8 figures"
-    },
-    {
-        "paper id": "2405.15383",
-        "abstract url": "https://arxiv.org/abs/2405.15383",
-        "title": "Generating Code World Models with Large Language Models Guided by Monte Carlo Tree Search",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "In this work we consider Code World Models, world models generated by a Large Language Model (LLM) in the form of Python code for model-based Reinforcement Learning (RL). Calling code instead of LLMs for planning has the advantages of being precise, reliable, interpretable, and extremely efficient. However, writing appropriate Code World Models requires the ability to understand complex instructions, to generate exact code with non-trivial logic and to self-debug a long program with feedback from unit tests and environment trajectories. To address these challenges, we propose Generate, Improve and Fix with Monte Carlo Tree Search (GIF-MCTS), a new code generation strategy for LLMs. To test our approach, we introduce the Code World Models Benchmark (CWMB), a suite of program synthesis and planning tasks comprised of 18 diverse RL environments paired with corresponding textual descriptions and curated trajectories. GIF-MCTS surpasses all baselines on the CWMB and two other benchmarks, and we show that the Code World Models synthesized with it can be successfully used for planning, resulting in model-based RL agents with greatly improved sample efficiency and inference speed.",
-        "subjects": [
-            "cs.AI"
-        ],
-        "comment": "10 pages in main text, 24 pages including references and supplementary materials. 2 figures and 3 tables in the main text, 9 figures and 12 tables when including the supplementary materials"
     },
     {
         "paper id": "2405.15388",
@@ -4503,25 +4534,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.15551",
-        "abstract url": "https://arxiv.org/abs/2405.15551",
-        "title": "Thinking Forward: Memory-Efficient Federated Finetuning of Language Models",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "federated learning"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Finetuning large language models (LLMs) in federated learning (FL) settings has become important as it allows resource-constrained devices to finetune a model using private data. However, finetuning LLMs using backpropagation requires excessive memory (especially from intermediate activations) for resource-constrained devices. While Forward-mode Auto-Differentiation (AD) can reduce memory footprint from activations, we observe that directly applying it to LLM finetuning results in slow convergence and poor accuracy. This work introduces Spry, an FL algorithm that splits trainable weights of an LLM among participating clients, such that each client computes gradients using Forward-mode AD that are closer estimates of the true gradients. Spry achieves a low memory footprint, high accuracy, and fast convergence. We theoretically show that the global gradients in Spry are unbiased estimates of true global gradients for homogeneous data distributions across clients, while heterogeneity increases bias of the estimates. We also derive Spry's convergence rate, showing that the gradients decrease inversely proportional to the number of FL rounds, indicating the convergence up to the limits of heterogeneity. Empirically, Spry reduces the memory footprint during training by 1.4-7.1$\\times$ in contrast to backpropagation, while reaching comparable accuracy, across a wide range of language tasks, models, and FL settings. Spry reduces the convergence time by 1.2-20.3$\\times$ and achieves 5.2-13.5\\% higher accuracy against state-of-the-art zero-order methods. When finetuning Llama2-7B with LoRA, compared to the peak memory usage of 33.9GB of backpropagation, Spry only consumes 6.2GB of peak memory. For OPT13B, the reduction is from 76.5GB to 10.8GB. Spry makes feasible previously impossible FL deployments on commodity mobile and edge devices. Source code is available at https://github.com/Astuary/Spry.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2405.15557",
         "abstract url": "https://arxiv.org/abs/2405.15557",
         "title": "Learning from Linear Algebra: A Graph Neural Network Approach to Preconditioner Design for Conjugate Gradient Solvers",
@@ -4664,26 +4676,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.15723",
-        "abstract url": "https://arxiv.org/abs/2405.15723",
-        "title": "Bisimulation Learning",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "We introduce a data-driven approach to computing finite bisimulations for state transition systems with very large, possibly infinite state space. Our novel technique computes stutter-insensitive bisimulations of deterministic systems, which we characterize as the problem of learning a state classifier together with a ranking function for each class. Our procedure learns a candidate state classifier and candidate ranking functions from a finite dataset of sample states; then, it checks whether these generalise to the entire state space using satisfiability modulo theory solving. Upon the affirmative answer, the procedure concludes that the classifier constitutes a valid stutter-insensitive bisimulation of the system. Upon a negative answer, the solver produces a counterexample state for which the classifier violates the claim, adds it to the dataset, and repeats learning and checking in a counterexample-guided inductive synthesis loop until a valid bisimulation is found. We demonstrate on a range of benchmarks from reactive verification and software model checking that our method yields faster verification results than alternative state-of-the-art tools in practice. Our method produces succinct abstractions that enable an effective verification of linear temporal logic without next operator, and are interpretable for system diagnostics.",
-        "subjects": [
-            "cs.LO",
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2405.15727",
         "abstract url": "https://arxiv.org/abs/2405.15727",
         "title": "Anomalous Change Point Detection Using Probabilistic Predictive Coding",
@@ -4788,26 +4780,6 @@
         "comment": "17 pages, 8 figures. Source code under https://github.com/AI4HealthUOL/CausalConceptTS"
     },
     {
-        "paper id": "2405.15880",
-        "abstract url": "https://arxiv.org/abs/2405.15880",
-        "title": "HYSYNTH: Context-Free LLM Approximation for Guiding Program Synthesis",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "Synthesis"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "Many structured prediction and reasoning tasks can be framed as program synthesis problems, where the goal is to generate a program in a domain-specific language (DSL) that transforms input data into the desired output. Unfortunately, purely neural approaches, such as large language models (LLMs), often fail to produce fully correct programs in unfamiliar DSLs, while purely symbolic methods based on combinatorial search scale poorly to complex problems. Motivated by these limitations, we introduce a hybrid approach, where LLM completions for a given task are used to learn a task-specific, context-free surrogate model, which is then used to guide program synthesis. We evaluate this hybrid approach on three domains, and show that it outperforms both unguided search and direct sampling from LLMs, as well as existing program synthesizers.",
-        "subjects": [
-            "cs.PL",
-            "cs.AI"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2405.15885",
         "abstract url": "https://arxiv.org/abs/2405.15885",
         "title": "Diffusion Bridge Implicit Models",
@@ -4886,28 +4858,6 @@
             "cs.LG",
             "cs.DC",
             "math.NA",
-            "stat.ML"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2405.15991",
-        "abstract url": "https://arxiv.org/abs/2405.15991",
-        "title": "R\u00e9nyi Neural Processes",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "inpainting"
-            ],
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Neural Processes (NPs) are variational frameworks that aim to represent stochastic processes with deep neural networks. Despite their obvious benefits in uncertainty estimation for complex distributions via data-driven priors, NPs enforce network parameter sharing between the conditional prior and posterior distributions, thereby risking introducing a misspecified prior. We hereby propose R\u00e9nyi Neural Processes (RNP) to relax the influence of the misspecified prior and optimize a tighter bound of the marginal likelihood. More specifically, by replacing the standard KL divergence with the R\u00e9nyi divergence between the posterior and the approximated prior, we ameliorate the impact of the misspecified prior via a parameter \u03b1 so that the resulting posterior focuses more on tail samples and reduce density on overconfident regions. Our experiments showed log-likelihood improvements on several existing NP families. We demonstrated the superior performance of our approach on various benchmarks including regression and image inpainting tasks. We also validate the effectiveness of RNPs on real-world tabular regression problems.",
-        "subjects": [
-            "cs.LG",
-            "cs.AI",
             "stat.ML"
         ],
         "comment": null
@@ -5235,6 +5185,25 @@
             "cs.CV"
         ],
         "comment": "25 pages, 6 figures, codes are available at https://github.com/sbysbysbys/UOV"
+    },
+    {
+        "paper id": "2405.15307",
+        "abstract url": "https://arxiv.org/abs/2405.15307",
+        "title": "Before Generation, Align it! A Novel and Effective Strategy for Mitigating Hallucinations in Text-to-SQL Generation",
+        "rating": "-1",
+        "keywords": [
+            [
+                "SQL"
+            ],
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Large Language Models (LLMs) driven by In-Context Learning (ICL) have significantly improved the performance of text-to-SQL. Previous methods generally employ a two-stage reasoning framework, namely 1) schema linking and 2) logical synthesis, making the framework not only effective but also interpretable. Despite these advancements, the inherent bad nature of the generalization of LLMs often results in hallucinations, which limits the full potential of LLMs. In this work, we first identify and categorize the common types of hallucinations at each stage in text-to-SQL. We then introduce a novel strategy, Task Alignment (TA), designed to mitigate hallucinations at each stage. TA encourages LLMs to take advantage of experiences from similar tasks rather than starting the tasks from scratch. This can help LLMs reduce the burden of generalization, thereby mitigating hallucinations effectively. We further propose TA-SQL, a text-to-SQL framework based on this strategy. The experimental results and comprehensive analysis demonstrate the effectiveness and robustness of our framework. Specifically, it enhances the performance of the GPT-4 baseline by 21.23% relatively on BIRD dev and it yields significant improvements across six models and four mainstream, complex text-to-SQL benchmarks.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": "Accepted to ACL Findings 2024"
     },
     {
         "paper id": "2405.15320",
@@ -5570,29 +5539,6 @@
             "cs.DS"
         ],
         "comment": "To appear in the proceedings of the 19th Scandinavian Symposium on Algorithm Theory (SWAT 2024)"
-    },
-    {
-        "paper id": "2405.15518",
-        "abstract url": "https://arxiv.org/abs/2405.15518",
-        "title": "Feature Splatting for Better Novel View Synthesis with Low Overlap",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting"
-            ],
-            [
-                "Synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "3D Gaussian Splatting has emerged as a very promising scene representation, achieving state-of-the-art quality in novel view synthesis significantly faster than competing alternatives. However, its use of spherical harmonics to represent scene colors limits the expressivity of 3D Gaussians and, as a consequence, the capability of the representation to generalize as we move away from the training views. In this paper, we propose to encode the color information of 3D Gaussians into per-Gaussian feature vectors, which we denote as Feature Splatting (FeatSplat). To synthesize a novel view, Gaussians are first \"splatted\" into the image plane, then the corresponding feature vectors are alpha-blended, and finally the blended vector is decoded by a small MLP to render the RGB pixel values. To further inform the model, we concatenate a camera embedding to the blended feature vector, to condition the decoding also on the viewpoint information. Our experiments show that these novel model for encoding the radiance considerably improves novel view synthesis for low overlap views that are distant from the training views. Finally, we also show the capacity and convenience of our feature vector representation, demonstrating its capability not only to generate RGB values for novel views, but also their per-pixel semantic labels. We will release the code upon acceptance. Keywords: Gaussian Splatting, Novel View Synthesis, Feature Splatting",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
     },
     {
         "paper id": "2405.15537",
@@ -6035,8 +5981,7 @@
                 "3D"
             ],
             [
-                "diffusion",
-                "synthesis"
+                "diffusion"
             ],
             [
                 "cs.CV"
@@ -6047,29 +5992,6 @@
             "cs.CV"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2405.15923",
-        "abstract url": "https://arxiv.org/abs/2405.15923",
-        "title": "Spiketrum: An FPGA-based Implementation of a Neuromorphic Cochlea",
-        "rating": "-1",
-        "keywords": [
-            [
-                "biologically"
-            ],
-            [
-                "cs.SD",
-                "eess.AS"
-            ]
-        ],
-        "abstract": "This paper presents a novel FPGA-based neuromorphic cochlea, leveraging the general-purpose spike-coding algorithm, Spiketrum. The focus of this study is on the development and characterization of this cochlea model, which excels in transforming audio vibrations into biologically realistic auditory spike trains. These spike trains are designed to withstand neural fluctuations and spike losses while accurately encapsulating the spatial and precise temporal characteristics of audio, along with the intensity of incoming vibrations. Noteworthy features include the ability to generate real-time spike trains with minimal information loss and the capacity to reconstruct original signals. This fine-tuning capability allows users to optimize spike rates, achieving an optimal balance between output quality and power consumption. Furthermore, the integration of a feedback system into Spiketrum enables selective amplification of specific features while attenuating others, facilitating adaptive power consumption based on application requirements. The hardware implementation supports both spike-based and non-spike-based processors, making it versatile for various computing systems. The cochlea's ability to encode diverse sensory information, extending beyond sound waveforms, positions it as a promising sensory input for current and future spike-based intelligent computing systems, offering compact and real-time spike train generation.",
-        "subjects": [
-            "eess.SP",
-            "cs.NE",
-            "cs.SD",
-            "eess.AS"
-        ],
-        "comment": "To be published at \"IEEE Transactions on Circuits and Systems\""
     },
     {
         "paper id": "2405.15925",
@@ -6594,8 +6516,7 @@
                 "point cloud"
             ],
             [
-                "Diffusion",
-                "synthesis"
+                "Diffusion"
             ],
             [
                 "cs.LG"
@@ -7075,8 +6996,7 @@
                 "3D"
             ],
             [
-                "diffusion",
-                "synthesizing"
+                "diffusion"
             ]
         ],
         "abstract": "This paper explores the burgeoning field of 3D content generation within the landscape of Artificial Intelligence Generated Content (AIGC) and large-scale models. It investigates innovative methods like Text-to-3D and Image-to-3D, which translate text or images into 3D objects, reshaping our understanding of virtual and real-world simulations. Despite significant advancements in text and image generation, automatic 3D content generation remains nascent. This paper emphasizes the urgency for further research in this area. By leveraging pre-trained diffusion models, which have demonstrated prowess in high-fidelity image generation, this paper aims to summary 3D content creation, addressing challenges such as data scarcity and computational resource limitations. Additionally, this paper discusses the challenges and proposes solutions for using pre-trained diffusion models in 3D content generation. By synthesizing relevant research and outlining future directions, this study contributes to advancing the field of 3D content generation amidst the proliferation of large-scale AIGC models.",
@@ -7532,6 +7452,30 @@
         "comment": "Accepted by KDD 2024 Research Track"
     },
     {
+        "paper id": "2405.15375",
+        "abstract url": "https://arxiv.org/abs/2405.15375",
+        "title": "A Planet Scale Spatial-Temporal Knowledge Graph Based On OpenStreetMap And H3 Grid",
+        "rating": "-2.5",
+        "keywords": [
+            [
+                "Graph"
+            ],
+            [
+                "tabular"
+            ],
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "Geospatial data plays a central role in modeling our world, for which OpenStreetMap (OSM) provides a rich source of such data. While often spatial data is represented in a tabular format, a graph based representation provides the possibility to interconnect entities which would have been separated in a tabular representation. We propose in our paper a framework which supports a planet scale transformation of OpenStreetMap data into a Spatial Temporal Knowledge Graph. In addition to OpenStreetMap data, we align the different OpenStreetMap geometries on individual h3 grid cells. We compare our constructed spatial knowledge graph to other spatial knowledge graphs and outline our contribution in this paper. As a basis for our computation, we use Apache Sedona as a computational framework for our Spatial Temporal Knowledge Graph construction",
+        "subjects": [
+            "cs.AI",
+            "cs.DB",
+            "cs.DC"
+        ],
+        "comment": "12 pages, 2 figures, GeoLD2024: 6th Geospatial Linked Data Workshop, May 26, 2024, Hersonissos, Greece"
+    },
+    {
         "paper id": "2405.15542",
         "abstract url": "https://arxiv.org/abs/2405.15542",
         "title": "SATSense: Multi-Satellite Collaborative Framework for Spectrum Sensing",
@@ -7650,6 +7594,31 @@
             "cs.AI"
         ],
         "comment": "160 pages"
+    },
+    {
+        "paper id": "2405.15991",
+        "abstract url": "https://arxiv.org/abs/2405.15991",
+        "title": "R\u00e9nyi Neural Processes",
+        "rating": "-2.5",
+        "keywords": [
+            [
+                "inpainting"
+            ],
+            [
+                "tabular"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Neural Processes (NPs) are variational frameworks that aim to represent stochastic processes with deep neural networks. Despite their obvious benefits in uncertainty estimation for complex distributions via data-driven priors, NPs enforce network parameter sharing between the conditional prior and posterior distributions, thereby risking introducing a misspecified prior. We hereby propose R\u00e9nyi Neural Processes (RNP) to relax the influence of the misspecified prior and optimize a tighter bound of the marginal likelihood. More specifically, by replacing the standard KL divergence with the R\u00e9nyi divergence between the posterior and the approximated prior, we ameliorate the impact of the misspecified prior via a parameter \u03b1 so that the resulting posterior focuses more on tail samples and reduce density on overconfident regions. Our experiments showed log-likelihood improvements on several existing NP families. We demonstrated the superior performance of our approach on various benchmarks including regression and image inpainting tasks. We also validate the effectiveness of RNPs on real-world tabular regression problems.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI",
+            "stat.ML"
+        ],
+        "comment": null
     },
     {
         "paper id": "2405.16003",
@@ -7948,6 +7917,32 @@
             "cs.AI"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2405.15923",
+        "abstract url": "https://arxiv.org/abs/2405.15923",
+        "title": "Spiketrum: An FPGA-based Implementation of a Neuromorphic Cochlea",
+        "rating": "-3",
+        "keywords": [
+            [
+                "biologically"
+            ],
+            [
+                "FPGA"
+            ],
+            [
+                "cs.SD",
+                "eess.AS"
+            ]
+        ],
+        "abstract": "This paper presents a novel FPGA-based neuromorphic cochlea, leveraging the general-purpose spike-coding algorithm, Spiketrum. The focus of this study is on the development and characterization of this cochlea model, which excels in transforming audio vibrations into biologically realistic auditory spike trains. These spike trains are designed to withstand neural fluctuations and spike losses while accurately encapsulating the spatial and precise temporal characteristics of audio, along with the intensity of incoming vibrations. Noteworthy features include the ability to generate real-time spike trains with minimal information loss and the capacity to reconstruct original signals. This fine-tuning capability allows users to optimize spike rates, achieving an optimal balance between output quality and power consumption. Furthermore, the integration of a feedback system into Spiketrum enables selective amplification of specific features while attenuating others, facilitating adaptive power consumption based on application requirements. The hardware implementation supports both spike-based and non-spike-based processors, making it versatile for various computing systems. The cochlea's ability to encode diverse sensory information, extending beyond sound waveforms, positions it as a promising sensory input for current and future spike-based intelligent computing systems, offering compact and real-time spike train generation.",
+        "subjects": [
+            "eess.SP",
+            "cs.NE",
+            "cs.SD",
+            "eess.AS"
+        ],
+        "comment": "To be published at \"IEEE Transactions on Circuits and Systems\""
     },
     {
         "paper id": "2405.16034",

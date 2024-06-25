@@ -25,6 +25,30 @@
         "comment": null
     },
     {
+        "paper id": "2401.15914",
+        "abstract url": "https://arxiv.org/abs/2401.15914",
+        "title": "Overcoming the Pitfalls of Vision-Language Model Finetuning for OOD Generalization",
+        "rating": "2.5",
+        "keywords": [
+            [
+                "Vision-Language"
+            ],
+            [
+                "cs.AI",
+                "cs.CV"
+            ],
+            [
+                "ICLR"
+            ]
+        ],
+        "abstract": "Existing vision-language models exhibit strong generalization on a variety of visual domains and tasks. However, such models mainly perform zero-shot recognition in a closed-set manner, and thus struggle to handle open-domain visual concepts by design. There are recent finetuning methods, such as prompt learning, that not only study the discrimination between in-distribution (ID) and out-of-distribution (OOD) samples, but also show some improvements in both ID and OOD accuracies. In this paper, we first demonstrate that vision-language models, after long enough finetuning but without proper regularization, tend to overfit the known classes in the given dataset, with degraded performance on unknown classes. Then we propose a novel approach OGEN to address this pitfall, with the main focus on improving the OOD GENeralization of finetuned models. Specifically, a class-conditional feature generator is introduced to synthesize OOD features using just the class name of any unknown class. Such synthesized features will provide useful knowledge about unknowns and help regularize the decision boundary between ID and OOD data when optimized jointly. Equally important is our adaptive self-distillation mechanism to regularize our feature generation model during joint optimization, i.e., adaptively transferring knowledge between model states to further prevent overfitting. Experiments validate that our method yields convincing gains in OOD generalization performance in different settings. Code: https://github.com/apple/ml-ogen.",
+        "subjects": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "comment": "ICLR 2024"
+    },
+    {
         "paper id": "2401.16423",
         "abstract url": "https://arxiv.org/abs/2401.16423",
         "title": "Synchformer: Efficient Synchronization from Sparse Cues",
@@ -52,6 +76,28 @@
             "eess.AS"
         ],
         "comment": "Extended version of the ICASSP 24 paper. Project page: https://www.robots.ox.ac.uk/~vgg/research/synchformer/ Code: https://github.com/v-iashin/Synchformer"
+    },
+    {
+        "paper id": "2401.16456",
+        "abstract url": "https://arxiv.org/abs/2401.16456",
+        "title": "SHViT: Single-Head Vision Transformer with Memory Efficient Macro Design",
+        "rating": "2.5",
+        "keywords": [
+            [
+                "Memory Efficient"
+            ],
+            [
+                "cs.CV"
+            ],
+            [
+                "CVPR"
+            ]
+        ],
+        "abstract": "Recently, efficient Vision Transformers have shown great performance with low latency on resource-constrained devices. Conventionally, they use 4x4 patch embeddings and a 4-stage structure at the macro level, while utilizing sophisticated attention with multi-head configuration at the micro level. This paper aims to address computational redundancy at all design levels in a memory-efficient manner. We discover that using larger-stride patchify stem not only reduces memory access costs but also achieves competitive performance by leveraging token representations with reduced spatial redundancy from the early stages. Furthermore, our preliminary analyses suggest that attention layers in the early stages can be substituted with convolutions, and several attention heads in the latter stages are computationally redundant. To handle this, we introduce a single-head attention module that inherently prevents head redundancy and simultaneously boosts accuracy by parallelly combining global and local information. Building upon our solutions, we introduce SHViT, a Single-Head Vision Transformer that obtains the state-of-the-art speed-accuracy tradeoff. For example, on ImageNet-1k, our SHViT-S4 is 3.3x, 8.1x, and 2.4x faster than MobileViTv2 x1.0 on GPU, CPU, and iPhone12 mobile device, respectively, while being 1.3% more accurate. For object detection and instance segmentation on MS COCO using Mask-RCNN head, our model achieves performance comparable to FastViT-SA12 while exhibiting 3.8x and 2.0x lower backbone latency on GPU and mobile device, respectively.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "CVPR 2024"
     },
     {
         "paper id": "2401.15947",
@@ -231,33 +277,6 @@
         "comment": null
     },
     {
-        "paper id": "2401.15914",
-        "abstract url": "https://arxiv.org/abs/2401.15914",
-        "title": "Overcoming the Pitfalls of Vision-Language Model Finetuning for OOD Generalization",
-        "rating": "1.5",
-        "keywords": [
-            [
-                "Vision-Language"
-            ],
-            [
-                "synthesize"
-            ],
-            [
-                "cs.AI",
-                "cs.CV"
-            ],
-            [
-                "ICLR"
-            ]
-        ],
-        "abstract": "Existing vision-language models exhibit strong generalization on a variety of visual domains and tasks. However, such models mainly perform zero-shot recognition in a closed-set manner, and thus struggle to handle open-domain visual concepts by design. There are recent finetuning methods, such as prompt learning, that not only study the discrimination between in-distribution (ID) and out-of-distribution (OOD) samples, but also show some improvements in both ID and OOD accuracies. In this paper, we first demonstrate that vision-language models, after long enough finetuning but without proper regularization, tend to overfit the known classes in the given dataset, with degraded performance on unknown classes. Then we propose a novel approach OGEN to address this pitfall, with the main focus on improving the OOD GENeralization of finetuned models. Specifically, a class-conditional feature generator is introduced to synthesize OOD features using just the class name of any unknown class. Such synthesized features will provide useful knowledge about unknowns and help regularize the decision boundary between ID and OOD data when optimized jointly. Equally important is our adaptive self-distillation mechanism to regularize our feature generation model during joint optimization, i.e., adaptively transferring knowledge between model states to further prevent overfitting. Experiments validate that our method yields convincing gains in OOD generalization performance in different settings. Code: https://github.com/apple/ml-ogen.",
-        "subjects": [
-            "cs.CV",
-            "cs.AI"
-        ],
-        "comment": "ICLR 2024"
-    },
-    {
         "paper id": "2401.15953",
         "abstract url": "https://arxiv.org/abs/2401.15953",
         "title": "Masked Audio Modeling with CLAP and Multi-Objective Learning",
@@ -357,25 +376,6 @@
             "cs.CV"
         ],
         "comment": "accepted by AAAI24"
-    },
-    {
-        "paper id": "2401.16456",
-        "abstract url": "https://arxiv.org/abs/2401.16456",
-        "title": "SHViT: Single-Head Vision Transformer with Memory Efficient Macro Design",
-        "rating": "1.5",
-        "keywords": [
-            [
-                "cs.CV"
-            ],
-            [
-                "CVPR"
-            ]
-        ],
-        "abstract": "Recently, efficient Vision Transformers have shown great performance with low latency on resource-constrained devices. Conventionally, they use 4x4 patch embeddings and a 4-stage structure at the macro level, while utilizing sophisticated attention with multi-head configuration at the micro level. This paper aims to address computational redundancy at all design levels in a memory-efficient manner. We discover that using larger-stride patchify stem not only reduces memory access costs but also achieves competitive performance by leveraging token representations with reduced spatial redundancy from the early stages. Furthermore, our preliminary analyses suggest that attention layers in the early stages can be substituted with convolutions, and several attention heads in the latter stages are computationally redundant. To handle this, we introduce a single-head attention module that inherently prevents head redundancy and simultaneously boosts accuracy by parallelly combining global and local information. Building upon our solutions, we introduce SHViT, a Single-Head Vision Transformer that obtains the state-of-the-art speed-accuracy tradeoff. For example, on ImageNet-1k, our SHViT-S4 is 3.3x, 8.1x, and 2.4x faster than MobileViTv2 x1.0 on GPU, CPU, and iPhone12 mobile device, respectively, while being 1.3% more accurate. For object detection and instance segmentation on MS COCO using Mask-RCNN head, our model achieves performance comparable to FastViT-SA12 while exhibiting 3.8x and 2.0x lower backbone latency on GPU and mobile device, respectively.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "CVPR 2024"
     },
     {
         "paper id": "2401.16638",
@@ -1186,6 +1186,28 @@
         "comment": null
     },
     {
+        "paper id": "2401.16467",
+        "abstract url": "https://arxiv.org/abs/2401.16467",
+        "title": "ReGAL: Refactoring Programs to Discover Generalizable Abstractions",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.AI",
+                "cs.LG",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "While large language models (LLMs) are increasingly being used for program synthesis, they lack the global view needed to develop useful abstractions; they generally predict programs one at a time, often repeating the same functionality. Generating redundant code from scratch is both inefficient and error-prone. To address this, we propose Refactoring for Generalizable Abstraction Learning (ReGAL), a gradient-free method for learning a library of reusable functions via code refactorization, i.e. restructuring code without changing its execution output. ReGAL learns from a small set of existing programs, iteratively verifying and refining its abstractions via execution. We find that the shared function libraries discovered by ReGAL make programs easier to predict across diverse domains. On three datasets (LOGO graphics generation, Date reasoning, and TextCraft, a Minecraft-based text game), both open-source and proprietary LLMs improve in accuracy when predicting programs with ReGAL functions. For CodeLlama-13B, ReGAL results in absolute accuracy increases of 11.5% on graphics, 26.1% on date understanding, and 8.1% on TextCraft, outperforming GPT-3.5 in two of three domains. Our analysis reveals ReGAL's abstractions encapsulate frequently-used subroutines as well as environment dynamics.",
+        "subjects": [
+            "cs.SE",
+            "cs.AI",
+            "cs.CL",
+            "cs.LG",
+            "cs.PL"
+        ],
+        "comment": "18 pages; First two authors contributed equally; Code: https://github.com/esteng/regal_program_learning"
+    },
+    {
         "paper id": "2401.16541",
         "abstract url": "https://arxiv.org/abs/2401.16541",
         "title": "GuReT: Distinguishing Guilt and Regret related Text",
@@ -1334,22 +1356,6 @@
             "cs.CY"
         ],
         "comment": "Proceedings of the 4th International Conference on Pattern Recognition and Artificial Intelligence (ICPRAI), Jeju, Korea, 2024"
-    },
-    {
-        "paper id": "2401.16589",
-        "abstract url": "https://arxiv.org/abs/2401.16589",
-        "title": "ToPro: Token-Level Prompt Decomposition for Cross-Lingual Sequence Labeling Tasks",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Prompt-based methods have been successfully applied to multilingual pretrained language models for zero-shot cross-lingual understanding. However, most previous studies primarily focused on sentence-level classification tasks, and only a few considered token-level labeling tasks such as Named Entity Recognition (NER) and Part-of-Speech (POS) tagging. In this paper, we propose Token-Level Prompt Decomposition (ToPro), which facilitates the prompt-based method for token-level sequence labeling tasks. The ToPro method decomposes an input sentence into single tokens and applies one prompt template to each token. Our experiments on multilingual NER and POS tagging datasets demonstrate that ToPro-based fine-tuning outperforms Vanilla fine-tuning and Prompt-Tuning in zero-shot cross-lingual transfer, especially for languages that are typologically different from the source language English. Our method also attains state-of-the-art performance when employed with the mT5 model. Besides, our exploratory study in multilingual large language models shows that ToPro performs much better than the current in-context learning method. Overall, the performance improvements show that ToPro could potentially serve as a novel and simple benchmarking method for sequence labeling tasks.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": "EACL 2024"
     },
     {
         "paper id": "2401.16592",
@@ -1753,26 +1759,6 @@
         "comment": "8 pages + Appendix, Total 12 pages"
     },
     {
-        "paper id": "2402.07909",
-        "abstract url": "https://arxiv.org/abs/2402.07909",
-        "title": "Prompt4Vis: Prompting Large Language Models with Example Mining and Schema Filtering for Tabular Data Visualization",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Data visualization (DV) systems are increasingly recognized for their profound capability to uncover insights from vast datasets, gaining attention across both industry and academia. Crafting data queries is an essential process within certain declarative visualization languages (DVLs, e.g., Vega-Lite, EChart.). The evolution of natural language processing (NLP) technologies has streamlined the use of natural language interfaces to visualize tabular data, offering a more accessible and intuitive user experience. However, current methods for converting natural language questions into data visualization queries, such as Seq2Vis, ncNet, and RGVisNet, despite utilizing complex neural network architectures, still fall short of expectations and have great room for improvement. Large language models (LLMs) such as ChatGPT and GPT-4, have established new benchmarks in a variety of NLP tasks, fundamentally altering the landscape of the field. Inspired by these advancements, we introduce a novel framework, Prompt4Vis, leveraging LLMs and in-context learning to enhance the performance of generating data visualization from natural language. Prompt4Vis comprises two key components: (1) a multi-objective example mining module, designed to find out the truly effective examples that strengthen the LLM's in-context learning capabilities for text-to-vis; (2) a schema filtering module, which is proposed to simplify the schema of the database. Extensive experiments through 5-fold cross-validation on the NVBench dataset demonstrate the superiority of Prompt4Vis, which notably surpasses the state-of-the-art (SOTA) RGVisNet by approximately 35.9% and 71.3% on dev and test sets, respectively. To the best of our knowledge, Prompt4Vis is the first work that introduces in-context learning into the text-to-vis for generating data visualization queries.",
-        "subjects": [
-            "cs.HC",
-            "cs.AI",
-            "cs.CL",
-            "cs.DB"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2403.08783",
         "abstract url": "https://arxiv.org/abs/2403.08783",
         "title": "Image-Text Out-Of-Context Detection Using Synthetic Multimodal Misinformation",
@@ -1837,6 +1823,25 @@
             "math.ST"
         ],
         "comment": "41 pages, 3 figures, accepted to PAKDD 2024"
+    },
+    {
+        "paper id": "2401.15897",
+        "abstract url": "https://arxiv.org/abs/2401.15897",
+        "title": "Red-Teaming for Generative AI: Silver Bullet or Security Theater?",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "cs.LG",
+                "cs.CY"
+            ]
+        ],
+        "abstract": "In response to rising concerns surrounding the safety, security, and trustworthiness of Generative AI (GenAI) models, practitioners and regulators alike have pointed to AI red-teaming as a key component of their strategies for identifying and mitigating these risks. However, despite AI red-teaming's central role in policy discussions and corporate messaging, significant questions remain about what precisely it means, what role it can play in regulation, and how precisely it relates to conventional red-teaming practices as originally conceived in the field of cybersecurity. In this work, we identify recent cases of red-teaming activities in the AI industry and conduct an extensive survey of the relevant research literature to characterize the scope, structure, and criteria for AI red-teaming practices. Our analysis reveals that prior methods and practices of AI red-teaming diverge along several axes, including the purpose of the activity (which is often vague), the artifact under evaluation, the setting in which the activity is conducted (e.g., actors, resources, and methods), and the resulting decisions it informs (e.g., reporting, disclosure, and mitigation). In light of our findings, we argue that while red-teaming may be a valuable big-tent idea for characterizing a broad set of activities and attitudes aimed at improving the behavior of GenAI models, gestures towards red-teaming as a panacea for every possible risk verge on security theater. To move toward a more robust toolbox of evaluations for generative AI, we synthesize our recommendations into a question bank meant to guide and scaffold future AI red-teaming practices.",
+        "subjects": [
+            "cs.CY",
+            "cs.HC",
+            "cs.LG"
+        ],
+        "comment": null
     },
     {
         "paper id": "2401.15903",
@@ -2217,6 +2222,23 @@
         "comment": "16 pages, 1 figure, 1 table"
     },
     {
+        "paper id": "2401.16383",
+        "abstract url": "https://arxiv.org/abs/2401.16383",
+        "title": "Learning logic programs by finding minimal unsatisfiable subprograms",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "The goal of inductive logic programming (ILP) is to search for a logic program that generalises training examples and background knowledge. We introduce an ILP approach that identifies minimal unsatisfiable subprograms (MUSPs). We show that finding MUSPs allows us to efficiently and soundly prune the search space. Our experiments on multiple domains, including program synthesis and game playing, show that our approach can reduce learning times by 99%.",
+        "subjects": [
+            "cs.LG",
+            "cs.LO"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2401.16398",
         "abstract url": "https://arxiv.org/abs/2401.16398",
         "title": "Zero-shot Imitation Policy via Search in Demonstration Dataset",
@@ -2567,6 +2589,24 @@
             "math.ST"
         ],
         "comment": "arXiv admin note: text overlap with arXiv:2007.11131 by other authors"
+    },
+    {
+        "paper id": "2401.16672",
+        "abstract url": "https://arxiv.org/abs/2401.16672",
+        "title": "AutoIE: An Automated Framework for Information Extraction from Scientific Literature",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "In the rapidly evolving field of scientific research, efficiently extracting key information from the burgeoning volume of scientific papers remains a formidable challenge. This paper introduces an innovative framework designed to automate the extraction of vital data from scientific PDF documents, enabling researchers to discern future research trajectories more readily. AutoIE uniquely integrates four novel components: (1) A multi-semantic feature fusion-based approach for PDF document layout analysis; (2) Advanced functional block recognition in scientific texts; (3) A synergistic technique for extracting and correlating information on molecular sieve synthesis; (4) An online learning paradigm tailored for molecular sieve literature. Our SBERT model achieves high Marco F1 scores of 87.19 and 89.65 on CoNLL04 and ADE datasets. In addition, a practical application of AutoIE in the petrochemical molecular sieve synthesis domain demonstrates its efficacy, evidenced by an impressive 78\\% accuracy rate. This research paves the way for enhanced data management and interpretation in molecular sieve synthesis. It is a valuable asset for seasoned experts and newcomers in this specialized field.",
+        "subjects": [
+            "cs.IR",
+            "cs.AI",
+            "cs.CE"
+        ],
+        "comment": null
     },
     {
         "paper id": "2401.16677",
@@ -3010,6 +3050,29 @@
         "comment": "Accepted for publication in the Proceedings of the 29th International Conference on Intelligent User Interfaces (IUI'24), March 18--21, 2024, in Greenville, SC, USA"
     },
     {
+        "paper id": "2401.16144",
+        "abstract url": "https://arxiv.org/abs/2401.16144",
+        "title": "Divide and Conquer: Rethinking the Training Paradigm of Neural Radiance Fields",
+        "rating": "0",
+        "keywords": [
+            [
+                "3D",
+                "NeRF",
+                "Radiance Fields"
+            ],
+            [
+                "cs.AI",
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Neural radiance fields (NeRFs) have exhibited potential in synthesizing high-fidelity views of 3D scenes but the standard training paradigm of NeRF presupposes an equal importance for each image in the training set. This assumption poses a significant challenge for rendering specific views presenting intricate geometries, thereby resulting in suboptimal performance. In this paper, we take a closer look at the implications of the current training paradigm and redesign this for more superior rendering quality by NeRFs. Dividing input views into multiple groups based on their visual similarities and training individual models on each of these groups enables each model to specialize on specific regions without sacrificing speed or efficiency. Subsequently, the knowledge of these specialized models is aggregated into a single entity via a teacher-student distillation paradigm, enabling spatial efficiency for online render-ing. Empirically, we evaluate our novel training framework on two publicly available datasets, namely NeRF synthetic and Tanks&Temples. Our evaluation demonstrates that our DaC training pipeline enhances the rendering quality of a state-of-the-art baseline model while exhibiting convergence to a superior minimum.",
+        "subjects": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2401.16157",
         "abstract url": "https://arxiv.org/abs/2401.16157",
         "title": "Spatial-Aware Latent Initialization for Controllable Image Generation",
@@ -3032,14 +3095,32 @@
         "comment": null
     },
     {
+        "paper id": "2401.16173",
+        "abstract url": "https://arxiv.org/abs/2401.16173",
+        "title": "Reconstructing Close Human Interactions from Multiple Views",
+        "rating": "0",
+        "keywords": [
+            [
+                "3D"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "This paper addresses the challenging task of reconstructing the poses of multiple individuals engaged in close interactions, captured by multiple calibrated cameras. The difficulty arises from the noisy or false 2D keypoint detections due to inter-person occlusion, the heavy ambiguity in associating keypoints to individuals due to the close interactions, and the scarcity of training data as collecting and annotating motion data in crowded scenes is resource-intensive. We introduce a novel system to address these challenges. Our system integrates a learning-based pose estimation component and its corresponding training and inference strategies. The pose estimation component takes multi-view 2D keypoint heatmaps as input and reconstructs the pose of each individual using a 3D conditional volumetric network. As the network doesn't need images as input, we can leverage known camera parameters from test scenes and a large quantity of existing motion capture data to synthesize massive training data that mimics the real data distribution in test scenes. Extensive experiments demonstrate that our approach significantly surpasses previous approaches in terms of pose accuracy and is generalizable across various camera setups and population sizes. The code is available on our project page: https://github.com/zju3dv/CloseMoCap.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "SIGGRAPH Asia 2023"
+    },
+    {
         "paper id": "2401.16224",
         "abstract url": "https://arxiv.org/abs/2401.16224",
         "title": "Diffutoon: High-Resolution Editable Toon Shading via Diffusion Models",
         "rating": "0",
         "keywords": [
             [
-                "Diffusion",
-                "synthesis"
+                "Diffusion"
             ],
             [
                 "cs.CV"
@@ -3156,31 +3237,6 @@
             "cs.CV"
         ],
         "comment": "18 pages,11 figures"
-    },
-    {
-        "paper id": "2401.16467",
-        "abstract url": "https://arxiv.org/abs/2401.16467",
-        "title": "ReGAL: Refactoring Programs to Discover Generalizable Abstractions",
-        "rating": "0",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.AI",
-                "cs.LG",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "While large language models (LLMs) are increasingly being used for program synthesis, they lack the global view needed to develop useful abstractions; they generally predict programs one at a time, often repeating the same functionality. Generating redundant code from scratch is both inefficient and error-prone. To address this, we propose Refactoring for Generalizable Abstraction Learning (ReGAL), a gradient-free method for learning a library of reusable functions via code refactorization, i.e. restructuring code without changing its execution output. ReGAL learns from a small set of existing programs, iteratively verifying and refining its abstractions via execution. We find that the shared function libraries discovered by ReGAL make programs easier to predict across diverse domains. On three datasets (LOGO graphics generation, Date reasoning, and TextCraft, a Minecraft-based text game), both open-source and proprietary LLMs improve in accuracy when predicting programs with ReGAL functions. For CodeLlama-13B, ReGAL results in absolute accuracy increases of 11.5% on graphics, 26.1% on date understanding, and 8.1% on TextCraft, outperforming GPT-3.5 in two of three domains. Our analysis reveals ReGAL's abstractions encapsulate frequently-used subroutines as well as environment dynamics.",
-        "subjects": [
-            "cs.SE",
-            "cs.AI",
-            "cs.CL",
-            "cs.LG",
-            "cs.PL"
-        ],
-        "comment": "18 pages; First two authors contributed equally; Code: https://github.com/esteng/regal_program_learning"
     },
     {
         "paper id": "2401.16519",
@@ -3356,28 +3412,6 @@
         "comment": null
     },
     {
-        "paper id": "2401.15897",
-        "abstract url": "https://arxiv.org/abs/2401.15897",
-        "title": "Red-Teaming for Generative AI: Silver Bullet or Security Theater?",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "synthesize"
-            ],
-            [
-                "cs.LG",
-                "cs.CY"
-            ]
-        ],
-        "abstract": "In response to rising concerns surrounding the safety, security, and trustworthiness of Generative AI (GenAI) models, practitioners and regulators alike have pointed to AI red-teaming as a key component of their strategies for identifying and mitigating these risks. However, despite AI red-teaming's central role in policy discussions and corporate messaging, significant questions remain about what precisely it means, what role it can play in regulation, and how precisely it relates to conventional red-teaming practices as originally conceived in the field of cybersecurity. In this work, we identify recent cases of red-teaming activities in the AI industry and conduct an extensive survey of the relevant research literature to characterize the scope, structure, and criteria for AI red-teaming practices. Our analysis reveals that prior methods and practices of AI red-teaming diverge along several axes, including the purpose of the activity (which is often vague), the artifact under evaluation, the setting in which the activity is conducted (e.g., actors, resources, and methods), and the resulting decisions it informs (e.g., reporting, disclosure, and mitigation). In light of our findings, we argue that while red-teaming may be a valuable big-tent idea for characterizing a broad set of activities and attitudes aimed at improving the behavior of GenAI models, gestures towards red-teaming as a panacea for every possible risk verge on security theater. To move toward a more robust toolbox of evaluations for generative AI, we synthesize our recommendations into a question bank meant to guide and scaffold future AI red-teaming practices.",
-        "subjects": [
-            "cs.CY",
-            "cs.HC",
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2401.15917",
         "abstract url": "https://arxiv.org/abs/2401.15917",
         "title": "Blockchain-enabled Trustworthy Federated Unlearning",
@@ -3450,6 +3484,31 @@
             "cs.CR"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2401.15987",
+        "abstract url": "https://arxiv.org/abs/2401.15987",
+        "title": "Hand-Centric Motion Refinement for 3D Hand-Object Interaction via Hierarchical Spatial-Temporal Modeling",
+        "rating": "-0.5",
+        "keywords": [
+            [
+                "3D"
+            ],
+            [
+                "robotics"
+            ],
+            [
+                "cs.CV"
+            ],
+            [
+                "AAAI"
+            ]
+        ],
+        "abstract": "Hands are the main medium when people interact with the world. Generating proper 3D motion for hand-object interaction is vital for applications such as virtual reality and robotics. Although grasp tracking or object manipulation synthesis can produce coarse hand motion, this kind of motion is inevitably noisy and full of jitter. To address this problem, we propose a data-driven method for coarse motion refinement. First, we design a hand-centric representation to describe the dynamic spatial-temporal relation between hands and objects. Compared to the object-centric representation, our hand-centric representation is straightforward and does not require an ambiguous projection process that converts object-based prediction into hand motion. Second, to capture the dynamic clues of hand-object interaction, we propose a new architecture that models the spatial and temporal structure in a hierarchical manner. Extensive experiments demonstrate that our method outperforms previous methods by a noticeable margin.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Accepted to AAAI 2024"
     },
     {
         "paper id": "2401.15990",
@@ -3631,26 +3690,6 @@
         "comment": null
     },
     {
-        "paper id": "2401.16383",
-        "abstract url": "https://arxiv.org/abs/2401.16383",
-        "title": "Learning logic programs by finding minimal unsatisfiable subprograms",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "The goal of inductive logic programming (ILP) is to search for a logic program that generalises training examples and background knowledge. We introduce an ILP approach that identifies minimal unsatisfiable subprograms (MUSPs). We show that finding MUSPs allows us to efficiently and soundly prune the search space. Our experiments on multiple domains, including program synthesis and game playing, show that our approach can reduce learning times by 99%.",
-        "subjects": [
-            "cs.LG",
-            "cs.LO"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2401.16452",
         "abstract url": "https://arxiv.org/abs/2401.16452",
         "title": "Context-Former: Stitching via Latent Conditioned Sequence Modeling",
@@ -3734,6 +3773,30 @@
         "comment": null
     },
     {
+        "paper id": "2401.16650",
+        "abstract url": "https://arxiv.org/abs/2401.16650",
+        "title": "Augmenting Replay in World Models for Continual Reinforcement Learning",
+        "rating": "-0.5",
+        "keywords": [
+            [
+                "memory efficient"
+            ],
+            [
+                "biological"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Continual RL is a challenging problem where the agent is exposed to a sequence of tasks; it should learn new tasks without forgetting old ones, and learning the new task should improve performance on previous and future tasks. The most common approaches use model-free RL algorithms as a base, and replay buffers have been used to overcome catastrophic forgetting. However, the buffers are often very large making scalability difficult. Also, the concept of replay comes from biological inspiration, where evidence suggests that replay is applied to a world model, which implies model-based RL -- and model-based RL should have benefits for continual RL, where it is possible to exploit knowledge independent of the policy. We present WMAR, World Models with Augmented Replay, a model-based RL algorithm with a world model and memory efficient distribution matching replay buffer. It is based on the well-known DreamerV3 algorithm, which has a simple FIFO buffer and was not tested in a continual RL setting. We evaluated WMAR vs WMAR (FIFO only) on tasks with and without shared structure from OpenAI ProcGen and Atari respectively, and without a task oracle. We found that WMAR has favourable properties on continual RL with significantly reduced computational overhead compared to WMAR (FIFO only). WMAR had small benefits over DreamerV3 on tasks with shared structure and substantially better forgetting characteristics on tasks without shared structure; but at the cost of lower plasticity seen in a lower maximum on new tasks. The results suggest that model-based RL using a world model with a memory efficient replay buffer can be an effective and practical approach to continual RL, justifying future work.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2401.16655",
         "abstract url": "https://arxiv.org/abs/2401.16655",
         "title": "Rademacher Complexity of Neural ODEs via Chen-Fliess Series",
@@ -3754,27 +3817,6 @@
             "math.OC"
         ],
         "comment": "14 pages; submitted to L4DC 2024"
-    },
-    {
-        "paper id": "2401.16672",
-        "abstract url": "https://arxiv.org/abs/2401.16672",
-        "title": "AutoIE: An Automated Framework for Information Extraction from Scientific Literature",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "In the rapidly evolving field of scientific research, efficiently extracting key information from the burgeoning volume of scientific papers remains a formidable challenge. This paper introduces an innovative framework designed to automate the extraction of vital data from scientific PDF documents, enabling researchers to discern future research trajectories more readily. AutoIE uniquely integrates four novel components: (1) A multi-semantic feature fusion-based approach for PDF document layout analysis; (2) Advanced functional block recognition in scientific texts; (3) A synergistic technique for extracting and correlating information on molecular sieve synthesis; (4) An online learning paradigm tailored for molecular sieve literature. Our SBERT model achieves high Marco F1 scores of 87.19 and 89.65 on CoNLL04 and ADE datasets. In addition, a practical application of AutoIE in the petrochemical molecular sieve synthesis domain demonstrates its efficacy, evidenced by an impressive 78\\% accuracy rate. This research paves the way for enhanced data management and interpretation in molecular sieve synthesis. It is a valuable asset for seasoned experts and newcomers in this specialized field.",
-        "subjects": [
-            "cs.IR",
-            "cs.AI",
-            "cs.CE"
-        ],
-        "comment": null
     },
     {
         "paper id": "2401.16685",
@@ -3938,27 +3980,6 @@
             "cs.IT"
         ],
         "comment": "6 pages, 4 figures. To appear in Asilomar 2023"
-    },
-    {
-        "paper id": "2401.15934",
-        "abstract url": "https://arxiv.org/abs/2401.15934",
-        "title": "HICH Image/Text (HICH-IT): Comprehensive Text and Image Datasets for Hypertensive Intracerebral Hemorrhage Research",
-        "rating": "-1",
-        "keywords": [
-            [
-                "medical",
-                "diagnosis",
-                "CT"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "In this paper, we introduce a new dataset in the medical field of hypertensive intracerebral hemorrhage (HICH), called HICH-IT, which includes both electronic medical records (EMRs) and head CT images. This dataset is designed to enhance the accuracy of artificial intelligence in the diagnosis and treatment of HICH. This dataset, built upon the foundation of standard text and image data, incorporates specific annotations within the EMRs, extracting key content from the text information, and categorizes the annotation content of imaging data into four types: brain midline, hematoma, left and right cerebral ventricle. HICH-IT aims to be a foundational dataset for feature learning in image segmentation tasks and named entity recognition. To further understand the dataset, we have trained deep learning algorithms to observe the performance. The pretrained models have been released at both www.daip.club and github.com/Deep-AI-Application-DAIP. The dataset has been uploaded to https://github.com/CYBUS123456/HICH-IT-Datasets. Index Terms-HICH, Deep learning, Intraparenchymal hemorrhage, named entity recognition, novel dataset",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
     },
     {
         "paper id": "2401.15960",
@@ -4295,6 +4316,7 @@
         "rating": "-1",
         "keywords": [
             [
+                "whole-slide",
                 "cancer",
                 "clinical",
                 "tumor"
@@ -4306,32 +4328,6 @@
         "abstract": "Treatment approaches for colorectal cancer (CRC) are highly dependent on the molecular subtype, as immunotherapy has shown efficacy in cases with microsatellite instability (MSI) but is ineffective for the microsatellite stable (MSS) subtype. There is promising potential in utilizing deep neural networks (DNNs) to automate the differentiation of CRC subtypes by analyzing Hematoxylin and Eosin (H\\&E) stained whole-slide images (WSIs). Due to the extensive size of WSIs, Multiple Instance Learning (MIL) techniques are typically explored. However, existing MIL methods focus on identifying the most representative image patches for classification, which may result in the loss of critical information. Additionally, these methods often overlook clinically relevant information, like the tendency for MSI class tumors to predominantly occur on the proximal (right side) colon. We introduce `CIMIL-CRC', a DNN framework that: 1) solves the MSI/MSS MIL problem by efficiently combining a pre-trained feature extraction model with principal component analysis (PCA) to aggregate information from all patches, and 2) integrates clinical priors, particularly the tumor location within the colon, into the model to enhance patient-level classification accuracy. We assessed our CIMIL-CRC method using the average area under the curve (AUC) from a 5-fold cross-validation experimental setup for model development on the TCGA-CRC-DX cohort, contrasting it with a baseline patch-level classification, MIL-only approach, and Clinically-informed patch-level classification approach. Our CIMIL-CRC outperformed all methods (AUROC: $0.92\\pm0.002$ (95\\% CI 0.91-0.92), vs. $0.79\\pm0.02$ (95\\% CI 0.76-0.82), $0.86\\pm0.01$ (95\\% CI 0.85-0.88), and $0.87\\pm0.01$ (95\\% CI 0.86-0.88), respectively). The improvement was statistically significant.",
         "subjects": [
             "cs.CV"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2401.16144",
-        "abstract url": "https://arxiv.org/abs/2401.16144",
-        "title": "Divide and Conquer: Rethinking the Training Paradigm of Neural Radiance Fields",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D",
-                "NeRF",
-                "Radiance Fields"
-            ],
-            [
-                "synthesizing"
-            ],
-            [
-                "cs.AI",
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Neural radiance fields (NeRFs) have exhibited potential in synthesizing high-fidelity views of 3D scenes but the standard training paradigm of NeRF presupposes an equal importance for each image in the training set. This assumption poses a significant challenge for rendering specific views presenting intricate geometries, thereby resulting in suboptimal performance. In this paper, we take a closer look at the implications of the current training paradigm and redesign this for more superior rendering quality by NeRFs. Dividing input views into multiple groups based on their visual similarities and training individual models on each of these groups enables each model to specialize on specific regions without sacrificing speed or efficiency. Subsequently, the knowledge of these specialized models is aggregated into a single entity via a teacher-student distillation paradigm, enabling spatial efficiency for online render-ing. Empirically, we evaluate our novel training framework on two publicly available datasets, namely NeRF synthetic and Tanks&Temples. Our evaluation demonstrates that our DaC training pipeline enhances the rendering quality of a state-of-the-art baseline model while exhibiting convergence to a superior minimum.",
-        "subjects": [
-            "cs.CV",
-            "cs.AI"
         ],
         "comment": null
     },
@@ -4354,28 +4350,6 @@
             "cs.CL"
         ],
         "comment": "Preprint as accepted at the 2024 ACM SIGIR Conference on Human Information Interaction and Retrieval (CHIIR '24)"
-    },
-    {
-        "paper id": "2401.16173",
-        "abstract url": "https://arxiv.org/abs/2401.16173",
-        "title": "Reconstructing Close Human Interactions from Multiple Views",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D"
-            ],
-            [
-                "synthesize"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "This paper addresses the challenging task of reconstructing the poses of multiple individuals engaged in close interactions, captured by multiple calibrated cameras. The difficulty arises from the noisy or false 2D keypoint detections due to inter-person occlusion, the heavy ambiguity in associating keypoints to individuals due to the close interactions, and the scarcity of training data as collecting and annotating motion data in crowded scenes is resource-intensive. We introduce a novel system to address these challenges. Our system integrates a learning-based pose estimation component and its corresponding training and inference strategies. The pose estimation component takes multi-view 2D keypoint heatmaps as input and reconstructs the pose of each individual using a 3D conditional volumetric network. As the network doesn't need images as input, we can leverage known camera parameters from test scenes and a large quantity of existing motion capture data to synthesize massive training data that mimics the real data distribution in test scenes. Extensive experiments demonstrate that our approach significantly surpasses previous approaches in terms of pose accuracy and is generalizable across various camera setups and population sizes. The code is available on our project page: https://github.com/zju3dv/CloseMoCap.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "SIGGRAPH Asia 2023"
     },
     {
         "paper id": "2401.16187",
@@ -4548,6 +4522,28 @@
         "comment": null
     },
     {
+        "paper id": "2401.16329",
+        "abstract url": "https://arxiv.org/abs/2401.16329",
+        "title": "Synthesis of 3D on-air signatures with the Sigma-Lognormal model",
+        "rating": "-1",
+        "keywords": [
+            [
+                "3D"
+            ],
+            [
+                "trajectory"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Signature synthesis is a computation technique that generates artificial specimens which can support decision making in automatic signature verification. A lot of work has been dedicated to this subject, which centres on synthesizing dynamic and static two-dimensional handwriting on canvas. This paper proposes a framework to generate synthetic 3D on-air signatures exploiting the lognormality principle, which mimics the complex neuromotor control processes at play as the fingertip moves. Addressing the usual cases involving the development of artificial individuals and duplicated samples, this paper contributes to the synthesis of: (1) the trajectory and velocity of entirely 3D new signatures; (2) kinematic information when only the 3D trajectory of the signature is known, and (3) duplicate samples of 3D real signatures. Validation was conducted by generating synthetic 3D signature databases mimicking real ones and showing that automatic signature verifications of genuine and skilled forgeries report performances similar to those of real and synthetic databases. We also observed that training 3D automatic signature verifiers with duplicates can reduce errors. We further demonstrated that our proposal is also valid for synthesizing 3D air writing and gestures. Finally, a perception test confirmed the human likeness of the generated specimens. The databases generated are publicly available, only for research purposes, at .",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Accepted Version. Published on Knowledge-Based Systems"
+    },
+    {
         "paper id": "2401.16463",
         "abstract url": "https://arxiv.org/abs/2401.16463",
         "title": "Print-N-Grip: A Disposable, Compliant, Scalable and One-Shot 3D-Printed Multi-Fingered Robotic Hand",
@@ -4647,23 +4643,6 @@
         "comment": null
     },
     {
-        "paper id": "2401.16526",
-        "abstract url": "https://arxiv.org/abs/2401.16526",
-        "title": "FPGA Technology Mapping Using Sketch-Guided Program Synthesis",
-        "rating": "-1",
-        "keywords": [
-            [
-                "Synthesis"
-            ]
-        ],
-        "abstract": "FPGA technology mapping is the process of implementing a hardware design expressed in high-level HDL (hardware design language) code using the low-level, architecture-specific primitives of the target FPGA. As FPGAs become increasingly heterogeneous, achieving high performance requires hardware synthesis tools that better support mapping to complex, highly configurable primitives like digital signal processors (DSPs). Current tools support DSP mapping via handwritten special-case mapping rules, which are laborious to write, error-prone, and often overlook mapping opportunities. We introduce Lakeroad, a principled approach to technology mapping via sketch-guided program synthesis. Lakeroad leverages two techniques -- architecture-independent sketch templates and semantics extraction from HDL -- to provide extensible technology mapping with stronger correctness guarantees and higher coverage of mapping opportunities than state-of-the-art tools. Across representative microbenchmarks, Lakeroad produces 2--3.5$\\times$ the number of optimal mappings compared to proprietary state-of-the-art tools and 6--44$\\times$ the number of optimal mappings compared to popular open-source tools, while also providing correctness guarantees not given by any other tool.",
-        "subjects": [
-            "cs.AR",
-            "cs.PL"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2401.16545",
         "abstract url": "https://arxiv.org/abs/2401.16545",
         "title": "Leveraging Public Cloud Infrastructure for Real-time Connected Vehicle Speed Advisory at a Signalized Corridor",
@@ -4739,22 +4718,6 @@
         "comment": "191 pages. Published on Dec 20, 2023. Ph.D. thesis @ Language Technology Institute, School of Computer Science, Carnegie Mellon University. https://doi.org/10.1184/R1/24992787.v1"
     },
     {
-        "paper id": "2401.16583",
-        "abstract url": "https://arxiv.org/abs/2401.16583",
-        "title": "Data-Oblivious ML Accelerators using Hardware Security Extensions",
-        "rating": "-1",
-        "keywords": [
-            [
-                "attacks"
-            ]
-        ],
-        "abstract": "Outsourced computation can put client data confidentiality at risk. Existing solutions are either inefficient or insufficiently secure: cryptographic techniques like fully-homomorphic encryption incur significant overheads, even with hardware assistance, while the complexity of hardware-assisted trusted execution environments has been exploited to leak secret data. Recent proposals such as BliMe and OISA show how dynamic information flow tracking (DIFT) enforced in hardware can protect client data efficiently. They are designed to protect CPU-only workloads. However, many outsourced computing applications, like machine learning, make extensive use of accelerators. We address this gap with Dolma, which applies DIFT to the Gemmini matrix multiplication accelerator, efficiently guaranteeing client data confidentiality, even in the presence of malicious/vulnerable software and side channel attacks on the server. We show that accelerators can allow DIFT logic optimizations that significantly reduce area overhead compared with general-purpose processor architectures. Dolma is integrated with the BliMe framework to achieve end-to-end security guarantees. We evaluate Dolma on an FPGA using a ResNet-50 DNN model and show that it incurs low overheads for large configurations ($4.4\\%$, $16.7\\%$, $16.5\\%$ for performance, resource usage and power, respectively, with a 32x32 configuration).",
-        "subjects": [
-            "cs.CR"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2401.16585",
         "abstract url": "https://arxiv.org/abs/2401.16585",
         "title": "Pick and Place Planning is Better than Pick Planning then Place Planning",
@@ -4769,6 +4732,25 @@
             "cs.RO"
         ],
         "comment": "8 pages, 14 figures, IEEE RA-L"
+    },
+    {
+        "paper id": "2401.16589",
+        "abstract url": "https://arxiv.org/abs/2401.16589",
+        "title": "ToPro: Token-Level Prompt Decomposition for Cross-Lingual Sequence Labeling Tasks",
+        "rating": "-1",
+        "keywords": [
+            [
+                "Named Entity Recognition"
+            ],
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Prompt-based methods have been successfully applied to multilingual pretrained language models for zero-shot cross-lingual understanding. However, most previous studies primarily focused on sentence-level classification tasks, and only a few considered token-level labeling tasks such as Named Entity Recognition (NER) and Part-of-Speech (POS) tagging. In this paper, we propose Token-Level Prompt Decomposition (ToPro), which facilitates the prompt-based method for token-level sequence labeling tasks. The ToPro method decomposes an input sentence into single tokens and applies one prompt template to each token. Our experiments on multilingual NER and POS tagging datasets demonstrate that ToPro-based fine-tuning outperforms Vanilla fine-tuning and Prompt-Tuning in zero-shot cross-lingual transfer, especially for languages that are typologically different from the source language English. Our method also attains state-of-the-art performance when employed with the mT5 model. Besides, our exploratory study in multilingual large language models shows that ToPro performs much better than the current in-context learning method. Overall, the performance improvements show that ToPro could potentially serve as a novel and simple benchmarking method for sequence labeling tasks.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": "EACL 2024"
     },
     {
         "paper id": "2401.16634",
@@ -4826,22 +4808,6 @@
             "cs.RO"
         ],
         "comment": "Accepted to ICRA 2024"
-    },
-    {
-        "paper id": "2401.16707",
-        "abstract url": "https://arxiv.org/abs/2401.16707",
-        "title": "Optimal Redundancy in Exact Channel Synthesis",
-        "rating": "-1",
-        "keywords": [
-            [
-                "Synthesis"
-            ]
-        ],
-        "abstract": "We consider the redundancy of the exact channel synthesis problem under an i.i.d. assumption. Existing results provide an upper bound on the unnormalized redundancy that is logarithmic in the block length. We show, via an improved scheme, that the logarithmic term can be halved for most channels and eliminated for all others. For full-support discrete memoryless channels, we show that this is the best possible.",
-        "subjects": [
-            "cs.IT"
-        ],
-        "comment": null
     },
     {
         "paper id": "2401.16714",
@@ -5029,6 +4995,29 @@
         "comment": "Accepted by AAAI'24"
     },
     {
+        "paper id": "2402.07909",
+        "abstract url": "https://arxiv.org/abs/2402.07909",
+        "title": "Prompt4Vis: Prompting Large Language Models with Example Mining and Schema Filtering for Tabular Data Visualization",
+        "rating": "-1",
+        "keywords": [
+            [
+                "Tabular"
+            ],
+            [
+                "cs.AI",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Data visualization (DV) systems are increasingly recognized for their profound capability to uncover insights from vast datasets, gaining attention across both industry and academia. Crafting data queries is an essential process within certain declarative visualization languages (DVLs, e.g., Vega-Lite, EChart.). The evolution of natural language processing (NLP) technologies has streamlined the use of natural language interfaces to visualize tabular data, offering a more accessible and intuitive user experience. However, current methods for converting natural language questions into data visualization queries, such as Seq2Vis, ncNet, and RGVisNet, despite utilizing complex neural network architectures, still fall short of expectations and have great room for improvement. Large language models (LLMs) such as ChatGPT and GPT-4, have established new benchmarks in a variety of NLP tasks, fundamentally altering the landscape of the field. Inspired by these advancements, we introduce a novel framework, Prompt4Vis, leveraging LLMs and in-context learning to enhance the performance of generating data visualization from natural language. Prompt4Vis comprises two key components: (1) a multi-objective example mining module, designed to find out the truly effective examples that strengthen the LLM's in-context learning capabilities for text-to-vis; (2) a schema filtering module, which is proposed to simplify the schema of the database. Extensive experiments through 5-fold cross-validation on the NVBench dataset demonstrate the superiority of Prompt4Vis, which notably surpasses the state-of-the-art (SOTA) RGVisNet by approximately 35.9% and 71.3% on dev and test sets, respectively. To the best of our knowledge, Prompt4Vis is the first work that introduces in-context learning into the text-to-vis for generating data visualization queries.",
+        "subjects": [
+            "cs.HC",
+            "cs.AI",
+            "cs.CL",
+            "cs.DB"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2403.09668",
         "abstract url": "https://arxiv.org/abs/2403.09668",
         "title": "Trustworthy Automated Driving through Qualitative Scene Understanding and Explanations",
@@ -5074,34 +5063,6 @@
             "cs.AI"
         ],
         "comment": "11 pages, 9 figures"
-    },
-    {
-        "paper id": "2401.15987",
-        "abstract url": "https://arxiv.org/abs/2401.15987",
-        "title": "Hand-Centric Motion Refinement for 3D Hand-Object Interaction via Hierarchical Spatial-Temporal Modeling",
-        "rating": "-1.5",
-        "keywords": [
-            [
-                "3D"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "robotics"
-            ],
-            [
-                "cs.CV"
-            ],
-            [
-                "AAAI"
-            ]
-        ],
-        "abstract": "Hands are the main medium when people interact with the world. Generating proper 3D motion for hand-object interaction is vital for applications such as virtual reality and robotics. Although grasp tracking or object manipulation synthesis can produce coarse hand motion, this kind of motion is inevitably noisy and full of jitter. To address this problem, we propose a data-driven method for coarse motion refinement. First, we design a hand-centric representation to describe the dynamic spatial-temporal relation between hands and objects. Compared to the object-centric representation, our hand-centric representation is straightforward and does not require an ambiguous projection process that converts object-based prediction into hand motion. Second, to capture the dynamic clues of hand-object interaction, we propose a new architecture that models the spatial and temporal structure in a hierarchical manner. Extensive experiments demonstrate that our method outperforms previous methods by a noticeable margin.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Accepted to AAAI 2024"
     },
     {
         "paper id": "2401.16094",
@@ -5321,27 +5282,6 @@
         "comment": "25 pages, 7 figures"
     },
     {
-        "paper id": "2401.16650",
-        "abstract url": "https://arxiv.org/abs/2401.16650",
-        "title": "Augmenting Replay in World Models for Continual Reinforcement Learning",
-        "rating": "-1.5",
-        "keywords": [
-            [
-                "biological"
-            ],
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Continual RL is a challenging problem where the agent is exposed to a sequence of tasks; it should learn new tasks without forgetting old ones, and learning the new task should improve performance on previous and future tasks. The most common approaches use model-free RL algorithms as a base, and replay buffers have been used to overcome catastrophic forgetting. However, the buffers are often very large making scalability difficult. Also, the concept of replay comes from biological inspiration, where evidence suggests that replay is applied to a world model, which implies model-based RL -- and model-based RL should have benefits for continual RL, where it is possible to exploit knowledge independent of the policy. We present WMAR, World Models with Augmented Replay, a model-based RL algorithm with a world model and memory efficient distribution matching replay buffer. It is based on the well-known DreamerV3 algorithm, which has a simple FIFO buffer and was not tested in a continual RL setting. We evaluated WMAR vs WMAR (FIFO only) on tasks with and without shared structure from OpenAI ProcGen and Atari respectively, and without a task oracle. We found that WMAR has favourable properties on continual RL with significantly reduced computational overhead compared to WMAR (FIFO only). WMAR had small benefits over DreamerV3 on tasks with shared structure and substantially better forgetting characteristics on tasks without shared structure; but at the cost of lower plasticity seen in a lower maximum on new tasks. The results suggest that model-based RL using a world model with a memory efficient replay buffer can be an effective and practical approach to continual RL, justifying future work.",
-        "subjects": [
-            "cs.LG",
-            "cs.AI"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2401.16668",
         "abstract url": "https://arxiv.org/abs/2401.16668",
         "title": "InteractOut: Leveraging Interaction Proxies as Input Manipulation Strategies for Reducing Smartphone Overuse",
@@ -5360,6 +5300,29 @@
             "cs.CY"
         ],
         "comment": "CHI 2024"
+    },
+    {
+        "paper id": "2401.16669",
+        "abstract url": "https://arxiv.org/abs/2401.16669",
+        "title": "Improving Global Weather and Ocean Wave Forecast with Large Artificial Intelligence Models",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "Forecast"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "The rapid advancement of artificial intelligence technologies, particularly in recent years, has led to the emergence of several large parameter artificial intelligence weather forecast models. These models represent a significant breakthrough, overcoming the limitations of traditional numerical weather prediction models and indicating the emergence of profound potential tools for atmosphere-ocean forecasts. This study explores the evolution of these advanced artificial intelligence forecast models, and based on the identified commonalities, proposes the \"Three Large Rules\" to measure their development. We discuss the potential of artificial intelligence in revolutionizing numerical weather prediction, and briefly outlining the underlying reasons for its great potential. While acknowledging the high accuracy, computational efficiency, and ease of deployment of large artificial intelligence forecast models, we also emphasize the irreplaceable values of traditional numerical forecasts and explore the challenges in the future development of large-scale artificial intelligence atmosphere-ocean forecast models. We believe that the optimal future of atmosphere-ocean weather forecast lies in achieving a seamless integration of artificial intelligence and traditional numerical models. Such a synthesis is anticipated to offer a more advanced and reliable approach for improved atmosphere-ocean forecasts. Additionally, we illustrate how forecasters can adapt and leverage the advanced artificial intelligence model through an example by building a large artificial intelligence model for global ocean wave forecast.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI",
+            "physics.ao-ph",
+            "physics.geo-ph"
+        ],
+        "comment": null
     },
     {
         "paper id": "2401.16683",
@@ -5728,6 +5691,23 @@
         "comment": "17 pages, 8 figures"
     },
     {
+        "paper id": "2401.16274",
+        "abstract url": "https://arxiv.org/abs/2401.16274",
+        "title": "The HSF Conditions Database Reference Implementation",
+        "rating": "-2",
+        "keywords": [
+            [
+                "SQL"
+            ]
+        ],
+        "abstract": "Conditions data is the subset of non-event data that is necessary to process event data. It poses a unique set of challenges, namely a heterogeneous structure and high access rates by distributed computing. The HSF Conditions Databases activity is a forum for cross-experiment discussions inviting as broad a participation as possible. It grew out of the HSF Community White Paper work to study conditions data access, where experts from ATLAS, Belle II, and CMS converged on a common language and proposed a schema that represents best practice. Following discussions with a broader community, including NP as well as HEP experiments, a core set of use cases, functionality and behaviour was defined with the aim to describe a core conditions database API. This paper will describe the reference implementation of both the conditions database service and the client which together encapsulate HSF best practice conditions data handling. Django was chosen for the service implementation, which uses an ORM instead of the direct use of SQL for all but one method. The simple relational database schema to organise conditions data is implemented in PostgreSQL. The task of storing conditions data payloads themselves is outsourced to any POSIX-compliant filesystem, allowing for transparent relocation and redundancy. Crucially this design provides a clear separation between retrieving the metadata describing which conditions data are needed for a data processing job, and retrieving the actual payloads from storage. The service deployment using Helm on OKD will be described together with scaling tests and operations experience from the sPHENIX experiment running more than 25k cores at BNL.",
+        "subjects": [
+            "cs.DB",
+            "hep-ex"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2401.16301",
         "abstract url": "https://arxiv.org/abs/2401.16301",
         "title": "Scalable Factor Graph-Based Heterogeneous Bayesian DDF for Dynamic Systems",
@@ -5778,31 +5758,6 @@
             "quant-ph"
         ],
         "comment": "13 pages, 1 figure, comments welcome! v2: Introduction enhanced"
-    },
-    {
-        "paper id": "2401.16329",
-        "abstract url": "https://arxiv.org/abs/2401.16329",
-        "title": "Synthesis of 3D on-air signatures with the Sigma-Lognormal model",
-        "rating": "-2",
-        "keywords": [
-            [
-                "3D"
-            ],
-            [
-                "Synthesis"
-            ],
-            [
-                "trajectory"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Signature synthesis is a computation technique that generates artificial specimens which can support decision making in automatic signature verification. A lot of work has been dedicated to this subject, which centres on synthesizing dynamic and static two-dimensional handwriting on canvas. This paper proposes a framework to generate synthetic 3D on-air signatures exploiting the lognormality principle, which mimics the complex neuromotor control processes at play as the fingertip moves. Addressing the usual cases involving the development of artificial individuals and duplicated samples, this paper contributes to the synthesis of: (1) the trajectory and velocity of entirely 3D new signatures; (2) kinematic information when only the 3D trajectory of the signature is known, and (3) duplicate samples of 3D real signatures. Validation was conducted by generating synthetic 3D signature databases mimicking real ones and showing that automatic signature verifications of genuine and skilled forgeries report performances similar to those of real and synthetic databases. We also observed that training 3D automatic signature verifiers with duplicates can reduce errors. We further demonstrated that our proposal is also valid for synthesizing 3D air writing and gestures. Finally, a perception test confirmed the human likeness of the generated specimens. The databases generated are publicly available, only for research purposes, at .",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Accepted Version. Published on Knowledge-Based Systems"
     },
     {
         "paper id": "2401.16337",
@@ -5977,6 +5932,23 @@
         "comment": "14 pages, 21 figures, Published in IEEE Internet of Things Journal"
     },
     {
+        "paper id": "2401.16526",
+        "abstract url": "https://arxiv.org/abs/2401.16526",
+        "title": "FPGA Technology Mapping Using Sketch-Guided Program Synthesis",
+        "rating": "-2",
+        "keywords": [
+            [
+                "FPGA"
+            ]
+        ],
+        "abstract": "FPGA technology mapping is the process of implementing a hardware design expressed in high-level HDL (hardware design language) code using the low-level, architecture-specific primitives of the target FPGA. As FPGAs become increasingly heterogeneous, achieving high performance requires hardware synthesis tools that better support mapping to complex, highly configurable primitives like digital signal processors (DSPs). Current tools support DSP mapping via handwritten special-case mapping rules, which are laborious to write, error-prone, and often overlook mapping opportunities. We introduce Lakeroad, a principled approach to technology mapping via sketch-guided program synthesis. Lakeroad leverages two techniques -- architecture-independent sketch templates and semantics extraction from HDL -- to provide extensible technology mapping with stronger correctness guarantees and higher coverage of mapping opportunities than state-of-the-art tools. Across representative microbenchmarks, Lakeroad produces 2--3.5$\\times$ the number of optimal mappings compared to proprietary state-of-the-art tools and 6--44$\\times$ the number of optimal mappings compared to popular open-source tools, while also providing correctness guarantees not given by any other tool.",
+        "subjects": [
+            "cs.AR",
+            "cs.PL"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2401.16534",
         "abstract url": "https://arxiv.org/abs/2401.16534",
         "title": "Democratizing the Creation of Animatable Facial Avatars",
@@ -5996,6 +5968,22 @@
         "subjects": [
             "cs.GR",
             "cs.CV"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2401.16552",
+        "abstract url": "https://arxiv.org/abs/2401.16552",
+        "title": "ONDA: ONline Database Architect",
+        "rating": "-2",
+        "keywords": [
+            [
+                "SQL"
+            ]
+        ],
+        "abstract": "Database modeling is a key activity towards the fulfillment of storage requirements. Despite the availability of several database modeling tools for developers, these often come with associated costs, setup complexities, usability challenges, or dependency on specific operating systems. In this paper we present ONDA, a web-based tool developed at the University of Coimbra, that allows the creation of Entity-Relationship diagrams, visualization of physical models, and generation of SQL code for various database engines. ONDA is freely available at https://onda.dei.uc.pt and was created with the intention of supporting teaching activities at university-level database courses. At the time of writing, the tool being used by more than three hundred university students every academic year.",
+        "subjects": [
+            "cs.DB"
         ],
         "comment": null
     },
@@ -6317,32 +6305,6 @@
         "comment": "16 pages, 4 figures"
     },
     {
-        "paper id": "2401.16669",
-        "abstract url": "https://arxiv.org/abs/2401.16669",
-        "title": "Improving Global Weather and Ocean Wave Forecast with Large Artificial Intelligence Models",
-        "rating": "-2.5",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "Forecast"
-            ],
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "The rapid advancement of artificial intelligence technologies, particularly in recent years, has led to the emergence of several large parameter artificial intelligence weather forecast models. These models represent a significant breakthrough, overcoming the limitations of traditional numerical weather prediction models and indicating the emergence of profound potential tools for atmosphere-ocean forecasts. This study explores the evolution of these advanced artificial intelligence forecast models, and based on the identified commonalities, proposes the \"Three Large Rules\" to measure their development. We discuss the potential of artificial intelligence in revolutionizing numerical weather prediction, and briefly outlining the underlying reasons for its great potential. While acknowledging the high accuracy, computational efficiency, and ease of deployment of large artificial intelligence forecast models, we also emphasize the irreplaceable values of traditional numerical forecasts and explore the challenges in the future development of large-scale artificial intelligence atmosphere-ocean forecast models. We believe that the optimal future of atmosphere-ocean weather forecast lies in achieving a seamless integration of artificial intelligence and traditional numerical models. Such a synthesis is anticipated to offer a more advanced and reliable approach for improved atmosphere-ocean forecasts. Additionally, we illustrate how forecasters can adapt and leverage the advanced artificial intelligence model through an example by building a large artificial intelligence model for global ocean wave forecast.",
-        "subjects": [
-            "cs.LG",
-            "cs.AI",
-            "physics.ao-ph",
-            "physics.geo-ph"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2401.16719",
         "abstract url": "https://arxiv.org/abs/2401.16719",
         "title": "OptiState: State Estimation of Legged Robots using Gated Networks with Transformer-based Vision and Kalman Filtering",
@@ -6458,6 +6420,30 @@
         "abstract": "With the accelerating development of Large Language Models (LLMs), many LLMs are beginning to be used in the Chinese K-12 education domain. The integration of LLMs and education is getting closer and closer, however, there is currently no benchmark for evaluating LLMs that focuses on the Chinese K-12 education domain. Therefore, there is an urgent need for a comprehensive natural language processing benchmark to accurately assess the capabilities of various LLMs in the Chinese K-12 education domain. To address this, we introduce the E-EVAL, the first comprehensive evaluation benchmark specifically designed for the Chinese K-12 education field. The E-EVAL consists of 4,351 multiple-choice questions at the primary, middle, and high school levels across a wide range of subjects, including Chinese, English, Politics, History, Ethics, Physics, Chemistry, Mathematics, and Geography. We conducted a comprehensive evaluation of E-EVAL on advanced LLMs, including both English-dominant and Chinese-dominant models. Findings show that Chinese-dominant models perform well compared to English-dominant models, with many scoring even above the GPT 4.0. However, almost all models perform poorly in complex subjects such as mathematics. We also found that most Chinese-dominant LLMs did not achieve higher scores at the primary school level compared to the middle school level. We observe that the mastery of higher-order knowledge by the model does not necessarily imply the mastery of lower-order knowledge as well. Additionally, the experimental results indicate that the Chain of Thought (CoT) technique is effective only for the challenging science subjects, while Few-shot prompting is more beneficial for liberal arts subjects. With E-EVAL, we aim to analyze the strengths and limitations of LLMs in educational applications, and to contribute to the progress and development of Chinese K-12 education and LLMs.",
         "subjects": [
             "cs.CL"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2401.15934",
+        "abstract url": "https://arxiv.org/abs/2401.15934",
+        "title": "HICH Image/Text (HICH-IT): Comprehensive Text and Image Datasets for Hypertensive Intracerebral Hemorrhage Research",
+        "rating": "-3",
+        "keywords": [
+            [
+                "medical",
+                "diagnosis",
+                "CT"
+            ],
+            [
+                "named entity recognition"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "In this paper, we introduce a new dataset in the medical field of hypertensive intracerebral hemorrhage (HICH), called HICH-IT, which includes both electronic medical records (EMRs) and head CT images. This dataset is designed to enhance the accuracy of artificial intelligence in the diagnosis and treatment of HICH. This dataset, built upon the foundation of standard text and image data, incorporates specific annotations within the EMRs, extracting key content from the text information, and categorizes the annotation content of imaging data into four types: brain midline, hematoma, left and right cerebral ventricle. HICH-IT aims to be a foundational dataset for feature learning in image segmentation tasks and named entity recognition. To further understand the dataset, we have trained deep learning algorithms to observe the performance. The pretrained models have been released at both www.daip.club and github.com/Deep-AI-Application-DAIP. The dataset has been uploaded to https://github.com/CYBUS123456/HICH-IT-Datasets. Index Terms-HICH, Deep learning, Intraparenchymal hemorrhage, named entity recognition, novel dataset",
+        "subjects": [
+            "cs.CV"
         ],
         "comment": null
     },
@@ -6697,6 +6683,25 @@
         "subjects": [
             "cs.CL",
             "cs.AI"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2401.16583",
+        "abstract url": "https://arxiv.org/abs/2401.16583",
+        "title": "Data-Oblivious ML Accelerators using Hardware Security Extensions",
+        "rating": "-3",
+        "keywords": [
+            [
+                "attacks"
+            ],
+            [
+                "FPGA"
+            ]
+        ],
+        "abstract": "Outsourced computation can put client data confidentiality at risk. Existing solutions are either inefficient or insufficiently secure: cryptographic techniques like fully-homomorphic encryption incur significant overheads, even with hardware assistance, while the complexity of hardware-assisted trusted execution environments has been exploited to leak secret data. Recent proposals such as BliMe and OISA show how dynamic information flow tracking (DIFT) enforced in hardware can protect client data efficiently. They are designed to protect CPU-only workloads. However, many outsourced computing applications, like machine learning, make extensive use of accelerators. We address this gap with Dolma, which applies DIFT to the Gemmini matrix multiplication accelerator, efficiently guaranteeing client data confidentiality, even in the presence of malicious/vulnerable software and side channel attacks on the server. We show that accelerators can allow DIFT logic optimizations that significantly reduce area overhead compared with general-purpose processor architectures. Dolma is integrated with the BliMe framework to achieve end-to-end security guarantees. We evaluate Dolma on an FPGA using a ResNet-50 DNN model and show that it incurs low overheads for large configurations ($4.4\\%$, $16.7\\%$, $16.5\\%$ for performance, resource usage and power, respectively, with a 32x32 configuration).",
+        "subjects": [
+            "cs.CR"
         ],
         "comment": null
     },
@@ -7421,19 +7426,6 @@
         "comment": null
     },
     {
-        "paper id": "2401.16274",
-        "abstract url": "https://arxiv.org/abs/2401.16274",
-        "title": "The HSF Conditions Database Reference Implementation",
-        "rating": "-10",
-        "keywords": [],
-        "abstract": "Conditions data is the subset of non-event data that is necessary to process event data. It poses a unique set of challenges, namely a heterogeneous structure and high access rates by distributed computing. The HSF Conditions Databases activity is a forum for cross-experiment discussions inviting as broad a participation as possible. It grew out of the HSF Community White Paper work to study conditions data access, where experts from ATLAS, Belle II, and CMS converged on a common language and proposed a schema that represents best practice. Following discussions with a broader community, including NP as well as HEP experiments, a core set of use cases, functionality and behaviour was defined with the aim to describe a core conditions database API. This paper will describe the reference implementation of both the conditions database service and the client which together encapsulate HSF best practice conditions data handling. Django was chosen for the service implementation, which uses an ORM instead of the direct use of SQL for all but one method. The simple relational database schema to organise conditions data is implemented in PostgreSQL. The task of storing conditions data payloads themselves is outsourced to any POSIX-compliant filesystem, allowing for transparent relocation and redundancy. Crucially this design provides a clear separation between retrieving the metadata describing which conditions data are needed for a data processing job, and retrieving the actual payloads from storage. The service deployment using Helm on OKD will be described together with scaling tests and operations experience from the sPHENIX experiment running more than 25k cores at BNL.",
-        "subjects": [
-            "cs.DB",
-            "hep-ex"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2401.16277",
         "abstract url": "https://arxiv.org/abs/2401.16277",
         "title": "SECOMP: Formally Secure Compilation of Compartmentalized C Programs",
@@ -7783,18 +7775,6 @@
         "comment": null
     },
     {
-        "paper id": "2401.16552",
-        "abstract url": "https://arxiv.org/abs/2401.16552",
-        "title": "ONDA: ONline Database Architect",
-        "rating": "-10",
-        "keywords": [],
-        "abstract": "Database modeling is a key activity towards the fulfillment of storage requirements. Despite the availability of several database modeling tools for developers, these often come with associated costs, setup complexities, usability challenges, or dependency on specific operating systems. In this paper we present ONDA, a web-based tool developed at the University of Coimbra, that allows the creation of Entity-Relationship diagrams, visualization of physical models, and generation of SQL code for various database engines. ONDA is freely available at https://onda.dei.uc.pt and was created with the intention of supporting teaching activities at university-level database courses. At the time of writing, the tool being used by more than three hundred university students every academic year.",
-        "subjects": [
-            "cs.DB"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2401.16557",
         "abstract url": "https://arxiv.org/abs/2401.16557",
         "title": "Discontinuous PWM Strategy with Frequency Modulation for Vibration Reduction in Asynchronous Machines",
@@ -7999,6 +7979,18 @@
         "abstract": "Contemporary theories and models for electric power system stability are predicated on a widely held assumption that the mechanical inertia of the rotating mass of synchronous generators provides the sole contribution to stable and synchronized operation of this class of complex networks on subsecond timescales. Here we formulate the electromagnetic momentum of the field around the transmission lines that transports energy and present evidence from a real-world bulk power network that demonstrates its physical significance. We show the classical stability model for power networks that overlooks this property, known as the \"swing equation\", may become inadequate to analyze systems with high shares of inverter-based resources, commonly known as \"low-inertia power systems\". Subsequently, we introduce a plane wave dynamic model, consistent with the structural properties of emerging power systems with up to 100% inverter-based resources, which identifies the concept of inertia in power grids as a time-varying component. We leverage our theory to discuss a number of open questions in the electric power industry. Most notably, we postulate that the changing nature of power networks with a preponderance of variable renewable energy power plants could strengthen power network stability in the future; a vision which is irreconcilable with the conventional theories.",
         "subjects": [
             "eess.SY"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2401.16707",
+        "abstract url": "https://arxiv.org/abs/2401.16707",
+        "title": "Optimal Redundancy in Exact Channel Synthesis",
+        "rating": "-10",
+        "keywords": [],
+        "abstract": "We consider the redundancy of the exact channel synthesis problem under an i.i.d. assumption. Existing results provide an upper bound on the unnormalized redundancy that is logarithmic in the block length. We show, via an improved scheme, that the logarithmic term can be halved for most channels and eliminated for all others. For full-support discrete memoryless channels, we show that this is the best possible.",
+        "subjects": [
+            "cs.IT"
         ],
         "comment": null
     },

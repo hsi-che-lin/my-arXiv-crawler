@@ -179,6 +179,30 @@
         "comment": null
     },
     {
+        "paper id": "2404.08080",
+        "abstract url": "https://arxiv.org/abs/2404.08080",
+        "title": "Variance-reduced Zeroth-Order Methods for Fine-Tuning Language Models",
+        "rating": "2",
+        "keywords": [
+            [
+                "memory-efficient"
+            ],
+            [
+                "cs.AI",
+                "cs.LG",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Fine-tuning language models (LMs) has demonstrated success in a wide array of downstream tasks. However, as LMs are scaled up, the memory requirements for backpropagation become prohibitively high. Zeroth-order (ZO) optimization methods can leverage memory-efficient forward passes to estimate gradients. More recently, MeZO, an adaptation of ZO-SGD, has been shown to consistently outperform zero-shot and in-context learning when combined with suitable task prompts. In this work, we couple ZO methods with variance reduction techniques to enhance stability and convergence for inference-based LM fine-tuning. We introduce Memory-Efficient Zeroth-Order Stochastic Variance-Reduced Gradient (MeZO-SVRG) and demonstrate its efficacy across multiple LM fine-tuning tasks, eliminating the reliance on task-specific prompts. Evaluated across a range of both masked and autoregressive LMs on benchmark GLUE tasks, MeZO-SVRG outperforms MeZO with up to 20% increase in test accuracies in both full- and partial-parameter fine-tuning settings. MeZO-SVRG benefits from reduced computation time as it often surpasses MeZO's peak test accuracy with a $2\\times$ reduction in GPU-hours. MeZO-SVRG significantly reduces the required memory footprint compared to first-order SGD, i.e. by $2\\times$ for autoregressive models. Our experiments highlight that MeZO-SVRG's memory savings progressively improve compared to SGD with larger batch sizes.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI",
+            "cs.CL",
+            "math.OC"
+        ],
+        "comment": "29 pages, 25 tables, 9 figures"
+    },
+    {
         "paper id": "2404.08181",
         "abstract url": "https://arxiv.org/abs/2404.08181",
         "title": "Pay Attention to Your Neighbours: Training-Free Open-Vocabulary Semantic Segmentation",
@@ -257,25 +281,31 @@
         "comment": "Accepted to CVPR'24"
     },
     {
-        "paper id": "2404.08022",
-        "abstract url": "https://arxiv.org/abs/2404.08022",
-        "title": "A lightweight dual-stage framework for personalized speech enhancement based on DeepFilterNet2",
+        "paper id": "2404.07991",
+        "abstract url": "https://arxiv.org/abs/2404.07991",
+        "title": "GoMAvatar: Efficient Animatable Human Modeling from Monocular Video Using Gaussians-on-Mesh",
         "rating": "1.5",
         "keywords": [
             [
-                "cs.SD",
-                "eess.AS"
+                "memory-efficient"
             ],
             [
-                "ICASSP"
+                "3D",
+                "Gaussian splatting",
+                "avatar"
+            ],
+            [
+                "cs.CV"
+            ],
+            [
+                "CVPR"
             ]
         ],
-        "abstract": "Isolating the desired speaker's voice amidst multiplespeakers in a noisy acoustic context is a challenging task. Per-sonalized speech enhancement (PSE) endeavours to achievethis by leveraging prior knowledge of the speaker's voice.Recent research efforts have yielded promising PSE mod-els, albeit often accompanied by computationally intensivearchitectures, unsuitable for resource-constrained embeddeddevices. In this paper, we introduce a novel method to per-sonalize a lightweight dual-stage Speech Enhancement (SE)model and implement it within DeepFilterNet2, a SE modelrenowned for its state-of-the-art performance. We seek anoptimal integration of speaker information within the model,exploring different positions for the integration of the speakerembeddings within the dual-stage enhancement architec-ture. We also investigate a tailored training strategy whenadapting DeepFilterNet2 to a PSE task. We show that ourpersonalization method greatly improves the performancesof DeepFilterNet2 while preserving minimal computationaloverhead.",
+        "abstract": "We introduce GoMAvatar, a novel approach for real-time, memory-efficient, high-quality animatable human modeling. GoMAvatar takes as input a single monocular video to create a digital avatar capable of re-articulation in new poses and real-time rendering from novel viewpoints, while seamlessly integrating with rasterization-based graphics pipelines. Central to our method is the Gaussians-on-Mesh representation, a hybrid 3D model combining rendering quality and speed of Gaussian splatting with geometry modeling and compatibility of deformable meshes. We assess GoMAvatar on ZJU-MoCap data and various YouTube videos. GoMAvatar matches or surpasses current monocular human modeling algorithms in rendering quality and significantly outperforms them in computational efficiency (43 FPS) while being memory-efficient (3.63 MB per subject).",
         "subjects": [
-            "cs.SD",
-            "eess.AS"
+            "cs.CV"
         ],
-        "comment": "Accepted at HSCMA24, Satellite workshop of ICASSP24"
+        "comment": "CVPR 2024; project page: https://wenj.github.io/GoMAvatar/"
     },
     {
         "paper id": "2404.08079",
@@ -802,6 +832,29 @@
         "comment": "Accepted at NAACL 2024"
     },
     {
+        "paper id": "2404.07785",
+        "abstract url": "https://arxiv.org/abs/2404.07785",
+        "title": "PRAM: Place Recognition Anywhere Model for Efficient Visual Localization",
+        "rating": "1",
+        "keywords": [
+            [
+                "memory efficiency"
+            ],
+            [
+                "3D"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Humans localize themselves efficiently in known environments by first recognizing landmarks defined on certain objects and their spatial relationships, and then verifying the location by aligning detailed structures of recognized objects with those in the memory. Inspired by this, we propose the place recognition anywhere model (PRAM) to perform visual localization as efficiently as humans do. PRAM consists of two main components - recognition and registration. In detail, first of all, a self-supervised map-centric landmark definition strategy is adopted, making places in either indoor or outdoor scenes act as unique landmarks. Then, sparse keypoints extracted from images, are utilized as the input to a transformer-based deep neural network for landmark recognition; these keypoints enable PRAM to recognize hundreds of landmarks with high time and memory efficiency. Keypoints along with recognized landmark labels are further used for registration between query images and the 3D landmark map. Different from previous hierarchical methods, PRAM discards global and local descriptors, and reduces over 90% storage. Since PRAM utilizes recognition and landmark-wise verification to replace global reference search and exhaustive matching respectively, it runs 2.4 times faster than prior state-of-the-art approaches. Moreover, PRAM opens new directions for visual localization including multi-modality localization, map-centric feature learning, and hierarchical scene coordinate regression.",
+        "subjects": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "comment": "project page: https://feixue94.github.io/pram-project/"
+    },
+    {
         "paper id": "2404.07792",
         "abstract url": "https://arxiv.org/abs/2404.07792",
         "title": "Nostra Domina at EvaLatin 2024: Improving Latin Polarity Detection through Data Augmentation",
@@ -1223,27 +1276,6 @@
         "comment": null
     },
     {
-        "paper id": "2404.08080",
-        "abstract url": "https://arxiv.org/abs/2404.08080",
-        "title": "Variance-reduced Zeroth-Order Methods for Fine-Tuning Language Models",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.LG",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Fine-tuning language models (LMs) has demonstrated success in a wide array of downstream tasks. However, as LMs are scaled up, the memory requirements for backpropagation become prohibitively high. Zeroth-order (ZO) optimization methods can leverage memory-efficient forward passes to estimate gradients. More recently, MeZO, an adaptation of ZO-SGD, has been shown to consistently outperform zero-shot and in-context learning when combined with suitable task prompts. In this work, we couple ZO methods with variance reduction techniques to enhance stability and convergence for inference-based LM fine-tuning. We introduce Memory-Efficient Zeroth-Order Stochastic Variance-Reduced Gradient (MeZO-SVRG) and demonstrate its efficacy across multiple LM fine-tuning tasks, eliminating the reliance on task-specific prompts. Evaluated across a range of both masked and autoregressive LMs on benchmark GLUE tasks, MeZO-SVRG outperforms MeZO with up to 20% increase in test accuracies in both full- and partial-parameter fine-tuning settings. MeZO-SVRG benefits from reduced computation time as it often surpasses MeZO's peak test accuracy with a $2\\times$ reduction in GPU-hours. MeZO-SVRG significantly reduces the required memory footprint compared to first-order SGD, i.e. by $2\\times$ for autoregressive models. Our experiments highlight that MeZO-SVRG's memory savings progressively improve compared to SGD with larger batch sizes.",
-        "subjects": [
-            "cs.LG",
-            "cs.AI",
-            "cs.CL",
-            "math.OC"
-        ],
-        "comment": "29 pages, 25 tables, 9 figures"
-    },
-    {
         "paper id": "2404.08089",
         "abstract url": "https://arxiv.org/abs/2404.08089",
         "title": "Efficient Duple Perturbation Robustness in Low-rank MDPs",
@@ -1625,6 +1657,23 @@
             "cs.AI"
         ],
         "comment": "CVPRW 2024"
+    },
+    {
+        "paper id": "2404.07577",
+        "abstract url": "https://arxiv.org/abs/2404.07577",
+        "title": "Generating Comprehensive Lithium Battery Charging Data with Generative AI",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "In optimizing performance and extending the lifespan of lithium batteries, accurate state prediction is pivotal. Traditional regression and classification methods have achieved some success in battery state prediction. However, the efficacy of these data-driven approaches heavily relies on the availability and quality of public datasets. Additionally, generating electrochemical data predominantly through battery experiments is a lengthy and costly process, making it challenging to acquire high-quality electrochemical data. This difficulty, coupled with data incompleteness, significantly impacts prediction accuracy. Addressing these challenges, this study introduces the End of Life (EOL) and Equivalent Cycle Life (ECL) as conditions for generative AI models. By integrating an embedding layer into the CVAE model, we developed the Refined Conditional Variational Autoencoder (RCVAE). Through preprocessing data into a quasi-video format, our study achieves an integrated synthesis of electrochemical data, including voltage, current, temperature, and charging capacity, which is then processed by the RCVAE model. Coupled with customized training and inference algorithms, this model can generate specific electrochemical data for EOL and ECL under supervised conditions. This method provides users with a comprehensive electrochemical dataset, pioneering a new research domain for the artificial synthesis of lithium battery data. Furthermore, based on the detailed synthetic data, various battery state indicators can be calculated, offering new perspectives and possibilities for lithium battery performance prediction.",
+        "subjects": [
+            "cs.LG",
+            "eess.SP"
+        ],
+        "comment": null
     },
     {
         "paper id": "2404.07603",
@@ -2010,30 +2059,6 @@
         "comment": "CVPR 2024 Highlight - Code: https://github.com/Picsart-AI-Research/OpenBias"
     },
     {
-        "paper id": "2404.07991",
-        "abstract url": "https://arxiv.org/abs/2404.07991",
-        "title": "GoMAvatar: Efficient Animatable Human Modeling from Monocular Video Using Gaussians-on-Mesh",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian splatting",
-                "avatar"
-            ],
-            [
-                "cs.CV"
-            ],
-            [
-                "CVPR"
-            ]
-        ],
-        "abstract": "We introduce GoMAvatar, a novel approach for real-time, memory-efficient, high-quality animatable human modeling. GoMAvatar takes as input a single monocular video to create a digital avatar capable of re-articulation in new poses and real-time rendering from novel viewpoints, while seamlessly integrating with rasterization-based graphics pipelines. Central to our method is the Gaussians-on-Mesh representation, a hybrid 3D model combining rendering quality and speed of Gaussian splatting with geometry modeling and compatibility of deformable meshes. We assess GoMAvatar on ZJU-MoCap data and various YouTube videos. GoMAvatar matches or surpasses current monocular human modeling algorithms in rendering quality and significantly outperforms them in computational efficiency (43 FPS) while being memory-efficient (3.63 MB per subject).",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "CVPR 2024; project page: https://wenj.github.io/GoMAvatar/"
-    },
-    {
         "paper id": "2404.07992",
         "abstract url": "https://arxiv.org/abs/2404.07992",
         "title": "GoMVS: Geometrically Consistent Cost Aggregation for Multi-View Stereo",
@@ -2078,6 +2103,30 @@
             "cs.CV"
         ],
         "comment": "Accepted at CVPRW-INRV 2024"
+    },
+    {
+        "paper id": "2404.08022",
+        "abstract url": "https://arxiv.org/abs/2404.08022",
+        "title": "A lightweight dual-stage framework for personalized speech enhancement based on DeepFilterNet2",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "speech enhancement"
+            ],
+            [
+                "cs.SD",
+                "eess.AS"
+            ],
+            [
+                "ICASSP"
+            ]
+        ],
+        "abstract": "Isolating the desired speaker's voice amidst multiplespeakers in a noisy acoustic context is a challenging task. Per-sonalized speech enhancement (PSE) endeavours to achievethis by leveraging prior knowledge of the speaker's voice.Recent research efforts have yielded promising PSE mod-els, albeit often accompanied by computationally intensivearchitectures, unsuitable for resource-constrained embeddeddevices. In this paper, we introduce a novel method to per-sonalize a lightweight dual-stage Speech Enhancement (SE)model and implement it within DeepFilterNet2, a SE modelrenowned for its state-of-the-art performance. We seek anoptimal integration of speaker information within the model,exploring different positions for the integration of the speakerembeddings within the dual-stage enhancement architec-ture. We also investigate a tailored training strategy whenadapting DeepFilterNet2 to a PSE task. We show that ourpersonalization method greatly improves the performancesof DeepFilterNet2 while preserving minimal computationaloverhead.",
+        "subjects": [
+            "cs.SD",
+            "eess.AS"
+        ],
+        "comment": "Accepted at HSCMA24, Satellite workshop of ICASSP24"
     },
     {
         "paper id": "2404.08029",
@@ -2468,25 +2517,6 @@
         "comment": null
     },
     {
-        "paper id": "2404.13061",
-        "abstract url": "https://arxiv.org/abs/2404.13061",
-        "title": "FPGA Divide-and-Conquer Placement using Deep Reinforcement Learning",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "This paper introduces the problem of learning to place logic blocks in Field-Programmable Gate Arrays (FPGAs) and a learning-based method. In contrast to previous search-based placement algorithms, we instead employ Reinforcement Learning (RL) with the goal of minimizing wirelength. In addition to our preliminary learning results, we also evaluated a novel decomposition to address the nature of large search space when placing many blocks on a chipboard. Empirical experiments evaluate the effectiveness of the learning and decomposition paradigms on FPGA placement tasks.",
-        "subjects": [
-            "cs.AR",
-            "cs.AI",
-            "cs.LG"
-        ],
-        "comment": "accepted by ISEDA2024"
-    },
-    {
         "paper id": "2404.15343",
         "abstract url": "https://arxiv.org/abs/2404.15343",
         "title": "Edge-Efficient Deep Learning Models for Automatic Modulation Classification: A Performance Analysis",
@@ -2665,7 +2695,6 @@
             ],
             [
                 "Diffusion",
-                "synthesis",
                 "Text-to-image"
             ],
             [
@@ -2705,7 +2734,6 @@
         "rating": "0",
         "keywords": [
             [
-                "Synthesis",
                 "text-to-image"
             ],
             [
@@ -2895,26 +2923,6 @@
         "comment": null
     },
     {
-        "paper id": "2404.07785",
-        "abstract url": "https://arxiv.org/abs/2404.07785",
-        "title": "PRAM: Place Recognition Anywhere Model for Efficient Visual Localization",
-        "rating": "0",
-        "keywords": [
-            [
-                "3D"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Humans localize themselves efficiently in known environments by first recognizing landmarks defined on certain objects and their spatial relationships, and then verifying the location by aligning detailed structures of recognized objects with those in the memory. Inspired by this, we propose the place recognition anywhere model (PRAM) to perform visual localization as efficiently as humans do. PRAM consists of two main components - recognition and registration. In detail, first of all, a self-supervised map-centric landmark definition strategy is adopted, making places in either indoor or outdoor scenes act as unique landmarks. Then, sparse keypoints extracted from images, are utilized as the input to a transformer-based deep neural network for landmark recognition; these keypoints enable PRAM to recognize hundreds of landmarks with high time and memory efficiency. Keypoints along with recognized landmark labels are further used for registration between query images and the 3D landmark map. Different from previous hierarchical methods, PRAM discards global and local descriptors, and reduces over 90% storage. Since PRAM utilizes recognition and landmark-wise verification to replace global reference search and exhaustive matching respectively, it runs 2.4 times faster than prior state-of-the-art approaches. Moreover, PRAM opens new directions for visual localization including multi-modality localization, map-centric feature learning, and hierarchical scene coordinate regression.",
-        "subjects": [
-            "cs.CV",
-            "cs.RO"
-        ],
-        "comment": "project page: https://feixue94.github.io/pram-project/"
-    },
-    {
         "paper id": "2404.07788",
         "abstract url": "https://arxiv.org/abs/2404.07788",
         "title": "AUG: A New Dataset and An Efficient Model for Aerial Image Urban Scene Graph Generation",
@@ -2999,7 +3007,8 @@
         "rating": "0",
         "keywords": [
             [
-                "Infrared"
+                "Infrared",
+                "Re-Identification"
             ],
             [
                 "cs.AI",
@@ -3007,6 +3016,48 @@
             ]
         ],
         "abstract": "Visible-infrared person re-identification (VI-reID) aims at matching cross-modality pedestrian images captured by disjoint visible or infrared cameras. Existing methods alleviate the cross-modality discrepancies via designing different kinds of network architectures. Different from available methods, in this paper, we propose a novel parameter optimizing paradigm, parameter hierarchical optimization (PHO) method, for the task of VI-ReID. It allows part of parameters to be directly optimized without any training, which narrows the search space of parameters and makes the whole network more easier to be trained. Specifically, we first divide the parameters into different types, and then introduce a self-adaptive alignment strategy (SAS) to automatically align the visible and infrared images through transformation. Considering that features in different dimension have varying importance, we develop an auto-weighted alignment learning (AAL) module that can automatically weight features according to their importance. Importantly, in the alignment process of SAS and AAL, all the parameters are immediately optimized with optimization principles rather than training the whole network, which yields a better parameter training manner. Furthermore, we establish the cross-modality consistent learning (CCL) loss to extract discriminative person representations with translation consistency. We provide both theoretical justification and empirical evidence that our proposed PHO method outperform existing VI-reID approaches.",
+        "subjects": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2404.07933",
+        "abstract url": "https://arxiv.org/abs/2404.07933",
+        "title": "Boosting Self-Supervision for Single-View Scene Completion via Knowledge Distillation",
+        "rating": "0",
+        "keywords": [
+            [
+                "voxel",
+                "depth",
+                "radiance fields"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Inferring scene geometry from images via Structure from Motion is a long-standing and fundamental problem in computer vision. While classical approaches and, more recently, depth map predictions only focus on the visible parts of a scene, the task of scene completion aims to reason about geometry even in occluded regions. With the popularity of neural radiance fields (NeRFs), implicit representations also became popular for scene completion by predicting so-called density fields. Unlike explicit approaches. e.g. voxel-based methods, density fields also allow for accurate depth prediction and novel-view synthesis via image-based rendering. In this work, we propose to fuse the scene reconstruction from multiple images and distill this knowledge into a more accurate single-view scene reconstruction. To this end, we propose Multi-View Behind the Scenes (MVBTS) to fuse density fields from multiple posed images, trained fully self-supervised only from image data. Using knowledge distillation, we use MVBTS to train a single-view scene completion network via direct supervision called KDBTS. It achieves state-of-the-art performance on occupancy prediction, especially in occluded regions.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2404.07976",
+        "abstract url": "https://arxiv.org/abs/2404.07976",
+        "title": "Self-supervised Dataset Distillation: A Good Compression Is All You Need",
+        "rating": "0",
+        "keywords": [
+            [
+                "trajectory"
+            ],
+            [
+                "cs.AI",
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Dataset distillation aims to compress information from a large-scale original dataset to a new compact dataset while striving to preserve the utmost degree of the original data informational essence. Previous studies have predominantly concentrated on aligning the intermediate statistics between the original and distilled data, such as weight trajectory, features, gradient, BatchNorm, etc. In this work, we consider addressing this task through the new lens of model informativeness in the compression stage on the original dataset pretraining. We observe that with the prior state-of-the-art SRe$^2$L, as model sizes increase, it becomes increasingly challenging for supervised pretrained models to recover learned information during data synthesis, as the channel-wise mean and variance inside the model are flatting and less informative. We further notice that larger variances in BN statistics from self-supervised models enable larger loss signals to update the recovered data by gradients, enjoying more informativeness during synthesis. Building on this observation, we introduce SC-DD, a simple yet effective Self-supervised Compression framework for Dataset Distillation that facilitates diverse information compression and recovery compared to traditional supervised learning schemes, further reaps the potential of large pretrained models with enhanced capabilities. Extensive experiments are conducted on CIFAR-100, Tiny-ImageNet and ImageNet-1K datasets to demonstrate the superiority of our proposed approach. The proposed SC-DD outperforms all previous state-of-the-art supervised dataset distillation methods when employing larger models, such as SRe$^2$L, MTT, TESLA, DC, CAFE, etc., by large margins under the same recovery and post-training budgets. Code is available at https://github.com/VILA-Lab/SRe2L/tree/main/SCDD/.",
         "subjects": [
             "cs.CV",
             "cs.AI"
@@ -3220,8 +3271,7 @@
                 "NeRF"
             ],
             [
-                "GAN",
-                "Synthesis"
+                "GAN"
             ],
             [
                 "cs.CV"
@@ -3352,26 +3402,6 @@
         "comment": null
     },
     {
-        "paper id": "2404.07577",
-        "abstract url": "https://arxiv.org/abs/2404.07577",
-        "title": "Generating Comprehensive Lithium Battery Charging Data with Generative AI",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "In optimizing performance and extending the lifespan of lithium batteries, accurate state prediction is pivotal. Traditional regression and classification methods have achieved some success in battery state prediction. However, the efficacy of these data-driven approaches heavily relies on the availability and quality of public datasets. Additionally, generating electrochemical data predominantly through battery experiments is a lengthy and costly process, making it challenging to acquire high-quality electrochemical data. This difficulty, coupled with data incompleteness, significantly impacts prediction accuracy. Addressing these challenges, this study introduces the End of Life (EOL) and Equivalent Cycle Life (ECL) as conditions for generative AI models. By integrating an embedding layer into the CVAE model, we developed the Refined Conditional Variational Autoencoder (RCVAE). Through preprocessing data into a quasi-video format, our study achieves an integrated synthesis of electrochemical data, including voltage, current, temperature, and charging capacity, which is then processed by the RCVAE model. Coupled with customized training and inference algorithms, this model can generate specific electrochemical data for EOL and ECL under supervised conditions. This method provides users with a comprehensive electrochemical dataset, pioneering a new research domain for the artificial synthesis of lithium battery data. Furthermore, based on the detailed synthetic data, various battery state indicators can be calculated, offering new perspectives and possibilities for lithium battery performance prediction.",
-        "subjects": [
-            "cs.LG",
-            "eess.SP"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2404.07593",
         "abstract url": "https://arxiv.org/abs/2404.07593",
         "title": "Diffusion posterior sampling for simulation-based inference in tall data settings",
@@ -3482,6 +3512,31 @@
         "comment": null
     },
     {
+        "paper id": "2404.07850",
+        "abstract url": "https://arxiv.org/abs/2404.07850",
+        "title": "MindBridge: A Cross-Subject Brain Decoding Framework",
+        "rating": "-0.5",
+        "keywords": [
+            [
+                "biological-inspired",
+                "fMRI"
+            ],
+            [
+                "cs.AI",
+                "cs.CV"
+            ],
+            [
+                "CVPR"
+            ]
+        ],
+        "abstract": "Brain decoding, a pivotal field in neuroscience, aims to reconstruct stimuli from acquired brain signals, primarily utilizing functional magnetic resonance imaging (fMRI). Currently, brain decoding is confined to a per-subject-per-model paradigm, limiting its applicability to the same individual for whom the decoding model is trained. This constraint stems from three key challenges: 1) the inherent variability in input dimensions across subjects due to differences in brain size; 2) the unique intrinsic neural patterns, influencing how different individuals perceive and process sensory information; 3) limited data availability for new subjects in real-world scenarios hampers the performance of decoding models. In this paper, we present a novel approach, MindBridge, that achieves cross-subject brain decoding by employing only one model. Our proposed framework establishes a generic paradigm capable of addressing these challenges by introducing biological-inspired aggregation function and novel cyclic fMRI reconstruction mechanism for subject-invariant representation learning. Notably, by cycle reconstruction of fMRI, MindBridge can enable novel fMRI synthesis, which also can serve as pseudo data augmentation. Within the framework, we also devise a novel reset-tuning method for adapting a pretrained model to a new subject. Experimental results demonstrate MindBridge's ability to reconstruct images for multiple subjects, which is competitive with dedicated subject-specific models. Furthermore, with limited data for a new subject, we achieve a high level of decoding accuracy, surpassing that of subject-specific models. This advancement in cross-subject brain decoding suggests promising directions for wider applications in neuroscience and indicates potential for more efficient utilization of limited fMRI data in real-world scenarios. Project page: https://littlepure2333.github.io/MindBridge",
+        "subjects": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "comment": "CVPR 2024 highlight. Code is available at https://github.com/littlepure2333/MindBridge"
+    },
+    {
         "paper id": "2404.07863",
         "abstract url": "https://arxiv.org/abs/2404.07863",
         "title": "Backdoor Contrastive Learning via Bi-level Trigger Optimization",
@@ -3517,6 +3572,30 @@
         "subjects": [
             "cs.LG",
             "stat.AP"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2404.07956",
+        "abstract url": "https://arxiv.org/abs/2404.07956",
+        "title": "Lyapunov-stable Neural Control for State and Output Feedback: A Novel Formulation for Efficient Synthesis and Verification",
+        "rating": "-0.5",
+        "keywords": [
+            [
+                "robotics"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Learning-based neural network (NN) control policies have shown impressive empirical performance in a wide range of tasks in robotics and control. However, formal (Lyapunov) stability guarantees over the region-of-attraction (ROA) for NN controllers with nonlinear dynamical systems are challenging to obtain, and most existing approaches rely on expensive solvers such as sums-of-squares (SOS), mixed-integer programming (MIP), or satisfiability modulo theories (SMT). In this paper, we demonstrate a new framework for learning NN controllers together with Lyapunov certificates using fast empirical falsification and strategic regularizations. We propose a novel formulation that defines a larger verifiable region-of-attraction (ROA) than shown in the literature, and refines the conventional restrictive constraints on Lyapunov derivatives to focus only on certifiable ROAs. The Lyapunov condition is rigorously verified post-hoc using branch-and-bound with scalable linear bound propagation-based NN verification techniques. The approach is efficient and flexible, and the full training and verification procedure is accelerated on GPUs without relying on expensive solvers for SOS, MIP, nor SMT. The flexibility and efficiency of our framework allow us to demonstrate Lyapunov-stable output feedback control with synthesized NN-based controllers and NN-based observers with formal stability guarantees, for the first time in literature. Source code at https://github.com/Verified-Intelligence/Lyapunov_Stable_NN_Controllers.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI",
+            "cs.RO",
+            "eess.SY",
+            "math.OC"
         ],
         "comment": null
     },
@@ -3810,6 +3889,22 @@
         "abstract": "Multi-rater annotations commonly occur when medical images are independently annotated by multiple experts (raters). In this paper, we tackle two challenges arisen in multi-rater annotations for medical image segmentation (called ambiguous medical image segmentation): (1) How to train a deep learning model when a group of raters produces a set of diverse but plausible annotations, and (2) how to fine-tune the model efficiently when computation resources are not available for re-training the entire model on a different dataset domain. We propose a multi-rater prompt-based approach to address these two challenges altogether. Specifically, we introduce a series of rater-aware prompts that can be plugged into the U-Net model for uncertainty estimation to handle multi-annotation cases. During the prompt-based fine-tuning process, only 0.3% of learnable parameters are required to be updated comparing to training the entire model. Further, in order to integrate expert consensus and disagreement, we explore different multi-rater incorporation strategies and design a mix-training strategy for comprehensive insight learning. Extensive experiments verify the effectiveness of our new approach for ambiguous medical image segmentation on two public datasets while alleviating the heavy burden of model re-training.",
         "subjects": [
             "cs.CV"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2404.07604",
+        "abstract url": "https://arxiv.org/abs/2404.07604",
+        "title": "Novel Active Sensing and Inference for mmWave Beam Alignment Using Single RF Chain Systems",
+        "rating": "-1",
+        "keywords": [
+            [
+                "radar"
+            ]
+        ],
+        "abstract": "We propose a novel sensing approach for the beam alignment problem in millimeter wave systems using a single Radio Frequency (RF) chain. Conventionally, beam alignment using a single phased array involves comparing beamformer output power across different spatial regions. This incurs large training overhead due to the need to perform the beam scan operation. The proposed Synthesis of Virtual Array Manifold (SVAM) sensing methodology is inspired from synthetic aperture radar systems and realizes a virtual array geometry over temporal measurements. We demonstrate the benefits of SVAM using Cram\u00e9r-Rao bound (CRB) analysis over schemes that repeat beam pattern to boost signal-to-noise (SNR) ratio. We also showcase versatile applicability of the proposed SVAM sensing by incorporating it within existing beam alignment procedures that assume perfect knowledge of the small-scale fading coefficient. We further consider the practical scenario wherein we estimate the fading coefficient and propose a novel beam alignment procedure based on efficient computation of an approximate posterior density on dominant path angle. We provide numerical experiments to study the impact of parameters involved in the procedure. The performance of the proposed sensing and beam alignment algorithm is empirically observed to approach the fading coefficient-perfectly known performance, even at low SNR.",
+        "subjects": [
+            "eess.SP"
         ],
         "comment": null
     },
@@ -4301,54 +4396,6 @@
         "comment": "arXiv admin note: text overlap with arXiv:2209.13092"
     },
     {
-        "paper id": "2404.07933",
-        "abstract url": "https://arxiv.org/abs/2404.07933",
-        "title": "Boosting Self-Supervision for Single-View Scene Completion via Knowledge Distillation",
-        "rating": "-1",
-        "keywords": [
-            [
-                "voxel",
-                "depth",
-                "radiance fields"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Inferring scene geometry from images via Structure from Motion is a long-standing and fundamental problem in computer vision. While classical approaches and, more recently, depth map predictions only focus on the visible parts of a scene, the task of scene completion aims to reason about geometry even in occluded regions. With the popularity of neural radiance fields (NeRFs), implicit representations also became popular for scene completion by predicting so-called density fields. Unlike explicit approaches. e.g. voxel-based methods, density fields also allow for accurate depth prediction and novel-view synthesis via image-based rendering. In this work, we propose to fuse the scene reconstruction from multiple images and distill this knowledge into a more accurate single-view scene reconstruction. To this end, we propose Multi-View Behind the Scenes (MVBTS) to fuse density fields from multiple posed images, trained fully self-supervised only from image data. Using knowledge distillation, we use MVBTS to train a single-view scene completion network via direct supervision called KDBTS. It achieves state-of-the-art performance on occupancy prediction, especially in occluded regions.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2404.07976",
-        "abstract url": "https://arxiv.org/abs/2404.07976",
-        "title": "Self-supervised Dataset Distillation: A Good Compression Is All You Need",
-        "rating": "-1",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "trajectory"
-            ],
-            [
-                "cs.AI",
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Dataset distillation aims to compress information from a large-scale original dataset to a new compact dataset while striving to preserve the utmost degree of the original data informational essence. Previous studies have predominantly concentrated on aligning the intermediate statistics between the original and distilled data, such as weight trajectory, features, gradient, BatchNorm, etc. In this work, we consider addressing this task through the new lens of model informativeness in the compression stage on the original dataset pretraining. We observe that with the prior state-of-the-art SRe$^2$L, as model sizes increase, it becomes increasingly challenging for supervised pretrained models to recover learned information during data synthesis, as the channel-wise mean and variance inside the model are flatting and less informative. We further notice that larger variances in BN statistics from self-supervised models enable larger loss signals to update the recovered data by gradients, enjoying more informativeness during synthesis. Building on this observation, we introduce SC-DD, a simple yet effective Self-supervised Compression framework for Dataset Distillation that facilitates diverse information compression and recovery compared to traditional supervised learning schemes, further reaps the potential of large pretrained models with enhanced capabilities. Extensive experiments are conducted on CIFAR-100, Tiny-ImageNet and ImageNet-1K datasets to demonstrate the superiority of our proposed approach. The proposed SC-DD outperforms all previous state-of-the-art supervised dataset distillation methods when employing larger models, such as SRe$^2$L, MTT, TESLA, DC, CAFE, etc., by large margins under the same recovery and post-training budgets. Code is available at https://github.com/VILA-Lab/SRe2L/tree/main/SCDD/.",
-        "subjects": [
-            "cs.CV",
-            "cs.AI"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2404.07981",
         "abstract url": "https://arxiv.org/abs/2404.07981",
         "title": "Manipulating Large Language Models to Increase Product Visibility",
@@ -4558,6 +4605,30 @@
         "comment": null
     },
     {
+        "paper id": "2404.08703",
+        "abstract url": "https://arxiv.org/abs/2404.08703",
+        "title": "Synthetic Brain Images: Bridging the Gap in Brain Mapping With Generative Adversarial Model",
+        "rating": "-1",
+        "keywords": [
+            [
+                "medical",
+                "diagnosis",
+                "MRI"
+            ],
+            [
+                "cs.CV",
+                "eess.IV"
+            ]
+        ],
+        "abstract": "Magnetic Resonance Imaging (MRI) is a vital modality for gaining precise anatomical information, and it plays a significant role in medical imaging for diagnosis and therapy planning. Image synthesis problems have seen a revolution in recent years due to the introduction of deep learning techniques, specifically Generative Adversarial Networks (GANs). This work investigates the use of Deep Convolutional Generative Adversarial Networks (DCGAN) for producing high-fidelity and realistic MRI image slices. The suggested approach uses a dataset with a variety of brain MRI scans to train a DCGAN architecture. While the discriminator network discerns between created and real slices, the generator network learns to synthesise realistic MRI image slices. The generator refines its capacity to generate slices that closely mimic real MRI data through an adversarial training approach. The outcomes demonstrate that the DCGAN promise for a range of uses in medical imaging research, since they show that it can effectively produce MRI image slices if we train them for a consequent number of epochs. This work adds to the expanding corpus of research on the application of deep learning techniques for medical image synthesis. The slices that are could be produced possess the capability to enhance datasets, provide data augmentation in the training of deep learning models, as well as a number of functions are made available to make MRI data cleaning easier, and a three ready to use and clean dataset on the major anatomical plans.",
+        "subjects": [
+            "eess.IV",
+            "cs.CV",
+            "q-bio.NC"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2404.08704",
         "abstract url": "https://arxiv.org/abs/2404.08704",
         "title": "MM-PhyQA: Multimodal Physics Question-Answering With Multi-Image CoT Prompting",
@@ -4730,34 +4801,6 @@
         "comment": null
     },
     {
-        "paper id": "2404.07850",
-        "abstract url": "https://arxiv.org/abs/2404.07850",
-        "title": "MindBridge: A Cross-Subject Brain Decoding Framework",
-        "rating": "-1.5",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "biological-inspired",
-                "fMRI"
-            ],
-            [
-                "cs.AI",
-                "cs.CV"
-            ],
-            [
-                "CVPR"
-            ]
-        ],
-        "abstract": "Brain decoding, a pivotal field in neuroscience, aims to reconstruct stimuli from acquired brain signals, primarily utilizing functional magnetic resonance imaging (fMRI). Currently, brain decoding is confined to a per-subject-per-model paradigm, limiting its applicability to the same individual for whom the decoding model is trained. This constraint stems from three key challenges: 1) the inherent variability in input dimensions across subjects due to differences in brain size; 2) the unique intrinsic neural patterns, influencing how different individuals perceive and process sensory information; 3) limited data availability for new subjects in real-world scenarios hampers the performance of decoding models. In this paper, we present a novel approach, MindBridge, that achieves cross-subject brain decoding by employing only one model. Our proposed framework establishes a generic paradigm capable of addressing these challenges by introducing biological-inspired aggregation function and novel cyclic fMRI reconstruction mechanism for subject-invariant representation learning. Notably, by cycle reconstruction of fMRI, MindBridge can enable novel fMRI synthesis, which also can serve as pseudo data augmentation. Within the framework, we also devise a novel reset-tuning method for adapting a pretrained model to a new subject. Experimental results demonstrate MindBridge's ability to reconstruct images for multiple subjects, which is competitive with dedicated subject-specific models. Furthermore, with limited data for a new subject, we achieve a high level of decoding accuracy, surpassing that of subject-specific models. This advancement in cross-subject brain decoding suggests promising directions for wider applications in neuroscience and indicates potential for more efficient utilization of limited fMRI data in real-world scenarios. Project page: https://littlepure2333.github.io/MindBridge",
-        "subjects": [
-            "cs.CV",
-            "cs.AI"
-        ],
-        "comment": "CVPR 2024 highlight. Code is available at https://github.com/littlepure2333/MindBridge"
-    },
-    {
         "paper id": "2404.07860",
         "abstract url": "https://arxiv.org/abs/2404.07860",
         "title": "Streaming detection of significant delay changes in public transport systems",
@@ -4817,33 +4860,6 @@
         "abstract": "Significant strides have been made in advancing streamflow predictions, notably with the introduction of cutting-edge machine-learning models. Predominantly, Long Short-Term Memories (LSTMs) and Convolution Neural Networks (CNNs) have been widely employed in this domain. While LSTMs are applicable in both rainfall-runoff and time series settings, CNN-LSTMs have primarily been utilized in rainfall-runoff scenarios. In this study, we extend the application of CNN-LSTMs to time series settings, leveraging lagged streamflow data in conjunction with precipitation and temperature data to predict streamflow. Our results show a substantial improvement in predictive performance in 21 out of 32 HUC8 basins in Nebraska, showcasing noteworthy increases in the Kling-Gupta Efficiency (KGE) values. These results highlight the effectiveness of CNN-LSTMs in time series settings, particularly for spatiotemporal hydrological modeling, for more accurate and robust streamflow predictions.",
         "subjects": [
             "cs.LG"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2404.07956",
-        "abstract url": "https://arxiv.org/abs/2404.07956",
-        "title": "Lyapunov-stable Neural Control for State and Output Feedback: A Novel Formulation for Efficient Synthesis and Verification",
-        "rating": "-1.5",
-        "keywords": [
-            [
-                "Synthesis"
-            ],
-            [
-                "robotics"
-            ],
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Learning-based neural network (NN) control policies have shown impressive empirical performance in a wide range of tasks in robotics and control. However, formal (Lyapunov) stability guarantees over the region-of-attraction (ROA) for NN controllers with nonlinear dynamical systems are challenging to obtain, and most existing approaches rely on expensive solvers such as sums-of-squares (SOS), mixed-integer programming (MIP), or satisfiability modulo theories (SMT). In this paper, we demonstrate a new framework for learning NN controllers together with Lyapunov certificates using fast empirical falsification and strategic regularizations. We propose a novel formulation that defines a larger verifiable region-of-attraction (ROA) than shown in the literature, and refines the conventional restrictive constraints on Lyapunov derivatives to focus only on certifiable ROAs. The Lyapunov condition is rigorously verified post-hoc using branch-and-bound with scalable linear bound propagation-based NN verification techniques. The approach is efficient and flexible, and the full training and verification procedure is accelerated on GPUs without relying on expensive solvers for SOS, MIP, nor SMT. The flexibility and efficiency of our framework allow us to demonstrate Lyapunov-stable output feedback control with synthesized NN-based controllers and NN-based observers with formal stability guarantees, for the first time in literature. Source code at https://github.com/Verified-Intelligence/Lyapunov_Stable_NN_Controllers.",
-        "subjects": [
-            "cs.LG",
-            "cs.AI",
-            "cs.RO",
-            "eess.SY",
-            "math.OC"
         ],
         "comment": null
     },
@@ -4979,6 +4995,49 @@
         "comment": null
     },
     {
+        "paper id": "2404.13061",
+        "abstract url": "https://arxiv.org/abs/2404.13061",
+        "title": "FPGA Divide-and-Conquer Placement using Deep Reinforcement Learning",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "FPGA"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "This paper introduces the problem of learning to place logic blocks in Field-Programmable Gate Arrays (FPGAs) and a learning-based method. In contrast to previous search-based placement algorithms, we instead employ Reinforcement Learning (RL) with the goal of minimizing wirelength. In addition to our preliminary learning results, we also evaluated a novel decomposition to address the nature of large search space when placing many blocks on a chipboard. Empirical experiments evaluate the effectiveness of the learning and decomposition paradigms on FPGA placement tasks.",
+        "subjects": [
+            "cs.AR",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "comment": "accepted by ISEDA2024"
+    },
+    {
+        "paper id": "2404.17586",
+        "abstract url": "https://arxiv.org/abs/2404.17586",
+        "title": "The Future of Scientific Publishing: Automated Article Generation",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "biomedical"
+            ],
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "This study introduces a novel software tool leveraging large language model (LLM) prompts, designed to automate the generation of academic articles from Python code a significant advancement in the fields of biomedical informatics and computer science. Selected for its widespread adoption and analytical versatility, Python served as a foundational proof of concept; however, the underlying methodology and framework exhibit adaptability across various GitHub repo's underlining the tool's broad applicability (Harper 2024). By mitigating the traditionally time-intensive academic writing process, particularly in synthesizing complex datasets and coding outputs, this approach signifies a monumental leap towards streamlining research dissemination. The development was achieved without reliance on advanced language model agents, ensuring high fidelity in the automated generation of coherent and comprehensive academic content. This exploration not only validates the successful application and efficiency of the software but also projects how future integration of LLM agents which could amplify its capabilities, propelling towards a future where scientific findings are disseminated more swiftly and accessibly.",
+        "subjects": [
+            "cs.HC",
+            "cs.AI",
+            "cs.ET"
+        ],
+        "comment": "Keywords: automated academic writing, Python code, software tool, article generation, natural language processing, scholarly publishing, code analysis, academic article automation, research dissemination, programming and publishing integration"
+    },
+    {
         "paper id": "2404.07495",
         "abstract url": "https://arxiv.org/abs/2404.07495",
         "title": "PillarTrack: Redesigning Pillar-based Transformer Network for Single Object Tracking on Point Clouds",
@@ -5110,25 +5169,6 @@
             "cs.CV",
             "cs.LG",
             "cs.RO"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2404.07604",
-        "abstract url": "https://arxiv.org/abs/2404.07604",
-        "title": "Novel Active Sensing and Inference for mmWave Beam Alignment Using Single RF Chain Systems",
-        "rating": "-2",
-        "keywords": [
-            [
-                "Synthesis"
-            ],
-            [
-                "radar"
-            ]
-        ],
-        "abstract": "We propose a novel sensing approach for the beam alignment problem in millimeter wave systems using a single Radio Frequency (RF) chain. Conventionally, beam alignment using a single phased array involves comparing beamformer output power across different spatial regions. This incurs large training overhead due to the need to perform the beam scan operation. The proposed Synthesis of Virtual Array Manifold (SVAM) sensing methodology is inspired from synthetic aperture radar systems and realizes a virtual array geometry over temporal measurements. We demonstrate the benefits of SVAM using Cram\u00e9r-Rao bound (CRB) analysis over schemes that repeat beam pattern to boost signal-to-noise (SNR) ratio. We also showcase versatile applicability of the proposed SVAM sensing by incorporating it within existing beam alignment procedures that assume perfect knowledge of the small-scale fading coefficient. We further consider the practical scenario wherein we estimate the fading coefficient and propose a novel beam alignment procedure based on efficient computation of an approximate posterior density on dominant path angle. We provide numerical experiments to study the impact of parameters involved in the procedure. The performance of the proposed sensing and beam alignment algorithm is empirically observed to approach the fading coefficient-perfectly known performance, even at low SNR.",
-        "subjects": [
-            "eess.SP"
         ],
         "comment": null
     },
@@ -5565,29 +5605,18 @@
         "comment": null
     },
     {
-        "paper id": "2404.08703",
-        "abstract url": "https://arxiv.org/abs/2404.08703",
-        "title": "Synthetic Brain Images: Bridging the Gap in Brain Mapping With Generative Adversarial Model",
+        "paper id": "2404.08228",
+        "abstract url": "https://arxiv.org/abs/2404.08228",
+        "title": "Modulo-$(2^{2n}+1)$ Arithmetic via Two Parallel n-bit Residue Channels",
         "rating": "-2",
         "keywords": [
             [
-                "synthesis"
-            ],
-            [
-                "medical",
-                "diagnosis",
-                "MRI"
-            ],
-            [
-                "cs.CV",
-                "eess.IV"
+                "FPGA"
             ]
         ],
-        "abstract": "Magnetic Resonance Imaging (MRI) is a vital modality for gaining precise anatomical information, and it plays a significant role in medical imaging for diagnosis and therapy planning. Image synthesis problems have seen a revolution in recent years due to the introduction of deep learning techniques, specifically Generative Adversarial Networks (GANs). This work investigates the use of Deep Convolutional Generative Adversarial Networks (DCGAN) for producing high-fidelity and realistic MRI image slices. The suggested approach uses a dataset with a variety of brain MRI scans to train a DCGAN architecture. While the discriminator network discerns between created and real slices, the generator network learns to synthesise realistic MRI image slices. The generator refines its capacity to generate slices that closely mimic real MRI data through an adversarial training approach. The outcomes demonstrate that the DCGAN promise for a range of uses in medical imaging research, since they show that it can effectively produce MRI image slices if we train them for a consequent number of epochs. This work adds to the expanding corpus of research on the application of deep learning techniques for medical image synthesis. The slices that are could be produced possess the capability to enhance datasets, provide data augmentation in the training of deep learning models, as well as a number of functions are made available to make MRI data cleaning easier, and a three ready to use and clean dataset on the major anatomical plans.",
+        "abstract": "Augmenting the balanced residue number system moduli-set $\\{m_1=2^n,m_2=2^n-1,m_3=2^n+1\\}$, with the co-prime modulo $m_4=2^{2n}+1$, increases the dynamic range (DR) by around 70%. The Mersenne form of product $m_2 m_3 m_4=2^{4n}-1$, in the moduli-set $\\{m_1,m_2,m_3,m_4\\}$, leads to a very efficient reverse convertor, based on the New Chinese remainder theorem. However, the double bit-width of the m_4 residue channel is counter-productive and jeopardizes the speed balance in $\\{m_1,m_2,m_3\\}$. Therefore, we decompose $m_4$ to two complex-number n-bit moduli $2^n\\pm\\sqrt{-1}$, which preserves the DR and the co-primality across the augmented moduli set. The required forward modulo-$(2^{2n}+1)$ to moduli-$(2^n\\pm\\sqrt{-1}) $conversion, and the reverse are immediate and cost-free. The proposed unified moduli-$(2^n\\pm\\sqrt{-1})$ adder and multiplier, are tested and synthesized using Spartan 7S100 FPGA. The 6-bit look-up tables (LUT), therein, promote the LUT realizations of adders and multipliers, for $n=5$, where the DR equals $2^{25}-2^5$. However, the undertaken experiments show that to cover all the 32-bit numbers, the power-of-two channel $m_1$ can be as wide as 12 bits with no harm to the speed balance across the five moduli. The results also show that the moduli-$(2^5\\pm\\sqrt{-1})$ add and multiply operations are advantageous vs. moduli-$(2^5\\pm1)$ in speed, cost, and energy measures and collectively better than those of modulo-$(2^{10}+1)$.",
         "subjects": [
-            "eess.IV",
-            "cs.CV",
-            "q-bio.NC"
+            "cs.AR"
         ],
         "comment": null
     },
@@ -5742,31 +5771,6 @@
         "comment": null
     },
     {
-        "paper id": "2404.07815",
-        "abstract url": "https://arxiv.org/abs/2404.07815",
-        "title": "Post-Hoc Reversal: Are We Selecting Models Prematurely?",
-        "rating": "-2.5",
-        "keywords": [
-            [
-                "graph"
-            ],
-            [
-                "satellite"
-            ],
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Trained models are often composed with post-hoc transforms such as temperature scaling (TS), ensembling and stochastic weight averaging (SWA) to improve performance, robustness, uncertainty estimation, etc. However, such transforms are typically applied only after the base models have already been finalized by standard means. In this paper, we challenge this practice with an extensive empirical study. In particular, we demonstrate a phenomenon that we call post-hoc reversal, where performance trends are reversed after applying these post-hoc transforms. This phenomenon is especially prominent in high-noise settings. For example, while base models overfit badly early in training, both conventional ensembling and SWA favor base models trained for more epochs. Post-hoc reversal can also suppress the appearance of double descent and mitigate mismatches between test loss and test error seen in base models. Based on our findings, we propose post-hoc selection, a simple technique whereby post-hoc metrics inform model development decisions such as early stopping, checkpointing, and broader hyperparameter choices. Our experimental analyses span real-world vision, language, tabular and graph datasets from domains like satellite imaging, language modeling, census prediction and social network analysis. On an LLM instruction tuning dataset, post-hoc selection results in > 1.5x MMLU improvement compared to naive selection. Code is available at https://github.com/rishabh-ranjan/post-hoc-reversal.",
-        "subjects": [
-            "cs.LG",
-            "cs.AI",
-            "stat.ML"
-        ],
-        "comment": "9 pages + references + appendix, 7 figures"
-    },
-    {
         "paper id": "2404.08021",
         "abstract url": "https://arxiv.org/abs/2404.08021",
         "title": "VeTraSS: Vehicle Trajectory Similarity Search Through Graph Modeling and Representation Learning",
@@ -5876,30 +5880,6 @@
             "cs.CY"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2404.17586",
-        "abstract url": "https://arxiv.org/abs/2404.17586",
-        "title": "The Future of Scientific Publishing: Automated Article Generation",
-        "rating": "-2.5",
-        "keywords": [
-            [
-                "synthesizing"
-            ],
-            [
-                "biomedical"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "This study introduces a novel software tool leveraging large language model (LLM) prompts, designed to automate the generation of academic articles from Python code a significant advancement in the fields of biomedical informatics and computer science. Selected for its widespread adoption and analytical versatility, Python served as a foundational proof of concept; however, the underlying methodology and framework exhibit adaptability across various GitHub repo's underlining the tool's broad applicability (Harper 2024). By mitigating the traditionally time-intensive academic writing process, particularly in synthesizing complex datasets and coding outputs, this approach signifies a monumental leap towards streamlining research dissemination. The development was achieved without reliance on advanced language model agents, ensuring high fidelity in the automated generation of coherent and comprehensive academic content. This exploration not only validates the successful application and efficiency of the software but also projects how future integration of LLM agents which could amplify its capabilities, propelling towards a future where scientific findings are disseminated more swiftly and accessibly.",
-        "subjects": [
-            "cs.HC",
-            "cs.AI",
-            "cs.ET"
-        ],
-        "comment": "Keywords: automated academic writing, Python code, software tool, article generation, natural language processing, scholarly publishing, code analysis, academic article automation, research dissemination, programming and publishing integration"
     },
     {
         "paper id": "2404.07479",
@@ -6302,6 +6282,34 @@
             "cs.CR"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2404.07815",
+        "abstract url": "https://arxiv.org/abs/2404.07815",
+        "title": "Post-Hoc Reversal: Are We Selecting Models Prematurely?",
+        "rating": "-4.5",
+        "keywords": [
+            [
+                "graph"
+            ],
+            [
+                "satellite"
+            ],
+            [
+                "tabular"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Trained models are often composed with post-hoc transforms such as temperature scaling (TS), ensembling and stochastic weight averaging (SWA) to improve performance, robustness, uncertainty estimation, etc. However, such transforms are typically applied only after the base models have already been finalized by standard means. In this paper, we challenge this practice with an extensive empirical study. In particular, we demonstrate a phenomenon that we call post-hoc reversal, where performance trends are reversed after applying these post-hoc transforms. This phenomenon is especially prominent in high-noise settings. For example, while base models overfit badly early in training, both conventional ensembling and SWA favor base models trained for more epochs. Post-hoc reversal can also suppress the appearance of double descent and mitigate mismatches between test loss and test error seen in base models. Based on our findings, we propose post-hoc selection, a simple technique whereby post-hoc metrics inform model development decisions such as early stopping, checkpointing, and broader hyperparameter choices. Our experimental analyses span real-world vision, language, tabular and graph datasets from domains like satellite imaging, language modeling, census prediction and social network analysis. On an LLM instruction tuning dataset, post-hoc selection results in > 1.5x MMLU improvement compared to naive selection. Code is available at https://github.com/rishabh-ranjan/post-hoc-reversal.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI",
+            "stat.ML"
+        ],
+        "comment": "9 pages + references + appendix, 7 figures"
     },
     {
         "paper id": "2404.08061",
@@ -7061,18 +7069,6 @@
             "cs.RO"
         ],
         "comment": "Accepted to ICRA 2024"
-    },
-    {
-        "paper id": "2404.08228",
-        "abstract url": "https://arxiv.org/abs/2404.08228",
-        "title": "Modulo-$(2^{2n}+1)$ Arithmetic via Two Parallel n-bit Residue Channels",
-        "rating": "-10",
-        "keywords": [],
-        "abstract": "Augmenting the balanced residue number system moduli-set $\\{m_1=2^n,m_2=2^n-1,m_3=2^n+1\\}$, with the co-prime modulo $m_4=2^{2n}+1$, increases the dynamic range (DR) by around 70%. The Mersenne form of product $m_2 m_3 m_4=2^{4n}-1$, in the moduli-set $\\{m_1,m_2,m_3,m_4\\}$, leads to a very efficient reverse convertor, based on the New Chinese remainder theorem. However, the double bit-width of the m_4 residue channel is counter-productive and jeopardizes the speed balance in $\\{m_1,m_2,m_3\\}$. Therefore, we decompose $m_4$ to two complex-number n-bit moduli $2^n\\pm\\sqrt{-1}$, which preserves the DR and the co-primality across the augmented moduli set. The required forward modulo-$(2^{2n}+1)$ to moduli-$(2^n\\pm\\sqrt{-1}) $conversion, and the reverse are immediate and cost-free. The proposed unified moduli-$(2^n\\pm\\sqrt{-1})$ adder and multiplier, are tested and synthesized using Spartan 7S100 FPGA. The 6-bit look-up tables (LUT), therein, promote the LUT realizations of adders and multipliers, for $n=5$, where the DR equals $2^{25}-2^5$. However, the undertaken experiments show that to cover all the 32-bit numbers, the power-of-two channel $m_1$ can be as wide as 12 bits with no harm to the speed balance across the five moduli. The results also show that the moduli-$(2^5\\pm\\sqrt{-1})$ add and multiply operations are advantageous vs. moduli-$(2^5\\pm1)$ in speed, cost, and energy measures and collectively better than those of modulo-$(2^{10}+1)$.",
-        "subjects": [
-            "cs.AR"
-        ],
-        "comment": null
     },
     {
         "paper id": "2404.08716",

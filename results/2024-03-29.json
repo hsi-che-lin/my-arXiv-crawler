@@ -257,6 +257,27 @@
         "comment": "Code: https://github.com/AtsuMiyai/UPD"
     },
     {
+        "paper id": "2404.00242",
+        "abstract url": "https://arxiv.org/abs/2404.00242",
+        "title": "DeFT: Flash Tree-attention with IO-Awareness for Efficient Tree-search-based LLM Inference",
+        "rating": "2",
+        "keywords": [
+            [
+                "memory-efficient"
+            ],
+            [
+                "cs.AI",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Decoding using tree search can greatly enhance the inference quality for transformer-based Large Language Models (LLMs). Depending on the guidance signal, it searches for the best path from root to leaf in the tree by forming LLM outputs to improve controllability, reasoning ability, alignment, et cetera. However, current tree decoding strategies and their inference systems do not suit each other well due to redundancy in computation, memory footprints, and memory access, resulting in inefficient inference. To address this issue, we propose DeFT, an IO-aware tree attention algorithm that maintains memory-efficient attention calculation with low memory footprints in two stages: (1) QKV Preparation: we propose a KV-Guided Tree Split strategy to group QKV wisely for high utilization of GPUs and reduction of memory reads/writes for the KV cache between GPU global memory and on-chip shared memory as much as possible; (2) Attention Calculation: we calculate partial attention of each QKV groups in a fused kernel then apply a Tree-topology-aware Global Reduction strategy to get final attention. Thanks to a reduction in KV cache IO by 3.6-4.5$\\times$, along with an additional reduction in IO for $\\mathbf{Q} \\mathbf{K}^\\top$ and Softmax equivalent to 25% of the total KV cache IO, DeFT can achieve a speedup of 1.7-2.4$\\times$ in end-to-end latency across two practical reasoning tasks over the SOTA attention algorithms.",
+        "subjects": [
+            "cs.CL",
+            "cs.AI"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2403.19975",
         "abstract url": "https://arxiv.org/abs/2403.19975",
         "title": "Context-Aware Integration of Language and Visual References for Natural Language Tracking",
@@ -467,25 +488,6 @@
         "comment": "Accepted by NAACL 2024 MainConference"
     },
     {
-        "paper id": "2403.20014",
-        "abstract url": "https://arxiv.org/abs/2403.20014",
-        "title": "PURPLE: Making a Large Language Model a Better SQL Writer",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Large Language Model (LLM) techniques play an increasingly important role in Natural Language to SQL (NL2SQL) translation. LLMs trained by extensive corpora have strong natural language understanding and basic SQL generation abilities without additional tuning specific to NL2SQL tasks. Existing LLMs-based NL2SQL approaches try to improve the translation by enhancing the LLMs with an emphasis on user intention understanding. However, LLMs sometimes fail to generate appropriate SQL due to their lack of knowledge in organizing complex logical operator composition. A promising method is to input the LLMs with demonstrations, which include known NL2SQL translations from various databases. LLMs can learn to organize operator compositions from the input demonstrations for the given task. In this paper, we propose PURPLE (Pre-trained models Utilized to Retrieve Prompts for Logical Enhancement), which improves accuracy by retrieving demonstrations containing the requisite logical operator composition for the NL2SQL task on hand, thereby guiding LLMs to produce better SQL translation. PURPLE achieves a new state-of-the-art performance of 80.5% exact-set match accuracy and 87.8% execution match accuracy on the validation set of the popular NL2SQL benchmark Spider. PURPLE maintains high accuracy across diverse benchmarks, budgetary constraints, and various LLMs, showing robustness and cost-effectiveness.",
-        "subjects": [
-            "cs.DB",
-            "cs.AI",
-            "cs.CL"
-        ],
-        "comment": "12 pages, accepted by ICDE 2024 (40th IEEE International Conference on Data Engineering)"
-    },
-    {
         "paper id": "2403.20041",
         "abstract url": "https://arxiv.org/abs/2403.20041",
         "title": "Transformer-Lite: High-efficiency Deployment of Large Language Models on Mobile Phone GPUs",
@@ -536,22 +538,6 @@
         "comment": null
     },
     {
-        "paper id": "2403.20056",
-        "abstract url": "https://arxiv.org/abs/2403.20056",
-        "title": "Cross-Lingual Transfer Robustness to Lower-Resource Languages on Adversarial Datasets",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Multilingual Language Models (MLLMs) exhibit robust cross-lingual transfer capabilities, or the ability to leverage information acquired in a source language and apply it to a target language. These capabilities find practical applications in well-established Natural Language Processing (NLP) tasks such as Named Entity Recognition (NER). This study aims to investigate the effectiveness of a source language when applied to a target language, particularly in the context of perturbing the input test set. We evaluate on 13 pairs of languages, each including one high-resource language (HRL) and one low-resource language (LRL) with a geographic, genetic, or borrowing relationship. We evaluate two well-known MLLMs--MBERT and XLM-R--on these pairs, in native LRL and cross-lingual transfer settings, in two tasks, under a set of different perturbations. Our findings indicate that NER cross-lingual transfer depends largely on the overlap of entity chunks. If a source and target language have more entities in common, the transfer ability is stronger. Models using cross-lingual transfer also appear to be somewhat more robust to certain perturbations of the input, perhaps indicating an ability to leverage stronger representations derived from the HRL. Our research provides valuable insights into cross-lingual transfer and its implications for NLP applications, and underscores the need to consider linguistic nuances and potential limitations when employing MLLMs across distinct languages.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": "accepted in LREC-COLING 2024"
-    },
-    {
         "paper id": "2403.20084",
         "abstract url": "https://arxiv.org/abs/2403.20084",
         "title": "IPA Transcription of Bengali Texts",
@@ -584,24 +570,20 @@
         "comment": null
     },
     {
-        "paper id": "2403.20101",
-        "abstract url": "https://arxiv.org/abs/2403.20101",
-        "title": "RealKIE: Five Novel Datasets for Enterprise Key Information Extraction",
+        "paper id": "2403.20090",
+        "abstract url": "https://arxiv.org/abs/2403.20090",
+        "title": "Non-Exponential Reverberation Modeling Using Dark Velvet Noise",
         "rating": "1",
         "keywords": [
             [
-                "cs.LG",
-                "cs.CV",
-                "cs.CL"
+                "eess.AS"
             ]
         ],
-        "abstract": "We introduce RealKIE, a benchmark of five challenging datasets aimed at advancing key information extraction methods, with an emphasis on enterprise applications. The datasets include a diverse range of documents including SEC S1 Filings, US Non-disclosure Agreements, UK Charity Reports, FCC Invoices, and Resource Contracts. Each presents unique challenges: poor text serialization, sparse annotations in long documents, and complex tabular layouts. These datasets provide a realistic testing ground for key information extraction tasks like investment analysis and legal data processing. In addition to presenting these datasets, we offer an in-depth description of the annotation process, document processing techniques, and baseline modeling approaches. This contribution facilitates the development of NLP models capable of handling practical challenges and supports further research into information extraction technologies applicable to industry-specific problems. The annotated data and OCR outputs are available to download at https://indicodatasolutions.github.io/RealKIE/ code to reproduce the baselines will be available shortly.",
+        "abstract": "Previous research on late-reverberation modeling has mainly focused on exponentially decaying room impulse responses, whereas methods for accurately modeling non-exponential reverberation remain challenging. This paper extends the previously proposed basic dark-velvet-noise reverberation algorithm and proposes a parametrization scheme for modeling late reverberation with arbitrary temporal energy decay. Each pulse in the velvet-noise sequence is routed to a single dictionary filter that is selected from a set of filters based on weighted probabilities. The probabilities control the spectral evolution of the late-reverberation model and are optimized to fit a target impulse response via non-negative least-squares optimization. In this way, the frequency-dependent energy decay of a target late-reverberation impulse response can be fitted with mean and maximum T60 errors of 4% and 8%, respectively, requiring about 50% less coloration filters than a previously proposed filtered velvet-noise algorithm. Furthermore, the extended dark-velvet-noise reverberation algorithm allows the modeled impulse response to be gated, the frequency-dependent reverberation time to be modified, and the model's spectral evolution and broadband decay to be decoupled. The proposed method is suitable for the parametric late-reverberation synthesis of various acoustic environments, especially spaces that exhibit a non-exponential energy decay, motivating its use in musical audio and virtual reality.",
         "subjects": [
-            "cs.CL",
-            "cs.CV",
-            "cs.LG"
+            "eess.AS"
         ],
-        "comment": null
+        "comment": "Accepted for publication in the Journal of Audio Engineering Society"
     },
     {
         "paper id": "2403.20103",
@@ -1030,24 +1012,6 @@
         "comment": null
     },
     {
-        "paper id": "2404.00107",
-        "abstract url": "https://arxiv.org/abs/2404.00107",
-        "title": "Robust Ensemble Person Re-Identification via Orthogonal Fusion with Occlusion Handling",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Occlusion remains one of the major challenges in person reidentification (ReID) as a result of the diversity of poses and the variation of appearances. Developing novel architectures to improve the robustness of occlusion-aware person Re-ID requires new insights, especially on low-resolution edge cameras. We propose a deep ensemble model that harnesses both CNN and Transformer architectures to generate robust feature representations. To achieve robust Re-ID without the need to manually label occluded regions, we propose to take an ensemble learning-based approach derived from the analogy between arbitrarily shaped occluded regions and robust feature representation. Using the orthogonality principle, our developed deep CNN model makes use of masked autoencoder (MAE) and global-local feature fusion for robust person identification. Furthermore, we present a part occlusion-aware transformer capable of learning feature space that is robust to occluded regions. Experimental results are reported on several Re-ID datasets to show the effectiveness of our developed ensemble model named orthogonal fusion with occlusion handling (OFOH). Compared to competing methods, the proposed OFOH approach has achieved competent rank-1 and mAP performance.",
-        "subjects": [
-            "cs.CV",
-            "cs.AI"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2404.00124",
         "abstract url": "https://arxiv.org/abs/2404.00124",
         "title": "Where Are You From? Let Me Guess! Subdialect Recognition of Speeches in Sorani Kurdish",
@@ -1256,24 +1220,6 @@
         "comment": "Accepted in ICON2023"
     },
     {
-        "paper id": "2404.00242",
-        "abstract url": "https://arxiv.org/abs/2404.00242",
-        "title": "DeFT: Flash Tree-attention with IO-Awareness for Efficient Tree-search-based LLM Inference",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Decoding using tree search can greatly enhance the inference quality for transformer-based Large Language Models (LLMs). Depending on the guidance signal, it searches for the best path from root to leaf in the tree by forming LLM outputs to improve controllability, reasoning ability, alignment, et cetera. However, current tree decoding strategies and their inference systems do not suit each other well due to redundancy in computation, memory footprints, and memory access, resulting in inefficient inference. To address this issue, we propose DeFT, an IO-aware tree attention algorithm that maintains memory-efficient attention calculation with low memory footprints in two stages: (1) QKV Preparation: we propose a KV-Guided Tree Split strategy to group QKV wisely for high utilization of GPUs and reduction of memory reads/writes for the KV cache between GPU global memory and on-chip shared memory as much as possible; (2) Attention Calculation: we calculate partial attention of each QKV groups in a fused kernel then apply a Tree-topology-aware Global Reduction strategy to get final attention. Thanks to a reduction in KV cache IO by 3.6-4.5$\\times$, along with an additional reduction in IO for $\\mathbf{Q} \\mathbf{K}^\\top$ and Softmax equivalent to 25% of the total KV cache IO, DeFT can achieve a speedup of 1.7-2.4$\\times$ in end-to-end latency across two practical reasoning tasks over the SOTA attention algorithms.",
-        "subjects": [
-            "cs.CL",
-            "cs.AI"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2404.00246",
         "abstract url": "https://arxiv.org/abs/2404.00246",
         "title": "Your Co-Workers Matter: Evaluating Collaborative Capabilities of Language Models in Blocks World",
@@ -1371,6 +1317,30 @@
             "cs.LG"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2403.20002",
+        "abstract url": "https://arxiv.org/abs/2403.20002",
+        "title": "Grounding and Enhancing Grid-based Models for Neural Fields",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "3D",
+                "signed distance field",
+                "SDF"
+            ],
+            [
+                "cs.CV"
+            ],
+            [
+                "CVPR"
+            ]
+        ],
+        "abstract": "Many contemporary studies utilize grid-based models for neural field representation, but a systematic analysis of grid-based models is still missing, hindering the improvement of those models. Therefore, this paper introduces a theoretical framework for grid-based models. This framework points out that these models' approximation and generalization behaviors are determined by grid tangent kernels (GTK), which are intrinsic properties of grid-based models. The proposed framework facilitates a consistent and systematic analysis of diverse grid-based models. Furthermore, the introduced framework motivates the development of a novel grid-based model named the Multiplicative Fourier Adaptive Grid (MulFAGrid). The numerical analysis demonstrates that MulFAGrid exhibits a lower generalization bound than its predecessors, indicating its robust generalization performance. Empirical studies reveal that MulFAGrid achieves state-of-the-art performance in various tasks, including 2D image fitting, 3D signed distance field (SDF) reconstruction, and novel view synthesis, demonstrating superior representation ability. The project website is available at https://sites.google.com/view/cvpr24-2034-submission/home.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Accepted in CVPR24 as an oral presentation. Pre-rebuttal scores: 555. Post-rebuttal scores: 555"
     },
     {
         "paper id": "2403.20031",
@@ -1568,24 +1538,6 @@
         "comment": "8 pages"
     },
     {
-        "paper id": "2403.20208",
-        "abstract url": "https://arxiv.org/abs/2403.20208",
-        "title": "Unleashing the Potential of Large Language Models for Predictive Tabular Tasks in Data Science",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "In the domain of data science, the predictive tasks of classification, regression, and imputation of missing values are commonly encountered challenges associated with tabular data. This research endeavors to apply Large Language Models (LLMs) towards addressing these predictive tasks. Despite their proficiency in comprehending natural language, LLMs fall short in dealing with structured tabular data. This limitation stems from their lacking exposure to the intricacies of tabular data during their foundational training. Our research aims to mitigate this gap by compiling a comprehensive corpus of tables annotated with instructions and executing large-scale training of Llama-2 on this enriched dataset. Furthermore, we investigate the practical application of applying the trained model to zero-shot prediction, few-shot prediction, and in-context learning scenarios. Through extensive experiments, our methodology has shown significant improvements over existing benchmarks. These advancements highlight the efficacy of tailoring LLM training to solve table-related problems in data science, thereby establishing a new benchmark in the utilization of LLMs for enhancing tabular intelligence.",
-        "subjects": [
-            "cs.LG",
-            "cs.AI"
-        ],
-        "comment": "10 pages"
-    },
-    {
         "paper id": "2403.20216",
         "abstract url": "https://arxiv.org/abs/2403.20216",
         "title": "Distributed agency in second language learning and teaching through generative AI",
@@ -1604,23 +1556,6 @@
         "comment": "26 pages. To be published in Language Learning & Technology, volume 28, issue 2"
     },
     {
-        "paper id": "2403.20230",
-        "abstract url": "https://arxiv.org/abs/2403.20230",
-        "title": "An FPGA-Based Reconfigurable Accelerator for Convolution-Transformer Hybrid EfficientViT",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Vision Transformers (ViTs) have achieved significant success in computer vision. However, their intensive computations and massive memory footprint challenge ViTs' deployment on embedded devices, calling for efficient ViTs. Among them, EfficientViT, the state-of-the-art one, features a Convolution-Transformer hybrid architecture, enhancing both accuracy and hardware efficiency. Unfortunately, existing accelerators cannot fully exploit the hardware benefits of EfficientViT due to its unique architecture. In this paper, we propose an FPGA-based accelerator for EfficientViT to advance the hardware efficiency frontier of ViTs. Specifically, we design a reconfigurable architecture to efficiently support various operation types, including lightweight convolutions and attention, boosting hardware utilization. Additionally, we present a time-multiplexed and pipelined dataflow to facilitate both intra- and inter-layer fusions, reducing off-chip data access costs. Experimental results show that our accelerator achieves up to 780.2 GOPS in throughput and 105.1 GOPS/W in energy efficiency at 200MHz on the Xilinx ZCU102 FPGA, which significantly outperforms prior works.",
-        "subjects": [
-            "cs.AR",
-            "cs.LG"
-        ],
-        "comment": "To appear in the 2024 IEEE International Symposium on Circuits and Systems (ISCAS 2024)"
-    },
-    {
         "paper id": "2403.20233",
         "abstract url": "https://arxiv.org/abs/2403.20233",
         "title": "Functional Bilevel Optimization for Machine Learning",
@@ -1636,6 +1571,28 @@
             "cs.LG"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2403.20236",
+        "abstract url": "https://arxiv.org/abs/2403.20236",
+        "title": "Long-Tailed Anomaly Detection with Learnable Class Names",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "Anomaly Detection"
+            ],
+            [
+                "cs.CV"
+            ],
+            [
+                "CVPR"
+            ]
+        ],
+        "abstract": "Anomaly detection (AD) aims to identify defective images and localize their defects (if any). Ideally, AD models should be able to detect defects over many image classes; without relying on hard-coded class names that can be uninformative or inconsistent across datasets; learn without anomaly supervision; and be robust to the long-tailed distributions of real-world applications. To address these challenges, we formulate the problem of long-tailed AD by introducing several datasets with different levels of class imbalance and metrics for performance evaluation. We then propose a novel method, LTAD, to detect defects from multiple and long-tailed classes, without relying on dataset class names. LTAD combines AD by reconstruction and semantic AD modules. AD by reconstruction is implemented with a transformer-based reconstruction module. Semantic AD is implemented with a binary classifier, which relies on learned pseudo class names and a pretrained foundation model. These modules are learned over two phases. Phase 1 learns the pseudo-class names and a variational autoencoder (VAE) for feature synthesis that augments the training data to combat long-tails. Phase 2 then learns the parameters of the reconstruction and classification modules of LTAD. Extensive experiments using the proposed long-tailed datasets show that LTAD substantially outperforms the state-of-the-art methods for most forms of dataset imbalance. The long-tailed dataset split is available at https://zenodo.org/records/10854201 .",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "This paper is accepted to CVPR 2024. The supplementary material is included. The long-tailed dataset split is available at https://zenodo.org/records/10854201"
     },
     {
         "paper id": "2403.20250",
@@ -2097,6 +2054,26 @@
         "comment": null
     },
     {
+        "paper id": "2403.19985",
+        "abstract url": "https://arxiv.org/abs/2403.19985",
+        "title": "Stable Surface Regularization for Fast Few-Shot NeRF",
+        "rating": "0",
+        "keywords": [
+            [
+                "NeRF",
+                "SDF"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "This paper proposes an algorithm for synthesizing novel views under few-shot setup. The main concept is to develop a stable surface regularization technique called Annealing Signed Distance Function (ASDF), which anneals the surface in a coarse-to-fine manner to accelerate convergence speed. We observe that the Eikonal loss - which is a widely known geometric regularization - requires dense training signal to shape different level-sets of SDF, leading to low-fidelity results under few-shot training. In contrast, the proposed surface regularization successfully reconstructs scenes and produce high-fidelity geometry with stable training. Our method is further accelerated by utilizing grid representation and monocular geometric priors. Finally, the proposed approach is up to 45 times faster than existing few-shot novel view synthesis methods, and it produces comparable results in the ScanNet dataset and NeRF-Real dataset.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "3DV 2024"
+    },
+    {
         "paper id": "2403.19995",
         "abstract url": "https://arxiv.org/abs/2403.19995",
         "title": "Development of Compositionality and Generalization through Interactive Learning of Language and Action of Robots",
@@ -2141,23 +2118,53 @@
         "comment": null
     },
     {
-        "paper id": "2403.20090",
-        "abstract url": "https://arxiv.org/abs/2403.20090",
-        "title": "Non-Exponential Reverberation Modeling Using Dark Velvet Noise",
+        "paper id": "2403.20018",
+        "abstract url": "https://arxiv.org/abs/2403.20018",
+        "title": "SCINeRF: Neural Radiance Fields from a Snapshot Compressive Image",
         "rating": "0",
         "keywords": [
             [
-                "synthesis"
+                "3D",
+                "NeRF",
+                "Radiance Fields"
             ],
             [
-                "eess.AS"
+                "cs.CV",
+                "eess.IV"
             ]
         ],
-        "abstract": "Previous research on late-reverberation modeling has mainly focused on exponentially decaying room impulse responses, whereas methods for accurately modeling non-exponential reverberation remain challenging. This paper extends the previously proposed basic dark-velvet-noise reverberation algorithm and proposes a parametrization scheme for modeling late reverberation with arbitrary temporal energy decay. Each pulse in the velvet-noise sequence is routed to a single dictionary filter that is selected from a set of filters based on weighted probabilities. The probabilities control the spectral evolution of the late-reverberation model and are optimized to fit a target impulse response via non-negative least-squares optimization. In this way, the frequency-dependent energy decay of a target late-reverberation impulse response can be fitted with mean and maximum T60 errors of 4% and 8%, respectively, requiring about 50% less coloration filters than a previously proposed filtered velvet-noise algorithm. Furthermore, the extended dark-velvet-noise reverberation algorithm allows the modeled impulse response to be gated, the frequency-dependent reverberation time to be modified, and the model's spectral evolution and broadband decay to be decoupled. The proposed method is suitable for the parametric late-reverberation synthesis of various acoustic environments, especially spaces that exhibit a non-exponential energy decay, motivating its use in musical audio and virtual reality.",
+        "abstract": "In this paper, we explore the potential of Snapshot Compressive Imaging (SCI) technique for recovering the underlying 3D scene representation from a single temporal compressed image. SCI is a cost-effective method that enables the recording of high-dimensional data, such as hyperspectral or temporal information, into a single image using low-cost 2D imaging sensors. To achieve this, a series of specially designed 2D masks are usually employed, which not only reduces storage requirements but also offers potential privacy protection. Inspired by this, to take one step further, our approach builds upon the powerful 3D scene representation capabilities of neural radiance fields (NeRF). Specifically, we formulate the physical imaging process of SCI as part of the training of NeRF, allowing us to exploit its impressive performance in capturing complex scene structures. To assess the effectiveness of our method, we conduct extensive evaluations using both synthetic data and real data captured by our SCI system. Extensive experimental results demonstrate that our proposed approach surpasses the state-of-the-art methods in terms of image reconstruction and novel view image synthesis. Moreover, our method also exhibits the ability to restore high frame-rate multi-view consistent images by leveraging SCI and the rendering capabilities of NeRF. The code is available at https://github.com/WU-CVGL/SCINeRF.",
         "subjects": [
-            "eess.AS"
+            "eess.IV",
+            "cs.CV"
         ],
-        "comment": "Accepted for publication in the Journal of Audio Engineering Society"
+        "comment": null
+    },
+    {
+        "paper id": "2403.20080",
+        "abstract url": "https://arxiv.org/abs/2403.20080",
+        "title": "Mixed-precision Supernet Training from Vision Foundation Models using Low Rank Adapter",
+        "rating": "0",
+        "keywords": [
+            [
+                "memory-efficient"
+            ],
+            [
+                "depth"
+            ],
+            [
+                "architecture search",
+                "NAS"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Compression of large and performant vision foundation models (VFMs) into arbitrary bit-wise operations (BitOPs) allows their deployment on various hardware. We propose to fine-tune a VFM to a mixed-precision quantized supernet. The supernet-based neural architecture search (NAS) can be adopted for this purpose, which trains a supernet, and then subnets within arbitrary hardware budgets can be extracted. However, existing methods face difficulties in optimizing the mixed-precision search space and incurring large memory costs during training. To tackle these challenges, first, we study the effective search space design for fine-tuning a VFM by comparing different operators (such as resolution, feature size, width, depth, and bit-widths) in terms of performance and BitOPs reduction. Second, we propose memory-efficient supernet training using a low-rank adapter (LoRA) and a progressive training strategy. The proposed method is evaluated for the recently proposed VFM, Segment Anything Model, fine-tuned on segmentation tasks. The searched model yields about a 95% reduction in BitOPs without incurring performance degradation.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
     },
     {
         "paper id": "2403.20105",
@@ -2321,6 +2328,28 @@
         "comment": "16 pages, 7 figures"
     },
     {
+        "paper id": "2403.20275",
+        "abstract url": "https://arxiv.org/abs/2403.20275",
+        "title": "Snap-it, Tap-it, Splat-it: Tactile-Informed 3D Gaussian Splatting for Reconstructing Challenging Surfaces",
+        "rating": "0",
+        "keywords": [
+            [
+                "3D",
+                "Gaussian Splatting",
+                "depth"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Touch and vision go hand in hand, mutually enhancing our ability to understand the world. From a research perspective, the problem of mixing touch and vision is underexplored and presents interesting challenges. To this end, we propose Tactile-Informed 3DGS, a novel approach that incorporates touch data (local depth maps) with multi-view vision data to achieve surface reconstruction and novel view synthesis. Our method optimises 3D Gaussian primitives to accurately model the object's geometry at points of contact. By creating a framework that decreases the transmittance at touch locations, we achieve a refined surface reconstruction, ensuring a uniformly smooth depth map. Touch is particularly useful when considering non-Lambertian objects (e.g. shiny or reflective surfaces) since contemporary methods tend to fail to reconstruct with fidelity specular highlights. By combining vision and tactile sensing, we achieve more accurate geometry reconstructions with fewer images than prior methods. We conduct evaluation on objects with glossy and reflective surfaces and demonstrate the effectiveness of our approach, offering significant improvements in reconstruction quality.",
+        "subjects": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "comment": "17 pages"
+    },
+    {
         "paper id": "2404.00095",
         "abstract url": "https://arxiv.org/abs/2404.00095",
         "title": "GDA: Generalized Diffusion for Robust Test-time Adaptation",
@@ -2340,23 +2369,25 @@
         "comment": null
     },
     {
-        "paper id": "2404.00114",
-        "abstract url": "https://arxiv.org/abs/2404.00114",
-        "title": "Deepfake Sentry: Harnessing Ensemble Intelligence for Resilient Detection and Generalisation",
+        "paper id": "2404.00107",
+        "abstract url": "https://arxiv.org/abs/2404.00107",
+        "title": "Robust Ensemble Person Re-Identification via Orthogonal Fusion with Occlusion Handling",
         "rating": "0",
         "keywords": [
             [
-                "attacks"
+                "Re-Identification"
             ],
             [
+                "cs.AI",
                 "cs.CV"
             ]
         ],
-        "abstract": "Recent advancements in Generative Adversarial Networks (GANs) have enabled photorealistic image generation with high quality. However, the malicious use of such generated media has raised concerns regarding visual misinformation. Although deepfake detection research has demonstrated high accuracy, it is vulnerable to advances in generation techniques and adversarial iterations on detection countermeasures. To address this, we propose a proactive and sustainable deepfake training augmentation solution that introduces artificial fingerprints into models. We achieve this by employing an ensemble learning approach that incorporates a pool of autoencoders that mimic the effect of the artefacts introduced by the deepfake generator models. Experiments on three datasets reveal that our proposed ensemble autoencoder-based data augmentation learning approach offers improvements in terms of generalisation, resistance against basic data perturbations such as noise, blurring, sharpness enhancement, and affine transforms, resilience to commonly used lossy compression algorithms such as JPEG, and enhanced resistance against adversarial attacks.",
+        "abstract": "Occlusion remains one of the major challenges in person reidentification (ReID) as a result of the diversity of poses and the variation of appearances. Developing novel architectures to improve the robustness of occlusion-aware person Re-ID requires new insights, especially on low-resolution edge cameras. We propose a deep ensemble model that harnesses both CNN and Transformer architectures to generate robust feature representations. To achieve robust Re-ID without the need to manually label occluded regions, we propose to take an ensemble learning-based approach derived from the analogy between arbitrarily shaped occluded regions and robust feature representation. Using the orthogonality principle, our developed deep CNN model makes use of masked autoencoder (MAE) and global-local feature fusion for robust person identification. Furthermore, we present a part occlusion-aware transformer capable of learning feature space that is robust to occluded regions. Experimental results are reported on several Re-ID datasets to show the effectiveness of our developed ensemble model named orthogonal fusion with occlusion handling (OFOH). Compared to competing methods, the proposed OFOH approach has achieved competent rank-1 and mAP performance.",
         "subjects": [
-            "cs.CV"
+            "cs.CV",
+            "cs.AI"
         ],
-        "comment": "16 pages, 1 figure, U.P.B. Sci. Bull., Series C, Vol. 85, Iss. 4, 2023"
+        "comment": null
     },
     {
         "paper id": "2404.00172",
@@ -2515,31 +2546,6 @@
         "comment": null
     },
     {
-        "paper id": "2403.20002",
-        "abstract url": "https://arxiv.org/abs/2403.20002",
-        "title": "Grounding and Enhancing Grid-based Models for Neural Fields",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "3D"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ],
-            [
-                "CVPR"
-            ]
-        ],
-        "abstract": "Many contemporary studies utilize grid-based models for neural field representation, but a systematic analysis of grid-based models is still missing, hindering the improvement of those models. Therefore, this paper introduces a theoretical framework for grid-based models. This framework points out that these models' approximation and generalization behaviors are determined by grid tangent kernels (GTK), which are intrinsic properties of grid-based models. The proposed framework facilitates a consistent and systematic analysis of diverse grid-based models. Furthermore, the introduced framework motivates the development of a novel grid-based model named the Multiplicative Fourier Adaptive Grid (MulFAGrid). The numerical analysis demonstrates that MulFAGrid exhibits a lower generalization bound than its predecessors, indicating its robust generalization performance. Empirical studies reveal that MulFAGrid achieves state-of-the-art performance in various tasks, including 2D image fitting, 3D signed distance field (SDF) reconstruction, and novel view synthesis, demonstrating superior representation ability. The project website is available at https://sites.google.com/view/cvpr24-2034-submission/home.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Accepted in CVPR24 as an oral presentation. Pre-rebuttal scores: 555. Post-rebuttal scores: 555"
-    },
-    {
         "paper id": "2403.20020",
         "abstract url": "https://arxiv.org/abs/2403.20020",
         "title": "Nonparametric Bellman Mappings for Reinforcement Learning: Application to Robust Adaptive Filtering",
@@ -2645,38 +2651,14 @@
         "comment": null
     },
     {
-        "paper id": "2403.20236",
-        "abstract url": "https://arxiv.org/abs/2403.20236",
-        "title": "Long-Tailed Anomaly Detection with Learnable Class Names",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "Anomaly Detection"
-            ],
-            [
-                "cs.CV"
-            ],
-            [
-                "CVPR"
-            ]
-        ],
-        "abstract": "Anomaly detection (AD) aims to identify defective images and localize their defects (if any). Ideally, AD models should be able to detect defects over many image classes; without relying on hard-coded class names that can be uninformative or inconsistent across datasets; learn without anomaly supervision; and be robust to the long-tailed distributions of real-world applications. To address these challenges, we formulate the problem of long-tailed AD by introducing several datasets with different levels of class imbalance and metrics for performance evaluation. We then propose a novel method, LTAD, to detect defects from multiple and long-tailed classes, without relying on dataset class names. LTAD combines AD by reconstruction and semantic AD modules. AD by reconstruction is implemented with a transformer-based reconstruction module. Semantic AD is implemented with a binary classifier, which relies on learned pseudo class names and a pretrained foundation model. These modules are learned over two phases. Phase 1 learns the pseudo-class names and a variational autoencoder (VAE) for feature synthesis that augments the training data to combat long-tails. Phase 2 then learns the parameters of the reconstruction and classification modules of LTAD. Extensive experiments using the proposed long-tailed datasets show that LTAD substantially outperforms the state-of-the-art methods for most forms of dataset imbalance. The long-tailed dataset split is available at https://zenodo.org/records/10854201 .",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "This paper is accepted to CVPR 2024. The supplementary material is included. The long-tailed dataset split is available at https://zenodo.org/records/10854201"
-    },
-    {
         "paper id": "2404.00143",
         "abstract url": "https://arxiv.org/abs/2404.00143",
         "title": "Accelerating Search-Based Planning for Multi-Robot Manipulation by Leveraging Online-Generated Experiences",
         "rating": "-0.5",
         "keywords": [
             [
-                "Robot"
+                "Robot",
+                "robotic manipulation"
             ],
             [
                 "cs.AI"
@@ -2698,7 +2680,9 @@
         "keywords": [
             [
                 "3D",
-                "depth"
+                "depth",
+                "signed distance field",
+                "SDF"
             ],
             [
                 "LiDAR"
@@ -2717,12 +2701,38 @@
         "comment": "CVPR 2024"
     },
     {
+        "paper id": "2404.00168",
+        "abstract url": "https://arxiv.org/abs/2404.00168",
+        "title": "Multi-Level Neural Scene Graphs for Dynamic Urban Environments",
+        "rating": "-0.5",
+        "keywords": [
+            [
+                "vehicle"
+            ],
+            [
+                "graph"
+            ],
+            [
+                "cs.CV"
+            ],
+            [
+                "CVPR"
+            ]
+        ],
+        "abstract": "We estimate the radiance field of large-scale dynamic areas from multiple vehicle captures under varying environmental conditions. Previous works in this domain are either restricted to static environments, do not scale to more than a single short video, or struggle to separately represent dynamic object instances. To this end, we present a novel, decomposable radiance field approach for dynamic urban environments. We propose a multi-level neural scene graph representation that scales to thousands of images from dozens of sequences with hundreds of fast-moving objects. To enable efficient training and rendering of our representation, we develop a fast composite ray sampling and rendering scheme. To test our approach in urban driving scenarios, we introduce a new, novel view synthesis benchmark. We show that our approach outperforms prior art by a significant margin on both established and our proposed benchmark while being faster in training and rendering.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "CVPR 2024. Project page is available at https://tobiasfshr.github.io/pub/ml-nsg/"
+    },
+    {
         "paper id": "2404.00179",
         "abstract url": "https://arxiv.org/abs/2404.00179",
         "title": "Multi-Region Transfer Learning for Segmentation of Crop Field Boundaries in Satellite Images with Limited Labels",
         "rating": "-0.5",
         "keywords": [
             [
+                "remotely sensed",
                 "Satellite"
             ],
             [
@@ -2783,28 +2793,6 @@
         "comment": null
     },
     {
-        "paper id": "2403.19985",
-        "abstract url": "https://arxiv.org/abs/2403.19985",
-        "title": "Stable Surface Regularization for Fast Few-Shot NeRF",
-        "rating": "-1",
-        "keywords": [
-            [
-                "NeRF"
-            ],
-            [
-                "synthesizing"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "This paper proposes an algorithm for synthesizing novel views under few-shot setup. The main concept is to develop a stable surface regularization technique called Annealing Signed Distance Function (ASDF), which anneals the surface in a coarse-to-fine manner to accelerate convergence speed. We observe that the Eikonal loss - which is a widely known geometric regularization - requires dense training signal to shape different level-sets of SDF, leading to low-fidelity results under few-shot training. In contrast, the proposed surface regularization successfully reconstructs scenes and produce high-fidelity geometry with stable training. Our method is further accelerated by utilizing grid representation and monocular geometric priors. Finally, the proposed approach is up to 45 times faster than existing few-shot novel view synthesis methods, and it produces comparable results in the ScanNet dataset and NeRF-Real dataset.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "3DV 2024"
-    },
-    {
         "paper id": "2403.20001",
         "abstract url": "https://arxiv.org/abs/2403.20001",
         "title": "Adaptive Energy Regularization for Autonomous Gait Transition and Energy-Efficient Quadruped Locomotion",
@@ -2819,6 +2807,28 @@
             "cs.RO"
         ],
         "comment": "8 pages, 5 figures"
+    },
+    {
+        "paper id": "2403.20014",
+        "abstract url": "https://arxiv.org/abs/2403.20014",
+        "title": "PURPLE: Making a Large Language Model a Better SQL Writer",
+        "rating": "-1",
+        "keywords": [
+            [
+                "SQL"
+            ],
+            [
+                "cs.AI",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Large Language Model (LLM) techniques play an increasingly important role in Natural Language to SQL (NL2SQL) translation. LLMs trained by extensive corpora have strong natural language understanding and basic SQL generation abilities without additional tuning specific to NL2SQL tasks. Existing LLMs-based NL2SQL approaches try to improve the translation by enhancing the LLMs with an emphasis on user intention understanding. However, LLMs sometimes fail to generate appropriate SQL due to their lack of knowledge in organizing complex logical operator composition. A promising method is to input the LLMs with demonstrations, which include known NL2SQL translations from various databases. LLMs can learn to organize operator compositions from the input demonstrations for the given task. In this paper, we propose PURPLE (Pre-trained models Utilized to Retrieve Prompts for Logical Enhancement), which improves accuracy by retrieving demonstrations containing the requisite logical operator composition for the NL2SQL task on hand, thereby guiding LLMs to produce better SQL translation. PURPLE achieves a new state-of-the-art performance of 80.5% exact-set match accuracy and 87.8% execution match accuracy on the validation set of the popular NL2SQL benchmark Spider. PURPLE maintains high accuracy across diverse benchmarks, budgetary constraints, and various LLMs, showing robustness and cost-effectiveness.",
+        "subjects": [
+            "cs.DB",
+            "cs.AI",
+            "cs.CL"
+        ],
+        "comment": "12 pages, accepted by ICDE 2024 (40th IEEE International Conference on Data Engineering)"
     },
     {
         "paper id": "2403.20016",
@@ -2847,32 +2857,6 @@
         "comment": "Paper under review for CVPR Workshop"
     },
     {
-        "paper id": "2403.20018",
-        "abstract url": "https://arxiv.org/abs/2403.20018",
-        "title": "SCINeRF: Neural Radiance Fields from a Snapshot Compressive Image",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D",
-                "NeRF",
-                "Radiance Fields"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV",
-                "eess.IV"
-            ]
-        ],
-        "abstract": "In this paper, we explore the potential of Snapshot Compressive Imaging (SCI) technique for recovering the underlying 3D scene representation from a single temporal compressed image. SCI is a cost-effective method that enables the recording of high-dimensional data, such as hyperspectral or temporal information, into a single image using low-cost 2D imaging sensors. To achieve this, a series of specially designed 2D masks are usually employed, which not only reduces storage requirements but also offers potential privacy protection. Inspired by this, to take one step further, our approach builds upon the powerful 3D scene representation capabilities of neural radiance fields (NeRF). Specifically, we formulate the physical imaging process of SCI as part of the training of NeRF, allowing us to exploit its impressive performance in capturing complex scene structures. To assess the effectiveness of our method, we conduct extensive evaluations using both synthetic data and real data captured by our SCI system. Extensive experimental results demonstrate that our proposed approach surpasses the state-of-the-art methods in terms of image reconstruction and novel view image synthesis. Moreover, our method also exhibits the ability to restore high frame-rate multi-view consistent images by leveraging SCI and the rendering capabilities of NeRF. The code is available at https://github.com/WU-CVGL/SCINeRF.",
-        "subjects": [
-            "eess.IV",
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2403.20032",
         "abstract url": "https://arxiv.org/abs/2403.20032",
         "title": "HO-Gaussian: Hybrid Optimization of 3D Gaussian Splatting for Urban Scenes",
@@ -2892,6 +2876,35 @@
         "abstract": "The rapid growth of 3D Gaussian Splatting (3DGS) has revolutionized neural rendering, enabling real-time production of high-quality renderings. However, the previous 3DGS-based methods have limitations in urban scenes due to reliance on initial Structure-from-Motion(SfM) points and difficulties in rendering distant, sky and low-texture areas. To overcome these challenges, we propose a hybrid optimization method named HO-Gaussian, which combines a grid-based volume with the 3DGS pipeline. HO-Gaussian eliminates the dependency on SfM point initialization, allowing for rendering of urban scenes, and incorporates the Point Densitification to enhance rendering quality in problematic regions during training. Furthermore, we introduce Gaussian Direction Encoding as an alternative for spherical harmonics in the rendering pipeline, which enables view-dependent color representation. To account for multi-camera systems, we introduce neural warping to enhance object consistency across different cameras. Experimental results on widely used autonomous driving datasets demonstrate that HO-Gaussian achieves photo-realistic rendering in real-time on multi-camera urban datasets.",
         "subjects": [
             "cs.CV"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2403.20034",
+        "abstract url": "https://arxiv.org/abs/2403.20034",
+        "title": "NeSLAM: Neural Implicit Mapping and Self-Supervised Feature Tracking With Depth Completion and Denoising",
+        "rating": "-1",
+        "keywords": [
+            [
+                "3D",
+                "RGB-D",
+                "Depth",
+                "NeRF",
+                "Radiance Fields",
+                "Signed Distance Field",
+                "SDF"
+            ],
+            [
+                "SLAM"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "In recent years, there have been significant advancements in 3D reconstruction and dense RGB-D SLAM systems. One notable development is the application of Neural Radiance Fields (NeRF) in these systems, which utilizes implicit neural representation to encode 3D scenes. This extension of NeRF to SLAM has shown promising results. However, the depth images obtained from consumer-grade RGB-D sensors are often sparse and noisy, which poses significant challenges for 3D reconstruction and affects the accuracy of the representation of the scene geometry. Moreover, the original hierarchical feature grid with occupancy value is inaccurate for scene geometry representation. Furthermore, the existing methods select random pixels for camera tracking, which leads to inaccurate localization and is not robust in real-world indoor environments. To this end, we present NeSLAM, an advanced framework that achieves accurate and dense depth estimation, robust camera tracking, and realistic synthesis of novel views. First, a depth completion and denoising network is designed to provide dense geometry prior and guide the neural implicit representation optimization. Second, the occupancy scene representation is replaced with Signed Distance Field (SDF) hierarchical scene representation for high-quality reconstruction and view synthesis. Furthermore, we also propose a NeRF-based self-supervised feature tracking algorithm for robust real-time tracking. Experiments on various indoor datasets demonstrate the effectiveness and accuracy of the system in reconstruction, tracking quality, and novel view synthesis.",
+        "subjects": [
+            "cs.CV",
+            "cs.RO"
         ],
         "comment": null
     },
@@ -2916,6 +2929,25 @@
             "cs.CV"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2403.20056",
+        "abstract url": "https://arxiv.org/abs/2403.20056",
+        "title": "Cross-Lingual Transfer Robustness to Lower-Resource Languages on Adversarial Datasets",
+        "rating": "-1",
+        "keywords": [
+            [
+                "Named Entity Recognition"
+            ],
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Multilingual Language Models (MLLMs) exhibit robust cross-lingual transfer capabilities, or the ability to leverage information acquired in a source language and apply it to a target language. These capabilities find practical applications in well-established Natural Language Processing (NLP) tasks such as Named Entity Recognition (NER). This study aims to investigate the effectiveness of a source language when applied to a target language, particularly in the context of perturbing the input test set. We evaluate on 13 pairs of languages, each including one high-resource language (HRL) and one low-resource language (LRL) with a geographic, genetic, or borrowing relationship. We evaluate two well-known MLLMs--MBERT and XLM-R--on these pairs, in native LRL and cross-lingual transfer settings, in two tasks, under a set of different perturbations. Our findings indicate that NER cross-lingual transfer depends largely on the overlap of entity chunks. If a source and target language have more entities in common, the transfer ability is stronger. Models using cross-lingual transfer also appear to be somewhat more robust to certain perturbations of the input, perhaps indicating an ability to leverage stronger representations derived from the HRL. Our research provides valuable insights into cross-lingual transfer and its implications for NLP applications, and underscores the need to consider linguistic nuances and potential limitations when employing MLLMs across distinct languages.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": "accepted in LREC-COLING 2024"
     },
     {
         "paper id": "2403.20058",
@@ -2945,29 +2977,6 @@
         "comment": "11 pages"
     },
     {
-        "paper id": "2403.20080",
-        "abstract url": "https://arxiv.org/abs/2403.20080",
-        "title": "Mixed-precision Supernet Training from Vision Foundation Models using Low Rank Adapter",
-        "rating": "-1",
-        "keywords": [
-            [
-                "depth"
-            ],
-            [
-                "architecture search",
-                "NAS"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Compression of large and performant vision foundation models (VFMs) into arbitrary bit-wise operations (BitOPs) allows their deployment on various hardware. We propose to fine-tune a VFM to a mixed-precision quantized supernet. The supernet-based neural architecture search (NAS) can be adopted for this purpose, which trains a supernet, and then subnets within arbitrary hardware budgets can be extracted. However, existing methods face difficulties in optimizing the mixed-precision search space and incurring large memory costs during training. To tackle these challenges, first, we study the effective search space design for fine-tuning a VFM by comparing different operators (such as resolution, feature size, width, depth, and bit-widths) in terms of performance and BitOPs reduction. Second, we propose memory-efficient supernet training using a low-rank adapter (LoRA) and a progressive training strategy. The proposed method is evaluated for the recently proposed VFM, Segment Anything Model, fine-tuned on segmentation tasks. The searched model yields about a 95% reduction in BitOPs without incurring performance degradation.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2403.20092",
         "abstract url": "https://arxiv.org/abs/2403.20092",
         "title": "Modeling Weather Uncertainty for Multi-weather Co-Presence Estimation",
@@ -2985,6 +2994,29 @@
             "cs.CV"
         ],
         "comment": "Work in progress"
+    },
+    {
+        "paper id": "2403.20101",
+        "abstract url": "https://arxiv.org/abs/2403.20101",
+        "title": "RealKIE: Five Novel Datasets for Enterprise Key Information Extraction",
+        "rating": "-1",
+        "keywords": [
+            [
+                "tabular"
+            ],
+            [
+                "cs.LG",
+                "cs.CV",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "We introduce RealKIE, a benchmark of five challenging datasets aimed at advancing key information extraction methods, with an emphasis on enterprise applications. The datasets include a diverse range of documents including SEC S1 Filings, US Non-disclosure Agreements, UK Charity Reports, FCC Invoices, and Resource Contracts. Each presents unique challenges: poor text serialization, sparse annotations in long documents, and complex tabular layouts. These datasets provide a realistic testing ground for key information extraction tasks like investment analysis and legal data processing. In addition to presenting these datasets, we offer an in-depth description of the annotation process, document processing techniques, and baseline modeling approaches. This contribution facilitates the development of NLP models capable of handling practical challenges and supports further research into information extraction technologies applicable to industry-specific problems. The annotated data and OCR outputs are available to download at https://indicodatasolutions.github.io/RealKIE/ code to reproduce the baselines will be available shortly.",
+        "subjects": [
+            "cs.CL",
+            "cs.CV",
+            "cs.LG"
+        ],
+        "comment": null
     },
     {
         "paper id": "2403.20112",
@@ -3024,23 +3056,6 @@
             "cs.CR"
         ],
         "comment": "4 pages"
-    },
-    {
-        "paper id": "2403.20133",
-        "abstract url": "https://arxiv.org/abs/2403.20133",
-        "title": "Regular Games with Imperfect Information Are Not That Regular",
-        "rating": "-1",
-        "keywords": [
-            [
-                "synthesis"
-            ]
-        ],
-        "abstract": "We consider two-player games with imperfect information and the synthesis of a randomized strategy for one player that ensures the objective is satisfied almost-surely (i.e., with probability 1), regardless of the strategy of the other player. Imperfect information is modeled by an indistinguishability relation %that describing the pairs of histories that the first player cannot distinguish, a generalization of the traditional model with partial observations. The game is regular if it admits a regular function whose kernel commutes with the indistinguishability relation. The synthesis of pure strategies that ensure all possible outcomes satisfy the objective is possible in regular games, by a generic reduction that holds for all objectives. While the solution for pure strategies extends to randomized strategies in the traditional model with partial observations (which is always regular), we show that a similar reduction does not exist in the more general model. Despite that, we show that in regular games with Buechi objectives the synthesis problem is decidable for randomized strategies that ensure the outcome satisfies the objective almost-surely.",
-        "subjects": [
-            "cs.GT",
-            "cs.LO"
-        ],
-        "comment": null
     },
     {
         "paper id": "2403.20145",
@@ -3176,7 +3191,6 @@
                 "3D"
             ],
             [
-                "synthesize",
                 "text-to-image"
             ],
             [
@@ -3279,31 +3293,6 @@
         "comment": "Accepted at World Conference on Explainable Artificial Intelligence; 21 pages, 5 figures, 3 tables"
     },
     {
-        "paper id": "2403.20275",
-        "abstract url": "https://arxiv.org/abs/2403.20275",
-        "title": "Snap-it, Tap-it, Splat-it: Tactile-Informed 3D Gaussian Splatting for Reconstructing Challenging Surfaces",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting",
-                "depth"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Touch and vision go hand in hand, mutually enhancing our ability to understand the world. From a research perspective, the problem of mixing touch and vision is underexplored and presents interesting challenges. To this end, we propose Tactile-Informed 3DGS, a novel approach that incorporates touch data (local depth maps) with multi-view vision data to achieve surface reconstruction and novel view synthesis. Our method optimises 3D Gaussian primitives to accurately model the object's geometry at points of contact. By creating a framework that decreases the transmittance at touch locations, we achieve a refined surface reconstruction, ensuring a uniformly smooth depth map. Touch is particularly useful when considering non-Lambertian objects (e.g. shiny or reflective surfaces) since contemporary methods tend to fail to reconstruct with fidelity specular highlights. By combining vision and tactile sensing, we achieve more accurate geometry reconstructions with fewer images than prior methods. We conduct evaluation on objects with glossy and reflective surfaces and demonstrate the effectiveness of our approach, offering significant improvements in reconstruction quality.",
-        "subjects": [
-            "cs.CV",
-            "cs.RO"
-        ],
-        "comment": "17 pages"
-    },
-    {
         "paper id": "2403.20288",
         "abstract url": "https://arxiv.org/abs/2403.20288",
         "title": "Can LLMs Correct Physicians, Yet? Investigating Effective Interaction Methods in the Medical Domain",
@@ -3341,6 +3330,29 @@
         "comment": "52 pages. To appear in STOC 2024"
     },
     {
+        "paper id": "2403.20309",
+        "abstract url": "https://arxiv.org/abs/2403.20309",
+        "title": "InstantSplat: Unbounded Sparse-view Pose-free Gaussian Splatting in 40 Seconds",
+        "rating": "-1",
+        "keywords": [
+            [
+                "3D",
+                "Gaussian Splatting"
+            ],
+            [
+                "Trajectory"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "While novel view synthesis (NVS) has made substantial progress in 3D computer vision, it typically requires an initial estimation of camera intrinsics and extrinsics from dense viewpoints. This pre-processing is usually conducted via a Structure-from-Motion (SfM) pipeline, a procedure that can be slow and unreliable, particularly in sparse-view scenarios with insufficient matched features for accurate reconstruction. In this work, we integrate the strengths of point-based representations (e.g., 3D Gaussian Splatting, 3D-GS) with end-to-end dense stereo models (DUSt3R) to tackle the complex yet unresolved issues in NVS under unconstrained settings, which encompasses pose-free and sparse view challenges. Our framework, InstantSplat, unifies dense stereo priors with 3D-GS to build 3D Gaussians of large-scale scenes from sparseview & pose-free images in less than 1 minute. Specifically, InstantSplat comprises a Coarse Geometric Initialization (CGI) module that swiftly establishes a preliminary scene structure and camera parameters across all training views, utilizing globally-aligned 3D point maps derived from a pre-trained dense stereo pipeline. This is followed by the Fast 3D-Gaussian Optimization (F-3DGO) module, which jointly optimizes the 3D Gaussian attributes and the initialized poses with pose regularization. Experiments conducted on the large-scale outdoor Tanks & Temples datasets demonstrate that InstantSplat significantly improves SSIM (by 32%) while concurrently reducing Absolute Trajectory Error (ATE) by 80%. These establish InstantSplat as a viable solution for scenarios involving posefree and sparse-view conditions. Project page: instantsplat.github.io.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2404.00108",
         "abstract url": "https://arxiv.org/abs/2404.00108",
         "title": "Efficient Data-Free Model Stealing with Label Diversity",
@@ -3355,6 +3367,28 @@
             "cs.CR"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2404.00114",
+        "abstract url": "https://arxiv.org/abs/2404.00114",
+        "title": "Deepfake Sentry: Harnessing Ensemble Intelligence for Resilient Detection and Generalisation",
+        "rating": "-1",
+        "keywords": [
+            [
+                "Deepfake"
+            ],
+            [
+                "attacks"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Recent advancements in Generative Adversarial Networks (GANs) have enabled photorealistic image generation with high quality. However, the malicious use of such generated media has raised concerns regarding visual misinformation. Although deepfake detection research has demonstrated high accuracy, it is vulnerable to advances in generation techniques and adversarial iterations on detection countermeasures. To address this, we propose a proactive and sustainable deepfake training augmentation solution that introduces artificial fingerprints into models. We achieve this by employing an ensemble learning approach that incorporates a pool of autoencoders that mimic the effect of the artefacts introduced by the deepfake generator models. Experiments on three datasets reveal that our proposed ensemble autoencoder-based data augmentation learning approach offers improvements in terms of generalisation, resistance against basic data perturbations such as noise, blurring, sharpness enhancement, and affine transforms, resilience to commonly used lossy compression algorithms such as JPEG, and enhanced resistance against adversarial attacks.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "16 pages, 1 figure, U.P.B. Sci. Bull., Series C, Vol. 85, Iss. 4, 2023"
     },
     {
         "paper id": "2404.00122",
@@ -3436,6 +3470,27 @@
             "cs.CL"
         ],
         "comment": "To appear at NAACL 2024 (Main)"
+    },
+    {
+        "paper id": "2404.00163",
+        "abstract url": "https://arxiv.org/abs/2404.00163",
+        "title": "CT respiratory motion synthesis using joint supervised and adversarial learning",
+        "rating": "-1",
+        "keywords": [
+            [
+                "CT",
+                "tumor",
+                "organ"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Objective: Four-dimensional computed tomography (4DCT) imaging consists in reconstructing a CT acquisition into multiple phases to track internal organ and tumor motion. It is commonly used in radiotherapy treatment planning to establish planning target volumes. However, 4DCT increases protocol complexity, may not align with patient breathing during treatment, and lead to higher radiation delivery. Approach: In this study, we propose a deep synthesis method to generate pseudo respiratory CT phases from static images for motion-aware treatment planning. The model produces patient-specific deformation vector fields (DVFs) by conditioning synthesis on external patient surface-based estimation, mimicking respiratory monitoring devices. A key methodological contribution is to encourage DVF realism through supervised DVF training while using an adversarial term jointly not only on the warped image but also on the magnitude of the DVF itself. This way, we avoid excessive smoothness typically obtained through deep unsupervised learning, and encourage correlations with the respiratory amplitude. Main results: Performance is evaluated using real 4DCT acquisitions with smaller tumor volumes than previously reported. Results demonstrate for the first time that the generated pseudo-respiratory CT phases can capture organ and tumor motion with similar accuracy to repeated 4DCT scans of the same patient. Mean inter-scans tumor center-of-mass distances and Dice similarity coefficients were $1.97$mm and $0.63$, respectively, for real 4DCT phases and $2.35$mm and $0.71$ for synthetic phases, and compares favorably to a state-of-the-art technique (RMSim).",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "to appear in Phys. Med. Biol"
     },
     {
         "paper id": "2404.00191",
@@ -3579,6 +3634,22 @@
             "cs.CL"
         ],
         "comment": "Work in progress"
+    },
+    {
+        "paper id": "2404.17581",
+        "abstract url": "https://arxiv.org/abs/2404.17581",
+        "title": "Deepfake Labels Restore Reality, Especially for Those Who Dislike the Speaker",
+        "rating": "-1",
+        "keywords": [
+            [
+                "Deepfake"
+            ]
+        ],
+        "abstract": "Deepfake videos create dangerous possibilities for public misinformation. In this experiment (N=204), we investigated whether labeling videos as containing actual or deepfake statements from US President Biden helps participants later differentiate between true and fake information. People accurately recalled 93.8% of deepfake videos and 84.2% of actual videos, suggesting that labeling videos can help combat misinformation. Individuals who identify as Republican and had lower favorability ratings of Biden performed better in distinguishing between actual and deepfake videos, a result explained by the elaboration likelihood model (ELM), which predicts that people who distrust a message source will more critically evaluate the message.",
+        "subjects": [
+            "cs.HC"
+        ],
+        "comment": null
     },
     {
         "paper id": "2403.19992",
@@ -3755,6 +3826,27 @@
         "comment": null
     },
     {
+        "paper id": "2403.20208",
+        "abstract url": "https://arxiv.org/abs/2403.20208",
+        "title": "Unleashing the Potential of Large Language Models for Predictive Tabular Tasks in Data Science",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "Tabular"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "In the domain of data science, the predictive tasks of classification, regression, and imputation of missing values are commonly encountered challenges associated with tabular data. This research endeavors to apply Large Language Models (LLMs) towards addressing these predictive tasks. Despite their proficiency in comprehending natural language, LLMs fall short in dealing with structured tabular data. This limitation stems from their lacking exposure to the intricacies of tabular data during their foundational training. Our research aims to mitigate this gap by compiling a comprehensive corpus of tables annotated with instructions and executing large-scale training of Llama-2 on this enriched dataset. Furthermore, we investigate the practical application of applying the trained model to zero-shot prediction, few-shot prediction, and in-context learning scenarios. Through extensive experiments, our methodology has shown significant improvements over existing benchmarks. These advancements highlight the efficacy of tailoring LLM training to solve table-related problems in data science, thereby establishing a new benchmark in the utilization of LLMs for enhancing tabular intelligence.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI"
+        ],
+        "comment": "10 pages"
+    },
+    {
         "paper id": "2403.20221",
         "abstract url": "https://arxiv.org/abs/2403.20221",
         "title": "Graph Neural Aggregation-diffusion with Metastability",
@@ -3780,29 +3872,24 @@
         "comment": "10 pages, 2 figures"
     },
     {
-        "paper id": "2403.20225",
-        "abstract url": "https://arxiv.org/abs/2403.20225",
-        "title": "MTMMC: A Large-Scale Real-World Multi-Modal Camera Tracking Benchmark",
+        "paper id": "2403.20230",
+        "abstract url": "https://arxiv.org/abs/2403.20230",
+        "title": "An FPGA-Based Reconfigurable Accelerator for Convolution-Transformer Hybrid EfficientViT",
         "rating": "-1.5",
         "keywords": [
             [
-                "anomaly detection"
+                "FPGA"
             ],
             [
-                "thermal"
-            ],
-            [
-                "cs.CV"
-            ],
-            [
-                "CVPR"
+                "cs.LG"
             ]
         ],
-        "abstract": "Multi-target multi-camera tracking is a crucial task that involves identifying and tracking individuals over time using video streams from multiple cameras. This task has practical applications in various fields, such as visual surveillance, crowd behavior analysis, and anomaly detection. However, due to the difficulty and cost of collecting and labeling data, existing datasets for this task are either synthetically generated or artificially constructed within a controlled camera network setting, which limits their ability to model real-world dynamics and generalize to diverse camera configurations. To address this issue, we present MTMMC, a real-world, large-scale dataset that includes long video sequences captured by 16 multi-modal cameras in two different environments - campus and factory - across various time, weather, and season conditions. This dataset provides a challenging test-bed for studying multi-camera tracking under diverse real-world complexities and includes an additional input modality of spatially aligned and temporally synchronized RGB and thermal cameras, which enhances the accuracy of multi-camera tracking. MTMMC is a super-set of existing datasets, benefiting independent fields such as person detection, re-identification, and multiple object tracking. We provide baselines and new learning setups on this dataset and set the reference scores for future studies. The datasets, models, and test server will be made publicly available.",
+        "abstract": "Vision Transformers (ViTs) have achieved significant success in computer vision. However, their intensive computations and massive memory footprint challenge ViTs' deployment on embedded devices, calling for efficient ViTs. Among them, EfficientViT, the state-of-the-art one, features a Convolution-Transformer hybrid architecture, enhancing both accuracy and hardware efficiency. Unfortunately, existing accelerators cannot fully exploit the hardware benefits of EfficientViT due to its unique architecture. In this paper, we propose an FPGA-based accelerator for EfficientViT to advance the hardware efficiency frontier of ViTs. Specifically, we design a reconfigurable architecture to efficiently support various operation types, including lightweight convolutions and attention, boosting hardware utilization. Additionally, we present a time-multiplexed and pipelined dataflow to facilitate both intra- and inter-layer fusions, reducing off-chip data access costs. Experimental results show that our accelerator achieves up to 780.2 GOPS in throughput and 105.1 GOPS/W in energy efficiency at 200MHz on the Xilinx ZCU102 FPGA, which significantly outperforms prior works.",
         "subjects": [
-            "cs.CV"
+            "cs.AR",
+            "cs.LG"
         ],
-        "comment": "Accepted on CVPR 2024"
+        "comment": "To appear in the 2024 IEEE International Symposium on Circuits and Systems (ISCAS 2024)"
     },
     {
         "paper id": "2403.20234",
@@ -3979,34 +4066,6 @@
         "comment": "22 pages, 8 figures, 13 tables"
     },
     {
-        "paper id": "2404.00168",
-        "abstract url": "https://arxiv.org/abs/2404.00168",
-        "title": "Multi-Level Neural Scene Graphs for Dynamic Urban Environments",
-        "rating": "-1.5",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "vehicle"
-            ],
-            [
-                "graph"
-            ],
-            [
-                "cs.CV"
-            ],
-            [
-                "CVPR"
-            ]
-        ],
-        "abstract": "We estimate the radiance field of large-scale dynamic areas from multiple vehicle captures under varying environmental conditions. Previous works in this domain are either restricted to static environments, do not scale to more than a single short video, or struggle to separately represent dynamic object instances. To this end, we present a novel, decomposable radiance field approach for dynamic urban environments. We propose a multi-level neural scene graph representation that scales to thousands of images from dozens of sequences with hundreds of fast-moving objects. To enable efficient training and rendering of our representation, we develop a fast composite ray sampling and rendering scheme. To test our approach in urban driving scenarios, we introduce a new, novel view synthesis benchmark. We show that our approach outperforms prior art by a significant margin on both established and our proposed benchmark while being faster in training and rendering.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "CVPR 2024. Project page is available at https://tobiasfshr.github.io/pub/ml-nsg/"
-    },
-    {
         "paper id": "2404.02171",
         "abstract url": "https://arxiv.org/abs/2404.02171",
         "title": "Path planning of magnetic microswimmers in high-fidelity simulations of capillaries with deep reinforcement learning",
@@ -4061,36 +4120,6 @@
         "abstract": "Several methods have been proposed to identify which sensor sets are optimal for finding and localizing faults under different conditions for mechanical equipment. In order to preserve acceptable performance while minimizing costs, it is crucial to identify the most effective set of sensors available. Nevertheless, some sensor sets can behave differently in fault detection because of uncertainty in the measurement data contaminated by noise interference. This paper develops new sensor selection models using Data Envelopment Analysis (DEA), which has proven helpful as a management approach for determining an optimal number of sensors, associated costs, and sensor performance in the fault diagnosis. We propose four linear optimization models for sensor selection to design the fault detection system. The validity of the presented models is demonstrated using a vibration dataset collected from a gearbox. Based on the case study results, the proposed methods are effectively superior to the other comparison sensor selection methods in fault detection accuracy.",
         "subjects": [
             "eess.SP"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2403.20034",
-        "abstract url": "https://arxiv.org/abs/2403.20034",
-        "title": "NeSLAM: Neural Implicit Mapping and Self-Supervised Feature Tracking With Depth Completion and Denoising",
-        "rating": "-2",
-        "keywords": [
-            [
-                "3D",
-                "RGB-D",
-                "Depth",
-                "NeRF",
-                "Radiance Fields"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "SLAM"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "In recent years, there have been significant advancements in 3D reconstruction and dense RGB-D SLAM systems. One notable development is the application of Neural Radiance Fields (NeRF) in these systems, which utilizes implicit neural representation to encode 3D scenes. This extension of NeRF to SLAM has shown promising results. However, the depth images obtained from consumer-grade RGB-D sensors are often sparse and noisy, which poses significant challenges for 3D reconstruction and affects the accuracy of the representation of the scene geometry. Moreover, the original hierarchical feature grid with occupancy value is inaccurate for scene geometry representation. Furthermore, the existing methods select random pixels for camera tracking, which leads to inaccurate localization and is not robust in real-world indoor environments. To this end, we present NeSLAM, an advanced framework that achieves accurate and dense depth estimation, robust camera tracking, and realistic synthesis of novel views. First, a depth completion and denoising network is designed to provide dense geometry prior and guide the neural implicit representation optimization. Second, the occupancy scene representation is replaced with Signed Distance Field (SDF) hierarchical scene representation for high-quality reconstruction and view synthesis. Furthermore, we also propose a NeRF-based self-supervised feature tracking algorithm for robust real-time tracking. Experiments on various indoor datasets demonstrate the effectiveness and accuracy of the system in reconstruction, tracking quality, and novel view synthesis.",
-        "subjects": [
-            "cs.CV",
-            "cs.RO"
         ],
         "comment": null
     },
@@ -4160,8 +4189,7 @@
                 "Radiance Fields"
             ],
             [
-                "Diffusion",
-                "Synthesis"
+                "Diffusion"
             ],
             [
                 "autonomous driving",
@@ -4255,6 +4283,30 @@
             "cs.CR"
         ],
         "comment": "16th International Conference on Network and System Security"
+    },
+    {
+        "paper id": "2403.20153",
+        "abstract url": "https://arxiv.org/abs/2403.20153",
+        "title": "Talk3D: High-Fidelity Talking Portrait Synthesis via Personalized 3D Generative Prior",
+        "rating": "-2",
+        "keywords": [
+            [
+                "3D",
+                "NeRF",
+                "radiance fields"
+            ],
+            [
+                "facial"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Recent methods for audio-driven talking head synthesis often optimize neural radiance fields (NeRF) on a monocular talking portrait video, leveraging its capability to render high-fidelity and 3D-consistent novel-view frames. However, they often struggle to reconstruct complete face geometry due to the absence of comprehensive 3D information in the input monocular videos. In this paper, we introduce a novel audio-driven talking head synthesis framework, called Talk3D, that can faithfully reconstruct its plausible facial geometries by effectively adopting the pre-trained 3D-aware generative prior. Given the personalized 3D generative model, we present a novel audio-guided attention U-Net architecture that predicts the dynamic face variations in the NeRF space driven by audio. Furthermore, our model is further modulated by audio-unrelated conditioning tokens which effectively disentangle variations unrelated to audio features. Compared to existing methods, our method excels in generating realistic facial geometries even under extreme head poses. We also conduct extensive experiments showing our approach surpasses state-of-the-art benchmarks in terms of both quantitative and qualitative evaluations.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Project page: https://ku-cvlab.github.io/Talk3D/"
     },
     {
         "paper id": "2403.20159",
@@ -4372,32 +4424,6 @@
         "comment": "Accepted by SIGIR 2024"
     },
     {
-        "paper id": "2403.20309",
-        "abstract url": "https://arxiv.org/abs/2403.20309",
-        "title": "InstantSplat: Unbounded Sparse-view Pose-free Gaussian Splatting in 40 Seconds",
-        "rating": "-2",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "Trajectory"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "While novel view synthesis (NVS) has made substantial progress in 3D computer vision, it typically requires an initial estimation of camera intrinsics and extrinsics from dense viewpoints. This pre-processing is usually conducted via a Structure-from-Motion (SfM) pipeline, a procedure that can be slow and unreliable, particularly in sparse-view scenarios with insufficient matched features for accurate reconstruction. In this work, we integrate the strengths of point-based representations (e.g., 3D Gaussian Splatting, 3D-GS) with end-to-end dense stereo models (DUSt3R) to tackle the complex yet unresolved issues in NVS under unconstrained settings, which encompasses pose-free and sparse view challenges. Our framework, InstantSplat, unifies dense stereo priors with 3D-GS to build 3D Gaussians of large-scale scenes from sparseview & pose-free images in less than 1 minute. Specifically, InstantSplat comprises a Coarse Geometric Initialization (CGI) module that swiftly establishes a preliminary scene structure and camera parameters across all training views, utilizing globally-aligned 3D point maps derived from a pre-trained dense stereo pipeline. This is followed by the Fast 3D-Gaussian Optimization (F-3DGO) module, which jointly optimizes the 3D Gaussian attributes and the initialized poses with pose regularization. Experiments conducted on the large-scale outdoor Tanks & Temples datasets demonstrate that InstantSplat significantly improves SSIM (by 32%) while concurrently reducing Absolute Trajectory Error (ATE) by 80%. These establish InstantSplat as a viable solution for scenarios involving posefree and sparse-view conditions. Project page: instantsplat.github.io.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2404.00126",
         "abstract url": "https://arxiv.org/abs/2404.00126",
         "title": "Pseudoentanglement Ain't Cheap",
@@ -4415,6 +4441,26 @@
         "comment": "15 pages; v2: slight edits to concurrent work section"
     },
     {
+        "paper id": "2404.00136",
+        "abstract url": "https://arxiv.org/abs/2404.00136",
+        "title": "Tunable X-band opto-electronic synthesizer with ultralow phase noise",
+        "rating": "-2",
+        "keywords": [
+            [
+                "radar"
+            ],
+            [
+                "navigation"
+            ]
+        ],
+        "abstract": "Modern communication, navigation, and radar systems rely on low noise and frequency-agile microwave sources. In this application space, photonic systems provide an attractive alternative to conventional microwave synthesis by leveraging high spectral purity lasers and optical frequency combs to generate microwaves with exceedingly low phase noise. However, these photonic techniques suffer from a lack of frequency tunability, and also have substantial size, weight, and power requirements that largely limit their use to laboratory settings. In this work, we address these shortcomings with a hybrid opto-electronic approach that combines simplified optical frequency division with direct digital synthesis to produce tunable low-phase-noise microwaves across the entire X-band. This results in exceptional phase noise at 10 GHz of -156 dBc/Hz at 10 kHz offset and fractional frequency instability of 1x10^-13 at 0.1 s. Spot tuning away from 10 GHz by 500 MHz, 1 GHz, and 2 GHz, yields phase noise at 10 kHz offset of -150 dBc/Hz, -146 dBc/Hz, and -140 dBc/Hz, respectively. The synthesizer architecture is fully compatible with integrated photonic implementations that will enable a versatile microwave source in a chip-scale package. Together, these advances illustrate an impactful and practical synthesis technique that shares the combined benefits of low timing noise provided by photonics and the frequency agility of established digital synthesis.",
+        "subjects": [
+            "physics.optics",
+            "eess.SP"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2404.00153",
         "abstract url": "https://arxiv.org/abs/2404.00153",
         "title": "Precision game engineering through reshaping strategic payoffs",
@@ -4430,30 +4476,6 @@
             "math.OC"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2404.00163",
-        "abstract url": "https://arxiv.org/abs/2404.00163",
-        "title": "CT respiratory motion synthesis using joint supervised and adversarial learning",
-        "rating": "-2",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "CT",
-                "tumor",
-                "organ"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Objective: Four-dimensional computed tomography (4DCT) imaging consists in reconstructing a CT acquisition into multiple phases to track internal organ and tumor motion. It is commonly used in radiotherapy treatment planning to establish planning target volumes. However, 4DCT increases protocol complexity, may not align with patient breathing during treatment, and lead to higher radiation delivery. Approach: In this study, we propose a deep synthesis method to generate pseudo respiratory CT phases from static images for motion-aware treatment planning. The model produces patient-specific deformation vector fields (DVFs) by conditioning synthesis on external patient surface-based estimation, mimicking respiratory monitoring devices. A key methodological contribution is to encourage DVF realism through supervised DVF training while using an adversarial term jointly not only on the warped image but also on the magnitude of the DVF itself. This way, we avoid excessive smoothness typically obtained through deep unsupervised learning, and encourage correlations with the respiratory amplitude. Main results: Performance is evaluated using real 4DCT acquisitions with smaller tumor volumes than previously reported. Results demonstrate for the first time that the generated pseudo-respiratory CT phases can capture organ and tumor motion with similar accuracy to repeated 4DCT scans of the same patient. Mean inter-scans tumor center-of-mass distances and Dice similarity coefficients were $1.97$mm and $0.63$, respectively, for real 4DCT phases and $2.35$mm and $0.71$ for synthetic phases, and compares favorably to a state-of-the-art technique (RMSim).",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "to appear in Phys. Med. Biol"
     },
     {
         "paper id": "2404.00171",
@@ -4538,6 +4560,34 @@
             "cs.DL"
         ],
         "comment": "16 pages, 7 figures"
+    },
+    {
+        "paper id": "2403.20225",
+        "abstract url": "https://arxiv.org/abs/2403.20225",
+        "title": "MTMMC: A Large-Scale Real-World Multi-Modal Camera Tracking Benchmark",
+        "rating": "-2.5",
+        "keywords": [
+            [
+                "re-identification"
+            ],
+            [
+                "anomaly detection"
+            ],
+            [
+                "thermal"
+            ],
+            [
+                "cs.CV"
+            ],
+            [
+                "CVPR"
+            ]
+        ],
+        "abstract": "Multi-target multi-camera tracking is a crucial task that involves identifying and tracking individuals over time using video streams from multiple cameras. This task has practical applications in various fields, such as visual surveillance, crowd behavior analysis, and anomaly detection. However, due to the difficulty and cost of collecting and labeling data, existing datasets for this task are either synthetically generated or artificially constructed within a controlled camera network setting, which limits their ability to model real-world dynamics and generalize to diverse camera configurations. To address this issue, we present MTMMC, a real-world, large-scale dataset that includes long video sequences captured by 16 multi-modal cameras in two different environments - campus and factory - across various time, weather, and season conditions. This dataset provides a challenging test-bed for studying multi-camera tracking under diverse real-world complexities and includes an additional input modality of spatially aligned and temporally synchronized RGB and thermal cameras, which enhances the accuracy of multi-camera tracking. MTMMC is a super-set of existing datasets, benefiting independent fields such as person detection, re-identification, and multiple object tracking. We provide baselines and new learning setups on this dataset and set the reference scores for future studies. The datasets, models, and test server will be made publicly available.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Accepted on CVPR 2024"
     },
     {
         "paper id": "2404.00081",
@@ -4674,33 +4724,6 @@
         "comment": "Published in IEEE Transactions on Cybernetics (doi: 10.1109/TCYB.2024.3372989)"
     },
     {
-        "paper id": "2403.20153",
-        "abstract url": "https://arxiv.org/abs/2403.20153",
-        "title": "Talk3D: High-Fidelity Talking Portrait Synthesis via Personalized 3D Generative Prior",
-        "rating": "-3",
-        "keywords": [
-            [
-                "3D",
-                "NeRF",
-                "radiance fields"
-            ],
-            [
-                "Synthesis"
-            ],
-            [
-                "facial"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Recent methods for audio-driven talking head synthesis often optimize neural radiance fields (NeRF) on a monocular talking portrait video, leveraging its capability to render high-fidelity and 3D-consistent novel-view frames. However, they often struggle to reconstruct complete face geometry due to the absence of comprehensive 3D information in the input monocular videos. In this paper, we introduce a novel audio-driven talking head synthesis framework, called Talk3D, that can faithfully reconstruct its plausible facial geometries by effectively adopting the pre-trained 3D-aware generative prior. Given the personalized 3D generative model, we present a novel audio-guided attention U-Net architecture that predicts the dynamic face variations in the NeRF space driven by audio. Furthermore, our model is further modulated by audio-unrelated conditioning tokens which effectively disentangle variations unrelated to audio features. Compared to existing methods, our method excels in generating realistic facial geometries even under extreme head poses. We also conduct extensive experiments showing our approach surpasses state-of-the-art benchmarks in terms of both quantitative and qualitative evaluations.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Project page: https://ku-cvlab.github.io/Talk3D/"
-    },
-    {
         "paper id": "2403.20184",
         "abstract url": "https://arxiv.org/abs/2403.20184",
         "title": "Exploring Pathological Speech Quality Assessment with ASR-Powered Wav2Vec2 in Data-Scarce Context",
@@ -4760,8 +4783,7 @@
                 "3D"
             ],
             [
-                "Diffusion",
-                "Synthesis"
+                "Diffusion"
             ],
             [
                 "MRI"
@@ -4777,29 +4799,6 @@
             "cs.CV"
         ],
         "comment": "8 pages, 3 figures, 2 tables, submitted to MICCAI 2024, code available if accepted"
-    },
-    {
-        "paper id": "2404.00136",
-        "abstract url": "https://arxiv.org/abs/2404.00136",
-        "title": "Tunable X-band opto-electronic synthesizer with ultralow phase noise",
-        "rating": "-3",
-        "keywords": [
-            [
-                "synthesizer"
-            ],
-            [
-                "radar"
-            ],
-            [
-                "navigation"
-            ]
-        ],
-        "abstract": "Modern communication, navigation, and radar systems rely on low noise and frequency-agile microwave sources. In this application space, photonic systems provide an attractive alternative to conventional microwave synthesis by leveraging high spectral purity lasers and optical frequency combs to generate microwaves with exceedingly low phase noise. However, these photonic techniques suffer from a lack of frequency tunability, and also have substantial size, weight, and power requirements that largely limit their use to laboratory settings. In this work, we address these shortcomings with a hybrid opto-electronic approach that combines simplified optical frequency division with direct digital synthesis to produce tunable low-phase-noise microwaves across the entire X-band. This results in exceptional phase noise at 10 GHz of -156 dBc/Hz at 10 kHz offset and fractional frequency instability of 1x10^-13 at 0.1 s. Spot tuning away from 10 GHz by 500 MHz, 1 GHz, and 2 GHz, yields phase noise at 10 kHz offset of -150 dBc/Hz, -146 dBc/Hz, and -140 dBc/Hz, respectively. The synthesizer architecture is fully compatible with integrated photonic implementations that will enable a versatile microwave source in a chip-scale package. Together, these advances illustrate an impactful and practical synthesis technique that shares the combined benefits of low timing noise provided by photonics and the frequency agility of established digital synthesis.",
-        "subjects": [
-            "physics.optics",
-            "eess.SP"
-        ],
-        "comment": null
     },
     {
         "paper id": "2404.00230",
@@ -5006,6 +5005,19 @@
         "subjects": [
             "cs.LO",
             "cs.PL"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2403.20133",
+        "abstract url": "https://arxiv.org/abs/2403.20133",
+        "title": "Regular Games with Imperfect Information Are Not That Regular",
+        "rating": "-10",
+        "keywords": [],
+        "abstract": "We consider two-player games with imperfect information and the synthesis of a randomized strategy for one player that ensures the objective is satisfied almost-surely (i.e., with probability 1), regardless of the strategy of the other player. Imperfect information is modeled by an indistinguishability relation %that describing the pairs of histories that the first player cannot distinguish, a generalization of the traditional model with partial observations. The game is regular if it admits a regular function whose kernel commutes with the indistinguishability relation. The synthesis of pure strategies that ensure all possible outcomes satisfy the objective is possible in regular games, by a generic reduction that holds for all objectives. While the solution for pure strategies extends to randomized strategies in the traditional model with partial observations (which is always regular), we show that a similar reduction does not exist in the more general model. Despite that, we show that in regular games with Buechi objectives the synthesis problem is decidable for randomized strategies that ensure the outcome satisfies the objective almost-surely.",
+        "subjects": [
+            "cs.GT",
+            "cs.LO"
         ],
         "comment": null
     },
@@ -5375,18 +5387,6 @@
         "abstract": "We study a cost-aware programming language for higher-order recursion dubbed $\\textbf{PCF}_\\mathsf{cost}$ in the setting of synthetic domain theory (SDT). Our main contribution relates the denotational cost semantics of $\\textbf{PCF}_\\mathsf{cost}$ to its computational cost semantics, a new kind of dynamic semantics for program execution that serves as a mathematically natural alternative to operational semantics in SDT. In particular we prove an internal, cost-sensitive version of Plotkin's computational adequacy theorem, giving a precise correspondence between the denotational and computational semantics for complete programs at base type. The constructions and proofs of this paper take place in the internal dependent type theory of an SDT topos extended by a phase distinction in the sense of Sterling and Harper. By controlling the interpretation of cost structure via the phase distinction in the denotational semantics, we show that $\\textbf{PCF}_\\mathsf{cost}$ programs also evince a noninterference property of cost and behavior. We verify the axioms of the type theory by means of a model construction based on relative sheaf models of SDT.",
         "subjects": [
             "cs.PL"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2404.17581",
-        "abstract url": "https://arxiv.org/abs/2404.17581",
-        "title": "Deepfake Labels Restore Reality, Especially for Those Who Dislike the Speaker",
-        "rating": "-10",
-        "keywords": [],
-        "abstract": "Deepfake videos create dangerous possibilities for public misinformation. In this experiment (N=204), we investigated whether labeling videos as containing actual or deepfake statements from US President Biden helps participants later differentiate between true and fake information. People accurately recalled 93.8% of deepfake videos and 84.2% of actual videos, suggesting that labeling videos can help combat misinformation. Individuals who identify as Republican and had lower favorability ratings of Biden performed better in distinguishing between actual and deepfake videos, a result explained by the elaboration likelihood model (ELM), which predicts that people who distrust a message source will more critically evaluate the message.",
-        "subjects": [
-            "cs.HC"
         ],
         "comment": null
     },

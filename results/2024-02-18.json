@@ -46,6 +46,27 @@
         "comment": "pre-print version"
     },
     {
+        "paper id": "2402.11592",
+        "abstract url": "https://arxiv.org/abs/2402.11592",
+        "title": "Revisiting Zeroth-Order Optimization for Memory-Efficient LLM Fine-Tuning: A Benchmark",
+        "rating": "2",
+        "keywords": [
+            [
+                "Memory-Efficient"
+            ],
+            [
+                "cs.LG",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "In the evolving landscape of natural language processing (NLP), fine-tuning pre-trained Large Language Models (LLMs) with first-order (FO) optimizers like SGD and Adam has become standard. Yet, as LLMs grow {in size}, the substantial memory overhead from back-propagation (BP) for FO gradient computation presents a significant challenge. Addressing this issue is crucial, especially for applications like on-device training where memory efficiency is paramount. This paper proposes a shift towards BP-free, zeroth-order (ZO) optimization as a solution for reducing memory costs during LLM fine-tuning, building on the initial concept introduced by MeZO. Unlike traditional ZO-SGD methods, our work expands the exploration to a wider array of ZO optimization techniques, through a comprehensive, first-of-its-kind benchmarking study across five LLM families (Roberta, OPT, LLaMA, Vicuna, Mistral), three task complexities, and five fine-tuning schemes. Our study unveils previously overlooked optimization principles, highlighting the importance of task alignment, the role of the forward gradient method, and the balance between algorithm complexity and fine-tuning performance. We further introduce novel enhancements to ZO optimization, including block-wise descent, hybrid training, and gradient sparsity. Our study offers a promising direction for achieving further memory-efficient LLM fine-tuning. Codes to reproduce all our experiments are at https://github.com/ZO-Bench/ZO-LLM .",
+        "subjects": [
+            "cs.LG",
+            "cs.CL"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2402.11622",
         "abstract url": "https://arxiv.org/abs/2402.11622",
         "title": "Logical Closed Loop: Uncovering Object Hallucinations in Large Vision-Language Models",
@@ -175,6 +196,25 @@
             "eess.AS",
             "cs.LG",
             "cs.SD"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2402.11819",
+        "abstract url": "https://arxiv.org/abs/2402.11819",
+        "title": "Head-wise Shareable Attention for Large Language Models",
+        "rating": "2",
+        "keywords": [
+            [
+                "memory-efficient"
+            ],
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Large Language Models (LLMs) suffer from huge number of parameters, which restricts their deployment on edge devices. Weight sharing is one promising solution that encourages weight reuse, effectively reducing memory usage with less performance drop. However, current weight sharing techniques primarily focus on small-scale models like BERT and employ coarse-grained sharing rules, e.g., layer-wise. This becomes limiting given the prevalence of LLMs and sharing an entire layer or block obviously diminishes the flexibility of weight sharing. In this paper, we present a perspective on $\\textit{$\\textbf{head-wise shareable attention for large language models}$}$. We further propose two memory-efficient methods that share parameters across attention heads, with a specific focus on LLMs. Both of them use the same dynamic strategy to select the shared weight matrices. The first method directly reuses the pre-trained weights without retraining, denoted as $\\textbf{DirectShare}$. The second method first post-trains with constraint on weight matrix similarity and then shares, denoted as $\\textbf{PostShare}$. Experimental results reveal our head-wise shared models still maintain satisfactory capabilities, demonstrating the feasibility of fine-grained weight sharing applied to LLMs.",
+        "subjects": [
+            "cs.CL"
         ],
         "comment": null
     },
@@ -375,6 +415,31 @@
         "comment": "16 pages, 6 figures"
     },
     {
+        "paper id": "2402.11505",
+        "abstract url": "https://arxiv.org/abs/2402.11505",
+        "title": "Federated Fine-tuning of Large Language Models under Heterogeneous Language Tasks and Client Resources",
+        "rating": "1",
+        "keywords": [
+            [
+                "parameter-efficient",
+                "efficient fine-tuning"
+            ],
+            [
+                "Federated Learning"
+            ],
+            [
+                "cs.AI",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Federated Learning (FL) has recently been applied to the parameter-efficient fine-tuning of Large Language Models (LLMs). While promising, it raises significant challenges due to the heterogeneous resources and data distributions of clients.This study introduces FlexLoRA, a simple yet effective aggregation scheme for LLM fine-tuning, which mitigates the \"buckets effect\" in traditional FL that restricts the potential of clients with ample resources by tying them to the capabilities of the least-resourced participants. FlexLoRA allows for dynamic adjustment of local LoRA ranks, fostering the development of a global model imbued with broader, less task-specific knowledge. By synthesizing a full-size LoRA weight from individual client contributions and employing Singular Value Decomposition (SVD) for weight redistribution, FlexLoRA fully leverages heterogeneous client resources. Involving over 1,600 clients performing diverse NLP tasks, our experiments validate the efficacy of FlexLoRA, with the federated global model achieving up to a 3.1% average improvement in downstream NLP task performance. FlexLoRA's practicality is further underscored by its seamless integration with existing LoRA-based FL methods and theoretical analysis, offering a path toward scalable, privacy-preserving federated tuning for LLMs.",
+        "subjects": [
+            "cs.CL",
+            "cs.AI"
+        ],
+        "comment": "14 pages, 8 figures, 8 tables"
+    },
+    {
         "paper id": "2402.11512",
         "abstract url": "https://arxiv.org/abs/2402.11512",
         "title": "From Prejudice to Parity: A New Approach to Debiasing Large Language Model Word Embeddings",
@@ -391,22 +456,6 @@
             "cs.CY"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2402.11517",
-        "abstract url": "https://arxiv.org/abs/2402.11517",
-        "title": "Knowledge-to-SQL: Enhancing SQL Generation with Data Expert LLM",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Generating accurate SQL for user queries (text-to-SQL) is a long-standing problem since the generation of the SQL requires comprehending the query and database and retrieving the accurate data from the database accordingly. Existing models rely on the comprehensive ability of Large Language Models (LLMs) to generate the SQL according to the database schema. However, there is some necessary knowledge that is not explicitly included in the database schema or has been learned by LLMs. Thus, the generated SQL of the knowledge-insufficient queries may be inaccurate, which negatively impacts the robustness of the text-to-SQL models. To deal with this situation, we propose the Knowledge-to-SQL framework, which employs tailored Data Expert LLM (DELLM) to provide helpful knowledge for all types of text-to-SQL models. Specifically, we provide the detailed design of DELLM, in terms of table reading, and the basic fine-tuning process. We further provide a Preference Learning via Database Feedback (PLDBF) training strategy to guide the DELLM to generate more helpful knowledge for LLMs. Extensive experiments verify DELLM can enhance the state-of-the-art LLMs on text-to-SQL tasks. The model structure and the parameter weight of DELLM are released for further research.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": "under review"
     },
     {
         "paper id": "2402.11520",
@@ -645,24 +694,6 @@
         ],
         "abstract": "Large language models (LLMs) call for extension of context to handle many critical applications. However, the existing approaches are prone to expensive costs and inferior quality of context extension. In this work, we propose Extensible Embedding, which realizes high-quality extension of LLM's context with strong flexibility and cost-effectiveness. Extensible embedding stand as an enhancement of typical token embedding, which represents the information for an extensible scope of context instead of a single token. By leveraging such compact input units of higher information density, the LLM can access to a vast scope of context even with a small context window. Extensible embedding is systematically optimized in architecture and training method, which leads to multiple advantages. 1) High flexibility of context extension, which flexibly supports ad-hoc extension of diverse context lengths. 2) Strong sample efficiency of training, which enables the embedding model to be learned in a cost-effective way. 3) Superior compatibility with the existing LLMs, where the extensible embedding can be seamlessly introduced as a plug-in component. Comprehensive evaluations on long-context language modeling and understanding tasks verify extensible embedding as an effective, efficient, flexible, and compatible method to extend the LLM's context.",
         "subjects": [
-            "cs.CL"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2402.11592",
-        "abstract url": "https://arxiv.org/abs/2402.11592",
-        "title": "Revisiting Zeroth-Order Optimization for Memory-Efficient LLM Fine-Tuning: A Benchmark",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.LG",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "In the evolving landscape of natural language processing (NLP), fine-tuning pre-trained Large Language Models (LLMs) with first-order (FO) optimizers like SGD and Adam has become standard. Yet, as LLMs grow {in size}, the substantial memory overhead from back-propagation (BP) for FO gradient computation presents a significant challenge. Addressing this issue is crucial, especially for applications like on-device training where memory efficiency is paramount. This paper proposes a shift towards BP-free, zeroth-order (ZO) optimization as a solution for reducing memory costs during LLM fine-tuning, building on the initial concept introduced by MeZO. Unlike traditional ZO-SGD methods, our work expands the exploration to a wider array of ZO optimization techniques, through a comprehensive, first-of-its-kind benchmarking study across five LLM families (Roberta, OPT, LLaMA, Vicuna, Mistral), three task complexities, and five fine-tuning schemes. Our study unveils previously overlooked optimization principles, highlighting the importance of task alignment, the role of the forward gradient method, and the balance between algorithm complexity and fine-tuning performance. We further introduce novel enhancements to ZO optimization, including block-wise descent, hybrid training, and gradient sparsity. Our study offers a promising direction for achieving further memory-efficient LLM fine-tuning. Codes to reproduce all our experiments are at https://github.com/ZO-Bench/ZO-LLM .",
-        "subjects": [
-            "cs.LG",
             "cs.CL"
         ],
         "comment": null
@@ -1214,22 +1245,6 @@
         "comment": null
     },
     {
-        "paper id": "2402.11819",
-        "abstract url": "https://arxiv.org/abs/2402.11819",
-        "title": "Head-wise Shareable Attention for Large Language Models",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Large Language Models (LLMs) suffer from huge number of parameters, which restricts their deployment on edge devices. Weight sharing is one promising solution that encourages weight reuse, effectively reducing memory usage with less performance drop. However, current weight sharing techniques primarily focus on small-scale models like BERT and employ coarse-grained sharing rules, e.g., layer-wise. This becomes limiting given the prevalence of LLMs and sharing an entire layer or block obviously diminishes the flexibility of weight sharing. In this paper, we present a perspective on $\\textit{$\\textbf{head-wise shareable attention for large language models}$}$. We further propose two memory-efficient methods that share parameters across attention heads, with a specific focus on LLMs. Both of them use the same dynamic strategy to select the shared weight matrices. The first method directly reuses the pre-trained weights without retraining, denoted as $\\textbf{DirectShare}$. The second method first post-trains with constraint on weight matrix similarity and then shares, denoted as $\\textbf{PostShare}$. Experimental results reveal our head-wise shared models still maintain satisfactory capabilities, demonstrating the feasibility of fine-grained weight sharing applied to LLMs.",
-        "subjects": [
-            "cs.CL"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2402.11827",
         "abstract url": "https://arxiv.org/abs/2402.11827",
         "title": "Ask Optimal Questions: Aligning Large Language Models with Retriever's Preference in Conversational Search",
@@ -1259,46 +1274,6 @@
         "abstract": "Rock Classification is an essential geological problem since it provides important formation information. However, exploration on this problem using convolutional neural networks is not sufficient. To tackle this problem, we propose two approaches using residual neural networks. We first adopt data augmentation methods to enlarge our dataset. By modifying kernel sizes, normalization methods and composition based on ResNet34, we achieve an accuracy of 70.1% on the test dataset, with an increase of 3.5% compared to regular Resnet34. Furthermore, using a similar backbone like BoTNet that incorporates multihead self attention, we additionally use internal residual connections in our model. This boosts the model's performance, achieving an accuracy of 73.7% on the test dataset. We also explore how the number of bottleneck transformer blocks may influence model performance. We discover that models with more than one bottleneck transformer block may not further improve performance. Finally, we believe that our approach can inspire future work related to this problem and our model design can facilitate the development of new residual model architectures.",
         "subjects": [
             "cs.CV"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2402.12407",
-        "abstract url": "https://arxiv.org/abs/2402.12407",
-        "title": "Accelerating local laplacian filters on FPGAs",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.CV",
-                "eess.IV"
-            ]
-        ],
-        "abstract": "Images when processed using various enhancement techniques often lead to edge degradation and other unwanted artifacts such as halos. These artifacts pose a major problem for photographic applications where they can denude the quality of an image. There is a plethora of edge-aware techniques proposed in the field of image processing. However, these require the application of complex optimization or post-processing methods. Local Laplacian Filtering is an edge-aware image processing technique that involves the construction of simple Gaussian and Laplacian pyramids. This technique can be successfully applied for detail smoothing, detail enhancement, tone mapping and inverse tone mapping of an image while keeping it artifact-free. The problem though with this approach is that it is computationally expensive. Hence, parallelization schemes using multi-core CPUs and GPUs have been proposed. As is well known, they are not power-efficient, and a well-designed hardware architecture on an FPGA can do better on the performance per watt metric. In this paper, we propose a hardware accelerator, which exploits fully the available parallelism in the Local Laplacian Filtering algorithm, while minimizing the utilization of on-chip FPGA resources. On Virtex-7 FPGA, we obtain a 7.5x speed-up to process a 1 MB image when compared to an optimized baseline CPU implementation. To the best of our knowledge, we are not aware of any other hardware accelerators proposed in the research literature for the Local Laplacian Filtering problem.",
-        "subjects": [
-            "eess.IV",
-            "cs.CV",
-            "cs.GR",
-            "eess.SP"
-        ],
-        "comment": "6 pages, 5 figures, 2 tables"
-    },
-    {
-        "paper id": "2402.12408",
-        "abstract url": "https://arxiv.org/abs/2402.12408",
-        "title": "ModelGPT: Unleashing LLM's Capabilities for Tailored Model Generation",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.LG",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "The rapid advancement of Large Language Models (LLMs) has revolutionized various sectors by automating routine tasks, marking a step toward the realization of Artificial General Intelligence (AGI). However, they still struggle to accommodate the diverse and specific needs of users and simplify the utilization of AI models for the average user. In response, we propose ModelGPT, a novel framework designed to determine and generate AI models specifically tailored to the data or task descriptions provided by the user, leveraging the capabilities of LLMs. Given user requirements, ModelGPT is able to provide tailored models at most 270x faster than the previous paradigms (e.g. all-parameter or LoRA finetuning). Comprehensive experiments on NLP, CV, and Tabular datasets attest to the effectiveness of our framework in making AI models more accessible and user-friendly. Our code is available at https://github.com/IshiKura-a/ModelGPT.",
-        "subjects": [
-            "cs.LG",
-            "cs.AI",
-            "cs.CL"
         ],
         "comment": null
     },
@@ -1562,6 +1537,23 @@
         "comment": "11 pages, 5 figures, 2 tables"
     },
     {
+        "paper id": "2402.11654",
+        "abstract url": "https://arxiv.org/abs/2402.11654",
+        "title": "Model-Free $\u03bc$-Synthesis: A Nonsmooth Optimization Perspective",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "In this paper, we revisit model-free policy search on an important robust control benchmark, namely $\u03bc$-synthesis. In the general output-feedback setting, there do not exist convex formulations for this problem, and hence global optimality guarantees are not expected. Apkarian (2011) presented a nonconvex nonsmooth policy optimization approach for this problem, and achieved state-of-the-art design results via using subgradient-based policy search algorithms which generate update directions in a model-based manner. Despite the lack of convexity and global optimality guarantees, these subgradient-based policy search methods have led to impressive numerical results in practice. Built upon such a policy optimization persepctive, our paper extends these subgradient-based search methods to a model-free setting. Specifically, we examine the effectiveness of two model-free policy optimization strategies: the model-free non-derivative sampling method and the zeroth-order policy search with uniform smoothing. We performed an extensive numerical study to demonstrate that both methods consistently replicate the design outcomes achieved by their model-based counterparts. Additionally, we provide some theoretical justifications showing that convergence guarantees to stationary points can be established for our model-free $\u03bc$-synthesis under some assumptions related to the coerciveness of the cost function. Overall, our results demonstrate that derivative-free policy optimization offers a competitive and viable approach for solving general output-feedback $\u03bc$-synthesis problems in the model-free setting.",
+        "subjects": [
+            "math.OC",
+            "cs.LG"
+        ],
+        "comment": "Submitted to L4DC 2024"
+    },
+    {
         "paper id": "2402.11695",
         "abstract url": "https://arxiv.org/abs/2402.11695",
         "title": "Enabling Software Defined Optical Networks",
@@ -1658,24 +1650,6 @@
             "cs.CV"
         ],
         "comment": "Published as a conference paper at ICLR 2024"
-    },
-    {
-        "paper id": "2402.11734",
-        "abstract url": "https://arxiv.org/abs/2402.11734",
-        "title": "Solving Data-centric Tasks using Large Language Models",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "Large language models (LLMs) are rapidly replacing help forums like StackOverflow, and are especially helpful for non-professional programmers and end users. These users are often interested in data-centric tasks, such as spreadsheet manipulation and data wrangling, which are hard to solve if the intent is only communicated using a natural-language description, without including the data. But how do we decide how much data and which data to include in the prompt? This paper makes two contributions towards answering this question. First, we create a dataset of real-world NL-to-code tasks manipulating tabular data, mined from StackOverflow posts. Second, we introduce a cluster-then-select prompting technique, which adds the most representative rows from the input data to the LLM prompt. Our experiments show that LLM performance is indeed sensitive to the amount of data passed in the prompt, and that for tasks with a lot of syntactic variation in the input table, our cluster-then-select technique outperforms a random selection baseline.",
-        "subjects": [
-            "cs.PL",
-            "cs.AI",
-            "cs.SE"
-        ],
-        "comment": "Paper accepted to NAACL 2024 (Findings)"
     },
     {
         "paper id": "2402.11736",
@@ -1921,34 +1895,6 @@
             "cs.CV"
         ],
         "comment": "Code is available at: https://github.com/wzzheng/GenAD"
-    },
-    {
-        "paper id": "2402.11505",
-        "abstract url": "https://arxiv.org/abs/2402.11505",
-        "title": "Federated Fine-tuning of Large Language Models under Heterogeneous Language Tasks and Client Resources",
-        "rating": "0",
-        "keywords": [
-            [
-                "parameter-efficient",
-                "efficient fine-tuning"
-            ],
-            [
-                "synthesizing"
-            ],
-            [
-                "Federated Learning"
-            ],
-            [
-                "cs.AI",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Federated Learning (FL) has recently been applied to the parameter-efficient fine-tuning of Large Language Models (LLMs). While promising, it raises significant challenges due to the heterogeneous resources and data distributions of clients.This study introduces FlexLoRA, a simple yet effective aggregation scheme for LLM fine-tuning, which mitigates the \"buckets effect\" in traditional FL that restricts the potential of clients with ample resources by tying them to the capabilities of the least-resourced participants. FlexLoRA allows for dynamic adjustment of local LoRA ranks, fostering the development of a global model imbued with broader, less task-specific knowledge. By synthesizing a full-size LoRA weight from individual client contributions and employing Singular Value Decomposition (SVD) for weight redistribution, FlexLoRA fully leverages heterogeneous client resources. Involving over 1,600 clients performing diverse NLP tasks, our experiments validate the efficacy of FlexLoRA, with the federated global model achieving up to a 3.1% average improvement in downstream NLP task performance. FlexLoRA's practicality is further underscored by its seamless integration with existing LoRA-based FL methods and theoretical analysis, offering a path toward scalable, privacy-preserving federated tuning for LLMs.",
-        "subjects": [
-            "cs.CL",
-            "cs.AI"
-        ],
-        "comment": "14 pages, 8 figures, 8 tables"
     },
     {
         "paper id": "2402.11507",
@@ -2387,6 +2333,27 @@
         "comment": "Accepted by the research paper track of The Web Conference (WWW) 2024. The codes are available at https://github.com/fannie1208/CaNet"
     },
     {
+        "paper id": "2402.11498",
+        "abstract url": "https://arxiv.org/abs/2402.11498",
+        "title": "Verifiably Following Complex Robot Instructions with Foundation Models",
+        "rating": "-0.5",
+        "keywords": [
+            [
+                "Robot",
+                "navigation"
+            ],
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "Enabling robots to follow complex natural language instructions is an important yet challenging problem. People want to flexibly express constraints, refer to arbitrary landmarks and verify behavior when instructing robots. Conversely, robots must disambiguate human instructions into specifications and ground instruction referents in the real world. We propose Language Instruction grounding for Motion Planning (LIMP), a system that leverages foundation models and temporal logics to generate instruction-conditioned semantic maps that enable robots to verifiably follow expressive and long-horizon instructions with open vocabulary referents and complex spatiotemporal constraints. In contrast to prior methods for using foundation models in robot task execution, LIMP constructs an explainable instruction representation that reveals the robot's alignment with an instructor's intended motives and affords the synthesis of robot behaviors that are correct-by-construction. We demonstrate LIMP in three real-world environments, across a set of 35 complex spatiotemporal instructions, showing the generality of our approach and the ease of deployment in novel unstructured domains. In our experiments, LIMP can spatially ground open-vocabulary referents and synthesize constraint-satisfying plans in 90% of object-goal navigation and 71% of mobile manipulation instructions. See supplementary videos at https://robotlimp.github.io",
+        "subjects": [
+            "cs.RO",
+            "cs.AI"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2402.11552",
         "abstract url": "https://arxiv.org/abs/2402.11552",
         "title": "Empirical Density Estimation based on Spline Quasi-Interpolation with applications to Copulas clustering modeling",
@@ -2467,26 +2434,6 @@
             "cs.LG"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2402.11654",
-        "abstract url": "https://arxiv.org/abs/2402.11654",
-        "title": "Model-Free $\u03bc$-Synthesis: A Nonsmooth Optimization Perspective",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "Synthesis"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "In this paper, we revisit model-free policy search on an important robust control benchmark, namely $\u03bc$-synthesis. In the general output-feedback setting, there do not exist convex formulations for this problem, and hence global optimality guarantees are not expected. Apkarian (2011) presented a nonconvex nonsmooth policy optimization approach for this problem, and achieved state-of-the-art design results via using subgradient-based policy search algorithms which generate update directions in a model-based manner. Despite the lack of convexity and global optimality guarantees, these subgradient-based policy search methods have led to impressive numerical results in practice. Built upon such a policy optimization persepctive, our paper extends these subgradient-based search methods to a model-free setting. Specifically, we examine the effectiveness of two model-free policy optimization strategies: the model-free non-derivative sampling method and the zeroth-order policy search with uniform smoothing. We performed an extensive numerical study to demonstrate that both methods consistently replicate the design outcomes achieved by their model-based counterparts. Additionally, we provide some theoretical justifications showing that convergence guarantees to stationary points can be established for our model-free $\u03bc$-synthesis under some assumptions related to the coerciveness of the cost function. Overall, our results demonstrate that derivative-free policy optimization offers a competitive and viable approach for solving general output-feedback $\u03bc$-synthesis problems in the model-free setting.",
-        "subjects": [
-            "math.OC",
-            "cs.LG"
-        ],
-        "comment": "Submitted to L4DC 2024"
     },
     {
         "paper id": "2402.11705",
@@ -2588,6 +2535,25 @@
         "abstract": "Guaranteeing the safe operations of autonomous vehicles (AVs) is crucial for their widespread adoption and public acceptance. It is thus of a great significance to not only assess the AV against the standard safety tests, but also discover potential corner cases of the AV under test that could lead to unsafe behaviour or scenario. In this paper, we propose a novel framework to systematically explore corner cases that can result in safety concerns in a highway traffic scenario. The framework is based on an adaptive stress testing (AST) approach, an emerging validation method that leverages a Markov decision process to formulate the scenarios and deep reinforcement learning (DRL) to discover the desirable patterns representing corner cases. To this end, we develop a new reward function for DRL to guide the AST in identifying crash scenarios based on the collision probability estimate between the AV under test (i.e., the ego vehicle) and the trajectory of other vehicles on the highway. The proposed framework is further integrated with a new driving model enabling us to create more realistic traffic scenarios capturing both the longitudinal and lateral movements of vehicles on the highway. In our experiment, we calibrate our model using real-world crash statistics involving automated vehicles in California, and then we analyze the characteristics of the AV and the framework. Quantitative and qualitative analyses of our experimental results demonstrate that our framework outperforms other existing AST schemes. The study can help discover crash scenarios of AV that are unknown or absent in human driving, thereby enhancing the safety and trustworthiness of AV technology.",
         "subjects": [
             "cs.RO",
+            "cs.AI"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2403.00783",
+        "abstract url": "https://arxiv.org/abs/2403.00783",
+        "title": "On the Roles of LLMs in Planning: Embedding LLMs into Planning Graphs",
+        "rating": "-0.5",
+        "keywords": [
+            [
+                "graph"
+            ],
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "Plan synthesis aims to generate a course of actions or policies to transit given initial states to goal states, provided domain models that could be designed by experts or learnt from training data or interactions with the world. Intrigued by the claims of emergent planning capabilities in large language models (LLMs), works have been proposed to investigate the planning effectiveness of LLMs, without considering any utilization of off-the-shelf planning techniques in LLMs. In this paper, we aim to further study the insight of the planning capability of LLMs by investigating the roles of LLMs in off-the-shelf planning frameworks. To do this, we investigate the effectiveness of embedding LLMs into one of the well-known planning frameworks, graph-based planning, proposing a novel LLMs-based planning framework with LLMs embedded in two levels of planning graphs, i.e., mutual constraints generation level and constraints solving level. We empirically exhibit the effectiveness of our proposed framework in various planning domains.",
+        "subjects": [
             "cs.AI"
         ],
         "comment": null
@@ -2780,6 +2746,25 @@
             "cs.CV"
         ],
         "comment": "Preprint to Elsevier"
+    },
+    {
+        "paper id": "2402.11517",
+        "abstract url": "https://arxiv.org/abs/2402.11517",
+        "title": "Knowledge-to-SQL: Enhancing SQL Generation with Data Expert LLM",
+        "rating": "-1",
+        "keywords": [
+            [
+                "SQL"
+            ],
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Generating accurate SQL for user queries (text-to-SQL) is a long-standing problem since the generation of the SQL requires comprehending the query and database and retrieving the accurate data from the database accordingly. Existing models rely on the comprehensive ability of Large Language Models (LLMs) to generate the SQL according to the database schema. However, there is some necessary knowledge that is not explicitly included in the database schema or has been learned by LLMs. Thus, the generated SQL of the knowledge-insufficient queries may be inaccurate, which negatively impacts the robustness of the text-to-SQL models. To deal with this situation, we propose the Knowledge-to-SQL framework, which employs tailored Data Expert LLM (DELLM) to provide helpful knowledge for all types of text-to-SQL models. Specifically, we provide the detailed design of DELLM, in terms of table reading, and the basic fine-tuning process. We further provide a Preference Learning via Database Feedback (PLDBF) training strategy to guide the DELLM to generate more helpful knowledge for LLMs. Extensive experiments verify DELLM can enhance the state-of-the-art LLMs on text-to-SQL tasks. The model structure and the parameter weight of DELLM are released for further research.",
+        "subjects": [
+            "cs.CL"
+        ],
+        "comment": "under review"
     },
     {
         "paper id": "2402.11526",
@@ -3240,6 +3225,52 @@
         "comment": null
     },
     {
+        "paper id": "2402.12407",
+        "abstract url": "https://arxiv.org/abs/2402.12407",
+        "title": "Accelerating local laplacian filters on FPGAs",
+        "rating": "-1",
+        "keywords": [
+            [
+                "FPGAs"
+            ],
+            [
+                "cs.CV",
+                "eess.IV"
+            ]
+        ],
+        "abstract": "Images when processed using various enhancement techniques often lead to edge degradation and other unwanted artifacts such as halos. These artifacts pose a major problem for photographic applications where they can denude the quality of an image. There is a plethora of edge-aware techniques proposed in the field of image processing. However, these require the application of complex optimization or post-processing methods. Local Laplacian Filtering is an edge-aware image processing technique that involves the construction of simple Gaussian and Laplacian pyramids. This technique can be successfully applied for detail smoothing, detail enhancement, tone mapping and inverse tone mapping of an image while keeping it artifact-free. The problem though with this approach is that it is computationally expensive. Hence, parallelization schemes using multi-core CPUs and GPUs have been proposed. As is well known, they are not power-efficient, and a well-designed hardware architecture on an FPGA can do better on the performance per watt metric. In this paper, we propose a hardware accelerator, which exploits fully the available parallelism in the Local Laplacian Filtering algorithm, while minimizing the utilization of on-chip FPGA resources. On Virtex-7 FPGA, we obtain a 7.5x speed-up to process a 1 MB image when compared to an optimized baseline CPU implementation. To the best of our knowledge, we are not aware of any other hardware accelerators proposed in the research literature for the Local Laplacian Filtering problem.",
+        "subjects": [
+            "eess.IV",
+            "cs.CV",
+            "cs.GR",
+            "eess.SP"
+        ],
+        "comment": "6 pages, 5 figures, 2 tables"
+    },
+    {
+        "paper id": "2402.12408",
+        "abstract url": "https://arxiv.org/abs/2402.12408",
+        "title": "ModelGPT: Unleashing LLM's Capabilities for Tailored Model Generation",
+        "rating": "-1",
+        "keywords": [
+            [
+                "Tabular"
+            ],
+            [
+                "cs.AI",
+                "cs.LG",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "The rapid advancement of Large Language Models (LLMs) has revolutionized various sectors by automating routine tasks, marking a step toward the realization of Artificial General Intelligence (AGI). However, they still struggle to accommodate the diverse and specific needs of users and simplify the utilization of AI models for the average user. In response, we propose ModelGPT, a novel framework designed to determine and generate AI models specifically tailored to the data or task descriptions provided by the user, leveraging the capabilities of LLMs. Given user requirements, ModelGPT is able to provide tailored models at most 270x faster than the previous paradigms (e.g. all-parameter or LoRA finetuning). Comprehensive experiments on NLP, CV, and Tabular datasets attest to the effectiveness of our framework in making AI models more accessible and user-friendly. Our code is available at https://github.com/IshiKura-a/ModelGPT.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI",
+            "cs.CL"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2402.13281",
         "abstract url": "https://arxiv.org/abs/2402.13281",
         "title": "Fight Hardware with Hardware: System-wide Detection and Mitigation of Side-Channel Attacks using Performance Counters",
@@ -3277,30 +3308,6 @@
             "nlin.CD"
         ],
         "comment": "arXiv admin note: substantial text overlap with arXiv:2008.07669, arXiv:nlin/0307015 by other authors"
-    },
-    {
-        "paper id": "2402.11498",
-        "abstract url": "https://arxiv.org/abs/2402.11498",
-        "title": "Verifiably Following Complex Robot Instructions with Foundation Models",
-        "rating": "-1.5",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "Robot",
-                "navigation"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "Enabling robots to follow complex natural language instructions is an important yet challenging problem. People want to flexibly express constraints, refer to arbitrary landmarks and verify behavior when instructing robots. Conversely, robots must disambiguate human instructions into specifications and ground instruction referents in the real world. We propose Language Instruction grounding for Motion Planning (LIMP), a system that leverages foundation models and temporal logics to generate instruction-conditioned semantic maps that enable robots to verifiably follow expressive and long-horizon instructions with open vocabulary referents and complex spatiotemporal constraints. In contrast to prior methods for using foundation models in robot task execution, LIMP constructs an explainable instruction representation that reveals the robot's alignment with an instructor's intended motives and affords the synthesis of robot behaviors that are correct-by-construction. We demonstrate LIMP in three real-world environments, across a set of 35 complex spatiotemporal instructions, showing the generality of our approach and the ease of deployment in novel unstructured domains. In our experiments, LIMP can spatially ground open-vocabulary referents and synthesize constraint-satisfying plans in 90% of object-goal navigation and 71% of mobile manipulation instructions. See supplementary videos at https://robotlimp.github.io",
-        "subjects": [
-            "cs.RO",
-            "cs.AI"
-        ],
-        "comment": null
     },
     {
         "paper id": "2402.11645",
@@ -3428,6 +3435,27 @@
         "comment": "22 pages, 12 figures, 6 tables"
     },
     {
+        "paper id": "2402.11734",
+        "abstract url": "https://arxiv.org/abs/2402.11734",
+        "title": "Solving Data-centric Tasks using Large Language Models",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "tabular"
+            ],
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "Large language models (LLMs) are rapidly replacing help forums like StackOverflow, and are especially helpful for non-professional programmers and end users. These users are often interested in data-centric tasks, such as spreadsheet manipulation and data wrangling, which are hard to solve if the intent is only communicated using a natural-language description, without including the data. But how do we decide how much data and which data to include in the prompt? This paper makes two contributions towards answering this question. First, we create a dataset of real-world NL-to-code tasks manipulating tabular data, mined from StackOverflow posts. Second, we introduce a cluster-then-select prompting technique, which adds the most representative rows from the input data to the LLM prompt. Our experiments show that LLM performance is indeed sensitive to the amount of data passed in the prompt, and that for tasks with a lot of syntactic variation in the input table, our cluster-then-select technique outperforms a random selection baseline.",
+        "subjects": [
+            "cs.PL",
+            "cs.AI",
+            "cs.SE"
+        ],
+        "comment": "Paper accepted to NAACL 2024 (Findings)"
+    },
+    {
         "paper id": "2402.11771",
         "abstract url": "https://arxiv.org/abs/2402.11771",
         "title": "Evaluating the Effectiveness of Index-Based Treatment Allocation",
@@ -3511,28 +3539,6 @@
             "cs.AI",
             "cs.LG",
             "q-bio.BM"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2403.00783",
-        "abstract url": "https://arxiv.org/abs/2403.00783",
-        "title": "On the Roles of LLMs in Planning: Embedding LLMs into Planning Graphs",
-        "rating": "-1.5",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "graph"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "Plan synthesis aims to generate a course of actions or policies to transit given initial states to goal states, provided domain models that could be designed by experts or learnt from training data or interactions with the world. Intrigued by the claims of emergent planning capabilities in large language models (LLMs), works have been proposed to investigate the planning effectiveness of LLMs, without considering any utilization of off-the-shelf planning techniques in LLMs. In this paper, we aim to further study the insight of the planning capability of LLMs by investigating the roles of LLMs in off-the-shelf planning frameworks. To do this, we investigate the effectiveness of embedding LLMs into one of the well-known planning frameworks, graph-based planning, proposing a novel LLMs-based planning framework with LLMs embedded in two levels of planning graphs, i.e., mutual constraints generation level and constraints solving level. We empirically exhibit the effectiveness of our proposed framework in various planning domains.",
-        "subjects": [
-            "cs.AI"
         ],
         "comment": null
     },

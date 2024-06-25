@@ -1,5 +1,79 @@
 [
     {
+        "paper id": "2404.10830",
+        "abstract url": "https://arxiv.org/abs/2404.10830",
+        "title": "Fewer Truncations Improve Language Modeling",
+        "rating": "2.5",
+        "keywords": [
+            [
+                "training efficiency"
+            ],
+            [
+                "cs.AI",
+                "cs.LG",
+                "cs.CL"
+            ],
+            [
+                "ICML"
+            ]
+        ],
+        "abstract": "In large language model training, input documents are typically concatenated together and then split into sequences of equal length to avoid padding tokens. Despite its efficiency, the concatenation approach compromises data integrity -- it inevitably breaks many documents into incomplete pieces, leading to excessive truncations that hinder the model from learning to compose logically coherent and factually consistent content that is grounded on the complete context. To address the issue, we propose Best-fit Packing, a scalable and efficient method that packs documents into training sequences through length-aware combinatorial optimization. Our method completely eliminates unnecessary truncations while retaining the same training efficiency as concatenation. Empirical results from both text and code pre-training show that our method achieves superior performance (e.g., relatively +4.7% on reading comprehension; +16.8% in context following; and +9.2% on program synthesis), and reduces closed-domain hallucination effectively by up to 58.3%.",
+        "subjects": [
+            "cs.CL",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "comment": "ICML 2024"
+    },
+    {
+        "paper id": "2404.10880",
+        "abstract url": "https://arxiv.org/abs/2404.10880",
+        "title": "HumMUSS: Human Motion Understanding using State Space Models",
+        "rating": "2.5",
+        "keywords": [
+            [
+                "memory efficient"
+            ],
+            [
+                "cs.AI",
+                "cs.CV"
+            ],
+            [
+                "CVPR"
+            ]
+        ],
+        "abstract": "Understanding human motion from video is essential for a range of applications, including pose estimation, mesh recovery and action recognition. While state-of-the-art methods predominantly rely on transformer-based architectures, these approaches have limitations in practical scenarios. Transformers are slower when sequentially predicting on a continuous stream of frames in real-time, and do not generalize to new frame rates. In light of these constraints, we propose a novel attention-free spatiotemporal model for human motion understanding building upon recent advancements in state space models. Our model not only matches the performance of transformer-based models in various motion understanding tasks but also brings added benefits like adaptability to different video frame rates and enhanced training speed when working with longer sequence of keypoints. Moreover, the proposed model supports both offline and real-time applications. For real-time sequential prediction, our model is both memory efficient and several times faster than transformer-based approaches while maintaining their high accuracy.",
+        "subjects": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "comment": "CVPR 24"
+    },
+    {
+        "paper id": "2404.10308",
+        "abstract url": "https://arxiv.org/abs/2404.10308",
+        "title": "Hierarchical Context Merging: Better Long Context Understanding for Pre-trained LLMs",
+        "rating": "2",
+        "keywords": [
+            [
+                "memory efficiency"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ],
+            [
+                "ICLR"
+            ]
+        ],
+        "abstract": "Large language models (LLMs) have shown remarkable performance in various natural language processing tasks. However, a primary constraint they face is the context limit, i.e., the maximum number of tokens they can process. Previous works have explored architectural changes and modifications in positional encoding to relax the constraint, but they often require expensive training or do not address the computational demands of self-attention. In this paper, we present Hierarchical cOntext MERging (HOMER), a new training-free scheme designed to overcome the limitations. HOMER uses a divide-and-conquer algorithm, dividing long inputs into manageable chunks. Each chunk is then processed collectively, employing a hierarchical strategy that merges adjacent chunks at progressive transformer layers. A token reduction technique precedes each merging, ensuring memory usage efficiency. We also propose an optimized computational order reducing the memory requirement to logarithmically scale with respect to input length, making it especially favorable for environments with tight memory restrictions. Our experiments demonstrate the proposed method's superior performance and memory efficiency, enabling the broader use of LLMs in contexts requiring extended context. Code is available at https://github.com/alinlab/HOMER.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI"
+        ],
+        "comment": "Accepted to ICLR 2024. The first two authors contributed equally"
+    },
+    {
         "paper id": "2404.10357",
         "abstract url": "https://arxiv.org/abs/2404.10357",
         "title": "Optimization of Prompt Learning via Multi-Knowledge Representation for Vision-Language Models",
@@ -193,53 +267,25 @@
         "comment": "Accepted to CVPR2024 (Highlight)"
     },
     {
-        "paper id": "2404.10626",
-        "abstract url": "https://arxiv.org/abs/2404.10626",
-        "title": "Exploring selective image matching methods for zero-shot and few-sample unsupervised domain adaptation of urban canopy prediction",
+        "paper id": "2404.10597",
+        "abstract url": "https://arxiv.org/abs/2404.10597",
+        "title": "Hardware-aware training of models with synaptic delays for digital event-driven neuromorphic processors",
         "rating": "1.5",
         "keywords": [
             [
-                "cs.CV"
+                "memory-efficient"
             ],
             [
-                "ICLR"
+                "cs.AI"
             ]
         ],
-        "abstract": "We explore simple methods for adapting a trained multi-task UNet which predicts canopy cover and height to a new geographic setting using remotely sensed data without the need of training a domain-adaptive classifier and extensive fine-tuning. Extending previous research, we followed a selective alignment process to identify similar images in the two geographical domains and then tested an array of data-based unsupervised domain adaptation approaches in a zero-shot setting as well as with a small amount of fine-tuning. We find that the selective aligned data-based image matching methods produce promising results in a zero-shot setting, and even more so with a small amount of fine-tuning. These methods outperform both an untransformed baseline and a popular data-based image-to-image translation model. The best performing methods were pixel distribution adaptation and fourier domain adaptation on the canopy cover and height tasks respectively.",
+        "abstract": "Configurable synaptic delays are a basic feature in many neuromorphic neural network hardware accelerators. However, they have been rarely used in model implementations, despite their promising impact on performance and efficiency in tasks that exhibit complex (temporal) dynamics, as it has been unclear how to optimize them. In this work, we propose a framework to train and deploy, in digital neuromorphic hardware, highly performing spiking neural network models (SNNs) where apart from the synaptic weights, the per-synapse delays are also co-optimized. Leveraging spike-based back-propagation-through-time, the training accounts for both platform constraints, such as synaptic weight precision and the total number of parameters per core, as a function of the network size. In addition, a delay pruning technique is used to reduce memory footprint with a low cost in performance. We evaluate trained models in two neuromorphic digital hardware platforms: Intel Loihi and Imec Seneca. Loihi offers synaptic delay support using the so-called Ring-Buffer hardware structure. Seneca does not provide native hardware support for synaptic delays. A second contribution of this paper is therefore a novel area- and memory-efficient hardware structure for acceleration of synaptic delays, which we have integrated in Seneca. The evaluated benchmark involves several models for solving the SHD (Spiking Heidelberg Digits) classification task, where minimal accuracy degradation during the transition from software to hardware is demonstrated. To our knowledge, this is the first work showcasing how to train and deploy hardware-aware models parameterized with synaptic delays, on multicore neuromorphic hardware accelerators.",
         "subjects": [
-            "cs.CV",
-            "stat.AP"
-        ],
-        "comment": "ICLR 2024 Machine Learning for Remote Sensing (ML4RS) Workshop"
-    },
-    {
-        "paper id": "2404.10830",
-        "abstract url": "https://arxiv.org/abs/2404.10830",
-        "title": "Fewer Truncations Improve Language Modeling",
-        "rating": "1.5",
-        "keywords": [
-            [
-                "training efficiency"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.AI",
-                "cs.LG",
-                "cs.CL"
-            ],
-            [
-                "ICML"
-            ]
-        ],
-        "abstract": "In large language model training, input documents are typically concatenated together and then split into sequences of equal length to avoid padding tokens. Despite its efficiency, the concatenation approach compromises data integrity -- it inevitably breaks many documents into incomplete pieces, leading to excessive truncations that hinder the model from learning to compose logically coherent and factually consistent content that is grounded on the complete context. To address the issue, we propose Best-fit Packing, a scalable and efficient method that packs documents into training sequences through length-aware combinatorial optimization. Our method completely eliminates unnecessary truncations while retaining the same training efficiency as concatenation. Empirical results from both text and code pre-training show that our method achieves superior performance (e.g., relatively +4.7% on reading comprehension; +16.8% in context following; and +9.2% on program synthesis), and reduces closed-domain hallucination effectively by up to 58.3%.",
-        "subjects": [
-            "cs.CL",
+            "cs.NE",
             "cs.AI",
-            "cs.LG"
+            "cs.ET"
         ],
-        "comment": "ICML 2024"
+        "comment": null
     },
     {
         "paper id": "2404.10841",
@@ -259,27 +305,6 @@
             "cs.CV"
         ],
         "comment": "9 pages, 5 figures, this paper has been submitted and accepted for publication at CVPRW 2024"
-    },
-    {
-        "paper id": "2404.10880",
-        "abstract url": "https://arxiv.org/abs/2404.10880",
-        "title": "HumMUSS: Human Motion Understanding using State Space Models",
-        "rating": "1.5",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.CV"
-            ],
-            [
-                "CVPR"
-            ]
-        ],
-        "abstract": "Understanding human motion from video is essential for a range of applications, including pose estimation, mesh recovery and action recognition. While state-of-the-art methods predominantly rely on transformer-based architectures, these approaches have limitations in practical scenarios. Transformers are slower when sequentially predicting on a continuous stream of frames in real-time, and do not generalize to new frame rates. In light of these constraints, we propose a novel attention-free spatiotemporal model for human motion understanding building upon recent advancements in state space models. Our model not only matches the performance of transformer-based models in various motion understanding tasks but also brings added benefits like adaptability to different video frame rates and enhanced training speed when working with longer sequence of keypoints. Moreover, the proposed model supports both offline and real-time applications. For real-time sequential prediction, our model is both memory efficient and several times faster than transformer-based approaches while maintaining their high accuracy.",
-        "subjects": [
-            "cs.CV",
-            "cs.AI"
-        ],
-        "comment": "CVPR 24"
     },
     {
         "paper id": "2404.10966",
@@ -371,20 +396,21 @@
         "comment": "Accepted at ICLR 2024"
     },
     {
-        "paper id": "2404.10305",
-        "abstract url": "https://arxiv.org/abs/2404.10305",
-        "title": "TC-OCR: TableCraft OCR for Efficient Detection & Recognition of Table Structure & Content",
+        "paper id": "2404.10292",
+        "abstract url": "https://arxiv.org/abs/2404.10292",
+        "title": "From Data Deluge to Data Curation: A Filtering-WoRA Paradigm for Efficient Text-based Person Search",
         "rating": "1",
         "keywords": [
             [
                 "cs.CV"
             ]
         ],
-        "abstract": "The automatic recognition of tabular data in document images presents a significant challenge due to the diverse range of table styles and complex structures. Tables offer valuable content representation, enhancing the predictive capabilities of various systems such as search engines and Knowledge Graphs. Addressing the two main problems, namely table detection (TD) and table structure recognition (TSR), has traditionally been approached independently. In this research, we propose an end-to-end pipeline that integrates deep learning models, including DETR, CascadeTabNet, and PP OCR v2, to achieve comprehensive image-based table recognition. This integrated approach effectively handles diverse table styles, complex structures, and image distortions, resulting in improved accuracy and efficiency compared to existing methods like Table Transformers. Our system achieves simultaneous table detection (TD), table structure recognition (TSR), and table content recognition (TCR), preserving table structures and accurately extracting tabular data from document images. The integration of multiple models addresses the intricacies of table recognition, making our approach a promising solution for image-based table understanding, data extraction, and information retrieval applications. Our proposed approach achieves an IOU of 0.96 and an OCR Accuracy of 78%, showcasing a remarkable improvement of approximately 25% in the OCR Accuracy compared to the previous Table Transformer approach.",
+        "abstract": "In text-based person search endeavors, data generation has emerged as a prevailing practice, addressing concerns over privacy preservation and the arduous task of manual annotation. Although the number of synthesized data can be infinite in theory, the scientific conundrum persists that how much generated data optimally fuels subsequent model training. We observe that only a subset of the data in these constructed datasets plays a decisive role. Therefore, we introduce a new Filtering-WoRA paradigm, which contains a filtering algorithm to identify this crucial data subset and WoRA (Weighted Low-Rank Adaptation) learning strategy for light fine-tuning. The filtering algorithm is based on the cross-modality relevance to remove the lots of coarse matching synthesis pairs. As the number of data decreases, we do not need to fine-tune the entire model. Therefore, we propose a WoRA learning strategy to efficiently update a minimal portion of model parameters. WoRA streamlines the learning process, enabling heightened efficiency in extracting knowledge from fewer, yet potent, data instances. Extensive experimentation validates the efficacy of pretraining, where our model achieves advanced and efficient retrieval performance on challenging real-world benchmarks. Notably, on the CUHK-PEDES dataset, we have achieved a competitive mAP of 67.02% while reducing model training time by 19.82%.",
         "subjects": [
-            "cs.CV"
+            "cs.CV",
+            "cs.MM"
         ],
-        "comment": "8 pages, 2 figures, Workshop of 1st MMIR Deep Multimodal Learning for Information Retrieval"
+        "comment": null
     },
     {
         "paper id": "2404.10306",
@@ -401,27 +427,6 @@
             "cs.CL"
         ],
         "comment": "43 pages, 10 figures"
-    },
-    {
-        "paper id": "2404.10308",
-        "abstract url": "https://arxiv.org/abs/2404.10308",
-        "title": "Hierarchical Context Merging: Better Long Context Understanding for Pre-trained LLMs",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.LG"
-            ],
-            [
-                "ICLR"
-            ]
-        ],
-        "abstract": "Large language models (LLMs) have shown remarkable performance in various natural language processing tasks. However, a primary constraint they face is the context limit, i.e., the maximum number of tokens they can process. Previous works have explored architectural changes and modifications in positional encoding to relax the constraint, but they often require expensive training or do not address the computational demands of self-attention. In this paper, we present Hierarchical cOntext MERging (HOMER), a new training-free scheme designed to overcome the limitations. HOMER uses a divide-and-conquer algorithm, dividing long inputs into manageable chunks. Each chunk is then processed collectively, employing a hierarchical strategy that merges adjacent chunks at progressive transformer layers. A token reduction technique precedes each merging, ensuring memory usage efficiency. We also propose an optimized computational order reducing the memory requirement to logarithmically scale with respect to input length, making it especially favorable for environments with tight memory restrictions. Our experiments demonstrate the proposed method's superior performance and memory efficiency, enabling the broader use of LLMs in contexts requiring extended context. Code is available at https://github.com/alinlab/HOMER.",
-        "subjects": [
-            "cs.LG",
-            "cs.AI"
-        ],
-        "comment": "Accepted to ICLR 2024. The first two authors contributed equally"
     },
     {
         "paper id": "2404.10314",
@@ -802,6 +807,7 @@
         "rating": "1",
         "keywords": [
             [
+                "memory-efficient",
                 "GPU memory"
             ],
             [
@@ -859,6 +865,24 @@
         "comment": "20 pages"
     },
     {
+        "paper id": "2404.10578",
+        "abstract url": "https://arxiv.org/abs/2404.10578",
+        "title": "Vivo : une approche multimodale de la synthese concatenative par corpus dans le cadre d'une oeuvre audiovisuelle immersive",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.SD",
+                "eess.AS"
+            ]
+        ],
+        "abstract": "Which visual descriptors are suitable for multi-modal interaction and how to integrate them via real-time video data analysis into a corpus-based concatenative synthesis sound system.",
+        "subjects": [
+            "cs.SD",
+            "eess.AS"
+        ],
+        "comment": "in French language"
+    },
+    {
         "paper id": "2404.10579",
         "abstract url": "https://arxiv.org/abs/2404.10579",
         "title": "The application of Augmented Reality (AR) in Remote Work and Education",
@@ -873,6 +897,22 @@
         "subjects": [
             "cs.AI",
             "cs.CL"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2404.10584",
+        "abstract url": "https://arxiv.org/abs/2404.10584",
+        "title": "ReWiTe: Realistic Wide-angle and Telephoto Dual Camera Fusion Dataset via Beam Splitter Camera Rig",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "The fusion of images from dual camera systems featuring a wide-angle and a telephoto camera has become a hotspot problem recently. By integrating simultaneously captured wide-angle and telephoto images from these systems, the resulting fused image achieves a wide field of view (FOV) coupled with high-definition quality. Existing approaches are mostly deep learning methods, and predominantly rely on supervised learning, where the training dataset plays a pivotal role. However, current datasets typically adopt a data synthesis approach generate input pairs of wide-angle and telephoto images alongside ground-truth images. Notably, the wide-angle inputs are synthesized rather than captured using real wide-angle cameras, and the ground-truth image is captured by wide-angle camera whose quality is substantially lower than that of input telephoto images captured by telephoto cameras. To address these limitations, we introduce a novel hardware setup utilizing a beam splitter to simultaneously capture three images, i.e. input pairs and ground-truth images, from two authentic cellphones equipped with wide-angle and telephoto dual cameras. Specifically, the wide-angle and telephoto images captured by cellphone 2 serve as the input pair, while the telephoto image captured by cellphone 1, which is calibrated to match the optical path of the wide-angle image from cellphone 2, serves as the ground-truth image, maintaining quality on par with the input telephoto image. Experiments validate the efficacy of our newly introduced dataset, named ReWiTe, significantly enhances the performance of various existing methods for real-world wide-angle and telephoto dual image fusion tasks.",
+        "subjects": [
+            "cs.CV"
         ],
         "comment": null
     },
@@ -1131,6 +1171,24 @@
         "comment": null
     },
     {
+        "paper id": "2404.10774",
+        "abstract url": "https://arxiv.org/abs/2404.10774",
+        "title": "MiniCheck: Efficient Fact-Checking of LLMs on Grounding Documents",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.AI",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Recognizing if LLM output can be grounded in evidence is central to many tasks in NLP: retrieval-augmented generation, summarization, document-grounded dialogue, and more. Current approaches to this kind of \"fact-checking\" are based on verifying each piece of a model generation against potential evidence using an LLM. However, this process can be very computationally expensive, requiring many calls to LLMs to check a single response. In this work, we show how to build small models that have GPT-4-level performance but for 400x lower cost. We do this by constructing synthetic training data with GPT-4, which involves creating realistic yet challenging instances of factual errors via a structured generation procedure. Training on this data teaches models to check each fact in the claim and recognize synthesis of information across sentences. For evaluation, we unify pre-existing datasets into a benchmark LLM-AggreFact, collected from recent work on fact-checking and grounding LLM generations. Our best system MiniCheck-FT5 (770M parameters) outperforms all systems of comparable size and reaches GPT-4 accuracy. We release LLM-AggreFact, code for data synthesis, and models.",
+        "subjects": [
+            "cs.CL",
+            "cs.AI"
+        ],
+        "comment": "LLM-AggreFact benchmark, MiniCheck models, data generation code at https://github.com/Liyan06/MiniCheck"
+    },
+    {
         "paper id": "2404.10786",
         "abstract url": "https://arxiv.org/abs/2404.10786",
         "title": "Sustainability of Data Center Digital Twins with Reinforcement Learning",
@@ -1291,25 +1349,6 @@
         "abstract": "In this paper, we aim to generate text classification data given arbitrary class definitions (i.e., user instruction), so one can train a small text classifier without any human annotation or raw corpus. Compared with pioneer attempts, our proposed Incubator is the first framework that can handle complicated and even mutually dependent classes (e.g., \"TED Talk given by Educator\" and \"Other\"). Specifically, Incubator is an LLM firstly tuned on the instruction-to-data mappings that we obtained from classification datasets and descriptions on HuggingFace together with in-context augmentation by GPT-4. We then refine Incubator by learning on the cluster centers of semantic textual embeddings to emphasize the uniformity and semantic diversity in generations. We compare Incubator on various classification tasks with strong baselines such as direct LLM-based inference and training data generation by prompt engineering. Experiments show Incubator is able to (1) perform well on traditional benchmarks, (2) take label dependency and user preference into consideration, and (3) enable logical text mining by incubating multiple classifiers.",
         "subjects": [
             "cs.CL"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2404.10896",
-        "abstract url": "https://arxiv.org/abs/2404.10896",
-        "title": "From a Lossless (~1.5:1) Compression Algorithm for Llama2 7B Weights to Variable Precision, Variable Range, Compressed Numeric Data Types for CNNs and LLMs",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.CV"
-            ]
-        ],
-        "abstract": "This paper starts with a simple lossless ~1.5:1 compression algorithm for the weights of the Large Language Model (LLM) Llama2 7B [1] that can be implemented in ~200 LUTs in AMD FPGAs, processing over 800 million bfloat16 numbers per second. This framework is then extended to variable precision, variable range, compressed numerical data types that are a user defined super set of both floats and posits [2]. The paper then discusses a simple hardware implementation of such format based on ANS (Asymmetrical Numeral Systems) [3] that acts as a bridge between this flexible data format and a computational engine while, at the same time, achieving bandwidth reduction. An example of a token factory using weight compression and sharing is also given.",
-        "subjects": [
-            "cs.CV",
-            "cs.AI",
-            "cs.AR"
         ],
         "comment": null
     },
@@ -1854,6 +1893,28 @@
         "comment": null
     },
     {
+        "paper id": "2404.10408",
+        "abstract url": "https://arxiv.org/abs/2404.10408",
+        "title": "Adversarial Identity Injection for Semantic Face Image Synthesis",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "attack"
+            ],
+            [
+                "cs.CV"
+            ],
+            [
+                "CVPR"
+            ]
+        ],
+        "abstract": "Nowadays, deep learning models have reached incredible performance in the task of image generation. Plenty of literature works address the task of face generation and editing, with human and automatic systems that struggle to distinguish what's real from generated. Whereas most systems reached excellent visual generation quality, they still face difficulties in preserving the identity of the starting input subject. Among all the explored techniques, Semantic Image Synthesis (SIS) methods, whose goal is to generate an image conditioned on a semantic segmentation mask, are the most promising, even though preserving the perceived identity of the input subject is not their main concern. Therefore, in this paper, we investigate the problem of identity preservation in face image generation and present an SIS architecture that exploits a cross-attention mechanism to merge identity, style, and semantic features to generate faces whose identities are as similar as possible to the input ones. Experimental results reveal that the proposed method is not only suitable for preserving the identity but is also effective in the face recognition adversarial attack, i.e. hiding a second identity in the generated faces.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Paper accepted at CVPR 2024 Biometrics Workshop"
+    },
+    {
         "paper id": "2404.10413",
         "abstract url": "https://arxiv.org/abs/2404.10413",
         "title": "VDTuner: Automated Performance Tuning for Vector Data Management Systems",
@@ -2028,24 +2089,6 @@
             "cs.CV"
         ],
         "comment": "Accepted as a short paper to the GCV Workshop at CVPR'24"
-    },
-    {
-        "paper id": "2404.10597",
-        "abstract url": "https://arxiv.org/abs/2404.10597",
-        "title": "Hardware-aware training of models with synaptic delays for digital event-driven neuromorphic processors",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "Configurable synaptic delays are a basic feature in many neuromorphic neural network hardware accelerators. However, they have been rarely used in model implementations, despite their promising impact on performance and efficiency in tasks that exhibit complex (temporal) dynamics, as it has been unclear how to optimize them. In this work, we propose a framework to train and deploy, in digital neuromorphic hardware, highly performing spiking neural network models (SNNs) where apart from the synaptic weights, the per-synapse delays are also co-optimized. Leveraging spike-based back-propagation-through-time, the training accounts for both platform constraints, such as synaptic weight precision and the total number of parameters per core, as a function of the network size. In addition, a delay pruning technique is used to reduce memory footprint with a low cost in performance. We evaluate trained models in two neuromorphic digital hardware platforms: Intel Loihi and Imec Seneca. Loihi offers synaptic delay support using the so-called Ring-Buffer hardware structure. Seneca does not provide native hardware support for synaptic delays. A second contribution of this paper is therefore a novel area- and memory-efficient hardware structure for acceleration of synaptic delays, which we have integrated in Seneca. The evaluated benchmark involves several models for solving the SHD (Spiking Heidelberg Digits) classification task, where minimal accuracy degradation during the transition from software to hardware is demonstrated. To our knowledge, this is the first work showcasing how to train and deploy hardware-aware models parameterized with synaptic delays, on multicore neuromorphic hardware accelerators.",
-        "subjects": [
-            "cs.NE",
-            "cs.AI",
-            "cs.ET"
-        ],
-        "comment": null
     },
     {
         "paper id": "2404.10645",
@@ -2606,22 +2649,6 @@
         "comment": null
     },
     {
-        "paper id": "2404.11027",
-        "abstract url": "https://arxiv.org/abs/2404.11027",
-        "title": "Empowering Large Language Models on Robotic Manipulation with Affordance Prompting",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "While large language models (LLMs) are successful in completing various language processing tasks, they easily fail to interact with the physical world by generating control sequences properly. We find that the main reason is that LLMs are not grounded in the physical world. Existing LLM-based approaches circumvent this problem by relying on additional pre-defined skills or pre-trained sub-policies, making it hard to adapt to new tasks. In contrast, we aim to address this problem and explore the possibility to prompt pre-trained LLMs to accomplish a series of robotic manipulation tasks in a training-free paradigm. Accordingly, we propose a framework called LLM+A(ffordance) where the LLM serves as both the sub-task planner (that generates high-level plans) and the motion controller (that generates low-level control sequences). To ground these plans and control sequences on the physical world, we develop the affordance prompting technique that stimulates the LLM to 1) predict the consequences of generated plans and 2) generate affordance values for relevant objects. Empirically, we evaluate the effectiveness of LLM+A in various language-conditioned robotic manipulation tasks, which show that our approach substantially improves performance by enhancing the feasibility of generated plans and control and can easily generalize to different environments.",
-        "subjects": [
-            "cs.AI"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2404.11029",
         "abstract url": "https://arxiv.org/abs/2404.11029",
         "title": "Student self-management, academic achievement: Exploring the mediating role of self-efficacy and the moderating influence of gender insights from a survey conducted in 3 universities in America",
@@ -2704,26 +2731,6 @@
             "cs.AI",
             "cs.DC",
             "q-bio.QM"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2404.10292",
-        "abstract url": "https://arxiv.org/abs/2404.10292",
-        "title": "From Data Deluge to Data Curation: A Filtering-WoRA Paradigm for Efficient Text-based Person Search",
-        "rating": "0",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "In text-based person search endeavors, data generation has emerged as a prevailing practice, addressing concerns over privacy preservation and the arduous task of manual annotation. Although the number of synthesized data can be infinite in theory, the scientific conundrum persists that how much generated data optimally fuels subsequent model training. We observe that only a subset of the data in these constructed datasets plays a decisive role. Therefore, we introduce a new Filtering-WoRA paradigm, which contains a filtering algorithm to identify this crucial data subset and WoRA (Weighted Low-Rank Adaptation) learning strategy for light fine-tuning. The filtering algorithm is based on the cross-modality relevance to remove the lots of coarse matching synthesis pairs. As the number of data decreases, we do not need to fine-tune the entire model. Therefore, we propose a WoRA learning strategy to efficiently update a minimal portion of model parameters. WoRA streamlines the learning process, enabling heightened efficiency in extracting knowledge from fewer, yet potent, data instances. Extensive experimentation validates the efficacy of pretraining, where our model achieves advanced and efficient retrieval performance on challenging real-world benchmarks. Notably, on the CUHK-PEDES dataset, we have achieved a competitive mAP of 67.02% while reducing model training time by 19.82%.",
-        "subjects": [
-            "cs.CV",
-            "cs.MM"
         ],
         "comment": null
     },
@@ -2823,6 +2830,46 @@
         "comment": null
     },
     {
+        "paper id": "2404.10441",
+        "abstract url": "https://arxiv.org/abs/2404.10441",
+        "title": "1st Place Solution for ICCV 2023 OmniObject3D Challenge: Sparse-View Reconstruction",
+        "rating": "0",
+        "keywords": [
+            [
+                "depth",
+                "NeRF"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "In this report, we present the 1st place solution for ICCV 2023 OmniObject3D Challenge: Sparse-View Reconstruction. The challenge aims to evaluate approaches for novel view synthesis and surface reconstruction using only a few posed images of each object. We utilize Pixel-NeRF as the basic model, and apply depth supervision as well as coarse-to-fine positional encoding. The experiments demonstrate the effectiveness of our approach in improving sparse-view reconstruction quality. We ranked first in the final test with a PSNR of 25.44614.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2404.10484",
+        "abstract url": "https://arxiv.org/abs/2404.10484",
+        "title": "AbsGS: Recovering Fine Details for 3D Gaussian Splatting",
+        "rating": "0",
+        "keywords": [
+            [
+                "3D",
+                "Gaussian Splatting"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "3D Gaussian Splatting (3D-GS) technique couples 3D Gaussian primitives with differentiable rasterization to achieve high-quality novel view synthesis results while providing advanced real-time rendering performance. However, due to the flaw of its adaptive density control strategy in 3D-GS, it frequently suffers from over-reconstruction issue in intricate scenes containing high-frequency details, leading to blurry rendered images. The underlying reason for the flaw has still been under-explored. In this work, we present a comprehensive analysis of the cause of aforementioned artifacts, namely gradient collision, which prevents large Gaussians in over-reconstructed regions from splitting. To address this issue, we propose the novel homodirectional view-space positional gradient as the criterion for densification. Our strategy efficiently identifies large Gaussians in over-reconstructed regions, and recovers fine details by splitting. We evaluate our proposed method on various challenging datasets. The experimental results indicate that our approach achieves the best rendering quality with reduced or similar memory consumption. Our method is easy to implement and can be incorporated into a wide variety of most recent Gaussian Splatting-based methods. We will open source our codes upon formal publication. Our project page is available at: https://ty424.github.io/AbsGS.github.io/",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2404.10506",
         "abstract url": "https://arxiv.org/abs/2404.10506",
         "title": "Restoring Connectivity in Vascular Segmentation using a Learned Post-Processing Model",
@@ -2906,46 +2953,6 @@
             "cs.CV"
         ],
         "comment": "This submission includes the paper and supplementary material. 24 pages, 11 figures"
-    },
-    {
-        "paper id": "2404.10578",
-        "abstract url": "https://arxiv.org/abs/2404.10578",
-        "title": "Vivo : une approche multimodale de la synthese concatenative par corpus dans le cadre d'une oeuvre audiovisuelle immersive",
-        "rating": "0",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.SD",
-                "eess.AS"
-            ]
-        ],
-        "abstract": "Which visual descriptors are suitable for multi-modal interaction and how to integrate them via real-time video data analysis into a corpus-based concatenative synthesis sound system.",
-        "subjects": [
-            "cs.SD",
-            "eess.AS"
-        ],
-        "comment": "in French language"
-    },
-    {
-        "paper id": "2404.10584",
-        "abstract url": "https://arxiv.org/abs/2404.10584",
-        "title": "ReWiTe: Realistic Wide-angle and Telephoto Dual Camera Fusion Dataset via Beam Splitter Camera Rig",
-        "rating": "0",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "The fusion of images from dual camera systems featuring a wide-angle and a telephoto camera has become a hotspot problem recently. By integrating simultaneously captured wide-angle and telephoto images from these systems, the resulting fused image achieves a wide field of view (FOV) coupled with high-definition quality. Existing approaches are mostly deep learning methods, and predominantly rely on supervised learning, where the training dataset plays a pivotal role. However, current datasets typically adopt a data synthesis approach generate input pairs of wide-angle and telephoto images alongside ground-truth images. Notably, the wide-angle inputs are synthesized rather than captured using real wide-angle cameras, and the ground-truth image is captured by wide-angle camera whose quality is substantially lower than that of input telephoto images captured by telephoto cameras. To address these limitations, we introduce a novel hardware setup utilizing a beam splitter to simultaneously capture three images, i.e. input pairs and ground-truth images, from two authentic cellphones equipped with wide-angle and telephoto dual cameras. Specifically, the wide-angle and telephoto images captured by cellphone 2 serve as the input pair, while the telephoto image captured by cellphone 1, which is calibrated to match the optical path of the wide-angle image from cellphone 2, serves as the ground-truth image, maintaining quality on par with the input telephoto image. Experiments validate the efficacy of our newly introduced dataset, named ReWiTe, significantly enhances the performance of various existing methods for real-world wide-angle and telephoto dual image fusion tasks.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
     },
     {
         "paper id": "2404.10593",
@@ -3032,25 +3039,24 @@
         "comment": null
     },
     {
-        "paper id": "2404.10774",
-        "abstract url": "https://arxiv.org/abs/2404.10774",
-        "title": "MiniCheck: Efficient Fact-Checking of LLMs on Grounding Documents",
+        "paper id": "2404.10772",
+        "abstract url": "https://arxiv.org/abs/2404.10772",
+        "title": "Gaussian Opacity Fields: Efficient and Compact Surface Reconstruction in Unbounded Scenes",
         "rating": "0",
         "keywords": [
             [
-                "synthesis"
+                "3D",
+                "Gaussian Splatting"
             ],
             [
-                "cs.AI",
-                "cs.CL"
+                "cs.CV"
             ]
         ],
-        "abstract": "Recognizing if LLM output can be grounded in evidence is central to many tasks in NLP: retrieval-augmented generation, summarization, document-grounded dialogue, and more. Current approaches to this kind of \"fact-checking\" are based on verifying each piece of a model generation against potential evidence using an LLM. However, this process can be very computationally expensive, requiring many calls to LLMs to check a single response. In this work, we show how to build small models that have GPT-4-level performance but for 400x lower cost. We do this by constructing synthetic training data with GPT-4, which involves creating realistic yet challenging instances of factual errors via a structured generation procedure. Training on this data teaches models to check each fact in the claim and recognize synthesis of information across sentences. For evaluation, we unify pre-existing datasets into a benchmark LLM-AggreFact, collected from recent work on fact-checking and grounding LLM generations. Our best system MiniCheck-FT5 (770M parameters) outperforms all systems of comparable size and reaches GPT-4 accuracy. We release LLM-AggreFact, code for data synthesis, and models.",
+        "abstract": "Recently, 3D Gaussian Splatting (3DGS) has demonstrated impressive novel view synthesis results, while allowing the rendering of high-resolution images in real-time. However, leveraging 3D Gaussians for surface reconstruction poses significant challenges due to the explicit and disconnected nature of 3D Gaussians. In this work, we present Gaussian Opacity Fields (GOF), a novel approach for efficient, high-quality, and compact surface reconstruction in unbounded scenes. Our GOF is derived from ray-tracing-based volume rendering of 3D Gaussians, enabling direct geometry extraction from 3D Gaussians by identifying its levelset, without resorting to Poisson reconstruction or TSDF fusion as in previous work. We approximate the surface normal of Gaussians as the normal of the ray-Gaussian intersection plane, enabling the application of regularization that significantly enhances geometry. Furthermore, we develop an efficient geometry extraction method utilizing marching tetrahedra, where the tetrahedral grids are induced from 3D Gaussians and thus adapt to the scene's complexity. Our evaluations reveal that GOF surpasses existing 3DGS-based methods in surface reconstruction and novel view synthesis. Further, it compares favorably to, or even outperforms, neural implicit methods in both quality and speed.",
         "subjects": [
-            "cs.CL",
-            "cs.AI"
+            "cs.CV"
         ],
-        "comment": "LLM-AggreFact benchmark, MiniCheck models, data generation code at https://github.com/Liyan06/MiniCheck"
+        "comment": "Project page: https://niujinshuchong.github.io/gaussian-opacity-fields"
     },
     {
         "paper id": "2404.10887",
@@ -3335,31 +3341,6 @@
         "comment": null
     },
     {
-        "paper id": "2404.10408",
-        "abstract url": "https://arxiv.org/abs/2404.10408",
-        "title": "Adversarial Identity Injection for Semantic Face Image Synthesis",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "Synthesis"
-            ],
-            [
-                "attack"
-            ],
-            [
-                "cs.CV"
-            ],
-            [
-                "CVPR"
-            ]
-        ],
-        "abstract": "Nowadays, deep learning models have reached incredible performance in the task of image generation. Plenty of literature works address the task of face generation and editing, with human and automatic systems that struggle to distinguish what's real from generated. Whereas most systems reached excellent visual generation quality, they still face difficulties in preserving the identity of the starting input subject. Among all the explored techniques, Semantic Image Synthesis (SIS) methods, whose goal is to generate an image conditioned on a semantic segmentation mask, are the most promising, even though preserving the perceived identity of the input subject is not their main concern. Therefore, in this paper, we investigate the problem of identity preservation in face image generation and present an SIS architecture that exploits a cross-attention mechanism to merge identity, style, and semantic features to generate faces whose identities are as similar as possible to the input ones. Experimental results reveal that the proposed method is not only suitable for preserving the identity but is also effective in the face recognition adversarial attack, i.e. hiding a second identity in the generated faces.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Paper accepted at CVPR 2024 Biometrics Workshop"
-    },
-    {
         "paper id": "2404.10443",
         "abstract url": "https://arxiv.org/abs/2404.10443",
         "title": "AGHINT: Attribute-Guided Representation Learning on Heterogeneous Information Networks with Transformer",
@@ -3535,6 +3516,29 @@
             "cs.CV"
         ],
         "comment": "CVPRW"
+    },
+    {
+        "paper id": "2404.10626",
+        "abstract url": "https://arxiv.org/abs/2404.10626",
+        "title": "Exploring selective image matching methods for zero-shot and few-sample unsupervised domain adaptation of urban canopy prediction",
+        "rating": "-0.5",
+        "keywords": [
+            [
+                "remotely sensed"
+            ],
+            [
+                "cs.CV"
+            ],
+            [
+                "ICLR"
+            ]
+        ],
+        "abstract": "We explore simple methods for adapting a trained multi-task UNet which predicts canopy cover and height to a new geographic setting using remotely sensed data without the need of training a domain-adaptive classifier and extensive fine-tuning. Extending previous research, we followed a selective alignment process to identify similar images in the two geographical domains and then tested an array of data-based unsupervised domain adaptation approaches in a zero-shot setting as well as with a small amount of fine-tuning. We find that the selective aligned data-based image matching methods produce promising results in a zero-shot setting, and even more so with a small amount of fine-tuning. These methods outperform both an untransformed baseline and a popular data-based image-to-image translation model. The best performing methods were pixel distribution adaptation and fourier domain adaptation on the canopy cover and height tasks respectively.",
+        "subjects": [
+            "cs.CV",
+            "stat.AP"
+        ],
+        "comment": "ICLR 2024 Machine Learning for Remote Sensing (ML4RS) Workshop"
     },
     {
         "paper id": "2404.10646",
@@ -3874,6 +3878,25 @@
         "comment": "preprint"
     },
     {
+        "paper id": "2404.11027",
+        "abstract url": "https://arxiv.org/abs/2404.11027",
+        "title": "Empowering Large Language Models on Robotic Manipulation with Affordance Prompting",
+        "rating": "-0.5",
+        "keywords": [
+            [
+                "Robotic Manipulation"
+            ],
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "While large language models (LLMs) are successful in completing various language processing tasks, they easily fail to interact with the physical world by generating control sequences properly. We find that the main reason is that LLMs are not grounded in the physical world. Existing LLM-based approaches circumvent this problem by relying on additional pre-defined skills or pre-trained sub-policies, making it hard to adapt to new tasks. In contrast, we aim to address this problem and explore the possibility to prompt pre-trained LLMs to accomplish a series of robotic manipulation tasks in a training-free paradigm. Accordingly, we propose a framework called LLM+A(ffordance) where the LLM serves as both the sub-task planner (that generates high-level plans) and the motion controller (that generates low-level control sequences). To ground these plans and control sequences on the physical world, we develop the affordance prompting technique that stimulates the LLM to 1) predict the consequences of generated plans and 2) generate affordance values for relevant objects. Empirically, we evaluate the effectiveness of LLM+A in various language-conditioned robotic manipulation tasks, which show that our approach substantially improves performance by enhancing the feasibility of generated plans and control and can easily generalize to different environments.",
+        "subjects": [
+            "cs.AI"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2404.11032",
         "abstract url": "https://arxiv.org/abs/2404.11032",
         "title": "CORE: Data Augmentation for Link Prediction via Information Bottleneck",
@@ -3965,6 +3988,25 @@
         "comment": null
     },
     {
+        "paper id": "2404.10305",
+        "abstract url": "https://arxiv.org/abs/2404.10305",
+        "title": "TC-OCR: TableCraft OCR for Efficient Detection & Recognition of Table Structure & Content",
+        "rating": "-1",
+        "keywords": [
+            [
+                "tabular"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "The automatic recognition of tabular data in document images presents a significant challenge due to the diverse range of table styles and complex structures. Tables offer valuable content representation, enhancing the predictive capabilities of various systems such as search engines and Knowledge Graphs. Addressing the two main problems, namely table detection (TD) and table structure recognition (TSR), has traditionally been approached independently. In this research, we propose an end-to-end pipeline that integrates deep learning models, including DETR, CascadeTabNet, and PP OCR v2, to achieve comprehensive image-based table recognition. This integrated approach effectively handles diverse table styles, complex structures, and image distortions, resulting in improved accuracy and efficiency compared to existing methods like Table Transformers. Our system achieves simultaneous table detection (TD), table structure recognition (TSR), and table content recognition (TCR), preserving table structures and accurately extracting tabular data from document images. The integration of multiple models addresses the intricacies of table recognition, making our approach a promising solution for image-based table understanding, data extraction, and information retrieval applications. Our proposed approach achieves an IOU of 0.96 and an OCR Accuracy of 78%, showcasing a remarkable improvement of approximately 25% in the OCR Accuracy compared to the previous Table Transformer approach.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "8 pages, 2 figures, Workshop of 1st MMIR Deep Multimodal Learning for Information Retrieval"
+    },
+    {
         "paper id": "2404.10310",
         "abstract url": "https://arxiv.org/abs/2404.10310",
         "title": "Wireless Earphone-based Real-Time Monitoring of Breathing Exercises: A Deep Learning Approach",
@@ -3997,7 +4039,6 @@
                 "NeRF"
             ],
             [
-                "synthesis",
                 "Super-Resolution"
             ],
             [
@@ -4089,6 +4130,22 @@
         "comment": null
     },
     {
+        "paper id": "2404.10362",
+        "abstract url": "https://arxiv.org/abs/2404.10362",
+        "title": "3DGen: AI-Assisted Generation of Provably Correct Binary Format Parsers",
+        "rating": "-1",
+        "keywords": [
+            [
+                "3D"
+            ]
+        ],
+        "abstract": "Improper parsing of attacker-controlled input is a leading source of software security vulnerabilities, especially when programmers transcribe informal format descriptions in RFCs into efficient parsing logic in low-level, memory unsafe languages. Several researchers have proposed formal specification languages for data formats from which efficient code can be extracted. However, distilling informal requirements into formal specifications is challenging and, despite their benefits, new, formal languages are hard for people to learn and use. In this work, we present 3DGen, a framework that makes use of AI agents to transform mixed informal input, including natural language documents (i.e., RFCs) and example inputs into format specifications in a language called 3D. To support humans in understanding and trusting the generated specifications, 3DGen uses symbolic methods to also synthesize test inputs that can be validated against an external oracle. Symbolic test generation also helps in distinguishing multiple plausible solutions. Through a process of repeated refinement, 3DGen produces a 3D specification that conforms to a test suite, and which yields safe, efficient, provably correct, parsing code in C. We have evaluated 3DGen on 20 Internet standard formats, demonstrating the potential for AI-agents to produce formally verified C code at a non-trivial scale. A key enabler is the use of a domain-specific language to limit AI outputs to a class for which automated, symbolic analysis is tractable.",
+        "subjects": [
+            "cs.SE"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2404.10376",
         "abstract url": "https://arxiv.org/abs/2404.10376",
         "title": "Hunting DeFi Vulnerabilities via Context-Sensitive Concolic Verification",
@@ -4167,8 +4224,7 @@
                 "3D"
             ],
             [
-                "diffusion",
-                "synthesize"
+                "diffusion"
             ],
             [
                 "cs.CV"
@@ -4191,6 +4247,22 @@
             ]
         ],
         "abstract": "This paper presents a reactive navigation method that leverages a Model Predictive Path Integral (MPPI) control enhanced with spline interpolation for the control input sequence and Stein Variational Gradient Descent (SVGD). The MPPI framework addresses a nonlinear optimization problem by determining an optimal sequence of control inputs through a sampling-based approach. The efficacy of MPPI is significantly influenced by the sampling noise. To rapidly identify routes that circumvent large and/or newly detected obstacles, it is essential to employ high levels of sampling noise. However, such high noise levels result in jerky control input sequences, leading to non-smooth trajectories. To mitigate this issue, we propose the integration of spline interpolation within the MPPI process, enabling the generation of smooth control input sequences despite the utilization of substantial sampling noises. Nonetheless, the standard MPPI algorithm struggles in scenarios featuring multiple optimal or near-optimal solutions, such as environments with several viable obstacle avoidance paths, due to its assumption that the distribution over an optimal control input sequence can be closely approximated by a Gaussian distribution. To address this limitation, we extend our method by incorporating SVGD into the MPPI framework with spline interpolation. SVGD, rooted in the optimal transportation algorithm, possesses the unique ability to cluster samples around an optimal solution. Consequently, our approach facilitates robust reactive navigation by swiftly identifying obstacle avoidance paths while maintaining the smoothness of the control input sequences. The efficacy of our proposed method is validated on simulations with a quadrotor, demonstrating superior performance over existing baseline techniques.",
+        "subjects": [
+            "cs.RO"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2404.10399",
+        "abstract url": "https://arxiv.org/abs/2404.10399",
+        "title": "FoundationGrasp: Generalizable Task-Oriented Grasping with Foundation Models",
+        "rating": "-1",
+        "keywords": [
+            [
+                "robot"
+            ]
+        ],
+        "abstract": "Task-oriented grasping (TOG), which refers to the problem of synthesizing grasps on an object that are configurationally compatible with the downstream manipulation task, is the first milestone towards tool manipulation. Analogous to the activation of two brain regions responsible for semantic and geometric reasoning during cognitive processes, modeling the complex relationship between objects, tasks, and grasps requires rich prior knowledge about objects and tasks. Existing methods typically limit the prior knowledge to a closed-set scope and cannot support the generalization to novel objects and tasks out of the training set. To address such a limitation, we propose FoundationGrasp, a foundation model-based TOG framework that leverages the open-ended knowledge from foundation models to learn generalizable TOG skills. Comprehensive experiments are conducted on the contributed Language and Vision Augmented TaskGrasp (LaViA-TaskGrasp) dataset, demonstrating the superiority of FoudationGrasp over existing methods when generalizing to novel object instances, object classes, and tasks out of the training set. Furthermore, the effectiveness of FoudationGrasp is validated in real-robot grasping and manipulation experiments on a 7 DoF robotic arm. Our code, data, appendix, and video are publicly available at https://sites.google.com/view/foundationgrasp.",
         "subjects": [
             "cs.RO"
         ],
@@ -4244,29 +4316,6 @@
         "comment": null
     },
     {
-        "paper id": "2404.10441",
-        "abstract url": "https://arxiv.org/abs/2404.10441",
-        "title": "1st Place Solution for ICCV 2023 OmniObject3D Challenge: Sparse-View Reconstruction",
-        "rating": "-1",
-        "keywords": [
-            [
-                "depth",
-                "NeRF"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "In this report, we present the 1st place solution for ICCV 2023 OmniObject3D Challenge: Sparse-View Reconstruction. The challenge aims to evaluate approaches for novel view synthesis and surface reconstruction using only a few posed images of each object. We utilize Pixel-NeRF as the basic model, and apply depth supervision as well as coarse-to-fine positional encoding. The experiments demonstrate the effectiveness of our approach in improving sparse-view reconstruction quality. We ranked first in the final test with a PSNR of 25.44614.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2404.10469",
         "abstract url": "https://arxiv.org/abs/2404.10469",
         "title": "How quickly can you pack short paths? Engineering a search-tree algorithm for disjoint s-t paths of bounded length",
@@ -4281,29 +4330,6 @@
             "cs.DS"
         ],
         "comment": "71 pages, 26 figures. Bachelor Thesis submitted at TU Wien"
-    },
-    {
-        "paper id": "2404.10484",
-        "abstract url": "https://arxiv.org/abs/2404.10484",
-        "title": "AbsGS: Recovering Fine Details for 3D Gaussian Splatting",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "3D Gaussian Splatting (3D-GS) technique couples 3D Gaussian primitives with differentiable rasterization to achieve high-quality novel view synthesis results while providing advanced real-time rendering performance. However, due to the flaw of its adaptive density control strategy in 3D-GS, it frequently suffers from over-reconstruction issue in intricate scenes containing high-frequency details, leading to blurry rendered images. The underlying reason for the flaw has still been under-explored. In this work, we present a comprehensive analysis of the cause of aforementioned artifacts, namely gradient collision, which prevents large Gaussians in over-reconstructed regions from splitting. To address this issue, we propose the novel homodirectional view-space positional gradient as the criterion for densification. Our strategy efficiently identifies large Gaussians in over-reconstructed regions, and recovers fine details by splitting. We evaluate our proposed method on various challenging datasets. The experimental results indicate that our approach achieves the best rendering quality with reduced or similar memory consumption. Our method is easy to implement and can be incorporated into a wide variety of most recent Gaussian Splatting-based methods. We will open source our codes upon formal publication. Our project page is available at: https://ty424.github.io/AbsGS.github.io/",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
     },
     {
         "paper id": "2404.10491",
@@ -4556,8 +4582,7 @@
                 "3D"
             ],
             [
-                "diffusion",
-                "synthesize"
+                "diffusion"
             ],
             [
                 "cs.CV"
@@ -4715,7 +4740,6 @@
             ],
             [
                 "Diffusion",
-                "synthesis",
                 "Inpainting"
             ],
             [
@@ -4727,29 +4751,6 @@
             "cs.CV"
         ],
         "comment": "Project page: https://reffusion.github.io"
-    },
-    {
-        "paper id": "2404.10772",
-        "abstract url": "https://arxiv.org/abs/2404.10772",
-        "title": "Gaussian Opacity Fields: Efficient and Compact Surface Reconstruction in Unbounded Scenes",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Recently, 3D Gaussian Splatting (3DGS) has demonstrated impressive novel view synthesis results, while allowing the rendering of high-resolution images in real-time. However, leveraging 3D Gaussians for surface reconstruction poses significant challenges due to the explicit and disconnected nature of 3D Gaussians. In this work, we present Gaussian Opacity Fields (GOF), a novel approach for efficient, high-quality, and compact surface reconstruction in unbounded scenes. Our GOF is derived from ray-tracing-based volume rendering of 3D Gaussians, enabling direct geometry extraction from 3D Gaussians by identifying its levelset, without resorting to Poisson reconstruction or TSDF fusion as in previous work. We approximate the surface normal of Gaussians as the normal of the ray-Gaussian intersection plane, enabling the application of regularization that significantly enhances geometry. Furthermore, we develop an efficient geometry extraction method utilizing marching tetrahedra, where the tetrahedral grids are induced from 3D Gaussians and thus adapt to the scene's complexity. Our evaluations reveal that GOF surpasses existing 3DGS-based methods in surface reconstruction and novel view synthesis. Further, it compares favorably to, or even outperforms, neural implicit methods in both quality and speed.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Project page: https://niujinshuchong.github.io/gaussian-opacity-fields"
     },
     {
         "paper id": "2404.10839",
@@ -4825,6 +4826,28 @@
         "abstract": "Accurate cancer diagnosis remains a critical challenge in digital pathology, largely due to the gigapixel size and complex spatial relationships present in whole slide images. Traditional multiple instance learning (MIL) methods often struggle with these intricacies, especially in preserving the necessary context for accurate diagnosis. In response, we introduce a novel framework named Semantics-Aware Attention Guidance (SAG), which includes 1) a technique for converting diagnostically relevant entities into attention signals, and 2) a flexible attention loss that efficiently integrates various semantically significant information, such as tissue anatomy and cancerous regions. Our experiments on two distinct cancer datasets demonstrate consistent improvements in accuracy, precision, and recall with two state-of-the-art baseline models. Qualitative analysis further reveals that the incorporation of heuristic guidance enables the model to focus on regions critical for diagnosis. SAG is not only effective for the models discussed here, but its adaptability extends to any attention-based diagnostic model. This opens up exciting possibilities for further improving the accuracy and efficiency of cancer diagnostics.",
         "subjects": [
             "cs.CV"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2404.10896",
+        "abstract url": "https://arxiv.org/abs/2404.10896",
+        "title": "From a Lossless (~1.5:1) Compression Algorithm for Llama2 7B Weights to Variable Precision, Variable Range, Compressed Numeric Data Types for CNNs and LLMs",
+        "rating": "-1",
+        "keywords": [
+            [
+                "FPGAs"
+            ],
+            [
+                "cs.AI",
+                "cs.CV"
+            ]
+        ],
+        "abstract": "This paper starts with a simple lossless ~1.5:1 compression algorithm for the weights of the Large Language Model (LLM) Llama2 7B [1] that can be implemented in ~200 LUTs in AMD FPGAs, processing over 800 million bfloat16 numbers per second. This framework is then extended to variable precision, variable range, compressed numerical data types that are a user defined super set of both floats and posits [2]. The paper then discusses a simple hardware implementation of such format based on ANS (Asymmetrical Numeral Systems) [3] that acts as a bridge between this flexible data format and a computational engine while, at the same time, achieving bandwidth reduction. An example of a token factory using weight compression and sharing is also given.",
+        "subjects": [
+            "cs.CV",
+            "cs.AI",
+            "cs.AR"
         ],
         "comment": null
     },
@@ -5353,6 +5376,25 @@
         "comment": "accepted at SIGIR 2024 as a perspective paper. Camera Ready will come soon"
     },
     {
+        "paper id": "2404.10897",
+        "abstract url": "https://arxiv.org/abs/2404.10897",
+        "title": "The Future of Research on Social Technologies: CCC Workshop Visioning Report",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "health"
+            ],
+            [
+                "cs.SI"
+            ]
+        ],
+        "abstract": "Social technologies are the systems, interfaces, features, infrastructures, and architectures that allow people to interact with each other online. These technologies dramatically shape the fabric of our everyday lives, from the information we consume to the people we interact with to the foundations of our culture and politics. While the benefits of social technologies are well documented, the harms, too, have cast a long shadow. To address widespread problems like harassment, disinformation, information access, and mental health concerns, we need to rethink the foundations of how social technologies are designed, sustained, and governed. This report is based on discussions at the Computing Community Consortium Workshop, The Future of Research on Social Technologies, that was held November 2-3, 2023 in Washington, DC. The visioning workshop came together to focus on two questions. What should we know about social technologies, and what is needed to get there? The workshop brought together over 50 information and computer scientists, social scientists, communication and journalism scholars, and policy experts. We used a discussion format, with one day of guiding topics and a second day using an unconference model where participants created discussion topics. The interdisciplinary group of attendees discussed gaps in existing scholarship and the methods, resources, access, and collective effort needed to address those gaps. We also discussed approaches for translating scholarship for various audiences including citizens, funders, educators, industry professionals, and policymakers. This report presents a synthesis of major themes during our discussions. The themes presented are not a summary of what we know already, they are an exploration of what we do not know enough about, and what we should spend more effort and investment on in the coming years.",
+        "subjects": [
+            "cs.SI"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2404.10901",
         "abstract url": "https://arxiv.org/abs/2404.10901",
         "title": "CrossGP: Cross-Day Glucose Prediction Excluding Physiological Information",
@@ -5529,25 +5571,6 @@
         "comment": null
     },
     {
-        "paper id": "2404.10362",
-        "abstract url": "https://arxiv.org/abs/2404.10362",
-        "title": "3DGen: AI-Assisted Generation of Provably Correct Binary Format Parsers",
-        "rating": "-2",
-        "keywords": [
-            [
-                "3D"
-            ],
-            [
-                "synthesize"
-            ]
-        ],
-        "abstract": "Improper parsing of attacker-controlled input is a leading source of software security vulnerabilities, especially when programmers transcribe informal format descriptions in RFCs into efficient parsing logic in low-level, memory unsafe languages. Several researchers have proposed formal specification languages for data formats from which efficient code can be extracted. However, distilling informal requirements into formal specifications is challenging and, despite their benefits, new, formal languages are hard for people to learn and use. In this work, we present 3DGen, a framework that makes use of AI agents to transform mixed informal input, including natural language documents (i.e., RFCs) and example inputs into format specifications in a language called 3D. To support humans in understanding and trusting the generated specifications, 3DGen uses symbolic methods to also synthesize test inputs that can be validated against an external oracle. Symbolic test generation also helps in distinguishing multiple plausible solutions. Through a process of repeated refinement, 3DGen produces a 3D specification that conforms to a test suite, and which yields safe, efficient, provably correct, parsing code in C. We have evaluated 3DGen on 20 Internet standard formats, demonstrating the potential for AI-agents to produce formally verified C code at a non-trivial scale. A key enabler is the use of a domain-specific language to limit AI outputs to a class for which automated, symbolic analysis is tractable.",
-        "subjects": [
-            "cs.SE"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2404.10392",
         "abstract url": "https://arxiv.org/abs/2404.10392",
         "title": "Generating 6-D Trajectories for Omnidirectional Multirotor Aerial Vehicles in Cluttered Environments",
@@ -5567,25 +5590,6 @@
             "cs.RO"
         ],
         "comment": "This work has been submitted to the IEEE for possible publication. Copyright may be transferred without notice, after which this version may no longer be accessible. arXiv admin note: text overlap with arXiv:2209.06764"
-    },
-    {
-        "paper id": "2404.10399",
-        "abstract url": "https://arxiv.org/abs/2404.10399",
-        "title": "FoundationGrasp: Generalizable Task-Oriented Grasping with Foundation Models",
-        "rating": "-2",
-        "keywords": [
-            [
-                "synthesizing"
-            ],
-            [
-                "robot"
-            ]
-        ],
-        "abstract": "Task-oriented grasping (TOG), which refers to the problem of synthesizing grasps on an object that are configurationally compatible with the downstream manipulation task, is the first milestone towards tool manipulation. Analogous to the activation of two brain regions responsible for semantic and geometric reasoning during cognitive processes, modeling the complex relationship between objects, tasks, and grasps requires rich prior knowledge about objects and tasks. Existing methods typically limit the prior knowledge to a closed-set scope and cannot support the generalization to novel objects and tasks out of the training set. To address such a limitation, we propose FoundationGrasp, a foundation model-based TOG framework that leverages the open-ended knowledge from foundation models to learn generalizable TOG skills. Comprehensive experiments are conducted on the contributed Language and Vision Augmented TaskGrasp (LaViA-TaskGrasp) dataset, demonstrating the superiority of FoudationGrasp over existing methods when generalizing to novel object instances, object classes, and tasks out of the training set. Furthermore, the effectiveness of FoudationGrasp is validated in real-robot grasping and manipulation experiments on a 7 DoF robotic arm. Our code, data, appendix, and video are publicly available at https://sites.google.com/view/foundationgrasp.",
-        "subjects": [
-            "cs.RO"
-        ],
-        "comment": null
     },
     {
         "paper id": "2404.10452",
@@ -6168,6 +6172,22 @@
         "comment": null
     },
     {
+        "paper id": "2404.11066",
+        "abstract url": "https://arxiv.org/abs/2404.11066",
+        "title": "Efficient Approaches for GEMM Acceleration on Leading AI-Optimized FPGAs",
+        "rating": "-2",
+        "keywords": [
+            [
+                "FPGAs"
+            ]
+        ],
+        "abstract": "FPGAs are a promising platform for accelerating Deep Learning (DL) applications, due to their high performance, low power consumption, and reconfigurability. Recently, the leading FPGA vendors have enhanced their architectures to more efficiently support the computational demands of DL workloads. However, the two most prominent AI-optimized FPGAs, i.e., AMD/Xilinx Versal ACAP and Intel Stratix 10 NX, employ significantly different architectural approaches. This paper presents novel systematic frameworks to optimize the performance of General Matrix Multiplication (GEMM), a fundamental operation in DL workloads, by exploiting the unique and distinct architectural characteristics of each FPGA. Our evaluation on GEMM workloads for int8 precision shows up to 77 and 68 TOPs (int8) throughput, with up to 0.94 and 1.35 TOPs/W energy efficiency for Versal VC1902 and Stratix 10 NX, respectively. This work provides insights and guidelines for optimizing GEMM-based applications on both platforms, while also delving into their programmability trade-offs and associated challenges.",
+        "subjects": [
+            "cs.AR"
+        ],
+        "comment": "Accepted as full paper at FCCM 2024"
+    },
+    {
         "paper id": "2404.10324",
         "abstract url": "https://arxiv.org/abs/2404.10324",
         "title": "Graph neural network-based surrogate modelling for real-time hydraulic prediction of urban drainage networks",
@@ -6425,28 +6445,6 @@
             "cs.AI"
         ],
         "comment": "12 pages, 3 figures, 2 tables"
-    },
-    {
-        "paper id": "2404.10897",
-        "abstract url": "https://arxiv.org/abs/2404.10897",
-        "title": "The Future of Research on Social Technologies: CCC Workshop Visioning Report",
-        "rating": "-2.5",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "health"
-            ],
-            [
-                "cs.SI"
-            ]
-        ],
-        "abstract": "Social technologies are the systems, interfaces, features, infrastructures, and architectures that allow people to interact with each other online. These technologies dramatically shape the fabric of our everyday lives, from the information we consume to the people we interact with to the foundations of our culture and politics. While the benefits of social technologies are well documented, the harms, too, have cast a long shadow. To address widespread problems like harassment, disinformation, information access, and mental health concerns, we need to rethink the foundations of how social technologies are designed, sustained, and governed. This report is based on discussions at the Computing Community Consortium Workshop, The Future of Research on Social Technologies, that was held November 2-3, 2023 in Washington, DC. The visioning workshop came together to focus on two questions. What should we know about social technologies, and what is needed to get there? The workshop brought together over 50 information and computer scientists, social scientists, communication and journalism scholars, and policy experts. We used a discussion format, with one day of guiding topics and a second day using an unconference model where participants created discussion topics. The interdisciplinary group of attendees discussed gaps in existing scholarship and the methods, resources, access, and collective effort needed to address those gaps. We also discussed approaches for translating scholarship for various audiences including citizens, funders, educators, industry professionals, and policymakers. This report presents a synthesis of major themes during our discussions. The themes presented are not a summary of what we know already, they are an exploration of what we do not know enough about, and what we should spend more effort and investment on in the coming years.",
-        "subjects": [
-            "cs.SI"
-        ],
-        "comment": null
     },
     {
         "paper id": "2404.10935",
@@ -6869,8 +6867,7 @@
         "rating": "-3.5",
         "keywords": [
             [
-                "Diffusion",
-                "synthesis"
+                "Diffusion"
             ],
             [
                 "trajectory"
@@ -7699,18 +7696,6 @@
             "cs.AR"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2404.11066",
-        "abstract url": "https://arxiv.org/abs/2404.11066",
-        "title": "Efficient Approaches for GEMM Acceleration on Leading AI-Optimized FPGAs",
-        "rating": "-10",
-        "keywords": [],
-        "abstract": "FPGAs are a promising platform for accelerating Deep Learning (DL) applications, due to their high performance, low power consumption, and reconfigurability. Recently, the leading FPGA vendors have enhanced their architectures to more efficiently support the computational demands of DL workloads. However, the two most prominent AI-optimized FPGAs, i.e., AMD/Xilinx Versal ACAP and Intel Stratix 10 NX, employ significantly different architectural approaches. This paper presents novel systematic frameworks to optimize the performance of General Matrix Multiplication (GEMM), a fundamental operation in DL workloads, by exploiting the unique and distinct architectural characteristics of each FPGA. Our evaluation on GEMM workloads for int8 precision shows up to 77 and 68 TOPs (int8) throughput, with up to 0.94 and 1.35 TOPs/W energy efficiency for Versal VC1902 and Stratix 10 NX, respectively. This work provides insights and guidelines for optimizing GEMM-based applications on both platforms, while also delving into their programmability trade-offs and associated challenges.",
-        "subjects": [
-            "cs.AR"
-        ],
-        "comment": "Accepted as full paper at FCCM 2024"
     },
     {
         "paper id": "2404.11631",

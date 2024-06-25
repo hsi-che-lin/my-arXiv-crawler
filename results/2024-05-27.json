@@ -251,6 +251,25 @@
         "comment": "Published in ICML 2024"
     },
     {
+        "paper id": "2405.17240",
+        "abstract url": "https://arxiv.org/abs/2405.17240",
+        "title": "Content-Style Decoupling for Unsupervised Makeup Transfer without Generating Pseudo Ground Truth",
+        "rating": "1.5",
+        "keywords": [
+            [
+                "cs.CV"
+            ],
+            [
+                "CVPR"
+            ]
+        ],
+        "abstract": "The absence of real targets to guide the model training is one of the main problems with the makeup transfer task. Most existing methods tackle this problem by synthesizing pseudo ground truths (PGTs). However, the generated PGTs are often sub-optimal and their imprecision will eventually lead to performance degradation. To alleviate this issue, in this paper, we propose a novel Content-Style Decoupled Makeup Transfer (CSD-MT) method, which works in a purely unsupervised manner and thus eliminates the negative effects of generating PGTs. Specifically, based on the frequency characteristics analysis, we assume that the low-frequency (LF) component of a face image is more associated with its makeup style information, while the high-frequency (HF) component is more related to its content details. This assumption allows CSD-MT to decouple the content and makeup style information in each face image through the frequency decomposition. After that, CSD-MT realizes makeup transfer by maximizing the consistency of these two types of information between the transferred result and input images, respectively. Two newly designed loss functions are also introduced to further improve the transfer performance. Extensive quantitative and qualitative analyses show the effectiveness of our CSD-MT method. Our code is available at https://github.com/Snowfallingplum/CSD-MT.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Accepted by CVPR2024"
+    },
+    {
         "paper id": "2405.17247",
         "abstract url": "https://arxiv.org/abs/2405.17247",
         "title": "An Introduction to Vision-Language Modeling",
@@ -356,22 +375,6 @@
             "cs.AI"
         ],
         "comment": "Website https://adaptive-horizon-actor-critic.github.io/"
-    },
-    {
-        "paper id": "2405.16834",
-        "abstract url": "https://arxiv.org/abs/2405.16834",
-        "title": "Speech enhancement deep-learning architecture for efficient edge processing",
-        "rating": "1",
-        "keywords": [
-            [
-                "eess.AS"
-            ]
-        ],
-        "abstract": "Deep learning has become a de facto method of choice for speech enhancement tasks with significant improvements in speech quality. However, real-time processing with reduced size and computations for low-power edge devices drastically degrades speech quality. Recently, transformer-based architectures have greatly reduced the memory requirements and provided ways to improve the model performance through local and global contexts. However, the transformer operations remain computationally heavy. In this work, we introduce WaveUNet squeeze-excitation Res2 (WSR)-based metric generative adversarial network (WSR-MGAN) architecture that can be efficiently implemented on low-power edge devices for noise suppression tasks while maintaining speech quality. We utilize multi-scale features using Res2Net blocks that can be related to spectral content used in speech-processing tasks. In the generator, we integrate squeeze-excitation blocks (SEB) with multi-scale features for maintaining local and global contexts along with gated recurrent units (GRUs). The proposed approach is optimized through a combined loss function calculated over raw waveform, multi-resolution magnitude spectrogram, and objective metrics using a metric discriminator. Experimental results in terms of various objective metrics on VoiceBank+DEMAND and DNS-2020 challenge datasets demonstrate that the proposed speech enhancement (SE) approach outperforms the baselines and achieves state-of-the-art (SOTA) performance in the time domain.",
-        "subjects": [
-            "eess.AS"
-        ],
-        "comment": null
     },
     {
         "paper id": "2405.16845",
@@ -643,6 +646,24 @@
             "cs.AI"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2405.17028",
+        "abstract url": "https://arxiv.org/abs/2405.17028",
+        "title": "RSET: Remapping-based Sorting Method for Emotion Transfer Speech Synthesis",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.SD",
+                "eess.AS"
+            ]
+        ],
+        "abstract": "Although current Text-To-Speech (TTS) models are able to generate high-quality speech samples, there are still challenges in developing emotion intensity controllable TTS. Most existing TTS models achieve emotion intensity control by extracting intensity information from reference speeches. Unfortunately, limited by the lack of modeling for intra-class emotion intensity and the model's information decoupling capability, the generated speech cannot achieve fine-grained emotion intensity control and suffers from information leakage issues. In this paper, we propose an emotion transfer TTS model, which defines a remapping-based sorting method to model intra-class relative intensity information, combined with Mutual Information (MI) to decouple speaker and emotion information, and synthesizes expressive speeches with perceptible intensity differences. Experiments show that our model achieves fine-grained emotion control while preserving speaker information.",
+        "subjects": [
+            "cs.SD",
+            "eess.AS"
+        ],
+        "comment": "Accepted by the 8th APWeb-WAIM International Joint Conference on Web and Big Data"
     },
     {
         "paper id": "2405.17029",
@@ -1181,6 +1202,30 @@
         "subjects": [
             "cs.AI",
             "cs.CL"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2405.17351",
+        "abstract url": "https://arxiv.org/abs/2405.17351",
+        "title": "DOF-GS: Adjustable Depth-of-Field 3D Gaussian Splatting for Refocusing,Defocus Rendering and Blur Removal",
+        "rating": "1",
+        "keywords": [
+            [
+                "GPU memory"
+            ],
+            [
+                "3D",
+                "Gaussian Splatting",
+                "Depth"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "3D Gaussian Splatting-based techniques have recently advanced 3D scene reconstruction and novel view synthesis, achieving high-quality real-time rendering. However, these approaches are inherently limited by the underlying pinhole camera assumption in modeling the images and hence only work for All-in-Focus (AiF) sharp image inputs. This severely affects their applicability in real-world scenarios where images often exhibit defocus blur due to the limited depth-of-field (DOF) of imaging devices. Additionally, existing 3D Gaussian Splatting (3DGS) methods also do not support rendering of DOF effects. To address these challenges, we introduce DOF-GS that allows for rendering adjustable DOF effects, removing defocus blur as well as refocusing of 3D scenes, all from multi-view images degraded by defocus blur. To this end, we re-imagine the traditional Gaussian Splatting pipeline by employing a finite aperture camera model coupled with explicit, differentiable defocus rendering guided by the Circle-of-Confusion (CoC). The proposed framework provides for dynamic adjustment of DOF effects by changing the aperture and focal distance of the underlying camera model on-demand. It also enables rendering varying DOF effects of 3D scenes post-optimization, and generating AiF images from defocused training images. Furthermore, we devise a joint optimization strategy to further enhance details in the reconstructed scenes by jointly optimizing rendered defocused and AiF images. Our experimental results indicate that DOF-GS produces high-quality sharp all-in-focus renderings conditioned on inputs compromised by defocus blur, with the training process incurring only a modest increase in GPU memory consumption. We further demonstrate the applications of the proposed method for adjustable defocus rendering and refocusing of the 3D scene from input images degraded by defocus blur.",
+        "subjects": [
+            "cs.CV"
         ],
         "comment": null
     },
@@ -1756,24 +1801,6 @@
         "comment": "SIGIR 2024 Workshop on Multimodal Representation and Retrieval (MRR 2024)"
     },
     {
-        "paper id": "2405.17712",
-        "abstract url": "https://arxiv.org/abs/2405.17712",
-        "title": "CLAIM Your Data: Enhancing Imputation Accuracy with Contextual Large Language Models",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.LG",
-                "cs.CL"
-            ]
-        ],
-        "abstract": "This paper introduces the Contextual Language model for Accurate Imputation Method (CLAIM), a novel strategy that capitalizes on the expansive knowledge and reasoning capabilities of pre-trained large language models (LLMs) to address missing data challenges in tabular datasets. Unlike traditional imputation methods, which predominantly rely on numerical estimations, CLAIM utilizes contextually relevant natural language descriptors to fill missing values. This approach transforms datasets into natural language contextualized formats that are inherently more aligned with LLMs' capabilities, thereby facilitating the dual use of LLMs: first, to generate missing value descriptors, and then, to fine-tune the LLM on the enriched dataset for improved performance in downstream tasks. Our evaluations across diverse datasets and missingness patterns reveal CLAIM's superior performance over existing imputation techniques. Furthermore, our investigation into the effectiveness of context-specific versus generic descriptors for missing data highlights the importance of contextual accuracy in enhancing LLM performance for data imputation. The results underscore CLAIM's potential to markedly improve the reliability and quality of data analysis and machine learning models, offering a more nuanced and effective solution for handling missing data.",
-        "subjects": [
-            "cs.CL",
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2405.17713",
         "abstract url": "https://arxiv.org/abs/2405.17713",
         "title": "AI Alignment with Changing and Influenceable Reward Functions",
@@ -1809,22 +1836,6 @@
         "subjects": [
             "cs.CV",
             "cs.LG"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2405.17732",
-        "abstract url": "https://arxiv.org/abs/2405.17732",
-        "title": "C$^{3}$Bench: A Comprehensive Classical Chinese Understanding Benchmark for Large Language Models",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.CL"
-            ]
-        ],
-        "abstract": "Classical Chinese Understanding (CCU) holds significant value in preserving and exploration of the outstanding traditional Chinese culture. Recently, researchers have attempted to leverage the potential of Large Language Models (LLMs) for CCU by capitalizing on their remarkable comprehension and semantic capabilities. However, no comprehensive benchmark is available to assess the CCU capabilities of LLMs. To fill this gap, this paper introduces C$^{3}$bench, a Comprehensive Classical Chinese understanding benchmark, which comprises 50,000 text pairs for five primary CCU tasks, including classification, retrieval, named entity recognition, punctuation, and translation. Furthermore, the data in C$^{3}$bench originates from ten different domains, covering most of the categories in classical Chinese. Leveraging the proposed C$^{3}$bench, we extensively evaluate the quantitative performance of 15 representative LLMs on all five CCU tasks. Our results not only establish a public leaderboard of LLMs' CCU capabilities but also gain some findings. Specifically, existing LLMs are struggle with CCU tasks and still inferior to supervised models. Additionally, the results indicate that CCU is a task that requires special attention. We believe this study could provide a standard benchmark, comprehensive baselines, and valuable insights for the future advancement of LLM-based CCU research. The evaluation pipeline and dataset are available at \\url{https://github.com/SCUT-DLVCLab/C3bench}.",
-        "subjects": [
-            "cs.CL"
         ],
         "comment": null
     },
@@ -1883,22 +1894,6 @@
             "stat.ML"
         ],
         "comment": "29 pages, 27 figures"
-    },
-    {
-        "paper id": "2405.17790",
-        "abstract url": "https://arxiv.org/abs/2405.17790",
-        "title": "Instruct-ReID++: Towards Universal Purpose Instruction-Guided Person Re-identification",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Human intelligence can retrieve any person according to both visual and language descriptions. However, the current computer vision community studies specific person re-identification (ReID) tasks in different scenarios separately, which limits the applications in the real world. This paper strives to resolve this problem by proposing a novel instruct-ReID task that requires the model to retrieve images according to the given image or language instructions. Instruct-ReID is the first exploration of a general ReID setting, where existing 6 ReID tasks can be viewed as special cases by assigning different instructions. To facilitate research in this new instruct-ReID task, we propose a large-scale OmniReID++ benchmark equipped with diverse data and comprehensive evaluation methods e.g., task specific and task-free evaluation settings. In the task-specific evaluation setting, gallery sets are categorized according to specific ReID tasks. We propose a novel baseline model, IRM, with an adaptive triplet loss to handle various retrieval tasks within a unified framework. For task-free evaluation setting, where target person images are retrieved from task-agnostic gallery sets, we further propose a new method called IRM++ with novel memory bank-assisted learning. Extensive evaluations of IRM and IRM++ on OmniReID++ benchmark demonstrate the superiority of our proposed methods, achieving state-of-the-art performance on 10 test sets. The datasets, the model, and the code will be available at https://github.com/hwz-zju/Instruct-ReID",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "arXiv admin note: substantial text overlap with arXiv:2306.07520"
     },
     {
         "paper id": "2405.17799",
@@ -2285,23 +2280,6 @@
         "comment": "arXiv admin note: text overlap with arXiv:2312.06659"
     },
     {
-        "paper id": "2405.17025",
-        "abstract url": "https://arxiv.org/abs/2405.17025",
-        "title": "SWAT: Scalable and Efficient Window Attention-based Transformers Acceleration on FPGAs",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "Efficiently supporting long context length is crucial for Transformer models. The quadratic complexity of the self-attention computation plagues traditional Transformers. Sliding window-based static sparse attention mitigates the problem by limiting the attention scope of the input tokens, reducing the theoretical complexity from quadratic to linear. Although the sparsity induced by window attention is highly structured, it does not align perfectly with the microarchitecture of the conventional accelerators, leading to suboptimal implementation. In response, we propose a dataflow-aware FPGA-based accelerator design, SWAT, that efficiently leverages the sparsity to achieve scalable performance for long input. The proposed microarchitecture is based on a design that maximizes data reuse by using a combination of row-wise dataflow, kernel fusion optimization, and an input-stationary design considering the distributed memory and computation resources of FPGA. Consequently, it achieves up to 22$\\times$ and 5.7$\\times$ improvement in latency and energy efficiency compared to the baseline FPGA-based accelerator and 15$\\times$ energy efficiency compared to GPU-based solution.",
-        "subjects": [
-            "cs.AR",
-            "cs.AI"
-        ],
-        "comment": "Accepeted paper for DAC'22"
-    },
-    {
         "paper id": "2405.17027",
         "abstract url": "https://arxiv.org/abs/2405.17027",
         "title": "Supervised Batch Normalization",
@@ -2654,28 +2632,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.17240",
-        "abstract url": "https://arxiv.org/abs/2405.17240",
-        "title": "Content-Style Decoupling for Unsupervised Makeup Transfer without Generating Pseudo Ground Truth",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "synthesizing"
-            ],
-            [
-                "cs.CV"
-            ],
-            [
-                "CVPR"
-            ]
-        ],
-        "abstract": "The absence of real targets to guide the model training is one of the main problems with the makeup transfer task. Most existing methods tackle this problem by synthesizing pseudo ground truths (PGTs). However, the generated PGTs are often sub-optimal and their imprecision will eventually lead to performance degradation. To alleviate this issue, in this paper, we propose a novel Content-Style Decoupled Makeup Transfer (CSD-MT) method, which works in a purely unsupervised manner and thus eliminates the negative effects of generating PGTs. Specifically, based on the frequency characteristics analysis, we assume that the low-frequency (LF) component of a face image is more associated with its makeup style information, while the high-frequency (HF) component is more related to its content details. This assumption allows CSD-MT to decouple the content and makeup style information in each face image through the frequency decomposition. After that, CSD-MT realizes makeup transfer by maximizing the consistency of these two types of information between the transferred result and input images, respectively. Two newly designed loss functions are also introduced to further improve the transfer performance. Extensive quantitative and qualitative analyses show the effectiveness of our CSD-MT method. Our code is available at https://github.com/Snowfallingplum/CSD-MT.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Accepted by CVPR2024"
-    },
-    {
         "paper id": "2405.17243",
         "abstract url": "https://arxiv.org/abs/2405.17243",
         "title": "Surprise-Adaptive Intrinsic Motivation for Unsupervised Reinforcement Learning",
@@ -2944,6 +2900,24 @@
             "cs.LG",
             "cs.AI",
             "cs.CY"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2405.17514",
+        "abstract url": "https://arxiv.org/abs/2405.17514",
+        "title": "AbstractBeam: Enhancing Bottom-Up Program Synthesis using Library Learning",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "LambdaBeam is a state-of-the-art execution-guided algorithm for program synthesis that incorporates higher-order functions, lambda functions, and iterative loops into the Domain-Specific Language (DSL). LambdaBeam generates every program from the start. Yet, many program blocks or subprograms occur frequently in a given domain, e.g., loops to traverse a list. Thus, repeating programs can be used to enhance the synthesis algorithm. However, LambdaBeam fails to leverage this potential. For this purpose, we introduce AbstractBeam: A novel program synthesis framework that employs Library Learning to identify such program repetitions, integrates them into the DSL, and thus utilizes their potential to boost LambdaBeam's synthesis algorithm. Our experimental evaluations demonstrate that AbstractBeam significantly improves LambdaBeam's performance in the LambdaBeam integer list manipulation domain. Additionally, AbstractBeam's program generation is more efficient compared to LambdaBeam's synthesis. Finally, our findings indicate that Library Learning is effective in domains not specifically crafted to highlight its benefits.",
+        "subjects": [
+            "cs.SE",
+            "cs.AI",
+            "cs.PL"
         ],
         "comment": null
     },
@@ -3228,25 +3202,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.17640",
-        "abstract url": "https://arxiv.org/abs/2405.17640",
-        "title": "Probabilistically Plausible Counterfactual Explanations with Normalizing Flows",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.AI",
-                "cs.LG"
-            ]
-        ],
-        "abstract": "We present PPCEF, a novel method for generating probabilistically plausible counterfactual explanations (CFs). PPCEF advances beyond existing methods by combining a probabilistic formulation that leverages the data distribution with the optimization of plausibility within a unified framework. Compared to reference approaches, our method enforces plausibility by directly optimizing the explicit density function without assuming a particular family of parametrized distributions. This ensures CFs are not only valid (i.e., achieve class change) but also align with the underlying data's probability density. For that purpose, our approach leverages normalizing flows as powerful density estimators to capture the complex high-dimensional data distribution. Furthermore, we introduce a novel loss that balances the trade-off between achieving class change and maintaining closeness to the original instance while also incorporating a probabilistic plausibility term. PPCEF's unconstrained formulation allows for efficient gradient-based optimization with batch processing, leading to orders of magnitude faster computation compared to prior methods. Moreover, the unconstrained formulation of PPCEF allows for the seamless integration of future constraints tailored to specific counterfactual properties. Finally, extensive evaluations demonstrate PPCEF's superiority in generating high-quality, probabilistically plausible counterfactual explanations in high-dimensional tabular settings. This makes PPCEF a powerful tool for not only interpreting complex machine learning models but also for improving fairness, accountability, and trust in AI systems.",
-        "subjects": [
-            "cs.LG",
-            "cs.AI",
-            "stat.ME"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2405.17642",
         "abstract url": "https://arxiv.org/abs/2405.17642",
         "title": "Unifying Perspectives: Plausible Counterfactual Explanations on Global, Group-wise, and Local Levels",
@@ -3387,6 +3342,25 @@
         "subjects": [
             "cs.GT",
             "cs.LG"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2405.17728",
+        "abstract url": "https://arxiv.org/abs/2405.17728",
+        "title": "Facilitating Holistic Evaluations with LLMs: Insights from Scenario-Based Experiments",
+        "rating": "0.5",
+        "keywords": [
+            [
+                "cs.AI",
+                "cs.CY"
+            ]
+        ],
+        "abstract": "Workshop courses designed to foster creativity are gaining popularity. However, achieving a holistic evaluation that accommodates diverse perspectives is challenging, even for experienced faculty teams. Adequate discussion is essential to integrate varied assessments, but faculty often lack the time for such deliberations. Deriving an average score without discussion undermines the purpose of a holistic evaluation. This paper explores the use of a Large Language Model (LLM) as a facilitator to integrate diverse faculty assessments. Scenario-based experiments were conducted to determine if the LLM could synthesize diverse evaluations and explain the underlying theories to faculty. The results were noteworthy, showing that the LLM effectively facilitated faculty discussions. Additionally, the LLM demonstrated the capability to generalize and create evaluation criteria from a single scenario based on its learned domain knowledge.",
+        "subjects": [
+            "cs.CY",
+            "cs.AI",
+            "cs.HC"
         ],
         "comment": null
     },
@@ -3541,6 +3515,25 @@
             "cs.DS",
             "cs.LG",
             "stat.ML"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2405.16834",
+        "abstract url": "https://arxiv.org/abs/2405.16834",
+        "title": "Speech enhancement deep-learning architecture for efficient edge processing",
+        "rating": "0",
+        "keywords": [
+            [
+                "Speech enhancement"
+            ],
+            [
+                "eess.AS"
+            ]
+        ],
+        "abstract": "Deep learning has become a de facto method of choice for speech enhancement tasks with significant improvements in speech quality. However, real-time processing with reduced size and computations for low-power edge devices drastically degrades speech quality. Recently, transformer-based architectures have greatly reduced the memory requirements and provided ways to improve the model performance through local and global contexts. However, the transformer operations remain computationally heavy. In this work, we introduce WaveUNet squeeze-excitation Res2 (WSR)-based metric generative adversarial network (WSR-MGAN) architecture that can be efficiently implemented on low-power edge devices for noise suppression tasks while maintaining speech quality. We utilize multi-scale features using Res2Net blocks that can be related to spectral content used in speech-processing tasks. In the generator, we integrate squeeze-excitation blocks (SEB) with multi-scale features for maintaining local and global contexts along with gated recurrent units (GRUs). The proposed approach is optimized through a combined loss function calculated over raw waveform, multi-resolution magnitude spectrogram, and objective metrics using a metric discriminator. Experimental results in terms of various objective metrics on VoiceBank+DEMAND and DNS-2020 challenge datasets demonstrate that the proposed speech enhancement (SE) approach outperforms the baselines and achieves state-of-the-art (SOTA) performance in the time domain.",
+        "subjects": [
+            "eess.AS"
         ],
         "comment": null
     },
@@ -3722,25 +3715,6 @@
         "comment": "Project webpage: https://qianwangx.github.io/VidSeg_diffusion/"
     },
     {
-        "paper id": "2405.16952",
-        "abstract url": "https://arxiv.org/abs/2405.16952",
-        "title": "A Variance-Preserving Interpolation Approach for Diffusion Models with Applications to Single Channel Speech Enhancement and Recognition",
-        "rating": "0",
-        "keywords": [
-            [
-                "Diffusion"
-            ],
-            [
-                "eess.AS"
-            ]
-        ],
-        "abstract": "In this paper, we propose a variance-preserving interpolation framework to improve diffusion models for single-channel speech enhancement (SE) and automatic speech recognition (ASR). This new variance-preserving interpolation diffusion model (VPIDM) approach requires only 25 iterative steps and obviates the need for a corrector, an essential element in the existing variance-exploding interpolation diffusion model (VEIDM). Two notable distinctions between VPIDM and VEIDM are the scaling function of the mean of state variables and the constraint imposed on the variance relative to the mean's scale. We conduct a systematic exploration of the theoretical mechanism underlying VPIDM and develop insights regarding VPIDM's applications in SE and ASR using VPIDM as a frontend. Our proposed approach, evaluated on two distinct data sets, demonstrates VPIDM's superior performances over conventional discriminative SE algorithms. Furthermore, we assess the performance of the proposed model under varying signal-to-noise ratio (SNR) levels. The investigation reveals VPIDM's improved robustness in target noise elimination when compared to VEIDM. Furthermore, utilizing the mid-outputs of both VPIDM and VEIDM results in enhanced ASR accuracies, thereby highlighting the practical efficacy of our proposed approach.",
-        "subjects": [
-            "eess.AS"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2405.16960",
         "abstract url": "https://arxiv.org/abs/2405.16960",
         "title": "DCPI-Depth: Explicitly Infusing Dense Correspondence Prior to Unsupervised Monocular Depth Estimation",
@@ -3781,27 +3755,6 @@
             "eess.IV"
         ],
         "comment": "11 pages, 8 figures"
-    },
-    {
-        "paper id": "2405.17028",
-        "abstract url": "https://arxiv.org/abs/2405.17028",
-        "title": "RSET: Remapping-based Sorting Method for Emotion Transfer Speech Synthesis",
-        "rating": "0",
-        "keywords": [
-            [
-                "Synthesis"
-            ],
-            [
-                "cs.SD",
-                "eess.AS"
-            ]
-        ],
-        "abstract": "Although current Text-To-Speech (TTS) models are able to generate high-quality speech samples, there are still challenges in developing emotion intensity controllable TTS. Most existing TTS models achieve emotion intensity control by extracting intensity information from reference speeches. Unfortunately, limited by the lack of modeling for intra-class emotion intensity and the model's information decoupling capability, the generated speech cannot achieve fine-grained emotion intensity control and suffers from information leakage issues. In this paper, we propose an emotion transfer TTS model, which defines a remapping-based sorting method to model intra-class relative intensity information, combined with Mutual Information (MI) to decouple speaker and emotion information, and synthesizes expressive speeches with perceptible intensity differences. Experiments show that our model achieves fine-grained emotion control while preserving speaker information.",
-        "subjects": [
-            "cs.SD",
-            "eess.AS"
-        ],
-        "comment": "Accepted by the 8th APWeb-WAIM International Joint Conference on Web and Big Data"
     },
     {
         "paper id": "2405.17037",
@@ -3906,6 +3859,27 @@
         "comment": null
     },
     {
+        "paper id": "2405.17083",
+        "abstract url": "https://arxiv.org/abs/2405.17083",
+        "title": "F-3DGS: Factorized Coordinates and Representations for 3D Gaussian Splatting",
+        "rating": "0",
+        "keywords": [
+            [
+                "3D",
+                "Gaussian Splatting",
+                "NeRF"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "The neural radiance field (NeRF) has made significant strides in representing 3D scenes and synthesizing novel views. Despite its advancements, the high computational costs of NeRF have posed challenges for its deployment in resource-constrained environments and real-time applications. As an alternative to NeRF-like neural rendering methods, 3D Gaussian Splatting (3DGS) offers rapid rendering speeds while maintaining excellent image quality. However, as it represents objects and scenes using a myriad of Gaussians, it requires substantial storage to achieve high-quality representation. To mitigate the storage overhead, we propose Factorized 3D Gaussian Splatting (F-3DGS), a novel approach that drastically reduces storage requirements while preserving image quality. Inspired by classical matrix and tensor factorization techniques, our method represents and approximates dense clusters of Gaussians with significantly fewer Gaussians through efficient factorization. We aim to efficiently represent dense 3D Gaussians by approximating them with a limited amount of information for each axis and their combinations. This method allows us to encode a substantially large number of Gaussians along with their essential attributes -- such as color, scale, and rotation -- necessary for rendering using a relatively small number of elements. Extensive experimental results demonstrate that F-3DGS achieves a significant reduction in storage costs while maintaining comparable quality in rendered images.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Our project page including code is available at https://xiangyu1sun.github.io/Factorize-3DGS/"
+    },
+    {
         "paper id": "2405.17097",
         "abstract url": "https://arxiv.org/abs/2405.17097",
         "title": "Evaluation of Multi-task Uncertainties in Joint Semantic Segmentation and Monocular Depth Estimation",
@@ -3971,27 +3945,6 @@
             "eess.AS"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2405.17110",
-        "abstract url": "https://arxiv.org/abs/2405.17110",
-        "title": "Superpixelwise Low-rank Approximation based Partial Label Learning for Hyperspectral Image Classification",
-        "rating": "0",
-        "keywords": [
-            [
-                "graph"
-            ],
-            [
-                "cs.AI",
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Insufficient prior knowledge of a captured hyperspectral image (HSI) scene may lead the experts or the automatic labeling systems to offer incorrect labels or ambiguous labels (i.e., assigning each training sample to a group of candidate labels, among which only one of them is valid; this is also known as partial label learning) during the labeling process. Accordingly, how to learn from such data with ambiguous labels is a problem of great practical importance. In this paper, we propose a novel superpixelwise low-rank approximation (LRA)-based partial label learning method, namely SLAP, which is the first to take into account partial label learning in HSI classification. SLAP is mainly composed of two phases: disambiguating the training labels and acquiring the predictive model. Specifically, in the first phase, we propose a superpixelwise LRA-based model, preparing the affinity graph for the subsequent label propagation process while extracting the discriminative representation to enhance the following classification task of the second phase. Then to disambiguate the training labels, label propagation propagates the labeling information via the affinity graph of training pixels. In the second phase, we take advantage of the resulting disambiguated training labels and the discriminative representations to enhance the classification performance. The extensive experiments validate the advantage of the proposed SLAP method over state-of-the-art methods.",
-        "subjects": [
-            "cs.CV",
-            "cs.AI"
-        ],
-        "comment": "0"
     },
     {
         "paper id": "2405.17136",
@@ -4201,33 +4154,6 @@
         "comment": "https://wangqiang9.github.io/Controllable.github.io/"
     },
     {
-        "paper id": "2405.17351",
-        "abstract url": "https://arxiv.org/abs/2405.17351",
-        "title": "DOF-GS: Adjustable Depth-of-Field 3D Gaussian Splatting for Refocusing,Defocus Rendering and Blur Removal",
-        "rating": "0",
-        "keywords": [
-            [
-                "GPU memory"
-            ],
-            [
-                "3D",
-                "Gaussian Splatting",
-                "Depth"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "3D Gaussian Splatting-based techniques have recently advanced 3D scene reconstruction and novel view synthesis, achieving high-quality real-time rendering. However, these approaches are inherently limited by the underlying pinhole camera assumption in modeling the images and hence only work for All-in-Focus (AiF) sharp image inputs. This severely affects their applicability in real-world scenarios where images often exhibit defocus blur due to the limited depth-of-field (DOF) of imaging devices. Additionally, existing 3D Gaussian Splatting (3DGS) methods also do not support rendering of DOF effects. To address these challenges, we introduce DOF-GS that allows for rendering adjustable DOF effects, removing defocus blur as well as refocusing of 3D scenes, all from multi-view images degraded by defocus blur. To this end, we re-imagine the traditional Gaussian Splatting pipeline by employing a finite aperture camera model coupled with explicit, differentiable defocus rendering guided by the Circle-of-Confusion (CoC). The proposed framework provides for dynamic adjustment of DOF effects by changing the aperture and focal distance of the underlying camera model on-demand. It also enables rendering varying DOF effects of 3D scenes post-optimization, and generating AiF images from defocused training images. Furthermore, we devise a joint optimization strategy to further enhance details in the reconstructed scenes by jointly optimizing rendered defocused and AiF images. Our experimental results indicate that DOF-GS produces high-quality sharp all-in-focus renderings conditioned on inputs compromised by defocus blur, with the training process incurring only a modest increase in GPU memory consumption. We further demonstrate the applications of the proposed method for adjustable defocus rendering and refocusing of the 3D scene from input images degraded by defocus blur.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2405.17369",
         "abstract url": "https://arxiv.org/abs/2405.17369",
         "title": "Predict joint angle of body parts based on sequence pattern recognition",
@@ -4286,6 +4212,26 @@
             "stat.ML"
         ],
         "comment": "Preprint. Under review"
+    },
+    {
+        "paper id": "2405.17421",
+        "abstract url": "https://arxiv.org/abs/2405.17421",
+        "title": "MoSca: Dynamic Gaussian Fusion from Casual Videos via 4D Motion Scaffolds",
+        "rating": "0",
+        "keywords": [
+            [
+                "Gaussian Splatting"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "We introduce 4D Motion Scaffolds (MoSca), a neural information processing system designed to reconstruct and synthesize novel views of dynamic scenes from monocular videos captured casually in the wild. To address such a challenging and ill-posed inverse problem, we leverage prior knowledge from foundational vision models, lift the video data to a novel Motion Scaffold (MoSca) representation, which compactly and smoothly encodes the underlying motions / deformations. The scene geometry and appearance are then disentangled from the deformation field, and are encoded by globally fusing the Gaussians anchored onto the MoSca and optimized via Gaussian Splatting. Additionally, camera poses can be seamlessly initialized and refined during the dynamic rendering process, without the need for other pose estimation tools. Experiments demonstrate state-of-the-art performance on dynamic rendering benchmarks.",
+        "subjects": [
+            "cs.CV",
+            "cs.GR"
+        ],
+        "comment": "project page: https://www.cis.upenn.edu/~leijh/projects/mosca"
     },
     {
         "paper id": "2405.17427",
@@ -4485,6 +4431,68 @@
         "comment": null
     },
     {
+        "paper id": "2405.17790",
+        "abstract url": "https://arxiv.org/abs/2405.17790",
+        "title": "Instruct-ReID++: Towards Universal Purpose Instruction-Guided Person Re-identification",
+        "rating": "0",
+        "keywords": [
+            [
+                "Re-identification"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Human intelligence can retrieve any person according to both visual and language descriptions. However, the current computer vision community studies specific person re-identification (ReID) tasks in different scenarios separately, which limits the applications in the real world. This paper strives to resolve this problem by proposing a novel instruct-ReID task that requires the model to retrieve images according to the given image or language instructions. Instruct-ReID is the first exploration of a general ReID setting, where existing 6 ReID tasks can be viewed as special cases by assigning different instructions. To facilitate research in this new instruct-ReID task, we propose a large-scale OmniReID++ benchmark equipped with diverse data and comprehensive evaluation methods e.g., task specific and task-free evaluation settings. In the task-specific evaluation setting, gallery sets are categorized according to specific ReID tasks. We propose a novel baseline model, IRM, with an adaptive triplet loss to handle various retrieval tasks within a unified framework. For task-free evaluation setting, where target person images are retrieved from task-agnostic gallery sets, we further propose a new method called IRM++ with novel memory bank-assisted learning. Extensive evaluations of IRM and IRM++ on OmniReID++ benchmark demonstrate the superiority of our proposed methods, achieving state-of-the-art performance on 10 test sets. The datasets, the model, and the code will be available at https://github.com/hwz-zju/Instruct-ReID",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "arXiv admin note: substantial text overlap with arXiv:2306.07520"
+    },
+    {
+        "paper id": "2405.17793",
+        "abstract url": "https://arxiv.org/abs/2405.17793",
+        "title": "SafeguardGS: 3D Gaussian Primitive Pruning While Avoiding Catastrophic Scene Destruction",
+        "rating": "0",
+        "keywords": [
+            [
+                "3D",
+                "Gaussian Splatting"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "3D Gaussian Splatting (3DGS) has made a significant stride in novel view synthesis, demonstrating top-notch rendering quality while achieving real-time rendering speed. However, the excessively large number of Gaussian primitives resulting from 3DGS' suboptimal densification process poses a major challenge, slowing down frame-per-second (FPS) and demanding considerable memory cost, making it unfavorable for low-end devices. To cope with this issue, many follow-up studies have suggested various pruning techniques, often in combination with different score functions, to optimize rendering performance. Nonetheless, a comprehensive discussion regarding their effectiveness and implications across all techniques is missing. In this paper, we first categorize 3DGS pruning techniques into two types: Cross-view pruning and pixel-wise pruning, which differ in their approaches to rank primitives. Our subsequent experiments reveal that while cross-view pruning leads to disastrous quality drops under extreme Gaussian primitives decimation, the pixel-wise pruning technique not only sustains relatively high rendering quality with minuscule performance degradation but also provides a reasonable minimum boundary for pruning. Building on this observation, we further propose multiple variations of score functions and empirically discover that the color-weighted score function outperforms others for discriminating insignificant primitives for rendering. We believe our research provides valuable insights for optimizing 3DGS pruning strategies for future works.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Comprehensive experiments are in progress"
+    },
+    {
+        "paper id": "2405.17811",
+        "abstract url": "https://arxiv.org/abs/2405.17811",
+        "title": "Mani-GS: Gaussian Splatting Manipulation with Triangular Mesh",
+        "rating": "0",
+        "keywords": [
+            [
+                "3D",
+                "Gaussian Splatting",
+                "NeRF",
+                "Radiance Fields"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Neural 3D representations such as Neural Radiance Fields (NeRF), excel at producing photo-realistic rendering results but lack the flexibility for manipulation and editing which is crucial for content creation. Previous works have attempted to address this issue by deforming a NeRF in canonical space or manipulating the radiance field based on an explicit mesh. However, manipulating NeRF is not highly controllable and requires a long training and inference time. With the emergence of 3D Gaussian Splatting (3DGS), extremely high-fidelity novel view synthesis can be achieved using an explicit point-based 3D representation with much faster training and rendering speed. However, there is still a lack of effective means to manipulate 3DGS freely while maintaining rendering quality. In this work, we aim to tackle the challenge of achieving manipulable photo-realistic rendering. We propose to utilize a triangular mesh to manipulate 3DGS directly with self-adaptation. This approach reduces the need to design various algorithms for different types of Gaussian manipulation. By utilizing a triangle shape-aware Gaussian binding and adapting method, we can achieve 3DGS manipulation and preserve high-fidelity rendering after manipulation. Our approach is capable of handling large deformations, local manipulations, and soft body simulations while keeping high-quality rendering. Furthermore, we demonstrate that our method is also effective with inaccurate meshes extracted from 3DGS. Experiments conducted demonstrate the effectiveness of our method and its superiority over baseline approaches.",
+        "subjects": [
+            "cs.GR",
+            "cs.CV"
+        ],
+        "comment": "Project page here: https://gaoxiangjun.github.io/mani_gs/"
+    },
+    {
         "paper id": "2405.17814",
         "abstract url": "https://arxiv.org/abs/2405.17814",
         "title": "FAIntbench: A Holistic and Precise Benchmark for Bias Evaluation in Text-to-Image Models",
@@ -4502,27 +4510,6 @@
         "subjects": [
             "cs.CV",
             "cs.AI"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2405.17818",
-        "abstract url": "https://arxiv.org/abs/2405.17818",
-        "title": "Hyperspectral and multispectral image fusion with arbitrary resolution through self-supervised representations",
-        "rating": "0",
-        "keywords": [
-            [
-                "super-resolution"
-            ],
-            [
-                "cs.CV",
-                "eess.IV"
-            ]
-        ],
-        "abstract": "The fusion of a low-resolution hyperspectral image (LR-HSI) with a high-resolution multispectral image (HR-MSI) has emerged as an effective technique for achieving HSI super-resolution (SR). Previous studies have mainly concentrated on estimating the posterior distribution of the latent high-resolution hyperspectral image (HR-HSI), leveraging an appropriate image prior and likelihood computed from the discrepancy between the latent HSI and observed images. Low rankness stands out for preserving latent HSI characteristics through matrix factorization among the various priors. However, this method only enhances resolution within the dimensions of the two modalities. To overcome this limitation, we propose a novel continuous low-rank factorization (CLoRF) by integrating two neural representations into the matrix factorization, capturing spatial and spectral information, respectively. This approach enables us to harness both the low rankness from the matrix factorization and the continuity from neural representation in a self-supervised manner. Theoretically, we prove the low-rank property and Lipschitz continuity in the proposed continuous low-rank factorization. Experimentally, our method significantly surpasses existing techniques and achieves user-desired resolutions without the need for neural network retraining.",
-        "subjects": [
-            "cs.CV",
-            "eess.IV"
         ],
         "comment": null
     },
@@ -4671,26 +4658,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.16971",
-        "abstract url": "https://arxiv.org/abs/2405.16971",
-        "title": "A Correlation- and Mean-Aware Loss Function and Benchmarking Framework to Improve GAN-based Tabular Data Synthesis",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "GAN",
-                "Synthesis"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Advancements in science rely on data sharing. In medicine, where personal data are often involved, synthetic tabular data generated by generative adversarial networks (GANs) offer a promising avenue. However, existing GANs struggle to capture the complexities of real-world tabular data, which often contain a mix of continuous and categorical variables with potential imbalances and dependencies. We propose a novel correlation- and mean-aware loss function designed to address these challenges as a regularizer for GANs. To ensure a rigorous evaluation, we establish a comprehensive benchmarking framework using ten real-world datasets and eight established tabular GAN baselines. The proposed loss function demonstrates statistically significant improvements over existing methods in capturing the true data distribution, significantly enhancing the quality of synthetic data generated with GANs. The benchmarking framework shows that the enhanced synthetic data quality leads to improved performance in downstream machine learning (ML) tasks, ultimately paving the way for easier data sharing.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": "n.a"
-    },
-    {
         "paper id": "2405.16978",
         "abstract url": "https://arxiv.org/abs/2405.16978",
         "title": "OSLO: One-Shot Label-Only Membership Inference Attacks",
@@ -4709,6 +4676,26 @@
             "cs.CR"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2405.17003",
+        "abstract url": "https://arxiv.org/abs/2405.17003",
+        "title": "Graph Condensation for Open-World Graph Learning",
+        "rating": "-0.5",
+        "keywords": [
+            [
+                "GNNs",
+                "Graph"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "The burgeoning volume of graph data presents significant computational challenges in training graph neural networks (GNNs), critically impeding their efficiency in various applications. To tackle this challenge, graph condensation (GC) has emerged as a promising acceleration solution, focusing on the synthesis of a compact yet representative graph for efficiently training GNNs while retaining performance. Despite the potential to promote scalable use of GNNs, existing GC methods are limited to aligning the condensed graph with merely the observed static graph distribution. This limitation significantly restricts the generalization capacity of condensed graphs, particularly in adapting to dynamic distribution changes. In real-world scenarios, however, graphs are dynamic and constantly evolving, with new nodes and edges being continually integrated. Consequently, due to the limited generalization capacity of condensed graphs, applications that employ GC for efficient GNN training end up with sub-optimal GNNs when confronted with evolving graph structures and distributions in dynamic real-world situations. To overcome this issue, we propose open-world graph condensation (OpenGC), a robust GC framework that integrates structure-aware distribution shift to simulate evolving graph patterns and exploit the temporal environments for invariance condensation. This approach is designed to extract temporal invariant patterns from the original graph, thereby enhancing the generalization capabilities of the condensed graph and, subsequently, the GNNs trained on it. Extensive experiments on both real-world and synthetic evolving graphs demonstrate that OpenGC outperforms state-of-the-art (SOTA) GC methods in adapting to dynamic changes in open-world graph environments.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": "Accepted by KDD 2024"
     },
     {
         "paper id": "2405.17034",
@@ -4747,26 +4734,6 @@
         ],
         "abstract": "We introduce the Glauber Generative Model (GGM), a new class of discrete diffusion models, to obtain new samples from a distribution given samples from a discrete space. GGM deploys a discrete Markov chain called the heat bath dynamics (or the Glauber dynamics) to denoise a sequence of noisy tokens to a sample from a joint distribution of discrete tokens. Our novel conceptual framework provides an exact reduction of the task of learning the denoising Markov chain to solving a class of binary classification tasks. More specifically, the model learns to classify a given token in a noisy sequence as signal or noise. In contrast, prior works on discrete diffusion models either solve regression problems to learn importance ratios, or minimize loss functions given by variational approximations. We apply GGM to language modeling and image generation, where images are discretized using image tokenizers like VQGANs. We show that it outperforms existing discrete diffusion models in language generation, and demonstrates strong performance for image generation without using dataset-specific image tokenizers. We also show that our model is capable of performing well in zero-shot control settings like text and image infilling.",
         "subjects": [
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2405.17047",
-        "abstract url": "https://arxiv.org/abs/2405.17047",
-        "title": "Interpretable Robotic Manipulation from Language",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "voxel"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Humans naturally employ linguistic instructions to convey knowledge, a process that proves significantly more complex for machines, especially within the context of multitask robotic manipulation environments. Natural language, moreover, serves as the primary medium through which humans acquire new knowledge, presenting a potentially intuitive bridge for translating concepts understandable by humans into formats that can be learned by machines. In pursuit of facilitating this integration, we introduce an explainable behavior cloning agent, named Ex-PERACT, specifically designed for manipulation tasks. This agent is distinguished by its hierarchical structure, which incorporates natural language to enhance the learning process. At the top level, the model is tasked with learning a discrete skill code, while at the bottom level, the policy network translates the problem into a voxelized grid and maps the discretized actions to voxel grids. We evaluate our method across eight challenging manipulation tasks utilizing the RLBench benchmark, demonstrating that Ex-PERACT not only achieves competitive policy performance but also effectively bridges the gap between human instructions and machine execution in complex environments.",
-        "subjects": [
-            "cs.RO",
             "cs.LG"
         ],
         "comment": null
@@ -5079,27 +5046,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.17514",
-        "abstract url": "https://arxiv.org/abs/2405.17514",
-        "title": "AbstractBeam: Enhancing Bottom-Up Program Synthesis using Library Learning",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "Synthesis"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "LambdaBeam is a state-of-the-art execution-guided algorithm for program synthesis that incorporates higher-order functions, lambda functions, and iterative loops into the Domain-Specific Language (DSL). LambdaBeam generates every program from the start. Yet, many program blocks or subprograms occur frequently in a given domain, e.g., loops to traverse a list. Thus, repeating programs can be used to enhance the synthesis algorithm. However, LambdaBeam fails to leverage this potential. For this purpose, we introduce AbstractBeam: A novel program synthesis framework that employs Library Learning to identify such program repetitions, integrates them into the DSL, and thus utilizes their potential to boost LambdaBeam's synthesis algorithm. Our experimental evaluations demonstrate that AbstractBeam significantly improves LambdaBeam's performance in the LambdaBeam integer list manipulation domain. Additionally, AbstractBeam's program generation is more efficient compared to LambdaBeam's synthesis. Finally, our findings indicate that Library Learning is effective in domains not specifically crafted to highlight its benefits.",
-        "subjects": [
-            "cs.SE",
-            "cs.AI",
-            "cs.PL"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2405.17522",
         "abstract url": "https://arxiv.org/abs/2405.17522",
         "title": "Efficient Model Compression for Hierarchical Federated Learning",
@@ -5231,26 +5177,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.17724",
-        "abstract url": "https://arxiv.org/abs/2405.17724",
-        "title": "ClavaDDPM: Multi-relational Data Synthesis with Cluster-guided Diffusion Models",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "Diffusion",
-                "Synthesis"
-            ],
-            [
-                "cs.AI"
-            ]
-        ],
-        "abstract": "Recent research in tabular data synthesis has focused on single tables, whereas real-world applications often involve complex data with tens or hundreds of interconnected tables. Previous approaches to synthesizing multi-relational (multi-table) data fall short in two key aspects: scalability for larger datasets and capturing long-range dependencies, such as correlations between attributes spread across different tables. Inspired by the success of diffusion models in tabular data modeling, we introduce $\\textbf{C}luster$ $\\textbf{La}tent$ $\\textbf{Va}riable$ $guided$ $\\textbf{D}enoising$ $\\textbf{D}iffusion$ $\\textbf{P}robabilistic$ $\\textbf{M}odels$ (ClavaDDPM). This novel approach leverages clustering labels as intermediaries to model relationships between tables, specifically focusing on foreign key constraints. ClavaDDPM leverages the robust generation capabilities of diffusion models while incorporating efficient algorithms to propagate the learned latent variables across tables. This enables ClavaDDPM to capture long-range dependencies effectively. Extensive evaluations on multi-table datasets of varying sizes show that ClavaDDPM significantly outperforms existing methods for these long-range dependencies while remaining competitive on utility metrics for single-table data.",
-        "subjects": [
-            "cs.AI"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2405.17725",
         "abstract url": "https://arxiv.org/abs/2405.17725",
         "title": "Color Shift Estimation-and-Correction for Image Enhancement",
@@ -5271,28 +5197,6 @@
             "cs.CV"
         ],
         "comment": "CVPR2024 accepted paper"
-    },
-    {
-        "paper id": "2405.17728",
-        "abstract url": "https://arxiv.org/abs/2405.17728",
-        "title": "Facilitating Holistic Evaluations with LLMs: Insights from Scenario-Based Experiments",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "synthesize"
-            ],
-            [
-                "cs.AI",
-                "cs.CY"
-            ]
-        ],
-        "abstract": "Workshop courses designed to foster creativity are gaining popularity. However, achieving a holistic evaluation that accommodates diverse perspectives is challenging, even for experienced faculty teams. Adequate discussion is essential to integrate varied assessments, but faculty often lack the time for such deliberations. Deriving an average score without discussion undermines the purpose of a holistic evaluation. This paper explores the use of a Large Language Model (LLM) as a facilitator to integrate diverse faculty assessments. Scenario-based experiments were conducted to determine if the LLM could synthesize diverse evaluations and explain the underlying theories to faculty. The results were noteworthy, showing that the LLM effectively facilitated faculty discussions. Additionally, the LLM demonstrated the capability to generalize and create evaluation criteria from a single scenario based on its learned domain knowledge.",
-        "subjects": [
-            "cs.CY",
-            "cs.AI",
-            "cs.HC"
-        ],
-        "comment": null
     },
     {
         "paper id": "2405.17750",
@@ -5435,8 +5339,7 @@
                 "avatar"
             ],
             [
-                "diffusion",
-                "synthesis"
+                "diffusion"
             ],
             [
                 "cs.CV"
@@ -5518,8 +5421,7 @@
         "rating": "-1",
         "keywords": [
             [
-                "diffusion",
-                "synthesizing"
+                "diffusion"
             ],
             [
                 "Trajectory"
@@ -5629,6 +5531,28 @@
         "comment": "Submitted to IEEE Transactions on Wireless Communications"
     },
     {
+        "paper id": "2405.16952",
+        "abstract url": "https://arxiv.org/abs/2405.16952",
+        "title": "A Variance-Preserving Interpolation Approach for Diffusion Models with Applications to Single Channel Speech Enhancement and Recognition",
+        "rating": "-1",
+        "keywords": [
+            [
+                "Diffusion"
+            ],
+            [
+                "Speech Enhancement"
+            ],
+            [
+                "eess.AS"
+            ]
+        ],
+        "abstract": "In this paper, we propose a variance-preserving interpolation framework to improve diffusion models for single-channel speech enhancement (SE) and automatic speech recognition (ASR). This new variance-preserving interpolation diffusion model (VPIDM) approach requires only 25 iterative steps and obviates the need for a corrector, an essential element in the existing variance-exploding interpolation diffusion model (VEIDM). Two notable distinctions between VPIDM and VEIDM are the scaling function of the mean of state variables and the constraint imposed on the variance relative to the mean's scale. We conduct a systematic exploration of the theoretical mechanism underlying VPIDM and develop insights regarding VPIDM's applications in SE and ASR using VPIDM as a frontend. Our proposed approach, evaluated on two distinct data sets, demonstrates VPIDM's superior performances over conventional discriminative SE algorithms. Furthermore, we assess the performance of the proposed model under varying signal-to-noise ratio (SNR) levels. The investigation reveals VPIDM's improved robustness in target noise elimination when compared to VEIDM. Furthermore, utilizing the mid-outputs of both VPIDM and VEIDM results in enhanced ASR accuracies, thereby highlighting the practical efficacy of our proposed approach.",
+        "subjects": [
+            "eess.AS"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.16959",
         "abstract url": "https://arxiv.org/abs/2405.16959",
         "title": "A Machine Learning Approach to Analyze the Effects of Alzheimer's Disease on Handwriting through Lognormal Features",
@@ -5711,24 +5635,6 @@
             "cs.CL",
             "cs.CV",
             "cs.RO"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2405.16997",
-        "abstract url": "https://arxiv.org/abs/2405.16997",
-        "title": "Program Synthesis is $\u03a3_3^0$-Complete",
-        "rating": "-1",
-        "keywords": [
-            [
-                "Synthesis"
-            ]
-        ],
-        "abstract": "This paper considers program synthesis in the context of computational hardness, asking the question: How hard is it to determine whether a given synthesis problem has a solution or not? To answer this question, this paper studies program synthesis for a basic imperative, Turing-complete language IMP, for which this paper proves that program synthesis is $\u03a3_3^0$-\\emph{complete} in the arithmetical hierarchy. The proof of this fact relies on a fully constructive encoding of program synthesis (which is typically formulated as a second-order query) as a first-order formula in the standard model of arithmetic (i.e., Peano arithmetic). Constructing such a formula then allows us to reduce the decision problem for COF (the set of functions which diverge only on a finite set of inputs), which is well-known to be a $\u03a3_3^0$-complete problem, into the constructed first-order representation of synthesis. In addition to this main result, we also consider the hardness of variants of synthesis problems, such as those introduced in previous work to make program synthesis more tractable (e.g., synthesis over finite examples). To the best of our knowledge, this paper is the first to give a first-order characterization of program synthesis in general, and precisely define the computability of synthesis problems and their variants.",
-        "subjects": [
-            "cs.LO",
-            "cs.CC",
-            "cs.PL"
         ],
         "comment": null
     },
@@ -5870,30 +5776,6 @@
             "cs.RO"
         ],
         "comment": "8 pages, 12 figures"
-    },
-    {
-        "paper id": "2405.17083",
-        "abstract url": "https://arxiv.org/abs/2405.17083",
-        "title": "F-3DGS: Factorized Coordinates and Representations for 3D Gaussian Splatting",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting",
-                "NeRF"
-            ],
-            [
-                "synthesizing"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "The neural radiance field (NeRF) has made significant strides in representing 3D scenes and synthesizing novel views. Despite its advancements, the high computational costs of NeRF have posed challenges for its deployment in resource-constrained environments and real-time applications. As an alternative to NeRF-like neural rendering methods, 3D Gaussian Splatting (3DGS) offers rapid rendering speeds while maintaining excellent image quality. However, as it represents objects and scenes using a myriad of Gaussians, it requires substantial storage to achieve high-quality representation. To mitigate the storage overhead, we propose Factorized 3D Gaussian Splatting (F-3DGS), a novel approach that drastically reduces storage requirements while preserving image quality. Inspired by classical matrix and tensor factorization techniques, our method represents and approximates dense clusters of Gaussians with significantly fewer Gaussians through efficient factorization. We aim to efficiently represent dense 3D Gaussians by approximating them with a limited amount of information for each axis and their combinations. This method allows us to encode a substantially large number of Gaussians along with their essential attributes -- such as color, scale, and rotation -- necessary for rendering using a relatively small number of elements. Extensive experimental results demonstrate that F-3DGS achieves a significant reduction in storage costs while maintaining comparable quality in rendered images.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Our project page including code is available at https://xiangyu1sun.github.io/Factorize-3DGS/"
     },
     {
         "paper id": "2405.17088",
@@ -6049,7 +5931,6 @@
         "keywords": [
             [
                 "Diffusion",
-                "synthesis",
                 "Text-to-Image"
             ]
         ],
@@ -6108,7 +5989,6 @@
                 "depth"
             ],
             [
-                "synthesis",
                 "text-to-image"
             ],
             [
@@ -6173,23 +6053,6 @@
             "eess.SP"
         ],
         "comment": "paper accepted by IEEE SAM Workshop 2024"
-    },
-    {
-        "paper id": "2405.17304",
-        "abstract url": "https://arxiv.org/abs/2405.17304",
-        "title": "Stochastic Omega-Regular Verification and Control with Supermartingales",
-        "rating": "-1",
-        "keywords": [
-            [
-                "synthesis"
-            ]
-        ],
-        "abstract": "We present for the first time a supermartingale certificate for $\u03c9$-regular specifications. We leverage the Robbins & Siegmund convergence theorem to characterize supermartingale certificates for the almost-sure acceptance of Streett conditions on general stochastic processes, which we call Streett supermartingales. This enables effective verification and control of discrete-time stochastic dynamical models with infinite state space under $\u03c9$-regular and linear temporal logic specifications. Our result generalises reachability, safety, reach-avoid, persistence and recurrence specifications; our contribution applies to discrete-time stochastic dynamical models and probabilistic programs with discrete and continuous state spaces and distributions, and carries over to deterministic models and programs. We provide a synthesis algorithm for control policies and Streett supermartingales as proof certificates for $\u03c9$-regular objectives, which is sound and complete for supermartingales and control policies with polynomial templates and any stochastic dynamical model whose post-expectation is expressible as a polynomial. We additionally provide an optimisation of our algorithm that reduces the problem to satisfiability modulo theories, under the assumption that templates and post-expectation are in piecewise linear form. We have built a prototype and have demonstrated the efficacy of our approach on several exemplar $\u03c9$-regular verification and control synthesis problems.",
-        "subjects": [
-            "cs.LO",
-            "eess.SY"
-        ],
-        "comment": "The conference version of this manuscript appeared at CAV'24"
     },
     {
         "paper id": "2405.17314",
@@ -6325,8 +6188,7 @@
             ],
             [
                 "Diffusion",
-                "GAN",
-                "synthesize"
+                "GAN"
             ],
             [
                 "cs.CV"
@@ -6362,27 +6224,31 @@
         "comment": null
     },
     {
-        "paper id": "2405.17421",
-        "abstract url": "https://arxiv.org/abs/2405.17421",
-        "title": "MoSca: Dynamic Gaussian Fusion from Casual Videos via 4D Motion Scaffolds",
+        "paper id": "2405.17422",
+        "abstract url": "https://arxiv.org/abs/2405.17422",
+        "title": "Hardness-Aware Scene Synthesis for Semi-Supervised 3D Object Detection",
         "rating": "-1",
         "keywords": [
             [
-                "Gaussian Splatting"
+                "3D",
+                "point cloud"
             ],
             [
-                "synthesize"
+                "autonomous driving"
             ],
             [
+                "cs.AI",
+                "cs.LG",
                 "cs.CV"
             ]
         ],
-        "abstract": "We introduce 4D Motion Scaffolds (MoSca), a neural information processing system designed to reconstruct and synthesize novel views of dynamic scenes from monocular videos captured casually in the wild. To address such a challenging and ill-posed inverse problem, we leverage prior knowledge from foundational vision models, lift the video data to a novel Motion Scaffold (MoSca) representation, which compactly and smoothly encodes the underlying motions / deformations. The scene geometry and appearance are then disentangled from the deformation field, and are encoded by globally fusing the Gaussians anchored onto the MoSca and optimized via Gaussian Splatting. Additionally, camera poses can be seamlessly initialized and refined during the dynamic rendering process, without the need for other pose estimation tools. Experiments demonstrate state-of-the-art performance on dynamic rendering benchmarks.",
+        "abstract": "3D object detection aims to recover the 3D information of concerning objects and serves as the fundamental task of autonomous driving perception. Its performance greatly depends on the scale of labeled training data, yet it is costly to obtain high-quality annotations for point cloud data. While conventional methods focus on generating pseudo-labels for unlabeled samples as supplements for training, the structural nature of 3D point cloud data facilitates the composition of objects and backgrounds to synthesize realistic scenes. Motivated by this, we propose a hardness-aware scene synthesis (HASS) method to generate adaptive synthetic scenes to improve the generalization of the detection models. We obtain pseudo-labels for unlabeled objects and generate diverse scenes with different compositions of objects and backgrounds. As the scene synthesis is sensitive to the quality of pseudo-labels, we further propose a hardness-aware strategy to reduce the effect of low-quality pseudo-labels and maintain a dynamic pseudo-database to ensure the diversity and quality of synthetic scenes. Extensive experimental results on the widely used KITTI and Waymo datasets demonstrate the superiority of the proposed HASS method, which outperforms existing semi-supervised learning methods on 3D object detection. Code: https://github.com/wzzheng/HASS.",
         "subjects": [
             "cs.CV",
-            "cs.GR"
+            "cs.AI",
+            "cs.LG"
         ],
-        "comment": "project page: https://www.cis.upenn.edu/~leijh/projects/mosca"
+        "comment": "Code is available at: https://github.com/wzzheng/HASS"
     },
     {
         "paper id": "2405.17425",
@@ -6528,23 +6394,6 @@
         "comment": "5 pages, 2 figures, 1 table. Published in Artificial Intelligence in Medicine (AIME) 2023"
     },
     {
-        "paper id": "2405.17590",
-        "abstract url": "https://arxiv.org/abs/2405.17590",
-        "title": "Optimizing Layout of Recursive Datatypes with Marmoset",
-        "rating": "-1",
-        "keywords": [
-            [
-                "synthesize"
-            ]
-        ],
-        "abstract": "While programmers know that the low-level memory representation of data structures can have significant effects on performance, compiler support to optimize the layout of those structures is an under-explored field. Prior work has optimized the layout of individual, non-recursive structures without considering how collections of those objects in linked or recursive data structures are laid out. This work introduces Marmoset, a compiler that optimizes the layouts of algebraic datatypes, with a special focus on producing highly optimized, packed data layouts where recursive structures can be traversed with minimal pointer chasing. Marmoset performs an analysis of how a recursive ADT is used across functions to choose a global layout that promotes simple, strided access for that ADT in memory. It does so by building and solving a constraint system to minimize an abstract cost model, yielding a predicted efficient layout for the ADT. Marmoset then builds on top of Gibbon, a prior compiler for packed, mostly-serial representations, to synthesize optimized ADTs. We show experimentally that Marmoset is able to choose optimal layouts across a series of microbenchmarks and case studies, outperforming both Gibbons baseline approach, as well as MLton, a Standard ML compiler that uses traditional pointer-heavy representations.",
-        "subjects": [
-            "cs.PL",
-            "cs.PF"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2405.17602",
         "abstract url": "https://arxiv.org/abs/2405.17602",
         "title": "Augmenting Textual Generation via Topology Aware Retrieval",
@@ -6673,6 +6522,29 @@
         "comment": "Dataset will be published shortly"
     },
     {
+        "paper id": "2405.17705",
+        "abstract url": "https://arxiv.org/abs/2405.17705",
+        "title": "DC-Gaussian: Improving 3D Gaussian Splatting for Reflective Dash Cam Videos",
+        "rating": "-1",
+        "keywords": [
+            [
+                "3D",
+                "Gaussian Splatting"
+            ],
+            [
+                "vehicle"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "We present DC-Gaussian, a new method for generating novel views from in-vehicle dash cam videos. While neural rendering techniques have made significant strides in driving scenarios, existing methods are primarily designed for videos collected by autonomous vehicles. However, these videos are limited in both quantity and diversity compared to dash cam videos, which are more widely used across various types of vehicles and capture a broader range of scenarios. Dash cam videos often suffer from severe obstructions such as reflections and occlusions on the windshields, which significantly impede the application of neural rendering techniques. To address this challenge, we develop DC-Gaussian based on the recent real-time neural rendering technique 3D Gaussian Splatting (3DGS). Our approach includes an adaptive image decomposition module to model reflections and occlusions in a unified manner. Additionally, we introduce illumination-aware obstruction modeling to manage reflections and occlusions under varying lighting conditions. Lastly, we employ a geometry-guided Gaussian enhancement strategy to improve rendering details by incorporating additional geometry priors. Experiments on self-captured and public dash cam videos show that our method not only achieves state-of-the-art performance in novel view synthesis, but also accurately reconstructing captured scenes getting rid of obstructions.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "9 pages,7 figures;project page: https://linhanwang.github.io/dcgaussian/"
+    },
+    {
         "paper id": "2405.17710",
         "abstract url": "https://arxiv.org/abs/2405.17710",
         "title": "Does Geo-co-location Matter? A Case Study of Public Health Conversations during COVID-19",
@@ -6695,6 +6567,27 @@
         "comment": null
     },
     {
+        "paper id": "2405.17712",
+        "abstract url": "https://arxiv.org/abs/2405.17712",
+        "title": "CLAIM Your Data: Enhancing Imputation Accuracy with Contextual Large Language Models",
+        "rating": "-1",
+        "keywords": [
+            [
+                "tabular"
+            ],
+            [
+                "cs.LG",
+                "cs.CL"
+            ]
+        ],
+        "abstract": "This paper introduces the Contextual Language model for Accurate Imputation Method (CLAIM), a novel strategy that capitalizes on the expansive knowledge and reasoning capabilities of pre-trained large language models (LLMs) to address missing data challenges in tabular datasets. Unlike traditional imputation methods, which predominantly rely on numerical estimations, CLAIM utilizes contextually relevant natural language descriptors to fill missing values. This approach transforms datasets into natural language contextualized formats that are inherently more aligned with LLMs' capabilities, thereby facilitating the dual use of LLMs: first, to generate missing value descriptors, and then, to fine-tune the LLM on the enriched dataset for improved performance in downstream tasks. Our evaluations across diverse datasets and missingness patterns reveal CLAIM's superior performance over existing imputation techniques. Furthermore, our investigation into the effectiveness of context-specific versus generic descriptors for missing data highlights the importance of contextual accuracy in enhancing LLM performance for data imputation. The results underscore CLAIM's potential to markedly improve the reliability and quality of data analysis and machine learning models, offering a more nuanced and effective solution for handling missing data.",
+        "subjects": [
+            "cs.CL",
+            "cs.LG"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.17729",
         "abstract url": "https://arxiv.org/abs/2405.17729",
         "title": "Hierarchical Action Recognition: A Contrastive Video-Language Approach with Hierarchical Interactions",
@@ -6711,6 +6604,25 @@
         "subjects": [
             "cs.CV",
             "cs.MM"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2405.17732",
+        "abstract url": "https://arxiv.org/abs/2405.17732",
+        "title": "C$^{3}$Bench: A Comprehensive Classical Chinese Understanding Benchmark for Large Language Models",
+        "rating": "-1",
+        "keywords": [
+            [
+                "named entity recognition"
+            ],
+            [
+                "cs.CL"
+            ]
+        ],
+        "abstract": "Classical Chinese Understanding (CCU) holds significant value in preserving and exploration of the outstanding traditional Chinese culture. Recently, researchers have attempted to leverage the potential of Large Language Models (LLMs) for CCU by capitalizing on their remarkable comprehension and semantic capabilities. However, no comprehensive benchmark is available to assess the CCU capabilities of LLMs. To fill this gap, this paper introduces C$^{3}$bench, a Comprehensive Classical Chinese understanding benchmark, which comprises 50,000 text pairs for five primary CCU tasks, including classification, retrieval, named entity recognition, punctuation, and translation. Furthermore, the data in C$^{3}$bench originates from ten different domains, covering most of the categories in classical Chinese. Leveraging the proposed C$^{3}$bench, we extensively evaluate the quantitative performance of 15 representative LLMs on all five CCU tasks. Our results not only establish a public leaderboard of LLMs' CCU capabilities but also gain some findings. Specifically, existing LLMs are struggle with CCU tasks and still inferior to supervised models. Additionally, the results indicate that CCU is a task that requires special attention. We believe this study could provide a standard benchmark, comprehensive baselines, and valuable insights for the future advancement of LLM-based CCU research. The evaluation pipeline and dataset are available at \\url{https://github.com/SCUT-DLVCLab/C3bench}.",
+        "subjects": [
+            "cs.CL"
         ],
         "comment": null
     },
@@ -6872,29 +6784,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.17793",
-        "abstract url": "https://arxiv.org/abs/2405.17793",
-        "title": "SafeguardGS: 3D Gaussian Primitive Pruning While Avoiding Catastrophic Scene Destruction",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "3D Gaussian Splatting (3DGS) has made a significant stride in novel view synthesis, demonstrating top-notch rendering quality while achieving real-time rendering speed. However, the excessively large number of Gaussian primitives resulting from 3DGS' suboptimal densification process poses a major challenge, slowing down frame-per-second (FPS) and demanding considerable memory cost, making it unfavorable for low-end devices. To cope with this issue, many follow-up studies have suggested various pruning techniques, often in combination with different score functions, to optimize rendering performance. Nonetheless, a comprehensive discussion regarding their effectiveness and implications across all techniques is missing. In this paper, we first categorize 3DGS pruning techniques into two types: Cross-view pruning and pixel-wise pruning, which differ in their approaches to rank primitives. Our subsequent experiments reveal that while cross-view pruning leads to disastrous quality drops under extreme Gaussian primitives decimation, the pixel-wise pruning technique not only sustains relatively high rendering quality with minuscule performance degradation but also provides a reasonable minimum boundary for pruning. Building on this observation, we further propose multiple variations of score functions and empirically discover that the color-weighted score function outperforms others for discriminating insignificant primitives for rendering. We believe our research provides valuable insights for optimizing 3DGS pruning strategies for future works.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Comprehensive experiments are in progress"
-    },
-    {
         "paper id": "2405.17804",
         "abstract url": "https://arxiv.org/abs/2405.17804",
         "title": "Detection-Correction Structure via General Language Model for Grammatical Error Correction",
@@ -6912,32 +6801,6 @@
             "cs.CL"
         ],
         "comment": "Long paper. Accepted by ACL 2024 Main Conference"
-    },
-    {
-        "paper id": "2405.17811",
-        "abstract url": "https://arxiv.org/abs/2405.17811",
-        "title": "Mani-GS: Gaussian Splatting Manipulation with Triangular Mesh",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D",
-                "Gaussian Splatting",
-                "NeRF",
-                "Radiance Fields"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Neural 3D representations such as Neural Radiance Fields (NeRF), excel at producing photo-realistic rendering results but lack the flexibility for manipulation and editing which is crucial for content creation. Previous works have attempted to address this issue by deforming a NeRF in canonical space or manipulating the radiance field based on an explicit mesh. However, manipulating NeRF is not highly controllable and requires a long training and inference time. With the emergence of 3D Gaussian Splatting (3DGS), extremely high-fidelity novel view synthesis can be achieved using an explicit point-based 3D representation with much faster training and rendering speed. However, there is still a lack of effective means to manipulate 3DGS freely while maintaining rendering quality. In this work, we aim to tackle the challenge of achieving manipulable photo-realistic rendering. We propose to utilize a triangular mesh to manipulate 3DGS directly with self-adaptation. This approach reduces the need to design various algorithms for different types of Gaussian manipulation. By utilizing a triangle shape-aware Gaussian binding and adapting method, we can achieve 3DGS manipulation and preserve high-fidelity rendering after manipulation. Our approach is capable of handling large deformations, local manipulations, and soft body simulations while keeping high-quality rendering. Furthermore, we demonstrate that our method is also effective with inaccurate meshes extracted from 3DGS. Experiments conducted demonstrate the effectiveness of our method and its superiority over baseline approaches.",
-        "subjects": [
-            "cs.GR",
-            "cs.CV"
-        ],
-        "comment": "Project page here: https://gaoxiangjun.github.io/mani_gs/"
     },
     {
         "paper id": "2405.17819",
@@ -7078,27 +6941,24 @@
         "comment": "13 Pages, 6 Figures - 38 Supplementary Pages, 6 Supplementary Figures, 4 Supplementary Tables"
     },
     {
-        "paper id": "2405.17003",
-        "abstract url": "https://arxiv.org/abs/2405.17003",
-        "title": "Graph Condensation for Open-World Graph Learning",
+        "paper id": "2405.17025",
+        "abstract url": "https://arxiv.org/abs/2405.17025",
+        "title": "SWAT: Scalable and Efficient Window Attention-based Transformers Acceleration on FPGAs",
         "rating": "-1.5",
         "keywords": [
             [
-                "synthesis"
+                "FPGAs"
             ],
             [
-                "GNNs",
-                "Graph"
-            ],
-            [
-                "cs.LG"
+                "cs.AI"
             ]
         ],
-        "abstract": "The burgeoning volume of graph data presents significant computational challenges in training graph neural networks (GNNs), critically impeding their efficiency in various applications. To tackle this challenge, graph condensation (GC) has emerged as a promising acceleration solution, focusing on the synthesis of a compact yet representative graph for efficiently training GNNs while retaining performance. Despite the potential to promote scalable use of GNNs, existing GC methods are limited to aligning the condensed graph with merely the observed static graph distribution. This limitation significantly restricts the generalization capacity of condensed graphs, particularly in adapting to dynamic distribution changes. In real-world scenarios, however, graphs are dynamic and constantly evolving, with new nodes and edges being continually integrated. Consequently, due to the limited generalization capacity of condensed graphs, applications that employ GC for efficient GNN training end up with sub-optimal GNNs when confronted with evolving graph structures and distributions in dynamic real-world situations. To overcome this issue, we propose open-world graph condensation (OpenGC), a robust GC framework that integrates structure-aware distribution shift to simulate evolving graph patterns and exploit the temporal environments for invariance condensation. This approach is designed to extract temporal invariant patterns from the original graph, thereby enhancing the generalization capabilities of the condensed graph and, subsequently, the GNNs trained on it. Extensive experiments on both real-world and synthetic evolving graphs demonstrate that OpenGC outperforms state-of-the-art (SOTA) GC methods in adapting to dynamic changes in open-world graph environments.",
+        "abstract": "Efficiently supporting long context length is crucial for Transformer models. The quadratic complexity of the self-attention computation plagues traditional Transformers. Sliding window-based static sparse attention mitigates the problem by limiting the attention scope of the input tokens, reducing the theoretical complexity from quadratic to linear. Although the sparsity induced by window attention is highly structured, it does not align perfectly with the microarchitecture of the conventional accelerators, leading to suboptimal implementation. In response, we propose a dataflow-aware FPGA-based accelerator design, SWAT, that efficiently leverages the sparsity to achieve scalable performance for long input. The proposed microarchitecture is based on a design that maximizes data reuse by using a combination of row-wise dataflow, kernel fusion optimization, and an input-stationary design considering the distributed memory and computation resources of FPGA. Consequently, it achieves up to 22$\\times$ and 5.7$\\times$ improvement in latency and energy efficiency compared to the baseline FPGA-based accelerator and 15$\\times$ energy efficiency compared to GPU-based solution.",
         "subjects": [
-            "cs.LG"
+            "cs.AR",
+            "cs.AI"
         ],
-        "comment": "Accepted by KDD 2024"
+        "comment": "Accepeted paper for DAC'22"
     },
     {
         "paper id": "2405.17042",
@@ -7120,6 +6980,29 @@
         "subjects": [
             "cs.LG",
             "cs.CR"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2405.17047",
+        "abstract url": "https://arxiv.org/abs/2405.17047",
+        "title": "Interpretable Robotic Manipulation from Language",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "voxel"
+            ],
+            [
+                "Robotic Manipulation"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Humans naturally employ linguistic instructions to convey knowledge, a process that proves significantly more complex for machines, especially within the context of multitask robotic manipulation environments. Natural language, moreover, serves as the primary medium through which humans acquire new knowledge, presenting a potentially intuitive bridge for translating concepts understandable by humans into formats that can be learned by machines. In pursuit of facilitating this integration, we introduce an explainable behavior cloning agent, named Ex-PERACT, specifically designed for manipulation tasks. This agent is distinguished by its hierarchical structure, which incorporates natural language to enhance the learning process. At the top level, the model is tasked with learning a discrete skill code, while at the bottom level, the policy network translates the problem into a voxelized grid and maps the discretized actions to voxel grids. We evaluate our method across eight challenging manipulation tasks utilizing the RLBench benchmark, demonstrating that Ex-PERACT not only achieves competitive policy performance but also effectively bridges the gap between human instructions and machine execution in complex environments.",
+        "subjects": [
+            "cs.RO",
+            "cs.LG"
         ],
         "comment": null
     },
@@ -7229,26 +7112,6 @@
         "abstract": "Track reconstruction is a vital aspect of High-Energy Physics (HEP) and plays a critical role in major experiments. In this study, we delve into unexplored avenues for particle track reconstruction and hit clustering. Firstly, we enhance the algorithmic design effort by utilising a simplified simulator (REDVID) to generate training data that is specifically composed for simplicity. We demonstrate the effectiveness of this data in guiding the development of optimal network architectures. Additionally, we investigate the application of image segmentation networks for this task, exploring their potential for accurate track reconstruction. Moreover, we approach the task from a different perspective by treating it as a hit sequence to track sequence translation problem. Specifically, we explore the utilisation of Transformer architectures for tracking purposes. Our preliminary findings are covered in detail. By considering this novel approach, we aim to uncover new insights and potential advancements in track reconstruction. This research sheds light on previously unexplored methods and provides valuable insights for the field of particle track reconstruction and hit clustering in HEP.",
         "subjects": [
             "hep-ex",
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2405.17333",
-        "abstract url": "https://arxiv.org/abs/2405.17333",
-        "title": "Conditioning on Time is All You Need for Synthetic Survival Data Generation",
-        "rating": "-1.5",
-        "keywords": [
-            [
-                "Survival"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Synthetic data generation holds considerable promise, offering avenues to enhance privacy, fairness, and data accessibility. Despite the availability of various methods for generating synthetic tabular data, challenges persist, particularly in specialized applications such as survival analysis. One significant obstacle in survival data generation is censoring, which manifests as not knowing the precise timing of observed (target) events for certain instances. Existing methods face difficulties in accurately reproducing the real distribution of event times for both observed (uncensored) events and censored events, i.e., the generated event-time distributions do not accurately match the underlying distributions of the real data. So motivated, we propose a simple paradigm to produce synthetic survival data by generating covariates conditioned on event times (and censoring indicators), thus allowing one to reuse existing conditional generative models for tabular data without significant computational overhead, and without making assumptions about the (usually unknown) generation mechanism underlying censoring. We evaluate this method via extensive experiments on real-world datasets. Our methodology outperforms multiple competitive baselines at generating survival data, while improving the performance of downstream survival models trained on it and tested on real data.",
-        "subjects": [
-            "stat.ML",
             "cs.LG"
         ],
         "comment": null
@@ -7461,6 +7324,28 @@
             "cs.AI",
             "cs.CE",
             "cs.MA"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2405.17640",
+        "abstract url": "https://arxiv.org/abs/2405.17640",
+        "title": "Probabilistically Plausible Counterfactual Explanations with Normalizing Flows",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "tabular"
+            ],
+            [
+                "cs.AI",
+                "cs.LG"
+            ]
+        ],
+        "abstract": "We present PPCEF, a novel method for generating probabilistically plausible counterfactual explanations (CFs). PPCEF advances beyond existing methods by combining a probabilistic formulation that leverages the data distribution with the optimization of plausibility within a unified framework. Compared to reference approaches, our method enforces plausibility by directly optimizing the explicit density function without assuming a particular family of parametrized distributions. This ensures CFs are not only valid (i.e., achieve class change) but also align with the underlying data's probability density. For that purpose, our approach leverages normalizing flows as powerful density estimators to capture the complex high-dimensional data distribution. Furthermore, we introduce a novel loss that balances the trade-off between achieving class change and maintaining closeness to the original instance while also incorporating a probabilistic plausibility term. PPCEF's unconstrained formulation allows for efficient gradient-based optimization with batch processing, leading to orders of magnitude faster computation compared to prior methods. Moreover, the unconstrained formulation of PPCEF allows for the seamless integration of future constraints tailored to specific counterfactual properties. Finally, extensive evaluations demonstrate PPCEF's superiority in generating high-quality, probabilistically plausible counterfactual explanations in high-dimensional tabular settings. This makes PPCEF a powerful tool for not only interpreting complex machine learning models but also for improving fairness, accountability, and trust in AI systems.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI",
+            "stat.ME"
         ],
         "comment": null
     },
@@ -7686,29 +7571,6 @@
         "comment": null
     },
     {
-        "paper id": "2405.16895",
-        "abstract url": "https://arxiv.org/abs/2405.16895",
-        "title": "Anonymization Prompt Learning for Facial Privacy-Preserving Text-to-Image Generation",
-        "rating": "-2",
-        "keywords": [
-            [
-                "diffusion",
-                "Text-to-Image"
-            ],
-            [
-                "Facial"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Text-to-image diffusion models, such as Stable Diffusion, generate highly realistic images from text descriptions. However, the generation of certain content at such high quality raises concerns. A prominent issue is the accurate depiction of identifiable facial images, which could lead to malicious deepfake generation and privacy violations. In this paper, we propose Anonymization Prompt Learning (APL) to address this problem. Specifically, we train a learnable prompt prefix for text-to-image diffusion models, which forces the model to generate anonymized facial identities, even when prompted to produce images of specific individuals. Extensive quantitative and qualitative experiments demonstrate the successful anonymization performance of APL, which anonymizes any specific individuals without compromising the quality of non-identity-specific image generation. Furthermore, we reveal the plug-and-play property of the learned prompt prefix, enabling its effective application across different pretrained text-to-image models for transferrable privacy and security protection against the risks of deepfakes.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "15 pages, 8 figures and 5 tables"
-    },
-    {
         "paper id": "2405.16965",
         "abstract url": "https://arxiv.org/abs/2405.16965",
         "title": "Timeliness of Status Update System: The Effect of Parallel Transmission Using Heterogeneous Updating Devices",
@@ -7788,6 +7650,30 @@
             "eess.SP"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2405.17110",
+        "abstract url": "https://arxiv.org/abs/2405.17110",
+        "title": "Superpixelwise Low-rank Approximation based Partial Label Learning for Hyperspectral Image Classification",
+        "rating": "-2",
+        "keywords": [
+            [
+                "graph"
+            ],
+            [
+                "Hyperspectral Image"
+            ],
+            [
+                "cs.AI",
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Insufficient prior knowledge of a captured hyperspectral image (HSI) scene may lead the experts or the automatic labeling systems to offer incorrect labels or ambiguous labels (i.e., assigning each training sample to a group of candidate labels, among which only one of them is valid; this is also known as partial label learning) during the labeling process. Accordingly, how to learn from such data with ambiguous labels is a problem of great practical importance. In this paper, we propose a novel superpixelwise low-rank approximation (LRA)-based partial label learning method, namely SLAP, which is the first to take into account partial label learning in HSI classification. SLAP is mainly composed of two phases: disambiguating the training labels and acquiring the predictive model. Specifically, in the first phase, we propose a superpixelwise LRA-based model, preparing the affinity graph for the subsequent label propagation process while extracting the discriminative representation to enhance the following classification task of the second phase. Then to disambiguate the training labels, label propagation propagates the labeling information via the affinity graph of training pixels. In the second phase, we take advantage of the resulting disambiguated training labels and the discriminative representations to enhance the classification performance. The extensive experiments validate the advantage of the proposed SLAP method over state-of-the-art methods.",
+        "subjects": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "comment": "0"
     },
     {
         "paper id": "2405.17127",
@@ -8000,36 +7886,6 @@
         "comment": "Code and model: https://github.com/OpenDriveLab/Vista, video demos: https://vista-demo.github.io"
     },
     {
-        "paper id": "2405.17422",
-        "abstract url": "https://arxiv.org/abs/2405.17422",
-        "title": "Hardness-Aware Scene Synthesis for Semi-Supervised 3D Object Detection",
-        "rating": "-2",
-        "keywords": [
-            [
-                "3D",
-                "point cloud"
-            ],
-            [
-                "Synthesis"
-            ],
-            [
-                "autonomous driving"
-            ],
-            [
-                "cs.AI",
-                "cs.LG",
-                "cs.CV"
-            ]
-        ],
-        "abstract": "3D object detection aims to recover the 3D information of concerning objects and serves as the fundamental task of autonomous driving perception. Its performance greatly depends on the scale of labeled training data, yet it is costly to obtain high-quality annotations for point cloud data. While conventional methods focus on generating pseudo-labels for unlabeled samples as supplements for training, the structural nature of 3D point cloud data facilitates the composition of objects and backgrounds to synthesize realistic scenes. Motivated by this, we propose a hardness-aware scene synthesis (HASS) method to generate adaptive synthetic scenes to improve the generalization of the detection models. We obtain pseudo-labels for unlabeled objects and generate diverse scenes with different compositions of objects and backgrounds. As the scene synthesis is sensitive to the quality of pseudo-labels, we further propose a hardness-aware strategy to reduce the effect of low-quality pseudo-labels and maintain a dynamic pseudo-database to ensure the diversity and quality of synthetic scenes. Extensive experimental results on the widely used KITTI and Waymo datasets demonstrate the superiority of the proposed HASS method, which outperforms existing semi-supervised learning methods on 3D object detection. Code: https://github.com/wzzheng/HASS.",
-        "subjects": [
-            "cs.CV",
-            "cs.AI",
-            "cs.LG"
-        ],
-        "comment": "Code is available at: https://github.com/wzzheng/HASS"
-    },
-    {
         "paper id": "2405.17518",
         "abstract url": "https://arxiv.org/abs/2405.17518",
         "title": "Assessment of Left Atrium Motion Deformation Through Full Cardiac Cycle",
@@ -8158,30 +8014,20 @@
         "comment": null
     },
     {
-        "paper id": "2405.17705",
-        "abstract url": "https://arxiv.org/abs/2405.17705",
-        "title": "DC-Gaussian: Improving 3D Gaussian Splatting for Reflective Dash Cam Videos",
+        "paper id": "2405.17681",
+        "abstract url": "https://arxiv.org/abs/2405.17681",
+        "title": "Synthesizing JSON Schema Transformers",
         "rating": "-2",
         "keywords": [
             [
-                "3D",
-                "Gaussian Splatting"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "vehicle"
-            ],
-            [
-                "cs.CV"
+                "healthcare"
             ]
         ],
-        "abstract": "We present DC-Gaussian, a new method for generating novel views from in-vehicle dash cam videos. While neural rendering techniques have made significant strides in driving scenarios, existing methods are primarily designed for videos collected by autonomous vehicles. However, these videos are limited in both quantity and diversity compared to dash cam videos, which are more widely used across various types of vehicles and capture a broader range of scenarios. Dash cam videos often suffer from severe obstructions such as reflections and occlusions on the windshields, which significantly impede the application of neural rendering techniques. To address this challenge, we develop DC-Gaussian based on the recent real-time neural rendering technique 3D Gaussian Splatting (3DGS). Our approach includes an adaptive image decomposition module to model reflections and occlusions in a unified manner. Additionally, we introduce illumination-aware obstruction modeling to manage reflections and occlusions under varying lighting conditions. Lastly, we employ a geometry-guided Gaussian enhancement strategy to improve rendering details by incorporating additional geometry priors. Experiments on self-captured and public dash cam videos show that our method not only achieves state-of-the-art performance in novel view synthesis, but also accurately reconstructing captured scenes getting rid of obstructions.",
+        "abstract": "JSON (JavaScript Object Notation) is a data encoding that allows structured data to be used in a standardized and straightforward manner across systems. Schemas for JSON-formatted data can be constructed using the JSON Schema standard, which describes the data types, structure, and meaning of JSON-formatted data. JSON is commonly used for storing and transmitting information such as program configurations, web API requests and responses, or remote procedure calls; or data records, such as healthcare information or other structured documents. Since JSON is a plaintext format with potentially highly complex definitions, it can be an arduous process to change code which handles structured JSON data when its storage or transmission schemas are modified. Our work describes a program synthesis method to generate a program that accepts data conforming to a given input JSON Schema and automatically converts it to conform to a resulting, target JSON Schema. We use a top-down, type-directed approach to search for programs using a set of rewrite rules which constrain the ways in which a schema can be modified without unintended data loss or corruption. Once a satisfying sequence of rewrites has been found, we pass an intermediate representation of the rewrite sequence to a code generation backend, which synthesizes a program which executes the data transformation. This system allows users to quickly and efficiently modify or augment their existing systems in safe ways at their interfaces.",
         "subjects": [
-            "cs.CV"
+            "cs.PL"
         ],
-        "comment": "9 pages,7 figures;project page: https://linhanwang.github.io/dcgaussian/"
+        "comment": null
     },
     {
         "paper id": "2405.17711",
@@ -8241,6 +8087,22 @@
             "cs.CV",
             "cs.AI",
             "cs.LG"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2405.17723",
+        "abstract url": "https://arxiv.org/abs/2405.17723",
+        "title": "TableDC: Deep Clustering for Tabular Data",
+        "rating": "-2",
+        "keywords": [
+            [
+                "Tabular"
+            ]
+        ],
+        "abstract": "Deep clustering (DC), a fusion of deep representation learning and clustering, has recently demonstrated positive results in data science, particularly text processing and computer vision. However, joint optimization of feature learning and data distribution in the multi-dimensional space is domain-specific, so existing DC methods struggle to generalize to other application domains (such as data integration and cleaning). In data management tasks, where high-density embeddings and overlapping clusters dominate, a data management-specific DC algorithm should be able to interact better with the data properties for supporting data cleaning and integration tasks. This paper presents a deep clustering algorithm for tabular data (TableDC) that reflects the properties of data management applications, particularly schema inference, entity resolution, and domain discovery. To address overlapping clusters, TableDC integrates Mahalanobis distance, which considers variance and correlation within the data, offering a similarity method suitable for tables, rows, or columns in high-dimensional latent spaces. TableDC provides flexibility for the final clustering assignment and shows higher tolerance to outliers through its heavy-tailed Cauchy distribution as the similarity kernel. The proposed similarity measure is particularly beneficial where the embeddings of raw data are densely packed and exhibit high degrees of overlap. Data cleaning tasks may involve a large number of clusters, which affects the scalability of existing DC methods. TableDC's self-supervised module efficiently learns data embeddings with a large number of clusters compared to existing benchmarks, which scale in quadratic time. We evaluated TableDC with several existing DC, Standard Clustering (SC), and state-of-the-art bespoke methods over benchmark datasets. TableDC consistently outperforms existing DC, SC, and bespoke methods.",
+        "subjects": [
+            "cs.DB"
         ],
         "comment": null
     },
@@ -8342,6 +8204,30 @@
         "comment": null
     },
     {
+        "paper id": "2405.17818",
+        "abstract url": "https://arxiv.org/abs/2405.17818",
+        "title": "Hyperspectral and multispectral image fusion with arbitrary resolution through self-supervised representations",
+        "rating": "-2",
+        "keywords": [
+            [
+                "super-resolution"
+            ],
+            [
+                "hyperspectral image"
+            ],
+            [
+                "cs.CV",
+                "eess.IV"
+            ]
+        ],
+        "abstract": "The fusion of a low-resolution hyperspectral image (LR-HSI) with a high-resolution multispectral image (HR-MSI) has emerged as an effective technique for achieving HSI super-resolution (SR). Previous studies have mainly concentrated on estimating the posterior distribution of the latent high-resolution hyperspectral image (HR-HSI), leveraging an appropriate image prior and likelihood computed from the discrepancy between the latent HSI and observed images. Low rankness stands out for preserving latent HSI characteristics through matrix factorization among the various priors. However, this method only enhances resolution within the dimensions of the two modalities. To overcome this limitation, we propose a novel continuous low-rank factorization (CLoRF) by integrating two neural representations into the matrix factorization, capturing spatial and spectral information, respectively. This approach enables us to harness both the low rankness from the matrix factorization and the continuity from neural representation in a self-supervised manner. Theoretically, we prove the low-rank property and Lipschitz continuity in the proposed continuous low-rank factorization. Experimentally, our method significantly surpasses existing techniques and achieves user-desired resolutions without the need for neural network retraining.",
+        "subjects": [
+            "cs.CV",
+            "eess.IV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.16861",
         "abstract url": "https://arxiv.org/abs/2405.16861",
         "title": "NCIDiff: Non-covalent Interaction-generative Diffusion Model for Improving Reliability of 3D Molecule Generation Inside Protein Pocket",
@@ -8368,6 +8254,28 @@
             "physics.bio-ph"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2405.16971",
+        "abstract url": "https://arxiv.org/abs/2405.16971",
+        "title": "A Correlation- and Mean-Aware Loss Function and Benchmarking Framework to Improve GAN-based Tabular Data Synthesis",
+        "rating": "-2.5",
+        "keywords": [
+            [
+                "GAN"
+            ],
+            [
+                "Tabular"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Advancements in science rely on data sharing. In medicine, where personal data are often involved, synthetic tabular data generated by generative adversarial networks (GANs) offer a promising avenue. However, existing GANs struggle to capture the complexities of real-world tabular data, which often contain a mix of continuous and categorical variables with potential imbalances and dependencies. We propose a novel correlation- and mean-aware loss function designed to address these challenges as a regularizer for GANs. To ensure a rigorous evaluation, we establish a comprehensive benchmarking framework using ten real-world datasets and eight established tabular GAN baselines. The proposed loss function demonstrates statistically significant improvements over existing methods in capturing the true data distribution, significantly enhancing the quality of synthetic data generated with GANs. The benchmarking framework shows that the enhanced synthetic data quality leads to improved performance in downstream machine learning (ML) tasks, ultimately paving the way for easier data sharing.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": "n.a"
     },
     {
         "paper id": "2405.17059",
@@ -8517,6 +8425,28 @@
         "comment": "22 pages"
     },
     {
+        "paper id": "2405.17724",
+        "abstract url": "https://arxiv.org/abs/2405.17724",
+        "title": "ClavaDDPM: Multi-relational Data Synthesis with Cluster-guided Diffusion Models",
+        "rating": "-2.5",
+        "keywords": [
+            [
+                "Diffusion"
+            ],
+            [
+                "tabular"
+            ],
+            [
+                "cs.AI"
+            ]
+        ],
+        "abstract": "Recent research in tabular data synthesis has focused on single tables, whereas real-world applications often involve complex data with tens or hundreds of interconnected tables. Previous approaches to synthesizing multi-relational (multi-table) data fall short in two key aspects: scalability for larger datasets and capturing long-range dependencies, such as correlations between attributes spread across different tables. Inspired by the success of diffusion models in tabular data modeling, we introduce $\\textbf{C}luster$ $\\textbf{La}tent$ $\\textbf{Va}riable$ $guided$ $\\textbf{D}enoising$ $\\textbf{D}iffusion$ $\\textbf{P}robabilistic$ $\\textbf{M}odels$ (ClavaDDPM). This novel approach leverages clustering labels as intermediaries to model relationships between tables, specifically focusing on foreign key constraints. ClavaDDPM leverages the robust generation capabilities of diffusion models while incorporating efficient algorithms to propagate the learned latent variables across tables. This enables ClavaDDPM to capture long-range dependencies effectively. Extensive evaluations on multi-table datasets of varying sizes show that ClavaDDPM significantly outperforms existing methods for these long-range dependencies while remaining competitive on utility metrics for single-table data.",
+        "subjects": [
+            "cs.AI"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.17782",
         "abstract url": "https://arxiv.org/abs/2405.17782",
         "title": "Post-Fair Federated Learning: Achieving Group and Community Fairness in Federated Learning via Post-processing",
@@ -8597,6 +8527,32 @@
         "comment": "Submitted Report of CVPR 2024 UG2+ Challenge Track 5"
     },
     {
+        "paper id": "2405.16895",
+        "abstract url": "https://arxiv.org/abs/2405.16895",
+        "title": "Anonymization Prompt Learning for Facial Privacy-Preserving Text-to-Image Generation",
+        "rating": "-3",
+        "keywords": [
+            [
+                "diffusion",
+                "Text-to-Image"
+            ],
+            [
+                "deepfake"
+            ],
+            [
+                "Facial"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Text-to-image diffusion models, such as Stable Diffusion, generate highly realistic images from text descriptions. However, the generation of certain content at such high quality raises concerns. A prominent issue is the accurate depiction of identifiable facial images, which could lead to malicious deepfake generation and privacy violations. In this paper, we propose Anonymization Prompt Learning (APL) to address this problem. Specifically, we train a learnable prompt prefix for text-to-image diffusion models, which forces the model to generate anonymized facial identities, even when prompted to produce images of specific individuals. Extensive quantitative and qualitative experiments demonstrate the successful anonymization performance of APL, which anonymizes any specific individuals without compromising the quality of non-identity-specific image generation. Furthermore, we reveal the plug-and-play property of the learned prompt prefix, enabling its effective application across different pretrained text-to-image models for transferrable privacy and security protection against the risks of deepfakes.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "15 pages, 8 figures and 5 tables"
+    },
+    {
         "paper id": "2405.16942",
         "abstract url": "https://arxiv.org/abs/2405.16942",
         "title": "PASTA: Pathology-Aware MRI to PET Cross-Modal Translation with Diffusion Models",
@@ -8668,6 +8624,35 @@
             "cs.CV"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2405.17419",
+        "abstract url": "https://arxiv.org/abs/2405.17419",
+        "title": "MultiOOD: Scaling Out-of-Distribution Detection for Multiple Modalities",
+        "rating": "-3",
+        "keywords": [
+            [
+                "autonomous driving"
+            ],
+            [
+                "robot"
+            ],
+            [
+                "surgery"
+            ],
+            [
+                "cs.AI",
+                "cs.LG",
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Detecting out-of-distribution (OOD) samples is important for deploying machine learning models in safety-critical applications such as autonomous driving and robot-assisted surgery. Existing research has mainly focused on unimodal scenarios on image data. However, real-world applications are inherently multimodal, which makes it essential to leverage information from multiple modalities to enhance the efficacy of OOD detection. To establish a foundation for more realistic Multimodal OOD Detection, we introduce the first-of-its-kind benchmark, MultiOOD, characterized by diverse dataset sizes and varying modality combinations. We first evaluate existing unimodal OOD detection algorithms on MultiOOD, observing that the mere inclusion of additional modalities yields substantial improvements. This underscores the importance of utilizing multiple modalities for OOD detection. Based on the observation of Modality Prediction Discrepancy between in-distribution (ID) and OOD data, and its strong correlation with OOD performance, we propose the Agree-to-Disagree (A2D) algorithm to encourage such discrepancy during training. Moreover, we introduce a novel outlier synthesis method, NP-Mix, which explores broader feature spaces by leveraging the information from nearest neighbor classes and complements A2D to strengthen OOD detection performance. Extensive experiments on MultiOOD demonstrate that training with A2D and NP-Mix improves existing OOD detection algorithms by a large margin. Our source code and MultiOOD benchmark are available at https://github.com/donghao51/MultiOOD.",
+        "subjects": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "comment": "Code and MultiOOD benchmark: https://github.com/donghao51/MultiOOD"
     },
     {
         "paper id": "2405.17426",
@@ -8757,25 +8742,6 @@
         "comment": "rss pioneer 2024"
     },
     {
-        "paper id": "2405.17681",
-        "abstract url": "https://arxiv.org/abs/2405.17681",
-        "title": "Synthesizing JSON Schema Transformers",
-        "rating": "-3",
-        "keywords": [
-            [
-                "Synthesizing"
-            ],
-            [
-                "healthcare"
-            ]
-        ],
-        "abstract": "JSON (JavaScript Object Notation) is a data encoding that allows structured data to be used in a standardized and straightforward manner across systems. Schemas for JSON-formatted data can be constructed using the JSON Schema standard, which describes the data types, structure, and meaning of JSON-formatted data. JSON is commonly used for storing and transmitting information such as program configurations, web API requests and responses, or remote procedure calls; or data records, such as healthcare information or other structured documents. Since JSON is a plaintext format with potentially highly complex definitions, it can be an arduous process to change code which handles structured JSON data when its storage or transmission schemas are modified. Our work describes a program synthesis method to generate a program that accepts data conforming to a given input JSON Schema and automatically converts it to conform to a resulting, target JSON Schema. We use a top-down, type-directed approach to search for programs using a set of rewrite rules which constrain the ways in which a schema can be modified without unintended data loss or corruption. Once a satisfying sequence of rewrites has been found, we pass an intermediate representation of the rewrite sequence to a code generation backend, which synthesizes a program which executes the data transformation. This system allows users to quickly and efficiently modify or augment their existing systems in safe ways at their interfaces.",
-        "subjects": [
-            "cs.PL"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2405.17702",
         "abstract url": "https://arxiv.org/abs/2405.17702",
         "title": "A Two-sided Model for EV Market Dynamics and Policy Implications",
@@ -8843,6 +8809,29 @@
         "subjects": [
             "cs.LG",
             "cs.AI"
+        ],
+        "comment": null
+    },
+    {
+        "paper id": "2405.17333",
+        "abstract url": "https://arxiv.org/abs/2405.17333",
+        "title": "Conditioning on Time is All You Need for Synthetic Survival Data Generation",
+        "rating": "-3.5",
+        "keywords": [
+            [
+                "Survival"
+            ],
+            [
+                "tabular"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Synthetic data generation holds considerable promise, offering avenues to enhance privacy, fairness, and data accessibility. Despite the availability of various methods for generating synthetic tabular data, challenges persist, particularly in specialized applications such as survival analysis. One significant obstacle in survival data generation is censoring, which manifests as not knowing the precise timing of observed (target) events for certain instances. Existing methods face difficulties in accurately reproducing the real distribution of event times for both observed (uncensored) events and censored events, i.e., the generated event-time distributions do not accurately match the underlying distributions of the real data. So motivated, we propose a simple paradigm to produce synthetic survival data by generating covariates conditioned on event times (and censoring indicators), thus allowing one to reuse existing conditional generative models for tabular data without significant computational overhead, and without making assumptions about the (usually unknown) generation mechanism underlying censoring. We evaluate this method via extensive experiments on real-world datasets. Our methodology outperforms multiple competitive baselines at generating survival data, while improving the performance of downstream survival models trained on it and tested on real data.",
+        "subjects": [
+            "stat.ML",
+            "cs.LG"
         ],
         "comment": null
     },
@@ -8981,38 +8970,6 @@
             "eess.SP"
         ],
         "comment": "IEEE Transactions on Wireless Communications, 2024"
-    },
-    {
-        "paper id": "2405.17419",
-        "abstract url": "https://arxiv.org/abs/2405.17419",
-        "title": "MultiOOD: Scaling Out-of-Distribution Detection for Multiple Modalities",
-        "rating": "-4",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "autonomous driving"
-            ],
-            [
-                "robot"
-            ],
-            [
-                "surgery"
-            ],
-            [
-                "cs.AI",
-                "cs.LG",
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Detecting out-of-distribution (OOD) samples is important for deploying machine learning models in safety-critical applications such as autonomous driving and robot-assisted surgery. Existing research has mainly focused on unimodal scenarios on image data. However, real-world applications are inherently multimodal, which makes it essential to leverage information from multiple modalities to enhance the efficacy of OOD detection. To establish a foundation for more realistic Multimodal OOD Detection, we introduce the first-of-its-kind benchmark, MultiOOD, characterized by diverse dataset sizes and varying modality combinations. We first evaluate existing unimodal OOD detection algorithms on MultiOOD, observing that the mere inclusion of additional modalities yields substantial improvements. This underscores the importance of utilizing multiple modalities for OOD detection. Based on the observation of Modality Prediction Discrepancy between in-distribution (ID) and OOD data, and its strong correlation with OOD performance, we propose the Agree-to-Disagree (A2D) algorithm to encourage such discrepancy during training. Moreover, we introduce a novel outlier synthesis method, NP-Mix, which explores broader feature spaces by leveraging the information from nearest neighbor classes and complements A2D to strengthen OOD detection performance. Extensive experiments on MultiOOD demonstrate that training with A2D and NP-Mix improves existing OOD detection algorithms by a large margin. Our source code and MultiOOD benchmark are available at https://github.com/donghao51/MultiOOD.",
-        "subjects": [
-            "cs.CV",
-            "cs.AI",
-            "cs.LG"
-        ],
-        "comment": "Code and MultiOOD benchmark: https://github.com/donghao51/MultiOOD"
     },
     {
         "paper id": "2405.17543",
@@ -9335,6 +9292,20 @@
         "comment": null
     },
     {
+        "paper id": "2405.16997",
+        "abstract url": "https://arxiv.org/abs/2405.16997",
+        "title": "Program Synthesis is $\u03a3_3^0$-Complete",
+        "rating": "-10",
+        "keywords": [],
+        "abstract": "This paper considers program synthesis in the context of computational hardness, asking the question: How hard is it to determine whether a given synthesis problem has a solution or not? To answer this question, this paper studies program synthesis for a basic imperative, Turing-complete language IMP, for which this paper proves that program synthesis is $\u03a3_3^0$-\\emph{complete} in the arithmetical hierarchy. The proof of this fact relies on a fully constructive encoding of program synthesis (which is typically formulated as a second-order query) as a first-order formula in the standard model of arithmetic (i.e., Peano arithmetic). Constructing such a formula then allows us to reduce the decision problem for COF (the set of functions which diverge only on a finite set of inputs), which is well-known to be a $\u03a3_3^0$-complete problem, into the constructed first-order representation of synthesis. In addition to this main result, we also consider the hardness of variants of synthesis problems, such as those introduced in previous work to make program synthesis more tractable (e.g., synthesis over finite examples). To the best of our knowledge, this paper is the first to give a first-order characterization of program synthesis in general, and precisely define the computability of synthesis problems and their variants.",
+        "subjects": [
+            "cs.LO",
+            "cs.CC",
+            "cs.PL"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2405.17001",
         "abstract url": "https://arxiv.org/abs/2405.17001",
         "title": "Delta-modular ILP Problems of Bounded Co-dimension, Discrepancy, and Convolution",
@@ -9564,6 +9535,19 @@
         "comment": null
     },
     {
+        "paper id": "2405.17304",
+        "abstract url": "https://arxiv.org/abs/2405.17304",
+        "title": "Stochastic Omega-Regular Verification and Control with Supermartingales",
+        "rating": "-10",
+        "keywords": [],
+        "abstract": "We present for the first time a supermartingale certificate for $\u03c9$-regular specifications. We leverage the Robbins & Siegmund convergence theorem to characterize supermartingale certificates for the almost-sure acceptance of Streett conditions on general stochastic processes, which we call Streett supermartingales. This enables effective verification and control of discrete-time stochastic dynamical models with infinite state space under $\u03c9$-regular and linear temporal logic specifications. Our result generalises reachability, safety, reach-avoid, persistence and recurrence specifications; our contribution applies to discrete-time stochastic dynamical models and probabilistic programs with discrete and continuous state spaces and distributions, and carries over to deterministic models and programs. We provide a synthesis algorithm for control policies and Streett supermartingales as proof certificates for $\u03c9$-regular objectives, which is sound and complete for supermartingales and control policies with polynomial templates and any stochastic dynamical model whose post-expectation is expressible as a polynomial. We additionally provide an optimisation of our algorithm that reduces the problem to satisfiability modulo theories, under the assumption that templates and post-expectation are in piecewise linear form. We have built a prototype and have demonstrated the efficacy of our approach on several exemplar $\u03c9$-regular verification and control synthesis problems.",
+        "subjects": [
+            "cs.LO",
+            "eess.SY"
+        ],
+        "comment": "The conference version of this manuscript appeared at CAV'24"
+    },
+    {
         "paper id": "2405.17307",
         "abstract url": "https://arxiv.org/abs/2405.17307",
         "title": "Peer2PIR: Private Queries for IPFS",
@@ -9650,6 +9634,19 @@
             "cs.CE"
         ],
         "comment": "36 pages, 12 figures, 2 tables"
+    },
+    {
+        "paper id": "2405.17590",
+        "abstract url": "https://arxiv.org/abs/2405.17590",
+        "title": "Optimizing Layout of Recursive Datatypes with Marmoset",
+        "rating": "-10",
+        "keywords": [],
+        "abstract": "While programmers know that the low-level memory representation of data structures can have significant effects on performance, compiler support to optimize the layout of those structures is an under-explored field. Prior work has optimized the layout of individual, non-recursive structures without considering how collections of those objects in linked or recursive data structures are laid out. This work introduces Marmoset, a compiler that optimizes the layouts of algebraic datatypes, with a special focus on producing highly optimized, packed data layouts where recursive structures can be traversed with minimal pointer chasing. Marmoset performs an analysis of how a recursive ADT is used across functions to choose a global layout that promotes simple, strided access for that ADT in memory. It does so by building and solving a constraint system to minimize an abstract cost model, yielding a predicted efficient layout for the ADT. Marmoset then builds on top of Gibbon, a prior compiler for packed, mostly-serial representations, to synthesize optimized ADTs. We show experimentally that Marmoset is able to choose optimal layouts across a series of microbenchmarks and case studies, outperforming both Gibbons baseline approach, as well as MLton, a Standard ML compiler that uses traditional pointer-heavy representations.",
+        "subjects": [
+            "cs.PL",
+            "cs.PF"
+        ],
+        "comment": null
     },
     {
         "paper id": "2405.17594",
@@ -9772,18 +9769,6 @@
         "rating": "-10",
         "keywords": [],
         "abstract": "Tracking data lineage is important for data integrity, reproducibility, and debugging data science workflows. However, fine-grained lineage (i.e., at a cell level) is challenging to store, even for the smallest datasets. This paper introduces DSLog, a storage system that efficiently stores, indexes, and queries array data lineage, agnostic to capture methodology. A main contribution is our new compression algorithm, named ProvRC, that compresses captured lineage relationships. Using ProvRC for lineage compression result in a significant storage reduction over functions with simple spatial regularity, beating alternative columnar-store baselines by up to 2000x}. We also show that ProvRC facilitates in-situ query processing that allows forward and backward lineage queries without decompression - in the optimal case, surpassing baselines by 20x in query latency on random numpy pipelines.",
-        "subjects": [
-            "cs.DB"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2405.17723",
-        "abstract url": "https://arxiv.org/abs/2405.17723",
-        "title": "TableDC: Deep Clustering for Tabular Data",
-        "rating": "-10",
-        "keywords": [],
-        "abstract": "Deep clustering (DC), a fusion of deep representation learning and clustering, has recently demonstrated positive results in data science, particularly text processing and computer vision. However, joint optimization of feature learning and data distribution in the multi-dimensional space is domain-specific, so existing DC methods struggle to generalize to other application domains (such as data integration and cleaning). In data management tasks, where high-density embeddings and overlapping clusters dominate, a data management-specific DC algorithm should be able to interact better with the data properties for supporting data cleaning and integration tasks. This paper presents a deep clustering algorithm for tabular data (TableDC) that reflects the properties of data management applications, particularly schema inference, entity resolution, and domain discovery. To address overlapping clusters, TableDC integrates Mahalanobis distance, which considers variance and correlation within the data, offering a similarity method suitable for tables, rows, or columns in high-dimensional latent spaces. TableDC provides flexibility for the final clustering assignment and shows higher tolerance to outliers through its heavy-tailed Cauchy distribution as the similarity kernel. The proposed similarity measure is particularly beneficial where the embeddings of raw data are densely packed and exhibit high degrees of overlap. Data cleaning tasks may involve a large number of clusters, which affects the scalability of existing DC methods. TableDC's self-supervised module efficiently learns data embeddings with a large number of clusters compared to existing benchmarks, which scale in quadratic time. We evaluated TableDC with several existing DC, Standard Clustering (SC), and state-of-the-art bespoke methods over benchmark datasets. TableDC consistently outperforms existing DC, SC, and bespoke methods.",
         "subjects": [
             "cs.DB"
         ],

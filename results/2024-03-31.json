@@ -180,6 +180,25 @@
         "comment": null
     },
     {
+        "paper id": "2404.00801",
+        "abstract url": "https://arxiv.org/abs/2404.00801",
+        "title": "$R^2$-Tuning: Efficient Image-to-Video Transfer Learning for Video Temporal Grounding",
+        "rating": "2",
+        "keywords": [
+            [
+                "memory-efficient"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "Video temporal grounding (VTG) is a fine-grained video understanding problem that aims to ground relevant clips in untrimmed videos given natural language queries. Most existing VTG models are built upon frame-wise final-layer CLIP features, aided by additional temporal backbones (e.g., SlowFast) with sophisticated temporal reasoning mechanisms. In this work, we claim that CLIP itself already shows great potential for fine-grained spatial-temporal modeling, as each layer offers distinct yet useful information under different granularity levels. Motivated by this, we propose Reversed Recurrent Tuning ($R^2$-Tuning), a parameter- and memory-efficient transfer learning framework for video temporal grounding. Our method learns a lightweight $R^2$ Block containing only 1.5% of the total parameters to perform progressive spatial-temporal modeling. Starting from the last layer of CLIP, $R^2$ Block recurrently aggregates spatial features from earlier layers, then refines temporal correlation conditioning on the given query, resulting in a coarse-to-fine scheme. $R^2$-Tuning achieves state-of-the-art performance across three VTG tasks (i.e., moment retrieval, highlight detection, and video summarization) on six public benchmarks (i.e., QVHighlights, Charades-STA, Ego4D-NLQ, TACoS, YouTube Highlights, and TVSum) even without the additional backbone, demonstrating the significance and effectiveness of the proposed scheme. Our code is available at https://github.com/yeliudev/R2-Tuning.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2404.00861",
         "abstract url": "https://arxiv.org/abs/2404.00861",
         "title": "Enhancing Real-World Active Speaker Detection with Multi-Modal Extraction Pre-Training",
@@ -1082,38 +1101,6 @@
         "comment": "2 pages of main content, 8 pages in total, published as a Tiny Paper at ICLR 2024"
     },
     {
-        "paper id": "2404.00801",
-        "abstract url": "https://arxiv.org/abs/2404.00801",
-        "title": "$R^2$-Tuning: Efficient Image-to-Video Transfer Learning for Video Temporal Grounding",
-        "rating": "1",
-        "keywords": [
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "Video temporal grounding (VTG) is a fine-grained video understanding problem that aims to ground relevant clips in untrimmed videos given natural language queries. Most existing VTG models are built upon frame-wise final-layer CLIP features, aided by additional temporal backbones (e.g., SlowFast) with sophisticated temporal reasoning mechanisms. In this work, we claim that CLIP itself already shows great potential for fine-grained spatial-temporal modeling, as each layer offers distinct yet useful information under different granularity levels. Motivated by this, we propose Reversed Recurrent Tuning ($R^2$-Tuning), a parameter- and memory-efficient transfer learning framework for video temporal grounding. Our method learns a lightweight $R^2$ Block containing only 1.5% of the total parameters to perform progressive spatial-temporal modeling. Starting from the last layer of CLIP, $R^2$ Block recurrently aggregates spatial features from earlier layers, then refines temporal correlation conditioning on the given query, resulting in a coarse-to-fine scheme. $R^2$-Tuning achieves state-of-the-art performance across three VTG tasks (i.e., moment retrieval, highlight detection, and video summarization) on six public benchmarks (i.e., QVHighlights, Charades-STA, Ego4D-NLQ, TACoS, YouTube Highlights, and TVSum) even without the additional backbone, demonstrating the significance and effectiveness of the proposed scheme. Our code is available at https://github.com/yeliudev/R2-Tuning.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2404.00809",
-        "abstract url": "https://arxiv.org/abs/2404.00809",
-        "title": "Heterogeneity over Homogeneity: Investigating Multilingual Speech Pre-Trained Models for Detecting Audio Deepfake",
-        "rating": "1",
-        "keywords": [
-            [
-                "eess.AS"
-            ]
-        ],
-        "abstract": "In this work, we investigate multilingual speech Pre-Trained models (PTMs) for Audio deepfake detection (ADD). We hypothesize that multilingual PTMs trained on large-scale diverse multilingual data gain knowledge about diverse pitches, accents, and tones, during their pre-training phase and making them more robust to variations. As a result, they will be more effective for detecting audio deepfakes. To validate our hypothesis, we extract representations from state-of-the-art (SOTA) PTMs including monolingual, multilingual as well as PTMs trained for speaker and emotion recognition, and evaluated them on ASVSpoof 2019 (ASV), In-the-Wild (ITW), and DECRO benchmark databases. We show that representations from multilingual PTMs, with simple downstream networks, attain the best performance for ADD compared to other PTM representations, which validates our hypothesis. We also explore the possibility of fusion of selected PTM representations for further improvements in ADD, and we propose a framework, MiO (Merge into One) for this purpose. With MiO, we achieve SOTA performance on ASV and ITW and comparable performance on DECRO with current SOTA works.",
-        "subjects": [
-            "eess.AS"
-        ],
-        "comment": "Accepted to NAACL (Findings) 2024"
-    },
-    {
         "paper id": "2404.00829",
         "abstract url": "https://arxiv.org/abs/2404.00829",
         "title": "Returning to the Start: Generating Narratives with Related Endpoints",
@@ -1146,6 +1133,26 @@
             "cs.LG"
         ],
         "comment": "RIVF 2023"
+    },
+    {
+        "paper id": "2404.00856",
+        "abstract url": "https://arxiv.org/abs/2404.00856",
+        "title": "Removing Speaker Information from Speech Representation using Variable-Length Soft Pooling",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.AI",
+                "cs.SD",
+                "eess.AS"
+            ]
+        ],
+        "abstract": "Recently, there have been efforts to encode the linguistic information of speech using a self-supervised framework for speech synthesis. However, predicting representations from surrounding representations can inadvertently entangle speaker information in the speech representation. This paper aims to remove speaker information by exploiting the structured nature of speech, composed of discrete units like phonemes with clear boundaries. A neural network predicts these boundaries, enabling variable-length pooling for event-based representation extraction instead of fixed-rate methods. The boundary predictor outputs a probability for the boundary between 0 and 1, making pooling soft. The model is trained to minimize the difference with the pooled representation of the data augmented by time-stretch and pitch-shift. To confirm that the learned representation includes contents information but is independent of speaker information, the model was evaluated with libri-light's phonetic ABX task and SUPERB's speaker identification task.",
+        "subjects": [
+            "cs.SD",
+            "cs.AI",
+            "eess.AS"
+        ],
+        "comment": null
     },
     {
         "paper id": "2404.00859",
@@ -1282,6 +1289,22 @@
             "cs.CV"
         ],
         "comment": "Preprint, 17 pages, 7 figures"
+    },
+    {
+        "paper id": "2404.00921",
+        "abstract url": "https://arxiv.org/abs/2404.00921",
+        "title": "Towards Label-Efficient Human Matting: A Simple Baseline for Weakly Semi-Supervised Trimap-Free Human Matting",
+        "rating": "1",
+        "keywords": [
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "This paper presents a new practical training method for human matting, which demands delicate pixel-level human region identification and significantly laborious annotations. To reduce the annotation cost, most existing matting approaches often rely on image synthesis to augment the dataset. However, the unnaturalness of synthesized training images brings in a new domain generalization challenge for natural images. To address this challenge, we introduce a new learning paradigm, weakly semi-supervised human matting (WSSHM), which leverages a small amount of expensive matte labels and a large amount of budget-friendly segmentation labels, to save the annotation cost and resolve the domain generalization problem. To achieve the goal of WSSHM, we propose a simple and effective training method, named Matte Label Blending (MLB), that selectively guides only the beneficial knowledge of the segmentation and matte data to the matting model. Extensive experiments with our detailed analysis demonstrate our method can substantially improve the robustness of the matting model using a few matte data and numerous segmentation data. Our training method is also easily applicable to real-time models, achieving competitive accuracy with breakneck inference speed (328 FPS on NVIDIA V100 GPU). The implementation code is available at \\url{https://github.com/clovaai/WSSHM}.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "Preprint, 15 pages, 13 figures"
     },
     {
         "paper id": "2404.01344",
@@ -1460,22 +1483,6 @@
         "comment": "12 pages, 5 figures, 8 tables, accepted at SIGIR 2024"
     },
     {
-        "paper id": "2404.00686",
-        "abstract url": "https://arxiv.org/abs/2404.00686",
-        "title": "Utilizing Maximum Mean Discrepancy Barycenter for Propagating the Uncertainty of Value Functions in Reinforcement Learning",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Accounting for the uncertainty of value functions boosts exploration in Reinforcement Learning (RL). Our work introduces Maximum Mean Discrepancy Q-Learning (MMD-QL) to improve Wasserstein Q-Learning (WQL) for uncertainty propagation during Temporal Difference (TD) updates. MMD-QL uses the MMD barycenter for this purpose, as MMD provides a tighter estimate of closeness between probability measures than the Wasserstein distance. Firstly, we establish that MMD-QL is Probably Approximately Correct in MDP (PAC-MDP) under the average loss metric. Concerning the accumulated rewards, experiments on tabular environments show that MMD-QL outperforms WQL and other algorithms. Secondly, we incorporate deep networks into MMD-QL to create MMD Q-Network (MMD-QN). Making reasonable assumptions, we analyze the convergence rates of MMD-QN using function approximation. Empirical results on challenging Atari games demonstrate that MMD-QN performs well compared to benchmark deep RL algorithms, highlighting its effectiveness in handling large state-action spaces.",
-        "subjects": [
-            "cs.LG"
-        ],
-        "comment": "We found some flaws in our analysis and we are in the process of rectifying those"
-    },
-    {
         "paper id": "2404.00688",
         "abstract url": "https://arxiv.org/abs/2404.00688",
         "title": "Meta Learning in Bandits within Shared Affine Subspaces",
@@ -1541,24 +1548,6 @@
             "cs.AI"
         ],
         "comment": "Accepted to Information Science journal"
-    },
-    {
-        "paper id": "2404.00751",
-        "abstract url": "https://arxiv.org/abs/2404.00751",
-        "title": "C-XGBoost: A tree boosting model for causal effect estimation",
-        "rating": "0.5",
-        "keywords": [
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Causal effect estimation aims at estimating the Average Treatment Effect as well as the Conditional Average Treatment Effect of a treatment to an outcome from the available data. This knowledge is important in many safety-critical domains, where it often needs to be extracted from observational data. In this work, we propose a new causal inference model, named C-XGBoost, for the prediction of potential outcomes. The motivation of our approach is to exploit the superiority of tree-based models for handling tabular data together with the notable property of causal inference neural network-based models to learn representations that are useful for estimating the outcome for both the treatment and non-treatment cases. The proposed model also inherits the considerable advantages of XGBoost model such as efficiently handling features with missing values requiring minimum preprocessing effort, as well as it is equipped with regularization techniques to avoid overfitting/bias. Furthermore, we propose a new loss function for efficiently training the proposed causal inference model. The experimental analysis, which is based on the performance profiles of Dolan and Mor{\u00e9} as well as on post-hoc and non-parametric statistical tests, provide strong evidence about the effectiveness of the proposed approach.",
-        "subjects": [
-            "stat.ML",
-            "cs.LG",
-            "stat.ME"
-        ],
-        "comment": "This paper has been accepted for presentation at IFIP International Conference on Artificial Intelligence Applications and Innovations"
     },
     {
         "paper id": "2404.00774",
@@ -1735,8 +1724,7 @@
         "rating": "0.5",
         "keywords": [
             [
-                "Diffusion",
-                "synthesizing"
+                "Diffusion"
             ],
             [
                 "cs.CV"
@@ -1856,8 +1844,7 @@
         "rating": "0",
         "keywords": [
             [
-                "Diffusion",
-                "Synthesis"
+                "Diffusion"
             ],
             [
                 "cs.CL",
@@ -1932,13 +1919,34 @@
         "comment": null
     },
     {
+        "paper id": "2404.00674",
+        "abstract url": "https://arxiv.org/abs/2404.00674",
+        "title": "Knowledge NeRF: Few-shot Novel View Synthesis for Dynamic Articulated Objects",
+        "rating": "0",
+        "keywords": [
+            [
+                "3D",
+                "NeRF"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "We present Knowledge NeRF to synthesize novel views for dynamic scenes. Reconstructing dynamic 3D scenes from few sparse views and rendering them from arbitrary perspectives is a challenging problem with applications in various domains. Previous dynamic NeRF methods learn the deformation of articulated objects from monocular videos. However, qualities of their reconstructed scenes are limited. To clearly reconstruct dynamic scenes, we propose a new framework by considering two frames at a time.We pretrain a NeRF model for an articulated object.When articulated objects moves, Knowledge NeRF learns to generate novel views at the new state by incorporating past knowledge in the pretrained NeRF model with minimal observations in the present state. We propose a projection module to adapt NeRF for dynamic scenes, learning the correspondence between pretrained knowledge base and current states. Experimental results demonstrate the effectiveness of our method in reconstructing dynamic 3D scenes with 5 input images in one state. Knowledge NeRF is a new pipeline and promising solution for novel view synthesis in dynamic articulated objects. The data and implementation are publicly available at https://github.com/RussRobin/Knowledge_NeRF.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": null
+    },
+    {
         "paper id": "2404.00678",
         "abstract url": "https://arxiv.org/abs/2404.00678",
         "title": "OmniSDF: Scene Reconstruction using Omnidirectional Signed Distance Functions and Adaptive Binoctrees",
         "rating": "0",
         "keywords": [
             [
-                "depth"
+                "depth",
+                "signed distance field"
             ],
             [
                 "cs.CV"
@@ -2035,6 +2043,25 @@
         "comment": "NAACL 2024 (main conference)"
     },
     {
+        "paper id": "2404.00809",
+        "abstract url": "https://arxiv.org/abs/2404.00809",
+        "title": "Heterogeneity over Homogeneity: Investigating Multilingual Speech Pre-Trained Models for Detecting Audio Deepfake",
+        "rating": "0",
+        "keywords": [
+            [
+                "Deepfake"
+            ],
+            [
+                "eess.AS"
+            ]
+        ],
+        "abstract": "In this work, we investigate multilingual speech Pre-Trained models (PTMs) for Audio deepfake detection (ADD). We hypothesize that multilingual PTMs trained on large-scale diverse multilingual data gain knowledge about diverse pitches, accents, and tones, during their pre-training phase and making them more robust to variations. As a result, they will be more effective for detecting audio deepfakes. To validate our hypothesis, we extract representations from state-of-the-art (SOTA) PTMs including monolingual, multilingual as well as PTMs trained for speaker and emotion recognition, and evaluated them on ASVSpoof 2019 (ASV), In-the-Wild (ITW), and DECRO benchmark databases. We show that representations from multilingual PTMs, with simple downstream networks, attain the best performance for ADD compared to other PTM representations, which validates our hypothesis. We also explore the possibility of fusion of selected PTM representations for further improvements in ADD, and we propose a framework, MiO (Merge into One) for this purpose. With MiO, we achieve SOTA performance on ASV and ITW and comparable performance on DECRO with current SOTA works.",
+        "subjects": [
+            "eess.AS"
+        ],
+        "comment": "Accepted to NAACL (Findings) 2024"
+    },
+    {
         "paper id": "2404.00828",
         "abstract url": "https://arxiv.org/abs/2404.00828",
         "title": "PID Control-Based Self-Healing to Improve the Robustness of Large Language Models",
@@ -2091,29 +2118,6 @@
         "subjects": [
             "cs.CV",
             "cs.LG"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2404.00856",
-        "abstract url": "https://arxiv.org/abs/2404.00856",
-        "title": "Removing Speaker Information from Speech Representation using Variable-Length Soft Pooling",
-        "rating": "0",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.AI",
-                "cs.SD",
-                "eess.AS"
-            ]
-        ],
-        "abstract": "Recently, there have been efforts to encode the linguistic information of speech using a self-supervised framework for speech synthesis. However, predicting representations from surrounding representations can inadvertently entangle speaker information in the speech representation. This paper aims to remove speaker information by exploiting the structured nature of speech, composed of discrete units like phonemes with clear boundaries. A neural network predicts these boundaries, enabling variable-length pooling for event-based representation extraction instead of fixed-rate methods. The boundary predictor outputs a probability for the boundary between 0 and 1, making pooling soft. The model is trained to minimize the difference with the pooled representation of the data augmented by time-stretch and pitch-shift. To confirm that the learned representation includes contents information but is independent of speaker information, the model was evaluated with libri-light's phonetic ABX task and SUPERB's speaker identification task.",
-        "subjects": [
-            "cs.SD",
-            "cs.AI",
-            "eess.AS"
         ],
         "comment": null
     },
@@ -2184,7 +2188,6 @@
         "keywords": [
             [
                 "Diffusion",
-                "synthesis",
                 "text-to-image"
             ],
             [
@@ -2196,25 +2199,6 @@
             "cs.CV"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2404.00921",
-        "abstract url": "https://arxiv.org/abs/2404.00921",
-        "title": "Towards Label-Efficient Human Matting: A Simple Baseline for Weakly Semi-Supervised Trimap-Free Human Matting",
-        "rating": "0",
-        "keywords": [
-            [
-                "synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "This paper presents a new practical training method for human matting, which demands delicate pixel-level human region identification and significantly laborious annotations. To reduce the annotation cost, most existing matting approaches often rely on image synthesis to augment the dataset. However, the unnaturalness of synthesized training images brings in a new domain generalization challenge for natural images. To address this challenge, we introduce a new learning paradigm, weakly semi-supervised human matting (WSSHM), which leverages a small amount of expensive matte labels and a large amount of budget-friendly segmentation labels, to save the annotation cost and resolve the domain generalization problem. To achieve the goal of WSSHM, we propose a simple and effective training method, named Matte Label Blending (MLB), that selectively guides only the beneficial knowledge of the segmentation and matte data to the matting model. Extensive experiments with our detailed analysis demonstrate our method can substantially improve the robustness of the matting model using a few matte data and numerous segmentation data. Our training method is also easily applicable to real-time models, achieving competitive accuracy with breakneck inference speed (328 FPS on NVIDIA V100 GPU). The implementation code is available at \\url{https://github.com/clovaai/WSSHM}.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "Preprint, 15 pages, 13 figures"
     },
     {
         "paper id": "2404.00562",
@@ -2285,26 +2269,6 @@
         "comment": null
     },
     {
-        "paper id": "2404.00696",
-        "abstract url": "https://arxiv.org/abs/2404.00696",
-        "title": "Privacy Re-identification Attacks on Tabular GANs",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "Attacks"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "Generative models are subject to overfitting and thus may potentially leak sensitive information from the training data. In this work. we investigate the privacy risks that can potentially arise from the use of generative adversarial networks (GANs) for creating tabular synthetic datasets. For the purpose, we analyse the effects of re-identification attacks on synthetic data, i.e., attacks which aim at selecting samples that are predicted to correspond to memorised training samples based on their proximity to the nearest synthetic records. We thus consider multiple settings where different attackers might have different access levels or knowledge of the generative model and predictive, and assess which information is potentially most useful for launching more successful re-identification attacks. In doing so we also consider the situation for which re-identification attacks are formulated as reconstruction attacks, i.e., the situation where an attacker uses evolutionary multi-objective optimisation for perturbing synthetic samples closer to the training space. The results indicate that attackers can indeed pose major privacy risks by selecting synthetic samples that are likely representative of memorised training samples. In addition, we notice that privacy threats considerably increase when the attacker either has knowledge or has black-box access to the generative models. We also find that reconstruction attacks through multi-objective optimisation even increase the risk of identifying confidential samples.",
-        "subjects": [
-            "cs.CR",
-            "cs.LG"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2404.00742",
         "abstract url": "https://arxiv.org/abs/2404.00742",
         "title": "Adapting to Length Shift: FlexiLength Network for Trajectory Prediction",
@@ -2352,28 +2316,6 @@
             "cs.RO"
         ],
         "comment": null
-    },
-    {
-        "paper id": "2404.00776",
-        "abstract url": "https://arxiv.org/abs/2404.00776",
-        "title": "PyTorch Frame: A Modular Framework for Multi-Modal Tabular Learning",
-        "rating": "-0.5",
-        "keywords": [
-            [
-                "GNNs",
-                "Graph"
-            ],
-            [
-                "cs.LG"
-            ]
-        ],
-        "abstract": "We present PyTorch Frame, a PyTorch-based framework for deep learning over multi-modal tabular data. PyTorch Frame makes tabular deep learning easy by providing a PyTorch-based data structure to handle complex tabular data, introducing a model abstraction to enable modular implementation of tabular models, and allowing external foundation models to be incorporated to handle complex columns (e.g., LLMs for text columns). We demonstrate the usefulness of PyTorch Frame by implementing diverse tabular models in a modular way, successfully applying these models to complex multi-modal tabular data, and integrating our framework with PyTorch Geometric, a PyTorch library for Graph Neural Networks (GNNs), to perform end-to-end learning over relational databases.",
-        "subjects": [
-            "cs.LG",
-            "cs.DB",
-            "stat.ML"
-        ],
-        "comment": "https://github.com/pyg-team/pytorch-frame"
     },
     {
         "paper id": "2404.00793",
@@ -2622,29 +2564,6 @@
         "comment": null
     },
     {
-        "paper id": "2404.00674",
-        "abstract url": "https://arxiv.org/abs/2404.00674",
-        "title": "Knowledge NeRF: Few-shot Novel View Synthesis for Dynamic Articulated Objects",
-        "rating": "-1",
-        "keywords": [
-            [
-                "3D",
-                "NeRF"
-            ],
-            [
-                "Synthesis"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "We present Knowledge NeRF to synthesize novel views for dynamic scenes. Reconstructing dynamic 3D scenes from few sparse views and rendering them from arbitrary perspectives is a challenging problem with applications in various domains. Previous dynamic NeRF methods learn the deformation of articulated objects from monocular videos. However, qualities of their reconstructed scenes are limited. To clearly reconstruct dynamic scenes, we propose a new framework by considering two frames at a time.We pretrain a NeRF model for an articulated object.When articulated objects moves, Knowledge NeRF learns to generate novel views at the new state by incorporating past knowledge in the pretrained NeRF model with minimal observations in the present state. We propose a projection module to adapt NeRF for dynamic scenes, learning the correspondence between pretrained knowledge base and current states. Experimental results demonstrate the effectiveness of our method in reconstructing dynamic 3D scenes with 5 input images in one state. Knowledge NeRF is a new pipeline and promising solution for novel view synthesis in dynamic articulated objects. The data and implementation are publicly available at https://github.com/RussRobin/Knowledge_NeRF.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": null
-    },
-    {
         "paper id": "2404.00676",
         "abstract url": "https://arxiv.org/abs/2404.00676",
         "title": "OmniLocalRF: Omnidirectional Local Radiance Fields from Dynamic Videos",
@@ -2654,7 +2573,6 @@
                 "Radiance Fields"
             ],
             [
-                "synthesizing",
                 "inpainting"
             ],
             [
@@ -2688,6 +2606,30 @@
         "comment": null
     },
     {
+        "paper id": "2404.00714",
+        "abstract url": "https://arxiv.org/abs/2404.00714",
+        "title": "Neural Radiance Field-based Visual Rendering: A Comprehensive Review",
+        "rating": "-1",
+        "keywords": [
+            [
+                "3D",
+                "NeRF",
+                "Radiance Fields"
+            ],
+            [
+                "robotics"
+            ],
+            [
+                "cs.CV"
+            ]
+        ],
+        "abstract": "In recent years, Neural Radiance Fields (NeRF) has made remarkable progress in the field of computer vision and graphics, providing strong technical support for solving key tasks including 3D scene understanding, new perspective synthesis, human body reconstruction, robotics, and so on, the attention of academics to this research result is growing. As a revolutionary neural implicit field representation, NeRF has caused a continuous research boom in the academic community. Therefore, the purpose of this review is to provide an in-depth analysis of the research literature on NeRF within the past two years, to provide a comprehensive academic perspective for budding researchers. In this paper, the core architecture of NeRF is first elaborated in detail, followed by a discussion of various improvement strategies for NeRF, and case studies of NeRF in diverse application scenarios, demonstrating its practical utility in different domains. In terms of datasets and evaluation metrics, This paper details the key resources needed for NeRF model training. Finally, this paper provides a prospective discussion on the future development trends and potential challenges of NeRF, aiming to provide research inspiration for researchers in the field and to promote the further development of related technologies.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "comment": "35 pages, 22 figures, 14 tables, 18 formulas"
+    },
+    {
         "paper id": "2404.00726",
         "abstract url": "https://arxiv.org/abs/2404.00726",
         "title": "MugenNet: A Novel Combined Convolution Neural Network and Transformer Network with its Application for Colonic Polyp Image Segmentation",
@@ -2710,22 +2652,6 @@
             "eess.IV",
             "cs.CV",
             "cs.LG"
-        ],
-        "comment": null
-    },
-    {
-        "paper id": "2404.00762",
-        "abstract url": "https://arxiv.org/abs/2404.00762",
-        "title": "Enchanting Program Specification Synthesis by Large Language Models using Static Analysis and Program Verification",
-        "rating": "-1",
-        "keywords": [
-            [
-                "Synthesis"
-            ]
-        ],
-        "abstract": "Formal verification provides a rigorous and systematic approach to ensure the correctness and reliability of software systems. Yet, constructing specifications for the full proof relies on domain expertise and non-trivial manpower. In view of such needs, an automated approach for specification synthesis is desired. While existing automated approaches are limited in their versatility, i.e., they either focus only on synthesizing loop invariants for numerical programs, or are tailored for specific types of programs or invariants. Programs involving multiple complicated data types (e.g., arrays, pointers) and code structures (e.g., nested loops, function calls) are often beyond their capabilities. To help bridge this gap, we present AutoSpec, an automated approach to synthesize specifications for automated program verification. It overcomes the shortcomings of existing work in specification versatility, synthesizing satisfiable and adequate specifications for full proof. It is driven by static analysis and program verification, and is empowered by large language models (LLMs). AutoSpec addresses the practical challenges in three ways: (1) driving \\name by static analysis and program verification, LLMs serve as generators to generate candidate specifications, (2) programs are decomposed to direct the attention of LLMs, and (3) candidate specifications are validated in each round to avoid error accumulation during the interaction with LLMs. In this way, AutoSpec can incrementally and iteratively generate satisfiable and adequate specifications. The evaluation shows its effectiveness and usefulness, as it outperforms existing works by successfully verifying 79% of programs through automatic specification synthesis, a significant improvement of 1.592x. It can also be successfully applied to verify the programs in a real-world X509-parser project.",
-        "subjects": [
-            "cs.SE"
         ],
         "comment": null
     },
@@ -3102,6 +3028,25 @@
         "comment": "Accepted by CVPR 2024,GitHub code:https://github.com/JihuaPeng/KTPFormer"
     },
     {
+        "paper id": "2404.00686",
+        "abstract url": "https://arxiv.org/abs/2404.00686",
+        "title": "Utilizing Maximum Mean Discrepancy Barycenter for Propagating the Uncertainty of Value Functions in Reinforcement Learning",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "tabular"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Accounting for the uncertainty of value functions boosts exploration in Reinforcement Learning (RL). Our work introduces Maximum Mean Discrepancy Q-Learning (MMD-QL) to improve Wasserstein Q-Learning (WQL) for uncertainty propagation during Temporal Difference (TD) updates. MMD-QL uses the MMD barycenter for this purpose, as MMD provides a tighter estimate of closeness between probability measures than the Wasserstein distance. Firstly, we establish that MMD-QL is Probably Approximately Correct in MDP (PAC-MDP) under the average loss metric. Concerning the accumulated rewards, experiments on tabular environments show that MMD-QL outperforms WQL and other algorithms. Secondly, we incorporate deep networks into MMD-QL to create MMD Q-Network (MMD-QN). Making reasonable assumptions, we analyze the convergence rates of MMD-QN using function approximation. Empirical results on challenging Atari games demonstrate that MMD-QN performs well compared to benchmark deep RL algorithms, highlighting its effectiveness in handling large state-action spaces.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "comment": "We found some flaws in our analysis and we are in the process of rectifying those"
+    },
+    {
         "paper id": "2404.00712",
         "abstract url": "https://arxiv.org/abs/2404.00712",
         "title": "Survey of Computerized Adaptive Testing: A Machine Learning Perspective",
@@ -3147,6 +3092,27 @@
         "comment": null
     },
     {
+        "paper id": "2404.00751",
+        "abstract url": "https://arxiv.org/abs/2404.00751",
+        "title": "C-XGBoost: A tree boosting model for causal effect estimation",
+        "rating": "-1.5",
+        "keywords": [
+            [
+                "tabular"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Causal effect estimation aims at estimating the Average Treatment Effect as well as the Conditional Average Treatment Effect of a treatment to an outcome from the available data. This knowledge is important in many safety-critical domains, where it often needs to be extracted from observational data. In this work, we propose a new causal inference model, named C-XGBoost, for the prediction of potential outcomes. The motivation of our approach is to exploit the superiority of tree-based models for handling tabular data together with the notable property of causal inference neural network-based models to learn representations that are useful for estimating the outcome for both the treatment and non-treatment cases. The proposed model also inherits the considerable advantages of XGBoost model such as efficiently handling features with missing values requiring minimum preprocessing effort, as well as it is equipped with regularization techniques to avoid overfitting/bias. Furthermore, we propose a new loss function for efficiently training the proposed causal inference model. The experimental analysis, which is based on the performance profiles of Dolan and Mor{\u00e9} as well as on post-hoc and non-parametric statistical tests, provide strong evidence about the effectiveness of the proposed approach.",
+        "subjects": [
+            "stat.ML",
+            "cs.LG",
+            "stat.ME"
+        ],
+        "comment": "This paper has been accepted for presentation at IFIP International Conference on Artificial Intelligence Applications and Innovations"
+    },
+    {
         "paper id": "2404.00815",
         "abstract url": "https://arxiv.org/abs/2404.00815",
         "title": "Towards Realistic Scene Generation with LiDAR Diffusion Models",
@@ -3156,8 +3122,7 @@
                 "3D"
             ],
             [
-                "Diffusion",
-                "synthesis"
+                "Diffusion"
             ],
             [
                 "LiDAR"
@@ -3476,33 +3441,6 @@
         "comment": null
     },
     {
-        "paper id": "2404.00714",
-        "abstract url": "https://arxiv.org/abs/2404.00714",
-        "title": "Neural Radiance Field-based Visual Rendering: A Comprehensive Review",
-        "rating": "-2",
-        "keywords": [
-            [
-                "3D",
-                "NeRF",
-                "Radiance Fields"
-            ],
-            [
-                "synthesis"
-            ],
-            [
-                "robotics"
-            ],
-            [
-                "cs.CV"
-            ]
-        ],
-        "abstract": "In recent years, Neural Radiance Fields (NeRF) has made remarkable progress in the field of computer vision and graphics, providing strong technical support for solving key tasks including 3D scene understanding, new perspective synthesis, human body reconstruction, robotics, and so on, the attention of academics to this research result is growing. As a revolutionary neural implicit field representation, NeRF has caused a continuous research boom in the academic community. Therefore, the purpose of this review is to provide an in-depth analysis of the research literature on NeRF within the past two years, to provide a comprehensive academic perspective for budding researchers. In this paper, the core architecture of NeRF is first elaborated in detail, followed by a discussion of various improvement strategies for NeRF, and case studies of NeRF in diverse application scenarios, demonstrating its practical utility in different domains. In terms of datasets and evaluation metrics, This paper details the key resources needed for NeRF model training. Finally, this paper provides a prospective discussion on the future development trends and potential challenges of NeRF, aiming to provide research inspiration for researchers in the field and to promote the further development of related technologies.",
-        "subjects": [
-            "cs.CV"
-        ],
-        "comment": "35 pages, 22 figures, 14 tables, 18 formulas"
-    },
-    {
         "paper id": "2404.00767",
         "abstract url": "https://arxiv.org/abs/2404.00767",
         "title": "Intensity-based 3D motion correction for cardiac MR images",
@@ -3617,6 +3555,31 @@
             "cs.LG"
         ],
         "comment": null
+    },
+    {
+        "paper id": "2404.00776",
+        "abstract url": "https://arxiv.org/abs/2404.00776",
+        "title": "PyTorch Frame: A Modular Framework for Multi-Modal Tabular Learning",
+        "rating": "-2.5",
+        "keywords": [
+            [
+                "GNNs",
+                "Graph"
+            ],
+            [
+                "Tabular"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "We present PyTorch Frame, a PyTorch-based framework for deep learning over multi-modal tabular data. PyTorch Frame makes tabular deep learning easy by providing a PyTorch-based data structure to handle complex tabular data, introducing a model abstraction to enable modular implementation of tabular models, and allowing external foundation models to be incorporated to handle complex columns (e.g., LLMs for text columns). We demonstrate the usefulness of PyTorch Frame by implementing diverse tabular models in a modular way, successfully applying these models to complex multi-modal tabular data, and integrating our framework with PyTorch Geometric, a PyTorch library for Graph Neural Networks (GNNs), to perform end-to-end learning over relational databases.",
+        "subjects": [
+            "cs.LG",
+            "cs.DB",
+            "stat.ML"
+        ],
+        "comment": "https://github.com/pyg-team/pytorch-frame"
     },
     {
         "paper id": "2404.00797",
@@ -3772,6 +3735,7 @@
                 "X-ray"
             ],
             [
+                "remotely sensed",
                 "satellite",
                 "Mineral"
             ],
@@ -3805,6 +3769,32 @@
             "physics.ao-ph"
         ],
         "comment": "24 pages, 32 figures, 1 table"
+    },
+    {
+        "paper id": "2404.00696",
+        "abstract url": "https://arxiv.org/abs/2404.00696",
+        "title": "Privacy Re-identification Attacks on Tabular GANs",
+        "rating": "-3.5",
+        "keywords": [
+            [
+                "Re-identification"
+            ],
+            [
+                "Attacks"
+            ],
+            [
+                "Tabular"
+            ],
+            [
+                "cs.LG"
+            ]
+        ],
+        "abstract": "Generative models are subject to overfitting and thus may potentially leak sensitive information from the training data. In this work. we investigate the privacy risks that can potentially arise from the use of generative adversarial networks (GANs) for creating tabular synthetic datasets. For the purpose, we analyse the effects of re-identification attacks on synthetic data, i.e., attacks which aim at selecting samples that are predicted to correspond to memorised training samples based on their proximity to the nearest synthetic records. We thus consider multiple settings where different attackers might have different access levels or knowledge of the generative model and predictive, and assess which information is potentially most useful for launching more successful re-identification attacks. In doing so we also consider the situation for which re-identification attacks are formulated as reconstruction attacks, i.e., the situation where an attacker uses evolutionary multi-objective optimisation for perturbing synthetic samples closer to the training space. The results indicate that attackers can indeed pose major privacy risks by selecting synthetic samples that are likely representative of memorised training samples. In addition, we notice that privacy threats considerably increase when the attacker either has knowledge or has black-box access to the generative models. We also find that reconstruction attacks through multi-objective optimisation even increase the risk of identifying confidential samples.",
+        "subjects": [
+            "cs.CR",
+            "cs.LG"
+        ],
+        "comment": null
     },
     {
         "paper id": "2404.07227",
@@ -4087,6 +4077,18 @@
             "eess.SY"
         ],
         "comment": "https://github.com/CLeARoboticsLab/GamesVoI.jl"
+    },
+    {
+        "paper id": "2404.00762",
+        "abstract url": "https://arxiv.org/abs/2404.00762",
+        "title": "Enchanting Program Specification Synthesis by Large Language Models using Static Analysis and Program Verification",
+        "rating": "-10",
+        "keywords": [],
+        "abstract": "Formal verification provides a rigorous and systematic approach to ensure the correctness and reliability of software systems. Yet, constructing specifications for the full proof relies on domain expertise and non-trivial manpower. In view of such needs, an automated approach for specification synthesis is desired. While existing automated approaches are limited in their versatility, i.e., they either focus only on synthesizing loop invariants for numerical programs, or are tailored for specific types of programs or invariants. Programs involving multiple complicated data types (e.g., arrays, pointers) and code structures (e.g., nested loops, function calls) are often beyond their capabilities. To help bridge this gap, we present AutoSpec, an automated approach to synthesize specifications for automated program verification. It overcomes the shortcomings of existing work in specification versatility, synthesizing satisfiable and adequate specifications for full proof. It is driven by static analysis and program verification, and is empowered by large language models (LLMs). AutoSpec addresses the practical challenges in three ways: (1) driving \\name by static analysis and program verification, LLMs serve as generators to generate candidate specifications, (2) programs are decomposed to direct the attention of LLMs, and (3) candidate specifications are validated in each round to avoid error accumulation during the interaction with LLMs. In this way, AutoSpec can incrementally and iteratively generate satisfiable and adequate specifications. The evaluation shows its effectiveness and usefulness, as it outperforms existing works by successfully verifying 79% of programs through automatic specification synthesis, a significant improvement of 1.592x. It can also be successfully applied to verify the programs in a real-world X509-parser project.",
+        "subjects": [
+            "cs.SE"
+        ],
+        "comment": null
     },
     {
         "paper id": "2404.00768",
