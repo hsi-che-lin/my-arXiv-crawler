@@ -39,29 +39,28 @@ def writeNote(data):
     if ((data["note"] == "") or (data["note"] == None)): return
 
     if (os.path.isfile(absPath("../notes.csv"))):
-        seek = 0
-        remainLines = ""
+        with open(absPath("../notes.csv"), "r") as f:
+            lines = f.readlines()
+            idx = -1
 
-        with open(absPath("../notes.csv"), "r+") as f:
-            find = False
-
-            for l in f.readlines():
+            for (i, l) in enumerate(lines):
                 if (data["url"] in l):
-                    find = True
-                elif (not find):
-                    seek += len(l)
-                else:
-                    remainLines += l
-        
-            f.seek(seek, 0)
-            f.write(f"{data['date']}|{data['title']}|{data['note']}|{data['url']}|{data['keywords']}\n{remainLines}")
-
-            if (remainLines != ""):
-                f.truncate()
+                    idx = i
+                    break
+                
+        if (idx != -1):
+            lines[i] = f"{data['date']}|{data['title']}|{data['note']}|{data['url']}|{data['keywords']}\n"
+            with open(absPath("../notes.csv"), "w") as f:
+                f.write("".join(lines))
+        else:
+            with open(absPath("../notes.csv"), "a") as f:
+                f.write(f"{data['date']}|{data['title']}|{data['note']}|{data['url']}|{data['keywords']}\n")
+            
     else:
         with open(absPath("../notes.csv"), "w") as f:
-            prefix = "sep=|\ndate|title|note|url|keywords\n"
-            f.write(f"{prefix}{data['date']}|{data['title']}|{data['note']}|{data['url']}|{data['keywords']}\n")
+            f.write("sep=|\n")
+            f.write("date|title|note|url|keywords\n")
+            f.write(f"{data['date']}|{data['title']}|{data['note']}|{data['url']}|{data['keywords']}\n")
 
 
 def writeLog(info):
